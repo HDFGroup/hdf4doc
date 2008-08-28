@@ -52,7 +52,7 @@
       <tr>
         <td align="left">
         HDF4.2r3 - August 2008<br/>
-        <a href="RM_front.html">Copyright</a>
+        <a href="RM_Front.html">Copyright</a>
         <td align="right">
           <span style="font-size: 12px; font-weight: bold">
             The HDF Group<br />
