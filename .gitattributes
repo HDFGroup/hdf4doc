@@ -86,6 +86,7 @@ RefMan/src/RM_Section_II_VSLOP.fm -text
 RefMan/src/RM_Section_II_VSQ.fm -text
 RefMan/src/RM_Section_II_VSQLOP.fm -text
 RefMan/src/RM_Styles.fm -text
+RefMan/src/netCDF_copyright.fm -text
 RefMan/webworks/hdf4_RM.wfp -text
 RefMan/webworks/support/FirstInterfacePage.asp -text
 RefMan/webworks/support/InterfacePage.asp -text
