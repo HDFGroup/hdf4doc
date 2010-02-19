@@ -232,6 +232,7 @@ UsrGuide/src/UG_Vgroups.fm -text
 UsrGuide/src/UG_html.book -text
 UsrGuide/src/UG_print.book -text
 UsrGuide/webworks/hdf4_UG.wfp -text
+UsrGuide/webworks/support/CopyrightPage.asp -text
 UsrGuide/webworks/support/Indx_Appdx.asp -text
 UsrGuide/webworks/support/LastPage.asp -text
 UsrGuide/webworks/support/Normal.asp -text
