@@ -7,12 +7,12 @@
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.8.2296" />
     <meta name="TEMPLATEBASE" content="Dynamic HTML" />
-    <meta name="LASTUPDATED" content="08/27/08 23:18:21" />
+    <meta name="LASTUPDATED" content="02/22/10 13:06:19" />
     <title>Vaddtagref/vfadtr</title>
     <link rel="StyleSheet" href="document.css" type="text/css" media="all" />
     <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
 <link rel="first" title="First" href="RM_Front.html" />
-<link rel="last" title="Last" href="RM_Section_II_HELOP.html" />
+<link rel="last" title="Last" href="netCDF_copyright.html" />
 <link rel="previous" title="Previous" href="RM_Section_II_SD.html" />
 <link rel="next" title="Next" href="RM_Section_II_VF.html" />
 
@@ -1770,45 +1770,161 @@ character*(*) vgroup_class
 <p class="pBodyRelative">
 
 </p>
-<a name="wp438541"> </a><h2 class="pRef_V_RoutineName">
+<a name="wp463031"> </a><h2 class="pRef_V_RoutineName">
+<p align=right><A HREF="RM_Section_II_VLOP.html">
+[V Interface]</A><a HREF="RMTOP.html"><b>[Top]</b></a>
+</p>
+<hr />
+Vgetclassnamelen/
+</h2>
+<a name="wp463032"> </a><p style="font-weight: normal" class="pSignature">
+int32 Vgetclassnamelen(int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">vgroup_id</span>, uint16 *<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">classname_len</span>)
+</p>
+<a name="wp463072"> </a><p class="pBodyRelative">
+</p>
+<div align="left">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp463035table463033">
+  <caption></caption>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp463035"> </a><div style="margin-top: 0pt" class="pCellVariable">
+vgroup_id
+</div>
+</td>
+    <td><a name="wp463037"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+IN:
+</div>
+</td>
+    <td><a name="wp463039"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Vgroup identifier returned by <b class="cFunctionName">Vattach</b>
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp463041"> </a><div style="margin-top: 0pt" class="pCellVariable">
+classname_len
+</div>
+</td>
+    <td><a name="wp463043"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+OUT:
+</div>
+</td>
+    <td><a name="wp463045"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Length of the vgroup&#39;s class name
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="pBodyRelative">
+</p>
+<div align="left">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp463048table463046">
+  <caption></caption>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp463048"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+Purpose
+</div></td>
+    <td><a name="wp463050"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Retrieves the length of a vgroup&#39;s class name.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp463052"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+Return value
+</div></td>
+    <td><a name="wp463054"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Returns <code style="font-family: Courier New" class="cDefName">SUCCEED</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">0</span>) if successful and <code style="font-family: Courier New" class="cDefName">FAIL</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">-1</span>) otherwise.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp463056"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+Description
+</div></td>
+    <td><a name="wp463143"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+<b class="cFunctionName">Vgetclassnamelen</b> retrieves the length of a vgroup&#39;s class name into <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">classname_len</span>.  The vgroup is identified by the parameter <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">vgroup_id</span>.
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="pBodyRelative">
+</p>
+<div align="left">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp463061table463059">
+  <caption></caption>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp463061"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+FORTRAN
+</div></td>
+    <td><a name="wp463130"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortSyntax">
+Currently unavailable
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp463065"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+&#160;
+</div></td>
+    <td><a name="wp463067"> </a><div class="pCellFortran">
+&#160;
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp463069"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+&#160;
+</div></td>
+    <td><a name="wp463071"> </a><div class="pCellFortran">
+&#160;
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="pBodyRelative">
+
+</p>
+<a name="wp462986"> </a><h2 class="pRef_V_RoutineName">
 <p align=right><A HREF="RM_Section_II_VLOP.html">
 [V Interface]</A><a HREF="RMTOP.html"><b>[Top]</b></a>
 </p>
 <hr />
 Vgetid/vfgid
 </h2>
-<a name="wp424366"> </a><p style="font-weight: normal" class="pSignature">
+<a name="wp462987"> </a><p style="font-weight: normal" class="pSignature">
 int32 Vgetid(int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">file_id</span>, int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">vgroup_ref</span>)
 </p>
-<a name="wp453845"> </a><p class="pBodyRelative">
+<a name="wp463027"> </a><p class="pBodyRelative">
 </p>
 <div align="left">
-<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp444249table444247">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp462990table462988">
   <caption></caption>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp444249"> </a><div style="margin-top: 0pt" class="pCellVariable">
+<a name="wp462990"> </a><div style="margin-top: 0pt" class="pCellVariable">
 file_id
 </div>
 </td>
-    <td><a name="wp444251"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp462992"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 IN:
 </div>
 </td>
-    <td><a name="wp444253"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp462994"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 File identifier returned by <b class="cFunctionName">Hopen</b>
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp444255"> </a><div style="margin-top: 0pt" class="pCellVariable">
+<a name="wp462996"> </a><div style="margin-top: 0pt" class="pCellVariable">
 vgroup_ref
 </div>
 </td>
-    <td><a name="wp444257"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp462998"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 IN:
 </div>
 </td>
-    <td><a name="wp444259"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp463000"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 Reference number of the current vgroup
 </div>
 </td>
@@ -1818,40 +1934,40 @@ Reference number of the current vgroup
 <p class="pBodyRelative">
 </p>
 <div align="left">
-<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp444262table444260">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp463003table463001">
   <caption></caption>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp444262"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp463003"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 Purpose
 </div></td>
-    <td><a name="wp444264"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp463005"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 Returns the reference number of the next vgroup.
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp444266"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp463007"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 Return value
 </div></td>
-    <td><a name="wp444268"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp463009"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 Returns the reference number of the next vgroup if successful and <code style="font-family: Courier New" class="cDefName">FAIL</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">-1</span>) otherwise.
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp444270"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp463011"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 Description
 </div></td>
-    <td><a name="wp444272"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp463013"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 <b class="cFunctionName">Vgetid</b> sequentially searches the file identified by the parameter <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">file_id</span> and returns the reference number of the vgroup following the vgroup that has the reference number specified by the parameter <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">vgroup_ref</span>.
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp444274"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp463015"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 &#160;
 </div></td>
-    <td><a name="wp444286"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp463017"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 The search is initiated by calling this routine with a <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">vgroup_ref</span> value of <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">-1</span>. This will return the reference number of the first vgroup in the file. Searching past the last vgroup in the file will cause <b class="cFunctionName">Vgetid</b> to return <code style="font-family: Courier New" class="cDefName">FAIL</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">-1</span>).
 </div>
 </td>
@@ -1861,22 +1977,22 @@ The search is initiated by calling this routine with a <span style="color: #0000
 <p class="pBodyRelative">
 </p>
 <div align="left">
-<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp444307table444305">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp463020table463018">
   <caption></caption>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp444307"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp463020"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 FORTRAN
 </div></td>
-    <td><a name="wp444309"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortSyntax">
+    <td><a name="wp463022"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortSyntax">
 integer function vfgid(file_id, vgroup_ref)
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp444315"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp463024"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 &#160;
 </div></td>
-    <td><a name="wp444317"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortVar">
+    <td><a name="wp463026"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortVar">
 integer file_id, vgroup_ref
 </div>
 </td>
@@ -1994,6 +2110,122 @@ integer vgroup_id
 </div></td>
     <td><a name="wp444363"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortVar">
 character*(*) vgroup_name
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="pBodyRelative">
+
+</p>
+<a name="wp462888"> </a><h2 class="pRef_V_RoutineName">
+<p align=right><A HREF="RM_Section_II_VLOP.html">
+[V Interface]</A><a HREF="RMTOP.html"><b>[Top]</b></a>
+</p>
+<hr />
+Vgetnamelen/
+</h2>
+<a name="wp462889"> </a><p style="font-weight: normal" class="pSignature">
+int32 Vgetnamelen(int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">vgroup_id</span>, uint16 *<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">name_len</span>)
+</p>
+<a name="wp462929"> </a><p class="pBodyRelative">
+</p>
+<div align="left">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp462892table462890">
+  <caption></caption>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp462892"> </a><div style="margin-top: 0pt" class="pCellVariable">
+vgroup_id
+</div>
+</td>
+    <td><a name="wp462894"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+IN:
+</div>
+</td>
+    <td><a name="wp462896"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Vgroup identifier returned by <b class="cFunctionName">Vattach</b>
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp462898"> </a><div style="margin-top: 0pt" class="pCellVariable">
+name_len
+</div>
+</td>
+    <td><a name="wp462900"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+OUT:
+</div>
+</td>
+    <td><a name="wp462902"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Length of the vgroup&#39;s name
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="pBodyRelative">
+</p>
+<div align="left">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp462905table462903">
+  <caption></caption>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp462905"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+Purpose
+</div></td>
+    <td><a name="wp462907"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Retrieves the length of a vgroup&#39;s name.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp462909"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+Return value
+</div></td>
+    <td><a name="wp462911"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Returns <code style="font-family: Courier New" class="cDefName">SUCCEED</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">0</span>) if successful and <code style="font-family: Courier New" class="cDefName">FAIL</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">-1</span>) otherwise.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp462913"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+Description
+</div></td>
+    <td><a name="wp462915"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+<b class="cFunctionName">Vgetnamelen</b> retrieves the length of a vgroup&#39;s name into <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">name_len</span>.  The vgroup is identified by the parameter <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">vgroup_id</span> into the buffer.
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="pBodyRelative">
+</p>
+<div align="left">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp462918table462916">
+  <caption></caption>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp462918"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+FORTRAN
+</div></td>
+    <td><a name="wp463116"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortSyntax">
+Currently unavailable
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp462922"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+&#160;
+</div></td>
+    <td><a name="wp462924"> </a><div class="pCellFortran">
+&#160;
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp462926"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+&#160;
+</div></td>
+    <td><a name="wp462928"> </a><div class="pCellFortran">
+&#160;
 </div>
 </td>
 </tr>
@@ -4579,7 +4811,7 @@ integer vgroup_id
     <table id="SummaryNotReq2" border="0" width="850" cellspacing="0" cellpadding="0">
       <tr>
         <td align="left">
-        HDF4.2r3 - August 2008<br/>
+        HDF4.2r5 - February 2010<br/>
         <a href="RM_Front.html">Copyright</a>
         <td align="right">
           <span style="font-size: 12px; font-weight: bold">

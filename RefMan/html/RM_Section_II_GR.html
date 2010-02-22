@@ -7,12 +7,12 @@
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.8.2296" />
     <meta name="TEMPLATEBASE" content="Dynamic HTML" />
-    <meta name="LASTUPDATED" content="08/27/08 23:17:57" />
+    <meta name="LASTUPDATED" content="02/22/10 13:06:03" />
     <title>GRattrinfo/mgatinf</title>
     <link rel="StyleSheet" href="document.css" type="text/css" media="all" />
     <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
 <link rel="first" title="First" href="RM_Front.html" />
-<link rel="last" title="Last" href="RM_Section_II_HELOP.html" />
+<link rel="last" title="Last" href="netCDF_copyright.html" />
 <link rel="previous" title="Previous" href="RM_Section_II_AN.html" />
 <link rel="next" title="Next" href="RM_Section_II_H.html" />
 
@@ -46,13 +46,9 @@
     <hr />
 
     <blockquote>
-<a name="wp448398"> </a><h2 class="pRef_GR_RoutineName">
-<p align=right><A HREF="RM_Section_II_GRLOP.html">
-[GR Interface]</A><a HREF="RMTOP.html"><b>[Top]</b></a>
-</p>
-<hr />
+<a name="wp448398"> </a><p class="pBody">
 GRattrinfo/mgatinf
-</h2>
+</p>
 <a name="wp437552"> </a><p style="font-weight: normal" class="pSignature">
 intn GRattrinfo(int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">[obj]_id</span>, int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">attr_index</span>, char *<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">name</span>, int32 *<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">data_type</span>, int32 *<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">count</span>)
 </p>
@@ -3590,6 +3586,113 @@ integer gr_id, index
 <p class="pBodyRelative">
 
 </p>
+<a name="wp493061"> </a><h2 class="pRef_GR_RoutineName">
+<p align=right><A HREF="RM_Section_II_GRLOP.html">
+[GR Interface]</A><a HREF="RMTOP.html"><b>[Top]</b></a>
+</p>
+<hr />
+GRsetaccesstype/mgsactp
+</h2>
+<a name="wp493062"> </a><p style="font-weight: normal" class="pSignature">
+intn GRsetaccesstype(int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ri_id</span>, uintn <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">accesstype</span>)
+</p>
+<a name="wp493098"> </a><p class="pBodyRelative">
+</p>
+<div align="left">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp493065table493063">
+  <caption></caption>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp493065"> </a><div style="margin-top: 0pt" class="pCellVariable">
+ri_id
+</div>
+</td>
+    <td><a name="wp493067"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+IN:
+</div>
+</td>
+    <td><a name="wp493069"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Raster image identifier returned by <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">GRcreate</span> or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">GRselect</span>
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp493071"> </a><div style="margin-top: 0pt" class="pCellVariable">
+accesstype
+</div>
+</td>
+    <td><a name="wp493073"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+IN:
+</div>
+</td>
+    <td><a name="wp493075"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Access type
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="pBodyRelative">
+</p>
+<div align="left">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp493078table493076">
+  <caption></caption>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp493078"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+Purpose
+</div></td>
+    <td><a name="wp493080"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Sets the access for an RI to be either serial or parallel I/O
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp493082"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+Return value
+</div></td>
+    <td><a name="wp493084"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Returns <code style="font-family: Courier New" class="cDefName">SUCCEED</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">0</span>) if the RI data can be accessed via <em class="cVarName">accesstype</em> and <code style="font-family: Courier New" class="cDefName">FAIL</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">-1</span>) otherwise.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp493086"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+Description
+</div></td>
+    <td><a name="wp493088"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+<span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">GRsetaccesstype</span> sets the access type to be either serial or parallel I/O for the raster image specified by <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ri_id</span>.  Access types can be <code style="font-family: Courier New" class="cDefName">DFACC_SERIAL</code> (or <code style="font-family: Courier New" class="cDefName">1</code>), <code style="font-family: Courier New" class="cDefName">DFACC_PARALLEL </code>(or <code style="font-family: Courier New" class="cDefName">11</code>), or <code style="font-family: Courier New" class="cDefName">DFACC_DEFAULT</code> (or <code style="font-family: Courier New" class="cDefName">0</code>.)
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="pBodyRelative">
+</p>
+<div align="left">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp493091table493089">
+  <caption></caption>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp493091"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+FORTRAN
+</div></td>
+    <td><a name="wp493093"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortSyntax">
+integer function mgsactp(ri_id, type)
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp493095"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+&#160;
+</div></td>
+    <td><a name="wp493097"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortVar">
+integer ri_id, type
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="pBodyRelative">
+
+</p>
 <a name="wp441535"> </a><h2 class="pRef_GR_RoutineName">
 <p align=right><A HREF="RM_Section_II_GRLOP.html">
 [GR Interface]</A><a HREF="RMTOP.html"><b>[Top]</b></a>
@@ -5645,7 +5748,7 @@ character*(*) pal_data
     <table id="SummaryNotReq2" border="0" width="850" cellspacing="0" cellpadding="0">
       <tr>
         <td align="left">
-        HDF4.2r3 - August 2008<br/>
+        HDF4.2r5 - February 2010<br/>
         <a href="RM_Front.html">Copyright</a>
         <td align="right">
           <span style="font-size: 12px; font-weight: bold">

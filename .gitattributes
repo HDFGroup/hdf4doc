@@ -1,5 +1,6 @@
 * text=auto !eol
 RefMan/html/RMTOP.html -text
+RefMan/html/RMTop.html -text
 RefMan/html/RM_Front.html -text
 RefMan/html/RM_Section_II_AN.html -text
 RefMan/html/RM_Section_II_ANLOP.html -text
@@ -41,6 +42,7 @@ RefMan/html/catalog.css -text
 RefMan/html/document.css -text
 RefMan/html/images/hdf_logo.jpg -text
 RefMan/html/images/help.jpg -text
+RefMan/html/netCDF_copyright.html -text
 RefMan/src/RM-html.book -text
 RefMan/src/RM-print.book -text
 RefMan/src/RMTOC.fm -text

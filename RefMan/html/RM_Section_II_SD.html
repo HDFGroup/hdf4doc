@@ -7,12 +7,12 @@
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.8.2296" />
     <meta name="TEMPLATEBASE" content="Dynamic HTML" />
-    <meta name="LASTUPDATED" content="08/27/08 23:18:07" />
+    <meta name="LASTUPDATED" content="02/22/10 13:06:09" />
     <title>SDattrinfo/sfgainfo</title>
     <link rel="StyleSheet" href="document.css" type="text/css" media="all" />
     <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
 <link rel="first" title="First" href="RM_Front.html" />
-<link rel="last" title="Last" href="RM_Section_II_HELOP.html" />
+<link rel="last" title="Last" href="netCDF_copyright.html" />
 <link rel="previous" title="Previous" href="RM_Section_II_H.html" />
 <link rel="next" title="Next" href="RM_Section_II_V.html" />
 
@@ -547,8 +547,8 @@ When writing applications or tools to manipulate both images and two-dimensional
 </div>
 <div class="pSmartList1"><ul class="pSmartList1">
 <div class="pSmartList2" style="font-family: Times New Roman; font-style: normal; font-weight: normal"><ul class="pSmartList2" style="font-family: Times New Roman; font-style: normal; font-weight: normal">
-<a name="wp565644"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><u class="cUnderline">o</u>	For <b class="cFunctionName">SDreaddata</b>, those parameters are expressed in (<em class="cVarName">y</em>,<em class="cVarName">x</em>) or [<em class="cVarName">row</em>,<em class="cVarName">column</em>] order.  For example, <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">start[0]</code> is the starting point in the Y dimension and <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">start[1]</code> is the starting point in the X dimension.  The same ordering holds true for all SD data set manipulation functions.</div>
-<a name="wp565645"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><u class="cUnderline">o</u>	For <b class="cFunctionName">GRreadimage</b>, those parameters are expressed in (<em class="cVarName">x</em>,<em class="cVarName">y</em>) or [<em class="cVarName">column</em>,<em class="cVarName">row</em>] order.  For example, <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">start[0]</code> is the starting point in the X dimension and <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">start[1]</code> is the starting point in the Y dimension.  The same ordering holds true for all GR functions manipulating image data.</div>
+<a name="wp565644"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">o</span>	For <b class="cFunctionName">SDreaddata</b>, those parameters are expressed in (<em class="cVarName">y</em>,<em class="cVarName">x</em>) or [<em class="cVarName">row</em>,<em class="cVarName">column</em>] order.  For example, <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">start[0]</code> is the starting point in the Y dimension and <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">start[1]</code> is the starting point in the X dimension.  The same ordering holds true for all SD data set manipulation functions.</div>
+<a name="wp565645"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">o</span>	For <b class="cFunctionName">GRreadimage</b>, those parameters are expressed in (<em class="cVarName">x</em>,<em class="cVarName">y</em>) or [<em class="cVarName">column</em>,<em class="cVarName">row</em>] order.  For example, <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">start[0]</code> is the starting point in the X dimension and <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">start[1]</code> is the starting point in the Y dimension.  The same ordering holds true for all GR functions manipulating image data.</div>
 </ul></div>
 </ul></div>
 </td>
@@ -1964,10 +1964,10 @@ The <em class="cVarName">comp_prm</em> parameter is an array returning one or mo
 </div>
 <div class="pSmartList1"><ul class="pSmartList1">
 <div class="pSmartList2" style="font-family: Times New Roman; font-style: normal; font-weight: normal"><ul class="pSmartList2" style="font-family: Times New Roman; font-style: normal; font-weight: normal">
-<a name="wp583545"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><u class="cUnderline">o</u>	With Skipping Huffman compression, <em class="cVarName">comp_prm</em> is a 1-element array and <em class="cVarName">comp_prm(1)</em><code style="font-family: Courier New" class="cDefName"> </code>contains the skip value, <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">skphuff_skp_size</code>.  </div>
-<a name="wp583546"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><u class="cUnderline">o</u>	In the case of GZIP compression, <em class="cVarName">comp_prm</em> is also a 1-element array and <em class="cVarName">comp_prm(1)</em> contains the deflation value, <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">deflate_value</code>.</div>
-<a name="wp583547"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><u class="cUnderline">o</u>	In the case of NBIT compression, <em class="cVarName">comp_prm</em> is a 4-element array with <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">sign_ext</code> in <em class="cVarName">comp_prm(1)</em>, <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">fill_one</code> in <em class="cVarName">comp_prm(2)</em>, <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">start_bit</code> in <em class="cVarName">comp_prm(3)</em>, and <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">bit_len</code> in <em class="cVarName">comp_prm(4)</em>.  The fields <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">sign_ext</code>, <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">fill_one</code>, <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">start_bit</code>, and <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">bit_len</code> are discussed in the <a href="RM_Section_II_SD.html#wp441862"><b class="cFunctionName">SDsetnbitdataset/sfsnbit</b></a> entry of this reference manual.</div>
-<a name="wp583551"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><u class="cUnderline">o</u>	In the case of Szip compression, <em class="cVarName">comp_prm</em> is a 5-element array with <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">option_mask</code> in <em class="cVarName">comp_prm(1)</em>, <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">pixels_per_block</code> in <em class="cVarName">comp_prm(2)</em>, <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">pixels_per_scanline</code> in <em class="cVarName">comp_prm(3)</em>, <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">bits_per_pixel</code> in <em class="cVarName">comp_prm(4)</em>, and <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">pixels</code> in <em class="cVarName">comp_prm (5)</em>.</div>
+<a name="wp583545"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">o</span>	With Skipping Huffman compression, <em class="cVarName">comp_prm</em> is a 1-element array and <em class="cVarName">comp_prm(1)</em><code style="font-family: Courier New" class="cDefName"> </code>contains the skip value, <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">skphuff_skp_size</code>.  </div>
+<a name="wp583546"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">o</span>	In the case of GZIP compression, <em class="cVarName">comp_prm</em> is also a 1-element array and <em class="cVarName">comp_prm(1)</em> contains the deflation value, <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">deflate_value</code>.</div>
+<a name="wp583547"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">o</span>	In the case of NBIT compression, <em class="cVarName">comp_prm</em> is a 4-element array with <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">sign_ext</code> in <em class="cVarName">comp_prm(1)</em>, <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">fill_one</code> in <em class="cVarName">comp_prm(2)</em>, <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">start_bit</code> in <em class="cVarName">comp_prm(3)</em>, and <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">bit_len</code> in <em class="cVarName">comp_prm(4)</em>.  The fields <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">sign_ext</code>, <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">fill_one</code>, <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">start_bit</code>, and <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">bit_len</code> are discussed in the <a href="RM_Section_II_SD.html#wp441862"><b class="cFunctionName">SDsetnbitdataset/sfsnbit</b></a> entry of this reference manual.</div>
+<a name="wp583551"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">o</span>	In the case of Szip compression, <em class="cVarName">comp_prm</em> is a 5-element array with <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">option_mask</code> in <em class="cVarName">comp_prm(1)</em>, <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">pixels_per_block</code> in <em class="cVarName">comp_prm(2)</em>, <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">pixels_per_scanline</code> in <em class="cVarName">comp_prm(3)</em>, <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">bits_per_pixel</code> in <em class="cVarName">comp_prm(4)</em>, and <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">pixels</code> in <em class="cVarName">comp_prm (5)</em>.</div>
 </ul></div>
 </ul></div>
 </td>
@@ -2024,8 +2024,8 @@ Note
 </div>
 <div class="pSmartList1"><ul class="pSmartList1">
 <div class="pSmartList2" style="font-family: Times New Roman; font-style: normal; font-weight: normal"><ul class="pSmartList2" style="font-family: Times New Roman; font-style: normal; font-weight: normal">
-<a name="wp583573"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><u class="cUnderline">o</u>	The data set is not compressed.</div>
-<a name="wp583574"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><u class="cUnderline">o</u>	No data has been written to the SDS.</div>
+<a name="wp583573"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">o</span>	The data set is not compressed.</div>
+<a name="wp583574"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">o</span>	No data has been written to the SDS.</div>
 </ul></div>
 </ul></div>
 </td>
@@ -3907,10 +3907,10 @@ SDidtype returns a value of type hdf_idtype_t, which can be one of the following
 </div>
 <div class="pSmartList1"><ul class="pSmartList1">
 <div class="pSmartList2" style="font-family: Times New Roman; font-style: normal; font-weight: normal"><ul class="pSmartList2" style="font-family: Times New Roman; font-style: normal; font-weight: normal">
-<a name="wp568110"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><u class="cUnderline">o</u><code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">	NOT_SDAPI_ID</code> (or <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">-1</code>)	not an SD API id</div>
-<a name="wp568111"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><u class="cUnderline">o</u><code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">	SD_ID</code>  (or <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">0</code>)	SD id</div>
-<a name="wp568112"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><u class="cUnderline">o</u><code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">	SDS_ID</code> (or <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">1</code>)	SDS id</div>
-<a name="wp568113"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><u class="cUnderline">o</u><code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">	DIM_ID</code> (or <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">2</code>)	Dimension id</div>
+<a name="wp568110"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">o</span><code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">	NOT_SDAPI_ID</code> (or <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">-1</code>)	not an SD API id</div>
+<a name="wp568111"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">o</span><code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">	SD_ID</code>  (or <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">0</code>)	SD id</div>
+<a name="wp568112"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">o</span><code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">	SDS_ID</code> (or <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">1</code>)	SDS id</div>
+<a name="wp568113"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">o</span><code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">	DIM_ID</code> (or <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">2</code>)	Dimension id</div>
 </ul></div>
 </ul></div>
 <a name="wp568114"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
@@ -5161,8 +5161,8 @@ When writing applications or tools to manipulate both images and two-dimensional
 </div>
 <div class="pSmartList1"><ul class="pSmartList1">
 <div class="pSmartList2" style="font-family: Times New Roman; font-style: normal; font-weight: normal"><ul class="pSmartList2" style="font-family: Times New Roman; font-style: normal; font-weight: normal">
-<a name="wp548663"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><u class="cUnderline">o</u>	For <b class="cFunctionName">SDreaddata</b>, those parameters are expressed in (<em class="cVarName">y</em>,<em class="cVarName">x</em>) or [<em class="cVarName">row</em>,<em class="cVarName">column</em>] order.  For example, <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">start[0]</code> is the starting point in the Y dimension and <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">start[1]</code> is the starting point in the X dimension.  The same ordering holds true for all SD data set manipulation functions.</div>
-<a name="wp548664"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><u class="cUnderline">o</u>	For <b class="cFunctionName">GRreadimage</b>, those parameters are expressed in (<em class="cVarName">x</em>,<em class="cVarName">y</em>) or [<em class="cVarName">column</em>,<em class="cVarName">row</em>] order.  For example, <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">start[0]</code> is the starting point in the X dimension and <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">start[1]</code> is the starting point in the Y dimension.  The same ordering holds true for all GR functions manipulating image data.</div>
+<a name="wp548663"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">o</span>	For <b class="cFunctionName">SDreaddata</b>, those parameters are expressed in (<em class="cVarName">y</em>,<em class="cVarName">x</em>) or [<em class="cVarName">row</em>,<em class="cVarName">column</em>] order.  For example, <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">start[0]</code> is the starting point in the Y dimension and <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">start[1]</code> is the starting point in the X dimension.  The same ordering holds true for all SD data set manipulation functions.</div>
+<a name="wp548664"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">o</span>	For <b class="cFunctionName">GRreadimage</b>, those parameters are expressed in (<em class="cVarName">x</em>,<em class="cVarName">y</em>) or [<em class="cVarName">column</em>,<em class="cVarName">row</em>] order.  For example, <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">start[0]</code> is the starting point in the X dimension and <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">start[1]</code> is the starting point in the Y dimension.  The same ordering holds true for all GR functions manipulating image data.</div>
 </ul></div>
 </ul></div>
 </td>
@@ -5530,35 +5530,35 @@ SDselect/sfselect
 <a name="wp566772"> </a><p style="font-weight: normal" class="pSignature">
 int32 SDselect(int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">sd_id</span>, int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">sds_index</span>)
 </p>
-<a name="wp534322"> </a><p class="pBodyRelative">
+<a name="wp585369"> </a><p class="pBodyRelative">
 </p>
 <div align="left">
-<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp512965table512963">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp585328table585326">
   <caption></caption>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp512965"> </a><div style="margin-top: 0pt" class="pCellVariable">
+<a name="wp585328"> </a><div style="margin-top: 0pt" class="pCellVariable">
 sd_id
 </div>
 </td>
-    <td><a name="wp512967"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp585330"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 IN:
 </div>
 </td>
-    <td><a name="wp512969"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp585332"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 SD interface identifier returned by <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDstart</span>
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp512971"> </a><div style="margin-top: 0pt" class="pCellVariable">
+<a name="wp585334"> </a><div style="margin-top: 0pt" class="pCellVariable">
 sds_index
 </div>
 </td>
-    <td><a name="wp512973"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp585336"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 IN:
 </div>
 </td>
-    <td><a name="wp512975"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp585338"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 Index of the data set
 </div>
 </td>
@@ -5568,50 +5568,50 @@ Index of the data set
 <p class="pBodyRelative">
 </p>
 <div align="left">
-<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp512978table512976">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp585341table585339">
   <caption></caption>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp512978"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp585341"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 Purpose
 </div></td>
-    <td><a name="wp512980"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp585343"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 Obtains the data set identifier (<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">sds_id</span>) of a data set.
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp512982"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp585345"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 Return value
 </div></td>
-    <td><a name="wp512984"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp585347"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 Returns the data set identifier (<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">sds_id</span>) if successful and <code style="font-family: Courier New" class="cDefName">FAIL</code> (or<span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> -1</span>) otherwise.
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp512986"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp585349"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 Description
 </div></td>
-    <td><a name="wp512988"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp585351"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDselect</span> obtains the data set identifier (<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">sds_id</span>) of the data set specified by its index, <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">sds_index</span>.
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp512990"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp585353"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 &#160;
 </div></td>
-    <td><a name="wp513004"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp585355"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 The integration with netCDF has required that a dimension (or coordinate variable) is stored as a data set in the file. Therefore, the value of <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">sds_index</span> may correspond to the coordinate variable instead of the actual data set. Users should use the routine <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDiscoordvar</span> to determine whether the given data set is a coordinate variable.
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp512994"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp585357"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 &#160;
 </div></td>
-    <td><a name="wp513006"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-The value of <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">sds_index</span> is greater than or equal to 0 and less than the number of data sets in the file. The total number of data sets in a file may be obtained from a call to <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDfileinfo</span>. The <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDnametoindex</span> routine can be used to find the index of a data set if its name is known.
+    <td><a name="wp585359"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+The value of <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">sds_index</span> is greater than or equal to 0 and less than the number of data sets in the file. The total number of data sets in a file may be obtained from a call to <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDfileinfo</span>. The <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDnametoindex</span> routine can be used to find the index of a data set if its name is known.  However, when multiple data sets have the same name, <b class="cFunctionName">SDnametoindices</b> can be used to obtains all the indices.
 </div>
 </td>
 </tr>
@@ -5620,23 +5620,130 @@ The value of <span style="color: #000000; font-style: italic; font-variant: norm
 <p class="pBodyRelative">
 </p>
 <div align="left">
-<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp513009table513007">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp585362table585360">
   <caption></caption>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp513009"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp585362"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 FORTRAN
 </div></td>
-    <td><a name="wp513011"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortSyntax">
+    <td><a name="wp585364"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortSyntax">
 integer function sfselect(sd_id, sds_index)
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp513017"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp585366"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 &#160;
 </div></td>
-    <td><a name="wp513019"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortVar">
+    <td><a name="wp585368"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortVar">
 integer sd_id, sds_index
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="pBodyRelative">
+
+</p>
+<a name="wp585384"> </a><h2 class="pRef_SD_RoutineName">
+<p align=right><A HREF="RM_Section_II_SDLOP.html">
+[SD Interface]</A><a HREF="RMTOP.html"><b>[Top]</b></a>
+</p>
+<hr />
+SDsetaccesstype/sdfsacct
+</h2>
+<a name="wp585385"> </a><p style="font-weight: normal" class="pSignature">
+intn SDsetaccesstype(int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">sds_id</span>, uintn <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">access_type</span>)
+</p>
+<a name="wp585444"> </a><p class="pBodyRelative">
+</p>
+<div align="left">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp585388table585386">
+  <caption></caption>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp585388"> </a><div style="margin-top: 0pt" class="pCellVariable">
+sds_id
+</div>
+</td>
+    <td><a name="wp585390"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+IN:
+</div>
+</td>
+    <td><a name="wp585465"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Data set identifier returned by <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDcreate</span> or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDselect</span>
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp585394"> </a><div style="margin-top: 0pt" class="pCellVariable">
+accesstype
+</div>
+</td>
+    <td><a name="wp585396"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+IN:
+</div>
+</td>
+    <td><a name="wp585398"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Access type
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="pBodyRelative">
+</p>
+<div align="left">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp585401table585399">
+  <caption></caption>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp585401"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+Purpose
+</div></td>
+    <td><a name="wp585403"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Sets the I/O access type of an SDS.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp585405"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+Return value
+</div></td>
+    <td><a name="wp585473"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Returns <code style="font-family: Courier New" class="cDefName">SUCCEED</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">0</span>) if the SDS data can be accessed via <em class="cVarName">access_type</em> and <code style="font-family: Courier New" class="cDefName">FAIL</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">-1</span>) otherwise.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp585409"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+Description
+</div></td>
+    <td><a name="wp585496"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+<span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDsetaccesstype</span> sets the type of I/O (serial, paralle,...) for accessing the data of the data set identified by <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">sds_id</span>.  Access types can be <code style="font-family: Courier New" class="cDefName">DFACC_SERIAL</code> (or <code style="font-family: Courier New" class="cDefName">1</code>), <code style="font-family: Courier New" class="cDefName">DFACC_PARALLEL</code> (or <code style="font-family: Courier New" class="cDefName">11</code>), and <code style="font-family: Courier New" class="cDefName">DFACC_DEFAULT</code> (or <code style="font-family: Courier New" class="cDefName">0</code>).
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="pBodyRelative">
+</p>
+<div align="left">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp585437table585435">
+  <caption></caption>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp585437"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+FORTRAN
+</div></td>
+    <td><a name="wp585439"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortSyntax">
+integer function sdfsacct(sds_id, access_type)
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp585441"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+&#160;
+</div></td>
+    <td><a name="wp585443"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortVar">
+integer sds_id, access_type
 </div>
 </td>
 </tr>
@@ -6499,9 +6606,9 @@ The parameter <span style="color: #000000; font-style: italic; font-variant: nor
 </div>
 <div class="pSmartList1"><ul class="pSmartList1">
 <div class="pSmartList2" style="font-family: Times New Roman; font-style: normal; font-weight: normal"><ul class="pSmartList2" style="font-family: Times New Roman; font-style: normal; font-weight: normal">
-<a name="wp572327"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><u class="cUnderline">o</u>	<code style="font-family: Courier New" class="cDefName">HDF_CHUNK</code> for a chunked data set with no compression</div>
-<a name="wp572328"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><u class="cUnderline">o</u>	<code style="font-family: Courier New" class="cDefName">HDF_CHUNK</code> | <code style="font-family: Courier New" class="cDefName">HDF_COMP</code> for a chunked data set compressed with RLE, Skipping Huffman, GZIP, or Szip compression methods</div>
-<a name="wp572329"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><u class="cUnderline">o</u>	<code style="font-family: Courier New" class="cDefName">HDF_CHUNK</code> | <code style="font-family: Courier New" class="cDefName">HDF_NBIT</code> for a chunked and NBIT-compressed data set</div>
+<a name="wp572327"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">o</span>	<code style="font-family: Courier New" class="cDefName">HDF_CHUNK</code> for a chunked data set with no compression</div>
+<a name="wp572328"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">o</span>	<code style="font-family: Courier New" class="cDefName">HDF_CHUNK</code> | <code style="font-family: Courier New" class="cDefName">HDF_COMP</code> for a chunked data set compressed with RLE, Skipping Huffman, GZIP, or Szip compression methods</div>
+<a name="wp572329"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">o</span>	<code style="font-family: Courier New" class="cDefName">HDF_CHUNK</code> | <code style="font-family: Courier New" class="cDefName">HDF_NBIT</code> for a chunked and NBIT-compressed data set</div>
 </ul></div>
 </ul></div>
 </td>
@@ -6638,9 +6745,9 @@ For Skipping Huffman and GZIP compression, parameters are passed in correspondin
 </div>
 <div class="pSmartList1"><ul class="pSmartList1">
 <div class="pSmartList2" style="font-family: Times New Roman; font-style: normal; font-weight: normal"><ul class="pSmartList2" style="font-family: Times New Roman; font-style: normal; font-weight: normal">
-<a name="wp572396"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><u class="cUnderline">o</u>	Specify skipping size for Skipping Huffman compression in the field <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">cdef.comp.cinfo.skphuff.skp_size</code>, which must be an integer of value 1 or greater. </div>
-<a name="wp572397"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><u class="cUnderline">o</u>	Specify the deflate level for GZIP compression in the field <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">cdef.comp.cinfo.deflate_level</code>. Valid deflate level values are integers between 0 and 9 inclusive.</div>
-<a name="wp573300"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><u class="cUnderline">o</u>	Specify the options mask and the number of pixels per block for Szip compression in the fields <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">c_info.szip.options_mask</code> and <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">c_info.szip.pixels_per_block</code>, respectively.</div>
+<a name="wp572396"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">o</span>	Specify skipping size for Skipping Huffman compression in the field <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">cdef.comp.cinfo.skphuff.skp_size</code>, which must be an integer of value 1 or greater. </div>
+<a name="wp572397"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">o</span>	Specify the deflate level for GZIP compression in the field <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">cdef.comp.cinfo.deflate_level</code>. Valid deflate level values are integers between 0 and 9 inclusive.</div>
+<a name="wp573300"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">o</span>	Specify the options mask and the number of pixels per block for Szip compression in the fields <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">c_info.szip.options_mask</code> and <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">c_info.szip.pixels_per_block</code>, respectively.</div>
 </ul></div>
 </ul></div>
 <a name="wp573323"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
@@ -7264,8 +7371,8 @@ The following guidelines may be helpful in selecting the encoding method:
 </div>
 <div class="pSmartList1"><ul class="pSmartList1">
 <div class="pSmartList2" style="font-family: Times New Roman; font-style: normal; font-weight: normal"><ul class="pSmartList2" style="font-family: Times New Roman; font-style: normal; font-weight: normal">
-<a name="wp549333"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><u class="cUnderline">o</u>	The entropy coding method, the EC option specified by <code style="font-family: Courier New" class="cDefName">SZ_EC_OPTION_MASK</code>, is best suited for data that has been processed. The EC method works best for small numbers.</div>
-<a name="wp549296"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><u class="cUnderline">o</u>	The nearest neighbor coding method, the NN option specified by <code style="font-family: Courier New" class="cDefName">SZ_NN_OPTION_MASK</code>, preprocesses the data then applies the EC method as above. </div>
+<a name="wp549333"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">o</span>	The entropy coding method, the EC option specified by <code style="font-family: Courier New" class="cDefName">SZ_EC_OPTION_MASK</code>, is best suited for data that has been processed. The EC method works best for small numbers.</div>
+<a name="wp549296"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">o</span>	The nearest neighbor coding method, the NN option specified by <code style="font-family: Courier New" class="cDefName">SZ_NN_OPTION_MASK</code>, preprocesses the data then applies the EC method as above. </div>
 </ul></div>
 </ul></div>
 <a name="wp549298"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
@@ -8671,7 +8778,7 @@ Specifies a non-standard bit length for the data set values.
 Return value
 </div></td>
     <td><a name="wp514340"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Returns <code style="font-family: Courier New" class="cDefName">SUCCEED</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">0</span>) if successful and <code style="font-family: Courier New" class="cDefName">FAIL</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">-1</span>) otherwise.
+Returns a positive value if successful and <code style="font-family: Courier New" class="cDefName">FAIL</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">-1</span>) otherwise.
 </div>
 </td>
 </tr>
@@ -9472,7 +9579,7 @@ The array <span style="color: #000000; font-style: italic; font-variant: normal;
 &#160;
 </div></td>
     <td><a name="wp582288"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-The array <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">edge</span>  specifies the number of values to write along each data set dimension.
+The array <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">edge</span> specifies the number of values to write along each data set dimension.
 </div>
 </td>
 </tr>
@@ -9481,7 +9588,7 @@ The array <span style="color: #000000; font-style: italic; font-variant: normal;
 &#160;
 </div></td>
     <td><a name="wp582292"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-The array <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">stride </span> specifies the writing pattern along each dimension. For example, if one of the elements of the array <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">stride</span>  is 1, then every element along the corresponding dimension of the data set will be written. If one of the elements of the array <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">stride</span> is 2, then every other element along the corresponding dimension of the data set will be written, and so on. Specifying  <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">stride</span>  value of <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">NULL</span> in the C interface or setting all values of the array <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">stride</span>  to 1 in either interface specifies the contiguous writing of data. If all values in the array <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">stride</span> are set to 0, <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDwritedata</span> returns <code style="font-family: Courier New" class="cDefName">FAIL</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">-1</span>).
+The array <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">stride </span>specifies the writing pattern along each dimension. For example, if one of the elements of the array <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">stride</span>  is 1, then every element along the corresponding dimension of the data set will be written. If one of the elements of the array <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">stride</span> is 2, then every other element along the corresponding dimension of the data set will be written, and so on. Specifying  <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">stride</span>  value of <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">NULL</span> in the C interface or setting all values of the array <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">stride</span>  to 1 in either interface specifies the contiguous writing of data. If all values in the array <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">stride</span> are set to 0, <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDwritedata</span> returns <code style="font-family: Courier New" class="cDefName">FAIL</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">-1</span>).
 </div>
 </td>
 </tr>
@@ -9521,8 +9628,8 @@ When writing applications or tools to manipulate both images and two-dimensional
 </div>
 <div class="pSmartList1"><ul class="pSmartList1">
 <div class="pSmartList2" style="font-family: Times New Roman; font-style: normal; font-weight: normal"><ul class="pSmartList2" style="font-family: Times New Roman; font-style: normal; font-weight: normal">
-<a name="wp582309"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><u class="cUnderline">o</u>	For <b class="cFunctionName">SDreaddata</b>, those parameters are expressed in (<em class="cVarName">y</em>,<em class="cVarName">x</em>) or [<em class="cVarName">row</em>,<em class="cVarName">column</em>] order.  For example, <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">start[0]</code> is the starting point in the Y dimension and <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">start[1]</code> is the starting point in the X dimension.  The same ordering holds true for all SD data set manipulation functions.</div>
-<a name="wp582310"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><u class="cUnderline">o</u>	For <b class="cFunctionName">GRreadimage</b>, those parameters are expressed in (<em class="cVarName">x</em>,<em class="cVarName">y</em>) or [<em class="cVarName">column</em>,<em class="cVarName">row</em>] order.  For example, <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">start[0]</code> is the starting point in the X dimension and <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">start[1]</code> is the starting point in the Y dimension.  The same ordering holds true for all GR functions manipulating image data.</div>
+<a name="wp582309"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">o</span>	For <b class="cFunctionName">SDreaddata</b>, those parameters are expressed in <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">(y,x)</code> or <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">[row,column]</code> order.  For example, <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">start[0]</code> is the starting point in the Y dimension and <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">start[1]</code> is the starting point in the X dimension.  The same ordering holds true for all SD data set manipulation functions.</div>
+<a name="wp582310"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">o</span>	For <b class="cFunctionName">GRreadimage</b>, those parameters are expressed in <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">(x,y)</code> or <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">[column,row]</code> order.  For example, <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">start[0]</code> is the starting point in the X dimension and <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">start[1]</code> is the starting point in the Y dimension.  The same ordering holds true for all GR functions manipulating image data.</div>
 </ul></div>
 </ul></div>
 </td>
@@ -9663,7 +9770,7 @@ character*(*) buffer(*)
     <table id="SummaryNotReq2" border="0" width="850" cellspacing="0" cellpadding="0">
       <tr>
         <td align="left">
-        HDF4.2r3 - August 2008<br/>
+        HDF4.2r5 - February 2010<br/>
         <a href="RM_Front.html">Copyright</a>
         <td align="right">
           <span style="font-size: 12px; font-weight: bold">
