@@ -57,7 +57,7 @@
 <!--BeginHiddenExpansion $APageNoButton_Next; EndHiddenExpansion-->
         </td>
         <td align="center">
-        HDF4.2r5 - February 2010<br />
+        HDF4.2.5 - February 2010<br />
         <a href="RM_Front.html">Copyright</a>
         <td align="right">
           <span style="font-size: 12px; font-weight: bold">
