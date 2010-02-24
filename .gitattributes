@@ -207,9 +207,6 @@ UsrGuide/src/UG_Annot.fm -text
 UsrGuide/src/UG_Appndx.fm -text
 UsrGuide/src/UG_BookIX.fm -text
 UsrGuide/src/UG_BookLOA.fm -text
-UsrGuide/src/UG_BookLOE.fm -text
-UsrGuide/src/UG_BookLOF.fm -text
-UsrGuide/src/UG_BookLOT.fm -text
 UsrGuide/src/UG_BookTOC.fm -text
 UsrGuide/src/UG_BookTOCTOP.fm -text
 UsrGuide/src/UG_BookprintIX.fm -text
