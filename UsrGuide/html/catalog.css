@@ -37,6 +37,19 @@ em.cVarName
   font-style: italic
 }
 
+div.pAppendixTitle
+{
+  color: Purple;
+  font-family: Courier New;
+  font-size: 25px;
+  font-variant: normal;
+  font-weight: bold;
+  margin-left: 0em;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0em;
+  text-transform: none
+}
 p.pBody
 {
   color: Black;

@@ -186,6 +186,9 @@ UsrGuide/html/UG_SD.html -text
 UsrGuide/html/UG_Utils.html -text
 UsrGuide/html/UG_Vdatas.html -text
 UsrGuide/html/UG_Vgroups.html -text
+UsrGuide/html/UG_htmlLOE.html -text
+UsrGuide/html/UG_htmlLOF.html -text
+UsrGuide/html/UG_htmlLOT.html -text
 UsrGuide/html/catalog.css -text
 UsrGuide/html/netCDF_copyright.html -text
 UsrGuide/src/Example_DFAN.fm -text
@@ -231,6 +234,9 @@ UsrGuide/src/UG_Utils.fm -text
 UsrGuide/src/UG_Vdatas.fm -text
 UsrGuide/src/UG_Vgroups.fm -text
 UsrGuide/src/UG_html.book -text
+UsrGuide/src/UG_htmlLOE.fm -text
+UsrGuide/src/UG_htmlLOF.fm -text
+UsrGuide/src/UG_htmlLOT.fm -text
 UsrGuide/src/UG_print.book -text
 UsrGuide/webworks/hdf4_UG.wfp -text
 UsrGuide/webworks/support/CopyrightPage.asp -text

@@ -7,7 +7,7 @@
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.8.2296" />
     <meta name="TEMPLATEBASE" content="HDF4 Version 1.0" />
-    <meta name="LASTUPDATED" content="02/19/10 12:02:14" />
+    <meta name="LASTUPDATED" content="02/24/10 08:19:59" />
     <title>Chapter</title>
     <link rel="StyleSheet" href="document.css" type="text/css" media="all" />
     <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
@@ -3418,15 +3418,13 @@ The GIF file may be of either GIF 87a or 89a formats. The choice between the two
 <a name="wp76214"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 Depending on the version of the GIF file generated, the structure of the output file is as follows:
 </p>
-<a name="wp76215"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 152pt; margin-right: 0pt; margin-top: 3pt; text-align: left; text-decoration: none; text-indent: -44pt; text-transform: none">
-GIF87a: 	The GIF file consists of a header, logical screen descriptor, image descriptor, local color table,  image data, and the trailer. There is no global color table.
-</div>
-<a name="wp76599"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 152pt; margin-right: 0pt; margin-top: 3pt; text-align: left; text-decoration: none; text-indent: -44pt; text-transform: none">
-GIF89a: 	The GIF file consists of a header, logical screen descriptor, and the <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">Netscape 2.0</code> application extension. This is followed by graphic control extension, image descriptor, local color table, and raw image data, in that order and repeated for every image present in the HDF file. The trailer follows and signifies the end of the GIF file. As in the GIF87a format, there is no global color table.
-</div>
-<a name="wp76950"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 152pt; margin-right: 0pt; margin-top: 3pt; text-align: left; text-decoration: none; text-indent: -44pt; text-transform: none">
-	The <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">Netscape 2.0</code> application extension is present to inform the GIF renderer the number of times the GIF animation should loop.
-</div>
+<div class="pSmartList1" style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal"><ul class="pSmartList1" style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal">
+<div class="pSmartList2" style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal"><ul class="pSmartList2" style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal">
+<a name="wp76215"> </a><div style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal" class="pSmartList2">GIF87a: 	The GIF file consists of a header, logical screen descriptor, image descriptor, local color table,  image data, and the trailer. There is no global color table.</div>
+<a name="wp76599"> </a><div style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal" class="pSmartList2">GIF89a: 	The GIF file consists of a header, logical screen descriptor, and the <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">Netscape 2.0</code> application extension. This is followed by graphic control extension, image descriptor, local color table, and raw image data, in that order and repeated for every image present in the HDF file. The trailer follows and signifies the end of the GIF file. As in the GIF87a format, there is no global color table.</div>
+<a name="wp76950"> </a><div style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal" class="pSmartList2">	The <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">Netscape 2.0</code> application extension is present to inform the GIF renderer the number of times the GIF animation should loop.</div>
+</ul></div>
+</ul></div>
 <a name="wp76605"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
 	15.20.4 Building the Utility
 </h3>
