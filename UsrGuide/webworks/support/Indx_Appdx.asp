@@ -33,7 +33,7 @@
         </td>
         <td valign="middle" align="center">
           <b><H1>HDF User’s Guide</H1>
-           Version 4.2r5</b><br />
+           Version 4.2.5</b><br />
         </td>
         <td valign="middle" align="right">
         <br/>
@@ -53,7 +53,7 @@
     <table id="$BP80Accessibility_SummaryNotReqID;" border="0" width="850" cellspacing="0" cellpadding="0">
       <tr>
         <td align="left">
-        HDF4.2r5 - February 2010<br/>
+        HDF4.2.5 - February 2010<br/>
         <a href="UG_Copyright.html">Copyright</a>
         <td align="right">
           <span style="font-size: 12px; font-weight: bold">
