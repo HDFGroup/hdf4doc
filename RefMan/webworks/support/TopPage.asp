@@ -51,7 +51,7 @@
     <table id="$BP80Accessibility_SummaryNotReqID;" border="0" width="850" cellspacing="0" cellpadding="0">
       <tr>
         <td align="left">
-        HDF4.2.5 - February 2010<br />
+        HDF4.2.6 - June 2011<br />
         <a href="RM_Front.html">Copyright</a>
         <td align="right">
           <span style="font-size: 12px; font-weight: bold">
