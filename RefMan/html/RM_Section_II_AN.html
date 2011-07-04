@@ -7,7 +7,7 @@
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.8.2296" />
     <meta name="TEMPLATEBASE" content="Dynamic HTML" />
-    <meta name="LASTUPDATED" content="03/15/10 22:08:28" />
+    <meta name="LASTUPDATED" content="07/04/11 02:13:47" />
     <title>ANannlen/afannlen</title>
     <link rel="StyleSheet" href="document.css" type="text/css" media="all" />
     <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
@@ -245,7 +245,7 @@ Retrieves the annotation identifiers of an object.
 Return value
 </div></td>
     <td><a name="wp446405"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Returns <code style="font-family: Courier New" class="cDefName">SUCCEED</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">0</span>) or <code style="font-family: Courier New" class="cDefName">FAIL</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">-1</span>) otherwise.
+Returns number of annotations identifiers found, if successful, or <code style="font-family: Courier New" class="cDefName">FAIL</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">-1</span>) otherwise.
 </div>
 </td>
 </tr>
@@ -263,7 +263,7 @@ Description
 &#160;
 </div></td>
     <td><a name="wp446413"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Since this routine is implemented only to obtain the identifiers of data annotations and not file annotations, the valid values of <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">annot_type</span> are <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">AN_DATA_LABEL</span> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">0</span>) and <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">AN_DATA_DESC</span> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">1</span>). To obtain file annotation identifiers, use <b class="cFunctionName">ANfileinfo</b> to determine the number of file labels and descriptions, and then use <b class="cFunctionName">ANselect</b> to obtain each file annotation identifier.
+Since this routine is implemented only to obtain the identifiers of data annotations and not file annotations, the valid values of <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">annot_type</span> are <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">AN_DATA_LABEL</span> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">0</span>) and <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">AN_DATA_DESC</span> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">1</span>). To obtain file annotation identifiers, an application can use <b class="cFunctionName">ANfileinfo</b> to determine the number of file labels and descriptions, and then use <b class="cFunctionName">ANselect</b> to obtain each file annotation identifier.  In this case, the application must call <b class="cFunctionName">ANendaccess</b> to close the annotation identifier when done accessing it.
 </div>
 </td>
 </tr>
@@ -394,47 +394,47 @@ The following table lists the valid values of <span style="color: #000000; font-
 <div align="center">
 <table border="1" cellpadding="3" cellspacing="1" bgcolor="White" bordercolor="#FFFFFF" id="wp443687table443657">
   <caption></caption>
-  <tr>    <th><a name="wp443687"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <th><a name="wp443687"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Annotation Type</span>
 </div>
 </th>
-    <th><a name="wp443689"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <th><a name="wp443689"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Annotation Tag
 </div>
 </th>
 </tr>
-  <tr>    <td><a name="wp443691"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td><a name="wp443691"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 AN_DATA_LABEL (or 0)
 </div>
 </td>
-    <td><a name="wp443693"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp443693"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 DFTAG_DIL (or 104)
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp443695"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td><a name="wp443695"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 AN_DATA_DESC (or 1)
 </div>
 </td>
-    <td><a name="wp443697"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp443697"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 DFTAG_DIA (or 105)
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp443699"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td><a name="wp443699"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 AN_FILE_LABEL (or 2)
 </div>
 </td>
-    <td><a name="wp443701"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp443701"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 DFTAG_FID (or 100)
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp443703"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td><a name="wp443703"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 AN_FILE_DESC (or 3)
 </div>
 </td>
-    <td><a name="wp443705"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp443705"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 DFTAG_FD (or 101)
 </div>
 </td>
@@ -1271,47 +1271,47 @@ The following table lists the valid values of the parameter <span style="color: 
 <div align="center">
 <table border="1" cellpadding="3" cellspacing="1" bgcolor="White" bordercolor="#FFFFFF" id="wp469603table444028">
   <caption></caption>
-  <tr>    <th><a name="wp469603"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <th><a name="wp469603"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Annotation Type
 </div>
 </th>
-    <th><a name="wp469605"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <th><a name="wp469605"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Annotation Tag
 </div>
 </th>
 </tr>
-  <tr>    <td><a name="wp469607"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td><a name="wp469607"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 AN_DATA_LABEL (or 0)
 </div>
 </td>
-    <td><a name="wp469609"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp469609"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 DFTAG_DIL (or 104)
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp469611"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td><a name="wp469611"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 AN_DATA_DESC (or 1)
 </div>
 </td>
-    <td><a name="wp469613"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp469613"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 DFTAG_DIA (or 105)
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp469615"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td><a name="wp469615"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 AN_FILE_LABEL (or 2)
 </div>
 </td>
-    <td><a name="wp469617"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp469617"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 DFTAG_FID (or 100)
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp469619"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td><a name="wp469619"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 AN_FILE_DESC (or 3)
 </div>
 </td>
-    <td><a name="wp469621"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp469621"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 DFTAG_FD (or 101)
 </div>
 </td>
@@ -2088,47 +2088,47 @@ The following table lists the valid values of <span style="color: #000000; font-
 <div align="center">
 <table border="1" cellpadding="3" cellspacing="1" bgcolor="White" bordercolor="#FFFFFF" id="wp443761table443714">
   <caption></caption>
-  <tr>    <th><a name="wp443761"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <th><a name="wp443761"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Annotation Tag
 </div>
 </th>
-    <th><a name="wp443763"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <th><a name="wp443763"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Annotation Type
 </div>
 </th>
 </tr>
-  <tr>    <td><a name="wp443765"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td><a name="wp443765"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 DFTAG_DIL (or 104)
 </div>
 </td>
-    <td><a name="wp443767"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp443767"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 AN_DATA_LABEL (or 0)
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp443769"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td><a name="wp443769"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 DFTAG_DIA (or 105)
 </div>
 </td>
-    <td><a name="wp443771"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp443771"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 AN_DATA_DESC (or 1)
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp443773"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td><a name="wp443773"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 DFTAG_FID (or 100)
 </div>
 </td>
-    <td><a name="wp443775"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp443775"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 AN_FILE_LABEL (or 2)
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp443777"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td><a name="wp443777"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 DFTAG_FD (or 101)
 </div>
 </td>
-    <td><a name="wp443779"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp443779"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 AN_FILE_DESC (or 3)
 </div>
 </td>
@@ -2439,7 +2439,7 @@ character*(*) ann
     <table id="SummaryNotReq2" border="0" width="850" cellspacing="0" cellpadding="0">
       <tr>
         <td align="left">
-        HDF4.2.5 - February 2010<br/>
+        HDF4.2.6 - June 2011<br/>
         <a href="RM_Front.html">Copyright</a>
         <td align="right">
           <span style="font-size: 12px; font-weight: bold">

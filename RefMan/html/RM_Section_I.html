@@ -1,0 +1,1767 @@
+<!?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.8.2296" />
+    <meta name="TEMPLATEBASE" content="Dynamic HTML" />
+    <meta name="LASTUPDATED" content="07/04/11 02:13:44" />
+    <title>Section 1</title>
+    <link rel="StyleSheet" href="document.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
+<link rel="first" title="First" href="RM_Front.html" />
+<link rel="last" title="Last" href="netCDF_copyright.html" />
+<link rel="previous" title="Previous" href="RM_Front.html" />
+<link rel="next" title="Next" href="RMTop.html" />
+
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/seealso.js"></script>
+
+    <script type="text/javascript" language="JavaScript1.2">
+     <!--
+      var  WebWorksSeeAlso = new WebWorksSeeAlso_Object();
+     // -->
+    </script>
+  </head>
+
+  <body>
+
+    <p>
+
+    <table id="SummaryNotReq1" border="0" width="610"cellspacing="0" cellpadding="0">
+      <tr>
+
+        <td align="left">
+          <img id="LongDescNotReq1" border="0"src="images/hdf_logo.jpg" width="90" height="70" alt="The HDF Group" valign="top" />
+        </td>
+        <td valign="middle" align="center">
+          <b><H1>HDF Reference Manual</H1></b>
+	</td>
+      </tr>
+    </table>
+
+    </p>
+    <hr />
+
+    <blockquote>
+<a name="wp418460"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 18pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 11pt; margin-right: 410pt; margin-top: 18pt; text-align: center; text-decoration: none; text-indent: -11pt; text-transform: none">
+Section 1
+</div>
+<a name="wp418463"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 24pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 108pt; margin-right: 0pt; margin-top: 24pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+Introduction to the HDF APIs
+</div>
+<a name="wp418644"> </a><h2 class="pHeading1">
+	1.1	Overview of the HDF Interfaces
+</h2>
+<a name="wp432612"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-left: 95pt; margin-right: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none" class="pBody">
+The HDF library structure consists of two interface layers and one application layer built upon a physical file format. <a href="RM_Section_I.html#wp432767">(See Figure 1a.)</a> The first layer, or the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">low-level interface</span>, is generally reserved for software developers because it provides support for low-level details such as file I/O, error handling, and memory management. The second layer, containing the single and multifile <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">application interfaces</span>, consists of a set of interfaces designed to simplify the process of storing and accessing data. The single-file interfaces operate on one file at a time, whereas the multifile interfaces can operate on several files simultaneously. The highest HDF layer includes various NCSA and commercial applications and a collection of command-line utilities that operate on HDF files or the data objects they contain.
+</p>
+<a name="wp432767"> </a><div style="margin-bottom: 0pt; margin-top: 8pt" class="ptoseechanges">
+FIGURE 1a	<span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Three Levels of Interaction with the HDF File</span></div>
+<div align="center"><img src="images/hdf4_RM-02-1-1.jpg" height="253" width="516" id="wp432618" border="0" hspace="0" vspace="0"/></div><div style="margin-bottom: 0pt; margin-top: 8pt" class="ptoseechanges">
+
+</div>
+<a name="wp432768"> </a><h2 class="pHeading2">
+	1.2	Low-Level Interface
+</h2>
+<a name="wp436109"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-left: 95pt; margin-right: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none" class="pBody">
+This is the layer of HDF reserved for software developers and provides routines for error handling, file I/O, memory management, and physical storage. These routines are prefaced with &#39;H&#39;. For a more detailed discussion of the low-level interface, consult the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF Specifications and Developer&#39;s Guide </span> from the HDF WWW home page at <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">http://www.hdfgroup.org</span>.
+</p>
+<a name="wp436110"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-left: 95pt; margin-right: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none" class="pBody">
+The low-level interface provides a collection of routines that are prefaced with either &#39;H&#39;, &#39;HE&#39;, or &#39;HX&#39;.  The H routines are for managing HDF files.  The HE routines provide error handlings.  The HX routines are for managing HDF external files.
+</p>
+<a name="wp432862"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-left: 95pt; margin-right: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none" class="pBody">
+Prior to HDF version 3.2, all low-level routines began with the prefix &#39;DF&#39;. As of HDF version 3.3, the DF interface was no longer recommended for use. It is only supported to maintain backward compatibility with programs and files created under earlier versions of the HDF library.
+</p>
+<a name="wp418339"> </a><h2 class="pHeading2">
+	1.3	Multifile Application Interfaces
+</h2>
+<a name="wp418340"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-left: 95pt; margin-right: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none" class="pBody">
+The HDF multifile interfaces are designed to allow operations on more than one file and more than one data object at the same time. The multifile interfaces provided are AN, GR, SD, VS, VSQ, VF, V, and VH. The AN interface is the multifile version of the DFAN annotation interface.  The GR interface is the multifile version of the 8- and 24-bit raster image interfaces. The SD interface is the multifile version of the scientific data set interface. The VS, VSQ, and VF interfaces support the vdata model. The V and VH interfaces provide support for the vgroup data model.
+</p>
+<a name="wp418341"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-left: 95pt; margin-right: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none" class="pBody">
+Like the single-file interfaces, the multifile interfaces are built upon the low-level H routines. Unlike single-file operations, operations performed via a multifile interface are not implicitly preceded by <b class="cFunctionName">Hopen</b> and followed by <b class="cFunctionName">Hclose</b>. Instead, each series of operations on a file must be preceded by an explicit call to open and close the file. Once the file is opened, it remains open until an explicit call is made to close it. This process allows operations on more than one file at a time.
+</p>
+<a name="wp418342"> </a><h3 class="pHeading3">
+	1.3.1	Scientific Data Sets: SD Interface
+</h3>
+<a name="wp418343"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-left: 95pt; margin-right: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none" class="pBody">
+The scientific data set interface provides a collection of routines for reading and writing arrays of data. Multidimensional arrays accompanied by a record of their dimension and number type are called scientific data sets. Under the multifile interface, scientific data sets may include predefined or user defined attribute records. Each attribute record is optional and describes a particular facet of the environment from which the scientific data was taken.
+</p>
+<a name="wp432955"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-left: 95pt; margin-right: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none" class="pBody">
+The names of the routines in the multifile scientific data set interface are prefaced by &#39;SD&#39;. The equivalent FORTRAN-77 routine names are prefaced by &#39;sf&#39;.
+</p>
+<a name="wp432956"> </a><h3 class="pHeading3">
+	1.3.2	Annotations: AN Interface
+</h3>
+<a name="wp432957"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-left: 95pt; margin-right: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none" class="pBody">
+The purpose of the AN multifile annotation interface is to permit concurrent operations on a set of annotations that exist in more than one file. Annotations consist of labels and descriptions.
+</p>
+<a name="wp423391"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-left: 95pt; margin-right: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none" class="pBody">
+The C routine names of the multifile annotation interface are prefaced by the string &#39;AN&#39; and the FORTRAN-77 routine names are prefaced by &#39;af&#39;. 
+</p>
+<a name="wp423140"> </a><h3 class="pHeading3">
+	1.3.3	General Raster Images: GR Interface
+</h3>
+<a name="wp423138"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-left: 95pt; margin-right: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none" class="pBody">
+The routines in the GR interface provide multifile operations on general raster  image data sets. 
+</p>
+<a name="wp432166"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-left: 95pt; margin-right: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none" class="pBody">
+The C routine names in the general raster interface have the prefix &#39;GR&#39; and the equivalent FORTRAN-77 routine names are prefaced by &#39;mg&#39;. 
+</p>
+<a name="wp422682"> </a><h3 class="pHeading3">
+	1.3.4	<span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> </span>Scientific Data Sets: netCDF Interface
+</h3>
+<a name="wp418353"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-left: 95pt; margin-right: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none" class="pBody">
+The SD interface is designed to be as compatible as possible with netCDF, an interface developed by the Unidata Program Center. Consequently, the SD interface can read files written by the netCDF interface, and the netCDF interface (as implemented in HDF) can read both netCDF files and HDF files that contain scientific data sets.
+</p>
+<a name="wp418354"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-left: 95pt; margin-right: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none" class="pBody">
+Further information regarding the netCDF interface routines and their equivalents in the HDF interface can be found  in the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span>. Additional information on the netCDF interface can be found in the netCDF User&#39;s Guide available by anonymous ftp from <code style="font-family: Courier New" class="cDefName">unidata.ucar.edu</code>.
+</p>
+<a name="wp418357"> </a><h3 class="pHeading3">
+	1.3.5	Vdata: The VS Interface
+</h3>
+<a name="wp418358"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-left: 95pt; margin-right: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none" class="pBody">
+The VS interface provides a collection of routines for reading and writing customized tables. Each table is comprised of a series of records whose values are stored in fixed length fields. In addition to its records, a vdata may contain four kinds of identifying information: a name, class, data type and a number of field names.
+</p>
+<a name="wp418359"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-left: 95pt; margin-right: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none" class="pBody">
+Routines in the VS interface are prefaced by &#39;VS&#39;. The equivalent FORTRAN-77 routine names are prefaced by &#39;vsf&#39;. 
+</p>
+<a name="wp418367"> </a><h3 class="pHeading3">
+	1.3.6	Vdata Query: VSQ Interface
+</h3>
+<a name="wp418368"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-left: 95pt; margin-right: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none" class="pBody">
+The VSQ interface provides a collection of routines for inquiring about existing vdata. These routines provide information such as the number of records in a vdata, its field names, number types, and name. All routines in the VSQ interface are prefaced by &#39;VSQ&#39;. The equivalent FORTRAN-77 routine names are prefaced by &#39;vsq&#39;. 
+</p>
+<a name="wp418372"> </a><h3 class="pHeading3">
+	1.3.7	Vdata Fields: VF Interface
+</h3>
+<a name="wp418373"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-left: 95pt; margin-right: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none" class="pBody">
+The VF interface provides a collection of routines for inquiring about the fields in an existing vdata. These routines provide information such as the field name, size, order, and number type.
+</p>
+<a name="wp423423"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-left: 95pt; margin-right: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none" class="pBody">
+All routines in the VF interface are prefaced by &#39;VF&#39;. There are no equivalent FORTRAN-77 functions.
+</p>
+<a name="wp418377"> </a><h3 class="pHeading3">
+	1.3.8	Vgroups: V Interface
+</h3>
+<a name="wp432992"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-left: 95pt; margin-right: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none" class="pBody">
+The vgroup interface provides a collection of routines for grouping and manipulating HDF data objects in the file. Each vgroup may contain one or more vdatas, vgroups, or other HDF data objects. In addition to its members, a vgroup may also be given a  name and a class.
+</p>
+<a name="wp432993"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-left: 95pt; margin-right: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none" class="pBody">
+Every routine name in the vgroup interface are prefaced by &#39;V&#39;. The equivalent FORTRAN-77 routine names are prefaced by &#39;vf&#39;.
+</p>
+<a name="wp433007"> </a><h3 class="pHeading3">
+	1.3.9	 Vdata/Vgroups: VH Interface
+</h3>
+<a name="wp433008"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-left: 95pt; margin-right: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none" class="pBody">
+The high-level VH interface provides a collection of routines for creating simple vdatas and vgroups with a single function call. All routines  in this interface are prefaced by &#39;VH&#39;. The equivalent FORTRAN-77 routine names are prefaced by &#39;vh&#39;. 
+</p>
+<a name="wp432025"> </a><h3 class="pHeading3">
+	1.3.10	 Vgroup Inquiry: VQ Interface
+</h3>
+<a name="wp432026"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-left: 95pt; margin-right: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none" class="pBody">
+The high-level VQ interface provides one routine that returns tag information from a specified vgroup, and one routine that returns reference number information from a specified vgroup. All C routine names in this interface are prefaced by &#39;VQ&#39;. The equivalent Fortran-77 routine names are prefaced by &#39;vq&#39;. 
+</p>
+<a name="wp432875"> </a><h2 class="pHeading2">
+	1.4	Single-File Application Interfaces
+</h2>
+<a name="wp432876"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-left: 95pt; margin-right: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none" class="pBody">
+The HDF single-file application interfaces include several independent modules each is designed to simplify the process of storing and accessing a specific type of data. These interfaces support the 8-bit raster image(DFR8), 24-bit raster image (DF24), palette (DFP), scientific data (DFSD), and annotation (DFAN) models. All single-file interfaces are built upon the H routines - unless otherwise specified, all the low-level details can be ignored.
+</p>
+<a name="wp433025"> </a><h3 class="pHeading3">
+	1.4.1	24-bit Raster Image Sets: DF24 Interface
+</h3>
+<a name="wp433026"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-left: 95pt; margin-right: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none" class="pBody">
+The HDF 24-bit raster interface provides a collection of routines for managing 24-bit raster image sets. A 24-bit raster image set is comprised of a 24-bit raster image array and its accompanied dimension record. Raster image sets may also include a palette.
+</p>
+<a name="wp433027"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-left: 95pt; margin-right: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none" class="pBody">
+The names of the routines in the 24-bit raster interface are prefaced by &#39;DF24&#39;. The equivalent FORTRAN-77 routine names are prefaced by &#39;d2&#39;.
+</p>
+<a name="wp432877"> </a><h3 class="pHeading3">
+	1.4.2	8-bit Raster Image Sets: DFR8 Interface
+</h3>
+<a name="wp432878"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-left: 95pt; margin-right: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none" class="pBody">
+The HDF 8-bit raster interface provides a collection of routines for managing 8-bit raster image sets. An 8-bit raster image set is comprised of an 8-bit raster image array and its accompanied dimension record. Raster image sets may also include a palette.
+</p>
+<a name="wp432879"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-left: 95pt; margin-right: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none" class="pBody">
+Every function in the 8-bit raster interface begins with the prefix &#39;DFR8&#39;. The equivalent FORTRAN-77 functions use the prefix &#39;d8&#39;.
+</p>
+<a name="wp432880"> </a><h3 class="pHeading3">
+	1.4.3	Palettes: DFP Interface
+</h3>
+<a name="wp432881"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-left: 95pt; margin-right: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none" class="pBody">
+The HDF palette interface provides a collection of routines for managing palette data. This interface is most often used for working with multiple palettes stored in a single file or palettes not specifically assigned to a raster image.
+</p>
+<a name="wp432882"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-left: 95pt; margin-right: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none" class="pBody">
+The names of the routines in the palette interface are prefaced by &#39;DFP&#39;. The equivalent FORTRAN-77 routine names are prefaced by &#39;dp&#39;.
+</p>
+<a name="wp432886"> </a><h3 class="pHeading3">
+	1.4.4	Scientific Data Sets: DFSD Interface
+</h3>
+<a name="wp432887"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-left: 95pt; margin-right: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none" class="pBody">
+There are two HDF interfaces that support multidimensional arrays: the single-file DFSD interface described here, which permits access to only one file at a time, and the newer multifile SD interface, which permits simultaneous access to more than one file.  The existence of the single-file scientific data set interface is simply to support backward compatibility for previously created files and applications.  It is recommended that the multifile scientific data set interface is to be used where possible.
+</p>
+<a name="wp432888"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-left: 95pt; margin-right: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none" class="pBody">
+The single-file scientific data set interface provides a collection of routines for reading and writing arrays of data. A scientific data set is comprised of a scientific data array and its accompanied rank, name and number type. Scientific data sets may also include predefined attribute records.
+</p>
+<a name="wp432889"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-left: 95pt; margin-right: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none" class="pBody">
+The names of the routines in the single-file scientific data set interface are prefaced by &#39;DFSD&#39;. The equivalent FORTRAN-77 routine names are prefaced by &#39;ds&#39;.
+</p>
+<a name="wp432890"> </a><h3 class="pHeading3">
+	1.4.5	Annotations: DFAN Interface
+</h3>
+<a name="wp432891"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-left: 95pt; margin-right: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none" class="pBody">
+The single-file annotation interface provides a collection of routines for reading and writing text strings assigned to HDF data objects or files. Annotations consist of labels and descriptions. 
+</p>
+<a name="wp432892"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-left: 95pt; margin-right: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none" class="pBody">
+The names of the routines in the single-file annotation interface are prefaced by &#39;DFAN&#39;. The equivalent FORTRAN-77 routine names are prefaced by &#39;da&#39;.
+</p>
+<a name="wp432930"> </a><h2 class="pHeading2">
+	1.5	FORTRAN-77 and C Language Issues
+</h2>
+<a name="wp432195"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-left: 95pt; margin-right: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none" class="pBody">
+In order to make the FORTRAN-77 and C versions of each routine as similar as possible, some compromises have been made in the process of simplifying the interface for both programming languages.
+</p>
+<a name="wp432196"> </a><h3 class="pHeading3">
+	1.5.1	FORTRAN-77-to-C Translation
+</h3>
+<a name="wp432197"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-left: 95pt; margin-right: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none" class="pBody">
+Nearly all of the HDF library code is written in C. The Fortran HDF API routines translate all parameter data types to C data types, then call the C routine that performs the main function. For example, <b class="cFunctionName">d8aimg</b> is the FORTRAN-77 equivalent for <b class="cFunctionName">DFR8addimage</b>. Calls to either routine execute the same C code that adds an 8-bit raster image to an HDF file - see the following figure.
+</p>
+<a name="wp432258"> </a><div style="margin-bottom: 0pt; margin-top: 8pt" class="ptoseechanges">
+FIGURE 1b	<span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Use of a Function Call Converter to Route FORTRAN-77 HDF Calls to the C Library</span></div>
+<div align="center"><img src="images/hdf4_RM-02-1-2.jpg" height="126" width="519" id="wp432200" border="0" hspace="0" vspace="0"/></div><div style="margin-bottom: 0pt; margin-top: 8pt" class="ptoseechanges">
+
+</div>
+<a name="wp432259"> </a><h3 class="pHeading3">
+	1.5.2	Case Sensitivity
+</h3>
+<a name="wp432260"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-left: 95pt; margin-right: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none" class="pBody">
+FORTRAN-77 identifiers generally are not case sensitive, whereas C identifiers are. Although all of the FORTRAN-77 routines shown in this manual are written in lower case, FORTRAN-77 programs can generally call them using either upper- or lower-case letters without loss of meaning.
+</p>
+<a name="wp432261"> </a><h3 class="pHeading3">
+	1.5.3	Name Length
+</h3>
+<a name="wp432262"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-left: 95pt; margin-right: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none" class="pBody">
+Because some FORTRAN-77 compilers only interpret identifier names with seven or fewer characters, the first seven characters of the FORTRAN-77 HDF routine names are unique.
+</p>
+<a name="wp432263"> </a><h3 class="pHeading3">
+	1.5.4	Header Files
+</h3>
+<a name="wp432264"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-left: 95pt; margin-right: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none" class="pBody">
+The inclusion of header files is not generally permitted by FORTRAN-77 compilers. However, it is sometimes available as an option. On UNIX systems, for example, the macro processors <code style="font-family: Courier New" class="cDefName">m4</code> and <code style="font-family: Courier New" class="cDefName">cpp</code> let the compiler include and preprocess header files. If this capability is not available, the user may have to copy the declarations, definitions, and values needed from the files <code style="font-family: Courier New" class="cDefName">dffunc.inc</code> and  <code style="font-family: Courier New" class="cDefName">hdf.inc</code> into the user application. If the capability is available, the files can be included in the Fortran code.  The files reside in the <code style="font-family: Courier New" class="cDefName">include/</code> subdirectory of the directory where the HDF library is installed on the user&#39;s system.
+</p>
+<a name="wp432265"> </a><h3 class="pHeading3">
+	1.5.5	Data Type Specifications
+</h3>
+<a name="wp432266"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-left: 95pt; margin-right: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none" class="pBody">
+When mixing machines, compilers, and languages, it is difficult to maintain consistent data type definitions. For instance, on some machines an integer is a 32-bit quantity and on others, a 16-bit quantity. In addition, the differences between FORTRAN-77 and C lead to difficulties in describing the data types found in the argument lists of HDF routines. To maintain portability, the HDF library expects assigned names for all data types used in HDF routines. <a href="RM_Section_I.html#wp432530">(See Table 1A.)</a>
+</p>
+<a name="wp432530"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
+TABLE 1A	<span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Data Type Definitions</span></div>
+<div align="left">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp433103table432373">
+  <caption></caption>
+  <tr align="left" valign="top">    <td colspan="1" rowspan="2"><a name="wp433103"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+Definition Name
+</div>
+</td>
+    <td colspan="1" rowspan="2"><a name="wp433105"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+Definition Value
+</div>
+</td>
+    <td colspan="1" rowspan="2"><a name="wp433107"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+Description
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top"></tr>
+  <tr align="left" valign="top">    <td><a name="wp433115"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFNT_CHAR8
+</div>
+</td>
+    <td><a name="wp433117"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+4
+</div>
+</td>
+    <td><a name="wp433119"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+8-bit character type
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp433121"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFNT_CHAR
+</div>
+</td>
+    <td><a name="wp433123"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+4
+</div>
+</td>
+    <td><a name="wp433125"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Same as DFNT_CHAR8
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp433127"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFNT_UCHAR8
+</div>
+</td>
+    <td><a name="wp433129"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+3
+</div>
+</td>
+    <td><a name="wp433131"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+8-bit unsigned character type
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp433133"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFNT_UCHAR
+</div>
+</td>
+    <td><a name="wp433135"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+3
+</div>
+</td>
+    <td><a name="wp433137"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Same as DFNT_UCHAR8
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp433139"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFNT_INT8
+</div>
+</td>
+    <td><a name="wp433141"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+20
+</div>
+</td>
+    <td><a name="wp433143"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+8-bit integer type
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp433145"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFNT_UINT8
+</div>
+</td>
+    <td><a name="wp433147"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+21
+</div>
+</td>
+    <td><a name="wp433149"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+8-bit unsigned integer type
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp433151"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFNT_INT16
+</div>
+</td>
+    <td><a name="wp433153"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+22
+</div>
+</td>
+    <td><a name="wp433155"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+16-bit integer type
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp433157"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFNT_UINT16
+</div>
+</td>
+    <td><a name="wp433159"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+23
+</div>
+</td>
+    <td><a name="wp433161"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+16-bit unsigned integer type
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp433163"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFNT_INT32
+</div>
+</td>
+    <td><a name="wp433165"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+24
+</div>
+</td>
+    <td><a name="wp433167"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+32-bit integer type
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp433169"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFNT_UINT32
+</div>
+</td>
+    <td><a name="wp433171"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+25
+</div>
+</td>
+    <td><a name="wp433173"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+32-bit unsigned integer type
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp433187"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFNT_FLOAT32
+</div>
+</td>
+    <td><a name="wp433189"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+5
+</div>
+</td>
+    <td><a name="wp433191"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+32-bit floating-point type
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp433193"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFNT_FLOAT64
+</div>
+</td>
+    <td><a name="wp433195"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+6
+</div>
+</td>
+    <td><a name="wp433197"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+64-bit floating-point type
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp433199"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFNT_NINT8
+</div>
+</td>
+    <td><a name="wp433201"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+(DFNT_NATIVE | DFNT_INT8)
+</div>
+</td>
+    <td><a name="wp433203"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+8-bit native integer type
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp433205"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFNT_NUINT8
+</div>
+</td>
+    <td><a name="wp433207"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+(DFNT_NATIVE | DFNT_UINT8)
+</div>
+</td>
+    <td><a name="wp433209"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+8-bit native unsigned integer type
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp433211"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFNT_NINT16
+</div>
+</td>
+    <td><a name="wp433213"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+(DFNT_NATIVE | DFNT_INT16)
+</div>
+</td>
+    <td><a name="wp433215"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+16-bit native integer type
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp433217"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFNT_NUINT16
+</div>
+</td>
+    <td><a name="wp433219"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+(DFNT_NATIVE | DFNT_UINT16)
+</div>
+</td>
+    <td><a name="wp433221"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+16-bit native unsigned integer type
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp433223"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFNT_NINT32
+</div>
+</td>
+    <td><a name="wp433225"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+(DFNT_NATIVE | DFNT_INT32)
+</div>
+</td>
+    <td><a name="wp433227"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+32-bit native integer type
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp433229"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFNT_NUINT32
+</div>
+</td>
+    <td><a name="wp433231"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+(DFNT_NATIVE | DFNT_UINT32)
+</div>
+</td>
+    <td><a name="wp433233"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+32-bit native unsigned integer type
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp433247"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFNT_NFLOAT32
+</div>
+</td>
+    <td><a name="wp433249"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+(DFNT_NATIVE | DFNT_FLOAT32)
+</div>
+</td>
+    <td><a name="wp433251"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+32-bit native floating-point type
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp433253"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFNT_NFLOAT64
+</div>
+</td>
+    <td><a name="wp433255"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+(DFNT_NATIVE | DFNT_FLOAT64)
+</div>
+</td>
+    <td><a name="wp433257"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+64-bit native floating-point type
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
+
+</div>
+<a name="wp432339"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-left: 95pt; margin-right: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none" class="pBody">
+When using a FORTRAN-77 data type that is not supported, the general practice is to use another data type of the same size. For example, an 8-bit signed integer can be used to store an 8-bit unsigned integer variable unless the code relies on a sign-specific operation.
+</p>
+<a name="wp432340"> </a><h3 class="pHeading3">
+	1.5.6	String and Array Specifications
+</h3>
+<a name="wp432341"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-left: 95pt; margin-right: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none" class="pBody">
+In the declarations contained in the headers of FORTRAN-77 functions, the following conventions are followed:
+</p>
+<div class="pCellBulletList" style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 3pt"><ul class="pCellBulletList" style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 3pt">
+<a name="wp432342"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 3pt" class="pCellBulletList"><li><em class="cVarName">character*(*) x</em> means that <em class="cVarName">x</em> refers to a string of an indefinite number of characters. It is the responsibility of the calling program to allocate enough space to hold the data to be stored in the string.</li></div>
+<a name="wp432343"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 3pt" class="pCellBulletList"><li><em class="cVarName">real x(*)</em> means that <em class="cVarName">x</em> refers to an array of reals of indefinite size and of indefinite rank. It is the responsibility of the calling program to allocate an actual array with the correct number of dimensions and dimension sizes.</li></div>
+<a name="wp433444"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 3pt" class="pCellBulletList"><li><em class="cVarName">&lt;valid numeric data type &gt; x</em> means that <em class="cVarName">x</em> may have one of the numeric data types listed in the Description column of <a href="RM_Section_I.html#wp432530">Table 1A on page 88</a>.</li></div>
+<a name="wp432581"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 3pt" class="pCellBulletList"><li><em class="cVarName">&lt;valid data type &gt; x</em> means that <em class="cVarName">x</em> may have any of the data types listed in the Description column of <a href="RM_Section_I.html#wp432530">Table 1A on page 88</a>.</li></div>
+</ul></div>
+<a name="wp432344"> </a><h3 class="pHeading3">
+	1.5.7	FORTRAN-77, ANSI C and K&amp;R C 
+</h3>
+<a name="wp432345"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-left: 95pt; margin-right: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none" class="pBody">
+As much as possible, we have conformed the HDF API routines to those implementations of Fortran and C that are in most common use today, namely FORTRAN-77, ANSI C and K&amp;R C. Due to the increasing availability of ANSI C, future versions of HDF will no longer support K&amp;R C.
+</p>
+<a name="wp432361"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-left: 95pt; margin-right: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none" class="pBody">
+As Fortran-90 is a superset of FORTRAN-77, HDF programs should compile and run correctly when using a Fortran-90 compiler.
+</p>
+<a name="wp432363"> </a><h2 class="pHeading2">
+	1.6	Error Codes
+</h2>
+<a name="wp431526"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-left: 95pt; margin-right: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none" class="pBody">
+The error codes defined in the HDF library are listed in the following table.
+</p>
+<a name="wp431527"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
+TABLE 1B	HDF Error Codes</div>
+<div align="left">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp431530table431528">
+  <caption></caption>
+  <tr align="left" valign="top">    <th colspan="1" rowspan="2"><a name="wp431530"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+Error Code
+</div>
+</th>
+    <th colspan="1" rowspan="2"><a name="wp431532"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+Code Definition
+</div>
+</th>
+</tr>
+  <tr align="left" valign="top"></tr>
+  <tr align="left" valign="top">    <td><a name="wp431538"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_NONE
+</div>
+</td>
+    <td><a name="wp431540"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+No error.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431542"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_FNF
+</div>
+</td>
+    <td><a name="wp431544"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+File not found.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431546"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_DENIED
+</div>
+</td>
+    <td><a name="wp431548"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Access to file denied.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431550"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_ALROPEN
+</div>
+</td>
+    <td><a name="wp431552"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+File already open.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431554"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_TOOMANY
+</div>
+</td>
+    <td><a name="wp431556"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Too many <code style="font-family: Courier New" class="cDefName">AID</code>&#39;s or files open.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431558"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_BADNAME
+</div>
+</td>
+    <td><a name="wp431560"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Bad file name on open.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431562"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_BADACC
+</div>
+</td>
+    <td><a name="wp431564"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Bad file access mode.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431566"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_BADOPEN
+</div>
+</td>
+    <td><a name="wp431568"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Miscellaneous  open error.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431570"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_NOTOPEN
+</div>
+</td>
+    <td><a name="wp431572"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+File can&#39;t be closed because it hasn&#39;t been opened.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431574"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_CANTCLOSE
+</div>
+</td>
+    <td><a name="wp431576"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+<span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">fclose</span> error
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431578"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_READERROR
+</div>
+</td>
+    <td><a name="wp431580"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Read error.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431582"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_WRITEERROR
+</div>
+</td>
+    <td><a name="wp431584"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Write error.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431586"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_SEEKERROR
+</div>
+</td>
+    <td><a name="wp431588"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Seek error.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431590"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_RDONLY
+</div>
+</td>
+    <td><a name="wp431592"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+File is read only.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431594"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_BADSEEK
+</div>
+</td>
+    <td><a name="wp431596"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Attempt to seek past end of element.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431598"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_PUTELEM
+</div>
+</td>
+    <td><a name="wp431600"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+<span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Hputelement</span> error.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431602"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_GETELEM
+</div>
+</td>
+    <td><a name="wp431604"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+<span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Hgetelement</span> error.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431606"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_CANTLINK
+</div>
+</td>
+    <td><a name="wp431608"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Cannot initialize link information.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431610"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_CANTSYNC
+</div>
+</td>
+    <td><a name="wp431612"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Cannot synchronize memory with file.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431614"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_BADGROUP
+</div>
+</td>
+    <td><a name="wp431616"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Error from <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFdiread</span> in opening a group.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431618"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_GROUPSETUP
+</div>
+</td>
+    <td><a name="wp431620"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Error from <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFdisetup</span> in opening a group.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431622"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_PUTGROUP
+</div>
+</td>
+    <td><a name="wp431624"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Error on  putting a tag/reference number pair into a group.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431626"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_GROUPWRITE
+</div>
+</td>
+    <td><a name="wp431628"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Error when writing group contents.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431630"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_DFNULL
+</div>
+</td>
+    <td><a name="wp431632"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Data file reference is a null pointer.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431634"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_ILLTYPE
+</div>
+</td>
+    <td><a name="wp431636"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Data file contains an illegal type: internal error.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431638"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_BADDDLIST
+</div>
+</td>
+    <td><a name="wp431640"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+The DD list is non-existent: internal error.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431642"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_NOTDFFILE
+</div>
+</td>
+    <td><a name="wp431644"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+The current file is not an HDF file and it is not zero length.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431646"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_SEEDTWICE
+</div>
+</td>
+    <td><a name="wp431648"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+The DD list already seeded: internal error.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431650"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_NOSUCHTAG
+</div>
+</td>
+    <td><a name="wp431652"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+No such tag in the file: search failed.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431654"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_NOFREEDD
+</div>
+</td>
+    <td><a name="wp431656"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+There are no free DD&#39;s left: internal error.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431658"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_BADTAG
+</div>
+</td>
+    <td><a name="wp431660"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Illegal <code style="font-family: Courier New" class="cDefName">WILDCARD</code> tag.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431662"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_BADREF
+</div>
+</td>
+    <td><a name="wp431664"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Illegal <code style="font-family: Courier New" class="cDefName">WILDCARD</code> reference number.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431666"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_NOMATCH
+</div>
+</td>
+    <td><a name="wp431668"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+No DDs (or no more DDs) that match the specified tag/reference number pair.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431670"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_NOTINSET
+</div>
+</td>
+    <td><a name="wp431672"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Warning: Set contained unknown tag. Ignored.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431674"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_BADOFFSET
+</div>
+</td>
+    <td><a name="wp431676"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Illegal offset specified.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431678"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_CORRUPT
+</div>
+</td>
+    <td><a name="wp431680"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+File is corrupted.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431682"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_NOREF
+</div>
+</td>
+    <td><a name="wp431684"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+No more reference numbers are available.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431686"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_DUPDD
+</div>
+</td>
+    <td><a name="wp431688"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+The new tag/reference number pair has been allocated.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431690"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_CANTMOD
+</div>
+</td>
+    <td><a name="wp431692"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Old element doesn&#39;t exist.  Cannot modify.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431694"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_DIFFFILES
+</div>
+</td>
+    <td><a name="wp431696"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Attempt to merge objects in different files.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431698"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_BADAID
+</div>
+</td>
+    <td><a name="wp431700"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+An invalid <code style="font-family: Courier New" class="cDefName">AID</code> was received.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431702"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_OPENAID
+</div>
+</td>
+    <td><a name="wp431704"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Active <code style="font-family: Courier New" class="cDefName">AID</code>s still exist.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431706"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_CANTFLUSH
+</div>
+</td>
+    <td><a name="wp431708"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Cannot flush DD back to file.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431710"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_CANTUPDATE
+</div>
+</td>
+    <td><a name="wp431712"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Cannot update the DD block.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431714"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_CANTHASH
+</div>
+</td>
+    <td><a name="wp431716"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Cannot add a DD to the hash table.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431718"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_CANTDELDD
+</div>
+</td>
+    <td><a name="wp431720"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Cannot delete a DD in the file.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431722"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_CANTDELHASH
+</div>
+</td>
+    <td><a name="wp431724"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Cannot delete a DD from the hash table.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431726"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_CANTACCESS
+</div>
+</td>
+    <td><a name="wp431728"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Cannot access specified tag/reference number pair.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431730"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_CANTENDACCESS
+</div>
+</td>
+    <td><a name="wp431732"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Cannot end access to data element.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431734"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_TABLEFULL
+</div>
+</td>
+    <td><a name="wp431736"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Access table is full.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431738"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_NOTINTABLE
+</div>
+</td>
+    <td><a name="wp431740"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Cannot find element in table.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431742"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_UNSUPPORTED
+</div>
+</td>
+    <td><a name="wp431744"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Feature not currently supported.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431746"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_NOSPACE
+</div>
+</td>
+    <td><a name="wp431748"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+<code style="font-family: Courier New" class="cDefName">malloc</code> failed.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431750"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_BADCALL
+</div>
+</td>
+    <td><a name="wp431752"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Routine calls were in the wrong order.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431754"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_BADPTR
+</div>
+</td>
+    <td><a name="wp431756"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+<code style="font-family: Courier New" class="cDefName">NULL</code> pointer argument was specified.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431758"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_BADLEN
+</div>
+</td>
+    <td><a name="wp431760"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Invalid length was specified.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431762"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_NOTENOUGH
+</div>
+</td>
+    <td><a name="wp431764"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Not enough space for the data.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431766"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_NOVALS
+</div>
+</td>
+    <td><a name="wp431768"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Values were not available.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431770"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_ARGS
+</div>
+</td>
+    <td><a name="wp431772"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Invalid arguments passed to the routine.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431774"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_INTERNAL
+</div>
+</td>
+    <td><a name="wp431776"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Serious internal error.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431778"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_NORESET
+</div>
+</td>
+    <td><a name="wp431780"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Too late to modify this value.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431782"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_GENAPP
+</div>
+</td>
+    <td><a name="wp431784"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Generic application level error.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431786"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_UNINIT
+</div>
+</td>
+    <td><a name="wp431788"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Interface was not initialized correctly.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431790"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_CANTINIT
+</div>
+</td>
+    <td><a name="wp431792"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Cannot initialize the interface the operation requires.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431794"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_CANTSHUTDOWN
+</div>
+</td>
+    <td><a name="wp431796"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Cannot shut down the interface the operation requires.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431798"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_BADDIM
+</div>
+</td>
+    <td><a name="wp431800"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Negative number of dimensions, or zero dimensions, was specified.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431802"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_BADFP
+</div>
+</td>
+    <td><a name="wp431804"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+File contained an illegal floating point number.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431806"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_BADDATATYPE
+</div>
+</td>
+    <td><a name="wp431808"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Unknown or unavailable data type was specified.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431810"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_BADMCTYPE
+</div>
+</td>
+    <td><a name="wp431812"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Unknown or unavailable machine type was specified.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431814"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_BADNUMTYPE
+</div>
+</td>
+    <td><a name="wp431816"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Unknown or unavailable number type was specified.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431818"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_BADORDER
+</div>
+</td>
+    <td><a name="wp431820"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Unknown or illegal array order was specified.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431822"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_RANGE
+</div>
+</td>
+    <td><a name="wp431824"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Improper range for attempted access.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431826"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_BADCONV
+</div>
+</td>
+    <td><a name="wp431828"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Invalid data type conversion was specified.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431830"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_BADTYPE
+</div>
+</td>
+    <td><a name="wp431832"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Incompatible types were specified.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431834"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_BADSCHEME
+</div>
+</td>
+    <td><a name="wp431836"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Unknown compression scheme was specified.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431838"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_BADMODEL
+</div>
+</td>
+    <td><a name="wp431840"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Invalid compression model was specified.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431842"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_BADCODER
+</div>
+</td>
+    <td><a name="wp431844"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Invalid compression encoder was specified.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431846"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_MODEL
+</div>
+</td>
+    <td><a name="wp431848"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Error in the modeling layer of the compression operation.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431850"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_CODER
+</div>
+</td>
+    <td><a name="wp431852"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Error in the encoding layer of the compression operation.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431854"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_CINIT
+</div>
+</td>
+    <td><a name="wp431856"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Error in encoding initialization.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431858"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_CDECODE
+</div>
+</td>
+    <td><a name="wp431860"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Error in decoding compressed data.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431862"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_CENCODE
+</div>
+</td>
+    <td><a name="wp431864"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Error in encoding compressed data.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431866"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_CTERM
+</div>
+</td>
+    <td><a name="wp431868"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Error in encoding termination.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431870"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_CSEEK
+</div>
+</td>
+    <td><a name="wp431872"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Error seeking in an encoded dataset.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431874"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_MINIT
+</div>
+</td>
+    <td><a name="wp431876"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Error in modeling initialization.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431878"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_COMPINFO
+</div>
+</td>
+    <td><a name="wp431880"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Invalid compression header.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431882"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_CANTCOMP
+</div>
+</td>
+    <td><a name="wp431884"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Cannot compress an object.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431886"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_CANTDECOMP
+</div>
+</td>
+    <td><a name="wp431888"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Cannot decompress an object.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp435716"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_NOENCODER
+</div>
+</td>
+    <td><a name="wp435718"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Encoder not available.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp435720"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_NOSZLIB
+</div>
+</td>
+    <td><a name="wp435722"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+SZIP library not available.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp435724"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_COMPVERSION
+</div>
+</td>
+    <td><a name="wp435726"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Version error from zlib
+</div>
+<a name="wp435727"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Note: when Z_VERSION_ERROR (-6) returned from zlib.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp435729"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_READCOMP
+</div>
+</td>
+    <td><a name="wp435731"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Error in reading compressed data.
+</div>
+<a name="wp435732"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Note: when one of the following error codes returned from zlib:
+</div>
+<a name="wp435733"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Z_ERRNO         (-1)
+</div>
+<a name="wp435734"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Z_STREAM_ERROR  (-2)
+</div>
+<a name="wp435735"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Z_DATA_ERROR    (-3)
+</div>
+<a name="wp435736"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Z_MEM_ERROR     (-4)
+</div>
+<a name="wp435737"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Z_BUF_ERROR     (-5)
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431890"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_NODIM
+</div>
+</td>
+    <td><a name="wp431892"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+A dimension record was not associated with the image.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431894"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_BADRIG
+</div>
+</td>
+    <td><a name="wp431896"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Error processing a RIG.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431898"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_RINOTFOUND
+</div>
+</td>
+    <td><a name="wp431900"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Cannot find raster image.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431902"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_BADATTR
+</div>
+</td>
+    <td><a name="wp431904"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Invalid attribute.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431906"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_BADTABLE
+</div>
+</td>
+    <td><a name="wp431908"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+The nsdg table has incorrect information.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431910"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_BADSDG
+</div>
+</td>
+    <td><a name="wp431912"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Error in processing an SDG.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431914"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_BADNDG
+</div>
+</td>
+    <td><a name="wp431916"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Error in processing an NDG.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431918"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_VGSIZE
+</div>
+</td>
+    <td><a name="wp431920"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Too many elements in the vgroup.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431922"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_VTAB
+</div>
+</td>
+    <td><a name="wp431924"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Element not in <code style="font-family: Courier New" class="cDefName">vtab[]</code>.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431926"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_CANTADDELEM
+</div>
+</td>
+    <td><a name="wp431928"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Cannot add the  tag/reference number pair to the vgroup.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431930"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_BADVGNAME
+</div>
+</td>
+    <td><a name="wp431932"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Cannot set the vgroup name.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431934"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_BADVGCLASS
+</div>
+</td>
+    <td><a name="wp431936"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Cannot set the vgroup class.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431938"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_BADFIELDS
+</div>
+</td>
+    <td><a name="wp431940"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Invalid fields string passed to vset routine.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431942"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_NOVS
+</div>
+</td>
+    <td><a name="wp431944"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Cannot find the vset in the file.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431946"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_SYMSIZE
+</div>
+</td>
+    <td><a name="wp431948"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Too many symbols in the users table.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431950"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_BADATTACH
+</div>
+</td>
+    <td><a name="wp431952"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Cannot write to a previously attached vdata.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431954"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_BADVSNAME
+</div>
+</td>
+    <td><a name="wp431956"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Cannot set the vdata name.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431958"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_BADVSCLASS
+</div>
+</td>
+    <td><a name="wp431960"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Cannot set the vdata class.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431962"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_VSWRITE
+</div>
+</td>
+    <td><a name="wp431964"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Error writing to the vdata.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431966"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_VSREAD
+</div>
+</td>
+    <td><a name="wp431968"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Error reading from the vdata.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431970"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_BADVH
+</div>
+</td>
+    <td><a name="wp431972"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Error in the vdata header.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431974"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_VSCANTCREATE
+</div>
+</td>
+    <td><a name="wp431976"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Cannot create the vdata.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431978"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_VGCANTCREATE
+</div>
+</td>
+    <td><a name="wp431980"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Cannot create the vgroup.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431982"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_CANTATTACH
+</div>
+</td>
+    <td><a name="wp431984"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Cannot attach to a vdata or vset.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431986"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_CANTDETACH
+</div>
+</td>
+    <td><a name="wp431988"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Cannot detach a vdata or vset with write access.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431990"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_BITREAD
+</div>
+</td>
+    <td><a name="wp431992"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+A bit read error occurred.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431994"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_BITWRITE
+</div>
+</td>
+    <td><a name="wp431996"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+A bit write error occurred.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp431998"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_BITSEEK
+</div>
+</td>
+    <td><a name="wp432000"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+A bit seek error occurred.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp432002"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_TBBTINS
+</div>
+</td>
+    <td><a name="wp432004"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Failed to insert the element into tree.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp432006"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_BVNEW
+</div>
+</td>
+    <td><a name="wp432008"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Failed to create a bit vector.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp432010"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_BVSET
+</div>
+</td>
+    <td><a name="wp432012"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Failed when setting a bit in a bit vector.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp432014"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_BVGET
+</div>
+</td>
+    <td><a name="wp432016"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Failed when getting a bit in a bit vector.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><a name="wp432018"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+DFE_BVFIND
+</div>
+</td>
+    <td><a name="wp432020"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Failed when finding a bit in a bit vector.
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
+
+</div>
+    </blockquote>
+
+    <hr />
+
+    <table id="SummaryNotReq2" border="0" width="850" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="left">
+        HDF4.2.6 - June 2011<br/>
+        <a href="RM_Front.html">Copyright</a>
+        <td align="right">
+          <span style="font-size: 12px; font-weight: bold">
+            The HDF Group<br />
+          </span>
+          <span style="font-size: 12px">
+            <a href="http://www.hdfgroup.org">www.hdfgroup.org</a><br />
+            <img valign="bottom" border="0" src="images/help.jpg" height="12" alt="The HDF Group" valign="top" />
+          </span>
+        </td>
+      </tr>
+    </table>
+
+    <table id="SummaryNotReq3" width="220" border="0" cellpadding="0" cellspacing="0">
+    </table>
+  </body>
+</html>

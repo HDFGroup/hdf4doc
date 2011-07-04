@@ -7,13 +7,13 @@
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.8.2296" />
     <meta name="TEMPLATEBASE" content="Dynamic HTML" />
-    <meta name="LASTUPDATED" content="03/15/10 22:09:12" />
+    <meta name="LASTUPDATED" content="07/04/11 02:14:28" />
     <title>SD - Multifile Scientific Data Interface</title>
     <link rel="StyleSheet" href="document.css" type="text/css" media="all" />
     <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
 <link rel="first" title="First" href="RM_Front.html" />
 <link rel="last" title="Last" href="netCDF_copyright.html" />
-<link rel="previous" title="Previous" href="RM_Section_II_GRLOP.html" />
+<link rel="previous" title="Previous" href="RM_Section_II_HELOP.html" />
 <link rel="next" title="Next" href="RM_Section_II_VLOP.html" />
 
     <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
@@ -41,7 +41,7 @@
 	</td>
         <td valign="middle" align="right">
 <a HREF="RMTop.html"><b>[Top]</b></a>
-<a accesskey="3" href="RM_Section_II_GRLOP.html"><b>[Prev]</b><a accesskey="4" href="RM_Section_II_VLOP.html"><b>[Next]</b>
+<a accesskey="3" href="RM_Section_II_HELOP.html"><b>[Prev]</b><a accesskey="4" href="RM_Section_II_VLOP.html"><b>[Next]</b>
         </td>
       </tr>
     </table>
@@ -50,523 +50,431 @@
     <hr />
 
     <blockquote>
-<a name="wp1695"> </a><h3 style="font-family: Times New Roman; font-size: 14pt; font-weight: bold" class="pInterfaceName">
-SD - Multifile Scientific Data Interface</h3>
-<div align="left">
-<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp5626table5131">
-  <caption></caption>
-  <tr align="left" valign="top">    <td>&#160;</td>
-    <td>&#160;</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp5626"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html">SDattrinfo/sfgainfo</a>
-</div></td>
-    <td><a name="wp5629"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Retrieves information about an attribute.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp5632"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp540097">SDcheckempty/sfchempty</a>
-</div></td>
-    <td><a name="wp5635"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Determines whether a scientific dataset (an SDS) is empty.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp5638"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp547754">SDcreate/sfcreate</a>
-</div></td>
-    <td><a name="wp5641"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Creates a new data set.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp5644"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp430440">SDdiminfo/sfgdinfo</a>
-</div></td>
-    <td><a name="wp5647"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Retrieves information about a dimension.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp5650"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp430467">SDend/sfend</a>
-</div></td>
-    <td><a name="wp5653"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Terminates access to an SD interface.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp5656"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp430485">SDendaccess/sfendacc</a>
-</div></td>
-    <td><a name="wp5659"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Terminates access to a data set.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp5662"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp430504">SDfileinfo/sffinfo</a>
-</div></td>
-    <td><a name="wp5665"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Retrieves the number of data sets and the number of global attributes in a file.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp5668"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp430529">SDfindattr/sffattr</a>
-</div></td>
-    <td><a name="wp5671"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Finds the index of an attribute given its name.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp5674"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp441065">SDgetcal/sfgcal</a>
-</div></td>
-    <td><a name="wp5677"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Retrieves the calibration information associated with a data set.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp5680"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp442153">SDgetchunkinfo/sfgichnk</a>
-</div></td>
-    <td><a name="wp5683"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Retrieves chunking information for a data set.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp5686"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp583486">SDgetcompinfo/sfgcompress</a>
-</div></td>
-    <td><a name="wp5689"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Retrieves data set compression type and compression information.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp5692"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp547921">SDgetdatastrs/sfgdtstr</a>
-</div></td>
-    <td><a name="wp5695"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Retrieves the predefined attributes of a data set.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp5698"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp430621">SDgetdimid/sfdimid</a>
-</div></td>
-    <td><a name="wp5701"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Returns the identifier of a dimension given its index.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp5704"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp430641">SDgetdimscale/sfgdscale</a>
-</div></td>
-    <td><a name="wp5707"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Retrieves the scale values for a dimension.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp5710"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp430663">SDgetdimstrs/sfgdmstr</a>
-</div></td>
-    <td><a name="wp5713"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Retrieves the predefined attributes of a dimension.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp5716"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp567910">SDgetfilename/</a>
-</div></td>
-    <td><a name="wp5719"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Given a file identifier, retrieves the name of the file.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp5722"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp430691">SDgetfillvalue/sfgfill/sfgcfill</a>
-</div></td>
-    <td><a name="wp5725"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Reads the fill value of a data set, if the value has been set.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp5728"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp430710">SDgetinfo/sfginfo</a>
-</div></td>
-    <td><a name="wp5731"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Retrieves the name, rank, dimension sizes, data type and number of attributes for a data set.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp5734"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp567983">SDgetnamelen/</a>
-</div></td>
-    <td><a name="wp5737"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Retrieves the length of the name of a file, a dataset, or a dimension.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp5740"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp583380">SDgetnumvars_byname</a>
-</div></td>
-    <td><a name="wp5743"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Get the number of data sets having the same name.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp5746"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp430738">SDgetrange/sfgrange</a>
-</div></td>
-    <td><a name="wp5749"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Retrieves the maximum and minimum values of the range.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp6470"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp567637">SDget_maxopenfiles</a>
-</div></td>
-    <td><a name="wp6472"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Retrieves current and maximum number of open files.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp6474"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp567552">SDget_numopenfiles</a>
-</div></td>
-    <td><a name="wp6476"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Returns the number of files currently being opened.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp5758"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp430767">SDidtoref/sfid2ref</a>
-</div></td>
-    <td><a name="wp5761"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Returns the reference number assigned to a data set.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp5764"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp568088">SDidtype/</a>
-</div></td>
-    <td><a name="wp5767"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Given an id, return the type of object the id represents.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp5770"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp430786">SDiscoordvar/sfiscvar</a>
-</div></td>
-    <td><a name="wp5773"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Determines if a data set is a coordinate variable.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp5776"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp442118">SDisdimval_bwcomp/sfisdmvc</a>
-</div></td>
-    <td><a name="wp5779"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Determines whether a dimension has the old and new representations or the new representation only.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp5782"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp441103">SDisrecord/sfisrcrd</a>
-</div></td>
-    <td><a name="wp5785"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Determines whether a data set is appendable.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp5788"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp583256">SDnametoindex/sfn2index</a>
-</div></td>
-    <td><a name="wp5791"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Determines the index of a data set given its name.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp5794"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp583306">SDnametoindices</a>
-</div></td>
-    <td><a name="wp5797"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Retrieves indices of all variables with the same name.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp5800"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp430825">SDreadattr/sfrnatt/sfrcatt</a>
-</div></td>
-    <td><a name="wp5803"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Reads the values of an attribute.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp5806"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp441293">SDreadchunk/sfrchnk/sfrcchnk</a>
-</div></td>
-    <td><a name="wp5809"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Reads a data chunk from a chunked data set.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp5812"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp568346">SDreaddata/sfrdata/sfrcdata</a>
-</div></td>
-    <td><a name="wp5815"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Reads a subsample of data from a data set or coordinate variable.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp5818"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp430881">SDreftoindex/sfref2index</a>
-</div></td>
-    <td><a name="wp5821"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Returns the index of a data set given the reference number.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp5824"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp566776">SDreset_maxopenfiles/</a>
-</div></td>
-    <td><a name="wp5827"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Resets the maximum number of files can be opened at the same time.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp5830"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp566771">SDselect/sfselect</a>
-</div></td>
-    <td><a name="wp5833"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Obtains the data set identifier (sds_id) of a data set.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp6775"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp585384">SDsetaccesstype/sdfsacct</a>
-</div></td>
-    <td><td nowrap>
-<a name="wp6785"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Sets the I/O access type of an SDS.</span>
-</div></td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp5836"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp430929">SDsetattr/sfsnatt/sfscatt</a>
-</div></td>
-    <td><a name="wp5839"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Attaches an attribute to an object.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp5842"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp441569">SDsetblocksize/sfsblsz</a>
-</div></td>
-    <td><a name="wp5845"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Sets the block size used for storing data sets with unlimited dimensions.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp5848"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp430982">SDsetcal/sfscal</a>
-</div></td>
-    <td><a name="wp5851"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Sets the calibration information.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp5854"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp516345">SDsetchunk/sfschnk</a>
-</div></td>
-    <td><a name="wp5857"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Sets the chunk size and the compression method, if any, of a data set.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp5860"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp516520">SDsetchunkcache/sfscchnk</a>
-</div></td>
-    <td><a name="wp5863"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Sets the size of the chunk cache.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp5866"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp455338">SDsetcompress/sfscompress</a>
-</div></td>
-    <td><a name="wp5869"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Compresses the data set with the specified compression method.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp5872"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp536200">SDsetdatastrs/sfsdtstr</a>
-</div></td>
-    <td><a name="wp5875"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Sets the predefined attributes for a data set.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp5878"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp431052">SDsetdimname/sfsdmname</a>
-</div></td>
-    <td><a name="wp5881"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Assigns a name to a dimension.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp5884"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp431075">SDsetdimscale/sfsdscale</a>
-</div></td>
-    <td><a name="wp5887"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Stores the values of a dimension.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp5890"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp431101">SDsetdimstrs/sfsdmstr</a>
-</div></td>
-    <td><a name="wp5893"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Sets the  predefined attribute of a dimension.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp5896"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp442210">SDsetdimval_comp/sfsdmvc</a>
-</div></td>
-    <td><a name="wp5899"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Determines whether a dimension will have the old and new representations or the new representation only.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp5902"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp442252">SDsetexternalfile/sfsextf</a>
-</div></td>
-    <td><a name="wp5905"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Stores data in an external file.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp5908"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp431151">SDsetfillmode/sfsflmd</a>
-</div></td>
-    <td><a name="wp5911"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Sets the current fill mode of a file.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp5914"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp442891">SDsetfillvalue/sfsfill/sfscfill</a>
-</div></td>
-    <td><a name="wp5917"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Sets the fill value for a data set.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp5920"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp441862">SDsetnbitdataset/sfsnbit</a>
-</div></td>
-    <td><a name="wp5923"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Specifies a non-standard bit length for the data set values.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp5926"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp431178">SDsetrange/sfsrange</a>
-</div></td>
-    <td><a name="wp5929"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Sets the maximum and minimum range values for a data set.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp5932"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp431208">SDstart/sfstart</a>
-</div></td>
-    <td><a name="wp5935"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Opens an HDF file and initializes an SD interface.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp5938"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp441960">SDwritechunk/sfwchnk/sfwcchnk</a>
-</div></td>
-    <td><a name="wp5941"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Writes a data chunk to a chunked data set.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp5944"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_SD.html#wp431251">SDwritedata/sfwdata/sfwcdata</a>
-</div></td>
-    <td><a name="wp5947"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Writes a subsample of data to a data set or to a coordinate variable.
-</div>
-</td>
-</tr>
-</table>
-</div>
-<h3 style="font-family: Times New Roman; font-size: 14pt; font-weight: bold" class="pInterfaceName">
-
+<a name="wp748210"> </a><h3 style="font-family: Times New Roman; font-size: 14pt; font-weight: bold" class="pInterfaceName">
+SD - Multifile Scientific Data Interface
 </h3>
+<a name="wp752489"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html">SDattrinfo/sfgainfo</a>
+
+<a name="wp752491"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Retrieves information about an attribute.
+
+</em>
+<a name="wp752493"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp540097">SDcheckempty/sfchempty</a>
+
+<a name="wp752495"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Determines whether an SDS is empty.
+
+</em>
+<a name="wp752497"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp547754">SDcreate/sfcreate</a>
+
+<a name="wp752499"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Creates a new data set.
+
+</em>
+<a name="wp752501"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp430440">SDdiminfo/sfgdinfo</a>
+
+<a name="wp752503"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Retrieves information about a dimension.
+
+</em>
+<a name="wp752505"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp430467">SDend/sfend</a>
+
+<a name="wp752507"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Terminates access to an SD interface.
+
+</em>
+<a name="wp752509"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp430485">SDendaccess/sfendacc</a>
+
+<a name="wp752511"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Terminates access to a data set.
+
+</em>
+<a name="wp752513"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp430504">SDfileinfo/sffinfo</a>
+
+<a name="wp752515"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Retrieves the number of data sets and the number of global attributes in a file.
+
+</em>
+<a name="wp752517"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp430529">SDfindattr/sffattr</a>
+
+<a name="wp752519"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Finds the index of an attribute given its name.
+
+</em>
+<a name="wp752521"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp588101">SDgetanndatainfo/</a>
+
+<a name="wp752523"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Retrieves location and size of annotations&#39; data. (H4 Mapping project specific)
+
+</em>
+<a name="wp752525"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+SDgetattdatainfo/
+
+<a name="wp752527"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Retrieves location and size of attribute&#39;s data. (H4 Mapping project specific)
+
+</em>
+<a name="wp752529"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp441065">SDgetcal/sfgcal</a>
+
+<a name="wp752531"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Retrieves the calibration information associated with a data set.
+
+</em>
+<a name="wp752533"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp442153">SDgetchunkinfo/sfgichnk</a>
+
+<a name="wp752535"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Retrieves chunking information for a data set.
+
+</em>
+<a name="wp752537"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp583486">SDgetcompinfo/sfgcompress</a>
+
+<a name="wp752539"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Retrieves data set compression type and compression information.
+
+</em>
+<a name="wp752541"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp587042">SDgetdatainfo/</a>
+
+<a name="wp752543"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Retrieves location and size of data blocks in a specified data set, starting at a specified block. (H4 
+Mapping project specific)
+
+</em>
+<a name="wp752545"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp547921">SDgetdatastrs/sfgdtstr</a>
+
+<a name="wp752547"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Retrieves the predefined attributes of a data set.
+
+</em>
+<a name="wp752549"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp430621">SDgetdimid/sfdimid</a>
+
+<a name="wp752551"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Returns the identifier of a dimension given its index.
+
+</em>
+<a name="wp752553"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp430641">SDgetdimscale/sfgdscale</a>
+
+<a name="wp752555"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Retrieves the scale values for a dimension.
+
+</em>
+<a name="wp752557"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp430663">SDgetdimstrs/sfgdmstr</a>
+
+<a name="wp752559"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Retrieves the predefined attributes of a dimension.
+
+</em>
+<a name="wp752561"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp567910">SDgetfilename/</a>
+
+<a name="wp752563"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Given a file identifier, retrieves the name of the file.
+
+</em>
+<a name="wp752565"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp430691">SDgetfillvalue/sfgfill/sfgcfill</a>
+
+<a name="wp752567"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Reads the fill value of a data set, if the value has been set.
+
+</em>
+<a name="wp752569"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp430710">SDgetinfo/sfginfo</a>
+
+<a name="wp752571"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Retrieves the name, rank, dimension sizes, data type and number of attributes for a data set.
+
+</em>
+<a name="wp752573"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp567983">SDgetnamelen/</a>
+
+<a name="wp752575"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Retrieves the length of the name of a file, a dataset, or a dimension.
+
+</em>
+<a name="wp752577"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp583380">SDgetnumvars_byname</a>
+
+<a name="wp752579"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Get the number of data sets having the same name.
+
+</em>
+<a name="wp752581"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp586138">SDgetoldattdatainfo</a>
+
+<a name="wp752583"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Retrieves location and size of old predefined attribute&#39;s data. (H4 Mapping project specific)
+
+</em>
+<a name="wp752585"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+SDgetrange/sfgrange
+
+<a name="wp752587"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Retrieves the maximum and minimum values of the range.
+
+</em>
+<a name="wp752589"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp567637">SDget_maxopenfiles/</a>
+
+<a name="wp752591"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Retrieves current and maximum number of open files.
+
+</em>
+<a name="wp752593"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp567552">SDget_numopenfiles/</a>
+
+<a name="wp752595"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Returns the number of files currently being opened.
+
+</em>
+<a name="wp752597"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp430767">SDidtoref/sfid2ref</a>
+
+<a name="wp752599"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Returns the reference number assigned to a data set.
+
+</em>
+<a name="wp752601"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp568088">SDidtype/</a>
+
+<a name="wp752603"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Given an id, return the type of object the id represents.
+
+</em>
+<a name="wp752605"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp430786">SDiscoordvar/sfiscvar</a>
+
+<a name="wp752607"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Determines if a data set is a coordinate variable.
+
+</em>
+<a name="wp752609"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp442118">SDisdimval_bwcomp/sfisdmvc</a>
+
+<a name="wp752611"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Determines whether a dimension has the old and new representations or the new representation only.
+
+</em>
+<a name="wp752613"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp441103">SDisrecord/sfisrcrd</a>
+
+<a name="wp752615"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Determines whether a data set is appendable.
+
+</em>
+<a name="wp752617"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp583256">SDnametoindex/sfn2index</a>
+
+<a name="wp752619"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Determines the index of a data set given its name.
+
+</em>
+<a name="wp752621"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp583306">SDnametoindices</a>
+
+<a name="wp752623"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Retrieves indices of all variables with the same name.
+
+</em>
+<a name="wp752625"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp430825">SDreadattr/sfrnatt/sfrcatt</a>
+
+<a name="wp752627"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Reads the values of an attribute.
+
+</em>
+<a name="wp752629"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp441293">SDreadchunk/sfrchnk/sfrcchnk</a>
+
+<a name="wp752631"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Reads a data chunk from a chunked data set.
+
+</em>
+<a name="wp752633"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp568346">SDreaddata/sfrdata/sfrcdata</a>
+
+<a name="wp752635"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Reads a subsample of data from a data set or coordinate variable.
+
+</em>
+<a name="wp752637"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp430881">SDreftoindex/sfref2index</a>
+
+<a name="wp752639"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Returns the index of a data set given the reference number.
+
+</em>
+<a name="wp752641"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp566776">SDreset_maxopenfiles/</a>
+
+<a name="wp752643"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Resets the maximum number of files can be opened at the same time.
+
+</em>
+<a name="wp752645"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp566771">SDselect/sfselect</a>
+
+<a name="wp752647"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Obtains the data set identifier (sds_id) of a data set.
+
+</em>
+<a name="wp752649"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp585384">SDsetaccesstype/sdfsacct</a>
+
+<a name="wp752651"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Sets the I/O access type of an SDS.
+
+</em>
+<a name="wp752653"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp430929">SDsetattr/sfsnatt/sfscatt</a>
+
+<a name="wp752655"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Attaches an attribute to an object.
+
+</em>
+<a name="wp752657"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp441569">SDsetblocksize/sfsblsz</a>
+
+<a name="wp752659"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Sets the block size used for storing data sets with unlimited dimensions.
+
+</em>
+<a name="wp752661"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp430982">SDsetcal/sfscal</a>
+
+<a name="wp752663"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Sets the calibration information.
+
+</em>
+<a name="wp752665"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp516345">SDsetchunk/sfschnk</a>
+
+<a name="wp752667"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Sets the chunk size and the compression method, if any, of a data set.
+
+</em>
+<a name="wp752669"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp516520">SDsetchunkcache/sfscchnk</a>
+
+<a name="wp752671"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Sets the size of the chunk cache.
+
+</em>
+<a name="wp752673"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp455338">SDsetcompress/sfscompress</a>
+
+<a name="wp752675"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Compresses the data set with the specified compression method.
+
+</em>
+<a name="wp752677"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp536200">SDsetdatastrs/sfsdtstr</a>
+
+<a name="wp752679"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Sets the predefined attributes for a data set.
+
+</em>
+<a name="wp752681"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp431052">SDsetdimname/sfsdmname</a>
+
+<a name="wp752683"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Assigns a name to a dimension.
+
+</em>
+<a name="wp752685"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp431075">SDsetdimscale/sfsdscale</a>
+
+<a name="wp752687"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Stores the values of a dimension.
+
+</em>
+<a name="wp752689"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp431101">SDsetdimstrs/sfsdmstr</a>
+
+<a name="wp752691"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Sets the  predefined attribute of a dimension.
+
+</em>
+<a name="wp752693"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp442210">SDsetdimval_comp/sfsdmvc</a>
+
+<a name="wp752695"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Determines whether a dimension will have the old and new representations or the new representation 
+only.
+
+</em>
+<a name="wp752697"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp442252">SDsetexternalfile/sfsextf</a>
+
+<a name="wp752699"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Stores data in an external file.
+
+</em>
+<a name="wp752701"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp431151">SDsetfillmode/sfsflmd</a>
+
+<a name="wp752703"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Sets the current fill mode of a file.
+
+</em>
+<a name="wp752705"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp442891">SDsetfillvalue/sfsfill/sfscfill</a>
+
+<a name="wp752707"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Sets the fill value for a data set.
+
+</em>
+<a name="wp752709"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp441862">SDsetnbitdataset/sfsnbit</a>
+
+<a name="wp752711"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Specifies a non-standard bit length for the data set values.
+
+</em>
+<a name="wp752713"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp431178">SDsetrange/sfsrange</a>
+
+<a name="wp752715"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Sets the maximum and minimum range values for a data set.
+
+</em>
+<a name="wp752717"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp431208">SDstart/sfstart</a>
+
+<a name="wp752719"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Opens an HDF file and initializes an SD interface.
+
+</em>
+<a name="wp752721"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp441960">SDwritechunk/sfwchnk/sfwcchnk</a>
+
+<a name="wp752723"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Writes a data chunk to a chunked data set.
+
+</em>
+<a name="wp752725"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_SD.html#wp431251">SDwritedata/sfwdata/sfwcdata</a>
+
+<a name="wp752727"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Writes a subsample of data to a data set or to a coordinate variable.
+
+</em>
     </blockquote>
 
     <hr />
@@ -575,10 +483,10 @@ Writes a subsample of data to a data set or to a coordinate variable.
       <tr>
         <td>
 <a HREF="RMTop.html"><b>[Top]</b></a>
-<a accesskey="3" href="RM_Section_II_GRLOP.html"><b>[Prev]</b><a accesskey="4" href="RM_Section_II_VLOP.html"><b>[Next]</b>
+<a accesskey="3" href="RM_Section_II_HELOP.html"><b>[Prev]</b><a accesskey="4" href="RM_Section_II_VLOP.html"><b>[Next]</b>
         </td>
         <td align="center">
-        HDF4.2.5 - February 2010<br/>
+        HDF4.2.6 - June 2011<br/>
 	<a href="RM_Front.html">Copyright</a>
         <td align="right">
           <span style="font-size: 12px; font-weight: bold">

@@ -7,14 +7,14 @@
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.8.2296" />
     <meta name="TEMPLATEBASE" content="Dynamic HTML" />
-    <meta name="LASTUPDATED" content="03/15/10 22:09:12" />
+    <meta name="LASTUPDATED" content="07/04/11 02:14:27" />
     <title>GR - Multifile General Raster Image Interface</title>
     <link rel="StyleSheet" href="document.css" type="text/css" media="all" />
     <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
 <link rel="first" title="First" href="RM_Front.html" />
 <link rel="last" title="Last" href="netCDF_copyright.html" />
-<link rel="previous" title="Previous" href="RM_Section_II_ANLOP.html" />
-<link rel="next" title="Next" href="RM_Section_II_SDLOP.html" />
+<link rel="previous" title="Previous" href="RM_Section_II_DFPLOP.html" />
+<link rel="next" title="Next" href="RM_Section_II_HLOP.html" />
 
     <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
     <script type="text/javascript" language="JavaScript1.2" src="scripts/seealso.js"></script>
@@ -41,7 +41,7 @@
 	</td>
         <td valign="middle" align="right">
 <a HREF="RMTop.html"><b>[Top]</b></a>
-<a accesskey="3" href="RM_Section_II_ANLOP.html"><b>[Prev]</b><a accesskey="4" href="RM_Section_II_SDLOP.html"><b>[Next]</b>
+<a accesskey="3" href="RM_Section_II_DFPLOP.html"><b>[Prev]</b><a accesskey="4" href="RM_Section_II_HLOP.html"><b>[Next]</b>
         </td>
       </tr>
     </table>
@@ -50,316 +50,255 @@
     <hr />
 
     <blockquote>
-<a name="wp7218"> </a><h3 style="font-family: Times New Roman; font-size: 14pt; font-weight: bold" class="pInterfaceName">
-GR - Multifile General Raster Image Interface</h3>
-<div align="left">
-<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp7897table7057">
-  <caption></caption>
-  <tr align="left" valign="top">    <td>&#160;</td>
-    <td>&#160;</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp7897"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_GR.html">GRattrinfo/mgatinf</a>
-</div></td>
-    <td><a name="wp7899"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Retrieves information about an attribute.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp7902"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_GR.html#wp441011">GRcreate/mgcreat</a>
-</div></td>
-    <td><a name="wp7904"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Creates a new raster image.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp7907"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_GR.html#wp487536">GRend/mgend</a>
-</div></td>
-    <td><a name="wp7909"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Terminates the GR interface session.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp7912"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_GR.html#wp441079">GRendaccess/mgendac</a>
-</div></td>
-    <td><a name="wp7914"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Terminates access to a raster image.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp7917"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_GR.html#wp441110">GRfileinfo/mgfinfo</a>
-</div></td>
-    <td><a name="wp7919"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Retrieves the number of raster images and the number of global attributes in the file.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp7922"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_GR.html#wp441142">GRfindattr/mgfndat</a>
-</div></td>
-    <td><a name="wp7924"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Finds the index of a data object&#39;s attribute given an attribute name.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp7931"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_GR.html#wp441161">GRgetattr/mggnatt/mggcatt</a>
-</div></td>
-    <td><a name="wp7933"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Reads the values of an attribute for a data object.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp7936"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_GR.html#wp447266">GRgetchunkinfo/mggichnk</a>
-</div></td>
-    <td><a name="wp7938"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Raster image identifier returned by GRcreate or GRselect
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp7941"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_GR.html#wp476630">GRgetcompinfo/mggcompress</a>
-</div></td>
-    <td><a name="wp7943"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Retrieves raster image data compression type and compression information.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp7946"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_GR.html#wp477200">GRgetiminfo/mggiinf</a>
-</div></td>
-    <td><a name="wp7948"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Retrieves general information about a raster image.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp7951"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_GR.html#wp441219">GRgetlutid/mggltid</a>
-</div></td>
-    <td><a name="wp7953"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Gets the identifier of a palette given its index.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp7956"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_GR.html#wp441254">GRgetlutinfo/mgglinf</a>
-</div></td>
-    <td><a name="wp7958"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Retrieves information about a palette.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp7961"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_GR.html#wp476743">GRgetnluts/mggnluts</a>
-</div></td>
-    <td><a name="wp7963"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Retrieves the number of palettes for an image.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp7966"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_GR.html#wp441277">GRidtoref/mgid2rf</a>
-</div></td>
-    <td><a name="wp7968"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Maps a raster image identifier to a reference number.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp7971"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_GR.html#wp442109">GRluttoref/mglt2rf</a>
-</div></td>
-    <td><a name="wp7973"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Maps a palette identifier to a reference number.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp7976"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_GR.html#wp442103">GRnametoindex/mgn2ndx</a>
-</div></td>
-    <td><a name="wp7978"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Maps the name of a raster image to an index.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp7981"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_GR.html#wp476516">GRreadchunk/mgrchnk/mgrcchnk</a>
-</div></td>
-    <td><a name="wp7983"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Reads a data chunk from a chunked raster image (pixel-interlace only)
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp7986"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_GR.html#wp490439">GRreadimage/mgrdimg/mgrcimg</a>
-</div></td>
-    <td><a name="wp7988"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Raster image identifier returned by GRcreate or GRselect
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp7991"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_GR.html#wp441365">GRreadlut/mgrdlut/mgrclut</a>
-</div></td>
-    <td><a name="wp7993"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Reads a palette.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp7996"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_GR.html#wp441397">GRreftoindex/mgr2idx</a>
-</div></td>
-    <td><a name="wp7998"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Maps the reference number of a raster image to an index.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp8001"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_GR.html#wp441426">GRreqimageil/mgrimil</a>
-</div></td>
-    <td><a name="wp8003"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Specifies the interlace mode to be used in the subsequent raster image read operation(s).
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp8006"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_GR.html#wp441456">GRreqlutil/mgrltil</a>
-</div></td>
-    <td><a name="wp8008"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Specifies the interlace mode to be used in the next palette read operation(s).
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp8011"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_GR.html#wp441486">GRselect/mgselct</a>
-</div></td>
-    <td><a name="wp8013"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Selects the existing raster image.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp8065"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_GR.html#wp493061">GRsetaccesstype/mgsactp</a>
-</div></td>
-    <td><a name="wp8075"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Sets the access for an RI to be either serial or parallel I/O.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp8016"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_GR.html#wp441535">GRsetattr/mgsnatt/mgscatt</a>
-</div></td>
-    <td><a name="wp8018"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Assigns an attribute to a raster image or a file.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp8021"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_GR.html#wp490879">GRsetcompress/mgscompress</a>
-</div></td>
-    <td><a name="wp8023"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Specifies if the raster image will be stored in a file as a compressed raster image.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp8026"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_GR.html#wp446901">GRsetchunk/mgschnk</a>
-</div></td>
-    <td><a name="wp8028"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Makes a raster image a chunked raster image.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp8031"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_GR.html#wp447154">GRsetchunkcache/mgscchnk</a>
-</div></td>
-    <td><a name="wp8033"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Specifies the maximum number of chunks to cache.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp8036"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_GR.html#wp447148">GRsetexternalfile/mgsxfil</a>
-</div></td>
-    <td><a name="wp8038"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Specifies that the raster image will be written to an external file.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp8041"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_GR.html#wp441646">GRstart/mgstart</a>
-</div></td>
-    <td><a name="wp8043"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Initializes the GR interface.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp8046"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_GR.html#wp476425">GRwritechunk/mgwchnk/mgwcchnk</a>
-</div></td>
-    <td><a name="wp8048"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Writes a data chunk to a chunked raster image (pixel-interlace only)
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp8051"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_GR.html#wp441672">GRwriteimage/mgwrimg/mgwcimg</a>
-</div></td>
-    <td><a name="wp8053"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Writes a raster image.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp8056"> </a><div style="font-size: 12pt; font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pRefRoutineNameLOP">
-<a href="RM_Section_II_GR.html#wp441708">GRwritelut/mgwrlut/mgwclut</a>
-</div></td>
-    <td><a name="wp8058"> </a><div style="font-family: Times New Roman; font-size: 12pt; font-style: italic; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
-Writes a palette.
-</div>
-</td>
-</tr>
-</table>
-</div>
-<h3 style="font-family: Times New Roman; font-size: 14pt; font-weight: bold" class="pInterfaceName">
-
+<a name="wp209894"> </a><h3 style="font-family: Times New Roman; font-size: 14pt; font-weight: bold" class="pInterfaceName">
+GR - Multifile General Raster Image Interface
 </h3>
+<a name="wp211713"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_GR.html">GRattrinfo/mgatinf</a>
+
+<a name="wp211715"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Retrieves information about an attribute.
+
+</em>
+<a name="wp211717"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_GR.html#wp441011">GRcreate/mgcreat</a>
+
+<a name="wp211719"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Creates a new raster image.
+
+</em>
+<a name="wp211721"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_GR.html#wp487536">GRend/mgend</a>
+
+<a name="wp211723"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Terminates the GR interface session.
+
+</em>
+<a name="wp211725"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_GR.html#wp441079">GRendaccess/mgendac</a>
+
+<a name="wp211727"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Terminates access to a raster image.
+
+</em>
+<a name="wp211729"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_GR.html#wp441110">GRfileinfo/mgfinfo</a>
+
+<a name="wp211731"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Retrieves the number of raster images and the number of global attributes in the file.
+
+</em>
+<a name="wp211733"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_GR.html#wp441142">GRfindattr/mgfndat</a>
+
+<a name="wp211735"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Finds the index of a data object&#39;s attribute given an attribute name.
+
+</em>
+<a name="wp211737"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_GR.html#wp493566">GRgetattdatainfo/</a>
+
+<a name="wp211739"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Retrieves location and size of attribute&#39;s data. (H4 Mapping project specific)
+
+</em>
+<a name="wp211741"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_GR.html#wp441161">GRgetattr/mggnatt/mggcatt</a>
+
+<a name="wp211743"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Reads the values of an attribute for a data object.
+
+</em>
+<a name="wp211745"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_GR.html#wp447266">GRgetchunkinfo/mggichnk</a>
+
+<a name="wp211747"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Raster image identifier returned by GRcreate or GRselect
+
+</em>
+<a name="wp211749"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_GR.html#wp476630">GRgetcompinfo/mggcompress</a>
+
+<a name="wp211751"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Retrieves raster image data compression type and compression information.
+
+</em>
+<a name="wp211753"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_GR.html#wp493435">GRgetdatainfo/</a>
+
+<a name="wp211755"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Retrieves location and size of data blocks in a specified raster image, starting at a specified block. (H4 
+Mapping project specific)
+
+</em>
+<a name="wp211757"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_GR.html#wp477200">GRgetiminfo/mggiinf</a>
+
+<a name="wp211759"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Retrieves general information about a raster image.
+
+</em>
+<a name="wp211761"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_GR.html#wp441219">GRgetlutid/mggltid</a>
+
+<a name="wp211763"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Gets the identifier of a palette given its index.
+
+</em>
+<a name="wp211765"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_GR.html#wp441254">GRgetlutinfo/mgglinf</a>
+
+<a name="wp211767"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Retrieves information about a palette.
+
+</em>
+<a name="wp211769"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_GR.html#wp476743">GRgetnluts/mggnluts</a>
+
+<a name="wp211771"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Retrieves the number of palettes for an image.
+
+</em>
+<a name="wp211773"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_GR.html#wp441277">GRidtoref/mgid2rf</a>
+
+<a name="wp211775"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Maps a raster image identifier to a reference number.
+
+</em>
+<a name="wp211777"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_GR.html#wp442109">GRluttoref/mglt2rf</a>
+
+<a name="wp211779"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Maps a palette identifier to a reference number.
+
+</em>
+<a name="wp211781"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_GR.html#wp442103">GRnametoindex/mgn2ndx</a>
+
+<a name="wp211783"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Maps the name of a raster image to an index.
+
+</em>
+<a name="wp211785"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_GR.html#wp476516">GRreadchunk/mgrchnk/mgrcchnk</a>
+
+<a name="wp211787"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Reads a data chunk from a chunked raster image (pixel-interlace only)
+
+</em>
+<a name="wp211789"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_GR.html#wp490439">GRreadimage/mgrdimg/mgrcimg</a>
+
+<a name="wp211791"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Raster image identifier returned by GRcreate or GRselect
+
+</em>
+<a name="wp211793"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_GR.html#wp441365">GRreadlut/mgrdlut/mgrclut</a>
+
+<a name="wp211795"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Reads a palette.
+
+</em>
+<a name="wp211797"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_GR.html#wp441397">GRreftoindex/mgr2idx</a>
+
+<a name="wp211799"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Maps the reference number of a raster image to an index.
+
+</em>
+<a name="wp211801"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_GR.html#wp441426">GRreqimageil/mgrimil</a>
+
+<a name="wp211803"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Specifies the interlace mode to be used in the subsequent raster image read operation(s).
+
+</em>
+<a name="wp211805"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_GR.html#wp441456">GRreqlutil/mgrltil</a>
+
+<a name="wp211807"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Specifies the interlace mode to be used in the next palette read operation(s).
+
+</em>
+<a name="wp211809"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_GR.html#wp441486">GRselect/mgselct</a>
+
+<a name="wp211811"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Selects the existing raster image.
+
+</em>
+<a name="wp211813"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_GR.html#wp493061">GRsetaccesstype/mgsactp</a>
+
+<a name="wp211815"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Sets the access for an RI to be either serial or parallel I/O
+
+</em>
+<a name="wp211817"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_GR.html#wp441535">GRsetattr/mgsnatt/mgscatt</a>
+
+<a name="wp211819"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Assigns an attribute to a raster image or a file.
+
+</em>
+<a name="wp211821"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_GR.html#wp490879">GRsetcompress/mgscompress</a>
+
+<a name="wp211823"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Specifies if the raster image will be stored in a file as a compressed raster image.
+
+</em>
+<a name="wp211825"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_GR.html#wp446901">GRsetchunk/mgschnk</a>
+
+<a name="wp211827"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Makes a raster image a chunked raster image.
+
+</em>
+<a name="wp211829"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_GR.html#wp447154">GRsetchunkcache/mgscchnk</a>
+
+<a name="wp211831"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Specifies the maximum number of chunks to cache.
+
+</em>
+<a name="wp211833"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_GR.html#wp447148">GRsetexternalfile/mgsxfil</a>
+
+<a name="wp211835"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Specifies that the raster image will be written to an external file.
+
+</em>
+<a name="wp211837"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_GR.html#wp441646">GRstart/mgstart</a>
+
+<a name="wp211839"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Initializes the GR interface.
+
+</em>
+<a name="wp211841"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_GR.html#wp476425">GRwritechunk/mgwchnk/mgwcchnk</a>
+
+<a name="wp211843"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Writes a data chunk to a chunked raster image (pixel-interlace only)
+
+</em>
+<a name="wp211845"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_GR.html#wp441672">GRwriteimage/mgwrimg/mgwcimg</a>
+
+<a name="wp211847"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Writes a raster image.
+
+</em>
+<a name="wp211849"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; margin-left: 0pt; margin-right: 0pt; text-decoration: none; text-indent: 0pt; text-transform: none" class="pRefRoutineNameLOP">
+<a href="RM_Section_II_GR.html#wp441708">GRwritelut/mgwrlut/mgwclut</a>
+
+<a name="wp211851"> </a><em style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt" class="pRoutinePurposeLOP">
+-- Writes a palette.
+
+</em>
     </blockquote>
 
     <hr />
@@ -368,10 +307,10 @@ Writes a palette.
       <tr>
         <td>
 <a HREF="RMTop.html"><b>[Top]</b></a>
-<a accesskey="3" href="RM_Section_II_ANLOP.html"><b>[Prev]</b><a accesskey="4" href="RM_Section_II_SDLOP.html"><b>[Next]</b>
+<a accesskey="3" href="RM_Section_II_DFPLOP.html"><b>[Prev]</b><a accesskey="4" href="RM_Section_II_HLOP.html"><b>[Next]</b>
         </td>
         <td align="center">
-        HDF4.2.5 - February 2010<br/>
+        HDF4.2.6 - June 2011<br/>
 	<a href="RM_Front.html">Copyright</a>
         <td align="right">
           <span style="font-size: 12px; font-weight: bold">

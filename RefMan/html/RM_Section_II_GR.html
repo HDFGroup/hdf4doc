@@ -7,7 +7,7 @@
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.8.2296" />
     <meta name="TEMPLATEBASE" content="Dynamic HTML" />
-    <meta name="LASTUPDATED" content="03/15/10 22:08:31" />
+    <meta name="LASTUPDATED" content="07/04/11 02:13:49" />
     <title>GRattrinfo/mgatinf</title>
     <link rel="StyleSheet" href="document.css" type="text/css" media="all" />
     <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
@@ -425,11 +425,9 @@ Note
     <td><a name="wp487518"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 When writing applications or tools to manipulate both images and two-dimensional SDs, this crucial difference between the interfaces must be taken into account.  While the underlying data is stored in row-major order in both cases, the API parameters are not expressed in the same way.  Consider the example of an SD data set and  GR image that are stored as identically-shaped arrays of X columns by Y rows and accessed via the <b class="cFunctionName">SDreaddata</b> and <b class="cFunctionName">GRreadimage</b> functions, respectively.  Both functions take the parameters <em class="cVarName">start</em>, <em class="cVarName">stride</em>, and <em class="cVarName">edge</em>.
 </div>
-<div class="pSmartList1"><ul class="pSmartList1">
-<div class="pSmartList2" style="font-family: Times New Roman; font-style: normal; font-weight: normal"><ul class="pSmartList2" style="font-family: Times New Roman; font-style: normal; font-weight: normal">
-<a name="wp487519"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><b class="cBold">o</b>	For <b class="cFunctionName">SDreaddata</b>, those parameters are expressed in (<em class="cVarName">y</em>,<em class="cVarName">x</em>) or [<em class="cVarName">row</em>,<em class="cVarName">column</em>] order.  For example, <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">start[0]</code> is the starting point in the Y dimension and <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">start[1]</code> is the starting point in the X dimension.  The same ordering holds true for all SD data set manipulation functions.</div>
-<a name="wp487520"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><b class="cBold">o</b>	For <b class="cFunctionName">GRreadimage</b>, those parameters are expressed in (<em class="cVarName">x</em>,<em class="cVarName">y</em>) or [<em class="cVarName">column</em>,<em class="cVarName">row</em>] order.  For example, <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">start[0]</code> is the starting point in the X dimension and <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">start[1]</code> is the starting point in the Y dimension.  The same ordering holds true for all GR functions manipulating image data.</div>
-</ul></div>
+<div class="pCellBulletList" style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt"><ul class="pCellBulletList" style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt">
+<a name="wp487519"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt" class="pCellBulletList"><b class="cBold">o</b>	For <b class="cFunctionName">SDreaddata</b>, those parameters are expressed in (<em class="cVarName">y</em>,<em class="cVarName">x</em>) or [<em class="cVarName">row</em>,<em class="cVarName">column</em>] order.  For example, <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">start[0]</code> is the starting point in the Y dimension and <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">start[1]</code> is the starting point in the X dimension.  The same ordering holds true for all SD data set manipulation functions.</div>
+<a name="wp487520"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt" class="pCellBulletList"><b class="cBold">o</b>	For <b class="cFunctionName">GRreadimage</b>, those parameters are expressed in (<em class="cVarName">x</em>,<em class="cVarName">y</em>) or [<em class="cVarName">column</em>,<em class="cVarName">row</em>] order.  For example, <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">start[0]</code> is the starting point in the X dimension and <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">start[1]</code> is the starting point in the Y dimension.  The same ordering holds true for all GR functions manipulating image data.</div>
 </ul></div>
 </td>
 </tr>
@@ -931,6 +929,150 @@ character*(*) attr_name
 <p class="pBodyRelative">
 
 </p>
+<a name="wp493566"> </a><h2 class="pRef_GR_RoutineName">
+<p align=right><A HREF="RM_Section_II_GRLOP.html">
+[GR Interface]</A><a HREF="RMTop.html"><b>[Top]</b></a>
+</p>
+<hr />
+GRgetattdatainfo/
+</h2>
+<a name="wp493567"> </a><p style="font-weight: normal" class="pSignature">
+intn GRgetattdatainfo(int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">obj_id</span>, int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">attr_index, </span>int32<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> *offset, </span>int32<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> *length</span>)
+</p>
+<a name="wp493626"> </a><p class="pBodyRelative">
+</p>
+<div align="left">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp493570table493568">
+  <caption></caption>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp493570"> </a><div style="margin-top: 0pt" class="pCellVariable">
+obj_id
+</div>
+</td>
+    <td><a name="wp493572"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+IN:
+</div>
+</td>
+    <td><a name="wp493661"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Raster image identifier (<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ri_id</span>), returned by <b class="cFunctionName">GRselect</b>, or GR interface identifier (<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">gr_id</span>), returned by <b class="cFunctionName">GRstart</b>
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp493576"> </a><div style="margin-top: 0pt" class="pCellVariable">
+attr_index
+</div>
+</td>
+    <td><a name="wp493578"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+IN:
+</div>
+</td>
+    <td><a name="wp493580"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Index of the inquired attribute
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp493582"> </a><div style="margin-top: 0pt" class="pCellVariable">
+offset
+</div>
+</td>
+    <td><a name="wp493584"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+OUT:
+</div>
+</td>
+    <td><a name="wp493586"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Buffer to hold offset of the attribute&#39;s data
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp493588"> </a><div style="margin-top: 0pt" class="pCellVariable">
+length
+</div>
+</td>
+    <td><a name="wp493590"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+OUT:
+</div>
+</td>
+    <td><a name="wp493592"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Buffer to hold length of the attribute&#39;s data
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="pBodyRelative">
+</p>
+<div align="left">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp493595table493593">
+  <caption></caption>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp493595"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+Purpose
+</div></td>
+    <td><a name="wp493597"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Retrieves location and size of attribute&#39;s data. (H4 Mapping project specific)
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp493599"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+Return value
+</div></td>
+    <td><a name="wp493601"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Returns the number of data blocks retrieved, which should be 1, if successful, and <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">FAIL</span> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">-1</span>) otherwise.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp493606"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+Description
+</div></td>
+    <td><a name="wp493608"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+<b class="cFunctionName">GRgetattdatainfo</b> retrieves the offset and length of the data that belongs to the attribute <em class="cVarName">attr_index</em>, which is attached to the HDF4 object specified by <em class="cVarName">obj_id</em>.  The value of <em class="cVarName">obj_id</em> can be a GR interface identifier (<em class="cVarName">gr_id</em>), returned by <b class="cFunctionName">GRstart</b> or an image identifier (<em class="cVarName">ri_id</em>), returned by <b class="cFunctionName">GRselect</b>.
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="pBodyRelative">
+</p>
+<div align="left">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp493615table493613">
+  <caption></caption>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp493615"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+FORTRAN
+</div></td>
+    <td><a name="wp493617"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortSyntax">
+Currently unavailable
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp493619"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+&#160;
+</div></td>
+    <td><a name="wp493621"> </a><div class="pCellFortran">
+&#160;
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp493623"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+&#160;
+</div></td>
+    <td><a name="wp493625"> </a><div class="pCellFortran">
+&#160;
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="pBodyRelative">
+
+</p>
 <a name="wp441161"> </a><h2 class="pRef_GR_RoutineName">
 <p align=right><A HREF="RM_Section_II_GRLOP.html">
 [GR Interface]</A><a HREF="RMTop.html"><b>[Top]</b></a>
@@ -1293,56 +1435,56 @@ The value returned in the parameter <span style="color: #000000; font-style: ita
 <p class="pBodyRelative">
 </p>
 <div align="center">
-<table border="1" cellpadding="3" cellspacing="1" bgcolor="White" bordercolor="#FFFFFF" id="wp447450table447448">
+<table border="0" cellpadding="6" cellspacing="10" width="75%" bgcolor="White" id="wp493950table447448">
   <caption></caption>
-  <tr>    <th><a name="wp447450"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr background="" align="left" valign="top">    <th><a name="wp493950"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Values of <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">flag</span> in C
 </div>
 </th>
-    <th><a name="wp447452"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <th><a name="wp493952"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Values of <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">flag</span> in Fortran
 </div>
 </th>
-    <th><a name="wp447454"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <th><a name="wp493954"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Raster Image Characteristics
 </div>
 </th>
 </tr>
-  <tr>    <td><a name="wp447456"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr align="left" valign="top">    <td><a name="wp493956"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 HDF_NONE
 </div>
 </td>
-    <td><a name="wp447458"> </a><div class="pCellBody">
+    <td><a name="wp493958"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 -1
 </div>
 </td>
-    <td><a name="wp447460"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp493960"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 Not chunked
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp447462"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr align="left" valign="top">    <td><a name="wp493962"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 HDF_CHUNK
 </div>
 </td>
-    <td><a name="wp447464"> </a><div class="pCellBody">
+    <td><a name="wp493964"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 0
 </div>
 </td>
-    <td><a name="wp447466"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp493966"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 Chunked and not compressed
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp447468"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr align="left" valign="top">    <td><a name="wp493968"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 HDF_CHUNK | HDF_COMP
 </div>
 </td>
-    <td><a name="wp447470"> </a><div class="pCellBody">
+    <td><a name="wp493970"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 1
 </div>
 </td>
-    <td><a name="wp447472"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp493972"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 Chunked and compressed with either the run-length encoding (RLE), Skipping Huffman or GZIP compression algorithms
 </div>
 </td>
@@ -1514,15 +1656,13 @@ The compression method is returned in the parameter <em class="cVarName">comp_ty
 <a name="wp477163"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 &#160;
 </div></td>
-    <td><div class="pSmartList1"><ul class="pSmartList1">
-<div class="pSmartList2" style="font-family: Times New Roman; font-style: normal; font-weight: normal"><ul class="pSmartList2" style="font-family: Times New Roman; font-style: normal; font-weight: normal">
-<a name="wp477165"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><code style="font-family: Courier New" class="cDefName">COMP_CODE_NONE</code> (or <code style="font-family: Courier New" class="cDefName">0</code>) for no compression</div>
-<a name="wp477166"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><code style="font-family: Courier New" class="cDefName">COMP_CODE_RLE</code> (or <code style="font-family: Courier New" class="cDefName">1</code>) for RLE run-length encoding</div>
-<a name="wp477167"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><code style="font-family: Courier New" class="cDefName">COMP_CODE_SKPHUFF</code> (or <code style="font-family: Courier New" class="cDefName">3</code>) for Skipping Huffman compression</div>
-<a name="wp477704"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><code style="font-family: Courier New" class="cDefName">COMP_CODE_DEFLATE</code> (or <code style="font-family: Courier New" class="cDefName">4</code>) for GZIP compression</div>
-<a name="wp477942"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><code style="font-family: Courier New" class="cDefName">COMP_CODE_SZIP</code> (or <code style="font-family: Courier New" class="cDefName">5</code>) for SZIP compression</div>
-<a name="wp477169"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><code style="font-family: Courier New" class="cDefName">COMP_CODE_JPEG</code> (or <code style="font-family: Courier New" class="cDefName">7</code>) for JPEG compression</div>
-</ul></div>
+    <td><div class="pCellBulletList" style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt"><ul class="pCellBulletList" style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt">
+<a name="wp477165"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt" class="pCellBulletList"><code style="font-family: Courier New" class="cDefName">COMP_CODE_NONE</code> (or <code style="font-family: Courier New" class="cDefName">0</code>) for no compression</div>
+<a name="wp477166"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt" class="pCellBulletList"><code style="font-family: Courier New" class="cDefName">COMP_CODE_RLE</code> (or <code style="font-family: Courier New" class="cDefName">1</code>) for RLE run-length encoding</div>
+<a name="wp477167"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt" class="pCellBulletList"><code style="font-family: Courier New" class="cDefName">COMP_CODE_SKPHUFF</code> (or <code style="font-family: Courier New" class="cDefName">3</code>) for Skipping Huffman compression</div>
+<a name="wp477704"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt" class="pCellBulletList"><code style="font-family: Courier New" class="cDefName">COMP_CODE_DEFLATE</code> (or <code style="font-family: Courier New" class="cDefName">4</code>) for GZIP compression</div>
+<a name="wp477942"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt" class="pCellBulletList"><code style="font-family: Courier New" class="cDefName">COMP_CODE_SZIP</code> (or <code style="font-family: Courier New" class="cDefName">5</code>) for SZIP compression</div>
+<a name="wp477169"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt" class="pCellBulletList"><code style="font-family: Courier New" class="cDefName">COMP_CODE_JPEG</code> (or <code style="font-family: Courier New" class="cDefName">7</code>) for JPEG compression</div>
 </ul></div>
 </td>
 </tr>
@@ -1551,13 +1691,11 @@ The <em class="cVarName">c_info</em> struct is of type <code style="font-family:
     <td><a name="wp477181"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 The <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">comp_prm</span> parameter is an array of one element:
 </div>
-<div class="pSmartList1"><ul class="pSmartList1">
-<div class="pSmartList2" style="font-family: Times New Roman; font-style: normal; font-weight: normal"><ul class="pSmartList2" style="font-family: Times New Roman; font-style: normal; font-weight: normal">
-<a name="wp477182"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><b class="cBold">o</b>	With Skipping Huffman compression, <em class="cVarName">comp_prm(1)</em> contains the skip value, <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">skphuff_skp_size</code>.  </div>
-<a name="wp477183"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><b class="cBold">o</b>	In the case of GZIP compression, <em class="cVarName">comp_prm(1)</em> contains the deflation value, <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">deflate_value</code>.  </div>
-<a name="wp477184"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><b class="cBold">o</b><em style="font-style: italic" class="cVarName">	comp_prm</em><span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> </span>is ignored with other compression methods.  (There are no relevant RLE parameters and the <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">quality</code> and <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">force_baseline</code> data are not available for JPEG images.  If <b class="cFunctionName">GRgetcompinfo</b> is called for either an RLE or a JPEG image, the function will return only the compression type; <em class="cVarName">c_info</em> will contain only zeros.)</div>
-<a name="wp481547"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><b class="cBold">o</b>	Currently, Fortran GR interface doesn&#39;t support Szip compression.</div>
-</ul></div>
+<div class="pCellBulletList" style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt"><ul class="pCellBulletList" style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt">
+<a name="wp477182"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt" class="pCellBulletList"><b class="cBold">o</b>	With Skipping Huffman compression, <em class="cVarName">comp_prm(1)</em> contains the skip value, <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">skphuff_skp_size</code>.  </div>
+<a name="wp477183"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt" class="pCellBulletList"><b class="cBold">o</b>	In the case of GZIP compression, <em class="cVarName">comp_prm(1)</em> contains the deflation value, <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">deflate_value</code>.  </div>
+<a name="wp477184"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt" class="pCellBulletList"><b class="cBold">o</b><em style="font-style: italic" class="cVarName">	comp_prm</em><span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> </span>is ignored with other compression methods.  (There are no relevant RLE parameters and the <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">quality</code> and <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">force_baseline</code> data are not available for JPEG images.  If <b class="cFunctionName">GRgetcompinfo</b> is called for either an RLE or a JPEG image, the function will return only the compression type; <em class="cVarName">c_info</em> will contain only zeros.)</div>
+<a name="wp481547"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt" class="pCellBulletList"><b class="cBold">o</b>	Currently, Fortran GR interface doesn&#39;t support Szip compression.</div>
 </ul></div>
 </td>
 </tr>
@@ -1583,6 +1721,192 @@ integer function mggcompress(ri_id, comp_type, comp_prm)
 </div></td>
     <td><a name="wp477193"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortVar">
 integer ri_id, comp_type, comp_prm(1)
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="pBodyRelative">
+
+</p>
+<a name="wp493435"> </a><h2 class="pRef_GR_RoutineName">
+<p align=right><A HREF="RM_Section_II_GRLOP.html">
+[GR Interface]</A><a HREF="RMTop.html"><b>[Top]</b></a>
+</p>
+<hr />
+GRgetdatainfo/
+</h2>
+<a name="wp493436"> </a><p style="font-weight: normal" class="pSignature">
+intn GRgetdatainfo(int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ri_id</span>, uintn <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">start_block</span>, uintn info_count, int32 *<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">offsetarray</span>, int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">*lengtharray</span>)
+</p>
+<a name="wp493513"> </a><p class="pBodyRelative">
+</p>
+<div align="left">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp493439table493437">
+  <caption></caption>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp493439"> </a><div style="margin-top: 0pt" class="pCellVariable">
+ri_id
+</div>
+</td>
+    <td><a name="wp493441"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+IN:
+</div>
+</td>
+    <td><a name="wp493443"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+RI identifier returned by <b class="cFunctionName">GRselect</b>
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp493451"> </a><div style="margin-top: 0pt" class="pCellVariable">
+start_block
+</div>
+</td>
+    <td><a name="wp493453"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+IN:
+</div>
+</td>
+    <td><a name="wp493455"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Value indicating where to start reading offsets
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp493457"> </a><div style="margin-top: 0pt" class="pCellVariable">
+info_count
+</div>
+</td>
+    <td><a name="wp493459"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+IN:
+</div>
+</td>
+    <td><a name="wp493461"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Length of the offset and length lists
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp493463"> </a><div style="margin-top: 0pt" class="pCellVariable">
+offsetarray
+</div>
+</td>
+    <td><a name="wp493465"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+OUT:
+</div>
+</td>
+    <td><a name="wp493467"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Array to hold offsets of the data blocks
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp493469"> </a><div style="margin-top: 0pt" class="pCellVariable">
+lengtharray
+</div>
+</td>
+    <td><a name="wp493471"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+OUT:
+</div>
+</td>
+    <td><a name="wp493473"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Array to hold lengths of the data blocks
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="pBodyRelative">
+</p>
+<div align="left">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp493476table493474">
+  <caption></caption>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp493476"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+Purpose
+</div></td>
+    <td><a name="wp493478"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Retrieves location and size of data blocks in a specified raster image, starting at a specified block. (H4 Mapping project specific)
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp493480"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+Return value
+</div></td>
+    <td><a name="wp493482"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Returns the number of data blocks retrieved if successful, and <code style="font-family: Courier New" class="cDefName">FAIL</code> (or <code style="font-family: Courier New" class="cDefName">-1</code>) otherwise.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp493484"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+Description
+</div></td>
+    <td><a name="wp493486"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+<b class="cFunctionName">GRgetdatainfo</b> retrieves two lists, <em class="cVarName">offsetarray</em> and <em class="cVarName">lengtharray</em>, containing the offsets and lengths of the blocks of data belonging to the raster image specified by <em class="cVarName">ri_id</em>.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp493488"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+&#160;
+</div></td>
+    <td><a name="wp493490"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+The parameter <em class="cVarName">info_count</em> provides the number of offset/length values that the lists can hold.  To allocate sufficient memory for <em class="cVarName">offsetarray</em> and <em class="cVarName">lengtharray</em>, the application can invoke <b class="cFunctionName">GRgetdatainfo</b> passing in <code style="font-family: Courier New" class="cDefName">0</code> for <em class="cVarName">info_count</em> and <code style="font-family: Courier New" class="cDefName">NULL</code> for both arrays to get the value for <em class="cVarName">info_count</em> in the next call to <b class="cFunctionName">GRgetdatainfo</b>.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp493492"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+&#160;
+</div></td>
+    <td><a name="wp493494"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+The parameter <em class="cVarName">start_block</em> indicates where to start reading the offsets from in the file.  The combination of parameters <em class="cVarName">info_length</em> and <em class="cVarName">start_block</em> provide user applications with flexibility of where and how much data information to retrieve.  The value for <em class="cVarName">start_block</em> must be non-negative and smaller than or equal to the number of blocks in the raster image.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp493496"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+&#160;
+</div></td>
+    <td><div class="pCellBulletList" style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt"><ul class="pCellBulletList" style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt">
+<a name="wp493498"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt" class="pCellBulletList">o When <em class="cVarName">start_block</em> is 0, <b class="cFunctionName">GRgetdatainfo</b> will start getting data info from the beginning of the image&#39;s data.</div>
+<a name="wp493499"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt" class="pCellBulletList">o When <em class="cVarName">start_block</em> is greater than the number of blocks in the image, <b class="cFunctionName">GRgetdatainfo</b> will return <code style="font-family: Courier New" class="cDefName">FAIL </code>(or <code style="font-family: Courier New" class="cDefName">-1</code>).</div>
+</ul></div>
+</td>
+</tr>
+</table>
+</div>
+<p class="pBodyRelative">
+</p>
+<div align="left">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp493502table493500">
+  <caption></caption>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp493502"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+FORTRAN
+</div></td>
+    <td><a name="wp493504"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortSyntax">
+Currently unavailable
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp493506"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+&#160;
+</div></td>
+    <td><a name="wp493508"> </a><div class="pCellFortran">
+&#160;
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp493510"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+&#160;
+</div></td>
+    <td><a name="wp493512"> </a><div class="pCellFortran">
+&#160;
 </div>
 </td>
 </tr>
@@ -2873,11 +3197,9 @@ Note
     <td><a name="wp477471"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 When writing applications or tools to manipulate both images and two-dimensional SDs, this crucial difference between the interfaces must be taken into account.  While the underlying data is stored in row-major order in both cases, the API parameters are not expressed in the same way.  Consider the example of an SD data set and  GR image that are stored as identically-shaped arrays of X columns by Y rows and accessed via the <b class="cFunctionName">SDreaddata</b> and <b class="cFunctionName">GRreadimage</b> functions, respectively.  Both functions take the parameters <em class="cVarName">start</em>, <em class="cVarName">stride</em>, and <em class="cVarName">edge</em>.
 </div>
-<div class="pSmartList1"><ul class="pSmartList1">
-<div class="pSmartList2" style="font-family: Times New Roman; font-style: normal; font-weight: normal"><ul class="pSmartList2" style="font-family: Times New Roman; font-style: normal; font-weight: normal">
-<a name="wp486424"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><b class="cBold">o</b>	For <b class="cFunctionName">SDreaddata</b>, those parameters are expressed in (<code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">y,x</code>) or [<code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">row,column</code>] order.  For example, <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">start[0]</code> is the starting point in the Y dimension and <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">start[1]</code> is the starting point in the X dimension.  The same ordering holds true for all SD data set manipulation functions.</div>
-<a name="wp486425"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><b class="cBold">o</b>	For <b class="cFunctionName">GRreadimage</b>, those parameters are expressed in (<code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">x,y</code>) or [<code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">column,row</code>] order.  For example, <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">start[0]</code> is the starting point in the X dimension and <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">start[1]</code> is the starting point in the Y dimension.  The same ordering holds true for all GR functions manipulating image data.</div>
-</ul></div>
+<div class="pCellBulletList" style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt"><ul class="pCellBulletList" style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt">
+<a name="wp486424"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt" class="pCellBulletList"><b class="cBold">o</b>	For <b class="cFunctionName">SDreaddata</b>, those parameters are expressed in (<code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">y,x</code>) or [<code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">row,column</code>] order.  For example, <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">start[0]</code> is the starting point in the Y dimension and <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">start[1]</code> is the starting point in the X dimension.  The same ordering holds true for all SD data set manipulation functions.</div>
+<a name="wp486425"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt" class="pCellBulletList"><b class="cBold">o</b>	For <b class="cFunctionName">GRreadimage</b>, those parameters are expressed in (<code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">x,y</code>) or [<code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">column,row</code>] order.  For example, <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">start[0]</code> is the starting point in the X dimension and <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">start[1]</code> is the starting point in the Y dimension.  The same ordering holds true for all GR functions manipulating image data.</div>
 </ul></div>
 </td>
 </tr>
@@ -4537,14 +4859,12 @@ If the parameter <em class="cVarName">flags</em> has a value of <code style="fon
 <a name="wp481603"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 &#160;
 </div></td>
-    <td><div class="pSmartList1"><ul class="pSmartList1">
-<div class="pSmartList2" style="font-family: Times New Roman; font-style: normal; font-weight: normal"><ul class="pSmartList2" style="font-family: Times New Roman; font-style: normal; font-weight: normal">
-<a name="wp481605"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><code style="font-family: Courier New" class="cDefName">COMP_CODE_NONE</code> (or <code style="font-family: Courier New" class="cDefName">0</code>) for uncompressed data</div>
-<a name="wp481606"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><code style="font-family: Courier New" class="cDefName">COMP_CODE_RLE</code> (or <code style="font-family: Courier New" class="cDefName">1</code>) for RLE compression</div>
-<a name="wp481607"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><code style="font-family: Courier New" class="cDefName">COMP_CODE_SKPHUFF</code> (or <code style="font-family: Courier New" class="cDefName">3</code>) for Skipping Huffman compression</div>
-<a name="wp481608"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><code style="font-family: Courier New" class="cDefName">COMP_CODE_DEFLATE</code> (or <code style="font-family: Courier New" class="cDefName">4</code>) for GZIP compression</div>
-<a name="wp481673"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><code style="font-family: Courier New" class="cDefName">COMP_CODE_SZIP</code> (or <code style="font-family: Courier New" class="cDefName">5</code>) for Szip compression</div>
-</ul></div>
+    <td><div class="pCellBulletList" style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt"><ul class="pCellBulletList" style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt">
+<a name="wp481605"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt" class="pCellBulletList"><code style="font-family: Courier New" class="cDefName">COMP_CODE_NONE</code> (or <code style="font-family: Courier New" class="cDefName">0</code>) for uncompressed data</div>
+<a name="wp481606"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt" class="pCellBulletList"><code style="font-family: Courier New" class="cDefName">COMP_CODE_RLE</code> (or <code style="font-family: Courier New" class="cDefName">1</code>) for RLE compression</div>
+<a name="wp481607"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt" class="pCellBulletList"><code style="font-family: Courier New" class="cDefName">COMP_CODE_SKPHUFF</code> (or <code style="font-family: Courier New" class="cDefName">3</code>) for Skipping Huffman compression</div>
+<a name="wp481608"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt" class="pCellBulletList"><code style="font-family: Courier New" class="cDefName">COMP_CODE_DEFLATE</code> (or <code style="font-family: Courier New" class="cDefName">4</code>) for GZIP compression</div>
+<a name="wp481673"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt" class="pCellBulletList"><code style="font-family: Courier New" class="cDefName">COMP_CODE_SZIP</code> (or <code style="font-family: Courier New" class="cDefName">5</code>) for Szip compression</div>
 </ul></div>
 </td>
 </tr>
@@ -4555,12 +4875,10 @@ If the parameter <em class="cVarName">flags</em> has a value of <code style="fon
     <td><a name="wp481716"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 For Skipping Huffman and GZIP compression, parameters are passed in corresponding fields of the structure <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">cinfo</code>. 
 </div>
-<div class="pSmartList1"><ul class="pSmartList1">
-<div class="pSmartList2" style="font-family: Times New Roman; font-style: normal; font-weight: normal"><ul class="pSmartList2" style="font-family: Times New Roman; font-style: normal; font-weight: normal">
-<a name="wp481717"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2">o	Specify skipping size for Skipping Huffman compression in the field <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">cdef.comp.cinfo.skphuff.skp_size</code>, which must be an integer of value 1 or greater. </div>
-<a name="wp481718"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2">o	Specify the deflate level for GZIP compression in the field <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">cdef.comp.cinfo.deflate_level</code>. Valid deflate level values are integers between 0 and 9 inclusive.</div>
-<a name="wp481719"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2">o	Specify the options mask and the number of pixels per block for Szip compression in the fields <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">c_info.szip.options_mask</code> and <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">c_info.szip.pixels_per_block</code>, respectively.</div>
-</ul></div>
+<div class="pCellBulletList" style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt"><ul class="pCellBulletList" style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt">
+<a name="wp481717"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt" class="pCellBulletList">o	Specify skipping size for Skipping Huffman compression in the field <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">cdef.comp.cinfo.skphuff.skp_size</code>, which must be an integer of value 1 or greater. </div>
+<a name="wp481718"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt" class="pCellBulletList">o	Specify the deflate level for GZIP compression in the field <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">cdef.comp.cinfo.deflate_level</code>. Valid deflate level values are integers between 0 and 9 inclusive.</div>
+<a name="wp481719"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt" class="pCellBulletList">o	Specify the options mask and the number of pixels per block for Szip compression in the fields <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">c_info.szip.options_mask</code> and <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">c_info.szip.pixels_per_block</code>, respectively.</div>
 </ul></div>
 <a name="wp481720"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 Refer to the <b class="cFunctionName">SDsetcompress</b> entry in this reference  manual for details on these parameters.
@@ -4598,13 +4916,11 @@ The parameter <em class="cVarName">comp_type</em> specifies the compression type
 <a name="wp481627"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 &#160;
 </div></td>
-    <td><div class="pSmartList1"><ul class="pSmartList1">
-<div class="pSmartList2" style="font-family: Times New Roman; font-style: normal; font-weight: normal"><ul class="pSmartList2" style="font-family: Times New Roman; font-style: normal; font-weight: normal">
-<a name="wp481629"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><code style="font-family: Courier New" class="cDefName">COMP_CODE_NONE</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">0</span>) for uncompressed data</div>
-<a name="wp481630"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><code style="font-family: Courier New" class="cDefName">COMP_CODE_RLE</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">1</span>) for RLE compression</div>
-<a name="wp481631"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><code style="font-family: Courier New" class="cDefName">COMP_CODE_SKPHUFF</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">3</span>) for Skipping Huffman compression</div>
-<a name="wp481632"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2"><code style="font-family: Courier New" class="cDefName">COMP_CODE_DEFLATE</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">4</span>) for GZIP compression</div>
-</ul></div>
+    <td><div class="pCellBulletList" style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt"><ul class="pCellBulletList" style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt">
+<a name="wp481629"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt" class="pCellBulletList"><code style="font-family: Courier New" class="cDefName">COMP_CODE_NONE</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">0</span>) for uncompressed data</div>
+<a name="wp481630"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt" class="pCellBulletList"><code style="font-family: Courier New" class="cDefName">COMP_CODE_RLE</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">1</span>) for RLE compression</div>
+<a name="wp481631"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt" class="pCellBulletList"><code style="font-family: Courier New" class="cDefName">COMP_CODE_SKPHUFF</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">3</span>) for Skipping Huffman compression</div>
+<a name="wp481632"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt" class="pCellBulletList"><code style="font-family: Courier New" class="cDefName">COMP_CODE_DEFLATE</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">4</span>) for GZIP compression</div>
 </ul></div>
 </td>
 </tr>
@@ -5409,11 +5725,9 @@ Note
     <td><a name="wp477523"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 When writing applications or tools to manipulate both images and two-dimensional SDs, this crucial difference between the interfaces must be taken into account.  While the underlying data is stored in row-major order in both cases, the API parameters are not expressed in the same way.  Consider the example of an SD data set and  GR image that are stored as identically-shaped arrays of X columns by Y rows and accessed via the <b class="cFunctionName">SDreaddata</b> and <b class="cFunctionName">GRreadimage</b> functions, respectively.  Both functions take the parameters <em class="cVarName">start</em>, <em class="cVarName">stride</em>, and <em class="cVarName">edge</em>.
 </div>
-<div class="pSmartList1"><ul class="pSmartList1">
-<div class="pSmartList2" style="font-family: Times New Roman; font-style: normal; font-weight: normal"><ul class="pSmartList2" style="font-family: Times New Roman; font-style: normal; font-weight: normal">
-<a name="wp477524"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2">o	For <b class="cFunctionName">SDreaddata</b>, those parameters are expressed in (<code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">y,x</code>) or [<code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">row,column</code>] order.  For example, <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">start[0]</code> is the starting point in the Y dimension and <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">start[1]</code> is the starting point in the X dimension.  The same ordering holds true for all SD data set manipulation functions.</div>
-<a name="wp477525"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal" class="pSmartList2">o	For <b class="cFunctionName">GRreadimage</b>, those parameters are expressed in (<code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">x,y</code>) or [<code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">column,row</code>] order.  For example, <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">start[0]</code> is the starting point in the X dimension and <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">start[1]</code> is the starting point in the Y dimension.  The same ordering holds true for all GR functions manipulating image data.</div>
-</ul></div>
+<div class="pCellBulletList" style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt"><ul class="pCellBulletList" style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt">
+<a name="wp477524"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt" class="pCellBulletList">o	For <b class="cFunctionName">SDreaddata</b>, those parameters are expressed in (<code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">y,x</code>) or [<code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">row,column</code>] order.  For example, <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">start[0]</code> is the starting point in the Y dimension and <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">start[1]</code> is the starting point in the X dimension.  The same ordering holds true for all SD data set manipulation functions.</div>
+<a name="wp477525"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt" class="pCellBulletList">o	For <b class="cFunctionName">GRreadimage</b>, those parameters are expressed in (<code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">x,y</code>) or [<code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">column,row</code>] order.  For example, <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">start[0]</code> is the starting point in the X dimension and <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">start[1]</code> is the starting point in the Y dimension.  The same ordering holds true for all GR functions manipulating image data.</div>
 </ul></div>
 </td>
 </tr>
@@ -5752,7 +6066,7 @@ character*(*) pal_data
     <table id="SummaryNotReq2" border="0" width="850" cellspacing="0" cellpadding="0">
       <tr>
         <td align="left">
-        HDF4.2.5 - February 2010<br/>
+        HDF4.2.6 - June 2011<br/>
         <a href="RM_Front.html">Copyright</a>
         <td align="right">
           <span style="font-size: 12px; font-weight: bold">

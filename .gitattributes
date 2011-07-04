@@ -1,6 +1,7 @@
 * text=auto !eol
 RefMan/html/RMTop.html -text
 RefMan/html/RM_Front.html -text
+RefMan/html/RM_Section_I.html -text
 RefMan/html/RM_Section_II_AN.html -text
 RefMan/html/RM_Section_II_ANLOP.html -text
 RefMan/html/RM_Section_II_DF24.html -text
