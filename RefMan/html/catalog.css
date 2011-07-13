@@ -7,10 +7,6 @@ b.cBold
 {
   font-weight: bold
 }
-code.cCode
-{
-  font-size: small
-}
 em.cEmphasis
 {
   font-style: italic
@@ -88,13 +84,6 @@ div.pCellBody
   margin-top: 0em;
   text-indent: 0
 }
-div.pCellBulletList
-{
-  font-size: medium;
-  margin-bottom: 6pt;
-  margin-left: 0;
-  text-indent: 0
-}
 div.pCellDescription
 {
   font-family: Times New Roman;
@@ -162,7 +151,7 @@ div.pCellVariable
   text-align: left;
   text-indent: 0
 }
-div.pCodeRM
+code.pCodeRM
 {
   font-size: medium;
   margin-bottom: 0;
@@ -786,7 +775,7 @@ div.pTableElement
   margin-left: 0;
   text-indent: 0
 }
-div.pTableTitle
+div.pTableTitleold
 {
   font-size: medium;
   font-style: italic;

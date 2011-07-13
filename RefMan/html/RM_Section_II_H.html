@@ -7,7 +7,7 @@
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.8.2296" />
     <meta name="TEMPLATEBASE" content="Dynamic HTML" />
-    <meta name="LASTUPDATED" content="07/07/11 01:49:29" />
+    <meta name="LASTUPDATED" content="07/13/11 02:37:53" />
     <title>Hclose/hclose</title>
     <link rel="StyleSheet" href="document.css" type="text/css" media="all" />
     <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
@@ -63,7 +63,7 @@ intn Hclose(int32 <span style="color: #000000; font-style: italic; font-variant:
   <caption></caption>
   <tr align="left" valign="top">    <td><td nowrap>
 <a name="wp445339"> </a><div style="margin-top: 0pt" class="pCellVariable">
-<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">file_id</span>
+file_id
 </div>
 </td>
     <td><a name="wp445341"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
@@ -96,7 +96,7 @@ Closes the access path to the file.
 Return value
 </div></td>
     <td><a name="wp442356"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Returns <code style="font-family: Courier New" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New" class="cDefName">0</code>) if successful and <code style="font-family: Courier New" class="cDefName">FAIL</code> (or <code style="font-family: Courier New" class="cDefName">-1</code>) otherwise.
+Returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) if successful and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) otherwise.
 </div>
 </td>
 </tr>
@@ -114,7 +114,7 @@ The file identifier <em class="cVarName">file_id</em> is validated before the fi
 &#160;
 </div></td>
     <td><a name="wp442366"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-If there are still access identifiers attached to the file, the error <code style="font-family: Courier New" class="cDefName">DFE_OPENAID</code> is placed on the error stack, <code style="font-family: Courier New" class="cDefName">FAIL</code> (or <code style="font-family: Courier New" class="cDefName">-1</code>) is returned, and the file remains open. This is a common error when developing new interfaces. Refer to the Reference Manual page on <b class="cFunctionName">Hendaccess</b> for a discussion of this problem.
+If there are still access identifiers attached to the file, the error <code style="font-family: Courier New; font-size: 8pt" class="cDefName">DFE_OPENAID</code> is placed on the error stack, <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) is returned, and the file remains open. This is a common error when developing new interfaces. Refer to the Reference Manual page on <b class="cFunctionName">Hendaccess</b> for a discussion of this problem.
 </div>
 </td>
 </tr>
@@ -254,7 +254,7 @@ Retrieves version information for an HDF file.
 Return value
 </div></td>
     <td><a name="wp442833"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Returns <code style="font-family: Courier New" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New" class="cDefName">0</code>) if successful and <code style="font-family: Courier New" class="cDefName">FAIL</code> (or <code style="font-family: Courier New" class="cDefName">-1</code>) otherwise.
+Returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) if successful and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) otherwise.
 </div>
 </td>
 </tr>
@@ -263,7 +263,7 @@ Returns <code style="font-family: Courier New" class="cDefName">SUCCEED</code> (
 Description
 </div></td>
     <td><a name="wp442837"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-It is still an open question as to what exactly the version number of a file should mean, so we recommend that code not depend on this buffer. The <em class="cVarName">string</em> argument is limited to a length of <code style="font-family: Courier New" class="cDefName">LIBVSTR_LEN</code><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> </span>(or <code style="font-family: Courier New" class="cDefName">80</code>) characters as defined in <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">hfile.h</code>.
+It is still an open question as to what exactly the version number of a file should mean, so we recommend that code not depend on this buffer. The <em class="cVarName">string</em> argument is limited to a length of <code style="font-family: Courier New; font-size: 8pt" class="cDefName">LIBVSTR_LEN</code><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> </span>(or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">80</code>) characters as defined in <code style="font-family: Courier New; font-size: small; font-style: normal; font-weight: normal">hfile.h</code>.
 </div>
 </td>
 </tr>
@@ -316,63 +316,63 @@ Hgetlibversion/hglibver
 <a name="wp456739"> </a><p style="font-weight: normal" class="pSignature">
 intn Hgetlibversion(uint32 *<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">major_v</span>, uint32 *<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">minor_v</span>, uint32 *<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">release</span>, char <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">string</span>[])
 </p>
-<a name="wp456791"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-left: 95pt; margin-right: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none" class="pBodyRM">
+<a name="wp458502"> </a><p style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-left: 95pt; margin-right: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none" class="pBodyRM">
 </p>
 <div align="left">
-<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp456742table456740">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp458453table458451">
   <caption></caption>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp456742"> </a><div style="margin-top: 0pt" class="pCellVariable">
-major_v
+<a name="wp458453"> </a><div style="margin-top: 0pt" class="pCellVariable">
+<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">major_v</span>
 </div>
 </td>
-    <td><a name="wp456744"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp458455"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 OUT:
 </div>
 </td>
-    <td><a name="wp456746"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp458457"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 Major version number
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp456748"> </a><div style="margin-top: 0pt" class="pCellVariable">
+<a name="wp458459"> </a><div style="margin-top: 0pt" class="pCellVariable">
 minor_v
 </div>
 </td>
-    <td><a name="wp456750"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp458461"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 OUT:
 </div>
 </td>
-    <td><a name="wp456752"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp458463"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 Minor version number
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp456754"> </a><div style="margin-top: 0pt" class="pCellVariable">
+<a name="wp458465"> </a><div style="margin-top: 0pt" class="pCellVariable">
 release
 </div>
 </td>
-    <td><a name="wp456756"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp458467"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 OUT:
 </div>
 </td>
-    <td><a name="wp456758"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp458469"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 Release number
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp456760"> </a><div style="margin-top: 0pt" class="pCellVariable">
+<a name="wp458471"> </a><div style="margin-top: 0pt" class="pCellVariable">
 string
 </div>
 </td>
-    <td><a name="wp456762"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp458473"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 OUT:
 </div>
 </td>
-    <td><a name="wp456764"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp458475"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 Version number text string
 </div>
 </td>
@@ -382,32 +382,32 @@ Version number text string
 <p style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-left: 95pt; margin-right: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none" class="pBodyRM">
      </p>
 <div align="left">
-<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp456767table456765">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp458478table458476">
   <caption></caption>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp456767"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp458478"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 Purpose
 </div></td>
-    <td><a name="wp456769"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp458480"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 Retrieves the version information of the current HDF library.
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp456771"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp458482"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 Return value
 </div></td>
-    <td><a name="wp456773"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Returns <code style="font-family: Courier New" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New" class="cDefName">0</code>) if successful and <code style="font-family: Courier New" class="cDefName">FAIL</code> (or <code style="font-family: Courier New" class="cDefName">-1</code>) otherwise.
+    <td><a name="wp458484"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) if successful and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) otherwise.
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp456775"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp458486"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 Description
 </div></td>
-    <td><a name="wp456777"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-The version information is compiled into the HDF library, so it is not necessary to have any open files for this function to execute. The <em class="cVarName">string</em> buffer is limited to a length of <code style="font-family: Courier New" class="cDefName">LIBVSTR_LEN</code> (or <code style="font-family: Courier New" class="cDefName">80</code>) characters as defined in <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">hfile.h</code>.
+    <td><a name="wp458488"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+The version information is compiled into the HDF library, so it is not necessary to have any open files for this function to execute. The <em class="cVarName">string</em> buffer is limited to a length of <code style="font-family: Courier New; font-size: 8pt" class="cDefName">LIBVSTR_LEN</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">80</code>) characters as defined in <code style="font-family: Courier New; font-size: small; font-style: normal; font-weight: normal">hfile.h</code>.
 </div>
 </td>
 </tr>
@@ -416,31 +416,31 @@ The version information is compiled into the HDF library, so it is not necessary
 <p style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-left: 95pt; margin-right: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none" class="pBodyRM">
      <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"></span></p>
 <div align="left">
-<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp456780table456778">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp458491table458489">
   <caption></caption>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp456780"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp458491"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 FORTRAN
 </div></td>
-    <td><a name="wp456782"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortSyntax">
+    <td><a name="wp458493"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortSyntax">
 integer function hglibver(major_v, minor_v, release, string)
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp456784"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp458495"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 &#160;
 </div></td>
-    <td><a name="wp456786"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortVar">
+    <td><a name="wp458497"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortVar">
 integer major_v, minor_v, release
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp456788"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp458499"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 &#160;
 </div></td>
-    <td><a name="wp456790"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortVar">
+    <td><a name="wp458501"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortVar">
 character*(*) string
 </div>
 </td>
@@ -450,14 +450,136 @@ character*(*) string
 <p style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-left: 95pt; margin-right: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none" class="pBodyRM">
 <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"></span>
 </p>
-<a name="wp456793"> </a><h2 class="pRef_H_RoutineName">
+<a name="wp458504"> </a><h2 class="pRef_H_RoutineName">
+<p align=right><A HREF="RM_Section_II_HLOP.html">
+[H Interface]</A><a HREF="RMTop.html"><b>[Top]</b></a>
+</p>
+<hr />
+Hgetntinfo/
+</h2>
+<a name="wp458282"> </a><p style="font-weight: normal" class="pSignature">
+intn Hgetntinfo(const int32 <em class="cVarName">n_type</em>, hdf_ntinfo_t *<em class="cVarName">nt_info</em>)
+</p>
+<a name="wp458312"> </a><p class="pBodyRelative">
+</p>
+<div align="left">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp458350table458283">
+  <caption></caption>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp458350"> </a><div style="margin-top: 0pt" class="pCellVariable">
+n_type
+</div>
+</td>
+    <td><a name="wp458383"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+IN:
+</div>
+</td>
+    <td><a name="wp458357"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+HDF4 number type
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp458342"> </a><div style="margin-top: 0pt" class="pCellVariable">
+nt_info
+</div>
+</td>
+    <td><a name="wp458344"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+OUT:
+</div>
+</td>
+    <td><a name="wp458346"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Number type&#39;s information 
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="pBodyRelative">
+</p>
+<div align="left">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp458292table458290">
+  <caption></caption>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp458292"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+Purpose
+</div></td>
+    <td><a name="wp458294"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Retrieves some information of the given number type.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp458296"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+Return value
+</div></td>
+    <td><a name="wp458417"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (<code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) if successful, and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (<code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) otherwise.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp458300"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+Description
+</div></td>
+    <td><a name="wp458439"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+<b class="cFunctionName">Hgetntinfo</b> retrieves the name and byte order of the given number type, <em class="cVarName">n_type</em>.  These values are in character arrays and are encapsulated in the structure <code style="font-family: Courier New; font-size: 8pt" class="cDefName">hdf_ntinfo_t</code>, which is defined in <code style="font-family: Courier New; font-size: 8pt" class="cDefName">hdf.h</code> as:
+</div>
+<a name="wp458440"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
+<PRE>typedef struct hdf_ntinfo_t</PRE>
+</code><a name="wp458441"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
+<PRE>{</PRE>
+</code><a name="wp458442"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
+<PRE>    char type_name[9]; /* nt name, e.g. &quot;int8&quot; or &quot;float32&quot; */</PRE>
+</code><a name="wp458443"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
+<PRE>    char byte_order[13]; /* nt byte order, e.g. &quot;littleEndian&quot; or &quot;bigEndian&quot; */</PRE>
+</code><a name="wp458444"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
+<PRE>}</PRE>
+</code><a name="wp458445"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
+<PRE>hdf_ntinfo_t;</PRE>
+</code><a name="wp458446"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+<b class="cFunctionName">Hgetntinfo</b> returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (<code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) when <em class="cVarName">n_type</em> does not match one of the types listed in the tables in Section 2.5.2, &quot;HDF Definitions.&quot; of the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span>.
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="pBodyRelative">
+<span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"></span></p>
+<div align="left">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp458305table458303">
+  <caption></caption>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp458305"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+FORTRAN
+</div></td>
+    <td><a name="wp458307"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortSyntax">
+Currently unavailable
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp458309"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+&#160;
+</div></td>
+    <td><a name="wp458311"> </a><div class="pCellFortran">
+&#160;
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="pBodyRelative">
+<span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"></span>
+</p>
+<a name="wp458258"> </a><h2 class="pRef_H_RoutineName">
 <p align=right><A HREF="RM_Section_II_HLOP.html">
 [H Interface]</A><a HREF="RMTop.html"><b>[Top]</b></a>
 </p>
 <hr />
 Hishdf/hishdff
 </h2>
-<a name="wp421387"> </a><p style="font-weight: normal" class="pSignature">
+<a name="wp458259"> </a><p style="font-weight: normal" class="pSignature">
 intn Hishdf(char *<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">filename</span>)
 </p>
 <a name="wp447309"> </a><p class="pBodyRelative">
@@ -500,7 +622,7 @@ Determines if a file is an HDF file.
 Return value
 </div></td>
     <td><a name="wp442965"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Returns <code style="font-family: Courier New" class="cDefName">TRUE</code> (or<span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> </span><code style="font-family: Courier New" class="cDefName">1</code>) if the file is an HDF file and <code style="font-family: Courier New" class="cDefName">FALSE</code> (or<span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> </span><code style="font-family: Courier New" class="cDefName">0</code>) otherwise.
+Returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">TRUE</code> (or<span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> </span><code style="font-family: Courier New; font-size: 8pt" class="cDefName">1</code>) if the file is an HDF file and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FALSE</code> (or<span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> </span><code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) otherwise.
 </div>
 </td>
 </tr>
@@ -582,7 +704,7 @@ IN:
 </div>
 </td>
     <td><a name="wp445427"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Access code definition (preceded by <code style="font-family: Courier New" class="cDefName">DFACC_</code>)
+Access code definition (preceded by <code style="font-family: Courier New; font-size: 8pt" class="cDefName">DFACC_</code>)
 </div>
 </td>
 </tr>
@@ -621,7 +743,7 @@ Provides an access path to an HDF file by reading all the data descriptor blocks
 Return value
 </div></td>
     <td><a name="wp444055"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Returns the file identifier if successful and <code style="font-family: Courier New" class="cDefName">FAIL</code> (or <code style="font-family: Courier New" class="cDefName">-1</code>) otherwise.
+Returns the file identifier if successful and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) otherwise.
 </div>
 </td>
 </tr>
@@ -639,7 +761,7 @@ If given a new file name, <b class="cFunctionName">Hopen</b> will create a new f
 &#160;
 </div></td>
     <td><a name="wp444702"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-The number of data descriptors in a block, <em class="cVarName">n_dds</em>, is a non-negative integer with a default value of <code style="font-family: Courier New" class="cDefName">DEF_NDDS</code> (or <code style="font-family: Courier New" class="cDefName">16</code>) and a minimum value of <code style="font-family: Courier New" class="cDefName">MIN_NDDS</code> (or <code style="font-family: Courier New" class="cDefName">4</code>).  If the specified value of <em class="cVarName">n_dds</em> is less than <code style="font-family: Courier New" class="cDefName">MIN_NDDS</code>, then it will be set to <code style="font-family: Courier New" class="cDefName">MIN_NDDS</code>.
+The number of data descriptors in a block, <em class="cVarName">n_dds</em>, is a non-negative integer with a default value of <code style="font-family: Courier New; font-size: 8pt" class="cDefName">DEF_NDDS</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">16</code>) and a minimum value of <code style="font-family: Courier New; font-size: 8pt" class="cDefName">MIN_NDDS</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">4</code>).  If the specified value of <em class="cVarName">n_dds</em> is less than <code style="font-family: Courier New; font-size: 8pt" class="cDefName">MIN_NDDS</code>, then it will be set to <code style="font-family: Courier New; font-size: 8pt" class="cDefName">MIN_NDDS</code>.
 </div>
 </td>
 </tr>
@@ -656,10 +778,10 @@ HDF provides several access code definitions:
 <a name="wp444069"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 &#160;
 </div></td>
-    <td><div class="pCellBulletList" style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt"><ul class="pCellBulletList" style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt">
-<a name="wp444071"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt" class="pCellBulletList"><code style="font-family: Courier New" class="cDefName">DFACC_CREATE</code> - Create a new file.  If file exists, replace its contents.</div>
-<a name="wp444092"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt" class="pCellBulletList"><code style="font-family: Courier New" class="cDefName">DFACC_READ</code> - Open for read only. If file does not exist, return an error.</div>
-<a name="wp444097"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt" class="pCellBulletList"><code style="font-family: Courier New" class="cDefName">DFACC_WRITE</code> - Open for read/write. If file does not exist, create it.</div>
+    <td><div style="margin-bottom: 6pt; margin-top: 0pt"><ul style="margin-bottom: 6pt; margin-top: 0pt">
+<a name="wp444071"> </a><div style="margin-bottom: 6pt; margin-top: 0pt"><code style="font-family: Courier New; font-size: 8pt" class="cDefName">DFACC_CREATE</code> - Create a new file.  If file exists, replace its contents.</div>
+<a name="wp444092"> </a><div style="margin-bottom: 6pt; margin-top: 0pt"><code style="font-family: Courier New; font-size: 8pt" class="cDefName">DFACC_READ</code> - Open for read only. If file does not exist, return an error.</div>
+<a name="wp444097"> </a><div style="margin-bottom: 6pt; margin-top: 0pt"><code style="font-family: Courier New; font-size: 8pt" class="cDefName">DFACC_WRITE</code> - Open for read/write. If file does not exist, create it.</div>
 </ul></div>
 </td>
 </tr>
@@ -668,7 +790,7 @@ HDF provides several access code definitions:
 &#160;
 </div></td>
     <td><a name="wp444087"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-If a file is opened and an attempt is made to reopen the file using <code style="font-family: Courier New" class="cDefName">DFACC_CREATE</code>, HDF will issue the error code <code style="font-family: Courier New" class="cDefName">DFE_ALROPEN</code>. If the file is opened with read-only access and an attempt is made to reopen the file for write access using <code style="font-family: Courier New" class="cDefName">DFACC_WRITE</code>, HDF will attempt to reopen the file with read and write permissions.
+If a file is opened and an attempt is made to reopen the file using <code style="font-family: Courier New; font-size: 8pt" class="cDefName">DFACC_CREATE</code>, HDF will issue the error code <code style="font-family: Courier New; font-size: 8pt" class="cDefName">DFE_ALROPEN</code>. If the file is opened with read-only access and an attempt is made to reopen the file for write access using <code style="font-family: Courier New; font-size: 8pt" class="cDefName">DFACC_WRITE</code>, HDF will attempt to reopen the file with read and write permissions.
 </div>
 </td>
 </tr>
@@ -793,7 +915,7 @@ Retrieves information about the configuration of a compression method.
 Return value
 </div></td>
     <td><a name="wp448854"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Returns <code style="font-family: Courier New" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New" class="cDefName">0</code>) if successful and <code style="font-family: Courier New" class="cDefName">FAIL</code> (or <code style="font-family: Courier New" class="cDefName">-1</code>) otherwise.
+Returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) if successful and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) otherwise.
 </div>
 </td>
 </tr>
@@ -819,14 +941,14 @@ Valid values of <em class="cVarName">coder_type</em> are as follows:
 <a name="wp448864"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 &#160;
 </div></td>
-    <td><div class="pCellBulletList" style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt"><ul class="pCellBulletList" style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt">
-<a name="wp458099"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt" class="pCellBulletList"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">    </span><code style="font-family: Courier New" class="cDefName">COMP_CODE_NONE </code>- for no compression</div>
-<a name="wp458100"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt" class="pCellBulletList"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">    </span><code style="font-family: Courier New" class="cDefName">COMP_CODE_RLE</code> - for RLE run-length encoding</div>
-<a name="wp449115"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt" class="pCellBulletList"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">    </span><code style="font-family: Courier New" class="cDefName">COMP_CODE_NBIT</code> - for NBIT compression</div>
-<a name="wp449116"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt" class="pCellBulletList"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">    </span><code style="font-family: Courier New" class="cDefName">COMP_CODE_SKPHUFF</code> - for Skipping Huffman compression</div>
-<a name="wp449581"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt" class="pCellBulletList"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">    </span><code style="font-family: Courier New" class="cDefName">COMP_CODE_DEFLATE</code> - for GZIP compression</div>
-<a name="wp449582"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt" class="pCellBulletList"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">    </span><code style="font-family: Courier New" class="cDefName">COMP_CODE_SZIP</code> - for Szip compression</div>
-<a name="wp449583"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt" class="pCellBulletList"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">    </span><code style="font-family: Courier New" class="cDefName">COMP_CODE_JPEG</code> - for JPEG compression</div>
+    <td><div style="margin-bottom: 6pt; margin-top: 0pt"><ul style="margin-bottom: 6pt; margin-top: 0pt">
+<a name="wp458099"> </a><div style="margin-bottom: 6pt; margin-top: 0pt"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">    </span><code style="font-family: Courier New; font-size: 8pt" class="cDefName">COMP_CODE_NONE </code>- for no compression</div>
+<a name="wp458100"> </a><div style="margin-bottom: 6pt; margin-top: 0pt"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">    </span><code style="font-family: Courier New; font-size: 8pt" class="cDefName">COMP_CODE_RLE</code> - for RLE run-length encoding</div>
+<a name="wp449115"> </a><div style="margin-bottom: 6pt; margin-top: 0pt"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">    </span><code style="font-family: Courier New; font-size: 8pt" class="cDefName">COMP_CODE_NBIT</code> - for NBIT compression</div>
+<a name="wp449116"> </a><div style="margin-bottom: 6pt; margin-top: 0pt"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">    </span><code style="font-family: Courier New; font-size: 8pt" class="cDefName">COMP_CODE_SKPHUFF</code> - for Skipping Huffman compression</div>
+<a name="wp449581"> </a><div style="margin-bottom: 6pt; margin-top: 0pt"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">    </span><code style="font-family: Courier New; font-size: 8pt" class="cDefName">COMP_CODE_DEFLATE</code> - for GZIP compression</div>
+<a name="wp449582"> </a><div style="margin-bottom: 6pt; margin-top: 0pt"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">    </span><code style="font-family: Courier New; font-size: 8pt" class="cDefName">COMP_CODE_SZIP</code> - for Szip compression</div>
+<a name="wp449583"> </a><div style="margin-bottom: 6pt; margin-top: 0pt"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">    </span><code style="font-family: Courier New; font-size: 8pt" class="cDefName">COMP_CODE_JPEG</code> - for JPEG compression</div>
 </ul></div>
 <a name="wp449512"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 &#160;
@@ -843,16 +965,16 @@ The compression method, <em class="cVarName">coder_type</em>, used for a data se
     <td><a name="wp448875"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 The configuration flags returned in <em class="cVarName">compression_config_info</em> include the following:
 </div>
-<div class="pCellBulletList" style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt"><ul class="pCellBulletList" style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt">
-<a name="wp449287"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt" class="pCellBulletList"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">    </span><code style="font-family: Courier New" class="cDefName">0</code>  - Compression method is not enabled.</div>
-<a name="wp449288"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt" class="pCellBulletList"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">    </span><code style="font-family: Courier New" class="cDefName">COMP_DECODER_ENABLED</code>  - Decoding is enabled.</div>
-<a name="wp449289"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt" class="pCellBulletList"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">    </span><code style="font-family: Courier New" class="cDefName">COMP_ENCODER_ENABLED</code>  - Encoding is enabled.</div>
+<div style="margin-bottom: 6pt; margin-top: 0pt"><ul style="margin-bottom: 6pt; margin-top: 0pt">
+<a name="wp449287"> </a><div style="margin-bottom: 6pt; margin-top: 0pt"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">    </span><code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>  - Compression method is not enabled.</div>
+<a name="wp449288"> </a><div style="margin-bottom: 6pt; margin-top: 0pt"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">    </span><code style="font-family: Courier New; font-size: 8pt" class="cDefName">COMP_DECODER_ENABLED</code>  - Decoding is enabled.</div>
+<a name="wp449289"> </a><div style="margin-bottom: 6pt; margin-top: 0pt"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">    </span><code style="font-family: Courier New; font-size: 8pt" class="cDefName">COMP_ENCODER_ENABLED</code>  - Encoding is enabled.</div>
 </ul></div>
 <a name="wp449290"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 &#160;
 </div>
 <a name="wp449285"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-If the returned value is <code style="font-family: Courier New" class="cDefName">COMP_DECODER_ENABLED|COMP_ENCODER_ENABLED</code><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">, </span>the compression method is enabled for both encoding and decoding.
+If the returned value is <code style="font-family: Courier New; font-size: 8pt" class="cDefName">COMP_DECODER_ENABLED|COMP_ENCODER_ENABLED</code><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">, </span>the compression method is enabled for both encoding and decoding.
 </div>
 </td>
 </tr>
@@ -863,13 +985,13 @@ If the returned value is <code style="font-family: Courier New" class="cDefName"
     <td><a name="wp449392"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 In the general case, any available compression type can be configured in any mode:
 </div>
-<div class="pCellBulletList" style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt"><ul class="pCellBulletList" style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt">
-<a name="wp449430"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt" class="pCellBulletList"><code style="font-family: Courier New" class="cDefName">    COMP_DECODER_ENABLED </code></div>
-<a name="wp449431"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt" class="pCellBulletList"><code style="font-family: Courier New" class="cDefName">    COMP_ENCODER_ENABLED </code></div>
-<a name="wp449440"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt" class="pCellBulletList"><code style="font-family: Courier New" class="cDefName">    COMP_DECODER_ENABLED |COMP_ENCODER_ENABLED </code></div>
+<div style="margin-bottom: 6pt; margin-top: 0pt"><ul style="margin-bottom: 6pt; margin-top: 0pt">
+<a name="wp449430"> </a><div style="margin-bottom: 6pt; margin-top: 0pt"><code style="font-family: Courier New; font-size: 8pt" class="cDefName">    COMP_DECODER_ENABLED </code></div>
+<a name="wp449431"> </a><div style="margin-bottom: 6pt; margin-top: 0pt"><code style="font-family: Courier New; font-size: 8pt" class="cDefName">    COMP_ENCODER_ENABLED </code></div>
+<a name="wp449440"> </a><div style="margin-bottom: 6pt; margin-top: 0pt"><code style="font-family: Courier New; font-size: 8pt" class="cDefName">    COMP_DECODER_ENABLED |COMP_ENCODER_ENABLED </code></div>
 </ul></div>
 <a name="wp457215"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-As of this writing (HDF4 Release 2.1, February 2005), only the Szip compression library is actually used with the HDF libraries in more than one configuration (see immediately below.)  As a third-party product, it is distributed in both decode-only and encode/decode configurations.  All other compression methods are currently distributed or used in an encode/decode configuration if they are available at all, and <b class="cFunctionName">HCget_config_info</b> returns either <code style="font-family: Courier New" class="cDefName">0</code> or <code style="font-family: Courier New" class="cDefName">COMP_DECODER_ENABLED|COMP_ENCODER_ENABLED</code><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> </span>when they are used.
+As of this writing (HDF4 Release 2.1, February 2005), only the Szip compression library is actually used with the HDF libraries in more than one configuration (see immediately below.)  As a third-party product, it is distributed in both decode-only and encode/decode configurations.  All other compression methods are currently distributed or used in an encode/decode configuration if they are available at all, and <b class="cFunctionName">HCget_config_info</b> returns either <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code> or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">COMP_DECODER_ENABLED|COMP_ENCODER_ENABLED</code><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> </span>when they are used.
 </div>
 </td>
 </tr>
@@ -880,9 +1002,9 @@ As of this writing (HDF4 Release 2.1, February 2005), only the Szip compression 
     <td><a name="wp449172"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 Due to licensing requirements, the Szip library is available in both decode-only and encode/decode configurations.  Therefore, the full range of values can be returned for Szip compression.  
 </div>
-<div class="pCellBulletList" style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt"><ul class="pCellBulletList" style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt">
-<a name="wp456639"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt" class="pCellBulletList"><b class="cBold">o</b>	If the Szip version available on a system is decode-only, <b class="cFunctionName">HCget_config_info</b> will return <code style="font-family: Courier New" class="cDefName">COMP_DECODER_ENABLED</code> in <em class="cVarName">compression_config_info</em>.  </div>
-<a name="wp449227"> </a><div style="font-family: Times New Roman; font-style: normal; font-weight: normal; margin-top: 0pt" class="pCellBulletList"><b class="cBold">o</b>	If the available Szip library is configured as encode/decode, <em class="cVarName">compression_config_info </em>will contain the value <code style="font-family: Courier New" class="cDefName">COMP_DECODER_ENABLED|COMP_ENCODER_ENABLED</code> upon return.</div>
+<div style="margin-bottom: 6pt; margin-top: 0pt"><ul style="margin-bottom: 6pt; margin-top: 0pt">
+<a name="wp456639"> </a><div style="margin-bottom: 6pt; margin-top: 0pt"><b class="cBold">o</b>	If the Szip version available on a system is decode-only, <b class="cFunctionName">HCget_config_info</b> will return <code style="font-family: Courier New; font-size: 8pt" class="cDefName">COMP_DECODER_ENABLED</code> in <em class="cVarName">compression_config_info</em>.  </div>
+<a name="wp449227"> </a><div style="margin-bottom: 6pt; margin-top: 0pt"><b class="cBold">o</b>	If the available Szip library is configured as encode/decode, <em class="cVarName">compression_config_info</em> will contain the value <code style="font-family: Courier New; font-size: 8pt" class="cDefName">COMP_DECODER_ENABLED|COMP_ENCODER_ENABLED</code> upon return.</div>
 </ul></div>
 </td>
 </tr>
@@ -990,7 +1112,7 @@ Indicates to the library that an <b class="cFunctionName">atexit()</b> routine i
 Return value
 </div></td>
     <td><a name="wp444393"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Returns <code style="font-family: Courier New" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New" class="cDefName">0</code>) if successful and <code style="font-family: Courier New" class="cDefName">FAIL</code> (or <code style="font-family: Courier New" class="cDefName">-1</code>) otherwise.
+Returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) if successful and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) otherwise.
 </div>
 </td>
 </tr>
@@ -1092,7 +1214,7 @@ Initializes the directory environment variable, identifying the location of the 
 Return value
 </div></td>
     <td><a name="wp444530"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Returns <code style="font-family: Courier New" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New" class="cDefName">0</code>) if successful and <code style="font-family: Courier New" class="cDefName">FAIL</code> (or <code style="font-family: Courier New" class="cDefName">-1</code>) otherwise.
+Returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) if successful and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) otherwise.
 </div>
 </td>
 </tr>
@@ -1101,7 +1223,7 @@ Returns <code style="font-family: Courier New" class="cDefName">SUCCEED</code> (
 Description
 </div></td>
     <td><a name="wp444534"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-The contents of <em class="cVarName">dir</em> is copied into the private memory of the HDF library. If <em class="cVarName">dir</em> is <code style="font-family: Courier New" class="cDefName">NULL</code>, the directory variable is unset. If <b class="cFunctionName">HXsetcreatedir</b> encounters an error condition, the directory variable is not changed. When a new external element is created (via the routines <b class="cFunctionName">HXcreate</b> or <b class="cFunctionName">SDsetexternal</b>), the HDF library accesses the external file just like the <b class="cFunctionName">open</b> call by default. Refer to the Reference Manual page on <b class="cFunctionName">HXcreate</b> for a description of when a new or an old file should be opened.
+The contents of <em class="cVarName">dir</em> is copied into the private memory of the HDF library. If <em class="cVarName">dir</em> is <code style="font-family: Courier New; font-size: 8pt" class="cDefName">NULL</code>, the directory variable is unset. If <b class="cFunctionName">HXsetcreatedir</b> encounters an error condition, the directory variable is not changed. When a new external element is created (via the routines <b class="cFunctionName">HXcreate</b> or <b class="cFunctionName">SDsetexternal</b>), the HDF library accesses the external file just like the <b class="cFunctionName">open</b> call by default. Refer to the Reference Manual page on <b class="cFunctionName">HXcreate</b> for a description of when a new or an old file should be opened.
 </div>
 </td>
 </tr>
@@ -1110,7 +1232,7 @@ The contents of <em class="cVarName">dir</em> is copied into the private memory 
 &#160;
 </div></td>
     <td><a name="wp444538"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Users may override the default action by calling <b class="cFunctionName">HXsetcreatedir</b> or by defining the environment variable <code style="font-family: Courier New" class="cDefName">$HDFEXTCREATEDIR</code>. The HDF library will access the external file in the directory according to the environment variable setting. The precedence is <b class="cFunctionName">HXsetcreatedir</b>, then<span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> </span><code style="font-family: Courier New" class="cDefName">$HDXEXTDIR</code>, in the manner of <b class="cFunctionName">open</b>. 
+Users may override the default action by calling <b class="cFunctionName">HXsetcreatedir</b> or by defining the environment variable <code style="font-family: Courier New; font-size: 8pt" class="cDefName">$HDFEXTCREATEDIR</code>. The HDF library will access the external file in the directory according to the environment variable setting. The precedence is <b class="cFunctionName">HXsetcreatedir</b>, then<span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> </span><code style="font-family: Courier New; font-size: 8pt" class="cDefName">$HDXEXTDIR</code>, in the manner of <b class="cFunctionName">open</b>. 
 </div>
 </td>
 </tr>
@@ -1119,7 +1241,7 @@ Users may override the default action by calling <b class="cFunctionName">HXsetc
 &#160;
 </div></td>
     <td><a name="wp444542"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Note that the above override does not apply to absolute pathnames - i.e., filenames starting with a forward slash. HDF will access the absolute pathname without change. Also note that <b class="cFunctionName">HXsetcreatedir</b> and <code style="font-family: Courier New" class="cDefName">$HDFEXTCREATEDIR</code> are not symmetrical to <b class="cFunctionName">HXsetdir</b> and <code style="font-family: Courier New" class="cDefName">$HDFEXTDIR</code>. The former pair permits only single directory values and is used to compose the filename for access. The later pair permits multiple directory values which are used for searching an existing file.
+Note that the above override does not apply to absolute pathnames - i.e., filenames starting with a forward slash. HDF will access the absolute pathname without change. Also note that <b class="cFunctionName">HXsetcreatedir</b> and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">$HDFEXTCREATEDIR</code> are not symmetrical to <b class="cFunctionName">HXsetdir</b> and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">$HDFEXTDIR</code>. The former pair permits only single directory values and is used to compose the filename for access. The later pair permits multiple directory values which are used for searching an existing file.
 </div>
 </td>
 </tr>
@@ -1221,7 +1343,7 @@ Initializes the directory environment variable, identifying the location of the 
 Return value
 </div></td>
     <td><a name="wp444581"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Returns <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SUCCEED</span> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">0</span>) if successful and <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">FAIL</span> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">-1</span>) otherwise.
+Returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">0</span>) if successful and <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">FAIL</span> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">-1</span>) otherwise.
 </div>
 </td>
 </tr>

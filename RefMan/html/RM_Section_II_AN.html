@@ -7,7 +7,7 @@
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.8.2296" />
     <meta name="TEMPLATEBASE" content="Dynamic HTML" />
-    <meta name="LASTUPDATED" content="07/05/11 02:17:09" />
+    <meta name="LASTUPDATED" content="07/13/11 02:37:46" />
     <title>ANannlen/afannlen</title>
     <link rel="StyleSheet" href="document.css" type="text/css" media="all" />
     <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
@@ -96,7 +96,7 @@ Returns the length of an annotation.
 Return value
 </div></td>
     <td><a name="wp446351"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Returns the length of the annotation or <code style="font-family: Courier New" class="cDefName">FAIL</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">-1</span>) otherwise.
+Returns the length of the annotation or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">-1</span>) otherwise.
 </div>
 </td>
 </tr>
@@ -105,7 +105,7 @@ Returns the length of the annotation or <code style="font-family: Courier New" c
 Description
 </div></td>
     <td><a name="wp463316"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-<b class="cFunctionName">ANannlen</b> returns the number of characters contained in the annotation specified by the parameter <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ann_id</span>. This function is commonly used to determine the size of a buffer to store the annotation upon reading.
+<b class="cFunctionName">ANannlen</b> returns the number of characters contained in the annotation specified by the parameter <em class="cVarName">ann_id</em>. This function is commonly used to determine the size of a buffer to store the annotation upon reading.
 </div>
 </td>
 </tr>
@@ -245,7 +245,7 @@ Retrieves the annotation identifiers of an object.
 Return value
 </div></td>
     <td><a name="wp446405"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Returns number of annotations identifiers found, if successful, or <code style="font-family: Courier New" class="cDefName">FAIL</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">-1</span>) otherwise.
+Returns number of annotations identifiers found, if successful, or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">-1</span>) otherwise.
 </div>
 </td>
 </tr>
@@ -254,7 +254,7 @@ Returns number of annotations identifiers found, if successful, or <code style="
 Description
 </div></td>
     <td><a name="wp446409"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-<b class="cFunctionName">ANannlist</b> obtains a list of identifiers of the annotations that are of the type specified by the parameter <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">annot_type </span>and are attached to the object identified by its tag, <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">obj_tag,</span> and its reference number, <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">obj_ref</span>.
+<b class="cFunctionName">ANannlist</b> obtains a list of identifiers of the annotations that are of the type specified by the parameter <em class="cVarName">annot_type </em>and are attached to the object identified by its tag, <em class="cVarName">obj_tag</em>, and its reference number, <em class="cVarName">obj_ref</em>.
 </div>
 </td>
 </tr>
@@ -263,7 +263,7 @@ Description
 &#160;
 </div></td>
     <td><a name="wp446413"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Since this routine is implemented only to obtain the identifiers of data annotations and not file annotations, the valid values of <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">annot_type</span> are <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">AN_DATA_LABEL</span> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">0</span>) and <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">AN_DATA_DESC</span> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">1</span>). To obtain file annotation identifiers, an application can use <b class="cFunctionName">ANfileinfo</b> to determine the number of file labels and descriptions, and then use <b class="cFunctionName">ANselect</b> to obtain each file annotation identifier.  In this case, the application must call <b class="cFunctionName">ANendaccess</b> to close the annotation identifier when done accessing it.
+Since this routine is implemented only to obtain the identifiers of data annotations and not file annotations, the valid values of <em class="cVarName">annot_type</em> are <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">AN_DATA_LABEL</span> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">0</span>) and <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">AN_DATA_DESC</span> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">1</span>). To obtain file annotation identifiers, an application can use <b class="cFunctionName">ANfileinfo</b> to determine the number of file labels and descriptions, and then use <b class="cFunctionName">ANselect</b> to obtain each file annotation identifier.  In this case, the application must call <b class="cFunctionName">ANendaccess</b> to close the annotation identifier when done accessing it.
 </div>
 </td>
 </tr>
@@ -272,7 +272,7 @@ Since this routine is implemented only to obtain the identifiers of data annotat
 &#160;
 </div></td>
     <td><a name="wp446417"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Sufficient space must be allocated for <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ann_list</span> to hold the list of annotation identifiers. This can be done by using <b class="cFunctionName">ANnumann</b> to obtain the number of annotation identifiers to be retrieved, and then allocating memory for <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ann_list</span> using this number.
+Sufficient space must be allocated for <em class="cVarName">ann_list</em> to hold the list of annotation identifiers. This can be done by using <b class="cFunctionName">ANnumann</b> to obtain the number of annotation identifiers to be retrieved, and then allocating memory for <em class="cVarName">ann_list</em> using this number.
 </div>
 </td>
 </tr>
@@ -365,7 +365,7 @@ Returns the annotation tag corresponding to an annotation type.
 Return value
 </div></td>
     <td><a name="wp446447"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Returns the annotation tag (<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ann_tag</span>) if successful, and <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFTAG_NULL</span> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">0</span>) otherwise.
+Returns the annotation tag (<em class="cVarName">ann_tag</em>) if successful, and <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFTAG_NULL</span> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">0</span>) otherwise.
 </div>
 </td>
 </tr>
@@ -374,7 +374,7 @@ Returns the annotation tag (<span style="color: #000000; font-style: italic; fon
 Description
 </div></td>
     <td><a name="wp446451"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-<b class="cFunctionName">ANatype2tag</b> returns the tag that corresponds to the annotation type specified by the parameter <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">annot_type</span>. 
+<b class="cFunctionName">ANatype2tag</b> returns the tag that corresponds to the annotation type specified by the parameter <em class="cVarName">annot_type</em>. 
 </div>
 </td>
 </tr>
@@ -383,7 +383,7 @@ Description
 &#160;
 </div></td>
     <td><a name="wp446455"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-The following table lists the valid values of <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">annot_type</span> in the left column and the corresponding values for the returned annotation tag on the right.
+The following table lists the valid values of <em class="cVarName">annot_type</em> in the left column and the corresponding values for the returned annotation tag on the right.
 </div>
 </td>
 </tr>
@@ -561,7 +561,7 @@ Creates a data annotation for an object.
 Return value
 </div></td>
     <td><a name="wp446499"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Returns the data annotation identifier (<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ann_id</span>) if successful and <code style="font-family: Courier New" class="cDefName">FAIL</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">-1</span>) otherwise.
+Returns the data annotation identifier (<em class="cVarName">ann_id</em>) if successful and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">-1</span>) otherwise.
 </div>
 </td>
 </tr>
@@ -570,7 +570,7 @@ Returns the data annotation identifier (<span style="color: #000000; font-style:
 Description
 </div></td>
     <td><a name="wp446503"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-<b class="cFunctionName">ANcreate</b> creates a data annotation of type <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">annot_type</span> for the object specified by its tag, <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">obj_tag,</span> and its reference number, <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">obj_ref</span>. The returned data annotation identifier can represent either a data label or a data description.
+<b class="cFunctionName">ANcreate</b> creates a data annotation of type <em class="cVarName">annot_type</em> for the object specified by its tag, <em class="cVarName">obj_tag,</em> and its reference number, <em class="cVarName">obj_ref</em>. The returned data annotation identifier can represent either a data label or a data description.
 </div>
 </td>
 </tr>
@@ -579,7 +579,7 @@ Description
 &#160;
 </div></td>
     <td><a name="wp446507"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Valid values for <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">annot_type</span> are <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">AN_DATA_LABEL</span> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">0</span>) or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">AN_DATA_DESC</span> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">1</span>).
+Valid values for <em class="cVarName">annot_type</em> are <code style="font-family: Courier New; font-size: 8pt" class="cDefName">AN_DATA_LABEL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">AN_DATA_DESC</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">1</code>.)
 </div>
 </td>
 </tr>
@@ -597,7 +597,7 @@ Use <b class="cFunctionName">ANcreatef</b> to create a file annotation.
 &#160;
 </div></td>
     <td><a name="wp447196"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Currently, the user must write to a newly-created annotation before creating another annotation of the same type.  Creating two consecutive annotations of the same type causes the second call to <b class="cFunctionName">ANcreate</b> to return <code style="font-family: Courier New" class="cDefName">FAIL</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">-1</span>).
+Currently, the user must write to a newly-created annotation before creating another annotation of the same type.  Creating two consecutive annotations of the same type causes the second call to <b class="cFunctionName">ANcreate</b> to return <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">-1</span>).
 </div>
 </td>
 </tr>
@@ -695,7 +695,7 @@ Creates a file annotation.
 Return value
 </div></td>
     <td><a name="wp447216"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Returns the file annotation identifier (<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ann_id</span>) if successful and <code style="font-family: Courier New" class="cDefName">FAIL</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">-1</span>) otherwise.
+Returns the file annotation identifier (<em class="cVarName">ann_id</em>) if successful and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">-1</span>) otherwise.
 </div>
 </td>
 </tr>
@@ -704,7 +704,7 @@ Returns the file annotation identifier (<span style="color: #000000; font-style:
 Description
 </div></td>
     <td><a name="wp447220"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-<b class="cFunctionName">ANcreatef</b> creates a file annotation of the type specified by the parameter <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">annot_type</span>. The file annotation identifier returned can either represent a file label or a file description.
+<b class="cFunctionName">ANcreatef</b> creates a file annotation of the type specified by the parameter <em class="cVarName">annot_type</em>. The file annotation identifier returned can either represent a file label or a file description.
 </div>
 </td>
 </tr>
@@ -713,7 +713,7 @@ Description
 &#160;
 </div></td>
     <td><a name="wp447224"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Valid values for <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">annot_type</span> are <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">AN_FILE_LABEL</span> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">2</span>) and <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">AN_FILE_DESC</span> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">3</span>).
+Valid values for <em class="cVarName">annot_type</em> are <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">AN_FILE_LABEL</span> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">2</span>) and <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">AN_FILE_DESC</span> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">3</span>).
 </div>
 </td>
 </tr>
@@ -731,7 +731,7 @@ Use <b class="cFunctionName">ANcreate</b> to create a data annotation.
 &#160;
 </div></td>
     <td><a name="wp447232"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Currently, the user must write to a newly-created annotation before creating another annotation of the same type.  Creating two consecutive annotations of the same type causes the second call to <b class="cFunctionName">ANcreate</b> to return <code style="font-family: Courier New" class="cDefName">FAIL</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">-1</span>).
+Currently, the user must write to a newly-created annotation before creating another annotation of the same type.  Creating two consecutive annotations of the same type causes the second call to <b class="cFunctionName">ANcreate</b> to return <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">-1</span>).
 </div>
 </td>
 </tr>
@@ -815,7 +815,7 @@ Terminates access to an AN interface.
 Return value
 </div></td>
     <td><a name="wp446581"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Returns <code style="font-family: Courier New" class="cDefName">SUCCEED</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">0</span>) if successful and <code style="font-family: Courier New" class="cDefName">FAIL</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">-1</span>) otherwise.
+Returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">0</span>) if successful and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">-1</span>) otherwise.
 </div>
 </td>
 </tr>
@@ -824,7 +824,7 @@ Returns <code style="font-family: Courier New" class="cDefName">SUCCEED</code> (
 Description
 </div></td>
     <td><a name="wp446585"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-<b class="cFunctionName">ANend</b> terminates access to the AN interface identified by <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">an_id</span>, which is previously initialized by a call to <b class="cFunctionName">ANstart</b>. Note that there must be one call to <b class="cFunctionName">ANend</b> for each call to <b class="cFunctionName">ANstart</b>.
+<b class="cFunctionName">ANend</b> terminates access to the AN interface identified by <em class="cVarName">an_id</em>, which is previously initialized by a call to <b class="cFunctionName">ANstart</b>. Note that there must be one call to <b class="cFunctionName">ANend</b> for each call to <b class="cFunctionName">ANstart</b>.
 </div>
 </td>
 </tr>
@@ -908,7 +908,7 @@ Terminates access to an annotation.
 Return value
 </div></td>
     <td><a name="wp446611"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Returns <code style="font-family: Courier New" class="cDefName">SUCCEED</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">0</span>) if successful and <code style="font-family: Courier New" class="cDefName">FAIL</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">-1</span>) otherwise.
+Returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">0</span>) if successful and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">-1</span>) otherwise.
 </div>
 </td>
 </tr>
@@ -917,7 +917,7 @@ Returns <code style="font-family: Courier New" class="cDefName">SUCCEED</code> (
 Description
 </div></td>
     <td><a name="wp446615"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-<b class="cFunctionName">ANendaccess</b> terminates access to the annotation identified by the parameter <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ann_id</span>. Note that there must be one call to <b class="cFunctionName">ANendaccess</b> for every call to <b class="cFunctionName">ANselect</b>, <b class="cFunctionName">ANcreate</b> or <b class="cFunctionName">ANcreatef</b>.
+<b class="cFunctionName">ANendaccess</b> terminates access to the annotation identified by the parameter <em class="cVarName">ann_id</em>. Note that there must be one call to <b class="cFunctionName">ANendaccess</b> for every call to <b class="cFunctionName">ANselect</b>, <b class="cFunctionName">ANcreate</b> or <b class="cFunctionName">ANcreatef</b>.
 </div>
 </td>
 </tr>
@@ -959,7 +959,7 @@ integer ann_id
 ANfileinfo/affileinfo
 </h2>
 <a name="wp441222"> </a><p style="font-weight: normal" class="pSignature">
-intn ANfileinfo(int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">an_id</span>, int32 *n<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">_file_labels,</span> int32 *<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">n_file_descs, </span>int32<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> *n_data_labels, </span>int32<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> *n_data_descs</span>)
+intn ANfileinfo(int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">an_id</span>, int32 *<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">n_file_labels,</span> int32 *<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">n_file_descs, </span>int32<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> *n_data_labels, </span>int32<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> *n_data_descs</span>)
 </p>
 <a name="wp471595"> </a><p class="pBodyRelative">
 </p>
@@ -1057,7 +1057,7 @@ Retrieves the number of annotations of each type in a file.
 Return value
 </div></td>
     <td><a name="wp446665"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Returns <code style="font-family: Courier New" class="cDefName">SUCCEED</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">0</span>) if successful or <code style="font-family: Courier New" class="cDefName">FAIL</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">-1</span>) otherwise.
+Returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">0</span>) if successful or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">-1</span>) otherwise.
 </div>
 </td>
 </tr>
@@ -1127,15 +1127,145 @@ integer n_data_labels, n_data_descs
 <p class="pBodyRelative">
 
 </p>
+<a name="wp481634"> </a><h2 class="pRef_AN_RoutineName">
+<p align=right><a HREF="RM_Section_II_ANLOP.html">
+[AN Interface]</a><a HREF="RMTop.html"><b>[Top]</b></a>
+</p>
+<hr />
+ANgetdatainfo
+</h2>
+<a name="wp481635"> </a><p style="font-weight: normal" class="pSignature">
+intn ANgetdatainfo(int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ann_id</span>, int32 *<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">offset</span>, int32 *<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">length</span>) 
+</p>
+<a name="wp481702"> </a><p class="pBodyRelative">
+</p>
+<div align="left">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp481638table481636">
+  <caption></caption>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp481638"> </a><div style="margin-top: 0pt" class="pCellVariable">
+ann_id
+</div>
+</td>
+    <td><a name="wp481640"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+IN:
+</div>
+</td>
+    <td><a name="wp481642"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Annotation identifier returned by <b class="cFunctionName">ANselect</b>, <b class="cFunctionName">ANcreate</b> or <b class="cFunctionName">ANcreatef</b>
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp481644"> </a><div style="margin-top: 0pt" class="pCellVariable">
+offset
+</div>
+</td>
+    <td><a name="wp481646"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+OUT:
+</div>
+</td>
+    <td><a name="wp481648"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Offset of the annotation&#39;s data
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp481650"> </a><div style="margin-top: 0pt" class="pCellVariable">
+length
+</div>
+</td>
+    <td><a name="wp481652"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+OUT:
+</div>
+</td>
+    <td><a name="wp481654"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Length of the annotation&#39;s data
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="pBodyRelative">
+</p>
+<div align="left">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp481657table481655">
+  <caption></caption>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp481657"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+Purpose
+</div></td>
+    <td><a name="wp481659"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Retrieves location and size of an annotation. (HDF4 Mapping project specific)
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp481661"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+Return value
+</div></td>
+    <td><a name="wp481663"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) if successful or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) otherwise.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp481665"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+Description
+</div></td>
+    <td><a name="wp481667"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+<b class="cFunctionName">ANgetdatainfo</b> retrieves the offset and length of the data that belongs to the annotation specified by <em class="cVarName">ann_id</em>.  This function works for file and object annotations.
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="pBodyRelative">
+<span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"></span></p>
+<div align="left">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp481691table481689">
+  <caption></caption>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp481691"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+FORTRAN
+</div></td>
+    <td><a name="wp481693"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortSyntax">
+currently unavailable
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp481695"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+&#160;
+</div></td>
+    <td><a name="wp481697"> </a><div class="pCellFortran">
+&#160;
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp481699"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+&#160;
+</div></td>
+    <td><a name="wp481701"> </a><div class="pCellFortran">
+&#160;
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="pBodyRelative">
+<span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"></span>
+</p>
 <a name="wp441632"> </a><h2 class="pRef_AN_RoutineName">
 <p align=right><a HREF="RM_Section_II_ANLOP.html">
 [AN Interface]</a><a HREF="RMTop.html"><b>[Top]</b></a>
 </p>
 <hr />
-ANget_tagref/afgettagref
+ANget_tagref
 </h2>
 <a name="wp441633"> </a><p style="font-weight: normal" class="pSignature">
-int32 ANget_tagref(int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">an_id</span>, int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">index, </span>ann_type <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">annot_type</span>, uint16 *<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ann_tag</span>, uint16 *<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ann_ref</span>)
+int32 ANget_tagref(int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">an_id</span>, int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">index</span>, ann_type <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">annot_type</span>, uint16 *<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ann_tag</span>, uint16 *<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ann_ref</span>)
 </p>
 <a name="wp471597"> </a><p class="pBodyRelative">
 </p>
@@ -1157,57 +1287,57 @@ AN interface identifier returned by <b class="cFunctionName">ANstart</b>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp469442"> </a><div style="margin-top: 0pt" class="pCellVariable">
+<a name="wp469454"> </a><div style="margin-top: 0pt" class="pCellVariable">
 index
 </div>
 </td>
-    <td><a name="wp469444"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp469456"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 IN:
 </div>
 </td>
-    <td><a name="wp469446"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp469458"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 Index of the annotation
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp469448"> </a><div style="margin-top: 0pt" class="pCellVariable">
+<a name="wp469460"> </a><div style="margin-top: 0pt" class="pCellVariable">
 annot_type
 </div>
 </td>
-    <td><a name="wp469450"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp469462"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 IN:
 </div>
 </td>
-    <td><a name="wp469452"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp469464"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 Type of the annotation
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp469454"> </a><div style="margin-top: 0pt" class="pCellVariable">
+<a name="wp481586"> </a><div style="margin-top: 0pt" class="pCellVariable">
 ann_tag
 </div>
 </td>
-    <td><a name="wp469456"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp481588"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 OUT:
 </div>
 </td>
-    <td><a name="wp469458"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp481590"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 Tag of the annotation
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp469460"> </a><div style="margin-top: 0pt" class="pCellVariable">
+<a name="wp481580"> </a><div style="margin-top: 0pt" class="pCellVariable">
 ann_ref
 </div>
 </td>
-    <td><a name="wp469462"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp481582"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 OUT:
 </div>
 </td>
-    <td><a name="wp469464"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp481584"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 Reference number of the annotation
 </div>
 </td>
@@ -1233,7 +1363,7 @@ Retrieves the tag/reference number pair of an annotation given its index and typ
 Return value
 </div></td>
     <td><a name="wp446731"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Returns <code style="font-family: Courier New" class="cDefName">SUCCEED</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">0</span>) if successful or <code style="font-family: Courier New" class="cDefName">FAIL</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">-1</span>) otherwise.
+Returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">0</span>) if successful or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">-1</span>) otherwise.
 </div>
 </td>
 </tr>
@@ -1242,7 +1372,7 @@ Returns <code style="font-family: Courier New" class="cDefName">SUCCEED</code> (
 Description
 </div></td>
     <td><a name="wp446735"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-<b class="cFunctionName">ANget_tagref</b> retrieves the tag and reference number of the annotation identified by its index, the parameter <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">index</span>, and by its annotation type, the parameter <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">annot_type</span>. The tag is stored in the parameter <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ann_tag</span> and the reference number is stored in the parameter <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ann_ref</span>.
+<b class="cFunctionName">ANget_tagref</b> retrieves the tag and reference number of the annotation identified by its index, the parameter <em class="cVarName">index</em>, and by its annotation type, the parameter <em class="cVarName">annot_type</em>. The tag is stored in the parameter <em class="cVarName">ann_tag</em> and the reference number is stored in the parameter <em class="cVarName">ann_ref</em>.
 </div>
 </td>
 </tr>
@@ -1251,7 +1381,7 @@ Description
 &#160;
 </div></td>
     <td><a name="wp446739"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-The parameter <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">index</span> is a nonnegative integer and is less than the total number of annotations of type <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">annot_type</span> in the file. Use <b class="cFunctionName">ANfileinfo</b> to obtain the total number of annotations of each type<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> </span>in the file. 
+The parameter <em class="cVarName">index</em> is a nonnegative integer and is less than the total number of annotations of type <em class="cVarName">annot_type</em> in the file. Use <b class="cFunctionName">ANfileinfo</b> to obtain the total number of annotations of each type in the file. 
 </div>
 </td>
 </tr>
@@ -1260,7 +1390,7 @@ The parameter <span style="color: #000000; font-style: italic; font-variant: nor
 &#160;
 </div></td>
     <td><a name="wp446743"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-The following table lists the valid values of the parameter <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">annot_type</span> in the left column, and the corresponding values of the parameter <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ann_tag</span> in the right column.
+The following table lists the valid values of the parameter <em class="cVarName">annot_type</em> in the left column, and the corresponding values of the parameter <em class="cVarName">ann_tag</em> in the right column.
 </div>
 </td>
 </tr>
@@ -1433,7 +1563,7 @@ Retrieves the tag/reference number pair of an annotation given its identifier.
 Return value
 </div></td>
     <td><a name="wp446785"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Returns <code style="font-family: Courier New" class="cDefName">SUCCEED</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">0</span>) if successful or <code style="font-family: Courier New" class="cDefName">FAIL</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">-1</span>) otherwise.
+Returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">0</span>) if successful or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">-1</span>) otherwise.
 </div>
 </td>
 </tr>
@@ -1442,7 +1572,7 @@ Returns <code style="font-family: Courier New" class="cDefName">SUCCEED</code> (
 Description
 </div></td>
     <td><a name="wp446789"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-<b class="cFunctionName">ANid2tagref</b> retrieves the tag/reference number pair of the annotation identified by the parameter <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ann_id</span>.  The tag is stored in the parameter <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ann_tag</span> and the reference number is stored in the parameter <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ann_ref</span>.
+<b class="cFunctionName">ANid2tagref</b> retrieves the tag/reference number pair of the annotation identified by the parameter <em class="cVarName">ann_id</em>.  The tag is stored in the parameter <em class="cVarName">ann_tag</em> and the reference number is stored in the parameter <em class="cVarName">ann_ref</em>.
 </div>
 </td>
 </tr>
@@ -1451,7 +1581,7 @@ Description
 &#160;
 </div></td>
     <td><a name="wp446793"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Possible values returned in <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ann_tag</span> are <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFTAG_DIL</span> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">104</span>) for a data label, <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFTAG_DIA</span> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">105</span>) for a data description, <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFTAG_FID</span> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">100</span>) for a file label and <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFTAG_FD</span> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">101</span>) for a file description.
+Possible values returned in <em class="cVarName">ann_tag</em> are <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFTAG_DIL</span> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">104</span>) for a data label, <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFTAG_DIA</span> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">105</span>) for a data description, <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFTAG_FID</span> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">100</span>) for a file label and <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFTAG_FD</span> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">101</span>) for a file description.
 </div>
 </td>
 </tr>
@@ -1577,7 +1707,7 @@ Returns the number of annotations of a given type attached to an object.
 Return value
 </div></td>
     <td><a name="wp446837"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Returns the number of annotations or <code style="font-family: Courier New" class="cDefName">FAIL</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">-1</span>) otherwise.
+Returns the number of annotations or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">-1</span>) otherwise.
 </div>
 </td>
 </tr>
@@ -1586,7 +1716,7 @@ Returns the number of annotations or <code style="font-family: Courier New" clas
 Description
 </div></td>
     <td><a name="wp446841"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-<b class="cFunctionName">ANnumann</b> returns the total number of annotations that are of type <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">annot_type</span> and that are attached to the object identified by its tag, <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">obj_tag</span>, and its reference number, <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">obj_ref</span>.
+<b class="cFunctionName">ANnumann</b> returns the total number of annotations that are of type <em class="cVarName">annot_type</em> and that are attached to the object identified by its tag, <em class="cVarName">obj_tag</em>, and its reference number, <em class="cVarName">obj_ref</em>.
 </div>
 </td>
 </tr>
@@ -1595,7 +1725,7 @@ Description
 &#160;
 </div></td>
     <td><a name="wp446845"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Since this routine is implemented only to obtain the total number of data annotations and not file annotations, the valid values of <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">annot_type</span> are <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">AN_DATA_LABEL</span> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">0</span>) and <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">AN_DATA_DESC</span> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">1</span>). To obtain the total number of file annotations or all data annotations, use <b class="cFunctionName">ANfileinfo</b>.
+Since this routine is implemented only to obtain the total number of data annotations and not file annotations, the valid values of <em class="cVarName">annot_type</em> are <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">AN_DATA_LABEL</span> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">0</span>) and <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">AN_DATA_DESC</span> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">1</span>). To obtain the total number of file annotations or all data annotations, use <b class="cFunctionName">ANfileinfo</b>.
 </div>
 </td>
 </tr>
@@ -1707,7 +1837,7 @@ Reads an annotation.
 Return value
 </div></td>
     <td><a name="wp446883"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Returns <code style="font-family: Courier New" class="cDefName">SUCCEED</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">0</span>) if successful and <code style="font-family: Courier New" class="cDefName">FAIL</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">-1</span>) otherwise.
+Returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">0</span>) if successful and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">-1</span>) otherwise.
 </div>
 </td>
 </tr>
@@ -1716,7 +1846,7 @@ Returns <code style="font-family: Courier New" class="cDefName">SUCCEED</code> (
 Description
 </div></td>
     <td><a name="wp446887"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-<b class="cFunctionName">ANreadann</b> reads the annotation identified by the parameter <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ann_id</span> and stores the annotation in the parameter <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ann_buf</span>.
+<b class="cFunctionName">ANreadann</b> reads the annotation identified by the parameter <em class="cVarName">ann_id</em> and stores the annotation in the parameter <em class="cVarName">ann_buf</em>.
 </div>
 </td>
 </tr>
@@ -1725,7 +1855,7 @@ Description
 &#160;
 </div></td>
     <td><a name="wp446891"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-The parameter <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ann_length</span> specifies the size of the buffer <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ann_buf</span>. If the length of the file or data label to be read is greater than or equal to <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ann_length</span>, the label will be truncated to <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ann_length</span> - 1<span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> </span>characters. If the length of the file or data description is greater than <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ann_length</span>, the description will be truncated to <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ann_length</span> characters. The HDF library adds a <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">NULL</span> character to the retrieved label but not to the retrieved description. The user must add a <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">NULL</span> character to the retrieved description if the C library string functions are to operate on this description.
+The parameter <em class="cVarName">ann_length</em> specifies the size of the buffer <em class="cVarName">ann_buf</em>. If the length of the file or data label to be read is greater than or equal to <em class="cVarName">ann_length</em>, the label will be truncated to <em class="cVarName">ann_length</em> - 1<span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> </span>characters. If the length of the file or data description is greater than <em class="cVarName">ann_length</em>, the description will be truncated to <em class="cVarName">ann_length</em> characters. The HDF library adds a <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">NULL</span> character to the retrieved label but not to the retrieved description. The user must add a <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">NULL</span> character to the retrieved description if the C library string functions are to operate on this description.
 </div>
 </td>
 </tr>
@@ -1846,7 +1976,7 @@ Obtains an existing annotation.
 Return value
 </div></td>
     <td><a name="wp446933"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Returns the annotation identifier (<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ann_id</span>) if successful or <code style="font-family: Courier New" class="cDefName">FAIL</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">-1</span>) otherwise.
+Returns the annotation identifier (<em class="cVarName">ann_id</em>) if successful or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">-1</span>) otherwise.
 </div>
 </td>
 </tr>
@@ -1855,7 +1985,7 @@ Returns the annotation identifier (<span style="color: #000000; font-style: ital
 Description
 </div></td>
     <td><a name="wp446937"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-<b class="cFunctionName">ANselect</b> obtains the identifier of the annotation specified by its index, <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">index,</span> and by its annotation type, <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">annot_type</span>. 
+<b class="cFunctionName">ANselect</b> obtains the identifier of the annotation specified by its index, <em class="cVarName">index,</em> and by its annotation type, <em class="cVarName">annot_type</em>. 
 </div>
 </td>
 </tr>
@@ -1864,7 +1994,7 @@ Description
 &#160;
 </div></td>
     <td><a name="wp446941"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-The parameter <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">index</span> is a nonnegative integer and is less than the total number of annotations of type <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">annot_type</span> in the file. Use <b class="cFunctionName">ANfileinfo</b> to obtain the total number of annotations of each type in the file. 
+The parameter <em class="cVarName">index</em> is a nonnegative integer and is less than the total number of annotations of type <em class="cVarName">annot_type</em> in the file. Use <b class="cFunctionName">ANfileinfo</b> to obtain the total number of annotations of each type in the file. 
 </div>
 </td>
 </tr>
@@ -1873,7 +2003,7 @@ The parameter <span style="color: #000000; font-style: italic; font-variant: nor
 &#160;
 </div></td>
     <td><a name="wp446945"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Valid values of <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">annot_type</span> are <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">AN_DATA_LABEL</span> (or 0), <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">AN_DATA_DESC</span> (or 1), <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">AN_FILE_LABEL</span> (or 2), and <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">AN_FILE_DESC</span> (or 3).
+Valid values of <em class="cVarName">annot_type</em> are <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">AN_DATA_LABEL</span> (or 0), <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">AN_DATA_DESC</span> (or 1), <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">AN_FILE_LABEL</span> (or 2), and <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">AN_FILE_DESC</span> (or 3).
 </div>
 </td>
 </tr>
@@ -1966,7 +2096,7 @@ Initializes the AN interface.
 Return value
 </div></td>
     <td><a name="wp446975"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Returns the AN interface identifier (<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">an_id</span>) if successful and <code style="font-family: Courier New" class="cDefName">FAIL</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">-1</span>) otherwise.
+Returns the AN interface identifier (<em class="cVarName">an_id</em>) if successful and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">-1</span>) otherwise.
 </div>
 </td>
 </tr>
@@ -1975,7 +2105,7 @@ Returns the AN interface identifier (<span style="color: #000000; font-style: it
 Description
 </div></td>
     <td><a name="wp446979"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-<b class="cFunctionName">ANstart</b> initializes the AN interface for the file identified by the parameter <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">file_id</span>. A call to <b class="cFunctionName">ANstart</b> is required before any AN functions can be invoked. <b class="cFunctionName">ANstart</b> is used with the <b class="cFunctionName">ANend</b> function to define the extent of AN interface session. A call to <b class="cFunctionName">ANend</b> is required for each call to <b class="cFunctionName">ANstart</b>.
+<b class="cFunctionName">ANstart</b> initializes the AN interface for the file identified by the parameter <em class="cVarName">file_id</em>. A call to <b class="cFunctionName">ANstart</b> is required before any AN functions can be invoked. <b class="cFunctionName">ANstart</b> is used with the <b class="cFunctionName">ANend</b> function to define the extent of AN interface session. A call to <b class="cFunctionName">ANend</b> is required for each call to <b class="cFunctionName">ANstart</b>.
 </div>
 </td>
 </tr>
@@ -2068,7 +2198,7 @@ Returns the annotation type if successful or <span style="color: #000000; font-s
 Description 
 </div></td>
     <td><a name="wp447009"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-<b class="cFunctionName">ANtag2atype</b> returns the annotation type that corresponds to the annotation tag specified by the parameter <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ann_tag</span>.
+<b class="cFunctionName">ANtag2atype</b> returns the annotation type that corresponds to the annotation tag specified by the parameter <em class="cVarName">ann_tag</em>.
 </div>
 </td>
 </tr>
@@ -2077,7 +2207,7 @@ Description
 &#160;
 </div></td>
     <td><a name="wp447013"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-The following table lists the valid values of <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ann_tag</span> in the left column and the corresponding values of the returned annotation type in the right column.
+The following table lists the valid values of <em class="cVarName">ann_tag</em> in the left column and the corresponding values of the returned annotation type in the right column.
 </div>
 </td>
 </tr>
@@ -2241,7 +2371,7 @@ Returns the identifier of an annotation given its tag/reference number pair.
 Return value
 </div></td>
     <td><a name="wp447051"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Returns the annotation identifier (<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ann_id</span>) if successful and <code style="font-family: Courier New" class="cDefName">FAIL</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">-1</span>) otherwise.
+Returns the annotation identifier (<em class="cVarName">ann_id</em>) if successful and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">-1</span>) otherwise.
 </div>
 </td>
 </tr>
@@ -2250,7 +2380,7 @@ Returns the annotation identifier (<span style="color: #000000; font-style: ital
 Description
 </div></td>
     <td><a name="wp447055"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-<b class="cFunctionName">ANtagref2id</b> returns the identifier of the annotation specified by its tag, <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ann_tag</span>, and its reference number, <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ann_ref</span>.
+<b class="cFunctionName">ANtagref2id</b> returns the identifier of the annotation specified by its tag, <em class="cVarName">ann_tag</em>, and its reference number, <em class="cVarName">ann_ref</em>.
 </div>
 </td>
 </tr>
@@ -2259,7 +2389,7 @@ Description
 &#160;
 </div></td>
     <td><a name="wp447059"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Valid values of <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ann_tag</span> are <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFTAG_DIL</span> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">104</span>) for a data label, <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFTAG_DIA</span> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">105</span>) for a data description, <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFTAG_FID</span> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">100</span>) for a file label, and <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFTAG_FD</span> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">101</span>) for a file description.
+Valid values of <em class="cVarName">ann_tag</em> are <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFTAG_DIL</span> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">104</span>) for a data label, <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFTAG_DIA</span> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">105</span>) for a data description, <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFTAG_FID</span> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">100</span>) for a file label, and <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFTAG_FD</span> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">101</span>) for a file description.
 </div>
 </td>
 </tr>
@@ -2371,7 +2501,7 @@ Writes an annotation.
 Return value
 </div></td>
     <td><a name="wp447097"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Returns <code style="font-family: Courier New" class="cDefName">SUCCEED</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">0</span>) if successful and <code style="font-family: Courier New" class="cDefName">FAIL</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">-1</span>) otherwise.
+Returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">0</span>) if successful and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">-1</span>) otherwise.
 </div>
 </td>
 </tr>
@@ -2380,7 +2510,7 @@ Returns <code style="font-family: Courier New" class="cDefName">SUCCEED</code> (
 Description
 </div></td>
     <td><a name="wp447101"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-<b class="cFunctionName">ANwriteann</b> writes the annotation text provided in the parameter <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ann</span> to the annotation specified by the parameter <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ann_id</span>. The parameter <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ann_length</span> specifies the number of characters in the annotation text.
+<b class="cFunctionName">ANwriteann</b> writes the annotation text provided in the parameter <em class="cVarName">ann</em> to the annotation specified by the parameter <em class="cVarName">ann_id</em>. The parameter <em class="cVarName">ann_length</em> specifies the number of characters in the annotation text.
 </div>
 </td>
 </tr>
