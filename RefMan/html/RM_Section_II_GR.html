@@ -7,12 +7,12 @@
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.8.2296" />
     <meta name="TEMPLATEBASE" content="Dynamic HTML" />
-    <meta name="LASTUPDATED" content="07/13/11 02:37:48" />
+    <meta name="LASTUPDATED" content="07/21/11 05:45:48" />
     <title>GRattrinfo/mgatinf</title>
     <link rel="StyleSheet" href="document.css" type="text/css" media="all" />
     <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
 <link rel="first" title="First" href="RM_Front.html" />
-<link rel="last" title="Last" href="netCDF_copyright.html" />
+<link rel="last" title="Last" href="RM_Section_II_HDFLOP.html" />
 <link rel="previous" title="Previous" href="RM_Section_II_AN.html" />
 <link rel="next" title="Next" href="RM_Section_II_H.html" />
 
@@ -934,7 +934,7 @@ character*(*) attr_name
 [GR Interface]</A><a HREF="RMTop.html"><b>[Top]</b></a>
 </p>
 <hr />
-GRgetattdatainfo/
+GRgetattdatainfo
 </h2>
 <a name="wp493567"> </a><p style="font-weight: normal" class="pSignature">
 intn GRgetattdatainfo(int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">obj_id</span>, int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">attr_index, </span>int32<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> *offset, </span>int32<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> *length</span>)
@@ -1012,7 +1012,7 @@ Buffer to hold length of the attribute&#39;s data
 Purpose
 </div></td>
     <td><a name="wp493597"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Retrieves location and size of attribute&#39;s data. (H4 Mapping project specific)
+Retrieves location and size of attribute&#39;s data.
 </div>
 </td>
 </tr>
@@ -1055,15 +1055,6 @@ Currently unavailable
 &#160;
 </div></td>
     <td><a name="wp493621"> </a><div class="pCellFortran">
-&#160;
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp493623"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
-&#160;
-</div></td>
-    <td><a name="wp493625"> </a><div class="pCellFortran">
 &#160;
 </div>
 </td>
@@ -1734,10 +1725,10 @@ integer ri_id, comp_type, comp_prm(1)
 [GR Interface]</A><a HREF="RMTop.html"><b>[Top]</b></a>
 </p>
 <hr />
-GRgetdatainfo/
+GRgetdatainfo
 </h2>
 <a name="wp493436"> </a><p style="font-weight: normal" class="pSignature">
-intn GRgetdatainfo(int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ri_id</span>, uintn <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">start_block</span>, uintn info_count, int32 *<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">offsetarray</span>, int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">*lengtharray</span>)
+intn GRgetdatainfo(int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ri_id</span>, uintn <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">start_block</span>, uintn <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">info_count</span>, int32 *<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">offsetarray</span>, int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">*lengtharray</span>)
 </p>
 <a name="wp493513"> </a><p class="pBodyRelative">
 </p>
@@ -1754,7 +1745,7 @@ IN:
 </div>
 </td>
     <td><a name="wp493443"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-RI identifier returned by <b class="cFunctionName">GRselect</b>
+Raster image identifier returned by <b class="cFunctionName">GRselect</b>
 </div>
 </td>
 </tr>
@@ -1826,7 +1817,7 @@ Array to hold lengths of the data blocks
 Purpose
 </div></td>
     <td><a name="wp493478"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Retrieves location and size of data blocks in a specified raster image, starting at a specified block. (H4 Mapping project specific)
+Retrieves location and size of data blocks in a specified raster image, starting at a specified block.
 </div>
 </td>
 </tr>
@@ -1862,7 +1853,7 @@ The parameter <em class="cVarName">info_count</em> provides the number of offset
 &#160;
 </div></td>
     <td><a name="wp493494"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-The parameter <em class="cVarName">start_block</em> indicates where to start reading the offsets from in the file.  The combination of parameters <em class="cVarName">info_length</em> and <em class="cVarName">start_block</em> provide user applications with flexibility of where and how much data information to retrieve.  The value for <em class="cVarName">start_block</em> must be non-negative and smaller than or equal to the number of blocks in the raster image.
+The parameter <em class="cVarName">start_block</em> is an integer value between 0 and number of blocks - 1.  The combination of parameters <em class="cVarName">info_length</em> and <em class="cVarName">start_block</em> provide user applications with flexibility of where and how much data information to retrieve.
 </div>
 </td>
 </tr>
@@ -5744,101 +5735,101 @@ character*(*) data
 <p class="pBodyRelative">
 
 </p>
-<a name="wp441708"> </a><h2 class="pRef_GR_RoutineName">
+<a name="wp497044"> </a><h2 class="pRef_GR_RoutineName">
 <p align=right><A HREF="RM_Section_II_GRLOP.html">
 [GR Interface]</A><a HREF="RMTop.html"><b>[Top]</b></a>
 </p>
 <hr />
 GRwritelut/mgwrlut/mgwclut
 </h2>
-<a name="wp441709"> </a><p style="font-weight: normal" class="pSignature">
+<a name="wp497045"> </a><p style="font-weight: normal" class="pSignature">
 intn GRwritetlut(int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">pal_id</span>, int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ncomp</span>, int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">data_type</span>, int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">interlace_mode</span>, int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">num_entries</span>, VOIDP <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">pal_data</span>)
 </p>
-<a name="wp452297"> </a><p class="pBodyRelative">
+<a name="wp497145"> </a><p class="pBodyRelative">
 </p>
 <div align="left">
-<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp449518table449516">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp497048table497046">
   <caption></caption>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp449518"> </a><div style="margin-top: 0pt" class="pCellVariable">
+<a name="wp497048"> </a><div style="margin-top: 0pt" class="pCellVariable">
 pal_id
 </div>
 </td>
-    <td><a name="wp449520"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp497050"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 IN:
 </div>
 </td>
-    <td><a name="wp449522"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp497052"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 Palette identifier returned by <b class="cFunctionName">GRgetlutid</b>
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp449524"> </a><div style="margin-top: 0pt" class="pCellVariable">
+<a name="wp497054"> </a><div style="margin-top: 0pt" class="pCellVariable">
 ncomp
 </div>
 </td>
-    <td><a name="wp449526"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp497056"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 IN:
 </div>
 </td>
-    <td><a name="wp449528"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp497058"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 Number of components in the palette
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp449530"> </a><div style="margin-top: 0pt" class="pCellVariable">
+<a name="wp497060"> </a><div style="margin-top: 0pt" class="pCellVariable">
 data_type
 </div>
 </td>
-    <td><a name="wp449532"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp497062"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 IN:
 </div>
 </td>
-    <td><a name="wp449534"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp497064"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 Data type of the palette data
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp449536"> </a><div style="margin-top: 0pt" class="pCellVariable">
+<a name="wp497066"> </a><div style="margin-top: 0pt" class="pCellVariable">
 interlace_mode
 </div>
 </td>
-    <td><a name="wp449538"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp497068"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 IN:
 </div>
 </td>
-    <td><a name="wp449540"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp497070"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 Interlace mode of the stored palette data
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp449542"> </a><div style="margin-top: 0pt" class="pCellVariable">
+<a name="wp497072"> </a><div style="margin-top: 0pt" class="pCellVariable">
 num_entries
 </div>
 </td>
-    <td><a name="wp449544"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp497074"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 IN:
 </div>
 </td>
-    <td><a name="wp449546"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp497076"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 Number of entries in the palette
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp449548"> </a><div style="margin-top: 0pt" class="pCellVariable">
+<a name="wp497078"> </a><div style="margin-top: 0pt" class="pCellVariable">
 pal_data
 </div>
 </td>
-    <td><a name="wp449550"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp497080"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 IN:
 </div>
 </td>
-    <td><a name="wp449552"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp497082"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 Buffer for the palette data to be written
 </div>
 </td>
@@ -5848,76 +5839,76 @@ Buffer for the palette data to be written
 <p class="pBodyRelative">
 </p>
 <div align="left">
-<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp449555table449553">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp497085table497083">
   <caption></caption>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp449555"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp497085"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 Purpose
 </div></td>
-    <td><a name="wp449557"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp497087"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 Writes a palette.
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp449559"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp497089"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 Return value
 </div></td>
-    <td><a name="wp449561"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp497091"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 Returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) if successful and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) otherwise.
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp449563"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp497093"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 Description
 </div></td>
-    <td><a name="wp449565"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp497095"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 <b class="cFunctionName">GRwritelut</b> writes a palette with the number of pixel components specified by the parameter <em class="cVarName">ncomp</em>, the data type of the palette data specified by the parameter <em class="cVarName">data_type</em>, the interlace mode specified by the parameter <em class="cVarName">interlace_mode</em>, and the number of entries in the palette specified by the parameter <em class="cVarName">num_entries</em>. The palette data itself is stored in the <em class="cVarName">pal_data</em> buffer. <b class="cBold">Currently only &quot;old-style&quot; palettes are supported</b>, i.e <em style="font-style: italic" class="cVarName">ncomp</em><span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> = </span><code style="font-family: Courier New; font-size: 8pt; font-style: normal" class="cDefName">3</code><span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">, </span><em style="font-style: italic" class="cVarName">num_entries</em><span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> = </span><code style="font-family: Courier New; font-size: 8pt; font-style: normal" class="cDefName">256</code><span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">, </span><em style="font-style: italic" class="cVarName">data_type</em><span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> = </span><code style="font-family: Courier New; font-size: 8pt; font-style: normal" class="cDefName">uint8</code><span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">.</span>
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp449567"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp497097"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 &#160;
 </div></td>
-    <td><a name="wp449569"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp497099"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 The parameter <em class="cVarName">ncomp</em> specifies the number of pixel components in the palette and must have a value of at least 1.
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp449571"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp497101"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 &#160;
 </div></td>
-    <td><a name="wp449573"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp497103"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 The parameter <em class="cVarName">data_type</em> specifies the type of the palette data and can be any of the data types supported by the HDF library. The data types supported by HDF are listed in Table 1A in Section I of this manual.
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp449575"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp497105"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 &#160;
 </div></td>
-    <td><a name="wp449577"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp497107"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 The parameter <em class="cVarName">interlace_mode</em> specifies the interlacing in which the palette is to be written. The valid values of <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">interlace_mode</span> are: <code style="font-family: Courier New; font-size: 8pt" class="cDefName">MFGR_INTERLACE_PIXEL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>), <code style="font-family: Courier New; font-size: 8pt" class="cDefName">MFGR_INTERLACE_LINE</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">1</code>) and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">MFGR_INTERLACE_COMPONENT</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">2</code>.)
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp449579"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp497109"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 &#160;
 </div></td>
-    <td><a name="wp449581"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp497111"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 The buffer <em class="cVarName">pal_data</em> is assumed to have sufficient space allocated to store all of the palette data.
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp449583"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp497113"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 &#160;
 </div></td>
-    <td><a name="wp449585"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp497115"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 Note that there are two FORTRAN-77 versions of this routine; one for numeric data (<b class="cFunctionName">mgwrlut</b>) and the other for character data (<b class="cFunctionName">mgwclut</b>).
 </div>
 </td>
@@ -5927,67 +5918,67 @@ Note that there are two FORTRAN-77 versions of this routine; one for numeric dat
 <p class="pBodyRelative">
 <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"></span></p>
 <div align="left">
-<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp493399table493397">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp497118table497116">
   <caption></caption>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp493399"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp497118"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 FORTRAN
 </div></td>
-    <td><a name="wp493401"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortSyntax">
+    <td><a name="wp497120"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortSyntax">
 integer function mgwrlut(pal_id, ncomp, data_type, interlace_mode, num_entries, pal_data)
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp493403"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp497122"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 &#160;
 </div></td>
-    <td><a name="wp493405"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortVar">
+    <td><a name="wp497124"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortVar">
 integer pal_id, ncomp, data_type, interlace_mode, num_entries
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp493407"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp497126"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 &#160;
 </div></td>
-    <td><a name="wp493409"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortVar">
+    <td><a name="wp497128"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortVar">
 &lt;<code style="font-family: Courier New; font-size: small; font-style: normal; font-weight: normal">valid numeric data type</code>&gt; pal_data(*)
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp493411"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp497130"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 &#160;
 </div></td>
-    <td><a name="wp493413"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortSyntax">
+    <td><a name="wp497132"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortSyntax">
 &#160;
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp493415"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp497134"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 &#160;
 </div></td>
-    <td><a name="wp493417"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortSyntax">
+    <td><a name="wp497136"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortSyntax">
 integer function mgwclut(pal_id, ncomp, data_type, interlace_mode, num_entries, pal_data)
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp493419"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp497138"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 &#160;
 </div></td>
-    <td><a name="wp493421"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortVar">
+    <td><a name="wp497140"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortVar">
 integer pal_id, ncomp, data_type, interlace_mode, num_entries
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp493423"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp497142"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 &#160;
 </div></td>
-    <td><a name="wp493425"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortVar">
+    <td><a name="wp497144"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortVar">
 character*(*) pal_data
 </div>
 </td>
@@ -5996,6 +5987,117 @@ character*(*) pal_data
 </div>
 <p class="pBodyRelative">
 <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"></span>
+</p>
+<a name="wp497001"> </a><h2 class="pRef_GR_RoutineName">
+<p align=right><A HREF="RM_Section_II_GRLOP.html">
+[GR Interface]</A><a HREF="RMTop.html"><b>[Top]</b></a>
+</p>
+<hr />
+GR2bmapped
+</h2>
+<a name="wp497002"> </a><p style="font-weight: normal" class="pSignature">
+int32 GR2bmapped(int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ri_id</span>, intn *<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">tobe_mapped</span>, intn *<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">name_generated</span>)
+</p>
+<a name="wp497036"> </a><p class="pBodyRelative">
+</p>
+<div align="left">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp497005table497003">
+  <caption></caption>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp497005"> </a><div style="margin-top: 0pt" class="pCellVariable">
+ri_id
+</div>
+</td>
+    <td><a name="wp497007"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+IN:
+</div>
+</td>
+    <td><a name="wp497009"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Raster image identifier returned by <b class="cFunctionName">GRselect</b>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="pBodyRelative">
+</p>
+<div align="left">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp497012table497010">
+  <caption></caption>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp497012"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+Purpose
+</div></td>
+    <td><a name="wp497014"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Checks whether a raster image is to be mapped
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp497016"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+Return value
+</div></td>
+    <td><a name="wp497018"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) if successful and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) otherwise.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp497020"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+Description
+</div></td>
+    <td><a name="wp497220"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+<b class="cFunctionName">GR2bmapped</b> determines whether the given raster image satisfies the following conditions:
+</div>
+<div style="margin-bottom: 6pt; margin-top: 0pt"><ul style="margin-bottom: 6pt; margin-top: 0pt">
+<a name="wp497221"> </a><div style="margin-bottom: 6pt; margin-top: 0pt"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">o</span> being an 8-bit raster image</div>
+<a name="wp497222"> </a><div style="margin-bottom: 6pt; margin-top: 0pt"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">o</span> having one component</div>
+<a name="wp497202"> </a><div style="margin-bottom: 6pt; margin-top: 0pt"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">o</span> being non-special or RLE compressed only, i.e., no other</div>
+<a name="wp497203"> </a><div style="margin-bottom: 6pt; margin-top: 0pt">        compressions, no chunking,...</div>
+</ul></div>
+<a name="wp497259"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+The function will set <em class="cVarName">tobe_mapped</em> to <code style="font-family: Courier New; font-size: 8pt" class="cDefName">TRUE</code> if the image satisfies the above conditions, and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FALSE</code>, otherwise.  This feature is specific to the HDF4 Mapping project.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp497024"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+&#160;
+</div></td>
+    <td><a name="wp497192"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+In addition, <b class="cFunctionName">GR2bmapped</b> will set the flag <em class="cVarName">name_generated</em> to indicate whether the image has name that was generated by the library.  Old images (or images created with pre-GR API) do not have a name and the library would generate a name for it while reading in the file.  The HDF4 mapwriter needs to make this distinction.
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="pBodyRelative">
+</p>
+<div align="left">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp497029table497027">
+  <caption></caption>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp497029"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+FORTRAN
+</div></td>
+    <td><a name="wp497031"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortSyntax">
+Currently unavailable
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp497033"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+&#160;
+</div></td>
+    <td><a name="wp497035"> </a><div class="pCellFortran">
+&#160;
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="pBodyRelative">
+
 </p>
     </blockquote>
 

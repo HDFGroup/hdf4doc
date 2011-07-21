@@ -7,12 +7,12 @@
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.8.2296" />
     <meta name="TEMPLATEBASE" content="Dynamic HTML" />
-    <meta name="LASTUPDATED" content="07/13/11 02:37:54" />
+    <meta name="LASTUPDATED" content="07/21/11 05:45:55" />
     <title>SDattrinfo/sfgainfo</title>
     <link rel="StyleSheet" href="document.css" type="text/css" media="all" />
     <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
 <link rel="first" title="First" href="RM_Front.html" />
-<link rel="last" title="Last" href="netCDF_copyright.html" />
+<link rel="last" title="Last" href="RM_Section_II_HDFLOP.html" />
 <link rel="previous" title="Previous" href="RM_Section_II_H.html" />
 <link rel="next" title="Next" href="RM_Section_II_V.html" />
 
@@ -516,7 +516,7 @@ The <em class="cVarName">ntype</em> parameter can contain any data type supporte
 &#160;
 </div></td>
     <td><a name="wp547887"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-See the notes regarding the potential performance impact of unlimited dimension data sets in  <a href="../../UsrGuide/html/UG_Perform.html#wp178683">Section 14.4.3, &quot;Unlimited Dimension Data Sets (SDSs and Vdatas) and Performance.&quot;</a> the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span>.
+See the notes regarding the potential performance impact of unlimited dimension data sets in  Section 14.4.3, &quot;Unlimited Dimension Data Sets (SDSs and Vdatas) and Performance&quot; the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span>.
 </div>
 </td>
 </tr>
@@ -1230,7 +1230,7 @@ character*(*) attr_name
 [SD Interface]</A><a HREF="RMTop.html"><b>[Top]</b></a>
 </p>
 <hr />
-SDgetanndatainfo/
+SDgetanndatainfo
 </h2>
 <a name="wp588521"> </a><p style="font-weight: normal" class="pSignature">
 intn SDgetanndatainfo(int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">sds_id</span>, ann_type <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">annot_type, </span>uintn <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">info_count</span>, int32<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> *offsetarray, </span>int32<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> *lengtharray</span>)
@@ -1322,7 +1322,7 @@ Buffer to hold lengths of the annotations&#39; data
 Purpose
 </div></td>
     <td><a name="wp588557"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Retrieves location and size of annotations&#39; data. (H4 Mapping project specific)
+Retrieves location and size of annotations&#39; data.
 </div>
 </td>
 </tr>
@@ -1406,7 +1406,7 @@ Currently unavailable
 [SD Interface]</A><a HREF="RMTop.html"><b>[Top]</b></a>
 </p>
 <hr />
-SDgetattdatainfo/
+SDgetattdatainfo
 </h2>
 <a name="wp587423"> </a><p style="font-weight: normal" class="pSignature">
 intn SDgetattdatainfo(int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">obj_id</span>, int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">attr_index, </span>int32<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> *offset, </span>int32<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> *length</span>)
@@ -1484,7 +1484,7 @@ Buffer to hold length of the attribute&#39;s data
 Purpose
 </div></td>
     <td><a name="wp587795"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Retrieves location and size of attribute&#39;s data. (H4 Mapping project specific)
+Retrieves location and size of attribute&#39;s data.
 </div>
 </td>
 </tr>
@@ -2396,7 +2396,7 @@ integer sds_id, comp_type, comp_prm(*)
 [SD Interface]</A><a HREF="RMTop.html"><b>[Top]</b></a>
 </p>
 <hr />
-SDgetdatainfo/
+SDgetdatainfo
 </h2>
 <a name="wp587043"> </a><p style="font-weight: normal" class="pSignature">
 intn SDgetdatainfo(int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">sds_id</span>, int32 *<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">chk_coord</span>, uintn <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">start_block</span>, uintn info_count, int32 *<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">offsetarray</span>, int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">*lengtharray</span>)
@@ -2502,7 +2502,7 @@ Array to hold lengths of the data blocks
 Purpose
 </div></td>
     <td><a name="wp587079"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Retrieves location and size of data blocks in a specified data set, starting at a specified block. (H4 Mapping project specific)
+Retrieves location and size of data blocks in a specified data set, starting at a specified block.
 </div>
 </td>
 </tr>
@@ -2711,7 +2711,7 @@ Returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">
 Description
 </div></td>
     <td><a name="wp511863"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-<span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDgetdatastrs</span> retrieves the predefined attributes for the data set specified by the parameter <em class="cVarName">sds_id</em>.  The predefined attributes are label, unit, format, and coordinate system.  They are then stored in the parameters <em class="cVarName">label</em>, <em class="cVarName">unit</em>, <em class="cVarName">format</em>, and <em class="cVarName">coordsys</em>, respectively.   Refer to <a href="../../UsrGuide/html/UG_SD.html#wp35909">Section 3.10, &quot;Predefined Attributes.&quot;</a> of the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span> for more information on predefined attributes.
+<span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDgetdatastrs</span> retrieves the predefined attributes for the data set specified by the parameter <em class="cVarName">sds_id</em>.  The predefined attributes are label, unit, format, and coordinate system.  They are then stored in the parameters <em class="cVarName">label</em>, <em class="cVarName">unit</em>, <em class="cVarName">format</em>, and <em class="cVarName">coordsys</em>, respectively.   Refer to Section 3.10, &quot;Predefined Attributes&quot; of the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span> for more information on predefined attributes.
 </div>
 </td>
 </tr>
@@ -3128,7 +3128,7 @@ Returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">
 Description
 </div></td>
     <td><a name="wp517245"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-<span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDgetdimstrs</span> retrieves the predefined attributes associated with the dimension identified by the parameter <em class="cVarName">dim_id</em>.  The predefined attributes are label, unit, and format.  These predefined attributes are stored in the parameters <em class="cVarName">label</em>, <em class="cVarName">unit</em>, and <em class="cVarName">format</em>, respectively.   Refer to <a href="../../UsrGuide/html/UG_SD.html#wp35909">Table 3.10, Predefined Attributes</a>, in the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span> for more information on predefined attributes.
+<span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDgetdimstrs</span> retrieves the predefined attributes associated with the dimension identified by the parameter <em class="cVarName">dim_id</em>.  The predefined attributes are label, unit, and format.  These predefined attributes are stored in the parameters <em class="cVarName">label</em>, <em class="cVarName">unit</em>, and <em class="cVarName">format</em>, respectively.   Refer to Table 3.10, Predefined Attributes, in the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span> for more information on predefined attributes.
 </div>
 </td>
 </tr>
@@ -3185,68 +3185,68 @@ character*(*) label, unit, format
 [SD Interface]</A><a HREF="RMTop.html"><b>[Top]</b></a>
 </p>
 <hr />
-SDgetexternalfile/
+SDgetexternalfile
 </h2>
 <a name="wp591050"> </a><p style="font-weight: normal" class="pSignature">
 intn SDgetexternalfile(int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">sds_id,</span> uintn <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">buf_size</span>, char *<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">filename</span>, int32 *<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">offset</span>)
 </p>
-<a name="wp591110"> </a><p class="pBodyRelative">
+<a name="wp595608"> </a><p class="pBodyRelative">
 </p>
 <div align="left">
-<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp591120table591051">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp595555table595553">
   <caption></caption>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp591120"> </a><div style="margin-top: 0pt" class="pCellVariable">
+<a name="wp595555"> </a><div style="margin-top: 0pt" class="pCellVariable">
 sds_id
 </div>
 </td>
-    <td><a name="wp591122"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp595557"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 IN:
 </div>
 </td>
-    <td><a name="wp591124"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp595559"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 Data set identifier returned by <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDcreate</span> or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDselect</span>
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp591059"> </a><div style="margin-top: 0pt" class="pCellVariable">
+<a name="wp595561"> </a><div style="margin-top: 0pt" class="pCellVariable">
 buf_size
 </div>
 </td>
-    <td><a name="wp591061"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp595563"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 IN:
 </div>
 </td>
-    <td><a name="wp591063"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp595565"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 Size of buffer for external file name
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp591065"> </a><div style="margin-top: 0pt" class="pCellVariable">
+<a name="wp595567"> </a><div style="margin-top: 0pt" class="pCellVariable">
 filename
 </div>
 </td>
-    <td><a name="wp591067"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp595569"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 OUT:
 </div>
 </td>
-    <td><a name="wp591069"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp595571"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 Buffer for external file name
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp591071"> </a><div style="margin-top: 0pt" class="pCellVariable">
+<a name="wp595573"> </a><div style="margin-top: 0pt" class="pCellVariable">
 offset
 </div>
 </td>
-    <td><a name="wp591073"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp595575"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 OUT:
 </div>
 </td>
-    <td><a name="wp591075"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp595577"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 Offset, in bytes, of the location in the external file where the data was written
 </div>
 </td>
@@ -3256,49 +3256,49 @@ Offset, in bytes, of the location in the external file where the data was writte
 <p class="pBodyRelative">
 </p>
 <div align="left">
-<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp591078table591076">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp595580table595578">
   <caption></caption>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp591078"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp595580"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 Purpose
 </div></td>
-    <td><a name="wp591080"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp595582"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 Retrieves information about external file of the data set.
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp591082"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp595584"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 Return value
 </div></td>
-    <td><a name="wp591084"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp595586"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 Returns length of the external file name if successful or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) otherwise.
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp591086"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp595588"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 Description
 </div></td>
-    <td><a name="wp591088"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp595590"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 If the data set has external element, <b class="cFunctionName">SDgetexternalfile</b> will retrieve the name of the external file and the offset where the data is being stored in the external file.  If the data set does not have external element, <b class="cFunctionName">SDgetexternalfile</b> will return <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code>.
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp591090"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp595592"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 &#160;
 </div></td>
-    <td><a name="wp595156"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp595594"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 To sufficiently allocate buffer for the file name, an application can call <b class="cFunctionName">SDgetexternalfile</b> passing in <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code> for <em class="cVarName">buf_size</em>.  If the length returned is greater than 0, the application will use it to allocate the buffer before calling <b class="cFunctionName">SDgetexternalfile</b> again to get the actual file name.
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp591094"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp595596"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 Note
 </div></td>
-    <td><a name="wp591096"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp595598"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 It is the user&#39;s responsibility to see that the external files are kept with the main file prior to accessing the data set with external element.  The function will fail if the external file is missing from the directory where the main file is located.
 </div>
 </td>
@@ -3308,22 +3308,22 @@ It is the user&#39;s responsibility to see that the external files are kept with
 <p class="pBodyRelative">
 </p>
 <div align="left">
-<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp591099table591097">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp595601table595599">
   <caption></caption>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp591099"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp595601"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 FORTRAN
 </div></td>
-    <td><a name="wp591101"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortSyntax">
+    <td><a name="wp595603"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortSyntax">
 Currently unavailable
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp591103"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp595605"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 &#160;
 </div></td>
-    <td><a name="wp591105"> </a><div class="pCellFortran">
+    <td><a name="wp595607"> </a><div class="pCellFortran">
 &#160;
 </div>
 </td>
@@ -3333,14 +3333,14 @@ Currently unavailable
 <p class="pBodyRelative">
 
 </p>
-<a name="wp567910"> </a><h2 class="pRef_SD_RoutineName">
+<a name="wp595609"> </a><h2 class="pRef_SD_RoutineName">
 <p align=right><A HREF="RM_Section_II_SDLOP.html">
 [SD Interface]</A><a HREF="RMTop.html"><b>[Top]</b></a>
 </p>
 <hr />
-SDgetfilename/
+SDgetfilename
 </h2>
-<a name="wp567911"> </a><p style="font-weight: normal" class="pSignature">
+<a name="wp595610"> </a><p style="font-weight: normal" class="pSignature">
 intn SDgetfilename(int32 <em class="cVarName">file_id</em>, char  *<em class="cVarName">filename</em>)
 </p>
 <a name="wp567872"> </a><p class="pBodyRelative">
@@ -3805,7 +3805,7 @@ integer ntype, num_attrs
 [SD Interface]</A><a HREF="RMTop.html"><b>[Top]</b></a>
 </p>
 <hr />
-SDgetnamelen/
+SDgetnamelen
 </h2>
 <a name="wp567984"> </a><p style="font-weight: normal" class="pSignature">
 intn SDgetnamelen(int32 <em class="cVarName">obj_id</em>, uint16 <em class="cVarName">name_len</em>)
@@ -4125,7 +4125,7 @@ Buffer to hold length of the attribute&#39;s data
 Purpose
 </div></td>
     <td><a name="wp590392"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Retrieves location and size of old predefined attribute&#39;s data. (H4 Mapping project specific)
+Retrieves location and size of old predefined attribute&#39;s data.
 </div>
 </td>
 </tr>
@@ -4545,7 +4545,7 @@ integer sds_id
 [SD Interface]</A><a HREF="RMTop.html"><b>[Top]</b></a>
 </p>
 <hr />
-SDget_maxopenfiles/
+SDget_maxopenfiles
 </h2>
 <a name="wp567638"> </a><p style="font-weight: normal" class="pSignature">
 intn SDget_maxopenfiles(intn *<em class="cVarName">curr_max</em>, intn *<em class="cVarName">sys_limit</em>)
@@ -4666,7 +4666,7 @@ Currently unavailable
 [SD Interface]</A><a HREF="RMTop.html"><b>[Top]</b></a>
 </p>
 <hr />
-SDget_numopenfiles/
+SDget_numopenfiles
 </h2>
 <a name="wp567274"> </a><p style="font-weight: normal" class="pSignature">
 intn SDget_numopenfiles()
@@ -4822,7 +4822,7 @@ integer sds_id
 [SD Interface]</A><a HREF="RMTop.html"><b>[Top]</b></a>
 </p>
 <hr />
-SDidtype/
+SDidtype
 </h2>
 <a name="wp568089"> </a><p style="font-weight: normal" class="pSignature">
 hdf_idtype_t SDidtype(int32 <em class="cVarName">obj_id</em>)
@@ -4858,7 +4858,7 @@ Identifier of the object
 Purpose
 </div></td>
     <td><a name="wp568101"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Given an id, return the type of object the id represents.
+Given an identifier, return the type of object the identifier represents.
 </div>
 </td>
 </tr>
@@ -4874,30 +4874,36 @@ Returns a value of type <code style="font-family: Courier New; font-size: small;
   <tr align="left" valign="top">    <td><td nowrap>
 <a name="wp568107"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 Description
+</div><td nowrap>
+<a name="wp595522"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+&#160;
 </div></td>
     <td><a name="wp568109"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-SDidtype returns a value of type hdf_idtype_t, which can be one of the following:
+<b class="cFunctionName">SDidtype</b> returns a value of type <code style="font-family: Courier New; font-size: small; font-style: normal; font-weight: normal">hdf_idtype_t</code>, which can be one of the following:
 </div>
 <div style="margin-bottom: 6pt; margin-top: 0pt"><ul style="margin-bottom: 6pt; margin-top: 0pt">
-<a name="wp568110"> </a><div style="margin-bottom: 6pt; margin-top: 0pt"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">o</span><code style="font-family: Courier New; font-size: small; font-style: normal; font-weight: normal">	</code><code style="font-family: Courier New; font-size: 8pt" class="cDefName">NOT_SDAPI_ID</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>)	not an SD API id</div>
-<a name="wp568111"> </a><div style="margin-bottom: 6pt; margin-top: 0pt"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">o</span><code style="font-family: Courier New; font-size: small; font-style: normal; font-weight: normal">	</code><code style="font-family: Courier New; font-size: 8pt" class="cDefName">SD_ID</code>  (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>)	SD id</div>
-<a name="wp568112"> </a><div style="margin-bottom: 6pt; margin-top: 0pt"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">o</span><code style="font-family: Courier New; font-size: small; font-style: normal; font-weight: normal">	</code><code style="font-family: Courier New; font-size: 8pt" class="cDefName">SDS_ID</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">1</code>)	SDS id</div>
-<a name="wp568113"> </a><div style="margin-bottom: 6pt; margin-top: 0pt"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">o</span><code style="font-family: Courier New; font-size: small; font-style: normal; font-weight: normal">	</code><code style="font-family: Courier New; font-size: 8pt" class="cDefName">DIM_ID</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">2</code>)	Dimension id</div>
+<a name="wp568110"> </a><div style="margin-bottom: 6pt; margin-top: 0pt"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">o</span><code style="font-family: Courier New; font-size: small; font-style: normal; font-weight: normal">	</code><code style="font-family: Courier New; font-size: 8pt" class="cDefName">NOT_SDAPI_ID</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>)	not an SD API identifier</div>
+<a name="wp568111"> </a><div style="margin-bottom: 6pt; margin-top: 0pt"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">o</span><code style="font-family: Courier New; font-size: small; font-style: normal; font-weight: normal">	</code><code style="font-family: Courier New; font-size: 8pt" class="cDefName">SD_ID</code>  (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>)	SD identifier</div>
+<a name="wp568112"> </a><div style="margin-bottom: 6pt; margin-top: 0pt"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">o</span><code style="font-family: Courier New; font-size: small; font-style: normal; font-weight: normal">	</code><code style="font-family: Courier New; font-size: 8pt" class="cDefName">SDS_ID</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">1</code>)	SDS identifier</div>
+<a name="wp568113"> </a><div style="margin-bottom: 6pt; margin-top: 0pt"><span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">o</span><code style="font-family: Courier New; font-size: small; font-style: normal; font-weight: normal">	</code><code style="font-family: Courier New; font-size: 8pt" class="cDefName">DIM_ID</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">2</code>)	Dimension identifier</div>
 </ul></div>
 <a name="wp568114"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 &#160;
 </div>
 <a name="wp568115"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-SDidtype returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">NOT_SDAPI_ID</code> for either
+<b class="cFunctionName">SDidtype</b> returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">NOT_SDAPI_ID</code> for either
 </div>
 <a name="wp568116"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-    + when <em class="cVarName">obj_id</em> is not a valid HDF id, or
+    + when <em class="cVarName">obj_id</em> is not a valid HDF identifier, or
 </div>
-<a name="wp568117"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-    + when <em class="cVarName">obj_id</em> is a valid HDF id, but not one of the id types in
+<a name="wp595533"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    + when <em class="cVarName">obj_id</em> is a valid HDF identifier, but not one of the identifier types in
 </div>
-<a name="wp568118"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-      the SD interface, which are SD id, SDS id, and dimension id.
+<a name="wp595523"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+       the SD interface, which are SD identifier, SDS identifier, and
+</div>
+<a name="wp595537"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+       dimension identifier.
 </div>
 </td>
 </tr>
@@ -5083,7 +5089,7 @@ Determines whether a dimension has the old and new representations or the new re
 &#160;
 </div></td>
     <td><a name="wp512525"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Refer to <a href="../../UsrGuide/html/UG_SD.html#wp29379">Chapter 3, &quot;Scientific Data Sets (SD API)&quot;</a> of the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span>,   for information on old and new dimension representations.
+Refer to Chapter 3, &quot;Scientific Data Sets (SD API)&quot; of the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span>,   for information on old and new dimension representations.
 </div>
 </td>
 </tr>
@@ -5830,7 +5836,7 @@ Description
 &#160;
 </div></td>
     <td><a name="wp568306"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-The parameter <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">origin</span> specifies the coordinates of the chunk according to the chunk position in the chunked array. Refer to the <a href="../../UsrGuide/html/UG_SD.html#wp29379">Chapter 3, &quot;Scientific Data Sets (SD API)&quot;</a> of the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span>, for a description of the organization of chunks in a data set.
+The parameter <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">origin</span> specifies the coordinates of the chunk according to the chunk position in the chunked array. Refer to the Chapter 3, &quot;Scientific Data Sets (SD API)&quot; of the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span>, for a description of the organization of chunks in a data set.
 </div>
 </td>
 </tr>
@@ -6078,7 +6084,7 @@ The array <em class="cVarName">stride</em> specifies the reading pattern along e
 &#160;
 </div></td>
     <td><a name="wp518456"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-When reading data from a &quot;chunked&quot; data set using <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDreaddata</span>, consideration should be given to the issues presented in the section on chunking in <a href="../../UsrGuide/html/UG_SD.html#wp29379">Chapter 3, &quot;Scientific Data Sets (SD API)&quot;</a> and <a href="../../UsrGuide/html/UG_Perform.html#wp18778">Chapter 14, &quot;HDF Performance Issues&quot;</a> in the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span>.
+When reading data from a &quot;chunked&quot; data set using <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDreaddata</span>, consideration should be given to the issues presented in the section on chunking in Chapter 3, &quot;Scientific Data Sets (SD API)&quot; and Chapter 14, &quot;HDF Performance Issues&quot; in the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span>.
 </div>
 </td>
 </tr>
@@ -6357,7 +6363,7 @@ integer sd_id, sds_ref
 [SD Interface]</A><a HREF="RMTop.html"><b>[Top]</b></a>
 </p>
 <hr />
-SDreset_maxopenfiles/
+SDreset_maxopenfiles
 </h2>
 <a name="wp566777"> </a><p style="font-weight: normal" class="pSignature">
 intn SDreset_maxopenfiles(intn req_max)
@@ -7921,7 +7927,7 @@ If the chunk cache is full and the value of the parameter <em class="cVarName">m
 &#160;
 </div></td>
     <td><a name="wp513648"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Do not set the value of <em class="cVarName">maxcache</em> to be less than the number of chunks along the fastest-changing dimension of the biggest slab to be written or read via <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDreaddata</span> or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDwritedata</span>. Doing this will cause internal thrashing. See the section on chunking in <a href="../../UsrGuide/html/UG_Perform.html#wp18778">Chapter 14, &quot;HDF Performance Issues&quot;</a> in the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span>, for more information on this.
+Do not set the value of <em class="cVarName">maxcache</em> to be less than the number of chunks along the fastest-changing dimension of the biggest slab to be written or read via <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDreaddata</span> or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDwritedata</span>. Doing this will cause internal thrashing. See the section on chunking in Chapter 14, &quot;HDF Performance Issues&quot; in the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span>, for more information on this.
 </div>
 </td>
 </tr>
@@ -8456,7 +8462,7 @@ Description
 &#160;
 </div></td>
     <td><a name="wp516965"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-For more information about predefined attributes, refer to <a href="../../UsrGuide/html/UG_SD.html#wp35909">Section 3.10, &quot;Predefined Attributes.&quot;</a> of the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span>. 
+For more information about predefined attributes, refer to Section 3.10, &quot;Predefined Attributes&quot; of the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span>. 
 </div>
 </td>
 </tr>
@@ -8926,7 +8932,7 @@ Returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">
 Description
 </div></td>
     <td><a name="wp513999"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-<span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDsetdimstrs</span> sets the  predefined attribute (label, unit, and format) for a dimension and its scale to the values specified in the parameters <em class="cVarName">label</em>, <em class="cVarName">unit</em> and <em class="cVarName">format</em>. If a parameter is set to <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">NULL</span> in C and an empty string in Fortran, then the attribute corresponding to that parameter will not be written. For more information about predefined attributes, refer to <a href="../../UsrGuide/html/UG_SD.html#wp35909">Section 3.10, &quot;Predefined Attributes.&quot;</a> of the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span>.
+<span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDsetdimstrs</span> sets the  predefined attribute (label, unit, and format) for a dimension and its scale to the values specified in the parameters <em class="cVarName">label</em>, <em class="cVarName">unit</em> and <em class="cVarName">format</em>. If a parameter is set to <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">NULL</span> in C and an empty string in Fortran, then the attribute corresponding to that parameter will not be written. For more information about predefined attributes, refer to Section 3.10, &quot;Predefined Attributes&quot; of the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span>.
 </div>
 </td>
 </tr>
@@ -10223,7 +10229,7 @@ Description
 &#160;
 </div></td>
     <td><a name="wp514662"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-The parameter <em class="cVarName">origin</em> specifies the coordinates of the chunk according to the chunk position in the overall chunk array. Refer to <a href="../../UsrGuide/html/UG_SD.html#wp29379">Chapter 3, &quot;Scientific Data Sets (SD API)&quot;</a> in the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span>, for a description of the organization of chunks in a data set.
+The parameter <em class="cVarName">origin</em> specifies the coordinates of the chunk according to the chunk position in the overall chunk array. Refer to Chapter 3, &quot;Scientific Data Sets (SD API)&quot; in the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span>, for a description of the organization of chunks in a data set.
 </div>
 </td>
 </tr>
@@ -10489,7 +10495,7 @@ The array <em class="cVarName">stride</em> specifies the writing pattern along e
 &#160;
 </div></td>
     <td><a name="wp582296"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-When writing data to a chunked data set using <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDwritedata</span>, consideration should be given to the issues presented in the section on chunking in <a href="../../UsrGuide/html/UG_SD.html#wp29379">Chapter 3, &quot;Scientific Data Sets (SD API)&quot;</a> and <a href="../../UsrGuide/html/UG_Perform.html#wp18778">Chapter 14, &quot;HDF Performance Issues&quot;</a> in the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span>.
+When writing data to a chunked data set using <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDwritedata</span>, consideration should be given to the issues presented in the section on chunking in Chapter 3, &quot;Scientific Data Sets (SD API)&quot; and Chapter 14, &quot;HDF Performance Issues&quot; in the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span>.
 </div>
 </td>
 </tr>
