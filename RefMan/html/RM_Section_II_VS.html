@@ -7,12 +7,12 @@
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.8.2296" />
     <meta name="TEMPLATEBASE" content="Dynamic HTML" />
-    <meta name="LASTUPDATED" content="07/21/11 05:46:11" />
+    <meta name="LASTUPDATED" content="08/01/11 12:50:29" />
     <title>VHstoredata/vhfsd/vhfscd</title>
     <link rel="StyleSheet" href="document.css" type="text/css" media="all" />
     <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
 <link rel="first" title="First" href="RM_Front.html" />
-<link rel="last" title="Last" href="RM_Section_II_HDFLOP.html" />
+<link rel="last" title="Last" href="Attributes.html" />
 <link rel="previous" title="Previous" href="RM_Section_II_VF.html" />
 <link rel="next" title="Next" href="RM_Section_II_VSQ.html" />
 
@@ -207,7 +207,7 @@ Description
 &#160;
 </div></td>
     <td><a name="wp451787"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-This routine provides a high-level method for creating single-order, single-field vdatas.
+This routine provides a high-level method for creating single-order, single-field vdatas. 
 </div>
 </td>
 </tr>
@@ -2739,7 +2739,7 @@ Length of the attribute&#39;s data
 Purpose
 </div></td>
     <td><a name="wp492611"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Retrieves location and size of the data of an attribute.
+Retrieves location and size of the data of an attribute (H4 Mapping project specific.)
 </div>
 </td>
 </tr>
@@ -3359,7 +3359,7 @@ Array to hold lengths of the data blocks
 Purpose
 </div></td>
     <td><a name="wp489900"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Retrieves location and size of data blocks in a specified vdata, after a specified data block
+Retrieves location and size of data blocks in a specified vdata, after a specified data block (H4 Mapping project specific.)
 </div>
 </td>
 </tr>
@@ -4120,7 +4120,7 @@ IN:
 </div>
 </td>
     <td><a name="wp489321"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Zero-based index of first user-created vdata to retrieve
+Vdata number to start retrieving at
 </div>
 </td>
 </tr>
@@ -4164,7 +4164,7 @@ Array to hold reference numbers of retrieved vdatas
 Purpose
 </div></td>
     <td><a name="wp489338"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Retrieves reference numbers of user-created vdatas in a file or in a vgroup.
+Retrieves reference numbers of vdatas in a file or in a vgroup.
 </div>
 </td>
 </tr>
@@ -4182,7 +4182,7 @@ Returns the actual number of user-created vdatas retrieved if successful, and <c
 Description
 </div></td>
     <td><a name="wp489346"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-<b class="cFunctionName">VSgetvdatas</b> retrieves a list containing the reference numbers of user-created vdatas found in a file or under a vgroup.  The file or the vgroup is specified by <em class="cVarName">id</em>.
+<b class="cFunctionName">VSgetvdatas</b> retrieves a list containing the reference numbers of vdatas found in a file or under a vgroup.  The file or the vgroup is specified by <em class="cVarName">id</em>.
 </div>
 </td>
 </tr>
@@ -4191,7 +4191,7 @@ Description
 &#160;
 </div></td>
     <td><a name="wp489423"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-The retrieved vdatas will be the ones that were previously created by user applications, not including those that were created by the library internally.  Thus, they are referred to as user-created vdatas for brevity.
+The retrieved vdatas will be the ones that were previously created by user applications, not including those that were created by the library internally.  They are referred to as user-created vdatas, for brevity.
 </div>
 </td>
 </tr>
@@ -4978,7 +4978,7 @@ IN:
 </div>
 </td>
     <td><a name="wp490021"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Zero-based index of first vdatas of the specified class to retrieve
+Vdata number to start retrieving at
 </div>
 </td>
 </tr>
@@ -7081,7 +7081,7 @@ character*(*) databuf
     <table id="SummaryNotReq2" border="0" width="850" cellspacing="0" cellpadding="0">
       <tr>
         <td align="left">
-        HDF4.2.6 - June 2011<br/>
+        HDF 4.2.6 - June 2011<br/>
         <a href="RM_Front.html">Copyright</a>
         <td align="right">
           <span style="font-size: 12px; font-weight: bold">

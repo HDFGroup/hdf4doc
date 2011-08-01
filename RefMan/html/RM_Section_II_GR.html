@@ -7,12 +7,12 @@
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.8.2296" />
     <meta name="TEMPLATEBASE" content="Dynamic HTML" />
-    <meta name="LASTUPDATED" content="07/21/11 05:45:48" />
+    <meta name="LASTUPDATED" content="08/01/11 12:50:09" />
     <title>GRattrinfo/mgatinf</title>
     <link rel="StyleSheet" href="document.css" type="text/css" media="all" />
     <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
 <link rel="first" title="First" href="RM_Front.html" />
-<link rel="last" title="Last" href="RM_Section_II_HDFLOP.html" />
+<link rel="last" title="Last" href="Attributes.html" />
 <link rel="previous" title="Previous" href="RM_Section_II_AN.html" />
 <link rel="next" title="Next" href="RM_Section_II_H.html" />
 
@@ -1012,7 +1012,7 @@ Buffer to hold length of the attribute&#39;s data
 Purpose
 </div></td>
     <td><a name="wp493597"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Retrieves location and size of attribute&#39;s data.
+Retrieves location and size of attribute&#39;s data. (H4 Mapping project specific)
 </div>
 </td>
 </tr>
@@ -1817,7 +1817,7 @@ Array to hold lengths of the data blocks
 Purpose
 </div></td>
     <td><a name="wp493478"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Retrieves location and size of data blocks in a specified raster image, starting at a specified block.
+Retrieves location and size of data blocks in a specified raster image, starting at a specified block. (H4 Mapping project specific)
 </div>
 </td>
 </tr>
@@ -2245,77 +2245,77 @@ GRgetlutinfo/mgglinf
 <a name="wp441255"> </a><p style="font-weight: normal" class="pSignature">
 intn GRgetlutinfo(int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">pal_id</span>, int32 *<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ncomp</span>, int32 *<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">data_type</span>, int32<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> </span>*<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">interlace_mode</span>,<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> </span>int32 *<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">num_entries</span>)
 </p>
-<a name="wp452263"> </a><p class="pBodyRelative">
+<a name="wp497391"> </a><p class="pBodyRelative">
 </p>
 <div align="left">
-<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp443312table443310">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp497340table497338">
   <caption></caption>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp443312"> </a><div style="margin-top: 0pt" class="pCellVariable">
+<a name="wp497340"> </a><div style="margin-top: 0pt" class="pCellVariable">
 pal_id
 </div>
 </td>
-    <td><a name="wp443314"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp497342"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 IN:
 </div>
 </td>
-    <td><a name="wp443316"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp497344"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 Palette identifier returned by <b class="cFunctionName">GRgetlutid</b>
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp443318"> </a><div style="margin-top: 0pt" class="pCellVariable">
+<a name="wp497346"> </a><div style="margin-top: 0pt" class="pCellVariable">
 ncomp
 </div>
 </td>
-    <td><a name="wp443320"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp497348"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 OUT:
 </div>
 </td>
-    <td><a name="wp443322"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp497350"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 Number of components in the palette
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp443324"> </a><div style="margin-top: 0pt" class="pCellVariable">
+<a name="wp497352"> </a><div style="margin-top: 0pt" class="pCellVariable">
 nt
 </div>
 </td>
-    <td><a name="wp443326"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp497354"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 OUT:
 </div>
 </td>
-    <td><a name="wp443328"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp497356"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 Number type of the palette
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp443330"> </a><div style="margin-top: 0pt" class="pCellVariable">
+<a name="wp497358"> </a><div style="margin-top: 0pt" class="pCellVariable">
 interlace_mode
 </div>
 </td>
-    <td><a name="wp443332"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp497360"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 OUT:
 </div>
 </td>
-    <td><a name="wp443334"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp497362"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 Interlace mode of the stored palette data
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp443336"> </a><div style="margin-top: 0pt" class="pCellVariable">
+<a name="wp497364"> </a><div style="margin-top: 0pt" class="pCellVariable">
 num_entries
 </div>
 </td>
-    <td><a name="wp443338"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp497366"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 OUT:
 </div>
 </td>
-    <td><a name="wp443340"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp497368"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 Number of color lookup table entries in the palette
 </div>
 </td>
@@ -2325,31 +2325,31 @@ Number of color lookup table entries in the palette
 <p class="pBodyRelative">
 </p>
 <div align="left">
-<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp443363table443361">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp497371table497369">
   <caption></caption>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp443363"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp497371"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 Purpose
 </div></td>
-    <td><a name="wp443365"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp497373"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 Retrieves information about a palette.
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp443367"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp497375"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 Return value
 </div></td>
-    <td><a name="wp443369"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp497377"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 Returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">0</span>) if successful and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">-1</span>) otherwise.
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp443371"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp497379"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 Description
 </div></td>
-    <td><a name="wp443373"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp497381"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 <b class="cFunctionName">GRgetlutinfo</b> retrieves the number of pixel components, number type, interlace mode, and number of color lookup table entries of the palette identified by the parameter <em class="cVarName">pal_id</em>.  These values are stored in the parameters <em class="cVarName">ncomp</em>, <em class="cVarName">nt</em>, <em class="cVarName">interlace_mode</em>, and <em class="cVarName">num_entries</em>, respectively.  In C if the value of any of the output parameters are set to <code style="font-family: Courier New; font-size: 8pt" class="cDefName">NULL</code>, the corresponding information will not be retrieved.
 </div>
 </td>
@@ -2359,22 +2359,22 @@ Description
 <p class="pBodyRelative">
 </p>
 <div align="left">
-<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp443472table443374">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp497384table497382">
   <caption></caption>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp443472"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp497384"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 FORTRAN
 </div></td>
-    <td><a name="wp443474"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortSyntax">
+    <td><a name="wp497386"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortSyntax">
 integer function mgglinf(pal_id, ncomp, nt, interlace_mode, num_entries)
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp443484"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp497388"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 &#160;
 </div></td>
-    <td><a name="wp443486"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortVar">
+    <td><a name="wp497390"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortVar">
 integer pal_id, ncomp, nt, interlace_mode, num_entries
 </div>
 </td>
@@ -2384,14 +2384,14 @@ integer pal_id, ncomp, nt, interlace_mode, num_entries
 <p class="pBodyRelative">
 
 </p>
-<a name="wp476743"> </a><h2 class="pRef_GR_RoutineName">
+<a name="wp497392"> </a><h2 class="pRef_GR_RoutineName">
 <p align=right><A HREF="RM_Section_II_GRLOP.html">
 [GR Interface]</A><a HREF="RMTop.html"><b>[Top]</b></a>
 </p>
 <hr />
 GRgetnluts/mggnluts
 </h2>
-<a name="wp476744"> </a><p style="font-weight: normal" class="pSignature">
+<a name="wp497393"> </a><p style="font-weight: normal" class="pSignature">
 intn GRgetnluts(int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ri_id</span>)
 </p>
 <a name="wp476813"> </a><p class="pBodyRelative">
@@ -2920,7 +2920,7 @@ Description
 &#160;
 </div></td>
     <td><a name="wp490399"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-The parameter <em class="cVarName">origin</em> is a two-dimensional array which specifies the coordinates of the chunk according to the chunk position in the overall chunk array. Refer to Chapter 8, &quot;General Raster Images (GR API),&quot; in the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span> for details.
+The parameter <em class="cVarName">origin</em> is a two-dimensional array which specifies the coordinates of the chunk according to the chunk position in the overall chunk array. Refer to <a href="../../UsrGuide/html/UG_GR.html#wp44614">Chapter 8, &quot;General Raster Images (GR API)&quot;</a> in the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span> for details.
 </div>
 </td>
 </tr>
@@ -4267,265 +4267,6 @@ character*(*) values, attr_name
 <p class="pBodyRelative">
 
 </p>
-<a name="wp490879"> </a><h2 class="pRef_GR_RoutineName">
-<p align=right><A HREF="RM_Section_II_GRLOP.html">
-[GR Interface]</A><a HREF="RMTop.html"><b>[Top]</b></a>
-</p>
-<hr />
-GRsetcompress/mgscompress
-</h2>
-<a name="wp449491"> </a><p style="font-weight: normal" class="pSignature">
-intn GRsetcompress(int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ri_id</span>, int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">comp_type</span>, comp_info *<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">c_info</span>)
-</p>
-<a name="wp452285"> </a><p class="pBodyRelative">
-</p>
-<div align="left">
-<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp444545table444543">
-  <caption></caption>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp444545"> </a><div style="margin-top: 0pt" class="pCellVariable">
-ri_id
-</div>
-</td>
-    <td><a name="wp444547"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-IN:
-</div>
-</td>
-    <td><a name="wp444549"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Raster image identifier returned by <b class="cFunctionName">GRcreate</b> or <b class="cFunctionName">GRselect</b>
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp444551"> </a><div style="margin-top: 0pt" class="pCellVariable">
-comp_type
-</div>
-</td>
-    <td><a name="wp444553"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-IN:
-</div>
-</td>
-    <td><a name="wp444555"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Compression method for the image data
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp444557"> </a><div style="margin-top: 0pt" class="pCellVariable">
-<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">C only:<br /></span>c_info
-</div>
-</td>
-    <td><a name="wp444559"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-<br />IN:
-</div>
-</td>
-    <td><a name="wp444561"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-<br />Pointer to the <code style="font-family: Courier New; font-size: small; font-style: normal; font-weight: normal">comp_info</code> union
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp446197"> </a><div style="margin-top: 0pt" class="pCellVariable">
-<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Fortran only:<br /></span>comp_prm
-</div>
-</td>
-    <td><a name="wp446199"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-<br />IN:
-</div>
-</td>
-    <td><a name="wp446201"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-<br />Compression parameters array
-</div>
-</td>
-</tr>
-</table>
-</div>
-<p class="pBodyRelative">
-</p>
-<div align="left">
-<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp444564table444562">
-  <caption></caption>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp444564"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
-Purpose
-</div></td>
-    <td><a name="wp444566"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Specifies if the raster image will be stored in a file as a compressed raster image.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp444568"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
-Return value
-</div></td>
-    <td><a name="wp444570"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) if successful and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) otherwise.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp444572"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
-Description
-</div></td>
-    <td><a name="wp444574"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-<b class="cFunctionName">GRsetcompress</b> specifies if the raster image specified by <em class="cVarName">ri_id</em> will be stored in the file in compressed format.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp446149"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
-&#160;
-</div></td>
-    <td><a name="wp449492"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-The compression method is specified by the parameter <em class="cVarName">comp_type</em>. Valid values of the parameter <em class="cVarName">comp_type</em> are:
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp446261"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
-&#160;
-</div></td>
-    <td><a name="wp496801"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-<span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">    </span><code style="font-family: Courier New; font-size: 8pt" class="cDefName">COMP_CODE_RLE</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">1</code>) for RLE run-length encoding
-</div>
-<a name="wp477899"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-<span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">    </span><code style="font-family: Courier New; font-size: 8pt" class="cDefName">COMP_CODE_SKPHUFF</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">3</code>) for Skipping Huffman compression
-</div>
-<a name="wp477900"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-<span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">    </span><code style="font-family: Courier New; font-size: 8pt" class="cDefName">COMP_CODE_DEFLATE</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">4</code>) for GZIP compression
-</div>
-<a name="wp477901"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-<span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">    </span><code style="font-family: Courier New; font-size: 8pt" class="cDefName">COMP_CODE_SZIP</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">5</code>) for SZIP compression
-</div>
-<a name="wp476289"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-<span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">    </span><code style="font-family: Courier New; font-size: 8pt" class="cDefName">COMP_CODE_JPEG</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">7</code>) for JPEG compression
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp446276"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
-&#160;
-</div></td>
-    <td><a name="wp446278"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-The compression method parameters are specified by the parameter <em class="cVarName">c_info</em> in C and the parameter <em class="cVarName">comp_prm</em> in Fortran. The parameter <em class="cVarName">c_info</em> has type <code style="font-family: Courier New; font-size: small; font-style: normal; font-weight: normal">comp_info</code>, which is described in the <code style="font-family: Courier New; font-size: 8pt" class="cDefName">hcomp.h</code> header file. It contains algorithm-specific information for the library compression routines.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp446272"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
-&#160;
-</div></td>
-    <td><a name="wp446274"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-The skipping size for the Skipping Huffman algorithm is specified in the field <code style="font-family: Courier New; font-size: small; font-style: normal; font-weight: normal">c_info.skphuff.skp_size</code> in C and in the parameter <em class="cVarName">comp_prm</em>(1) in Fortran.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp446268"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
-&#160;
-</div></td>
-    <td><a name="wp446270"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-The deflate level for the GZIP algorithm is specified in the field <code style="font-family: Courier New; font-size: small; font-style: normal; font-weight: normal">c_info.deflate.level</code> in C and in the parameter <em class="cVarName">comp_prm</em>(1) in  Fortran.
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp477737"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
-&#160;
-</div></td>
-    <td><a name="wp477741"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-The parameter <em class="cVarName">c_info</em> is a pointer to a union structure of type <code style="font-family: Courier New; font-size: small; font-style: normal; font-weight: normal">comp_info</code>. This union structure is defined as follows:
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp477733"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
-&#160;
-</div></td>
-    <td><a name="wp477761"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
-<PRE>typedef union tag_comp_info</PRE>
-</code><a name="wp477762"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
-<PRE>{</PRE>
-</code><a name="wp477763"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
-<PRE>    struct</PRE>
-</code><a name="wp477764"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
-<PRE>    { /* Not used by GRsetcompress */ } jpeg;</PRE>
-</code><a name="wp477768"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
-<PRE>    struct</PRE>
-</code><a name="wp477769"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
-<PRE>    { /* Not used by GRsetcompress */ } nbit;</PRE>
-</code><a name="wp477773"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
-<PRE>    struct</PRE>
-</code><a name="wp477774"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
-<PRE>    {  /* struct to contain info about how to compress size of the </PRE>
-</code><a name="wp477775"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
-<PRE>          elements when skipping */</PRE>
-</code><a name="wp477776"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
-<PRE>        intn skp_size;</PRE>
-</code><a name="wp477777"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
-<PRE>    } skphuff;</PRE>
-</code><a name="wp477779"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
-<PRE>    struct</PRE>
-</code><a name="wp477780"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
-<PRE>    {  /* struct to contain info about how to compress or</PRE>
-</code><a name="wp496824"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
-<PRE>          decompress gzip encoded dataset how hard to work</PRE>
-</code><a name="wp496825"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
-<PRE>          when compressing data*/</PRE>
-</code><a name="wp477783"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
-<PRE>        intn level;</PRE>
-</code><a name="wp477784"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
-<PRE>    } deflate;</PRE>
-</code><a name="wp477919"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
-<PRE>    struct</PRE>
-</code><a name="wp477920"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
-<PRE>    {</PRE>
-</code><a name="wp477921"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
-<PRE>        int32 options_mask;   /* IN */</PRE>
-</code><a name="wp477922"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
-<PRE>        int32 pixels_per_block;   /* IN */</PRE>
-</code><a name="wp477923"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
-<PRE>        int32 pixels_per_scanline; /* OUT: computed */</PRE>
-</code><a name="wp477924"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
-<PRE>        int32 bits_per_pixel; /* OUT: size of NT */</PRE>
-</code><a name="wp477925"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
-<PRE>        int32 pixels; /* OUT: size of dataset or chunk */</PRE>
-</code><a name="wp477926"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
-<PRE>    } szip;  /* for szip encoding */</PRE>
-</code><a name="wp477797"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
-<PRE>} comp_info;</PRE>
-</code></td>
-</tr>
-</table>
-</div>
-<p class="pBodyRelative">
-<span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"></span></p>
-<div align="left">
-<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp446215table446213">
-  <caption></caption>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp446215"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
-FORTRAN
-</div></td>
-    <td><a name="wp446217"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortSyntax">
-integer mgscompress(ri_id, comp_type, comp_prm)
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp446229"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
-&#160;
-</div></td>
-    <td><a name="wp446231"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortVar">
-integer ri_id, comp_type, comp_prm(*)
-</div>
-</td>
-</tr>
-</table>
-</div>
-<p class="pBodyRelative">
-<span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"></span>
-</p>
 <a name="wp446901"> </a><h2 class="pRef_GR_RoutineName">
 <p align=right><A HREF="RM_Section_II_GRLOP.html">
 [GR Interface]</A><a HREF="RMTop.html"><b>[Top]</b></a>
@@ -5031,6 +4772,265 @@ integer ri_id, maxcache, flags
 <p class="pBodyRelative">
 
 </p>
+<a name="wp497400"> </a><h2 class="pRef_GR_RoutineName">
+<p align=right><A HREF="RM_Section_II_GRLOP.html">
+[GR Interface]</A><a HREF="RMTop.html"><b>[Top]</b></a>
+</p>
+<hr />
+GRsetcompress/mgscompress
+</h2>
+<a name="wp497401"> </a><p style="font-weight: normal" class="pSignature">
+intn GRsetcompress(int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ri_id</span>, int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">comp_type</span>, comp_info *<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">c_info</span>)
+</p>
+<a name="wp497510"> </a><p class="pBodyRelative">
+</p>
+<div align="left">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp497404table497402">
+  <caption></caption>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp497404"> </a><div style="margin-top: 0pt" class="pCellVariable">
+ri_id
+</div>
+</td>
+    <td><a name="wp497406"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+IN:
+</div>
+</td>
+    <td><a name="wp497408"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Raster image identifier returned by <b class="cFunctionName">GRcreate</b> or <b class="cFunctionName">GRselect</b>
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp497410"> </a><div style="margin-top: 0pt" class="pCellVariable">
+comp_type
+</div>
+</td>
+    <td><a name="wp497412"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+IN:
+</div>
+</td>
+    <td><a name="wp497414"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Compression method for the image data
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp497416"> </a><div style="margin-top: 0pt" class="pCellVariable">
+<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">C only:<br /></span>c_info
+</div>
+</td>
+    <td><a name="wp497418"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+<br />IN:
+</div>
+</td>
+    <td><a name="wp497420"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+<br />Pointer to the <code style="font-family: Courier New; font-size: small; font-style: normal; font-weight: normal">comp_info</code> union
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp497422"> </a><div style="margin-top: 0pt" class="pCellVariable">
+<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Fortran only:<br /></span>comp_prm
+</div>
+</td>
+    <td><a name="wp497424"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+<br />IN:
+</div>
+</td>
+    <td><a name="wp497426"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+<br />Compression parameters array
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="pBodyRelative">
+</p>
+<div align="left">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp497429table497427">
+  <caption></caption>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp497429"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+Purpose
+</div></td>
+    <td><a name="wp497431"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Specifies if the raster image will be stored in a file as a compressed raster image.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp497433"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+Return value
+</div></td>
+    <td><a name="wp497435"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) if successful and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) otherwise.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp497437"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+Description
+</div></td>
+    <td><a name="wp497439"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+<b class="cFunctionName">GRsetcompress</b> specifies if the raster image specified by <em class="cVarName">ri_id</em> will be stored in the file in compressed format.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp497441"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+&#160;
+</div></td>
+    <td><a name="wp497443"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+The compression method is specified by the parameter <em class="cVarName">comp_type</em>. Valid values of the parameter <em class="cVarName">comp_type</em> are:
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp497445"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+&#160;
+</div></td>
+    <td><a name="wp497447"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+<span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">    </span><code style="font-family: Courier New; font-size: 8pt" class="cDefName">COMP_CODE_RLE</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">1</code>) for RLE run-length encoding
+</div>
+<a name="wp497448"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+<span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">    </span><code style="font-family: Courier New; font-size: 8pt" class="cDefName">COMP_CODE_SKPHUFF</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">3</code>) for Skipping Huffman compression
+</div>
+<a name="wp497449"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+<span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">    </span><code style="font-family: Courier New; font-size: 8pt" class="cDefName">COMP_CODE_DEFLATE</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">4</code>) for GZIP compression
+</div>
+<a name="wp497450"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+<span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">    </span><code style="font-family: Courier New; font-size: 8pt" class="cDefName">COMP_CODE_SZIP</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">5</code>) for SZIP compression
+</div>
+<a name="wp497451"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+<span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">    </span><code style="font-family: Courier New; font-size: 8pt" class="cDefName">COMP_CODE_JPEG</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">7</code>) for JPEG compression
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp497453"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+&#160;
+</div></td>
+    <td><a name="wp497455"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+The compression method parameters are specified by the parameter <em class="cVarName">c_info</em> in C and the parameter <em class="cVarName">comp_prm</em> in Fortran. The parameter <em class="cVarName">c_info</em> has type <code style="font-family: Courier New; font-size: small; font-style: normal; font-weight: normal">comp_info</code>, which is described in the <code style="font-family: Courier New; font-size: 8pt" class="cDefName">hcomp.h</code> header file. It contains algorithm-specific information for the library compression routines.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp497457"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+&#160;
+</div></td>
+    <td><a name="wp497459"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+The skipping size for the Skipping Huffman algorithm is specified in the field <code style="font-family: Courier New; font-size: small; font-style: normal; font-weight: normal">c_info.skphuff.skp_size</code> in C and in the parameter <em class="cVarName">comp_prm</em>(1) in Fortran.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp497461"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+&#160;
+</div></td>
+    <td><a name="wp497463"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+The deflate level for the GZIP algorithm is specified in the field <code style="font-family: Courier New; font-size: small; font-style: normal; font-weight: normal">c_info.deflate.level</code> in C and in the parameter <em class="cVarName">comp_prm</em>(1) in  Fortran.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp497465"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+&#160;
+</div></td>
+    <td><a name="wp497467"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+The parameter <em class="cVarName">c_info</em> is a pointer to a union structure of type <code style="font-family: Courier New; font-size: small; font-style: normal; font-weight: normal">comp_info</code>. This union structure is defined as follows:
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp497469"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+&#160;
+</div></td>
+    <td><a name="wp497471"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
+<PRE>typedef union tag_comp_info</PRE>
+</code><a name="wp497472"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
+<PRE>{</PRE>
+</code><a name="wp497473"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
+<PRE>    struct</PRE>
+</code><a name="wp497474"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
+<PRE>    { /* Not used by GRsetcompress */ } jpeg;</PRE>
+</code><a name="wp497476"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
+<PRE>    struct</PRE>
+</code><a name="wp497477"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
+<PRE>    { /* Not used by GRsetcompress */ } nbit;</PRE>
+</code><a name="wp497479"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
+<PRE>    struct</PRE>
+</code><a name="wp497480"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
+<PRE>    {  /* struct to contain info about how to compress size of the </PRE>
+</code><a name="wp497481"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
+<PRE>          elements when skipping */</PRE>
+</code><a name="wp497482"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
+<PRE>        intn skp_size;</PRE>
+</code><a name="wp497483"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
+<PRE>    } skphuff;</PRE>
+</code><a name="wp497485"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
+<PRE>    struct</PRE>
+</code><a name="wp497486"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
+<PRE>    {  /* struct to contain info about how to compress or</PRE>
+</code><a name="wp497487"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
+<PRE>          decompress gzip encoded dataset how hard to work</PRE>
+</code><a name="wp497488"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
+<PRE>          when compressing data*/</PRE>
+</code><a name="wp497489"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
+<PRE>        intn level;</PRE>
+</code><a name="wp497490"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
+<PRE>    } deflate;</PRE>
+</code><a name="wp497492"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
+<PRE>    struct</PRE>
+</code><a name="wp497493"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
+<PRE>    {</PRE>
+</code><a name="wp497494"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
+<PRE>        int32 options_mask;   /* IN */</PRE>
+</code><a name="wp497495"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
+<PRE>        int32 pixels_per_block;   /* IN */</PRE>
+</code><a name="wp497496"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
+<PRE>        int32 pixels_per_scanline; /* OUT: computed */</PRE>
+</code><a name="wp497497"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
+<PRE>        int32 bits_per_pixel; /* OUT: size of NT */</PRE>
+</code><a name="wp497498"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
+<PRE>        int32 pixels; /* OUT: size of dataset or chunk */</PRE>
+</code><a name="wp497499"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
+<PRE>    } szip;  /* for szip encoding */</PRE>
+</code><a name="wp497500"> </a><code style="font-family: Courier New; font-size: 8pt" class="pCodeRM">
+<PRE>} comp_info;</PRE>
+</code></td>
+</tr>
+</table>
+</div>
+<p class="pBodyRelative">
+<span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"></span></p>
+<div align="left">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp497503table497501">
+  <caption></caption>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp497503"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+FORTRAN
+</div></td>
+    <td><a name="wp497505"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortSyntax">
+integer mgscompress(ri_id, comp_type, comp_prm)
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp497507"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+&#160;
+</div></td>
+    <td><a name="wp497509"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortVar">
+integer ri_id, comp_type, comp_prm(*)
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="pBodyRelative">
+<span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"></span>
+</p>
 <a name="wp447148"> </a><h2 class="pRef_GR_RoutineName">
 <p align=right><A HREF="RM_Section_II_GRLOP.html">
 [GR Interface]</A><a HREF="RMTop.html"><b>[Top]</b></a>
@@ -5395,7 +5395,7 @@ Description
 &#160;
 </div></td>
     <td><a name="wp476466"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-The parameter <em class="cVarName">origin</em> is a two-dimensional array which specifies the coordinates of the chunk according to the chunk position in the overall chunk array. Refer to Chapter 8, &quot;General Raster Images (GR API),&quot; in the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span>.
+The parameter <em class="cVarName">origin</em> is a two-dimensional array which specifies the coordinates of the chunk according to the chunk position in the overall chunk array. Refer to <a href="../../UsrGuide/html/UG_GR.html#wp44614">Chapter 8, &quot;General Raster Images (GR API)&quot;</a> in the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span>.
 </div>
 </td>
 </tr>
@@ -6106,7 +6106,7 @@ Currently unavailable
     <table id="SummaryNotReq2" border="0" width="850" cellspacing="0" cellpadding="0">
       <tr>
         <td align="left">
-        HDF4.2.6 - June 2011<br/>
+        HDF 4.2.6 - June 2011<br/>
         <a href="RM_Front.html">Copyright</a>
         <td align="right">
           <span style="font-size: 12px; font-weight: bold">

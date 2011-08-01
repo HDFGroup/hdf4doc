@@ -7,12 +7,12 @@
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.8.2296" />
     <meta name="TEMPLATEBASE" content="Dynamic HTML" />
-    <meta name="LASTUPDATED" content="07/21/11 05:45:39" />
+    <meta name="LASTUPDATED" content="08/01/11 12:50:05" />
     <title>Section 1</title>
     <link rel="StyleSheet" href="document.css" type="text/css" media="all" />
     <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
 <link rel="first" title="First" href="RM_Front.html" />
-<link rel="last" title="Last" href="RM_Section_II_HDFLOP.html" />
+<link rel="last" title="Last" href="Attributes.html" />
 <link rel="previous" title="Previous" href="RM_Front.html" />
 <link rel="next" title="Next" href="RMTop.html" />
 
@@ -88,9 +88,15 @@ Like the single-file interfaces, the multifile interfaces are built upon the low
 	1.3.1	Scientific Data Sets: SD Interface
 </h3>
 <a name="wp418343"> </a><p style="color: #000000; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; margin-right: 0pt; text-align: left; text-decoration: none; text-transform: none" class="pBody">
-The scientific data set interface provides a collection of routines for reading and writing arrays of data. Multidimensional arrays accompanied by a record of their dimension and number type are called scientific data sets. Under the multifile interface, scientific data sets may include predefined or user defined attribute records. Each attribute record is optional and describes a particular facet of the environment from which the scientific data was taken.
+The scientific data set interface provides a collection of routines for reading and writing arrays of data. Multidimensional arrays accompanied by a record of their dimension and number type are called scientific data sets. Under the multifile interface, scientific data sets may include predefined or user-defined attribute records. Each attribute record is optional and can be used to note or describe about the data being stored in scientific data sets.
 </p>
-<a name="wp432955"> </a><p style="color: #000000; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; margin-right: 0pt; text-align: left; text-decoration: none; text-transform: none" class="pBody">
+<a name="wp441281"> </a><p style="color: #000000; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; margin-right: 0pt; text-align: left; text-decoration: none; text-transform: none" class="pBody">
+The SD interface is designed to be as compatible as possible with netCDF, an interface developed by the Unidata Program Center and used to store and manipulate scientific data sets. Consequently, the SD interface can read files written by the netCDF interface, and the netCDF interface version 2.3.2 (as implemented in HDF) can read both netCDF files and HDF files that contain scientific data sets.
+</p>
+<a name="wp441248"> </a><p style="color: #000000; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; margin-right: 0pt; text-align: left; text-decoration: none; text-transform: none" class="pBody">
+Further information regarding the netCDF interface routines and their equivalents in the HDF netCDF interface can be found  in the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span>, <a href="../../UsrGuide/html/UG_SD.html#wp47784">Section 3.15, &quot;netCDF.&quot;</a> Additional information on the netCDF interface can be found in the netCDF User&#39;s Guide available at <a href="http://www.unidata.ucar.edu/software/netcdf/docs/"><span class="cWebJump">http://www.unidata.ucar.edu/software/netcdf/docs/</span></a>.
+</p>
+<a name="wp441271"> </a><p style="color: #000000; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; margin-right: 0pt; text-align: left; text-decoration: none; text-transform: none" class="pBody">
 The names of the routines in the multifile scientific data set interface are prefaced by &#39;SD&#39;. The equivalent FORTRAN-77 routine names are prefaced by &#39;sf&#39;.
 </p>
 <a name="wp432956"> </a><h3 class="pHeading3">
@@ -100,7 +106,7 @@ The names of the routines in the multifile scientific data set interface are pre
 The purpose of the AN multifile annotation interface is to permit concurrent operations on a set of annotations that exist in more than one file. Annotations consist of labels and descriptions.
 </p>
 <a name="wp423391"> </a><p style="color: #000000; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; margin-right: 0pt; text-align: left; text-decoration: none; text-transform: none" class="pBody">
-The C routine names of the multifile annotation interface are prefaced by the string &#39;AN&#39; and the FORTRAN-77 routine names are prefaced by &#39;af&#39;. 
+The C routine names of the multifile annotation interface are prefaced by the string &#39;AN&#39; and the FORTRAN-77 routine names are prefaced by &#39;af&#39;.
 </p>
 <a name="wp423140"> </a><h3 class="pHeading3">
 	1.3.3	General Raster Images: GR Interface
@@ -111,17 +117,8 @@ The routines in the GR interface provide multifile operations on general raster 
 <a name="wp432166"> </a><p style="color: #000000; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; margin-right: 0pt; text-align: left; text-decoration: none; text-transform: none" class="pBody">
 The C routine names in the general raster interface have the prefix &#39;GR&#39; and the equivalent FORTRAN-77 routine names are prefaced by &#39;mg&#39;. 
 </p>
-<a name="wp422682"> </a><h3 class="pHeading3">
-	1.3.4	<span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> </span>Scientific Data Sets: netCDF Interface
-</h3>
-<a name="wp418353"> </a><p style="color: #000000; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; margin-right: 0pt; text-align: left; text-decoration: none; text-transform: none" class="pBody">
-The SD interface is designed to be as compatible as possible with netCDF, an interface developed by the Unidata Program Center. Consequently, the SD interface can read files written by the netCDF interface, and the netCDF interface (as implemented in HDF) can read both netCDF files and HDF files that contain scientific data sets.
-</p>
-<a name="wp418354"> </a><p style="color: #000000; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; margin-right: 0pt; text-align: left; text-decoration: none; text-transform: none" class="pBody">
-Further information regarding the netCDF interface routines and their equivalents in the HDF interface can be found  in the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span>. Additional information on the netCDF interface can be found in the netCDF User&#39;s Guide available by anonymous ftp from <a href="http://unidata.ucar.edu"><span class="cWebJump">unidata.ucar.edu</span></a>.
-</p>
 <a name="wp418357"> </a><h3 class="pHeading3">
-	1.3.5	Vdata: The VS Interface
+	1.3.4	Vdata: The VS Interface
 </h3>
 <a name="wp418358"> </a><p style="color: #000000; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; margin-right: 0pt; text-align: left; text-decoration: none; text-transform: none" class="pBody">
 The VS interface provides a collection of routines for reading and writing customized tables. Each table is comprised of a series of records whose values are stored in fixed length fields. In addition to its records, a vdata may contain four kinds of identifying information: a name, class, data type and a number of field names.
@@ -130,13 +127,13 @@ The VS interface provides a collection of routines for reading and writing custo
 Routines in the VS interface are prefaced by &#39;VS&#39;. The equivalent FORTRAN-77 routine names are prefaced by &#39;vsf&#39;. 
 </p>
 <a name="wp418367"> </a><h3 class="pHeading3">
-	1.3.6	Vdata Query: VSQ Interface
+	1.3.5	Vdata Query: VSQ Interface
 </h3>
 <a name="wp418368"> </a><p style="color: #000000; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; margin-right: 0pt; text-align: left; text-decoration: none; text-transform: none" class="pBody">
 The VSQ interface provides a collection of routines for inquiring about existing vdata. These routines provide information such as the number of records in a vdata, its field names, number types, and name. All routines in the VSQ interface are prefaced by &#39;VSQ&#39;. The equivalent FORTRAN-77 routine names are prefaced by &#39;vsq&#39;. 
 </p>
 <a name="wp418372"> </a><h3 class="pHeading3">
-	1.3.7	Vdata Fields: VF Interface
+	1.3.6	Vdata Fields: VF Interface
 </h3>
 <a name="wp418373"> </a><p style="color: #000000; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; margin-right: 0pt; text-align: left; text-decoration: none; text-transform: none" class="pBody">
 The VF interface provides a collection of routines for inquiring about the fields in an existing vdata. These routines provide information such as the field name, size, order, and number type.
@@ -145,7 +142,7 @@ The VF interface provides a collection of routines for inquiring about the field
 All routines in the VF interface are prefaced by &#39;VF&#39;. There are no equivalent FORTRAN-77 functions.
 </p>
 <a name="wp418377"> </a><h3 class="pHeading3">
-	1.3.8	Vgroups: V Interface
+	1.3.7	Vgroups: V Interface
 </h3>
 <a name="wp432992"> </a><p style="color: #000000; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; margin-right: 0pt; text-align: left; text-decoration: none; text-transform: none" class="pBody">
 The vgroup interface provides a collection of routines for grouping and manipulating HDF data objects in the file. Each vgroup may contain one or more vdatas, vgroups, or other HDF data objects. In addition to its members, a vgroup may also be given a  name and a class.
@@ -154,13 +151,13 @@ The vgroup interface provides a collection of routines for grouping and manipula
 Every routine name in the vgroup interface are prefaced by &#39;V&#39;. The equivalent FORTRAN-77 routine names are prefaced by &#39;vf&#39;.
 </p>
 <a name="wp433007"> </a><h3 class="pHeading3">
-	1.3.9	 Vdata/Vgroups: VH Interface
+	1.3.8	 Vdata/Vgroups: VH Interface
 </h3>
 <a name="wp433008"> </a><p style="color: #000000; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; margin-right: 0pt; text-align: left; text-decoration: none; text-transform: none" class="pBody">
 The high-level VH interface provides a collection of routines for creating simple vdatas and vgroups with a single function call. All routines  in this interface are prefaced by &#39;VH&#39;. The equivalent FORTRAN-77 routine names are prefaced by &#39;vh&#39;. 
 </p>
 <a name="wp432025"> </a><h3 class="pHeading3">
-	1.3.10	 Vgroup Inquiry: VQ Interface
+	1.3.9	 Vgroup Inquiry: VQ Interface
 </h3>
 <a name="wp432026"> </a><p style="color: #000000; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; margin-right: 0pt; text-align: left; text-decoration: none; text-transform: none" class="pBody">
 The high-level VQ interface provides one routine that returns tag information from a specified vgroup, and one routine that returns reference number information from a specified vgroup. All C routine names in this interface are prefaced by &#39;VQ&#39;. The equivalent Fortran-77 routine names are prefaced by &#39;vq&#39;. 
@@ -556,8 +553,8 @@ In the declarations contained in the headers of FORTRAN-77 functions, the follow
 <div style="margin-bottom: 6pt; margin-top: 3pt"><ul style="margin-bottom: 6pt; margin-top: 3pt">
 <a name="wp432342"> </a><div style="margin-bottom: 6pt; margin-top: 3pt"><li><em class="cVarName">character*(*) x</em> means that <em class="cVarName">x</em> refers to a string of an indefinite number of characters. It is the responsibility of the calling program to allocate enough space to hold the data to be stored in the string.</li></div>
 <a name="wp432343"> </a><div style="margin-bottom: 6pt; margin-top: 3pt"><li><em class="cVarName">real x(*)</em> means that <em class="cVarName">x</em> refers to an array of reals of indefinite size and of indefinite rank. It is the responsibility of the calling program to allocate an actual array with the correct number of dimensions and dimension sizes.</li></div>
-<a name="wp433444"> </a><div style="margin-bottom: 6pt; margin-top: 3pt"><li><em class="cVarName">&lt;valid numeric data type &gt; x</em> means that <em class="cVarName">x</em> may have one of the numeric data types listed in the Description column of <a href="RM_Section_I.html#wp432530">Table 1A on page 88</a>.</li></div>
-<a name="wp432581"> </a><div style="margin-bottom: 6pt; margin-top: 3pt"><li><em class="cVarName">&lt;valid data type &gt; x</em> means that <em class="cVarName">x</em> may have any of the data types listed in the Description column of <a href="RM_Section_I.html#wp432530">Table 1A on page 88</a>.</li></div>
+<a name="wp433444"> </a><div style="margin-bottom: 6pt; margin-top: 3pt"><li><em class="cVarName">&lt;valid numeric data type &gt; x</em> means that <em class="cVarName">x</em> may have one of the numeric data types listed in the Description column of <a href="RM_Section_I.html#wp432530">Table 1A on page 5</a>.</li></div>
+<a name="wp432581"> </a><div style="margin-bottom: 6pt; margin-top: 3pt"><li><em class="cVarName">&lt;valid data type &gt; x</em> means that <em class="cVarName">x</em> may have any of the data types listed in the Description column of <a href="RM_Section_I.html#wp432530">Table 1A on page 5</a>.</li></div>
 </ul></div>
 <a name="wp432344"> </a><h3 class="pHeading3">
 	1.5.7	FORTRAN-77, ANSI C and K&amp;R C 
@@ -1747,7 +1744,7 @@ Failed when finding a bit in a bit vector.
     <table id="SummaryNotReq2" border="0" width="850" cellspacing="0" cellpadding="0">
       <tr>
         <td align="left">
-        HDF4.2.6 - June 2011<br/>
+        HDF 4.2.6 - June 2011<br/>
         <a href="RM_Front.html">Copyright</a>
         <td align="right">
           <span style="font-size: 12px; font-weight: bold">

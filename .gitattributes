@@ -1,4 +1,5 @@
 * text=auto !eol
+RefMan/html/RMTOC.html -text
 RefMan/html/RMTop.html -text
 RefMan/html/RM_Front.html -text
 RefMan/html/RM_Section_I.html -text
