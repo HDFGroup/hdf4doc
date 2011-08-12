@@ -227,10 +227,13 @@ UsrGuide/src/UG_Fundmtls.fm -text
 UsrGuide/src/UG_GR.fm -text
 UsrGuide/src/UG_Intro.fm -text
 UsrGuide/src/UG_MF_Annot.fm -text
+UsrGuide/src/UG_PDF.book -text
+UsrGuide/src/UG_PDF.pdf -text
 UsrGuide/src/UG_Palettes.fm -text
 UsrGuide/src/UG_Perform.fm -text
 UsrGuide/src/UG_RIS24s.fm -text
 UsrGuide/src/UG_RIS8s.fm -text
+UsrGuide/src/UG_RawData.fm -text
 UsrGuide/src/UG_SD.fm -text
 UsrGuide/src/UG_Utils.fm -text
 UsrGuide/src/UG_Vdatas.fm -text
