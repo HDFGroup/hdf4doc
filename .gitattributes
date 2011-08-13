@@ -46,12 +46,8 @@ RefMan/html/images/hdf4_RM-02-1-2.jpg -text
 RefMan/html/images/hdf_logo.jpg -text
 RefMan/html/images/help.jpg -text
 RefMan/html/netCDF_copyright.html -text
-RefMan/src/RM-PDF.book -text
-RefMan/src/RM-html.book -text
-RefMan/src/RM-print.book -text
-RefMan/src/RMTOC.fm -text
-RefMan/src/RMTop.fm -text
 RefMan/src/RM_Front.fm -text
+RefMan/src/RM_PDF.book -text
 RefMan/src/RM_PDF.pdf -text
 RefMan/src/RM_Section_I.fm -text
 RefMan/src/RM_Section_III.fm -text
@@ -93,6 +89,10 @@ RefMan/src/RM_Section_II_VSLOP.fm -text
 RefMan/src/RM_Section_II_VSQ.fm -text
 RefMan/src/RM_Section_II_VSQLOP.fm -text
 RefMan/src/RM_Styles.fm -text
+RefMan/src/RM_TOC.fm -text
+RefMan/src/RM_Top.fm -text
+RefMan/src/RM_html.book -text
+RefMan/src/RM_print.book -text
 RefMan/webworks/hdf4_RM.wfp -text
 RefMan/webworks/support/CopyrightPage.asp -text
 RefMan/webworks/support/FirstInterfacePage.asp -text
@@ -207,7 +207,6 @@ UsrGuide/src/Examples_AN.fm -text
 UsrGuide/src/Examples_DFSD.fm -text
 UsrGuide/src/Examples_MAN.fm -text
 UsrGuide/src/Examples_SD.fm -text
-UsrGuide/src/UGTop.fm -text
 UsrGuide/src/UG_Annot.fm -text
 UsrGuide/src/UG_Appndx.fm -text
 UsrGuide/src/UG_BookIX.fm -text
@@ -233,8 +232,9 @@ UsrGuide/src/UG_Palettes.fm -text
 UsrGuide/src/UG_Perform.fm -text
 UsrGuide/src/UG_RIS24s.fm -text
 UsrGuide/src/UG_RIS8s.fm -text
-UsrGuide/src/UG_RawData.fm -text
+UsrGuide/src/UG_RawDatainfo.fm -text
 UsrGuide/src/UG_SD.fm -text
+UsrGuide/src/UG_Top.fm -text
 UsrGuide/src/UG_Utils.fm -text
 UsrGuide/src/UG_Vdatas.fm -text
 UsrGuide/src/UG_Vgroups.fm -text
