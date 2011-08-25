@@ -7,14 +7,14 @@
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.8.2296" />
     <meta name="TEMPLATEBASE" content="HDF4 Version 1.0" />
-    <meta name="LASTUPDATED" content="02/26/10 15:04:29" />
+    <meta name="LASTUPDATED" content="08/25/11 16:33:00" />
     <title>Chapter</title>
     <link rel="StyleSheet" href="document.css" type="text/css" media="all" />
     <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
-<link rel="first" title="First" href="UGTop.html" />
-<link rel="last" title="Last" href="netCDF_copyright.html" />
+<link rel="first" title="First" href="UG_Top.html" />
+<link rel="last" title="Last" href="UG_Front.html" />
 <link rel="previous" title="Previous" href="UG_Perform.html" />
-<link rel="next" title="Next" href="UG_Appndx.html" />
+<link rel="next" title="Next" href="UG_RawDatainfo.html" />
 
     <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
     <script type="text/javascript" language="JavaScript1.2" src="scripts/seealso.js"></script>
@@ -36,12 +36,13 @@
         </td>
         <td valign="middle" align="center">
           <b><H1>HDF User’s Guide</H1>
-           Version 4.2.5</b><br />
+           Version 4.2.6</b><br />
+<meta name="LASTUPDATED" content="08/25/11 16:33:00" />
         </td>
         <td valign="middle" align="right">
         <br/>
-<b><a HREF="UGTop.html">[Top]</a>
-<a accesskey="3" href="UG_Perform.html"><b>[Prev]</b><a accesskey="4" href="UG_Appndx.html"><b>[Next]</b></b>
+<b><a HREF="UG_Top.html">[Top]</a>
+<a accesskey="3" href="UG_Perform.html"><b>[Prev]</b><a accesskey="4" href="UG_RawDatainfo.html"><b>[Next]</b></b>
         </td>
       </tr>
     </table>
@@ -49,11 +50,11 @@
     <hr />
 
     <blockquote>
-<a name="wp90910"> </a>
+<a name="wp93783"> </a>
 <h1> <align left=20>
 Chapter
 
-<a name="wp90912"> </a>
+<a name="wp93784"> </a>
 15
 
 --
@@ -80,19 +81,19 @@ The HDF command-line utilities are application programs that are executed from t
 <a href="UG_Utils.html#wp5390">Table 15A</a> lists the names and descriptions of the utilities described in this chapter. 
 </p>
 <a name="wp5390"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 15A	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">The HDF Command-line Utilities</span></div>
+TABLE 15A	<em class="cTitleText">The HDF Command-line Utilities</em></div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp80838table9189">
   <caption></caption>
-  <tr>    <th><a name="wp80838"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <th><a name="wp80838"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Utility Type
 </div>
 </th>
-    <th><a name="wp80840"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <th><a name="wp80840"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Name
 </div>
 </th>
-    <th><a name="wp80842"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <th><a name="wp80842"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Description
 </div>
 </th>
@@ -106,7 +107,7 @@ hdp
 </div>
 </td>
     <td><a name="wp80848"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Also known as <span style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF dumper</span>. Displays general information about the contents of an HDF file (<a href="UG_Utils.html#wp64114">Section&#160;15.2 on page&#160;438</a>)
+Also known as <span style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF dumper</span>. Displays general information about the contents of an HDF file (<a href="UG_Utils.html#wp64114">Section&#160;15.2 on page&#160;454</a>)
 </div>
 </td>
 </tr>
@@ -115,7 +116,7 @@ hdiff
 </div>
 </td>
     <td><a name="wp80860"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Displays the differences between the contents of two HDF files (<a href="UG_Utils.html#wp87887">Section&#160;15.3 on page&#160;442</a>)
+Displays the differences between the contents of two HDF files (<a href="UG_Utils.html#wp87887">Section&#160;15.3 on page&#160;458</a>)
 </div>
 </td>
 </tr>
@@ -124,7 +125,7 @@ vshow
 </div>
 </td>
     <td><a name="wp80869"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Displays vset information (<a href="UG_Utils.html#wp88116">Section&#160;15.4 on page&#160;443</a>)
+Displays vset information (<a href="UG_Utils.html#wp88116">Section&#160;15.4 on page&#160;459</a>)
 </div>
 </td>
 </tr>
@@ -137,7 +138,7 @@ hdfimport
 </div>
 </td>
     <td><a name="wp80875"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Converts floating-point and/or integer data to HDF scientific data sets (SDS) and/or HDF 8-bit raster image sets (RIS8) format, storing the results in an HDF file (<a href="UG_Utils.html#wp77867">Section&#160;15.5 on page&#160;443</a>) <br />[This utility replaces <span style="color: #000000; font-family: Courier New; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">fp2hdf</span>.]
+Converts floating-point and/or integer data to HDF scientific data sets (SDS) and/or HDF 8-bit raster image sets (RIS8) format, storing the results in an HDF file (<a href="UG_Utils.html#wp77867">Section&#160;15.5 on page&#160;459</a>) <br />[This utility replaces <span style="color: #000000; font-family: Courier New; font-size: 6pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">fp2hdf</span>.]
 </div>
 </td>
 </tr>
@@ -146,7 +147,7 @@ r8tohdf
 </div>
 </td>
     <td colspan="1" rowspan="2"><a name="wp80884"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Converts one or more 8-bit raster images in raw format to the HDF RIS8 format and writes them to a file, optionally with palettes (<a href="UG_Utils.html#wp64718">Section&#160;15.6 on page&#160;447</a>)
+Converts one or more 8-bit raster images in raw format to the HDF RIS8 format and writes them to a file, optionally with palettes (<a href="UG_Utils.html#wp64718">Section&#160;15.6 on page&#160;463</a>)
 </div>
 </td>
 </tr>
@@ -156,7 +157,7 @@ r24hdf8
 </div>
 </td>
     <td><a name="wp80902"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Converts raw RGB 24-bit images to an RIS8 with a palette (<a href="UG_Utils.html#wp64816">Section&#160;15.7 on page&#160;448</a>)
+Converts raw RGB 24-bit images to an RIS8 with a palette (<a href="UG_Utils.html#wp64816">Section&#160;15.7 on page&#160;464</a>)
 </div>
 </td>
 </tr>
@@ -165,7 +166,7 @@ paltohdf
 </div>
 </td>
     <td><a name="wp80911"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Converts a raw palette to the HDF format (<a href="UG_Utils.html#wp64786">Section&#160;15.8 on page&#160;449</a>)
+Converts a raw palette to the HDF format (<a href="UG_Utils.html#wp64786">Section&#160;15.8 on page&#160;465</a>)
 </div>
 </td>
 </tr>
@@ -178,7 +179,7 @@ hdftor8
 </div>
 </td>
     <td><a name="wp80917"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Converts raster images and/or palettes from the HDF format to the raw format and stores them in two sets of files - one for images and the other for palettes (<a href="UG_Utils.html#wp64832">Section&#160;15.9 on page&#160;449</a>)
+Converts raster images and/or palettes from the HDF format to the raw format and stores them in two sets of files - one for images and the other for palettes (<a href="UG_Utils.html#wp64832">Section&#160;15.9 on page&#160;465</a>)
 </div>
 </td>
 </tr>
@@ -187,7 +188,7 @@ hdftopal
 </div>
 </td>
     <td><a name="wp80929"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Converts a palette in an HDF file to a raw palette format (<a href="UG_Utils.html#wp64803">Section&#160;15.10 on page&#160;450</a>)
+Converts a palette in an HDF file to a raw palette format (<a href="UG_Utils.html#wp64803">Section&#160;15.10 on page&#160;466</a>)
 </div>
 </td>
 </tr>
@@ -200,7 +201,7 @@ ristosds
 </div>
 </td>
     <td><a name="wp80935"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Converts a set of RIS8 HDF files into a single three-dimensional SDS HDF file (<a href="UG_Utils.html#wp64771">Section&#160;15.11 on page&#160;450</a>)
+Converts a set of RIS8 HDF files into a single three-dimensional SDS HDF file (<a href="UG_Utils.html#wp64771">Section&#160;15.11 on page&#160;466</a>)
 </div>
 </td>
 </tr>
@@ -209,7 +210,7 @@ hdf24hdf8
 </div>
 </td>
     <td><a name="wp80944"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Converting an RIS24 HDF image to an RIS8 HDF image with a 256-color palette (<a href="UG_Utils.html#wp64885">Section&#160;15.12 on page&#160;451</a>)
+Converting an RIS24 HDF image to an RIS8 HDF image with a 256-color palette (<a href="UG_Utils.html#wp64885">Section&#160;15.12 on page&#160;467</a>)
 </div>
 </td>
 </tr>
@@ -218,7 +219,7 @@ hdfcomp
 </div>
 </td>
     <td><a name="wp80953"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Compresses 8-bit raster images from an HDF file, storing them in a new HDF file (<a href="UG_Utils.html#wp64330">Section&#160;15.13 on page&#160;451</a>)
+Compresses 8-bit raster images from an HDF file, storing them in a new HDF file (<a href="UG_Utils.html#wp64330">Section&#160;15.13 on page&#160;467</a>)
 </div>
 </td>
 </tr>
@@ -231,7 +232,7 @@ hdfpack
 </div>
 </td>
     <td><a name="wp80962"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Compresses an HDF file, reading all of the objects in the file and writing them to a new HDF file (<a href="UG_Utils.html#wp64251">Section&#160;15.14 on page&#160;452</a>)
+Compresses an HDF file, reading all of the objects in the file and writing them to a new HDF file (<a href="UG_Utils.html#wp64251">Section&#160;15.14 on page&#160;468</a>)
 </div>
 </td>
 </tr>
@@ -240,7 +241,7 @@ hrepack
 </div>
 </td>
     <td><a name="wp80971"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Performs a logical copy of an input HDF4 file to an output HDF4 file, copying all high level objects while optionally rewriting the objects with or without compression and/or with or without chunking (<a href="UG_Utils.html#wp77760">Section&#160;15.15 on page&#160;452</a>)
+Performs a logical copy of an input HDF4 file to an output HDF4 file, copying all high level objects while optionally rewriting the objects with or without compression and/or with or without chunking (<a href="UG_Utils.html#wp77760">Section&#160;15.15 on page&#160;468</a>)
 </div>
 </td>
 </tr>
@@ -249,7 +250,7 @@ vmake
 </div>
 </td>
     <td><a name="wp80983"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Creates vsets (<a href="UG_Utils.html#wp64295">Section&#160;15.16 on page&#160;454</a>)
+Creates vsets (<a href="UG_Utils.html#wp64295">Section&#160;15.16 on page&#160;470</a>)
 </div>
 </td>
 </tr>
@@ -262,7 +263,7 @@ hdfls
 </div>
 </td>
     <td><a name="wp80992"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Displays information about HDF data onjects (<a href="UG_Utils.html#wp63233">Section&#160;15.17 on page&#160;455</a>)
+Displays information about HDF data onjects (<a href="UG_Utils.html#wp63233">Section&#160;15.17 on page&#160;471</a>)
 </div>
 </td>
 </tr>
@@ -271,7 +272,7 @@ hdfed
 </div>
 </td>
     <td><a name="wp80998"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Displays the contents of an HDF file and allows limited manipulation of the data (<a href="UG_Utils.html#wp63363">Section&#160;15.18 on page&#160;457</a>)
+Displays the contents of an HDF file and allows limited manipulation of the data (<a href="UG_Utils.html#wp63363">Section&#160;15.18 on page&#160;473</a>)
 </div>
 </td>
 </tr>
@@ -284,7 +285,7 @@ h4toh5, h5toh4, etc
 </div>
 </td>
     <td colspan="1" rowspan="2"><a name="wp81007"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Tools to assist HDF5 users working with HDF4 files and HDF4 users working with HDF5 files (<a href="UG_Utils.html#wp80283">Section&#160;15.19 on page&#160;467</a>) (These tools are not included in this HDF4 distribution)
+Tools to assist HDF5 users working with HDF4 files and HDF4 users working with HDF5 files (<a href="UG_Utils.html#wp80283">Section&#160;15.19 on page&#160;483</a>) (These tools are not included in this HDF4 distribution)
 </div>
 </td>
 </tr>
@@ -298,7 +299,7 @@ hdf2gif
 </div>
 </td>
     <td><a name="wp81025"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Converts an HDF file to a GIF file (<a href="UG_Utils.html#wp75965">Section&#160;15.20 on page&#160;467</a>)
+Converts an HDF file to a GIF file (<a href="UG_Utils.html#wp75965">Section&#160;15.20 on page&#160;483</a>)
 </div>
 </td>
 </tr>
@@ -307,7 +308,7 @@ gif2hdf
 </div>
 </td>
     <td><a name="wp81034"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Converts a GIF file to an HDF file (<a href="UG_Utils.html#wp75967">Section&#160;15.21 on page&#160;468</a>)
+Converts a GIF file to an HDF file (<a href="UG_Utils.html#wp75967">Section&#160;15.21 on page&#160;484</a>)
 </div>
 </td>
 </tr>
@@ -320,7 +321,7 @@ h4cc
 </div>
 </td>
     <td><a name="wp81085"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Simplifies the compilation of HDF4 programs written in C (<a href="UG_Utils.html#wp81133">Section&#160;15.22 on page&#160;470</a>)
+Simplifies the compilation of HDF4 programs written in C (<a href="UG_Utils.html#wp81133">Section&#160;15.22 on page&#160;486</a>)
 </div>
 </td>
 </tr>
@@ -329,7 +330,7 @@ h4fc
 </div>
 </td>
     <td colspan="1" rowspan="2"><a name="wp81052"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Simplifies the compilation of HDF5 programs written in Fortran90 (<a href="UG_Utils.html#wp81137">Section&#160;15.23 on page&#160;471</a>)
+Simplifies the compilation of HDF5 programs written in Fortran90 (<a href="UG_Utils.html#wp81137">Section&#160;15.23 on page&#160;487</a>)
 </div>
 </td>
 </tr>
@@ -339,7 +340,7 @@ h4redeploy
 </div>
 </td>
     <td><a name="wp81067"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Updates HDF4 compiler tools after an HDF4 software installation in a new location (<a href="UG_Utils.html#wp81138">Section&#160;15.24 on page&#160;472</a>)
+Updates HDF4 compiler tools after an HDF4 software installation in a new location (<a href="UG_Utils.html#wp81138">Section&#160;15.24 on page&#160;488</a>)
 </div>
 </td>
 </tr>
@@ -352,13 +353,13 @@ Updates HDF4 compiler tools after an HDF4 software installation in a new locatio
 	15.2	Displaying the Contents of an HDF File: hdp (or HDF Dumper)
 </h2>
 <a name="wp82321"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.2.1 General Description
+	15.2.1	General Description
 </h3>
 <a name="wp82322"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 The <b class="cFunctionName">hdp</b><span style="color: #000000; font-family: Courier New; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> </span>utility, also known as the HDF dumper, provides quick and general information about all objects in the specified HDF file. It can list the contents of HDF files at various levels with different details. It can also dump the data of one or more specific objects in the file. 
 </p>
 <a name="wp64118"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.2.2 Command-line Syntax
+	15.2.2	Command-line Syntax
 </h3>
 <div class="pSyntaxLine" style="font-family: Courier New; font-size: 9pt"><ul class="pSyntaxLine" style="font-family: Courier New; font-size: 9pt">
 <a name="wp64119"> </a><p style="font-family: Courier New; font-size: 9pt" class="pSyntaxLine">hdp [ [-H <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">command</span> ] | [<span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">command</span> ] ] <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">filelist
@@ -387,21 +388,21 @@ Displays usage information about the specified command. If no command is listed,
 </table>
 </div>
 <div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-hdp Option Flags
+<em class="cTitleText">hdp Option Flags</em>
 </div>
 <a name="wp64133"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 Like <b class="cFunctionName">hdfed</b>, <b class="cFunctionName">hdp</b> provides a set of commands that allow the user to determine what kind of information is to be displayed.
 </p>
 <a name="wp64160"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 15C	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">The hdp Command Set</span></div>
+TABLE 15C	<em class="cTitleText">The hdp Command Set</em></div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp64137table64135">
   <caption></caption>
-  <tr>    <th><a name="wp64137"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <th><a name="wp64137"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Name
 </div>
 </th>
-    <th><a name="wp64139"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <th><a name="wp64139"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Description
 </div>
 </th>
@@ -637,7 +638,7 @@ The <b class="cFunctionName">dumpgr</b> commad
 	<span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">filelist</span>	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Names of HDF input files, separated by spaces.</span>
 </div>
 <a name="wp74594"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 126pt; margin-right: 0pt; margin-top: 6pt; text-align: justify; text-decoration: none; text-indent: 0pt; text-transform: none">
-<b style="font-family: Times New Roman; font-size: 10pt" class="cBold">Description:</b>	Displays GR raster image information in the specified format. The<span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> -r</span>,<span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> -i</span>,<span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> </span>and<span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> -n</span> flags can be selected together. GR images are always stored in pixel interlace mode (see <a href="UG_GR.html#wp7730">Section&#160;8.5.1 on page&#160;280</a>).
+<b style="font-family: Times New Roman; font-size: 10pt" class="cBold">Description:</b>	Displays GR raster image information in the specified format. The<span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> -r</span>,<span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> -i</span>,<span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> </span>and<span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> -n</span> flags can be selected together. GR images are always stored in pixel interlace mode (see <a href="UG_GR.html#wp7730">Section&#160;7.5.1 on page&#160;280</a>).
 </div>
 <a name="wp74591"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 The <b class="cFunctionName">dumpvd</b><span style="color: #000000; font-family: Courier New; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> </span>command
@@ -787,7 +788,7 @@ The <b class="cFunctionName">dumprig</b><span style="color: #000000; font-family
 	15.3	Comparing two HDF Files: hdiff
 </h2>
 <a name="wp87891"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.3.1 General Description
+	15.3.1	General Description
 </h3>
 <a name="wp77023"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 The <b class="cFunctionName">hdiff</b><span style="color: #000000; font-family: Courier New; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> </span>utility compares two HDF files and reports differences between them. Only datasets, attributes, and vdata objects are compared. <b class="cFunctionName">Hdiff</b> returns 0 when no differences are found and 1, otherwise.
@@ -796,7 +797,7 @@ The <b class="cFunctionName">hdiff</b><span style="color: #000000; font-family: 
 This section presents the basic usage of the program and examples.
 </p>
 <a name="wp78824"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.3.2 Command-line Syntax
+	15.3.2	Command-line Syntax
 </h3>
 <a name="wp79187"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 The <b class="cFunctionName">hdiff</b> command line syntax is as follows:
@@ -954,10 +955,10 @@ First and <br />second HDF input files to be compared.
 </table>
 </div>
 <div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-hdiff Option Flags
+<em class="cTitleText">hdiff Option Flags</em>
 </div>
 <a name="wp78825"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.3.3 Examples
+	15.3.3	Examples
 </h3>
 <a name="wp88111"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 Examples of <b class="cFunctionName">hdiff</b> usage can be found at <a href="http://www.hdfgroup.org/doc_resource/h4_doc/util/hdiff/hdiff_examples.html"><span class="cWebJump">http://www.hdfgroup.org/doc_resource/h4_doc/util/hdiff/hdiff_examples.html</span></a>
@@ -966,13 +967,13 @@ Examples of <b class="cFunctionName">hdiff</b> usage can be found at <a href="ht
 	15.4	Displaying Vdata Information: vshow
 </h2>
 <a name="wp65359"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.4.1 General Description
+	15.4.1	General Description
 </h3>
 <a name="wp65360"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 Displays information about either one vdata object in an HDF file, or all Vdata objects in the file.
 </p>
 <a name="wp65361"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.4.2 Command-line Syntax
+	15.4.2	Command-line Syntax
 </h3>
 <div class="pSyntaxLine" style="font-family: Courier New; font-size: 9pt"><ul class="pSyntaxLine" style="font-family: Courier New; font-size: 9pt">
 <a name="wp65362"> </a><p style="font-family: Courier New; font-size: 9pt" class="pSyntaxLine">vshow input HDF filename [+|+<span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">vdata id</span>]
@@ -1014,10 +1015,10 @@ The utility will display information about the Vdata object corresponding to the
 </table>
 </div>
 <div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-vshow Option Flags
+<em class="cTitleText">vshow Option Flags</em>
 </div>
 <a name="wp65382"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.4.3 Examples
+	15.4.3	Examples
 </h3>
 <a name="wp65383"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 Information about all of the Vdata objects in the HDF file named <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">image012.hdf</span> must be examined. The following command will display this information.
@@ -1032,20 +1033,20 @@ vshow image012.hdf +
 Note that <b class="cFunctionName">hdfimport</b> replaces the <b class="cFunctionName">fp2hdf</b> utility that was distributed with earlier HDF releases.
 </p>
 <a name="wp77894"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.5.1 General Description
+	15.5.1	General Description
 </h3>
 <a name="wp77895"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 The <b class="cFunctionName">hdfimport</b> utility converts data from ASCII text files, 32-bit or 64-bit native floating point data files, 8-bit, 16-bit or 32-bit integer files, or HDF floating-point scientific data sets to either HDF floating-point scientific data sets or 8-bit HDF raster image datasets, or both, and stores the results in an HDF file. <a href="UG_Utils.html#wp64578">(See Figure 15a.)</a> The images can be scaled on a user-specified mean value. 
 </p>
 <a name="wp64578"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
-FIGURE 15a	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">The hdfimport Utility</span></div>
-<div align="left"><img src="images/hdf4_UG-16-1-1.jpg" height="243" width="516" id="wp77917" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
+FIGURE 15a	<em class="cTitleText">The hdfimport Utility</em></div>
+<div align="left"><img src="images/hdf4_UG-21-1-1.jpg" height="243" width="516" id="wp77917" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
 </div>
-<div align="left"><img src="images/hdf4_UG-16-1-2.jpg" height="243" width="516" id="wp64380" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
+<div align="left"><img src="images/hdf4_UG-21-1-2.jpg" height="243" width="516" id="wp64380" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
 
 </div>
 <a name="wp64579"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.5.2 Command-line Syntax
+	15.5.2	Command-line Syntax
 </h3>
 <a name="wp78129"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 The syntax of <b class="cFunctionName">hdfimport</b> is as follows.
@@ -1263,7 +1264,7 @@ If no mean value is specified, then the mean will be <code style="font-family: C
 </table>
 </div>
 <div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-hdfimport<b class="cFunctionName"> </b>Options and Parameters
+<em class="cTitleText">hdfimport Options and Parameters</em>
 </div>
 <a name="wp64642"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 The <em class="cVarName">-e</em> and the <em class="cVarName">-i</em> flags cannot be used simultaneously. Either pixel interpolation or bilinear interpolation can be chosen for image expansion, but not both.
@@ -1272,7 +1273,7 @@ The <em class="cVarName">-e</em> and the <em class="cVarName">-i</em> flags cann
 Data from several input files (with one data set per input file) are stored as several data sets and/or images in one output HDF file. Alternatively, a shell script can be used to call <b class="cFunctionName">hdfimport</b> repeatedly to convert data from multiple input files to corresponding output HDF files.
 </p>
 <a name="wp78490"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.5.3 Structure of Data in non-HDF Input Files
+	15.5.3	Structure of Data in non-HDF Input Files
 </h3>
 <a name="wp78491"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 If the format of<span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">input-file</span> is ASCII text, native floating point, or native integer (i.e., <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">input-file</span> is not an HDF file), the data must be structured in fields as described below.
@@ -1390,7 +1391,7 @@ Data continues...
 </table>
 </div>
 <div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-hdfimport ASCII Text, Native Floating Point, or Native Integer Input Fields
+<em class="cTitleText">hdfimport ASCII Text, Native Floating Point, or Native Integer Input Fields</em>
 </div>
 <a name="wp64698"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">format</span>, <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">number_of_columns</span>, <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">number_of_rows</span>, and <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">number_of_planes </span>are native integers. <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">format</span> is the integer representation of the appropriate 4-character string (<span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">0x46503332</span> for <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">FP32</span>, <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">0x46503634</span> for <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">FP64</span>). 
@@ -1411,13 +1412,13 @@ The arrays containing the plane, row, and column scales must have a size equal t
 	15.6	Converting 8-Bit Raster Images to the HDF Format: r8tohdf
 </h2>
 <a name="wp64719"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.6.1 General Description
+	15.6.1	General Description
 </h3>
 <a name="wp64720"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 The <b class="cFunctionName">r8tohdf</b> utility converts a set of raw raster images to the HDF RIS8 format and writes them to a file. 
 </p>
 <a name="wp64721"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.6.2 Command-line Syntax
+	15.6.2	Command-line Syntax
 </h3>
 <div class="pSyntaxLine" style="font-family: Courier New; font-size: 9pt"><ul class="pSyntaxLine" style="font-family: Courier New; font-size: 9pt">
 <a name="wp64722"> </a><p style="font-family: Courier New; font-size: 9pt" class="pSyntaxLine">r8tohdf [<span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">number-of-rows</span> <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">number-of-columns</span>] <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">output-filename</span> [-p <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">palette-filename</span>] <br />
@@ -1487,10 +1488,10 @@ No compression is applied to the output data. (the default)
 </table>
 </div>
 <div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-r8tohdf Option Flags
+<em class="cTitleText">r8tohdf Option Flags</em>
 </div>
 <a name="wp64754"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.6.3 Examples
+	15.6.3	Examples
 </h3>
 <a name="wp64755"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 A file named <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">rawras</span> contains a 256 x 512-byte raw raster image, and its palette is stored in a file name <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">mypal</span>. To convert the information in these files to an RIS8 without compression and store the RIS8 in a file named <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ras.hdf</span>, enter the following <b class="cFunctionName">r8tohdf</b> command:
@@ -1520,13 +1521,13 @@ r8tohdf 256 512 ras.hdf -c rawras1 -p mypal rawras2 -r rawras3
 	15.7	Converting 24-Bit Raw Raster Images to RIS8 Images: r24hdf8
 </h2>
 <a name="wp64817"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.7.1 General Description
+	15.7.1	General Description
 </h3>
 <a name="wp64818"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 The <b class="cFunctionName">r24hdf8</b> utility quantizes a raw RGB 24-bit raster image, creating an 8-bit image with a 256-color palette, then it stores the palette and raster image data in an HDF file.
 </p>
 <a name="wp64819"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.7.2 Command-line Syntax
+	15.7.2	Command-line Syntax
 </h3>
 <div class="pSyntaxLine" style="font-family: Courier New; font-size: 9pt"><ul class="pSyntaxLine" style="font-family: Courier New; font-size: 9pt">
 <a name="wp64820"> </a><p style="font-family: Courier New; font-size: 9pt" class="pSyntaxLine">r24hdf8 [<span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">x-dimension-length</span> <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">y-dimension-length</span>] <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">raw-24-bit-image-filename-hdf 
@@ -1536,7 +1537,7 @@ ris8-image-filename
 The pixel order in the raw 24-bit image file is left-to-right and top-to-bottom. Each pixel data element consists of three contiguous bytes, the first representing the red intensity value, the second the green intensity value, and the third the blue intensity value. Use the <b class="cFunctionName">ptox</b><span style="color: #000000; font-family: Courier New; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> </span>filter to convert the raster image data from a pixel-interlaced format to scan-plane interlaced.
 </p>
 <a name="wp64822"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.7.3 Examples
+	15.7.3	Examples
 </h3>
 <a name="wp64823"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 A file named <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">rawraster</span> containing 24-bit raw raster images with x and y-dimensions of 480 x 640, respectively, must be converted to the HDF RIS8 format and stored in a file named <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">hdfraster</span>. The following command is used to do this:
@@ -1548,7 +1549,7 @@ r24hdf8 480 640 rawraster hdfraster
 	15.8	Converting Raw Palette Data to the HDF Palette Format: paltohdf
 </h2>
 <a name="wp64788"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.8.1 General Description
+	15.8.1	General Description
 </h3>
 <a name="wp64789"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 The <b class="cFunctionName">paltohdf</b> utility converts raw palette data to the HDF palette format. The raw palette data must have 768 bytes organized in the following order: first, 256 contiguous red intensity values, then 256 contiguous green intensity values, then 256 contiguous blue intensity values. The palette in the HDF file will have the RGB values pixel-interlaced, as follows.
@@ -1560,7 +1561,7 @@ The <b class="cFunctionName">paltohdf</b> utility converts raw palette data to t
 This is the standard HDF format for 8-bit palettes.
 </p>
 <a name="wp64792"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.8.2 Command-line Syntax
+	15.8.2	Command-line Syntax
 </h3>
 <div class="pSyntaxLine" style="font-family: Courier New; font-size: 9pt"><ul class="pSyntaxLine" style="font-family: Courier New; font-size: 9pt">
 <a name="wp64793"> </a><p style="font-family: Courier New; font-size: 9pt" class="pSyntaxLine">paltohdf <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">raw-format-palette-filename</span> <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF-format-palette-filename
@@ -1572,13 +1573,13 @@ If an HDF palette format file is specified that does not exist, it is created be
 	15.9	Extracting 8-Bit Raster Images and Palettes from HDF Files: hdftor8
 </h2>
 <a name="wp64834"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.9.1 General Description
+	15.9.1	General Description
 </h3>
 <a name="wp64835"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 The <b class="cFunctionName">hdftor8</b> utility extracts the raster images and/or palettes from an HDF file and stores them in one file that contains the raster image data and another that contains the palette data. 
 </p>
 <a name="wp64836"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.9.2 Command-line Syntax
+	15.9.2	Command-line Syntax
 </h3>
 <div class="pSyntaxLine" style="font-family: Courier New; font-size: 9pt"><ul class="pSyntaxLine" style="font-family: Courier New; font-size: 9pt">
 <a name="wp64837"> </a><p style="font-family: Courier New; font-size: 9pt" class="pSyntaxLine">hdftor8 <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">input-HDF-filename</span> [-i] [-v] [-r <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">raster-image-filename</span>] [-p <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">palette-
@@ -1588,7 +1589,7 @@ filename</span>]
 The option flags are described in <a href="UG_Utils.html#wp64868">Table 15I</a>.
 </p>
 <a name="wp64868"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 15I	hdftor8 Option Flags:</div>
+TABLE 15I	<em class="cTitleText">hdftor8 Option Flags</em></div>
 <div align="left">
 <table border="1" id="wp64845table64843">
   <caption></caption>
@@ -1647,7 +1648,7 @@ The palette file name immediately follows this flag.
 </table>
 </div>
 <div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-
+<em class="cTitleText"></em>
 </div>
 <a name="wp64869"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 The names given as the HDF format file, raster image file, and palette file are interpreted by <b class="cFunctionName">hdftor8</b> as follows: For each raster image file, the file name is given the extension
@@ -1662,7 +1663,7 @@ where <span style="color: #000000; font-family: Courier New; font-size: 9pt; fon
 If no name is given for the raster image file, the default name <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">img.#.@.%</span> is assigned, where <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">#</span>, <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">@</span>, and <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">%</span> are defined as in the preceding paragraph. The default name for a palette file, if no name is specifically given in the command, is <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">pal.#</span>.
 </p>
 <a name="wp64873"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.9.3 Examples
+	15.9.3	Examples
 </h3>
 <a name="wp64874"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 A file named <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">denm.hdf</span> contains three 512 x 256 raster images and three palettes. To store these images and palettes in separate raster image and palette files, use the following <b class="cFunctionName">hdftor8</b> command:
@@ -1677,13 +1678,13 @@ Six files are created, named <span style="color: #000000; font-family: Courier N
 	15.10	Extracting Palette Data from an HDF File: hdftopal
 </h2>
 <a name="wp64804"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.10.1 General Description
+	15.10.1	General Description
 </h3>
 <a name="wp64805"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 The <b class="cFunctionName">hdftopal</b> utility converts a palette in an HDF file to a raw palette in an non-HDF file. The raw palette will have 768 bytes with the first 256 bytes representing red intensity values, the second 256 bytes representing green intensity values, and the third 256 bytes representing blue intensity values. The utility performs the converse operation of the <span style="color: #000000; font-family: Courier New; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">paltohdf</span> utility.
 </p>
 <a name="wp64806"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.10.2 Command-line Syntax
+	15.10.2	Command-line Syntax
 </h3>
 <div class="pSyntaxLine" style="font-family: Courier New; font-size: 9pt"><ul class="pSyntaxLine" style="font-family: Courier New; font-size: 9pt">
 <a name="wp64807"> </a><p style="font-family: Courier New; font-size: 9pt" class="pSyntaxLine">hdftopal <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF-format-palette-filename</span> <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">raw-format-palette-filename
@@ -1692,20 +1693,20 @@ The <b class="cFunctionName">hdftopal</b> utility converts a palette in an HDF f
 	15.11	Converting Several RIS8 Images to One 3D SDS: ristosds
 </h2>
 <a name="wp64772"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.11.1 General Description
+	15.11.1	General Description
 </h3>
 <a name="wp64773"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 The <b class="cFunctionName">ristosds</b> utility creates a single HDF file consisting of a three-dimensional SDS from a set of HDF files containing one or more raster images. All images in the input HDF files must have the same dimensions. If a palette is to be included with the images, it should be in the first HDF input file. Only one palette can be associated with the images; any additional palette data encountered by the utility after the first palette has been processed will be ignored.
 </p>
 <a name="wp64774"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.11.2 Command-line Syntax
+	15.11.2	Command-line Syntax
 </h3>
 <div class="pSyntaxLine" style="font-family: Courier New; font-size: 9pt"><ul class="pSyntaxLine" style="font-family: Courier New; font-size: 9pt">
 <a name="wp64775"> </a><p style="font-family: Courier New; font-size: 9pt" class="pSyntaxLine">ristosds <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">input-filename-1</span>, <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">input-filename-2</span>, ... <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">input-filename-n</span> [-o <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">output-
 filename</span>]
 </p></ul></div>
 <a name="wp64776"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.11.3 Examples
+	15.11.3	Examples
 </h3>
 <a name="wp64777"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 The contents of a directory consists of 20 files named <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">storm001.hdf</span>, <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">storm002.hdf</span>, ... <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">storm020.hdf</span>. Each file contains a single RIS8 with a 100 x 200 raster image. A file that combines these 20 raster images into a 32-bit floating-point SDS with the dimensions 100 x 200 x 20 can be created with the following <b class="cFunctionName">ristosds</b> command:
@@ -1717,13 +1718,13 @@ ristosds storm*.hdf -o storm.hdf
 	15.12	Converting an HDF RIS24 Image to an HDF RIS8 Image: hdf24hdf8
 </h2>
 <a name="wp64887"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.12.1 General Description
+	15.12.1	General Description
 </h3>
 <a name="wp64888"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 The <b class="cFunctionName">hdf24hdf8</b> utility quantizes an HDF RGB RIS24 pixel-interlaced image, producing an HDF RIS8 image with a 256-color palette and stores the palette and raster image data in an HDF file.
 </p>
 <a name="wp64889"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.12.2 Command-line Syntax
+	15.12.2	Command-line Syntax
 </h3>
 <div class="pSyntaxLine" style="font-family: Courier New; font-size: 9pt"><ul class="pSyntaxLine" style="font-family: Courier New; font-size: 9pt">
 <a name="wp64890"> </a><p style="font-family: Courier New; font-size: 9pt" class="pSyntaxLine">hdf24hdf8 <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ris24-image-filename</span> <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ris8-image-filename
@@ -1732,13 +1733,13 @@ The <b class="cFunctionName">hdf24hdf8</b> utility quantizes an HDF RGB RIS24 pi
 	15.13	Compressing RIS8 Images in an HDF File: hdfcomp
 </h2>
 <a name="wp64331"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.13.1 General Description
+	15.13.1	General Description
 </h3>
 <a name="wp64332"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 The <b class="cFunctionName">hdfcomp</b> utility reads RIS8 images from a set of HDF files, compresses them and stores the compressed data in a second HDF file. If the output HDF file exists, the compressed images will be appended to it.
 </p>
 <a name="wp64333"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.13.2 Command-line Syntax
+	15.13.2	Command-line Syntax
 </h3>
 <div class="pSyntaxLine" style="font-family: Courier New; font-size: 9pt"><ul class="pSyntaxLine" style="font-family: Courier New; font-size: 9pt">
 <a name="wp64334"> </a><p style="font-family: Courier New; font-size: 9pt" class="pSyntaxLine">hdfcomp <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">output-filename</span> [-c|-r|-i] <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">input-filename-1</span>, [-c|-r|-i]<span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">input-filename-2</span>, 
@@ -1794,10 +1795,10 @@ The raster image data is compressed using the IMCOMP algorithm.
 </table>
 </div>
 <div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-hdfcomp Option Flags
+<em class="cTitleText">hdfcomp Option Flags</em>
 </div>
 <a name="wp64360"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.13.3 Examples
+	15.13.3	Examples
 </h3>
 <a name="wp64361"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 A directory contains twenty files named <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">storm001</span>, <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">storm002</span>, ... <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">storm020</span>. Each of these files contains a single RIS8 image. To compress these images using run-length encoding and store them in a file named <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">altcomp.hdf</span>, use the following <b class="cFunctionName">hdfcomp</b> command:
@@ -1809,13 +1810,13 @@ hdfcomp allcomp.hdf -c storm*.hdf
 	15.14	Compressing an HDF File: hdfpack
 </h2>
 <a name="wp64252"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.14.1 General Description
+	15.14.1	General Description
 </h3>
 <a name="wp64253"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 The <b class="cFunctionName">hdfpack</b> utility compresses all of the data in an HDF file and writes the compressed data to a second HDF file.
 </p>
 <a name="wp64254"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.14.2 Command-line Syntax
+	15.14.2	Command-line Syntax
 </h3>
 <div class="pSyntaxLine" style="font-family: Courier New; font-size: 9pt"><ul class="pSyntaxLine" style="font-family: Courier New; font-size: 9pt">
 <a name="wp64255"> </a><p style="font-family: Courier New; font-size: 9pt" class="pSyntaxLine">hdfpack [-i|-b] [-d <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">number-of-data-descriptors-per-block</span>] [-t <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">number-of-linked-
@@ -1884,10 +1885,10 @@ The output file will be created with the specified number of linked blocks per t
 </table>
 </div>
 <div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-hdfpack Option Flags
+<em class="cTitleText">hdfpack Option Flags</em>
 </div>
 <a name="wp64287"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.14.3 Examples
+	15.14.3	Examples
 </h3>
 <a name="wp64288"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 To compress the data in the file named <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">aa.hdf</span> and store the compressed data in the file named <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">aa.cmp</span>, use the following <b class="cFunctionName">hdfpack</b> command:
@@ -1905,7 +1906,7 @@ Suppose a file named <span style="color: #000000; font-family: Courier New; font
 	15.15	Reformatting an HDF File: hrepack
 </h2>
 <a name="wp77761"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.15.1 General Description
+	15.15.1	General Description
 </h3>
 <a name="wp82315"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 <b class="cFunctionName">hrepack</b> is a command line utility that performs a logical copy of an input HDF4 file to an output HDF4 file, copying all the high level objects while optionally rewriting the objects with or without compression and/or with or without chunking. (Note that compression is supported only for data sets and images in HDF4.)
@@ -1913,11 +1914,11 @@ Suppose a file named <span style="color: #000000; font-family: Courier New; font
 <a name="wp79465"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 Further information is available at the following URL:
 </p>
-<a name="wp79466"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
+<a name="wp79466"> </a><p style="font-family: Courier New; font-size: 9pt; font-style: normal; font-weight: normal; line-height: 9pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 5pt" class="pBody">
 <a href="http://www.hdfgroup.org/doc_resource/h4_doc/util/hrepack/hrepack.html"><span class="cWebJump">http://www.hdfgroup.org/doc_resource/h4_doc/util/hrepack/hrepack.html</span></a>
 </p>
 <a name="wp91073"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.15.2 Command-line Syntax
+	15.15.2	Command-line Syntax
 </h3>
 <a name="wp91074"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 The <b class="cFunctionName">hrepack</b> syntax is as follows:
@@ -2069,13 +2070,13 @@ Do not compress objects of a size less than <span style="color: #000000; font-fa
 	15.16	Creating Vgroups and Vdatas: vmake
 </h2>
 <a name="wp64930"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.16.1 General Description
+	15.16.1	General Description
 </h3>
 <a name="wp64941"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 The <b class="cFunctionName">vmake</b> utility creates Vgroup and Vdata objects in the specified HDF file.
 </p>
 <a name="wp64931"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.16.2 Command-line Syntax
+	15.16.2	Command-line Syntax
 </h3>
 <a name="wp64932"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 To create a new Vgroup:
@@ -2118,7 +2119,7 @@ To create links from one or more Vdatas to a specified Vgroup:
 Note that all <b class="cFunctionName">vmake</b> arguments, except the output HDF filename, are surrounded by double quotes.
 </p>
 <a name="wp64933"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.16.3 Examples
+	15.16.3	Examples
 </h3>
 <a name="wp64942"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 Assume the following. A file containing storm data is named <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">storm.dat</code>. A Vdata object named <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">Storm Data B</code> must be created in an HDF file named <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">sdata.hdf</code> using <b class="cFunctionName">vmake</b>. The new Vdata object is to contain a field named <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">PLIST</code> with an element size of three long integers. And finally, the data in <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">storm.dat</code> is to be loaded into the Vdata object <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">Storm Data B</code>. 
@@ -2133,7 +2134,7 @@ This can be accomplished with the following command:
 	15.17	Listing Basic Information about Data Objects in an HDF File: hdfls
 </h2>
 <a name="wp63234"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.17.1 General Description
+	15.17.1	General Description
 </h3>
 <a name="wp63235"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 The <b class="cFunctionName">hdfls</b> utility provides general information about the tags, reference numbers, and if requested, lengths of the data elements. 
@@ -2142,7 +2143,7 @@ The <b class="cFunctionName">hdfls</b> utility provides general information abou
 The <b class="cFunctionName">hdfls</b> utility provides general information about the HDF data objects in a file.  This information includes the tags and reference numbers of the data objects, the lengths and offsets of the HDF object&#39;s data elements, the contents of DD blocks, and information regarding special elements. In situations where the DD block information is not needed, we recommend the <b class="cFunctionName">hdp</b> utility with the<span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> list </span>command and its options.
 </p>
 <a name="wp63237"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.17.2 Command-line Syntax
+	15.17.2	Command-line Syntax
 </h3>
 <div class="pSyntaxLine" style="font-family: Courier New; font-size: 9pt"><ul class="pSyntaxLine" style="font-family: Courier New; font-size: 9pt">
 <a name="wp63238"> </a><p style="font-family: Courier New; font-size: 9pt" class="pSyntaxLine">hdfls [-o][-l][-d][-v][-g][-s][-h][-t #] <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">filename
@@ -2271,10 +2272,10 @@ Lists information about the data objects with the specified tag. Must be followe
 </table>
 </div>
 <div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-hdfls Option Flags
+<em class="cTitleText">hdfls Option Flags</em>
 </div>
 <a name="wp63297"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.17.3 Examples
+	15.17.3	Examples
 </h3>
 <a name="wp63298"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 The file<span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> SDSchunked.hdf</span>, created by the example..... in Chapter 3, contains one chunked data set.
@@ -2342,7 +2343,7 @@ Special Vdata Storage         : (tag 18347)<a name="wp63357"> </a>
 	15.18	Editing the Contents of an HDF File: hdfed
 </h2>
 <a name="wp63364"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.18.1 General Description
+	15.18.1	General Description
 </h3>
 <a name="wp63365"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 The <b class="cFunctionName">hdfed</b> utility allows experienced HDF users to manipulate the elements of an HDF file. These manipulations include
@@ -2395,7 +2396,7 @@ Once an HDF file has been opened by <b class="cFunctionName">hdfed</b>, the foll
 </ul></div>
 </ul></div>
 <a name="wp63394"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.18.2 Command-line Syntax
+	15.18.2	Command-line Syntax
 </h3>
 <a name="wp63395"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 The syntax of <b class="cFunctionName">hdfed</b> is
@@ -2435,7 +2436,7 @@ Specifies that input to <span style="color: #000000; font-family: Times New Roma
 </table>
 </div>
 <div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-hdfed Option Flags
+<em class="cTitleText">hdfed Option Flags</em>
 </div>
 <a name="wp63413"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 The <em class="cVarName">-batch</em> flag is useful when a group of commonly-used commands are included in a UNIX shell script. The following is an example of such a script, using the C-shell, that lists information about the groups in a specified HDF file.
@@ -2470,15 +2471,15 @@ Many <b class="cFunctionName">hdfed</b> commands have qualifiers, or flags. For 
 All of the commands and flags can be abbreviated to the extent that their abbreviations are unique. For example, <em class="cVarName">-he</em> is ambiguous as it could stand for either the <em class="cVarName">-hexadecimal</em> or the <em class="cVarName">-help</em> flags, but <em class="cVarName">-hel</em> is not ambiguous.
 </p>
 <a name="wp63515"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 15N	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">The hdfed Command Set</span></div>
+TABLE 15N	<em class="cTitleText">The hdfed Command Set</em></div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp63432table63430">
   <caption></caption>
-  <tr>    <th><a name="wp63432"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <th><a name="wp63432"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Name
 </div>
 </th>
-    <th><a name="wp63434"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <th><a name="wp63434"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Description
 </div>
 </th>
@@ -3380,13 +3381,13 @@ The <b class="cFunctionName">h4toh5</b> and <b class="cFunctionName">h5toh4 </b>
 	15.20	Converting an HDF File to a GIF File: hdf2gif
 </h2>
 <a name="wp76932"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.20.1 General Description
+	15.20.1	General Description
 </h3>
 <a name="wp76196"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 <b class="cFunctionName">hdf2gif</b> is a command line utility to convert files from the Hierarchical Data Format (HDF) (<a href="http://www.hdfgroup.org"><span class="cWebJump">http://www.hdfgroup.org</span></a>) to the Compuserve Graphics Interchange Format (GIF) <br />(<a href="http://www.w3.org/Graphics/GIF/spec-gif89a.txt"><span class="cWebJump">http://www.w3.org/Graphics/GIF/spec-gif89a.txt</span></a>) 
 </p>
 <a name="wp76198"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.20.2 Command-line Syntax and Requirements:
+	15.20.2	Command-line Syntax and Requirements:
 </h3>
 <a name="wp76568"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 <b class="cFunctionName">hdf2gif</b> takes two arguments: the name of the GIF file to read and the name of the HDF file to write.
@@ -3410,7 +3411,7 @@ This utility requires the HDF 4 library.
 The HDF 4 file is expected to contain 8-bit raster images which are consecutively converted to GIF images. At this time, this utility cannot be used to convert higher resolution images (16-bit, 24-bit, or 32-bit) to GIF images, which have a maximum resolution of 8-bit.
 </p>
 <a name="wp76210"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.20.3 Structure of the GIF File
+	15.20.3	Structure of the GIF File
 </h3>
 <a name="wp76212"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 The GIF file may be of either GIF 87a or 89a formats. The choice between the two formats depends on the number of images stored in the HDF file. If there is only one image in the HDF file, then a GIF 87a file is written. If there are multiple images, a GIF89a file is written and it is animated with a time delay of 15ms between two consecutive images. The animation is set to loop indefinitely. The only exception occurs in case the HDF file was generated from a previous GIF file using the <b class="cFunctionName">gif2hdf</b> utility. In this case the original GIF file&#39;s values for animation and time out are taken into account instead of the preset defaults.
@@ -3426,7 +3427,7 @@ Depending on the version of the GIF file generated, the structure of the output 
 </ul></div>
 </ul></div>
 <a name="wp76605"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.20.4 Building the Utility
+	15.20.4	Building the Utility
 </h3>
 <a name="wp76416"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 <b class="cFunctionName">hdf2gif</b> is made when the utilites in the HDF 4 libraries are made.
@@ -3438,13 +3439,13 @@ Please refer to the instructions on how to make the HDF 4 libraries in order to 
 	15.21	Converting a GIF File to an HDF File: gif2hdf
 </h2>
 <a name="wp76019"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.21.1 General Description
+	15.21.1	General Description
 </h3>
 <a name="wp76928"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 <b class="cFunctionName">gif2hdf</b> is a command line utility to convert files from the Compuserve Graphics Interchange Format (GIF) (<a href="http://www.w3.org/Graphics/GIF/spec-gif89a.txt"><span class="cWebJump">http://www.w3.org/Graphics/GIF/spec-gif89a.txt</span></a>) to the Hierarchical Data Format (HDF) (<a href="http://www.hdfgroup.org"><span class="cWebJump">http://www.hdfgroup.org</span></a>). 
 </p>
 <a name="wp76021"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.21.2 Command-line Syntax and Requirements
+	15.21.2	Command-line Syntax and Requirements
 </h3>
 <a name="wp76631"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 <b class="cFunctionName">gif2hdf</b> takes two arguments: the name of the GIF file to read and the name of the HDF file to write.
@@ -3471,11 +3472,11 @@ The amount of memory used by the program depends on the size of the GIF file and
 The GIF file being used as input must be a valid GIF87a or GIF89a file. If the file has multiple images (e.g., animated GIF), then the corresponding HDF file will contain all the images in a single Vgroup. Since HDF was not intended to be a format for animation, some information, such as the time between two consecutive images of an animation which is present in the GIF file, cannot be used by HDF tools. That information is, however, stored in the HDF file as an attribute.
 </p>
 <a name="wp90623"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.21.3 Structure of the GIF and HDF Files and the Mapping between Them
+	15.21.3	Structure of the GIF and HDF Files and the Mapping between Them
 </h3>
 <a name="wp90667"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
-FIGURE 15b	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Structure of the GIF and HDF files</span></div>
-<div align="left"><img src="images/hdf4_UG-16-1-3.jpg" height="396" width="663" id="wp90665" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
+FIGURE 15b	<em class="cTitleText">Structure of the GIF and HDF files</em></div>
+<div align="left"><img src="images/hdf4_UG-21-1-3.jpg" height="396" width="663" id="wp90665" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
 
 </div>
 <a name="wp90688"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 12pt; margin-left: 95pt; margin-right: 0pt; margin-top: 6pt; text-align: justify; text-decoration: none; text-indent: 0pt; text-transform: none">
@@ -3503,7 +3504,7 @@ The GIF file contains a number of extensions that are all stored as attributes t
 Each image in the GIF file is stored as a compressed GR image, using gzip compression, under the Vgroup in the HDF file. A palette is stored with each image in the HDF file. If the original GIF image contained a local color table, this table is stored as a palette. If the images contained only a global color table, each GR image in the HDF file has the global color table associated with it. This association of color tables enables an HDF viewer (such as HDFview, available from <span style="color: #0000ff; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: underline; text-transform: none; vertical-align: baseline" class="cDefault">http://www.hdfgroup.org/</span>) to correctly render the corresponding image. The image descriptor and the graphic control extension, if present, of the GIF file are attached to the GR image as attributes. If this HDF file is reconverted to the GIF format, the graphic control extension contains important information regarding the animation of those images.
 </p>
 <a name="wp76070"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.21.4 Building the Utility
+	15.21.4	Building the Utility
 </h3>
 <a name="wp76550"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 <b class="cFunctionName">gif2hdf</b> is made when the utilities in the HDF 4 libraries are made.
@@ -3515,7 +3516,7 @@ Please refer to the instructions on how to make the HDF 4 libraries.
 	15.22	Compiling C applications that Use HDF4: h4cc
 </h2>
 <a name="wp81150"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.22.1 General Description
+	15.22.1	General Description
 </h3>
 <a name="wp81151"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 Compiling the HDF4 library and HDF4 applications is a complex task, encompassing environment settings, particular use of compiler flags, many include files, etc. <b class="cFunctionName">h4cc</b> is a helper script, or wrapper, designed to assist in the task of compiling C applications that use HDF4 by providing several default settings and required flags and listing all of the required include files. Using <b class="cFunctionName">h4cc</b>, the user can take advantage of these defaults while retaining the options of setting environment variables to override the default compiler and linker and overriding the HDF4 include file and library locations on the command line. 
@@ -3527,7 +3528,7 @@ Compiling the HDF4 library and HDF4 applications is a complex task, encompassing
 Some programs use HDF4 in only a few modules. It is not necessary to use <b class="cFunctionName">h4cc</b> to compile those modules which do not use HDF4. In fact, since <b class="cFunctionName">h4cc</b> is only a convenience script, HDF4 modules can still be compiled in the normal way, taking care to properly specify the HDF4 libraries and include paths. 
 </p>
 <a name="wp81152"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.22.2 Command-line Syntax
+	15.22.2	Command-line Syntax
 </h3>
 <a name="wp82079"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 The <b class="cFunctionName">h4cc</b> command-line syntax is as follows:
@@ -3589,7 +3590,7 @@ The normal compile line options. <b class="cFunctionName">h4cc</b> uses the same
 </table>
 </div>
 <div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-h4cc Options and Compiler Options
+<em class="cTitleText">h4cc Options and Compiler Options</em>
 </div>
 <a name="wp81631"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 Several environment variables, listed in the following table, are available that provide another level of control over <b class="cFunctionName">h4cc</b>. When set, they override some of the built-in <b class="cFunctionName">h4cc</b> defaults.
@@ -3620,10 +3621,10 @@ Use a different linker.
 </table>
 </div>
 <div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-Environment Variables
+<em class="cTitleText">Environment Variables</em>
 </div>
 <a name="wp81187"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.22.3 Examples
+	15.22.3	Examples
 </h3>
 <a name="wp81385"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 The following example illustrates the use of <b class="cFunctionName">h4cc</b> to compile the program<code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode"> hdf_prog</code>, which consists of modules<code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode"> prog1.c </code>and<code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode"> prog2.c</code>: 
@@ -3637,7 +3638,7 @@ The following example illustrates the use of <b class="cFunctionName">h4cc</b> t
 	15.23	Compiling Fortran applications that Use HDF4: h4fc
 </h2>
 <a name="wp81195"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.23.1 General Description
+	15.23.1	General Description
 </h3>
 <a name="wp81733"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 Compiling the HDF4 library and HDF4 applications is a complex task, encompassing environment settings, particular use of compiler flags, many include files, etc. <b class="cFunctionName">h4fc</b> is a helper script, or wrapper, designed to assist in the task of compiling Fortran applications that use HDF4 by providing several default settings and required flags and listing all of the required include files. Using <b class="cFunctionName">h4fc</b>, the user can take advantage of these defaults while retaining the options of setting environment variables to override the default compiler and linker and overriding the HDF4 include file and library locations on the command line. 
@@ -3649,7 +3650,7 @@ Compiling the HDF4 library and HDF4 applications is a complex task, encompassing
 Some programs use HDF4 in only a few modules. It is not necessary to use <b class="cFunctionName">h4fc</b> to compile those modules which do not use HDF4. In fact, since <b class="cFunctionName">h4fc</b> is only a convenience script, HDF4 modules can still be compiled in the normal way, taking care to properly specify the HDF4 libraries and include paths. 
 </p>
 <a name="wp81197"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.23.2 Command-line Syntax
+	15.23.2	Command-line Syntax
 </h3>
 <a name="wp82051"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 The <b class="cFunctionName">h4fc</b> command-line syntax is as follows:
@@ -3711,7 +3712,7 @@ The normal compile line options. <b class="cFunctionName">h4fc</b> uses the same
 </table>
 </div>
 <div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-h4fc Option Flags
+<em class="cTitleText">h4fc Option Flags</em>
 </div>
 <a name="wp81839"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 Several environment variables, listed in the following table, are available that provide another level of control over <b class="cFunctionName">h4fc</b>. When set, they override some of the built-in <b class="cFunctionName">h4fc</b> defaults.
@@ -3742,10 +3743,10 @@ Use a different linker.
 </table>
 </div>
 <div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-Environment Variables
+<em class="cTitleText">Environment Variables</em>
 </div>
 <a name="wp81210"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.23.3 Example
+	15.23.3	Example
 </h3>
 <a name="wp81789"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 The following example illustrates the use of <b class="cFunctionName">h4fc</b> to compile the program<code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode"> hdf_prog</code>, which consists of modules<code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode"> prog1.f </code>and<code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode"> prog2.f </code>and uses the HDF4 Fortran library: 
@@ -3759,13 +3760,13 @@ The following example illustrates the use of <b class="cFunctionName">h4fc</b> t
 	15.24	Updating HDF4 Compiler Tools after an Installation in a New Location: h4redeploy
 </h2>
 <a name="wp81218"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.24.1 General Description
+	15.24.1	General Description
 </h3>
 <a name="wp81219"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 <b class="cFunctionName">h4redeploy</b> updates the HDF4 compiler tools after the HDF4 software has been installed in a new location. 
 </p>
 <a name="wp81220"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	15.24.2 Command-line Syntax
+	15.24.2	Command-line Syntax
 </h3>
 <a name="wp81992"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 The <b class="cFunctionName">h4redploy</b> command-line syntax is as follows:
@@ -3839,7 +3840,7 @@ Specifies the tool to update.<span style="color: #000000; font-family: Courier N
 </table>
 </div>
 <div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-h4redeploy Option Flags
+<em class="cTitleText">h4redeploy Option Flags</em>
 </div>
     </blockquote>
 
@@ -3848,7 +3849,7 @@ h4redeploy Option Flags
     <table id="SummaryNotReq2" border="0" width="850" cellspacing="0" cellpadding="0">
       <tr>
         <td align="left">
-        HDF4.2.5 - February 2010<br/>
+        HDF 4.2.6 - August 2011<br/>
         <a href="UG_Copyright.html">Copyright</a>
         <td align="right">
           <span style="font-size: 12px; font-weight: bold">

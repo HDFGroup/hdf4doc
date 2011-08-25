@@ -176,9 +176,14 @@ UsrGuide/html/UGTop.html -text
 UsrGuide/html/UG_Annot.html -text
 UsrGuide/html/UG_Appndx.html -text
 UsrGuide/html/UG_BookIX.html -text
+UsrGuide/html/UG_BookLOE.html -text
+UsrGuide/html/UG_BookLOF.html -text
+UsrGuide/html/UG_BookLOT.html -text
+UsrGuide/html/UG_BookTOC.html -text
 UsrGuide/html/UG_Copyright.html -text
 UsrGuide/html/UG_DFSD.html -text
 UsrGuide/html/UG_Errors.html -text
+UsrGuide/html/UG_Front.html -text
 UsrGuide/html/UG_Fundmtls.html -text
 UsrGuide/html/UG_GR.html -text
 UsrGuide/html/UG_Intro.html -text
@@ -187,7 +192,9 @@ UsrGuide/html/UG_Palettes.html -text
 UsrGuide/html/UG_Perform.html -text
 UsrGuide/html/UG_RIS24s.html -text
 UsrGuide/html/UG_RIS8s.html -text
+UsrGuide/html/UG_RawDatainfo.html -text
 UsrGuide/html/UG_SD.html -text
+UsrGuide/html/UG_Top.html -text
 UsrGuide/html/UG_Utils.html -text
 UsrGuide/html/UG_Vdatas.html -text
 UsrGuide/html/UG_Vgroups.html -text

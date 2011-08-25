@@ -7,12 +7,12 @@
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.8.2296" />
     <meta name="TEMPLATEBASE" content="HDF4 Version 1.0" />
-    <meta name="LASTUPDATED" content="02/26/10 15:04:18" />
+    <meta name="LASTUPDATED" content="08/25/11 16:32:48" />
     <title>Chapter</title>
     <link rel="StyleSheet" href="document.css" type="text/css" media="all" />
     <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
-<link rel="first" title="First" href="UGTop.html" />
-<link rel="last" title="Last" href="netCDF_copyright.html" />
+<link rel="first" title="First" href="UG_Top.html" />
+<link rel="last" title="Last" href="UG_Front.html" />
 <link rel="previous" title="Previous" href="UG_DFSD.html" />
 <link rel="next" title="Next" href="UG_Perform.html" />
 
@@ -36,11 +36,12 @@
         </td>
         <td valign="middle" align="center">
           <b><H1>HDF User’s Guide</H1>
-           Version 4.2.5</b><br />
+           Version 4.2.6</b><br />
+<meta name="LASTUPDATED" content="08/25/11 16:32:48" />
         </td>
         <td valign="middle" align="right">
         <br/>
-<b><a HREF="UGTop.html">[Top]</a>
+<b><a HREF="UG_Top.html">[Top]</a>
 <a accesskey="3" href="UG_DFSD.html"><b>[Prev]</b><a accesskey="4" href="UG_Perform.html"><b>[Next]</b></b>
         </td>
       </tr>
@@ -74,28 +75,28 @@ This chapter describes the main error reporting routines designed for general HD
 The HDF error reporting API consists of routines that query error stack information, the names of which are prefaced by &quot;HE&quot;. They are described briefly in <a href="UG_Errors.html#wp864">Table 13A</a>. Some are primarily for use by HDF developers while others are available to HDF users. In this chapter, three error reporting functions are covered: <b class="cFunctionName">HEprint</b>, <b class="cFunctionName">HEvalue</b> and <b class="cFunctionName">HEstring</b>. Note that only one C error reporting routine has a FORTRAN-77 counterpart: <b class="cFunctionName">heprnt/heprntf</b> (<b class="cFunctionName">heprntf</b> is the newer function, supported on all platforms; <b class="cFunctionName">heprnt</b> is the original function, supported on non-Microsoft Windows platforms).
 </p>
 <a name="wp864"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 13A	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Error Reporting Routine List</span><span style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"></span></div>
+TABLE 13A	<em style="font-weight: bold" class="cTitleText">Error Reporting Routine List</em><span style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"></span></div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp924table922">
   <caption></caption>
-  <tr>    <th colspan="1" rowspan="2"><a name="wp924"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <th colspan="1" rowspan="2"><a name="wp924"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Category
 </div>
 </th>
-    <th colspan="2" rowspan="1"><a name="wp926"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <th colspan="2" rowspan="1"><a name="wp926"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Routine Name
 </div>
 </th>
-    <th colspan="1" rowspan="2"><a name="wp930"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <th colspan="1" rowspan="2"><a name="wp930"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Description
 </div>
 </th>
 </tr>
-  <tr>    <th><a name="wp934"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <th><a name="wp934"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 C 
 </div>
 </th>
-    <th><a name="wp936"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <th><a name="wp936"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 FORTRAN-77
 </div>
 </th>
@@ -152,7 +153,7 @@ Returns the nth most recent error reported.
 	13.3	Error Reporting in HDF
 </h2>
 <a name="wp5725"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-Most HDF error reporting routines return <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) if the operation is successful and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) otherwise. Each time a <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> code is returned one or more error codes are pushed onto the error code stack. The following pseudo-code will demonstrate the two methods commonly used to access and print the contents of this stack.
+Most HDF error reporting routines return <code style="font-family: Courier New; font-size: 9pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 9pt" class="cDefName">-1</code>) if the operation is successful and <code style="font-family: Courier New; font-size: 9pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 9pt" class="cDefName">0</code>) otherwise. Each time a <code style="font-family: Courier New; font-size: 9pt" class="cDefName">FAIL</code> code is returned one or more error codes are pushed onto the error code stack. The following pseudo-code will demonstrate the two methods commonly used to access and print the contents of this stack.
 </p>
 <div class="pSyntaxLine" style="font-family: Courier New; font-size: 9pt"><ul class="pSyntaxLine" style="font-family: Courier New; font-size: 9pt">
 <a name="wp12979"> </a><p style="font-family: Courier New; font-size: 9pt" class="pSyntaxLine">if (&lt;general HDF function() &gt;= FAIL) {
@@ -168,7 +169,7 @@ Most HDF error reporting routines return <code style="font-family: Courier New; 
 A list of error codes is included at the end of this chapter. 
 </p>
 <a name="wp4989"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	13.3.1 Writing Errors to a File: HEprint
+	13.3.1	Writing Errors to a File: HEprint
 </h3>
 <a name="wp1132"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 <b class="cFunctionName">HEprint</b> writes the errors on the stack to the specified file. There are four sections of an <b class="cFunctionName">HEprint</b> error report:
@@ -204,10 +205,10 @@ As an example of the output of <b class="cFunctionName">HEprint</b>, suppose an 
 </p><a name="wp1209"> </a><p style="font-family: Courier New; font-size: 9pt" class="pSyntaxLine">		Detected in Hopen() [hfile.c line 305]
 </p></ul></div>
 <a name="wp1206"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	13.3.2 Returning the Code of the Nth Most Recent Error: HEvalue
+	13.3.2	Returning the Code of the Nth Most Recent Error: HEvalue
 </h3>
 <a name="wp3139"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-<b class="cFunctionName">HEvalue</b> returns the error code for the nth most recent error and is only available as a C routine. The <em class="cVarName">level</em> parameter specifies the number of errors to regress from the top of the error stack, i.e., <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">HEvalue(1)</code> will return the error code at the top of the stack. Refer to <a href="UG_Errors.html#wp13822">Table 13B on page 413</a> for a complete list of HDF4 error codes.
+<b class="cFunctionName">HEvalue</b> returns the error code for the nth most recent error and is only available as a C routine. The <em class="cVarName">level</em> parameter specifies the number of errors to regress from the top of the error stack, i.e., <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">HEvalue(1)</code> will return the error code at the top of the stack. Refer to <a href="UG_Errors.html#wp13822">Table 13B on page 429</a> for a complete list of HDF4 error codes.
 </p>
 <a name="wp3192"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 The syntax for <b class="cFunctionName">HEvalue</b> is as follows:
@@ -216,7 +217,7 @@ The syntax for <b class="cFunctionName">HEvalue</b> is as follows:
 <a name="wp3171"> </a><p style="font-family: Courier New; font-size: 9pt" class="pSyntaxLine"><b style="font-family: Courier New; font-size: 9pt" class="cBold">C:</b>		status = HEvalue(level);
 </p></ul></div>
 <a name="wp14710"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	13.3.3 Returning the Description of an Error Code: HEstring/hestringf
+	13.3.3	Returning the Description of an Error Code: HEstring/hestringf
 </h3>
 <a name="wp14712"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 <b class="cFunctionName">HEstring</b> returns the error description associated with the error code specified by the <em class="cVarName">error_code</em> parameter as a character string. 
@@ -229,7 +230,7 @@ The syntax for <b class="cFunctionName">HEstring</b> is as follows:
 </p><a name="wp14692"> </a><p style="font-family: Courier New; font-size: 9pt" class="pSyntaxLine"><b style="font-family: Courier New; font-size: 9pt" class="cBold">FORTRAN:</b>	status = <span style="color: #000000; font-family: Courier New; font-size: 8pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">hestringf(error_code, error_message)
 </span></p></ul></div>
 <a name="wp14725"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	13.3.4 Clearing the error stack: HEclear
+	13.3.4	Clearing the error stack: HEclear
 </h3>
 <a name="wp14727"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 <b class="cFunctionName">HEclear</b> clears all information on reported errors from the error stack and is only available as a C routine. The syntax for <b class="cFunctionName">HEclear</b> is as follows:
@@ -265,15 +266,15 @@ C:
 }<a name="wp13230"> </a>
 </pre></div>
 <a name="wp13822"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 13B	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF Error Codes</span></div>
+TABLE 13B	<em class="cTitleText">HDF Error Codes</em></div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp13930table13333">
   <caption></caption>
-  <tr>    <th><a name="wp13930"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <th><a name="wp13930"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Error Code
 </div>
 </th>
-    <th><a name="wp13932"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <th><a name="wp13932"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Code Definition
 </div>
 </th>
@@ -769,7 +770,7 @@ DFE_BADPTR
 </div>
 </td>
     <td><a name="wp14152"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-<code style="font-family: Courier New; font-size: 8pt" class="cDefName">NULL</code> pointer argument was specified.
+<code style="font-family: Courier New; font-size: 9pt" class="cDefName">NULL</code> pointer argument was specified.
 </div>
 </td>
 </tr>
@@ -1096,7 +1097,7 @@ DFE_COMPVERSION
 Version error from zlib
 </div>
 <a name="wp14574"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Note: when <code style="font-family: Courier New; font-size: 8pt" class="cDefName">Z_VERSION_ERROR</code> (-6) returned from zlib.
+Note: when <code style="font-family: Courier New; font-size: 9pt" class="cDefName">Z_VERSION_ERROR</code> (-6) returned from zlib.
 </div>
 </td>
 </tr>
@@ -1111,19 +1112,19 @@ Error in reading compressed data.
 Note: when one of the following error codes returned from zlib:
 </div>
 <a name="wp14580"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-<code style="font-family: Courier New; font-size: 8pt" class="cDefName">Z_ERRNO</code>         (-1)
+<code style="font-family: Courier New; font-size: 9pt" class="cDefName">Z_ERRNO</code>         (-1)
 </div>
 <a name="wp14581"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-<code style="font-family: Courier New; font-size: 8pt" class="cDefName">Z_STREAM_ERROR</code>  (-2)
+<code style="font-family: Courier New; font-size: 9pt" class="cDefName">Z_STREAM_ERROR</code>  (-2)
 </div>
 <a name="wp14582"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-<code style="font-family: Courier New; font-size: 8pt" class="cDefName">Z_DATA_ERROR</code>    (-3)
+<code style="font-family: Courier New; font-size: 9pt" class="cDefName">Z_DATA_ERROR</code>    (-3)
 </div>
 <a name="wp14583"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-<code style="font-family: Courier New; font-size: 8pt" class="cDefName">Z_MEM_ERROR</code>     (-4)
+<code style="font-family: Courier New; font-size: 9pt" class="cDefName">Z_MEM_ERROR</code>     (-4)
 </div>
 <a name="wp14584"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-<code style="font-family: Courier New; font-size: 8pt" class="cDefName">Z_BUF_ERROR</code>     (-5)
+<code style="font-family: Courier New; font-size: 9pt" class="cDefName">Z_BUF_ERROR</code>     (-5)
 </div>
 </td>
 </tr>
@@ -1204,7 +1205,7 @@ DFE_VTAB
 </div>
 </td>
     <td><a name="wp14320"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Element not in <code style="font-family: Courier New; font-size: 8pt" class="cDefName">vtab[]</code><span style="color: #000000; font-family: Courier New; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">.</span>
+Element not in <code style="font-family: Courier New; font-size: 9pt" class="cDefName">vtab[]</code><span style="color: #000000; font-family: Courier New; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">.</span>
 </div>
 </td>
 </tr>
@@ -1439,7 +1440,7 @@ Failed when finding a bit in a bit vector.
     <table id="SummaryNotReq2" border="0" width="850" cellspacing="0" cellpadding="0">
       <tr>
         <td align="left">
-        HDF4.2.5 - February 2010<br/>
+        HDF 4.2.6 - August 2011<br/>
         <a href="UG_Copyright.html">Copyright</a>
         <td align="right">
           <span style="font-size: 12px; font-weight: bold">

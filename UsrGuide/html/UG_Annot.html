@@ -7,12 +7,12 @@
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.8.2296" />
     <meta name="TEMPLATEBASE" content="HDF4 Version 1.0" />
-    <meta name="LASTUPDATED" content="02/26/10 15:04:08" />
+    <meta name="LASTUPDATED" content="08/25/11 16:32:39" />
     <title>Chapter</title>
     <link rel="StyleSheet" href="document.css" type="text/css" media="all" />
     <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
-<link rel="first" title="First" href="UGTop.html" />
-<link rel="last" title="Last" href="netCDF_copyright.html" />
+<link rel="first" title="First" href="UG_Top.html" />
+<link rel="last" title="Last" href="UG_Front.html" />
 <link rel="previous" title="Previous" href="UG_MF_Annot.html" />
 <link rel="next" title="Next" href="UG_DFSD.html" />
 
@@ -36,11 +36,12 @@
         </td>
         <td valign="middle" align="center">
           <b><H1>HDF User’s Guide</H1>
-           Version 4.2.5</b><br />
+           Version 4.2.6</b><br />
+<meta name="LASTUPDATED" content="08/25/11 16:32:39" />
         </td>
         <td valign="middle" align="right">
         <br/>
-<b><a HREF="UGTop.html">[Top]</a>
+<b><a HREF="UG_Top.html">[Top]</a>
 <a accesskey="3" href="UG_MF_Annot.html"><b>[Prev]</b><a accesskey="4" href="UG_DFSD.html"><b>[Next]</b></b>
         </td>
       </tr>
@@ -80,7 +81,7 @@ Note that there is a multifile annotations interface, called the AN interface, f
 The functions and routines that comprise the single-file annotation interface have names that begin with the string &quot;DFAN&quot; in C; the equivalent FORTRAN-77 routine names are prefaced by &quot;da&quot;. This interface is the older annotation interface and only supports annotation access within one particular HDF file. It doesn&#39;t support the concept of an annotation identifier used in the newer multifile interface. Therefore, annotations created with the multifile interface cannot be accessed or manipulated with DFAN interface functions. 
 </p>
 <a name="wp3664"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	11.2.1 DFAN Library Routines
+	11.2.1	DFAN Library Routines
 </h3>
 <a name="wp3666"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 These functions are divided into the following categories:
@@ -97,28 +98,28 @@ These functions are divided into the following categories:
 The DFAN interface routines are listed in the following table and are discussed in the subsequent sections of this document.
 </p>
 <a name="wp3683"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 11A	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFAN Library Routines</span></div>
+TABLE 11A	<em class="cTitleText">DFAN Library Routines</em></div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp15229table15227">
   <caption></caption>
-  <tr>    <th colspan="1" rowspan="2"><a name="wp15229"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <th colspan="1" rowspan="2"><a name="wp15229"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Purpose
 </div>
 </th>
-    <th colspan="2" rowspan="1"><a name="wp15231"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <th colspan="2" rowspan="1"><a name="wp15231"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Functions
 </div>
 </th>
-    <th colspan="1" rowspan="2"><a name="wp15235"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <th colspan="1" rowspan="2"><a name="wp15235"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Description
 </div>
 </th>
 </tr>
-  <tr>    <th><a name="wp15239"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <th><a name="wp15239"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 C
 </div>
 </th>
-    <th><a name="wp15241"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <th><a name="wp15241"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 FORTRAN-77
 </div>
 </th>
@@ -340,38 +341,38 @@ Clears the internal tables and structures used by the DFAN interface
 
 </div>
 <a name="wp3685"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	11.2.2 Tags in the Annotation Interface
+	11.2.2	Tags in the Annotation Interface
 </h3>
 <a name="wp3691"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 <a href="UG_Annot.html#wp3696">Table 11B</a> lists the annotation tags defined in HDF versions 2.0, 3.0, and 4.0. Newly-defined tag names in each version are bolded. For a more complete list of tags, refer to the <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF Specifications and Developer&#39;s Guide v3.2</span> from the HDF web site at <a href="http://www.hdfgroup.org/"><span class="cWebJump">http://www.hdfgroup.org/</span></a>.
 </p>
 <a name="wp3696"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 11B	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">List of Annotation Interface Tags in HDF Versions 2.0, 3.0 and 4.0</span></div>
+TABLE 11B	<em class="cTitleText">List of Annotation Interface Tags in HDF Versions 2.0, 3.0 and 4.0</em></div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp15372table15370">
   <caption></caption>
-  <tr>    <td colspan="1" rowspan="2"><a name="wp15372"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td colspan="1" rowspan="2"><a name="wp15372"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Interface
 </div>
 </td>
-    <td colspan="1" rowspan="2"><a name="wp15374"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="1" rowspan="2"><a name="wp15374"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Data Object
 </div>
 </td>
-    <td colspan="3" rowspan="1"><a name="wp15376"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="3" rowspan="1"><a name="wp15376"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Tag Name
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp15386"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td><a name="wp15386"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 v2.0
 </div>
 </td>
-    <td><a name="wp15388"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp15388"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 v3.0
 </div>
 </td>
-    <td><a name="wp15390"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp15390"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 v4.0
 </div>
 </td>
@@ -844,7 +845,7 @@ Essentially, the difference between the two models is that file annotations requ
 The DFAN interface supports writes to file labels, file descriptions, object labels, and object descriptions.
 </p>
 <a name="wp3755"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	11.4.1 Assigning a File Label: DFANaddfid
+	11.4.1	Assigning a File Label: DFANaddfid
 </h3>
 <a name="wp3765"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 To write a file label, the calling program must call <b class="cFunctionName">DFANaddfid</b>:
@@ -857,10 +858,10 @@ To write a file label, the calling program must call <b class="cFunctionName">DF
 <b class="cFunctionName">DFANaddfid</b> has two parameters: <em class="cVarName">file_id</em> and <em class="cVarName">label</em>. The <em class="cVarName">file_id</em> parameter contains the file identifier for the file to be annotated and the <em class="cVarName">label</em> parameter contains the annotation string. The label array must be null-terminated. 	In the FORTRAN-77 version, the length of the label should be the length of the label array as in FORTRAN-77 string lengths are assumed to be the declared length of the array that holds the string. 
 </p>
 <a name="wp9793"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-The parameters of <b class="cFunctionName">DFANaddfid</b> are further defined in <a href="UG_Annot.html#wp3822">Table 11C on page 374</a>.
+The parameters of <b class="cFunctionName">DFANaddfid</b> are further defined in <a href="UG_Annot.html#wp3822">Table 11C on page 390</a>.
 </p>
 <a name="wp3787"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	11.4.2 Assigning a File Description: DFANaddfds
+	11.4.2	Assigning a File Description: DFANaddfds
 </h3>
 <a name="wp3799"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 To write a file description, the calling program must call <b class="cFunctionName">DFANaddfds</b>:
@@ -876,38 +877,38 @@ To write a file description, the calling program must call <b class="cFunctionNa
 The parameters of <b class="cFunctionName">DFANaddfds</b> are defined in <a href="UG_Annot.html#wp3822">Table 11C</a>. 
 </p>
 <a name="wp3822"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 11C	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFANaddfid and DFANaddfds Parameter List</span></div>
+TABLE 11C	<em class="cTitleText">DFANaddfid and DFANaddfds Parameter List</em></div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp15638table15636">
   <caption></caption>
-  <tr>    <td colspan="1" rowspan="2"><a name="wp15638"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td colspan="1" rowspan="2"><a name="wp15638"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 <span style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Routine Name</span>
 </div>
 <a name="wp18765"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 [Return Type]
 </div>
-<a name="wp15639"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+<a name="wp15639"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 (FORTRAN-77)
 </div>
 </td>
-    <td colspan="1" rowspan="2"><a name="wp15641"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="1" rowspan="2"><a name="wp15641"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Parameter
 </div>
 </td>
-    <td colspan="2" rowspan="1"><a name="wp15643"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="2" rowspan="1"><a name="wp15643"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Parameter Type
 </div>
 </td>
-    <td colspan="1" rowspan="2"><a name="wp15647"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="1" rowspan="2"><a name="wp15647"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Description
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp15653"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td><a name="wp15653"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 C
 </div>
 </td>
-    <td><a name="wp15655"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp15655"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 FORTRAN-77
 </div>
 </td>
@@ -1071,7 +1072,7 @@ C     Close the file.<a name="wp18001"> </a>
       end<a name="wp18004"> </a>
 </pre></div>
 <a name="wp4748"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	11.4.3 Assigning an Object Label: DFANputlabel
+	11.4.3	Assigning an Object Label: DFANputlabel
 </h3>
 <a name="wp3920"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 To write a file label, the calling program must contain a call to <b class="cFunctionName">DFANputlabel</b>:
@@ -1087,7 +1088,7 @@ To write a file label, the calling program must contain a call to <b class="cFun
 The parameters of <b class="cFunctionName">DFANputlabel</b> are further defined in <a href="UG_Annot.html#wp3951">Table 11D</a>.
 </p>
 <a name="wp3932"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	11.4.4 Assigning an Object Description: DFANputdesc
+	11.4.4	Assigning an Object Description: DFANputdesc
 </h3>
 <a name="wp3934"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 To write an object description, the calling program must contain a call to <b class="cFunctionName">DFANputdesc</b>:
@@ -1103,38 +1104,38 @@ To write an object description, the calling program must contain a call to <b cl
 The parameters of <b class="cFunctionName">DFANputdesc</b> are further defined in <a href="UG_Annot.html#wp3951">Table 11D</a>.
 </p>
 <a name="wp3951"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 11D	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFANputlabel and DFANputdesc Parameter List</span></div>
+TABLE 11D	<em class="cTitleText">DFANputlabel and DFANputdesc Parameter List</em></div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp15718table15716">
   <caption></caption>
-  <tr>    <td colspan="1" rowspan="2"><a name="wp15718"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td colspan="1" rowspan="2"><a name="wp15718"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Routine Name
 </div>
 <a name="wp18767"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 [Return Type]
 </div>
-<a name="wp15719"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+<a name="wp15719"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 (FORTRAN-77)
 </div>
 </td>
-    <td colspan="1" rowspan="2"><a name="wp15721"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="1" rowspan="2"><a name="wp15721"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Parameter
 </div>
 </td>
-    <td colspan="2" rowspan="1"><a name="wp15723"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="2" rowspan="1"><a name="wp15723"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Parameter Type
 </div>
 </td>
-    <td colspan="1" rowspan="2"><a name="wp15727"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="1" rowspan="2"><a name="wp15727"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Description
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp15733"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td><a name="wp15733"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 C
 </div>
 </td>
-    <td><a name="wp15735"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp15735"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 FORTRAN-77
 </div>
 </td>
@@ -1404,7 +1405,7 @@ C     Assign an object description to the scientific data set.<a name="wp18088">
 The DFAN interface provides several functions for reading file and data object annotations, which are described below. 
 </p>
 <a name="wp4093"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	11.5.1 Reading a File Label: DFANgetfidlen and DFANgetfid
+	11.5.1	Reading a File Label: DFANgetfidlen and DFANgetfid
 </h3>
 <a name="wp4095"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 The DFAN programming model for reading a file label is as follows:
@@ -1441,7 +1442,7 @@ When <b class="cFunctionName">DFANgetfidlen</b> is first called for a given file
 The parameters of <b class="cFunctionName">DFANgetfidlen</b> and <b class="cFunctionName">DFANgetfid</b> are described in <a href="UG_Annot.html#wp2971">Table 11E</a>.
 </p>
 <a name="wp4141"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	11.5.2 Reading a File Description: DFANgetfdslen and DFANgetfds
+	11.5.2	Reading a File Description: DFANgetfdslen and DFANgetfds
 </h3>
 <a name="wp4143"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 The DFAN programming model for reading a file description is as follows:
@@ -1475,38 +1476,38 @@ When <b class="cFunctionName">DFANgetfdslen</b> is first called for a given file
 The parameters of these routines are described further in the following table.
 </p>
 <a name="wp2971"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 11E	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFANgetfidlen, DFANgetfid, DFANgetfdslen, and DFANgetfds Parameter List</span></div>
+TABLE 11E	<em class="cTitleText">DFANgetfidlen, DFANgetfid, DFANgetfdslen, and DFANgetfds Parameter List</em></div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp15838table15836">
   <caption></caption>
-  <tr>    <td colspan="1" rowspan="2"><a name="wp15838"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td colspan="1" rowspan="2"><a name="wp15838"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Routine Name
 </div>
 <a name="wp18770"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 [Return Type]
 </div>
-<a name="wp15839"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+<a name="wp15839"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 (FORTRAN-77)
 </div>
 </td>
-    <td colspan="1" rowspan="2"><a name="wp15841"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="1" rowspan="2"><a name="wp15841"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Parameter
 </div>
 </td>
-    <td colspan="2" rowspan="1"><a name="wp15843"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="2" rowspan="1"><a name="wp15843"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Parameter Type
 </div>
 </td>
-    <td colspan="1" rowspan="2"><a name="wp15847"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="1" rowspan="2"><a name="wp15847"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Description
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp15853"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td><a name="wp15853"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 C
 </div>
 </td>
-    <td><a name="wp15855"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp15855"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 FORTRAN-77
 </div>
 </td>
@@ -1812,7 +1813,7 @@ C     Close the HDF file.<a name="wp18142"> </a>
       end<a name="wp18145"> </a>
 </pre></div>
 <a name="wp4286"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	11.5.3 Reading an Object Label: DFANgetlablen and DFANgetlabel
+	11.5.3	Reading an Object Label: DFANgetlablen and DFANgetlabel
 </h3>
 <a name="wp4288"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 The DFAN programming model for reading a data object label is as follows:
@@ -1841,7 +1842,7 @@ To read the first object label in a file, the calling program must contain the f
 The parameters of <b class="cFunctionName">DFANgetlablen</b> and <b class="cFunctionName">DFANgetlabel</b> are defined below. 
 </p>
 <a name="wp4314"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	11.5.4 Reading an Object Description: DFANgetdesclen and DFANgetdesc
+	11.5.4	Reading an Object Description: DFANgetdesclen and DFANgetdesc
 </h3>
 <a name="wp4316"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 The DFAN programming model for reading a data object description is as follows:
@@ -1870,38 +1871,38 @@ To read the first object description in a file, the calling program must contain
 The parameters of <b class="cFunctionName">DFANgetdesclen</b> and <b class="cFunctionName">DFANgetdesc</b> are defined in the following table.
 </p>
 <a name="wp4351"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 11F	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFANgetlablen, DFANgetlabel, DFANgetdesc and DFANgetdesclen Parameter List</span></div>
+TABLE 11F	<em class="cTitleText">DFANgetlablen, DFANgetlabel, DFANgetdesc and DFANgetdesclen Parameter List</em></div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp15989table15987">
   <caption></caption>
-  <tr>    <td colspan="1" rowspan="2"><a name="wp15989"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td colspan="1" rowspan="2"><a name="wp15989"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Routine Name
 </div>
 <a name="wp18775"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 [Return Type]
 </div>
-<a name="wp15990"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+<a name="wp15990"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 (FORTRAN-77)
 </div>
 </td>
-    <td colspan="1" rowspan="2"><a name="wp15992"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="1" rowspan="2"><a name="wp15992"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Parameter
 </div>
 </td>
-    <td colspan="2" rowspan="1"><a name="wp15994"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="2" rowspan="1"><a name="wp15994"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Parameter Type
 </div>
 </td>
-    <td colspan="1" rowspan="2"><a name="wp15998"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="1" rowspan="2"><a name="wp15998"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Description
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp16004"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td><a name="wp16004"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 C
 </div>
 </td>
-    <td><a name="wp16006"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp16006"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 FORTRAN-77
 </div>
 </td>
@@ -2284,7 +2285,7 @@ There is no FORTRAN-77 version of the Example 4 C code for this version of the d
 The DFAN interface provides one function for interface maintenance, <b class="cFunctionName">DFANclear</b>. 
 </p>
 <a name="wp12901"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	11.6.1 Clearing the DFAN Interface Internal Structures and Settings: DFANclear
+	11.6.1	Clearing the DFAN Interface Internal Structures and Settings: DFANclear
 </h3>
 <a name="wp12902"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 <b class="cFunctionName">DFANclear</b> clears all internal library structures and parameters of the DFAN annotation interface.
@@ -2296,38 +2297,38 @@ When a file is regenerated in a single run by a library routine of another inter
 	<b class="cFunctionName">DFANclear</b> returns <code style="font-family: Courier New; font-size: 9pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 9pt" class="cDefName">0</code>) if successful and <code style="font-family: Courier New; font-size: 9pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 9pt" class="cDefName">-1</code>) otherwise. <b class="cFunctionName">DFANclear </b>takes no parameters, as described in the following table.
 </p>
 <a name="wp12883"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 11G	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFANclear Parameter List</span></div>
+TABLE 11G	<em class="cTitleText">DFANclear Parameter List</em></div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp16181table16179">
   <caption></caption>
-  <tr>    <td colspan="1" rowspan="2"><a name="wp16181"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td colspan="1" rowspan="2"><a name="wp16181"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Routine Name
 </div>
 <a name="wp18780"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 [Return Type]
 </div>
-<a name="wp16182"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+<a name="wp16182"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 (FORTRAN-77)
 </div>
 </td>
-    <td colspan="1" rowspan="2"><a name="wp16184"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="1" rowspan="2"><a name="wp16184"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Parameter
 </div>
 </td>
-    <td colspan="2" rowspan="1"><a name="wp16186"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="2" rowspan="1"><a name="wp16186"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Parameter Type
 </div>
 </td>
-    <td colspan="1" rowspan="2"><a name="wp16190"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="1" rowspan="2"><a name="wp16190"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Description
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp16196"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td><a name="wp16196"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 C
 </div>
 </td>
-    <td><a name="wp16198"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp16198"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 FORTRAN-77
 </div>
 </td>
@@ -2381,7 +2382,7 @@ There are three ways to check a reference number for an object:
 </ul></div>
 </ul></div>
 <a name="wp4471"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	11.7.1 Determining a Reference Number for the Last Object Accessed: DF*lastref and DF*writeref
+	11.7.1	Determining a Reference Number for the Last Object Accessed: DF*lastref and DF*writeref
 </h3>
 <a name="wp4475"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 There are two methods of obtaining a reference number through the use of a <b class="cFunctionName">DF*lastref</b> call. The first approach is to obtain and store the reference number of an object immediately after the object is created:
@@ -2412,22 +2413,22 @@ The <b class="cFunctionName">DF*lastref</b> routines have no parameters. The <b 
 The <b class="cFunctionName">DF*lastref</b> and <b class="cFunctionName">DF*writeref</b> routines are further described in the following table.
 </p>
 <a name="wp4500"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 11H	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">List and Descriptions of the DF*writeref and DF*lastref Routines</span></div>
+TABLE 11H	<em class="cTitleText">List and Descriptions of the DF*writeref and DF*lastref Routines</em></div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp2439table2431">
   <caption></caption>
-  <tr>    <th><a name="wp2439"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <th><a name="wp2439"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 HDF Data Object 
 </div>
 </th>
-    <th><a name="wp2441"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <th><a name="wp2441"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Routine Name
 </div>
-<a name="wp11149"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+<a name="wp11149"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 (FORTRAN-77)
 </div>
 </th>
-    <th><a name="wp2443"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <th><a name="wp2443"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Description
 </div>
 </th>
@@ -2566,7 +2567,7 @@ Returns the reference number for the last annotation accessed
 
 </div>
 <a name="wp4502"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	11.7.2 Querying a List of Reference Numbers for a Given Tag: DFANlablist
+	11.7.2	Querying a List of Reference Numbers for a Given Tag: DFANlablist
 </h3>
 <a name="wp4504"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 Given a tag and two buffers, <b class="cFunctionName">DFANlablist</b> will fill one buffer with all reference numbers for the given tag and the other with all labels assigned to the given tag. The programming model for determining a list of reference numbers is as follows:
@@ -2607,38 +2608,38 @@ To create a list of reference numbers and their labels for a given tag, the foll
 	Taken together, the contents of <em class="cVarName">ref_list</em> and <em class="cVarName">label_list</em> constitute a directory of all objects and their labels for a given tag. The contents of <em class="cVarName">label_list</em> can be displayed to show all of the labels for a given tag or it can be searched to find the reference number of a data object with a certain label. Once the reference number for a given label is found, the corresponding data object can be accessed by invoking other HDF routines. Therefore, this routine provides a mechanism for direct access to data objects in HDF files.
 </p>
 <a name="wp11431"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 11I	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFANlablist Parameter List</span></div>
+TABLE 11I	<em class="cTitleText">DFANlablist Parameter List</em></div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp16220table16218">
   <caption></caption>
-  <tr>    <td colspan="1" rowspan="2"><a name="wp16220"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td colspan="1" rowspan="2"><a name="wp16220"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Routine Name
 </div>
 <a name="wp18782"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 [Return Type]
 </div>
-<a name="wp16221"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+<a name="wp16221"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 (FORTRAN-77)
 </div>
 </td>
-    <td colspan="1" rowspan="2"><a name="wp16223"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="1" rowspan="2"><a name="wp16223"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Parameter
 </div>
 </td>
-    <td colspan="2" rowspan="1"><a name="wp16225"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="2" rowspan="1"><a name="wp16225"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Parameter Type
 </div>
 </td>
-    <td colspan="1" rowspan="2"><a name="wp16229"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="1" rowspan="2"><a name="wp16229"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Description
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp16235"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td><a name="wp16235"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 C
 </div>
 </td>
-    <td><a name="wp16237"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp16237"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 FORTRAN-77
 </div>
 </td>
@@ -2831,7 +2832,7 @@ FORTRAN:
       end<a name="wp18249"> </a>
 </pre></div>
 <a name="wp14693"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	11.7.3 Locate an Object by Its Tag and Reference Number: Hfind
+	11.7.3	Locate an Object by Its Tag and Reference Number: Hfind
 </h3>
 <a name="wp42132"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 Instead of using <b class="cFunctionName">DFANlablist</b> to create a list of reference numbers to search, HDF provides a general search routine called <b class="cFunctionName">Hfind</b>. <b class="cFunctionName">Hfind</b> is described in <a href="UG_Fundmtls.html#wp2881">Chapter 2, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF Fundamentals</span></a>.
@@ -2843,7 +2844,7 @@ Instead of using <b class="cFunctionName">DFANlablist</b> to create a list of re
     <table id="SummaryNotReq2" border="0" width="850" cellspacing="0" cellpadding="0">
       <tr>
         <td align="left">
-        HDF4.2.5 - February 2010<br/>
+        HDF 4.2.6 - August 2011<br/>
         <a href="UG_Copyright.html">Copyright</a>
         <td align="right">
           <span style="font-size: 12px; font-weight: bold">
