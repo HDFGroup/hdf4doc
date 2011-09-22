@@ -7,12 +7,12 @@
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.8.2296" />
     <meta name="TEMPLATEBASE" content="Dynamic HTML" />
-    <meta name="LASTUPDATED" content="08/01/11 12:50:09" />
+    <meta name="LASTUPDATED" content="09/22/11 12:42:49" />
     <title>GRattrinfo/mgatinf</title>
     <link rel="StyleSheet" href="document.css" type="text/css" media="all" />
     <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
 <link rel="first" title="First" href="RM_Front.html" />
-<link rel="last" title="Last" href="Attributes.html" />
+<link rel="last" title="Last" href="netCDF_copyright.html" />
 <link rel="previous" title="Previous" href="RM_Section_II_AN.html" />
 <link rel="next" title="Next" href="RM_Section_II_H.html" />
 
@@ -2920,7 +2920,7 @@ Description
 &#160;
 </div></td>
     <td><a name="wp490399"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-The parameter <em class="cVarName">origin</em> is a two-dimensional array which specifies the coordinates of the chunk according to the chunk position in the overall chunk array. Refer to <a href="../../UsrGuide/html/UG_GR.html#wp44614">Chapter 8, &quot;General Raster Images (GR API)&quot;</a> in the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span> for details.
+The parameter <em class="cVarName">origin</em> is a two-dimensional array which specifies the coordinates of the chunk according to the chunk position in the overall chunk array. Refer to Chapter 7, &quot;General Raster Images (GR API)&quot; in the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span> for details.
 </div>
 </td>
 </tr>
@@ -5395,7 +5395,7 @@ Description
 &#160;
 </div></td>
     <td><a name="wp476466"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-The parameter <em class="cVarName">origin</em> is a two-dimensional array which specifies the coordinates of the chunk according to the chunk position in the overall chunk array. Refer to <a href="../../UsrGuide/html/UG_GR.html#wp44614">Chapter 8, &quot;General Raster Images (GR API)&quot;</a> in the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span>.
+The parameter <em class="cVarName">origin</em> is a two-dimensional array which specifies the coordinates of the chunk according to the chunk position in the overall chunk array. Refer to Chapter 7, &quot;General Raster Images (GR API)&quot; in the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span>.
 </div>
 </td>
 </tr>
@@ -6017,6 +6017,34 @@ Raster image identifier returned by <b class="cFunctionName">GRselect</b>
 </div>
 </td>
 </tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp497867"> </a><div style="margin-top: 0pt" class="pCellVariable">
+tobe_mapped
+</div>
+</td>
+    <td><a name="wp497869"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+OUT:
+</div>
+</td>
+    <td><a name="wp497871"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+&#160;
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp497861"> </a><div style="margin-top: 0pt" class="pCellVariable">
+name_generated
+</div>
+</td>
+    <td><a name="wp497863"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+OUT:
+</div>
+</td>
+    <td><a name="wp497865"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+&#160;
+</div>
+</td>
+</tr>
 </table>
 </div>
 <p class="pBodyRelative">
@@ -6056,7 +6084,7 @@ Description
 <a name="wp497203"> </a><div style="margin-bottom: 6pt; margin-top: 0pt">        compressions, no chunking,...</div>
 </ul></div>
 <a name="wp497259"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-The function will set <em class="cVarName">tobe_mapped</em> to <code style="font-family: Courier New; font-size: 8pt" class="cDefName">TRUE</code> if the image satisfies the above conditions, and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FALSE</code>, otherwise.  This feature is specific to the HDF4 Mapping project.
+The function will set <em class="cVarName">tobe_mapped</em> to <code style="font-family: Courier New; font-size: 8pt" class="cDefName">TRUE</code> if the image satisfies the above conditions, and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FALSE</code>, otherwise.
 </div>
 </td>
 </tr>
@@ -6065,7 +6093,7 @@ The function will set <em class="cVarName">tobe_mapped</em> to <code style="font
 &#160;
 </div></td>
     <td><a name="wp497192"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-In addition, <b class="cFunctionName">GR2bmapped</b> will set the flag <em class="cVarName">name_generated</em> to indicate whether the image has name that was generated by the library.  Old images (or images created with pre-GR API) do not have a name and the library would generate a name for it while reading in the file.  The HDF4 mapwriter needs to make this distinction.
+In addition, <b class="cFunctionName">GR2bmapped</b> will set the flag <em class="cVarName">name_generated</em> to indicate whether the image has name that was generated by the library.  Old images (or images created with pre-GR API) do not have a name and the library would generate a name for it while reading in the file.  The HDF4 File Content Writer needs to make this distinction.
 </div>
 </td>
 </tr>
