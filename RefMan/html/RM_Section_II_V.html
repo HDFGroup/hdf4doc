@@ -3381,7 +3381,7 @@ integer vgroup_id
 [V Interface]</A><a HREF="RMTop.html"><b>[Top]</b></a>
 </p>
 <hr />
-Vgetvgroups
+Vgetvgroups/vfgvgroups
 </h2>
 <a name="wp463835"> </a><p style="font-weight: normal" class="pSignature">
 intn Vgetvgroups(int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">id</span>, uintn <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">start_vg</span>, uintn <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">vg_count</span>, uint16 *<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">refarray</span>)
@@ -3519,6 +3519,18 @@ The parameter <em class="cVarName">vg_count</em> specifies the number of items t
 </div>
 </td>
 </tr>
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp464067"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+&#160;
+</div></td>
+    <td><a name="wp464069"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Note in the FORTRAN-77 version, if <em class="cVarName">vg_count</em> is -1 then the function will return the value of vg_count and disregard <em class="cVarName">refarray</em>; equivalent to passing <code style="font-family: Courier New; font-size: 8pt" class="cDefName">NULL</code> for <em class="cVarName">refarray</em> in the C version. 
+</div>
+</td>
+</tr>
 </table>
 </div>
 <p class="pBodyRelative">
@@ -3531,7 +3543,7 @@ The parameter <em class="cVarName">vg_count</em> specifies the number of items t
 FORTRAN
 </div></td>
     <td><a name="wp463872"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortSyntax">
-Currently unavailable
+integer function vfgvgroups(id, start_vg, vg_count, refarray)
 </div>
 </td>
 </tr>
@@ -3539,7 +3551,16 @@ Currently unavailable
 <a name="wp463874"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 &#160;
 </div></td>
-    <td><a name="wp463876"> </a><div class="pCellFortran">
+    <td><a name="wp463876"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" div class="pCellFortVar">
+integer id, start_vg, vg_count
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp489378"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+</div></td>
+    <td><a name="wp489382"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" div class="pCellFortVar">
+integer refarray(*)
 &#160;
 </div>
 </td>

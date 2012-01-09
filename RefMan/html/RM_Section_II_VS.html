@@ -4086,10 +4086,10 @@ character*(*) vdata_name
 [VS Interface]</A><a HREF="RMTop.html"><b>[Top]</b></a>
 </p>
 <hr />
-VSgetvdatas
+VSgetvdatas/vsfgvdatas
 </h2>
 <a name="wp489387"> </a><p style="font-weight: normal" class="pSignature">
-intn VSgetvdatas(int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">id</span>, const uintn <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">start_vd</span>, const uintn <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">n_vds</span>, uint16 *<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">refarray</span>)
+intn VSgetvdatas(int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">id</span>, const uintn <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">start_vd</span>, const uintn <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">vd_count</span>, uint16 *<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">refarray</span>)
 </p>
 <a name="wp489374"> </a><p class="pBodyRelative">
 </p>
@@ -4233,6 +4233,15 @@ When <em class="cVarName">id</em> is a vgroup identifier, only the immediate vda
 </div>
 </td>
 </tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp489363"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+&#160;
+</div></td>
+    <td><a name="wp489365"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Note in the FORTRAN-77 version, if <em class="cVarName">vd_count</em> is -1 then the function will return the value of vd_count and disregard <em class="cVarName">refarray</em>; equivalent to passing <code style="font-family: Courier New; font-size: 8pt" class="cDefName">NULL</code> for <em class="cVarName">refarray</em> in the C version. 
+</div>
+</td>
+</tr>
 </table>
 </div>
 <p class="pBodyRelative">
@@ -4245,7 +4254,7 @@ When <em class="cVarName">id</em> is a vgroup identifier, only the immediate vda
 FORTRAN
 </div></td>
     <td><a name="wp489369"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortSyntax">
-Currently unavailable
+integer function vsfgvdatas(id, start_vd, vd_count, refarray)
 </div>
 </td>
 </tr>
@@ -4253,7 +4262,16 @@ Currently unavailable
 <a name="wp489371"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 &#160;
 </div></td>
-    <td><a name="wp489373"> </a><div class="pCellFortran">
+    <td><a name="wp489373"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" div class="pCellFortVar">
+integer id, start_vd, vd_count
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp489375"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+</div></td>
+    <td><a name="wp489377"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" div class="pCellFortVar">
+integer refarray(*)
 &#160;
 </div>
 </td>
