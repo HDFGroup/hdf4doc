@@ -48,7 +48,7 @@ RefMan/html/images/help.jpg -text
 RefMan/html/netCDF_copyright.html -text
 RefMan/src/RM_Front.fm -text
 RefMan/src/RM_PDF.book -text
-RefMan/src/RM_PDF.pdf -text
+RefMan/src/RM_PDF.pdf -text svneol=unset#application/octet-stream
 RefMan/src/RM_Section_I.fm -text
 RefMan/src/RM_Section_III.fm -text
 RefMan/src/RM_Section_II_AN.fm -text
