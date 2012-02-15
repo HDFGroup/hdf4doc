@@ -7,13 +7,13 @@
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.8.2296" />
     <meta name="TEMPLATEBASE" content="HDF4 Version 1.0" />
-    <meta name="LASTUPDATED" content="08/25/11 16:31:13" />
-    <title>Chapter</title>
+    <meta name="LASTUPDATED" content="02/15/12 15:41:02" />
+    <title>Chapter 1	Introduction to HDF</title>
     <link rel="StyleSheet" href="document.css" type="text/css" media="all" />
     <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
 <link rel="first" title="First" href="UG_Top.html" />
-<link rel="last" title="Last" href="UG_Front.html" />
-<link rel="previous" title="Previous" href="UG_BookLOE.html" />
+<link rel="last" title="Last" href="netCDF_copyright.html" />
+<link rel="previous" title="Previous" href="UG_PDFLOP.html" />
 <link rel="next" title="Next" href="UG_Fundmtls.html" />
 
     <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
@@ -36,13 +36,12 @@
         </td>
         <td valign="middle" align="center">
           <b><H1>HDF User’s Guide</H1>
-           Version 4.2.6</b><br />
-<meta name="LASTUPDATED" content="08/25/11 16:31:13" />
+           Version 4.2.7</b><br />
         </td>
         <td valign="middle" align="right">
         <br/>
 <b><a HREF="UG_Top.html">[Top]</a>
-<a accesskey="3" href="UG_BookLOE.html"><b>[Prev]</b><a accesskey="4" href="UG_Fundmtls.html"><b>[Next]</b></b>
+<a accesskey="3" href="UG_PDFLOP.html"><b>[Prev]</b><a accesskey="4" href="UG_Fundmtls.html"><b>[Next]</b></b>
         </td>
       </tr>
     </table>
@@ -50,16 +49,9 @@
     <hr />
 
     <blockquote>
-<a name="wp1573"> </a>
-<h1> <align left=20>
-Chapter
-
-<a name="wp45187"> </a>
-1
-
---
-<a name="wp1587"> </a>
-Introduction to HDF
+<h1>
+<a name="wp47168"> </a>
+Chapter 1	Introduction to HDF
 </h1>
 
 <hr /><a name="wp1583"> </a><h2 style="font-family: Times New Roman; font-size: 14pt; margin-top: 23pt" class="pHeading1">
@@ -89,8 +81,8 @@ In this document, the term <span style="color: #000000; font-family: Times New R
 HDF files are <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">self-describing</span>. The term &quot;self-description&quot; means that, for each HDF data structure in a file, there is comprehensive information about the data and its location in the file. This information is often referred to as <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">metadata</span>. Also, many types of data can be included within an HDF file. For example, it is possible to store symbolic, numerical and graphical data within an HDF file by using appropriate HDF data structures.
 </p>
 <a name="wp42275"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
-FIGURE 1a	<em class="cTitleText">HDF Data Structures</em></div>
-<div align="left"><img src="images/hdf4_UG-07-1-1.jpg" height="419" width="523" id="wp41975" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
+FIGURE 1a	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF Data Structures</span></div>
+<div align="left"><img src="images/hdf4_UG-03-1-1.jpg" height="419" width="523" id="wp41975" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
 
 </div>
 <a name="wp42276"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
@@ -103,8 +95,8 @@ The basic interface layer, or the <span style="color: #000000; font-family: Time
 The HDF<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> application programming interfaces</span>, or <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">APIs</span>, include several independent sets of routines, with each set specifically designed to simplify the process of storing and accessing one type of data. These interfaces are represented in <a href="UG_Intro.html#wp35231"><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Figure 1b</span></a> as the second layer from the top. Although each interface requires programming, all the low-level details can be ignored. In most cases, all one must do is make the correct function call at the correct time, and the interface will take care of the rest. Most HDF interface routines are available in both FORTRAN-77 and C. A complete list of the high-level interfaces is provided in <a href="UG_Intro.html#wp4981">Section&#160;1.4 on page&#160;4</a>.
 </p>
 <a name="wp35231"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
-FIGURE 1b	<em class="cTitleText">Three Levels of Interaction with the HDF File</em></div>
-<div align="left"><img src="images/hdf4_UG-07-1-2.jpg" height="253" width="516" id="wp35082" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
+FIGURE 1b	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Three Levels of Interaction with the HDF File</span></div>
+<div align="left"><img src="images/hdf4_UG-03-1-2.jpg" height="253" width="516" id="wp35082" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
 
 </div>
 <a name="wp39360"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
@@ -153,7 +145,7 @@ The new multifile interfaces are:</p>
 </div>
 </td>
     <td><a name="wp41416"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Stores, manages and retrieves multidimensional arrays of character or numeric data, along with their dimensions and attributes, in more than one file. It is described in <a href="UG_SD.html#wp29379">Chapter 3, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Scientific Data Sets (SD API)</span></a>.
+Stores, manages and retrieves multidimensional arrays of character or numeric data, along with their dimensions and attributes, in more than one file. It is described in <a href="UG_SD.html">Chapter 3, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Scientific Data Sets (SD API)</span></a>.
 </div>
 </td>
 </tr>
@@ -162,7 +154,7 @@ Stores, manages and retrieves multidimensional arrays of character or numeric da
 </div>
 </td>
     <td><a name="wp41427"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Stores, manages and retrieves multivariate data stored as records in a table. It is described in <a href="UG_Vdatas.html#wp131088">Chapter 4, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Vdatas (VS API)</span></a>.
+Stores, manages and retrieves multivariate data stored as records in a table. It is described in <a href="UG_Vdatas.html">Chapter 4, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Vdatas (VS API)</span></a>.
 </div>
 </td>
 </tr>
@@ -171,7 +163,7 @@ Stores, manages and retrieves multivariate data stored as records in a table. It
 </div>
 </td>
     <td><a name="wp41440"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Creates groups of any primary HDF data structures. It is described in <a href="UG_Vgroups.html#wp2487">Chapter 5, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Vgroups (V API)</span></a>.
+Creates groups of any primary HDF data structures. It is described in <a href="UG_Vgroups.html">Chapter 5, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Vgroups (V API)</span></a>.
 </div>
 </td>
 </tr>
@@ -180,7 +172,7 @@ Creates groups of any primary HDF data structures. It is described in <a href="U
 </div>
 </td>
     <td><a name="wp41449"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Stores, manages and retrieves raster images, their dimensions and palettes in more than one file. It can also manipulate unattached palettes in more than one file. It is described in <a href="UG_GR.html#wp44614">Chapter 7, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">General Raster Images (GR API)</span></a>.
+Stores, manages and retrieves raster images, their dimensions and palettes in more than one file. It can also manipulate unattached palettes in more than one file. It is described in <a href="UG_GR.html">Chapter 8, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">General Raster Images (GR API)</span></a>.
 </div>
 </td>
 </tr>
@@ -189,7 +181,7 @@ Stores, manages and retrieves raster images, their dimensions and palettes in mo
 </div>
 </td>
     <td><a name="wp41460"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Stores, manages and retrieves text used to describe a file or any of the data structures contained in the file. This interface can operate on several files at once. It is described in <a href="UG_MF_Annot.html#wp3053">Chapter 10, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Annotations (AN API)</span></a>.
+Stores, manages and retrieves text used to describe a file or any of the data structures contained in the file. This interface can operate on several files at once. It is described in <a href="UG_MF_Annot.html">Chapter 10, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Annotations (AN API)</span></a>.
 </div>
 </td>
 </tr>
@@ -208,7 +200,7 @@ The old single-file interfaces are:</p>
 </div>
 </td>
     <td><a name="wp41378"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Stores, manages and retrieves 8-bit raster images, with their dimensions and palettes in one file. It is described in <a href="UG_RIS8s.html#wp1811">Chapter 6, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">8-Bit Raster Images (DFR8 API)</span></a>.
+Stores, manages and retrieves 8-bit raster images, with their dimensions and palettes in one file. It is described in <a href="UG_RIS8s.html">Chapter 6, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">8-Bit Raster Images (DFR8 API)</span></a>.
 </div>
 </td>
 </tr>
@@ -217,7 +209,7 @@ Stores, manages and retrieves 8-bit raster images, with their dimensions and pal
 </div>
 </td>
     <td><a name="wp41296"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Stores, manages and retrieves 24-bit images and their dimensions in one file. It is described in <a href="UG_RIS24s.html#wp1937">Chapter 8, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">24-bit Raster Images (DF24 API)</span></a>.
+Stores, manages and retrieves 24-bit images and their dimensions in one file. It is described in <a href="UG_RIS24s.html">Chapter 7, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">24-bit Raster Images (DF24 API)</span></a>.
 </div>
 </td>
 </tr>
@@ -226,7 +218,7 @@ Stores, manages and retrieves 24-bit images and their dimensions in one file. It
 </div>
 </td>
     <td><a name="wp41300"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Stores and retrieves 8-bit palettes in one file. It is described in <a href="UG_Palettes.html#wp14868">Chapter 9, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Palettes (DFP API)</span></a>.
+Stores and retrieves 8-bit palettes in one file. It is described in <a href="UG_Palettes.html">Chapter 9, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Palettes (DFP API)</span></a>.
 </div>
 </td>
 </tr>
@@ -235,7 +227,7 @@ Stores and retrieves 8-bit palettes in one file. It is described in <a href="UG_
 </div>
 </td>
     <td><a name="wp41304"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Stores, manages and retrieves text strings used to describe a file or any of the data structures contained in the file. This interface only operates on one file at a time. It is described in <a href="UG_Annot.html#wp3053">Chapter 11, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Single-file Annotations (DFAN API)</span></a>.
+Stores, manages and retrieves text strings used to describe a file or any of the data structures contained in the file. This interface only operates on one file at a time. It is described in <a href="UG_Annot.html">Chapter 11, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Single-file Annotations (DFAN API)</span></a>.
 </div>
 </td>
 </tr>
@@ -244,7 +236,7 @@ Stores, manages and retrieves text strings used to describe a file or any of the
 </div>
 </td>
     <td><a name="wp41308"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Stores, manages and retrieves multidimensional arrays of integer or floating-point data, along with their dimensions and attributes, in one file. It is described in <a href="UG_DFSD.html#wp11392">Chapter 12, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Single-File Scientific Data Sets (DFSD API)</span></a>.
+Stores, manages and retrieves multidimensional arrays of integer or floating-point data, along with their dimensions and attributes, in one file. It is described in <a href="UG_DFSD.html">Chapter 12, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Single-File Scientific Data Sets (DFSD API)</span></a>.
 </div>
 </td>
 </tr>
@@ -257,7 +249,7 @@ Stores, manages and retrieves multidimensional arrays of integer or floating-poi
 As these interfaces are the tools used to read and write HDF files, they are the primary focus of this manual.
 </p>
 <a name="wp40998"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-In every interface, various programming examples are provided to illustrate the use of the interface routines. Both C and FORTRAN-77 versions are available. Their source code, in ASCII format, is located on the FTP servers mentioned in <a href="UG_Intro.html#wp4171">Section&#160;1.2 on page&#160;1</a> in the subdirectory <code style="font-family: Courier New; font-size: 9pt" class="cDefName">samples/</code>.
+In every interface, various programming examples are provided to illustrate the use of the interface routines. Both C and FORTRAN-77 versions are available. Their source code, in ASCII format, is located on the FTP servers mentioned in <a href="UG_Intro.html#wp4171">Section&#160;1.2 on page&#160;1</a> in the subdirectory <code style="font-family: Courier New; font-size: 8pt" class="cDefName">samples/</code>.
 </p>
 <a name="wp41724"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 Note that the goal of these examples is to illustrate the use of the interface routines; thus, for simplicity, many assumptions have been made, such as the availability or the authentication of the data. Based on these assumptions, these examples skip the verification of the returned status of each function. In practice, it is strongly recommended that the user verify the returned value of every function to ensure the reliability of the user application.
@@ -277,7 +269,7 @@ HDF application software fall within the following three categories:
 <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Scientific visualization and analysis software</span> that can read and write HDF files is available. This software includes tools such as HDFview, user-developed software, and commercial packages. The use of HDF files guarantees the interoperability of such tools. Some tools operate on raster images, others on color palettes. Some use images, others color palettes, still others data and annotations, and so forth. HDF provides the range of data types that these tools need, in a format that allows different tools with different data requirements to operate on the same files without confusion.
 </p>
 <a name="wp5077"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-The HDF <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">command-line utilities</span> are application programs that can be executed by entering them at the command prompt, like UNIX commands. They perform common operations on HDF files for which one would otherwise have to write a program. The HDF utilities are described in detail in <a href="UG_Utils.html#wp90885">Chapter 15, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF Command-line Utilities</span></a>.
+The HDF <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">command-line utilities</span> are application programs that can be executed by entering them at the command prompt, like UNIX commands. They perform common operations on HDF files for which one would otherwise have to write a program. The HDF utilities are described in detail in <a href="UG_Utils.html">Chapter 15, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF Command-line Utilities</span></a>.
 </p>
 <a name="wp4689"> </a><h2 style="font-family: Times New Roman; font-size: 14pt; margin-top: 14pt" class="pHeading2">
 	1.6	Primary HDF Platforms
@@ -301,7 +293,7 @@ Both HDF4 and HDF5 are supported by The HDF Group, who will continue to maintain
 The HDF Group strongly recommends using HDF5, especially if you are a new user and are not constrained by existing applications to using HDF4. We also recommend that you consider migrating existing applications from HDF4 to HDF5 to take advantage of the improved features and performance of HDF5. Information about converting from HDF4 to HDF5 and tools to facilitate that conversion are available at <a href="http://www.hdfgroup.org/h4toh5"><span class="cWebJump">http://www.hdfgroup.org/h4toh5</span></a>.
 </p>
 <a name="wp46601"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-See <a href="UG_Utils.html#wp80283">Section 15.19, &quot;Working with Both HDF4 and HDF5 File Formats&quot; on page&#160;483</a>, for further discussions of and links to some of these tools.
+See <a href="UG_Utils.html#wp80283">Section 15.19, &quot;Working with Both HDF4 and HDF5 File Formats&quot; on page&#160;485</a>, for further discussions of and links to some of these tools.
 </p>
     </blockquote>
 
@@ -310,7 +302,7 @@ See <a href="UG_Utils.html#wp80283">Section 15.19, &quot;Working with Both HDF4 
     <table id="SummaryNotReq2" border="0" width="850" cellspacing="0" cellpadding="0">
       <tr>
         <td align="left">
-        HDF 4.2.6 - August 2011<br/>
+        HDF 4.2.7 - February 2012<br/>
         <a href="UG_Copyright.html">Copyright</a>
         <td align="right">
           <span style="font-size: 12px; font-weight: bold">

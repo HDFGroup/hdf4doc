@@ -7,12 +7,12 @@
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.8.2296" />
     <meta name="TEMPLATEBASE" content="HDF4 Version 1.0" />
-    <meta name="LASTUPDATED" content="08/25/11 16:32:16" />
-    <title>Chapter</title>
+    <meta name="LASTUPDATED" content="02/15/12 15:41:48" />
+    <title>Chapter 7	24-bit Raster Images (DF24 API)</title>
     <link rel="StyleSheet" href="document.css" type="text/css" media="all" />
     <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
 <link rel="first" title="First" href="UG_Top.html" />
-<link rel="last" title="Last" href="UG_Front.html" />
+<link rel="last" title="Last" href="netCDF_copyright.html" />
 <link rel="previous" title="Previous" href="UG_RIS8s.html" />
 <link rel="next" title="Next" href="UG_GR.html" />
 
@@ -36,8 +36,7 @@
         </td>
         <td valign="middle" align="center">
           <b><H1>HDF User’s Guide</H1>
-           Version 4.2.6</b><br />
-<meta name="LASTUPDATED" content="08/25/11 16:32:16" />
+           Version 4.2.7</b><br />
         </td>
         <td valign="middle" align="right">
         <br/>
@@ -50,91 +49,84 @@
     <hr />
 
     <blockquote>
-<a name="wp1929"> </a>
-<h1> <align left=20>
-Chapter
-
-<a name="wp20177"> </a>
-8
-
---
-<a name="wp1937"> </a>
-24-bit Raster Images (DF24 API)
+<h1>
+<a name="wp23279"> </a>
+Chapter 7	24-bit Raster Images (DF24 API)
 </h1>
 
 <hr /><a name="wp4735"> </a><h2 style="font-family: Times New Roman; font-size: 14pt; margin-top: 23pt" class="pHeading1">
-	8.1	Chapter Overview
+	7.1	Chapter Overview
 </h2>
 <a name="wp22829"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 This chapter describes the 24-bit raster data model and the single-file DF24 routines available for storing and retrieving 24-bit raster images.
 </p>
 <a name="wp22836"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Note</span>: This interface is now deprecated and superseded by the <a href="UG_GR.html#wp44614"><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">General Raster Images (GR API)</span></a> interface (Chapter 8.)
+<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Note</span>: This interface is now deprecated and superseded by the <a href="UG_GR.html"><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">General Raster Images (GR API)</span></a> interface (Chapter 8.)
 </p>
 <a name="wp2601"> </a><h2 style="font-family: Times New Roman; font-size: 14pt; margin-top: 14pt" class="pHeading2">
-	8.2	The 24-Bit Raster Data Model
+	7.2	The 24-Bit Raster Data Model
 </h2>
 <a name="wp22768"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-The <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">24-bit raster image set</span>, or <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">RIS24</span>, data model supports two primary data objects: two-dimensional 24-bit raster images and dimensions. The primary member of the set is the <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">24-bit raster image</span>, a two-dimensional array of pixels or picture elements. Each pixel is represented by three 8-bit numbers of image data. An optional compression method describes the method used, if any, to compress the image. <a href="UG_RIS24s.html#wp22775">Figure 8a</a> shows the contents of a 24-bit raster image set.
+The <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">24-bit raster image set</span>, or <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">RIS24</span>, data model supports two primary data objects: two-dimensional 24-bit raster images and dimensions. The primary member of the set is the <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">24-bit raster image</span>, a two-dimensional array of pixels or picture elements. Each pixel is represented by three 8-bit numbers of image data. An optional compression method describes the method used, if any, to compress the image. <a href="UG_RIS24s.html#wp22775">Figure 7a</a> shows the contents of a 24-bit raster image set.
 </p>
 <a name="wp22775"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
-FIGURE 8a	<em class="cTitleText">24-Bit Raster Image Set Contents</em></div>
-<div align="left"><img src="images/hdf4_UG-13-1-1.jpg" height="173" width="261" id="wp22781" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
-<em class="cTitleText"></em>
+FIGURE 7a	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">24-Bit Raster Image Set Contents</span></div>
+<div align="left"><img src="images/hdf4_UG-09-1-1.jpg" height="173" width="261" id="wp22781" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
+<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"></span>
 </div>
 <a name="wp22777"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	8.2.1	Required 24-Bit Raster Image Data Set Objects
+	7.2.1	Required 24-Bit Raster Image Data Set Objects
 </h3>
 <a name="wp2009"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 All 24-bit raster images must contain image data and a dimension record. These objects are created by the HDF library using information provided at the time the image is written to file. 
 </p>
 <a name="wp2010"> </a><h4 style="font-family: Times New Roman; font-size: 10pt; margin-top: 10pt" class="pHeading4">
-	8.2.1.1	24-Bit Raster Image Data Representation
+	7.2.1.1	24-Bit Raster Image Data Representation
 </h4>
 <a name="wp2011"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-The <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">24-bit raster image object contains a set of </span>24-bit pixel values, each of which has three 8-bit components; one for the red, one for the green, and one for the blue color component of the image. These values, referred to as <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">RGB values</span>, are arranged in one of three specific ways, as described in <a href="UG_RIS24s.html#wp5034">Section&#160;8.2.2.2 on page&#160;341</a>. The pixel values are arranged in rows, painted from left-to-right, top-to-bottom. As each pixel in a 24-bit image is represented in the image data by three 8-bit numbers, palettes are unnecessary and are not included in the 24-bit raster data model.
+The <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">24-bit raster image object contains a set of </span>24-bit pixel values, each of which has three 8-bit components; one for the red, one for the green, and one for the blue color component of the image. These values, referred to as <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">RGB values</span>, are arranged in one of three specific ways, as described in <a href="UG_RIS24s.html#wp5034">Section&#160;7.2.2.2 on page&#160;279</a>. The pixel values are arranged in rows, painted from left-to-right, top-to-bottom. As each pixel in a 24-bit image is represented in the image data by three 8-bit numbers, palettes are unnecessary and are not included in the 24-bit raster data model.
 </p>
 <a name="wp2245"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 As an example, consider a stream of 24-bit numbers representing a raster image (Fig. 4.1a). To display the image, the color associated with the first number in the data stream appears in the upper left corner of the image. The remainder of the first line is then painted from left-to-right using as many values from the data stream as necessary to complete the line. The remainder of the rows are similarly painted from left-to-right, top-to-bottom until every value in the data stream appears as one pixel in the image. 
 </p>
 <a name="wp5011"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
-FIGURE 8b	<em class="cTitleText">The Numerical Representation of a 24-Bit Raster Image</em></div>
-<div align="left"><img src="images/hdf4_UG-13-1-2.jpg" height="423" width="519" id="wp22790" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
-<em class="cTitleText"></em>
+FIGURE 7b	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">The Numerical Representation of a 24-Bit Raster Image</span></div>
+<div align="left"><img src="images/hdf4_UG-09-1-2.jpg" height="423" width="519" id="wp22790" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
+<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"></span>
 </div>
 <a name="wp5012"> </a><h4 style="font-family: Times New Roman; font-size: 10pt; margin-top: 10pt" class="pHeading4">
-	8.2.1.2	24-Bit Raster Image Dimension 
+	7.2.1.2	24-Bit Raster Image Dimension 
 </h4>
 <a name="wp5021"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 The <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">dimensions</span> of an image are the height and width of the image in pixels.
 </p>
 <a name="wp7118"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	8.2.2	Optional 24-Bit Raster Image Data Set Objects
+	7.2.2	Optional 24-Bit Raster Image Data Set Objects
 </h3>
 <a name="wp3851"> </a><h4 style="font-family: Times New Roman; font-size: 10pt; margin-top: 10pt" class="pHeading4">
-	8.2.2.1	Compression Method 
+	7.2.2.1	Compression Method 
 </h4>
 <a name="wp3932"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-The only 24-bit compression method currently available in HDF is the JPEG algorithm . The applicable HDF compression tags are <code style="font-family: Courier New; font-size: 9pt" class="cDefName">COMP_JPEG</code>, and <code style="font-family: Courier New; font-size: 9pt" class="cDefName">COMP_NONE</code>. <a href="UG_RIS24s.html#wp3906"><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">(See Table 8A.)</span></a> The HDF tags <code style="font-family: Courier New; font-size: 9pt" class="cDefName">COMP_JPEG</code> and <code style="font-family: Courier New; font-size: 9pt" class="cDefName">COMP_NONE</code> are defined as the values <code style="font-family: Courier New; font-size: 9pt" class="cDefName">2</code>, and <code style="font-family: Courier New; font-size: 9pt" class="cDefName">0</code> respectively in the &quot;hdf.h&quot; header file. 
+The only 24-bit compression method currently available in HDF is the JPEG algorithm . The applicable HDF compression tags are <code style="font-family: Courier New; font-size: 8pt" class="cDefName">COMP_JPEG</code>, and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">COMP_NONE</code>. <a href="UG_RIS24s.html#wp3906"><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">(See Table 7A.)</span></a> The HDF tags <code style="font-family: Courier New; font-size: 8pt" class="cDefName">COMP_JPEG</code> and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">COMP_NONE</code> are defined as the values <code style="font-family: Courier New; font-size: 8pt" class="cDefName">2</code>, and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code> respectively in the &quot;hdf.h&quot; header file. 
 </p>
 <a name="wp3906"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 8A	<em class="cTitleText">24-Bit Raster Image Compression Method List</em></div>
+TABLE 7A	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">24-Bit Raster Image Compression Method List</span></div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp8107table8105">
   <caption></caption>
-  <tr>    <td><a name="wp8107"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td><a name="wp8107"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Compression Method
 </div>
 </td>
-    <td><a name="wp8109"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp8109"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Type
 </div>
 </td>
-    <td><a name="wp8111"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp8111"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Compression Code
 </div>
 </td>
-    <td><a name="wp8113"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp8113"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Requirements
 </div>
 </td>
@@ -185,43 +177,43 @@ JPEG Compression
 The <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">JPEG</span> compression method is a lossy compression algorithm whose use is recommended for photographic or scanned images. Using JPEG compression to reduce the size of an image changes the values of the pixels and therefore may alter the meaning of the corresponding data.
 </p>
 <a name="wp5236"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-For more information on the JPEG algorithm, refer to <a href="UG_RIS8s.html#wp1811">Chapter 6, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">8-Bit Raster Images (DFR8 API)</span></a>.
+For more information on the JPEG algorithm, refer to <a href="UG_RIS8s.html">Chapter 6, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">8-Bit Raster Images (DFR8 API)</span></a>.
 </p>
 <a name="wp5034"> </a><h4 style="font-family: Times New Roman; font-size: 10pt; margin-top: 10pt" class="pHeading4">
-	8.2.2.2	Interlace Modes
+	7.2.2.2	Interlace Modes
 </h4>
 <a name="wp5035"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 Because graphics applications and hardware devices vary in the way they access image data, HDF supports three interlace formats. By storing an image using a format that is consistent with the expected application or device, it is possible to achieve substantial improvements in performance.
 </p>
 <a name="wp5036"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-HDF provides three options for organizing the color components in 24-bit raster images. These options consist of pixel interlacing, scan-line interlacing, and scan-plane interlacing. (See <a href="UG_RIS24s.html#wp5150">Figure 8c</a>.) Storing the color components grouped by pixel, as in red-green-blue, red-green-blue, etc., is called <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">pixel interlacing</span>. Storing the color components by line, as in one row of red, one row of green, one row of blue, one row red, etc., is called <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">scan-line interlacing</span>. Finally, storing the color components grouped by color plane, as in the red components first, the green components second, and the blue components last, is called <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">scan-plane interlacing</span>. Unless otherwise specified, the HDF 24-bit raster model assumes that all 24-bit images are stored using pixel interlacing.
+HDF provides three options for organizing the color components in 24-bit raster images. These options consist of pixel interlacing, scan-line interlacing, and scan-plane interlacing. (See <a href="UG_RIS24s.html#wp5150">Figure 7c</a>.) Storing the color components grouped by pixel, as in red-green-blue, red-green-blue, etc., is called <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">pixel interlacing</span>. Storing the color components by line, as in one row of red, one row of green, one row of blue, one row red, etc., is called <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">scan-line interlacing</span>. Finally, storing the color components grouped by color plane, as in the red components first, the green components second, and the blue components last, is called <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">scan-plane interlacing</span>. Unless otherwise specified, the HDF 24-bit raster model assumes that all 24-bit images are stored using pixel interlacing.
 </p>
 <a name="wp5150"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
-FIGURE 8c	<em class="cTitleText">RGB Interlace Format for 24-Bit Raster Images</em></div>
-<div align="left"><img src="images/hdf4_UG-13-1-3.jpg" height="137" width="530" id="wp22795" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
-<em class="cTitleText"></em>
+FIGURE 7c	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">RGB Interlace Format for 24-Bit Raster Images</span></div>
+<div align="left"><img src="images/hdf4_UG-09-1-3.jpg" height="137" width="530" id="wp22795" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
+<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"></span>
 </div>
 <a name="wp5151"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 An interlace format describes both the physical format of an image as it is stored in memory and in the file. When writing to a file, HDF stores a 24-bit image using the same interlace format as it has in memory. However, when reading from a file, it is possible to make the in-core interlacing mode different from that used in the file. The following table contains a summary of the interlacing format available in the DF24 interface.
 </p>
 <a name="wp5189"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 8B	<em class="cTitleText">24-Bit Raster Image Interlace Format</em></div>
+TABLE 7B	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">24-Bit Raster Image Interlace Format</span></div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp8066table8064">
   <caption></caption>
-  <tr>    <td><a name="wp8066"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td><a name="wp8066"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 format
 </div>
 </td>
-    <td><a name="wp8068"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp8068"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Description
 </div>
 </td>
-    <td><a name="wp8070"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp8070"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 DF24setil or d2setil Parameter
 </div>
 </td>
-    <td><a name="wp8072"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp8072"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Size of Image Array
 </div>
 </td>
@@ -283,13 +275,13 @@ DFIL_PLANE
 
 </div>
 <a name="wp2718"> </a><h2 style="font-family: Times New Roman; font-size: 14pt; margin-top: 14pt" class="pHeading2">
-	8.3	The 24-Bit Raster Interface
+	7.3	The 24-Bit Raster Interface
 </h2>
 <a name="wp2720"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 The HDF library currently contains several routines for storing 24-bit raster images in the HDF format. The <b class="cFunctionName">DF24addimage</b>, <b class="cFunctionName">DF24putimage</b>, and <b class="cFunctionName">DF24getimage</b> routines are sufficient for most reading and writing operations. 
 </p>
 <a name="wp2722"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	8.3.1	24-Bit Raster Image Library Routines
+	7.3.1	24-Bit Raster Image Library Routines
 </h3>
 <a name="wp2724"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 The names of all C routines in the 24-bit raster image interface are prefaced by &quot;DF24&quot;. The equivalent FORTRAN-77 routines are prefaced by &quot;d2&quot;. These routines are divided into the following categories:
@@ -301,31 +293,31 @@ The names of all C routines in the 24-bit raster image interface are prefaced by
 </ul></div>
 </ul></div>
 <a name="wp2734"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-The DF24 function calls are more explicitly defined in <a href="UG_RIS24s.html#wp2739">Table 8C</a> and on their respective pages in the <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF Reference Manual</span>.
+The DF24 function calls are more explicitly defined in <a href="UG_RIS24s.html#wp2739">Table 7C</a> and on their respective pages in the <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF Reference Manual</span>.
 </p>
 <a name="wp2739"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 8C	<em class="cTitleText">DF24 Library Routines</em></div>
+TABLE 7C	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24 Library Routines</span></div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp8139table8137">
   <caption></caption>
-  <tr>    <th colspan="1" rowspan="2"><a name="wp8139"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <th colspan="1" rowspan="2"><a name="wp8139"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Purpose
 </div>
 </th>
-    <th colspan="2" rowspan="1"><a name="wp8141"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <th colspan="2" rowspan="1"><a name="wp8141"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Routine Name
 </div>
 </th>
-    <th colspan="1" rowspan="2"><a name="wp8145"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <th colspan="1" rowspan="2"><a name="wp8145"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Description
 </div>
 </th>
 </tr>
-  <tr>    <th><a name="wp8149"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <th><a name="wp8149"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 C 
 </div>
 </th>
-    <th><a name="wp8151"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <th><a name="wp8151"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 FORTRAN-77
 </div>
 </th>
@@ -513,7 +505,7 @@ Returns to the first 24-bit raster image in the file.
 
 </div>
 <a name="wp2745"> </a><h2 style="font-family: Times New Roman; font-size: 14pt; margin-top: 14pt" class="pHeading2">
-	8.4	Writing 24-Bit Raster Images
+	7.4	Writing 24-Bit Raster Images
 </h2>
 <a name="wp2747"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 The DF24 programming model for writing a 24-bit raster image set is as follows:
@@ -527,7 +519,7 @@ The DF24 programming model for writing a 24-bit raster image set is as follows:
 Steps 1 and 2 can be invoked in any order, as long as they are executed before Step 3. By default, images are stored uncompressed using pixel interlacing.
 </p>
 <a name="wp4001"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	8.4.1	Writing a 24-Bit Raster Image: DF24putimage and DF24addimage
+	7.4.1	Writing a 24-Bit Raster Image: DF24putimage and DF24addimage
 </h3>
 <a name="wp2763"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 To write a raster image to an HDF file, the calling program must contain one of the following function calls:
@@ -543,41 +535,41 @@ To write a raster image to an HDF file, the calling program must contain one of 
 <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24putimage</span> and <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24addimage</span> write a 24-bit raster images to the HDF file specified by the <em class="cVarName">filename</em> parameter. When given a new file name, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24putimage</span> and <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24addimage</span> create a new file and write the raster image as the first raster image in the file. If a file with the specified filename exists, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24putimage</span> overwrites the previous contents of the file whereas <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24addimage</span> appends data to the end of the file. 
 </p>
 <a name="wp2781"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24putimage</span> and <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24addimage</span> passes the raster data in the <em class="cVarName">image</em> parameter and the width and height of the image in the <em class="cVarName">width</em> and <em class="cVarName">height</em> parameters. The array <em class="cVarName">image</em> is assumed to be the width times the height times three bytes in length for each color component. The parameters for <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24putimage</span> and <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24addimage</span> are further defined below. <a href="UG_RIS24s.html#wp2786">Table 8D on page 343</a>
+<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24putimage</span> and <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24addimage</span> passes the raster data in the <em class="cVarName">image</em> parameter and the width and height of the image in the <em class="cVarName">width</em> and <em class="cVarName">height</em> parameters. The array <em class="cVarName">image</em> is assumed to be the width times the height times three bytes in length for each color component. The parameters for <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24putimage</span> and <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24addimage</span> are further defined below. <a href="UG_RIS24s.html#wp2786">Table 7D on page 282</a>
 </p>
 <a name="wp2786"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 8D	<em class="cTitleText">DF24putimage and DF24addimage Parameter List</em></div>
+TABLE 7D	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24putimage and DF24addimage Parameter List</span></div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp5375table1633">
   <caption></caption>
-  <tr>    <td colspan="1" rowspan="2"><a name="wp5375"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td colspan="1" rowspan="2"><a name="wp5375"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Routine Name
 </div>
 <a name="wp8836"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 [Return Type]
 </div>
-<a name="wp5376"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+<a name="wp5376"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 (FORTRAN-77)
 </div>
 </td>
-    <td colspan="1" rowspan="2"><a name="wp5378"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="1" rowspan="2"><a name="wp5378"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Parameter
 </div>
 </td>
-    <td colspan="2" rowspan="1"><a name="wp5380"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="2" rowspan="1"><a name="wp5380"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Parameter Type
 </div>
 </td>
-    <td colspan="1" rowspan="2"><a name="wp5384"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="1" rowspan="2"><a name="wp5384"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Description
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp5390"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td><a name="wp5390"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 C
 </div>
 </td>
-    <td><a name="wp5392"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp5392"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 FORTRAN-77
 </div>
 </td>
@@ -798,7 +790,7 @@ C     Write the 24-bit raster image to the file.<a name="wp8570"> </a>
       end<a name="wp8574"> </a>
 </pre></div>
 <a name="wp4025"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	8.4.2	Setting the Interlace Format: DF24setil
+	7.4.2	Setting the Interlace Format: DF24setil
 </h3>
 <a name="wp4026"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24setil</span> indicates the interlace format to be used for all subsequent write operations. <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24setil</span> changes the default setting from pixel interlacing to the selected format. When the format is set, it acts as the default until it is reset by another call to <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24setil</span>. To change the default interlace format , the calling program must contain the following routines:
@@ -809,7 +801,7 @@ C     Write the 24-bit raster image to the file.<a name="wp8570"> </a>
 </p><a name="wp2908"> </a><p style="font-family: Courier New; font-size: 9pt" class="pSyntaxLine"><b style="font-family: Courier New; font-size: 9pt" class="cBold">FORTRAN:</b>	status = d2setil(il)
 </p></ul></div>
 <a name="wp2916"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-<b class="cFunctionName">DF24setil</b> takes <em class="cVarName">il</em> as its only parameter. Valid values for <em class="cVarName">il</em> are <code style="font-family: Courier New; font-size: 9pt" class="cDefName">DFIL_PIXEL</code>, <code style="font-family: Courier New; font-size: 9pt" class="cDefName">DFIL_LINE</code>, and <code style="font-family: Courier New; font-size: 9pt" class="cDefName">DFIL_PLANE</code>. The parameters for <b class="cFunctionName">DF24setil</b> are further defined below. <a href="UG_RIS24s.html#wp3073">Table 8E on page 346</a>
+<b class="cFunctionName">DF24setil</b> takes <em class="cVarName">il</em> as its only parameter. Valid values for <em class="cVarName">il</em> are <code style="font-family: Courier New; font-size: 8pt" class="cDefName">DFIL_PIXEL</code>, <code style="font-family: Courier New; font-size: 8pt" class="cDefName">DFIL_LINE</code>, and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">DFIL_PLANE</code>. The parameters for <b class="cFunctionName">DF24setil</b> are further defined below. <a href="UG_RIS24s.html#wp3073">Table 7E on page 285</a>
 </p>
 <a name="wp2918"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 16pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 EXAMPLE 2.	Writing 24-Bit Raster Images Using Scan-plane Interlacing
@@ -872,7 +864,7 @@ C     Write the 24-bit raster image to the file.<a name="wp8633"> </a>
       end<a name="wp8637"> </a>
 </pre></div>
 <a name="wp3032"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	8.4.3	Compressing Image Data: DF24setcompress and d2sjpeg
+	7.4.3	Compressing Image Data: DF24setcompress and d2sjpeg
 </h3>
 <a name="wp3034"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24setcompress</span> invokes JPEG compression and sets the JPEG quality and baseline options. To store a 24-bit raster image using JPEG compression, the calling program must contain the following function calls:
@@ -888,44 +880,44 @@ C     Write the 24-bit raster image to the file.<a name="wp8633"> </a>
 Notice that the calling sequence for C is different from the calling sequence for FORTRAN-77. Once it is set, the parameter<span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> </span><em class="cVarName">type</em><span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> </span>in the <b class="cFunctionName">DF24setcompress routine, </b>or <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">d2scomp</span> in FORTRAN-77, routine specifies the compression method that will be used to store the raster images. However, the <em class="cVarName">c_info</em> parameter in <b class="cFunctionName">DF24setcompress</b> is missing from <b class="cFunctionName">d2scomp</b> which is a pointer to a structure that contains information specific to the compression method indicated by the <em class="cVarName">type</em> parameter. Because data structures of variable size are not supported in FORTRAN-77, a second compression-specific routine (<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">d2sjpeg</span>) is required in the FORTRAN-77 calling sequence.
 </p>
 <a name="wp10022"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-For more information about the <em class="cVarName">c_info</em> structure refer to <a href="UG_RIS8s.html#wp1811">Chapter 6, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">8-Bit Raster Images (DFR8 API)</span></a>.
+For more information about the <em class="cVarName">c_info</em> structure refer to <a href="UG_RIS8s.html">Chapter 6, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">8-Bit Raster Images (DFR8 API)</span></a>.
 </p>
 <a name="wp10024"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-Default values for quality and baseline (<em class="cVarName">quality=75%</em>, <em class="cVarName">baseline=on</em>) are used if <em class="cVarName">c_info</em> is a null structure or <b class="cFunctionName">d2sjpeg</b> is omitted. Parameters for <b class="cFunctionName">DF24setcompress</b> and <b class="cFunctionName">d24sjpeg</b> are further described in <a href="UG_RIS24s.html#wp3073"><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Table 8E</span></a> below.
+Default values for quality and baseline (<em class="cVarName">quality=75%</em>, <em class="cVarName">baseline=on</em>) are used if <em class="cVarName">c_info</em> is a null structure or <b class="cFunctionName">d2sjpeg</b> is omitted. Parameters for <b class="cFunctionName">DF24setcompress</b> and <b class="cFunctionName">d24sjpeg</b> are further described in <a href="UG_RIS24s.html#wp3073"><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Table 7E</span></a> below.
 </p>
 <a name="wp3073"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 8E	<em class="cTitleText">DF24setil and DF24setcompress Parameter List</em></div>
+TABLE 7E	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24setil and DF24setcompress Parameter List</span></div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp5704table1798">
   <caption></caption>
-  <tr>    <td colspan="1" rowspan="2"><a name="wp5704"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td colspan="1" rowspan="2"><a name="wp5704"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Routine Name
 </div>
 <a name="wp8841"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 [Return Type]
 </div>
-<a name="wp5705"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+<a name="wp5705"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 (FORTRAN-77)
 </div>
 </td>
-    <td colspan="1" rowspan="2"><a name="wp5707"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="1" rowspan="2"><a name="wp5707"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Parameter
 </div>
 </td>
-    <td colspan="2" rowspan="1"><a name="wp5711"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="2" rowspan="1"><a name="wp5711"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Parameter Type
 </div>
 </td>
-    <td colspan="1" rowspan="2"><a name="wp5713"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="1" rowspan="2"><a name="wp5713"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Description
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp5719"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td><a name="wp5719"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 C
 </div>
 </td>
-    <td><a name="wp5721"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp5721"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 FORTRAN-77
 </div>
 </td>
@@ -1107,7 +1099,7 @@ C     Write the 24-bit image data to the HDF file.<a name="wp8699"> </a>
       end<a name="wp8701"> </a>
 </pre></div>
 <a name="wp3212"> </a><h2 style="font-family: Times New Roman; font-size: 14pt; margin-top: 14pt" class="pHeading2">
-	8.5	Reading 24-Bit Raster Images
+	7.5	Reading 24-Bit Raster Images
 </h2>
 <a name="wp3214"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 The DF24 programming model for reading a 24-bit raster image set is as follows:
@@ -1118,7 +1110,7 @@ The DF24 programming model for reading a 24-bit raster image set is as follows:
 <a name="wp3220"> </a><div style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal" class="pSmartList1"><li>Read the image data from the file.</li></div>
 </ol></div>
 <a name="wp3224"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	8.5.1	Reading a Raster Image: DF24getimage
+	7.5.1	Reading a Raster Image: DF24getimage
 </h3>
 <a name="wp4403"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 If the dimensions and interlace format of the image are known, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24getimage</span> is the only function call required to read a raster image. If a file is being opened for the first time, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24getimage</span> returns the first image in the file. Additional calls will return successive images in the file, therefore images are read in the same order in which they were written to the file. Normally, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24getdims</span> and <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24getil</span> are called before <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24getimage</span> so that, if necessary, space allocations and interlace format for the image can be checked and the dimensions verified. If this information is already known, both function calls may be omitted.
@@ -1131,10 +1123,10 @@ The syntax of the <b class="cFunctionName">DF24getimage</b> routine is as follow
 </p><a name="wp3232"> </a><p style="font-family: Courier New; font-size: 9pt" class="pSyntaxLine"><b style="font-family: Courier New; font-size: 9pt" class="cBold">FORTRAN:</b>	status = d2gimg(filename, image, width, height)			
 </p></ul></div>
 <a name="wp3238"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24getimage</span> retrieves the next 24-bit image from the HDF file specified by the <em class="cVarName">filename</em> parameter. If the image is compressed, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24getimage</span> decompresses it and places it in memory at the location pointed to by the <em class="cVarName">image</em> parameter. <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24getimage</span> assumes the data is stored using pixel interlacing. The space allocated to hold the image is specified by the <em class="cVarName">width</em> and <em class="cVarName">height</em> parameters and may be larger than the actual image.The parameters for <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24getimage</span> are further defined below. <a href="UG_RIS24s.html#wp3285">Table 8F on page 349</a>
+<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24getimage</span> retrieves the next 24-bit image from the HDF file specified by the <em class="cVarName">filename</em> parameter. If the image is compressed, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24getimage</span> decompresses it and places it in memory at the location pointed to by the <em class="cVarName">image</em> parameter. <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24getimage</span> assumes the data is stored using pixel interlacing. The space allocated to hold the image is specified by the <em class="cVarName">width</em> and <em class="cVarName">height</em> parameters and may be larger than the actual image.The parameters for <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24getimage</span> are further defined below. <a href="UG_RIS24s.html#wp3285">Table 7F on page 288</a>
 </p>
 <a name="wp3242"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	8.5.2	Determining the Dimensions of an Image: DF24getdims
+	7.5.2	Determining the Dimensions of an Image: DF24getdims
 </h3>
 <a name="wp3244"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 <b class="cFunctionName">DF24getdims</b> opens a named file, finds the next image or the first image if the file is being opened for the first time, retrieves the dimensions of the image, then determines the interlace format of the image. Images are read in the order they were written.
@@ -1149,10 +1141,10 @@ To determine the dimensions and interlace format for an image, the calling progr
 </p><a name="wp3254"> </a><p style="font-family: Courier New; font-size: 9pt" class="pSyntaxLine">		status = d2gimg(filename, image, width, height)			
 </p></ul></div>
 <a name="wp3260"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24getdims</span> takes four parameters: <em class="cVarName">filename</em>, <em class="cVarName">width</em>, <em class="cVarName">height</em>, and <em class="cVarName">il</em>. It retrieves dimension and interlace format information of the next 24-bit image stored in the HDF file specified by the <em class="cVarName">filename</em> parameter. The width and height are returned in the space pointed to by the <em class="cVarName">width</em> and <em class="cVarName">height</em> parameters respectively. The <em class="cVarName">il</em> parameter is used to determine the interlace format. The parameters for <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24getdims</span> are further defined below. <a href="UG_RIS24s.html#wp3285">(See Table 8F.)</a>
+<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24getdims</span> takes four parameters: <em class="cVarName">filename</em>, <em class="cVarName">width</em>, <em class="cVarName">height</em>, and <em class="cVarName">il</em>. It retrieves dimension and interlace format information of the next 24-bit image stored in the HDF file specified by the <em class="cVarName">filename</em> parameter. The width and height are returned in the space pointed to by the <em class="cVarName">width</em> and <em class="cVarName">height</em> parameters respectively. The <em class="cVarName">il</em> parameter is used to determine the interlace format. The parameters for <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24getdims</span> are further defined below. <a href="UG_RIS24s.html#wp3285">(See Table 7F.)</a>
 </p>
 <a name="wp3262"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	8.5.3	Modifying the Interlacing of an Image: DF24reqil
+	7.5.3	Modifying the Interlacing of an Image: DF24reqil
 </h3>
 <a name="wp3264"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24reqil</span> specifies an interlace format to be used when reading a 24-bit image from a file into memory. Regardless of what interlace format is used to store the image, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24reqil</span> forces the image to be loaded into memory using the specified interlace format.
@@ -1167,44 +1159,44 @@ To set or reset the interlace format, the calling program should call the follow
 </p><a name="wp3274"> </a><p style="font-family: Courier New; font-size: 9pt" class="pSyntaxLine">		status = d2gimg(filename, image, width, height)
 </p></ul></div>
 <a name="wp3280"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24reqil</span> takes <em class="cVarName">il</em> as its only parameter. Valid <em class="cVarName">il</em> values are <code style="font-family: Courier New; font-size: 9pt" class="cDefName">DFIL_PIXEL</code>, <code style="font-family: Courier New; font-size: 9pt" class="cDefName">DFIL_LINE</code> and <code style="font-family: Courier New; font-size: 9pt" class="cDefName">DFIL_PLANE</code>. As a call to <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24reqil</span> may require a substantial reordering of the data, a much slower I/O performance than would be achieved if the interlace format wasn&#39;t reset may result.
+<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24reqil</span> takes <em class="cVarName">il</em> as its only parameter. Valid <em class="cVarName">il</em> values are <code style="font-family: Courier New; font-size: 8pt" class="cDefName">DFIL_PIXEL</code>, <code style="font-family: Courier New; font-size: 8pt" class="cDefName">DFIL_LINE</code> and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">DFIL_PLANE</code>. As a call to <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24reqil</span> may require a substantial reordering of the data, a much slower I/O performance than would be achieved if the interlace format wasn&#39;t reset may result.
 </p>
 <a name="wp5952"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-The parameters of <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24reqil</span> is further defined below. <a href="UG_RIS24s.html#wp3285">(See Table 8F.)</a>
+The parameters of <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24reqil</span> is further defined below. <a href="UG_RIS24s.html#wp3285">(See Table 7F.)</a>
 </p>
 <a name="wp3285"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 8F	<em class="cTitleText">DF24getimage, DF24getdims and DF24reqil Parameter List</em></div>
+TABLE 7F	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24getimage, DF24getdims and DF24reqil Parameter List</span></div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp6000table967">
   <caption></caption>
-  <tr>    <td colspan="1" rowspan="2"><a name="wp6000"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td colspan="1" rowspan="2"><a name="wp6000"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 <span style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Routine Name</span>
 </div>
 <a name="wp8846"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 [Return Type]
 </div>
-<a name="wp6001"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+<a name="wp6001"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 (FORTRAN-77)
 </div>
 </td>
-    <td colspan="1" rowspan="2"><a name="wp6003"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="1" rowspan="2"><a name="wp6003"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Parameter
 </div>
 </td>
-    <td colspan="2" rowspan="1"><a name="wp6007"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="2" rowspan="1"><a name="wp6007"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Parameter Type
 </div>
 </td>
-    <td colspan="1" rowspan="2"><a name="wp6009"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="1" rowspan="2"><a name="wp6009"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Description
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp6015"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td><a name="wp6015"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 C
 </div>
 </td>
-    <td><a name="wp6017"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp6017"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 FORTRAN-77
 </div>
 </td>
@@ -1447,10 +1439,10 @@ C     correct.<a name="wp8744"> </a>
       end<a name="wp8749"> </a>
 </pre></div>
 <a name="wp4486"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	8.5.4	Reading a 24-Bit Raster Image with a Given Reference Number: DF24readref
+	7.5.4	Reading a 24-Bit Raster Image with a Given Reference Number: DF24readref
 </h3>
 <a name="wp22811"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-<b class="cFunctionName">DF24readref</b> is used to access specific images stored in files containing multiple raster image sets. It is optionally used before<b class="cFunctionName"> DF24getimage</b>. <b class="cFunctionName">DF24readref</b> can be used in connection with vgroups, which identify their members by tag/reference number pairs. See <a href="UG_Vgroups.html#wp2487">Chapter 5, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Vgroups (V API)</span></a>, for a discussion of vgroups and tag/reference number pairs.
+<b class="cFunctionName">DF24readref</b> is used to access specific images stored in files containing multiple raster image sets. It is optionally used before<b class="cFunctionName"> DF24getimage</b>. <b class="cFunctionName">DF24readref</b> can be used in connection with vgroups, which identify their members by tag/reference number pairs. See <a href="UG_Vgroups.html">Chapter 5, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Vgroups (V API)</span></a>, for a discussion of vgroups and tag/reference number pairs.
 </p>
 <a name="wp4491"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 To access a specific raster image set, use the following sequence of routine calls:
@@ -1468,38 +1460,38 @@ To access a specific raster image set, use the following sequence of routine cal
 The parameters of <b class="cFunctionName">DF24readref </b>are further described in the following table. 
 </p>
 <a name="wp2834"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 8G	<em class="cTitleText">DF24readref Parameter List</em><span style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"></span></div>
+TABLE 7G	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24readref Parameter List</span><span style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"></span></div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp6179table4504">
   <caption></caption>
-  <tr>    <td colspan="1" rowspan="2"><a name="wp6179"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td colspan="1" rowspan="2"><a name="wp6179"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Routine Name
 </div>
 <a name="wp8850"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 [Return Type]
 </div>
-<a name="wp6180"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+<a name="wp6180"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 (FORTRAN-77)
 </div>
 </td>
-    <td colspan="1" rowspan="2"><a name="wp6182"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="1" rowspan="2"><a name="wp6182"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Parameter
 </div>
 </td>
-    <td colspan="2" rowspan="1"><a name="wp6186"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="2" rowspan="1"><a name="wp6186"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Parameter Type
 </div>
 </td>
-    <td colspan="1" rowspan="2"><a name="wp6188"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="1" rowspan="2"><a name="wp6188"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Description
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp6194"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td><a name="wp6194"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 C
 </div>
 </td>
-    <td><a name="wp6196"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp6196"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 FORTRAN-77
 </div>
 </td>
@@ -1554,7 +1546,7 @@ Reference number for the next call to <span style="color: #000000; font-family: 
 <span style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"></span>
 </div>
 <a name="wp4578"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	8.5.5	Specifying that the Next Image Read to be the First 24-Bit Raster<br />		Image in the File: DF24restart
+	7.5.5	Specifying that the Next Image Read to be the First 24-Bit Raster<br />		Image in the File: DF24restart
 </h3>
 <a name="wp4579"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 <b class="cFunctionName">DF24restart</b> causes the next call to <b class="cFunctionName">DF24getimage</b> or <b class="cFunctionName">DF24getdims</b> to read from the first raster image set in the file, rather than the RIS24 following the one that was most recently read. Use the following call to invoke <b class="cFunctionName">DF24restart</b>:
@@ -1564,38 +1556,38 @@ Reference number for the next call to <span style="color: #000000; font-family: 
 </p><a name="wp4581"> </a><p style="font-family: Courier New; font-size: 9pt" class="pSyntaxLine"><b style="font-family: Courier New; font-size: 9pt" class="cBold">FORTRAN:</b>	status = d2first( )
 </p></ul></div>
 <a name="wp6277"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 8H	<em class="cTitleText">DF24restart Parameter List</em></div>
+TABLE 7H	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24restart Parameter List</span></div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp6305table6233">
   <caption></caption>
-  <tr>    <td colspan="1" rowspan="2"><a name="wp6305"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td colspan="1" rowspan="2"><a name="wp6305"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Routine Name
 </div>
 <a name="wp8856"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 [Return Type]
 </div>
-<a name="wp6306"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+<a name="wp6306"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 (FORTRAN-77)
 </div>
 </td>
-    <td colspan="1" rowspan="2"><a name="wp6308"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="1" rowspan="2"><a name="wp6308"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Parameter
 </div>
 </td>
-    <td colspan="2" rowspan="1"><a name="wp6310"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="2" rowspan="1"><a name="wp6310"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Parameter Type
 </div>
 </td>
-    <td colspan="1" rowspan="2"><a name="wp6314"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="1" rowspan="2"><a name="wp6314"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Description
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp6320"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td><a name="wp6320"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 C
 </div>
 </td>
-    <td><a name="wp6322"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp6322"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 FORTRAN-77
 </div>
 </td>
@@ -1633,10 +1625,10 @@ None.
 
 </div>
 <a name="wp4592"> </a><h2 style="font-family: Times New Roman; font-size: 14pt; margin-top: 14pt" class="pHeading2">
-	8.6	24-Bit Raster Image Information Retrieval Routines
+	7.6	24-Bit Raster Image Information Retrieval Routines
 </h2>
 <a name="wp4593"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	8.6.1	Querying the Total Number of Images in a File: DF24nimages
+	7.6.1	Querying the Total Number of Images in a File: DF24nimages
 </h3>
 <a name="wp4594"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 <b class="cFunctionName">DF24nimages</b> returns the total number of 24	-bit raster image sets in a file, and has the following syntax:
@@ -1646,38 +1638,38 @@ None.
 </p><a name="wp4596"> </a><p style="font-family: Courier New; font-size: 9pt" class="pSyntaxLine"><b style="font-family: Courier New; font-size: 9pt" class="cBold">FORTRAN:</b>	num_of_images = d2nimg(filename)
 </p></ul></div>
 <a name="wp2913"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 8I	<em class="cTitleText">DF24nimages Parameter List</em></div>
+TABLE 7I	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24nimages Parameter List</span></div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp6337table2869">
   <caption></caption>
-  <tr>    <td colspan="1" rowspan="2"><a name="wp6337"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td colspan="1" rowspan="2"><a name="wp6337"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Routine Name
 </div>
 <a name="wp8858"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 [Return Type]
 </div>
-<a name="wp6338"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+<a name="wp6338"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 (FORTRAN-77)
 </div>
 </td>
-    <td colspan="1" rowspan="2"><a name="wp6340"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="1" rowspan="2"><a name="wp6340"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Parameter
 </div>
 </td>
-    <td colspan="2" rowspan="1"><a name="wp6342"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="2" rowspan="1"><a name="wp6342"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Parameter Type
 </div>
 </td>
-    <td colspan="1" rowspan="2"><a name="wp6346"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="1" rowspan="2"><a name="wp6346"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Description
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp6352"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td><a name="wp6352"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 C
 </div>
 </td>
-    <td><a name="wp6354"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp6354"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 FORTRAN-77
 </div>
 </td>
@@ -1715,10 +1707,10 @@ Name of the HDF file.
 
 </div>
 <a name="wp2914"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
-	8.6.2	Querying the Reference Number of the Most Recently Accessed 24-Bit<br />		Raster Image: DF24lastref
+	7.6.2	Querying the Reference Number of the Most Recently Accessed 24-Bit<br />		Raster Image: DF24lastref
 </h3>
 <a name="wp20515"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-<b class="cFunctionName">DF24lastref </b>returns the reference number of the 24-bit raster image most recently read or written. This routine is used for attaching annotations to images and adding images to vgroups. (See <a href="UG_Vgroups.html#wp2487">Chapter 5, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Vgroups (V API)</span></a> and <a href="UG_MF_Annot.html#wp3053">Chapter 10, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Annotations (AN API)</span></a> for details on how to use reference numbers in connection with these applications.
+<b class="cFunctionName">DF24lastref </b>returns the reference number of the 24-bit raster image most recently read or written. This routine is used for attaching annotations to images and adding images to vgroups. (See <a href="UG_Vgroups.html">Chapter 5, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Vgroups (V API)</span></a> and <a href="UG_MF_Annot.html">Chapter 10, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Annotations (AN API)</span></a> for details on how to use reference numbers in connection with these applications.
 </p>
 <a name="wp4648"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 The following calling sequence uses <b class="cFunctionName">DF24lastref </b>to find the reference number of the RIS24 most recently added to an HDF file:
@@ -1733,38 +1725,38 @@ The following calling sequence uses <b class="cFunctionName">DF24lastref </b>to 
 <b class="cFunctionName">DF24putimage</b> or <b class="cFunctionName">DF24getimage</b> can be used in place of <b class="cFunctionName">DF24addimage</b> with similar results.
 </p>
 <a name="wp6412"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 8J	<em class="cTitleText">DF24lastref Parameter List</em></div>
+TABLE 7J	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24lastref Parameter List</span></div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp6381table6379">
   <caption></caption>
-  <tr>    <td colspan="1" rowspan="2"><a name="wp6381"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td colspan="1" rowspan="2"><a name="wp6381"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Routine Name
 </div>
 <a name="wp8860"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 [Return Type]
 </div>
-<a name="wp6382"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+<a name="wp6382"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 (FORTRAN-77)
 </div>
 </td>
-    <td colspan="1" rowspan="2"><a name="wp6384"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="1" rowspan="2"><a name="wp6384"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Parameter
 </div>
 </td>
-    <td colspan="2" rowspan="1"><a name="wp6386"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="2" rowspan="1"><a name="wp6386"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Parameter Type
 </div>
 </td>
-    <td colspan="1" rowspan="2"><a name="wp6390"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="1" rowspan="2"><a name="wp6390"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Description
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp6396"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td><a name="wp6396"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 C
 </div>
 </td>
-    <td><a name="wp6398"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp6398"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 FORTRAN-77
 </div>
 </td>
@@ -1808,7 +1800,7 @@ None.
     <table id="SummaryNotReq2" border="0" width="850" cellspacing="0" cellpadding="0">
       <tr>
         <td align="left">
-        HDF 4.2.6 - August 2011<br/>
+        HDF 4.2.7 - February 2012<br/>
         <a href="UG_Copyright.html">Copyright</a>
         <td align="right">
           <span style="font-size: 12px; font-weight: bold">

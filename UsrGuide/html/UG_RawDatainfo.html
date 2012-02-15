@@ -7,12 +7,12 @@
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.8.2296" />
     <meta name="TEMPLATEBASE" content="HDF4 Version 1.0" />
-    <meta name="LASTUPDATED" content="08/25/11 16:33:09" />
-    <title>Chapter</title>
+    <meta name="LASTUPDATED" content="02/15/12 15:42:32" />
+    <title>Chapter 16	Raw Data Information</title>
     <link rel="StyleSheet" href="document.css" type="text/css" media="all" />
     <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
 <link rel="first" title="First" href="UG_Top.html" />
-<link rel="last" title="Last" href="UG_Front.html" />
+<link rel="last" title="Last" href="netCDF_copyright.html" />
 <link rel="previous" title="Previous" href="UG_Utils.html" />
 <link rel="next" title="Next" href="UG_Appndx.html" />
 
@@ -36,8 +36,7 @@
         </td>
         <td valign="middle" align="center">
           <b><H1>HDF User’s Guide</H1>
-           Version 4.2.6</b><br />
-<meta name="LASTUPDATED" content="08/25/11 16:33:09" />
+           Version 4.2.7</b><br />
         </td>
         <td valign="middle" align="right">
         <br/>
@@ -50,16 +49,9 @@
     <hr />
 
     <blockquote>
-<a name="wp199552"> </a>
-<h1> <align left=20>
-Chapter
-
-<a name="wp293258"> </a>
-16
-
---
-<a name="wp29379"> </a>
-Raw Data Information
+<h1>
+<a name="wp317293"> </a>
+Chapter 16	Raw Data Information
 </h1>
 
 <hr /><a name="wp15476"> </a><h2 style="font-family: Times New Roman; font-size: 14pt; margin-top: 23pt" class="pHeading1">
@@ -75,28 +67,28 @@ In 2011, to support the HDF4 File Content Map Project, HDF 4.2.6 introduced a se
 There are several of the data information retrieval functions across the AN, SD, GR, V, and VS interfaces and the prefix of each function&#39;s name follows the same rule as other functions in the same interface.  They all have &quot;datainfo&quot; in their names because their purpose is data information retrieval.  <a href="UG_RawDatainfo.html#wp312912">Table 16A</a> lists these routines.  Currently, there is no implementation of the Fortran versions for these functions.
 </p>
 <a name="wp312912"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 16A	<em class="cTitleText">Raw Data Information Retrieval Routines</em></div>
+TABLE 16A	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Raw Data Information Retrieval Routines</span></div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp311867table311865">
   <caption></caption>
-  <tr>    <td colspan="1" rowspan="2"><a name="wp311867"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td colspan="1" rowspan="2"><a name="wp311867"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 <span style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Interface</span>
 </div>
 </td>
-    <td colspan="2" rowspan="1"><a name="wp311869"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="2" rowspan="1"><a name="wp311869"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Routine Name
 </div>
 </td>
-    <td colspan="1" rowspan="2"><a name="wp311873"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="1" rowspan="2"><a name="wp311873"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Description and Reference
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp311877"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td><a name="wp311877"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 C
 </div>
 </td>
-    <td><a name="wp311879"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp311879"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 FORTRAN-77
 </div>
 </td>
@@ -114,7 +106,7 @@ unavailable
 </div>
 </td>
     <td><a name="wp314134"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Retrieves data information of an annotation&#39;s data (<a href="UG_RawDatainfo.html#wp312851">Section&#160;16.3.1 on page&#160;492</a>)
+Retrieves data information of an annotation&#39;s data (<a href="UG_RawDatainfo.html#wp312851">Section&#160;16.3.1 on page&#160;494</a>)
 </div>
 </td>
 </tr>
@@ -131,7 +123,7 @@ unavailable
 </div>
 </td>
     <td><a name="wp311891"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Retrieves data information of an DFSD API annotation&#39;s data (<a href="UG_RawDatainfo.html#wp310465">Section&#160;16.4.4 on page&#160;495</a>)
+Retrieves data information of an DFSD API annotation&#39;s data (<a href="UG_RawDatainfo.html#wp310465">Section&#160;16.4.4 on page&#160;498</a>)
 </div>
 </td>
 </tr>
@@ -144,7 +136,7 @@ unavailable
 </div>
 </td>
     <td><a name="wp311903"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Retrieves offset and length of an SD API attribute&#39;s data (<a href="UG_RawDatainfo.html#wp309166">Section&#160;16.4.2 on page&#160;493</a>)
+Retrieves offset and length of an SD API attribute&#39;s data (<a href="UG_RawDatainfo.html#wp309166">Section&#160;16.4.2 on page&#160;496</a>)
 </div>
 </td>
 </tr>
@@ -157,7 +149,7 @@ unavailable
 </div>
 </td>
     <td><a name="wp311913"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Retrieves offset and length of a data set&#39;s data (<a href="UG_RawDatainfo.html#wp308677">Section&#160;16.4.1 on page&#160;492</a>)
+Retrieves offset and length of a data set&#39;s data (<a href="UG_RawDatainfo.html#wp308677">Section&#160;16.4.1 on page&#160;495</a>)
 </div>
 </td>
 </tr>
@@ -170,7 +162,7 @@ unavailable
 </div>
 </td>
     <td colspan="1" rowspan="2"><a name="wp311925"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Retrieves offset and length of a DFSD API attribute&#39;s data (<a href="UG_RawDatainfo.html#wp309394">Section&#160;16.4.3 on page&#160;494</a>)
+Retrieves offset and length of a DFSD API attribute&#39;s data (<a href="UG_RawDatainfo.html#wp309394">Section&#160;16.4.3 on page&#160;496</a>)
 </div>
 </td>
 </tr>
@@ -188,7 +180,7 @@ unavailable
 </div>
 </td>
     <td><a name="wp311948"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Retrieves offset and length of a GR API attribute&#39;s data (<a href="UG_RawDatainfo.html#wp314403">Section&#160;16.5.2 on page&#160;497</a>)
+Retrieves offset and length of a GR API attribute&#39;s data (<a href="UG_RawDatainfo.html#wp314403">Section&#160;16.5.2 on page&#160;500</a>)
 </div>
 </td>
 </tr>
@@ -201,7 +193,7 @@ unavailable
 </div>
 </td>
     <td><a name="wp311960"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Retrieves offset and length of a raster image&#39;s data (<a href="UG_RawDatainfo.html#wp314299">Section&#160;16.5.1 on page&#160;496</a>)
+Retrieves offset and length of a raster image&#39;s data (<a href="UG_RawDatainfo.html#wp314299">Section&#160;16.5.1 on page&#160;499</a>)
 </div>
 </td>
 </tr>
@@ -218,7 +210,7 @@ unavailable
 </div>
 </td>
     <td colspan="1" rowspan="3"><a name="wp312186"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Retrieves offset and length of a V API attribute&#39;s data (<a href="UG_RawDatainfo.html#wp315102">Section&#160;16.6.1 on page&#160;497</a>)
+Retrieves offset and length of a V API attribute&#39;s data (<a href="UG_RawDatainfo.html#wp315102">Section&#160;16.6.1 on page&#160;500</a>)
 </div>
 </td>
 </tr>
@@ -237,7 +229,7 @@ unavailable
 </div>
 </td>
     <td><a name="wp312219"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Retrieves offset and length of a VS API attribute&#39;s data (<a href="UG_RawDatainfo.html#wp314866">Section&#160;16.7.2 on page&#160;499</a>)
+Retrieves offset and length of a VS API attribute&#39;s data (<a href="UG_RawDatainfo.html#wp314866">Section&#160;16.7.2 on page&#160;502</a>)
 </div>
 </td>
 </tr>
@@ -250,7 +242,7 @@ unavailable
 </div>
 </td>
     <td><a name="wp312230"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Retrieves offset and length of a vdata or a vdata field&#39;s data (<a href="UG_RawDatainfo.html#wp315115">Section&#160;16.7.1 on page&#160;498</a>)
+Retrieves offset and length of a vdata or a vdata field&#39;s data (<a href="UG_RawDatainfo.html#wp315115">Section&#160;16.7.1 on page&#160;501</a>)
 </div>
 </td>
 </tr>
@@ -282,41 +274,41 @@ There is one routine added to the AN API for raw data information retrieval, <b 
 The annotation is specified by its identifier, <em class="cVarName">ann_id</em>. The offset and length are retrieved into the user-supplied buffers <em class="cVarName">offset</em> and <em class="cVarName">length</em>.  Note that annotation&#39;s data is stored in one contiguous block only.
 </p>
 <a name="wp313980"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-<b class="cFunctionName">ANgetdatainfo</b> returns <code style="font-family: Courier New; font-size: 9pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 9pt" class="cDefName">0</code>), if successful, or <code style="font-family: Courier New; font-size: 9pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 9pt" class="cDefName">-1</code>), otherwise. The parameters of <b class="cFunctionName">ANgetdatainfo</b> are specified in <a href="UG_RawDatainfo.html#wp314070">Table 16B</a>.
+<b class="cFunctionName">ANgetdatainfo</b> returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>), if successful, or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>), otherwise. The parameters of <b class="cFunctionName">ANgetdatainfo</b> are specified in <a href="UG_RawDatainfo.html#wp314070">Table 16B</a>.
 </p>
 <a name="wp314070"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 16B	<em class="cTitleText">ANgetdatainfo Parameter List</em></div>
+TABLE 16B	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ANgetdatainfo Parameter List</span></div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp313986table313984">
   <caption></caption>
-  <tr>    <td colspan="1" rowspan="2"><a name="wp313986"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td colspan="1" rowspan="2"><a name="wp313986"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Routine Name
 </div>
 <a name="wp313987"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 [Return Type]
 </div>
-<a name="wp313988"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+<a name="wp313988"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 (FORTRAN-77)
 </div>
 </td>
-    <td colspan="1" rowspan="2"><a name="wp313990"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="1" rowspan="2"><a name="wp313990"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Parameter
 </div>
 </td>
-    <td colspan="2" rowspan="1"><a name="wp313992"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="2" rowspan="1"><a name="wp313992"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Parameter Type
 </div>
 </td>
-    <td colspan="1" rowspan="2"><a name="wp313996"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="1" rowspan="2"><a name="wp313996"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Description
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp314002"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td><a name="wp314002"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 C
 </div>
 </td>
-    <td><a name="wp314004"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp314004"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 FORTRAN-77
 </div>
 </td>
@@ -429,50 +421,50 @@ The offsets and lengths are retrieved into the user-supplied lists <em class="cV
 </ul></div>
 </ul></div>
 <a name="wp308879"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-The parameter <em class="cVarName">origin</em> must be <code style="font-family: Courier New; font-size: 9pt" class="cDefName">NULL</code> when the data is not stored in chunking layout.  When the data is chunked, <b class="cFunctionName">SDgetdatainfo</b> can be called on a single chunk and <em class="cVarName">origin</em> is used to specify the coordinates of the chunk.
+The parameter <em class="cVarName">origin</em> must be <code style="font-family: Courier New; font-size: 8pt" class="cDefName">NULL</code> when the data is not stored in chunking layout.  When the data is chunked, <b class="cFunctionName">SDgetdatainfo</b> can be called on a single chunk and <em class="cVarName">origin</em> is used to specify the coordinates of the chunk.
 </p>
 <a name="wp309315"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-The parameter <em class="cVarName">info_count</em> specifies the maximum number of items the offset and length lists are allocated to hold.  Applications, however, can pass in <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">0</code> for <em class="cVarName">info_count</em> and <code style="font-family: Courier New; font-size: 9pt" class="cDefName">NULL</code> for these arrays when only the actual number of data blocks in the data set is desired.
+The parameter <em class="cVarName">info_count</em> specifies the maximum number of items the offset and length lists are allocated to hold.  Applications, however, can pass in <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">0</code> for <em class="cVarName">info_count</em> and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">NULL</code> for these arrays when only the actual number of data blocks in the data set is desired.
 </p>
 <a name="wp309316"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 The purpose of the parameter <em class="cVarName">start_block</em> was to allow retrieval to start at a random block in the data.  Applications would be able to start retrieving at the begining of the data by specifying <em class="cVarName">start_block</em> as <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">0</code>, or at a block of data by specifying <em class="cVarName">start_block</em> as a value between <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">1</code> and the number of blocks in the data.  However, in release 2.6, <em class="cVarName">start_block</em> has no effect except for contiguous data, in which case, <b class="cFunctionName">SDgetdatainfo</b> will fail when <em class="cVarName">start_block</em> is greater than <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">1</code>.  The supporting project did not need this specific feature.  Thus, until the feature is supported, applications should pass <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">0</code> in for <em class="cVarName">start_block</em> to start retrieving at the beginning of the data and up to <em class="cVarName">info_count</em> or the total number of data blocks, whichever smaller.
 </p>
 <a name="wp308656"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-<b class="cFunctionName">SDgetdatainfo</b> returns the number of offset/length pairs retrieved, if successful, or <code style="font-family: Courier New; font-size: 9pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 9pt" class="cDefName">-1</code>), otherwise. The parameters of <b class="cFunctionName">SDgetdatainfo</b> are specified in <a href="UG_RawDatainfo.html#wp309074">Table 16C</a>.
+<b class="cFunctionName">SDgetdatainfo</b> returns the number of offset/length pairs retrieved, if successful, or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>), otherwise. The parameters of <b class="cFunctionName">SDgetdatainfo</b> are specified in <a href="UG_RawDatainfo.html#wp309074">Table 16C</a>.
 </p>
 <a name="wp309074"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 16C	<em class="cTitleText">SDgetdatainfo Parameter List</em></div>
+TABLE 16C	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDgetdatainfo Parameter List</span></div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp309019table309017">
   <caption></caption>
-  <tr>    <td colspan="1" rowspan="2"><a name="wp309019"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td colspan="1" rowspan="2"><a name="wp309019"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Routine Name
 </div>
 <a name="wp309020"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 [Return Type]
 </div>
-<a name="wp309021"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+<a name="wp309021"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 (FORTRAN-77)
 </div>
 </td>
-    <td colspan="1" rowspan="2"><a name="wp309023"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="1" rowspan="2"><a name="wp309023"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Parameter
 </div>
 </td>
-    <td colspan="2" rowspan="1"><a name="wp309025"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="2" rowspan="1"><a name="wp309025"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Parameter Type
 </div>
 </td>
-    <td colspan="1" rowspan="2"><a name="wp309029"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="1" rowspan="2"><a name="wp309029"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Description
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp309035"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td><a name="wp309035"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 C
 </div>
 </td>
-    <td><a name="wp309037"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp309037"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 FORTRAN-77
 </div>
 </td>
@@ -607,45 +599,45 @@ Array to hold lengths of the data blocks
 <a name="wp309386"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 The attribute is specified by its index and can be one that belongs to an SD file, a data set, or a dimension. The offset and length are retrieved into the user-supplied buffers <em class="cVarName">offset</em> and <em class="cVarName">length</em>.  Note that attribute&#39;s data is stored in one contiguous block only.
 </p>
-<a name="wp309387"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-There are attributes created by <b class="cFunctionName">SDsetattr</b> and those created by the DFSD API functions.  Refer to <a href="UG_Appndx.html#wp37720">Appendix C, &quot;Attributes in HDF,&quot;</a> for more details.  <b class="cFunctionName">SDgetattdatainfo</b> can only retrieve data information of attributes that were created by <b class="cFunctionName">SDsetattr</b>.  If the inquired attribute was created by the DFSD API functions, <b class="cFunctionName">SDgetattdatainfo</b> will return to the caller with error code <code style="font-family: Courier New; font-size: 9pt" class="cDefName">DFE_NOVGREP</code> and the caller can call <b class="cFunctionName">SDgetoldattdatainfo</b> to get the attribute&#39;s data information.
+<a name="wp316922"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
+There are attributes created by <b class="cFunctionName">SDsetattr</b> and those created by the DFSD API functions.  Refer to <a href="UG_Appndx.html#wp37720">Appendix C, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Attributes in HDF</span></a>, for more details.  <b class="cFunctionName">SDgetattdatainfo</b> can only retrieve data information of attributes that were created by <b class="cFunctionName">SDsetattr</b>.  If the inquired attribute was created by the DFSD API functions, <b class="cFunctionName">SDgetattdatainfo</b> will return to the caller with error code <code style="font-family: Courier New; font-size: 8pt" class="cDefName">DFE_NOVGREP</code> and the caller can call <b class="cFunctionName">SDgetoldattdatainfo</b> to get the attribute&#39;s data information.
 </p>
 <a name="wp309177"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-<b class="cFunctionName">SDgetattdatainfo</b> returns the number of offset/length pair retrieved, which should be <code style="font-family: Courier New; font-size: 9pt" class="cDefName">1</code>, if successful, or <code style="font-family: Courier New; font-size: 9pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 9pt" class="cDefName">-1</code>), otherwise. The parameters of <b class="cFunctionName">SDgetattdatainfo</b> are specified in <a href="UG_RawDatainfo.html#wp309268">Table 16D</a>.
+<b class="cFunctionName">SDgetattdatainfo</b> returns the number of offset/length pair retrieved, which should be <code style="font-family: Courier New; font-size: 8pt" class="cDefName">1</code>, if successful, or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>), otherwise. The parameters of <b class="cFunctionName">SDgetattdatainfo</b> are specified in <a href="UG_RawDatainfo.html#wp309268">Table 16D</a>.
 </p>
 <a name="wp309268"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 16D	<em class="cTitleText">SDgetattdatainfo Parameter List</em></div>
+TABLE 16D	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDgetattdatainfo Parameter List</span></div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp309184table309182">
   <caption></caption>
-  <tr>    <td colspan="1" rowspan="2"><a name="wp309184"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td colspan="1" rowspan="2"><a name="wp309184"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Routine Name
 </div>
 <a name="wp309185"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 [Return Type]
 </div>
-<a name="wp309186"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+<a name="wp309186"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 (FORTRAN-77)
 </div>
 </td>
-    <td colspan="1" rowspan="2"><a name="wp309188"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="1" rowspan="2"><a name="wp309188"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Parameter
 </div>
 </td>
-    <td colspan="2" rowspan="1"><a name="wp309190"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="2" rowspan="1"><a name="wp309190"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Parameter Type
 </div>
 </td>
-    <td colspan="1" rowspan="2"><a name="wp309194"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="1" rowspan="2"><a name="wp309194"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Description
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp309200"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td><a name="wp309200"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 C
 </div>
 </td>
-    <td><a name="wp309202"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp309202"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 FORTRAN-77
 </div>
 </td>
@@ -742,7 +734,7 @@ Buffer for length of attribute&#39;s data
 <b class="cFunctionName">SDgetoldattdatainfo</b> retrieves offset and length of the data in a specified attribute, which was created by the DFSD API routines.  The attributes created in this manner were not stored as vdatas like those created by <b class="cFunctionName">SDsetattr</b>.  These type of attributes are often seen in some older files, circa 1993.  However, later files may still contain them if the file was written with the DFSD API routines.  In addition, this type of attributes can only be predefined; there are no user-defined attributes in DFSD API.
 </p>
 <a name="wp309725"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-<b class="cFunctionName">SDgetoldattdatainfo</b> only works on DFSD-created attributes while its counter part <b class="cFunctionName">SDgetattdatainfo</b> only works on attributes created with <b class="cFunctionName">SDsetattr</b>.  An application might call <b class="cFunctionName">SDgetattdatainfo</b> initially.  When a DFSD-created attribute is encountered, <b class="cFunctionName">SDgetattdatainfo</b> will fail with the error code <code style="font-family: Courier New; font-size: 9pt" class="cDefName">DFE_NOVGREP</code>, which means there is no vgroup representation for the SDS  and the SDS&#39; attributes are stored differently than when they are created with <b class="cFunctionName">SDsetattr</b>.  The application must call <b class="cFunctionName">SDgetoldattdatainfo</b> to get the data information of those attributes, if such error code is detected.  For further information about this attribute issue, please refer to the <a href="UG_Appndx.html#wp37720">Appendix C, &quot;Attributes in HDF,&quot;</a> in this document.  The syntax of <b class="cFunctionName">SDgetoldattdatainfo</b> is as follows:
+<b class="cFunctionName">SDgetoldattdatainfo</b> only works on DFSD-created attributes while its counter part <b class="cFunctionName">SDgetattdatainfo</b> only works on attributes created with <b class="cFunctionName">SDsetattr</b>.  An application might call <b class="cFunctionName">SDgetattdatainfo</b> initially.  When a DFSD-created attribute is encountered, <b class="cFunctionName">SDgetattdatainfo</b> will fail with the error code <code style="font-family: Courier New; font-size: 8pt" class="cDefName">DFE_NOVGREP</code>, which means there is no vgroup representation for the SDS  and the SDS&#39; attributes are stored differently than when they are created with <b class="cFunctionName">SDsetattr</b>.  The application must call <b class="cFunctionName">SDgetoldattdatainfo</b> to get the data information of those attributes, if such error code is detected.  For further information about this attribute issue, please refer to the <a href="UG_Appndx.html#wp37720">Appendix C, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Attributes in HDF</span></a>, in this document.  The syntax of <b class="cFunctionName">SDgetoldattdatainfo</b> is as follows:
 </p>
 <div class="pSyntaxLine" style="font-family: Courier New; font-size: 9pt"><ul class="pSyntaxLine" style="font-family: Courier New; font-size: 9pt">
 <a name="wp309680"> </a><p style="font-family: Courier New; font-size: 9pt" class="pSyntaxLine"><b style="font-family: Courier New; font-size: 9pt" class="cBold">C:</b>		info_count = SDgetoldattdatainfo(dim_id, sds_id, attr_name, &amp;offset, 
@@ -750,195 +742,195 @@ Buffer for length of attribute&#39;s data
 </p><a name="wp309681"> </a><p style="font-family: Courier New; font-size: 9pt" class="pSyntaxLine"><b style="font-family: Courier New; font-size: 9pt" class="cBold">FORTRAN:</b>	Currently unavailable
 </p></ul></div>
 <a name="wp309686"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-<b class="cFunctionName">SDgetoldattdatainfo</b> takes both SDS identifier and dimension identifier if the inquired attribute belongs to a dimension.  When the inquired attribute belongs to an SDS, the dimension identifier will not be needed, and should be <code style="font-family: Courier New; font-size: 9pt" class="cDefName">0</code>.
+<b class="cFunctionName">SDgetoldattdatainfo</b> takes both SDS identifier and dimension identifier if the inquired attribute belongs to a dimension.  When the inquired attribute belongs to an SDS, the dimension identifier will not be needed, and should be <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>.
 </p>
 <a name="wp316169"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-The attribute can be one that belongs to a data set or a dimension and is specified by its name, which can be one of the predefined names in <a href="UG_RawDatainfo.html#wp316269">Table 16E on page 495</a>.  The offset and length are retrieved into the user-supplied buffers <em class="cVarName">offset</em> and <em class="cVarName">length</em>.  Note that attribute&#39;s data is stored in one contiguous block only.
+The attribute can be one that belongs to a data set or a dimension and is specified by its name, which can be one of the predefined names in <a href="UG_RawDatainfo.html#wp316269">Table 16E on page 498</a>.  The offset and length are retrieved into the user-supplied buffers <em class="cVarName">offset</em> and <em class="cVarName">length</em>.  Note that attribute&#39;s data is stored in one contiguous block only.
 </p>
 <a name="wp316269"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 16E	<em class="cTitleText">HDF4 Predefined Attributes</em></div>
+TABLE 16E	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF4 Predefined Attributes</span></div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp316273table316271">
   <caption></caption>
-  <tr>    <th colspan="1" rowspan="2"><a name="wp316273"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <th colspan="1" rowspan="2"><a name="wp316273"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Predefined Name
 </div>
 </th>
-    <th colspan="1" rowspan="2"><a name="wp316275"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <th colspan="1" rowspan="2"><a name="wp316275"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Actual Text
 </div>
 </th>
-    <th colspan="1" rowspan="2"><a name="wp316277"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <th colspan="1" rowspan="2"><a name="wp316277"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Applicable To
 </div>
 </th>
 </tr>
   <tr></tr>
-  <tr>    <td><a name="wp316285"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+  <tr>    <td><a name="wp316285"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 _HDF_LongName
 </div>
 </td>
-    <td><a name="wp316287"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+    <td><a name="wp316287"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 &quot;long_name&quot;
 </div>
 </td>
-    <td><a name="wp316289"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+    <td><a name="wp316289"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Dimension &amp; SDS
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp316291"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+  <tr>    <td><a name="wp316291"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 _HDF_Units
 </div>
 </td>
-    <td><a name="wp316293"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+    <td><a name="wp316293"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 &quot;units&quot;
 </div>
 </td>
-    <td><a name="wp316295"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+    <td><a name="wp316295"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Dimension &amp; SDS
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp316297"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+  <tr>    <td><a name="wp316297"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 _HDF_Format
 </div>
 </td>
-    <td><a name="wp316299"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+    <td><a name="wp316299"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 &quot;format&quot;
 </div>
 </td>
-    <td><a name="wp316301"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+    <td><a name="wp316301"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Dimension &amp; SDS
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp316303"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+  <tr>    <td><a name="wp316303"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 _HDF_CoordSys
 </div>
 </td>
-    <td><a name="wp316305"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+    <td><a name="wp316305"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 &quot;coordsys&quot;
 </div>
 </td>
-    <td><a name="wp316307"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+    <td><a name="wp316307"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Only SDS
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp316309"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+  <tr>    <td><a name="wp316309"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 _HDF_ScaleFactorErr
 </div>
 </td>
-    <td><a name="wp316311"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+    <td><a name="wp316311"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 &quot;scale_factor_err&quot;
 </div>
 </td>
-    <td><a name="wp316313"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+    <td><a name="wp316313"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Only SDS
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp316315"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+  <tr>    <td><a name="wp316315"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 _HDF_AddOffset
 </div>
 </td>
-    <td><a name="wp316317"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+    <td><a name="wp316317"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 &quot;add_offset&quot;
 </div>
 </td>
-    <td><a name="wp316319"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+    <td><a name="wp316319"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Only SDS
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp316321"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+  <tr>    <td><a name="wp316321"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 _HDF_ValidRange
 </div>
 </td>
-    <td><a name="wp316323"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+    <td><a name="wp316323"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 &quot;valid_range&quot;
 </div>
 </td>
-    <td><a name="wp316325"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+    <td><a name="wp316325"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Only SDS
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp316327"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+  <tr>    <td><a name="wp316327"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 _HDF_ScaleFactor
 </div>
 </td>
-    <td><a name="wp316329"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+    <td><a name="wp316329"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 &quot;scale_factor&quot;
 </div>
 </td>
-    <td><a name="wp316331"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+    <td><a name="wp316331"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Only SDS
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp316333"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+  <tr>    <td><a name="wp316333"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 _HDF_AddOffsetErr
 </div>
 </td>
-    <td><a name="wp316335"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+    <td><a name="wp316335"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 &quot;add_offset_err&quot;
 </div>
 </td>
-    <td><a name="wp316337"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+    <td><a name="wp316337"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Only SDS
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp316339"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+  <tr>    <td><a name="wp316339"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 _HDF_CalibratedNt
 </div>
 </td>
-    <td><a name="wp316341"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+    <td><a name="wp316341"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 &quot;calibrated_nt&quot;
 </div>
 </td>
-    <td><a name="wp316343"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+    <td><a name="wp316343"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Only SDS
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp316345"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+  <tr>    <td><a name="wp316345"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 _HDF_ValidMax
 </div>
 </td>
-    <td><a name="wp316347"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+    <td><a name="wp316347"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 &quot;valid_max&quot;
 </div>
 </td>
-    <td><a name="wp316349"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+    <td><a name="wp316349"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Only SDS
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp316351"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+  <tr>    <td><a name="wp316351"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 _HDF_ValidMin
 </div>
 </td>
-    <td><a name="wp316353"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+    <td><a name="wp316353"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 &quot;valid_min&quot;
 </div>
 </td>
-    <td><a name="wp316355"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+    <td><a name="wp316355"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Only SDS
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp316357"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+  <tr>    <td><a name="wp316357"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 _FillValue
 </div>
 </td>
-    <td><a name="wp316359"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+    <td><a name="wp316359"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 &quot;_FillValue&quot;
 </div>
 </td>
-    <td><a name="wp316361"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+    <td><a name="wp316361"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Only SDS
 </div>
 </td>
@@ -949,41 +941,41 @@ Only SDS
 
 </div>
 <a name="wp316152"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-<b class="cFunctionName">SDgetoldattdatainfo</b> returns the number of offset/length pair retrieved, which should be <code style="font-family: Courier New; font-size: 9pt" class="cDefName">1</code>, if successful, or <code style="font-family: Courier New; font-size: 9pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 9pt" class="cDefName">-1</code>), otherwise. The parameters of <b class="cFunctionName">SDgetoldattdatainfo</b> are specified in <a href="UG_RawDatainfo.html#wp309491">Table 16F</a>.
+<b class="cFunctionName">SDgetoldattdatainfo</b> returns the number of offset/length pair retrieved, which should be <code style="font-family: Courier New; font-size: 8pt" class="cDefName">1</code>, if successful, or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>), otherwise. The parameters of <b class="cFunctionName">SDgetoldattdatainfo</b> are specified in <a href="UG_RawDatainfo.html#wp309491">Table 16F</a>.
 </p>
 <a name="wp309491"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 16F	<em class="cTitleText">SDgetoldattdatainfo Parameter List</em></div>
+TABLE 16F	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDgetoldattdatainfo Parameter List</span></div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp309407table309405">
   <caption></caption>
-  <tr>    <td colspan="1" rowspan="2"><a name="wp309407"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td colspan="1" rowspan="2"><a name="wp309407"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Routine Name
 </div>
 <a name="wp309408"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 [Return Type]
 </div>
-<a name="wp309409"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+<a name="wp309409"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 (FORTRAN-77)
 </div>
 </td>
-    <td colspan="1" rowspan="2"><a name="wp309411"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="1" rowspan="2"><a name="wp309411"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Parameter
 </div>
 </td>
-    <td colspan="2" rowspan="1"><a name="wp309413"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="2" rowspan="1"><a name="wp309413"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Parameter Type
 </div>
 </td>
-    <td colspan="1" rowspan="2"><a name="wp309417"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="1" rowspan="2"><a name="wp309417"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Description
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp309423"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td><a name="wp309423"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 C
 </div>
 </td>
-    <td><a name="wp309425"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp309425"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 FORTRAN-77
 </div>
 </td>
@@ -1104,41 +1096,41 @@ lengtharray);
 The parameter <em class="cVarName">id</em> can be an SD or SDS identifier.  However, when <em class="cVarName">id</em> is an SD identifier, the annotation&#39;s type must be either <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">AN_FILE_LABEL (or 2)</span> or <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">AN_FILE_DESC (or 3)</span>, and when it is an SDS identifier, the type must be <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">AN_DATA_LABEL (or 0)</span> or <span style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">AN_DATA_DESC (or 1)</span>.  The offsets and lengths of the specified annotations are retrieved into the user-supplied buffers <em class="cVarName">offsetarray</em> and <em class="cVarName">lengtharray</em>.  Note that annotation&#39;s data is stored in one contiguous block only, but there can be more than one annotation of the specified type.  The parameter <em class="cVarName">size</em> specifies the number of elements <em class="cVarName">offsetarray</em> and <em class="cVarName">lengtharray</em> can hold.
 </p>
 <a name="wp310471"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-<b class="cFunctionName">SDgetanndatainfo</b> returns the number of offset/length pairs retrieved, if successful, or <code style="font-family: Courier New; font-size: 9pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 9pt" class="cDefName">-1</code>), otherwise.  The parameters of <b class="cFunctionName">SDgetanndatainfo</b> are specified in <a href="UG_RawDatainfo.html#wp310562">Table 16G</a>.
+<b class="cFunctionName">SDgetanndatainfo</b> returns the number of offset/length pairs retrieved, if successful, or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>), otherwise.  The parameters of <b class="cFunctionName">SDgetanndatainfo</b> are specified in <a href="UG_RawDatainfo.html#wp310562">Table 16G</a>.
 </p>
 <a name="wp310562"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 16G	<em class="cTitleText">SDgetanndatainfo Parameter List</em></div>
+TABLE 16G	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDgetanndatainfo Parameter List</span></div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp310749table310476">
   <caption></caption>
-  <tr>    <td colspan="1" rowspan="2"><a name="wp310749"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td colspan="1" rowspan="2"><a name="wp310749"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Routine Name
 </div>
 <a name="wp310750"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 [Return Type]
 </div>
-<a name="wp310751"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+<a name="wp310751"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 (FORTRAN-77)
 </div>
 </td>
-    <td colspan="1" rowspan="2"><a name="wp310753"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="1" rowspan="2"><a name="wp310753"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Parameter
 </div>
 </td>
-    <td colspan="2" rowspan="1"><a name="wp310755"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="2" rowspan="1"><a name="wp310755"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Parameter Type
 </div>
 </td>
-    <td colspan="1" rowspan="2"><a name="wp310759"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="1" rowspan="2"><a name="wp310759"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Description
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp310765"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td><a name="wp310765"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 C
 </div>
 </td>
-    <td><a name="wp310767"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp310767"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 FORTRAN-77
 </div>
 </td>
@@ -1247,7 +1239,7 @@ Buffer for length of annotations&#39; data
 <a name="wp314148"> </a><h2 style="font-family: Times New Roman; font-size: 14pt; margin-top: 14pt" class="pHeading2">
 	16.5	Addition to the GR Interface
 </h2>
-<a name="wp314149"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
+<a name="wp316932"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 There are two routines added to the GR API for raw data information retrieval, <b class="cFunctionName">GRgetdatainfo </b>and <b class="cFunctionName">GRgetattdatainfo</b>, and they are described in the following sub-sections.
 </p>
 <a name="wp314299"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
@@ -1272,47 +1264,47 @@ The offsets and lengths are retrieved into the user-supplied lists <em class="cV
 </ul></div>
 </ul></div>
 <a name="wp314308"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-The parameter <em class="cVarName">info_count</em> specifies the maximum number of items the offset and length lists are allocated to hold.  Applications, however, can pass in <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">0</code> for <em class="cVarName">info_count</em> and <code style="font-family: Courier New; font-size: 9pt" class="cDefName">NULL</code> for these arrays when only the actual number of data blocks in the data set is desired.
+The parameter <em class="cVarName">info_count</em> specifies the maximum number of items the offset and length lists are allocated to hold.  Applications, however, can pass in <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">0</code> for <em class="cVarName">info_count</em> and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">NULL</code> for these arrays when only the actual number of data blocks in the data set is desired.
 </p>
 <a name="wp314309"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 The purpose of the parameter <em class="cVarName">start_block</em> was to allow retrieval to start at a random block in the data.  Applications would be able to start retrieving at the begining of the data by specifying <em class="cVarName">start_block</em> as <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">0</code>, or at a block of data by specifying <em class="cVarName">start_block</em> as a value between <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">1</code> and the number of blocks in the data.  However, in release 2.6, <em class="cVarName">start_block</em> has no effect except for contiguous data, in which case, <b class="cFunctionName">GRgetdatainfo</b> will fail when <em class="cVarName">start_block</em> is greater than <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">1</code>.  The supporting project did not need this specific feature.  Thus, until the feature is supported, applications should pass <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">0</code> in for <em class="cVarName">start_block</em> to start retrieving at the beginning of the data and up to <em class="cVarName">info_count</em> or the total number of data blocks, whichever smaller.
 </p>
 <a name="wp314310"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-<b class="cFunctionName">GRgetdatainfo</b> returns the number of offset/length pairs retrieved, if successful, or <code style="font-family: Courier New; font-size: 9pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 9pt" class="cDefName">-1</code>), otherwise. The parameters of <b class="cFunctionName">GRgetdatainfo</b> are specified in <a href="UG_RawDatainfo.html#wp314400">Table 16H</a>.
+<b class="cFunctionName">GRgetdatainfo</b> returns the number of offset/length pairs retrieved, if successful, or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>), otherwise. The parameters of <b class="cFunctionName">GRgetdatainfo</b> are specified in <a href="UG_RawDatainfo.html#wp314400">Table 16H</a>.
 </p>
 <a name="wp314400"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 16H	<em class="cTitleText">GRgetdatainfo Parameter List</em></div>
+TABLE 16H	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">GRgetdatainfo Parameter List</span></div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp314316table314314">
   <caption></caption>
-  <tr>    <td colspan="1" rowspan="2"><a name="wp314316"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td colspan="1" rowspan="2"><a name="wp314316"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Routine Name
 </div>
 <a name="wp314317"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 [Return Type]
 </div>
-<a name="wp314318"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+<a name="wp314318"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 (FORTRAN-77)
 </div>
 </td>
-    <td colspan="1" rowspan="2"><a name="wp314320"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="1" rowspan="2"><a name="wp314320"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Parameter
 </div>
 </td>
-    <td colspan="2" rowspan="1"><a name="wp314322"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="2" rowspan="1"><a name="wp314322"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Parameter Type
 </div>
 </td>
-    <td colspan="1" rowspan="2"><a name="wp314326"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="1" rowspan="2"><a name="wp314326"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Description
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp314332"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td><a name="wp314332"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 C
 </div>
 </td>
-    <td><a name="wp314334"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp314334"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 FORTRAN-77
 </div>
 </td>
@@ -1432,41 +1424,41 @@ Array to hold lengths of the data blocks
 The attribute is specified by its index and can be one that belongs to a GR file or a raster image. The offset and length are retrieved into the user-supplied buffers <em class="cVarName">offset</em> and <em class="cVarName">length</em>.  Note that attribute&#39;s data is stored in one contiguous block only.
 </p>
 <a name="wp314409"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-<b class="cFunctionName">GRgetattdatainfo</b> returns the number of offset/length pair retrieved, which should be <code style="font-family: Courier New; font-size: 9pt" class="cDefName">1</code>, if successful, or <code style="font-family: Courier New; font-size: 9pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 9pt" class="cDefName">-1</code>), otherwise. The parameters of <b class="cFunctionName">GRgetattdatainfo</b> are specified in <a href="UG_RawDatainfo.html#wp314499">Table 16I</a>.
+<b class="cFunctionName">GRgetattdatainfo</b> returns the number of offset/length pair retrieved, which should be <code style="font-family: Courier New; font-size: 8pt" class="cDefName">1</code>, if successful, or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>), otherwise. The parameters of <b class="cFunctionName">GRgetattdatainfo</b> are specified in <a href="UG_RawDatainfo.html#wp314499">Table 16I</a>.
 </p>
 <a name="wp314499"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 16I	<em class="cTitleText">GRgetattdatainfo Parameter List</em></div>
+TABLE 16I	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">GRgetattdatainfo Parameter List</span></div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp314415table314413">
   <caption></caption>
-  <tr>    <td colspan="1" rowspan="2"><a name="wp314415"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td colspan="1" rowspan="2"><a name="wp314415"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Routine Name
 </div>
 <a name="wp314416"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 [Return Type]
 </div>
-<a name="wp314417"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+<a name="wp314417"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 (FORTRAN-77)
 </div>
 </td>
-    <td colspan="1" rowspan="2"><a name="wp314419"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="1" rowspan="2"><a name="wp314419"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Parameter
 </div>
 </td>
-    <td colspan="2" rowspan="1"><a name="wp314421"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="2" rowspan="1"><a name="wp314421"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Parameter Type
 </div>
 </td>
-    <td colspan="1" rowspan="2"><a name="wp314425"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="1" rowspan="2"><a name="wp314425"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Description
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp314431"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td><a name="wp314431"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 C
 </div>
 </td>
-    <td><a name="wp314433"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp314433"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 FORTRAN-77
 </div>
 </td>
@@ -1579,41 +1571,41 @@ The annotation is specified by its identifier, <em class="cVarName">ann_id</em>.
 <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">There are two types of attributes for vgroups; those created by </span><b style="font-weight: bold" class="cFunctionName">Vsetattr</b><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> (new style) and those created by non-</span><b style="font-weight: bold" class="cFunctionName">Vsetattr</b><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> approaches (old style.)  Please refer to the section about </span><b style="font-weight: bold" class="cFunctionName">Vnattrs</b><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> and </span><b style="font-weight: bold" class="cFunctionName">Vnattrs2</b><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> and the Appendix Attribute in this </span><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> for details. </span><b class="cFunctionName">Vgetattdatainfo</b> can access both type of attributes.  However, an application must use <b class="cFunctionName">Vnattrs2</b> to get the number of attributes instead of <b class="cFunctionName">Vnattrs</b> in order to include both types.  Note that, when a vgroup has both types of attributes, the old-style attributes will preceed the new ones, regardless of when they were created.  The best way to access these attributes is through a loop.
 </p>
 <a name="wp314598"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-<b class="cFunctionName">Vgetattdatainfo</b> returns the number of data blocks, which should be 1, if successful, or <code style="font-family: Courier New; font-size: 9pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 9pt" class="cDefName">-1</code>), otherwise. The parameters of <b class="cFunctionName">Vgetattdatainfo</b> are specified in <a href="UG_RawDatainfo.html#wp314779">Table 16J</a>.
+<b class="cFunctionName">Vgetattdatainfo</b> returns the number of data blocks, which should be 1, if successful, or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>), otherwise. The parameters of <b class="cFunctionName">Vgetattdatainfo</b> are specified in <a href="UG_RawDatainfo.html#wp314779">Table 16J</a>.
 </p>
 <a name="wp314779"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 16J	<em class="cTitleText">Vgetattdatainfo Parameter List</em></div>
+TABLE 16J	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Vgetattdatainfo Parameter List</span></div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp314695table314693">
   <caption></caption>
-  <tr>    <td colspan="1" rowspan="2"><a name="wp314695"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td colspan="1" rowspan="2"><a name="wp314695"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Routine Name
 </div>
 <a name="wp314696"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 [Return Type]
 </div>
-<a name="wp314697"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+<a name="wp314697"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 (FORTRAN-77)
 </div>
 </td>
-    <td colspan="1" rowspan="2"><a name="wp314699"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="1" rowspan="2"><a name="wp314699"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Parameter
 </div>
 </td>
-    <td colspan="2" rowspan="1"><a name="wp314701"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="2" rowspan="1"><a name="wp314701"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Parameter Type
 </div>
 </td>
-    <td colspan="1" rowspan="2"><a name="wp314705"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="1" rowspan="2"><a name="wp314705"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Description
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp314711"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td><a name="wp314711"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 C
 </div>
 </td>
-    <td><a name="wp314713"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp314713"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 FORTRAN-77
 </div>
 </td>
@@ -1731,47 +1723,47 @@ The offsets and lengths are retrieved into the user-supplied lists <em class="cV
 </ul></div>
 </ul></div>
 <a name="wp315123"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-The parameter <em class="cVarName">info_count</em> specifies the maximum number of items the offset and length lists are allocated to hold.  Applications, however, can pass in <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">0</code> for <em class="cVarName">info_count</em> and <code style="font-family: Courier New; font-size: 9pt" class="cDefName">NULL</code> for these arrays when only the actual number of data blocks in the data set is desired.
+The parameter <em class="cVarName">info_count</em> specifies the maximum number of items the offset and length lists are allocated to hold.  Applications, however, can pass in <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">0</code> for <em class="cVarName">info_count</em> and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">NULL</code> for these arrays when only the actual number of data blocks in the data set is desired.
 </p>
 <a name="wp315124"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 The purpose of the parameter <em class="cVarName">start_block</em> was to allow retrieval to start at a random block in the data.  Applications would be able to start retrieving at the begining of the data by specifying <em class="cVarName">start_block</em> as <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">0</code>, or at a block of data by specifying <em class="cVarName">start_block</em> as a value between <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">1</code> and the number of blocks in the data.  However, in release 2.6, <em class="cVarName">start_block</em> has no effect except for contiguous data, in which case, <b class="cFunctionName">VSgetdatainfo</b> will fail when <em class="cVarName">start_block</em> is greater than <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">1</code>.  The supporting project did not need this specific feature.  Thus, until the feature is supported, applications should pass <code style="font-family: Courier New; font-style: normal; font-weight: normal" class="cCode">0</code> in for <em class="cVarName">start_block</em> to start retrieving at the beginning of the data and up to <em class="cVarName">info_count</em> or the total number of data blocks, whichever smaller.
 </p>
 <a name="wp315125"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-<b class="cFunctionName">VSgetdatainfo</b> returns a the number of offset/length pairs retrieved, if successful, or <code style="font-family: Courier New; font-size: 9pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 9pt" class="cDefName">-1</code>), otherwise. The parameters of <b class="cFunctionName">VSgetdatainfo</b> are specified in <a href="UG_RawDatainfo.html#wp315216">Table 16K</a>.
+<b class="cFunctionName">VSgetdatainfo</b> returns a the number of offset/length pairs retrieved, if successful, or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>), otherwise. The parameters of <b class="cFunctionName">VSgetdatainfo</b> are specified in <a href="UG_RawDatainfo.html#wp315216">Table 16K</a>.
 </p>
 <a name="wp315216"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 16K	<em class="cTitleText">VSgetdatainfo Parameter List</em></div>
+TABLE 16K	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">VSgetdatainfo Parameter List</span></div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp315132table315130">
   <caption></caption>
-  <tr>    <td colspan="1" rowspan="2"><a name="wp315132"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td colspan="1" rowspan="2"><a name="wp315132"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Routine Name
 </div>
 <a name="wp315133"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 [Return Type]
 </div>
-<a name="wp315134"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+<a name="wp315134"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 (FORTRAN-77)
 </div>
 </td>
-    <td colspan="1" rowspan="2"><a name="wp315136"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="1" rowspan="2"><a name="wp315136"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Parameter
 </div>
 </td>
-    <td colspan="2" rowspan="1"><a name="wp315138"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="2" rowspan="1"><a name="wp315138"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Parameter Type
 </div>
 </td>
-    <td colspan="1" rowspan="2"><a name="wp315142"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="1" rowspan="2"><a name="wp315142"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Description
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp315148"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td><a name="wp315148"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 C
 </div>
 </td>
-    <td><a name="wp315150"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp315150"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 FORTRAN-77
 </div>
 </td>
@@ -1889,47 +1881,47 @@ Array to hold lengths of the data blocks
 </p><a name="wp315276"> </a><p style="font-family: Courier New; font-size: 9pt" class="pSyntaxLine"><b style="font-family: Courier New; font-size: 9pt" class="cBold">FORTRAN:</b>	Currently unavailable
 </p></ul></div>
 <a name="wp315284"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-The attribute is specified by its index, <em class="cVarName">attr_index</em>, and can be one that belongs to a vdata or a field of the vdata. If <em class="cVarName">findex</em> is <code style="font-family: Courier New; font-size: 9pt" class="cDefName">_HDF_VDATA</code> (or <code style="font-family: Courier New; font-size: 9pt" class="cDefName">-1</code>), then the attribute is associated with the vdata.  If <em class="cVarName">findex</em> is an index of the vdata field, then the attribute is one that is associated with the vdata field.  The parameter <em class="cVarName">attr_index</em> specifies the attribute&#39;s index within the vdata&#39;s or the field&#39;s attribute list.  Thus, its value must be within [0-number of attributes of the associated list].
+The attribute is specified by its index, <em class="cVarName">attr_index</em>, and can be one that belongs to a vdata or a field of the vdata. If findex is <code style="font-family: Courier New; font-size: 8pt" class="cDefName">_HDF_VDATA</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>), then the attribute is associated with the vdata.  If findex is an index of the vdata field, then the attribute is one that is associated with the vdata field.  The parameter attr_index specifies the attribute&#39;s index within the vdata&#39;s or the field&#39;s attribute list.  Thus, its value must be within [0-number of attributes of the associated list].
 </p>
 <a name="wp315305"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 The offset and length are retrieved into the user-supplied buffers <em class="cVarName">offset</em> and <em class="cVarName">length</em>.  Note that attribute&#39;s data is stored in one contiguous block only.
 </p>
 <a name="wp314871"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-<b class="cFunctionName">VSgetattdatainfo</b> returns the number of offset/length pair retrieved, which should be <code style="font-family: Courier New; font-size: 9pt" class="cDefName">1</code>, if successful, or <code style="font-family: Courier New; font-size: 9pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 9pt" class="cDefName">-1</code>), otherwise. The parameters of <b class="cFunctionName">VSgetattdatainfo</b> are specified in <a href="UG_RawDatainfo.html#wp315461">Table 16L</a>.
+<b class="cFunctionName">VSgetattdatainfo</b> returns the number of offset/length pair retrieved, which should be <code style="font-family: Courier New; font-size: 8pt" class="cDefName">1</code>, if successful, or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>), otherwise. The parameters of <b class="cFunctionName">VSgetattdatainfo</b> are specified in <a href="UG_RawDatainfo.html#wp315461">Table 16L</a>.
 </p>
 <a name="wp315461"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 16L	<em class="cTitleText">VSgetattdatainfo Parameter List</em></div>
+TABLE 16L	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">VSgetattdatainfo Parameter List</span></div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp315367table315365">
   <caption></caption>
-  <tr>    <td colspan="1" rowspan="2"><a name="wp315367"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td colspan="1" rowspan="2"><a name="wp315367"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Routine Name
 </div>
 <a name="wp315368"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 [Return Type]
 </div>
-<a name="wp315369"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+<a name="wp315369"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 (FORTRAN-77)
 </div>
 </td>
-    <td colspan="1" rowspan="2"><a name="wp315371"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="1" rowspan="2"><a name="wp315371"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Parameter
 </div>
 </td>
-    <td colspan="2" rowspan="1"><a name="wp315373"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="2" rowspan="1"><a name="wp315373"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Parameter Type
 </div>
 </td>
-    <td colspan="1" rowspan="2"><a name="wp315377"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="1" rowspan="2"><a name="wp315377"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Description
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp315383"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td><a name="wp315383"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 C
 </div>
 </td>
-    <td><a name="wp315385"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp315385"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 FORTRAN-77
 </div>
 </td>
@@ -1974,7 +1966,7 @@ N/A
 </div>
 </td>
     <td><a name="wp315409"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Vdata&#39;s field index or <code style="font-family: Courier New; font-size: 9pt" class="cDefName">_HDF_VDATA</code>
+Vdata&#39;s field index or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">_HDF_VDATA</code>
 </div>
 </td>
 </tr>
@@ -2040,97 +2032,97 @@ Buffer for length of attribute&#39;s data
 EXAMPLE 1.	Getting Data Information of SDS.
 </div>
 <a name="wp315463"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-This example demonstrates the use of the routines <b class="cFunctionName">SDgetdatainfo</b> with simple and contiguous data in a data set.
+This example demonstrates the use of the routine <b class="cFunctionName">SDgetdatainfo</b> with simple and contiguous data in a data set.
 </p>
 <a name="wp315794"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 2pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 108pt; text-transform: none">
 C:	
 </div>
 <div class="pPreformatted" style="font-family: Courier New; font-size: 8pt"><pre class="pPreformatted" style="font-family: Courier New; font-size: 8pt">
-#include &quot;mfhdf.h&quot;<a name="wp316386"> </a>
-#define SIMPLE_FILE  &quot;datainfo_simple.hdf&quot;   /* data file previously written */<a name="wp316388"> </a>
-main()<a name="wp316390"> </a>
-{<a name="wp316391"> </a>
-    /*********************** Variable Declaration **************************/<a name="wp316392"> </a>
-    int32 sd_id, sds_id;<a name="wp316393"> </a>
-    int32 offset, length;<a name="wp316394"> </a>
-    uintn info_count = 0;<a name="wp316395"> </a>
-    intn status;<a name="wp316396"> </a>
-    /*<a name="wp316398"> </a>
-     * Open the file for reading.<a name="wp316399"> </a>
-     */<a name="wp316400"> </a>
-    sd_id = SDstart(SIMPLE_FILE, DFACC_READ);<a name="wp316401"> </a>
-    /***********************************************************************<a name="wp316403"> </a>
-     Read data info for later accessing data without the use of HDF4 library<a name="wp316404"> </a>
-     ***********************************************************************/<a name="wp316405"> </a>
-    /*<a name="wp316407"> </a>
-     * Open the second dataset, get the number of data block, which is 1, then<a name="wp316408"> </a>
-     * retrieve and record the offset/length<a name="wp316409"> </a>
-     */<a name="wp316410"> </a>
-    sds_id = SDselect(sd_id, 1);<a name="wp316411"> </a>
-    /*<a name="wp316413"> </a>
-     * Passing in 0 for the info count and NULL for the offset and length<a name="wp316414"> </a>
-     * arrays to get the number of data blocks in the data set.  Note that<a name="wp316415"> </a>
-     * the second parameter is for chunk coordinates and because this data<a name="wp316416"> </a>
-     * set is not chunked, NULL should be passed in.  The third parameter<a name="wp316417"> </a>
-     * indicates to start retrieval at the beginning of the data.<a name="wp316418"> </a>
-     */<a name="wp316419"> </a>
-    info_count = SDgetdatainfo(sds_id, NULL, 0, 0, NULL, NULL);<a name="wp316420"> </a>
-    /*<a name="wp316433"> </a>
-     * Call SDgetdatainfo again to retrieve the offset and length of the<a name="wp316434"> </a>
-     * data block.  The info count is now 1 to specify the number of elements<a name="wp316435"> </a>
-     * in the offset and length arrays.<a name="wp316436"> </a>
-     */<a name="wp316437"> </a>
-    status = SDgetdatainfo(sds_id, NULL, 0, info_count, &amp;offset, &amp;length);<a name="wp316438"> </a>
-    /*<a name="wp316440"> </a>
-     * Terminate access to the data set.<a name="wp316441"> </a>
-     */<a name="wp316442"> </a>
-    status = SDendaccess(sds_id);<a name="wp316443"> </a>
-    /*<a name="wp316445"> </a>
-     * Close the file.<a name="wp316446"> </a>
-     */<a name="wp316447"> </a>
-    status = SDend(sd_id);<a name="wp316448"> </a>
-    /******************************************************************<a name="wp316450"> </a>
-     Read data using previously obtained data info without HDF4 library<a name="wp316451"> </a>
-     ******************************************************************/<a name="wp316452"> </a>
-    /* Open file and read in data without using SD API */<a name="wp316454"> </a>
-    {<a name="wp316455"> </a>
-        int fd; /* for open */<a name="wp316456"> </a>
-        int32 ret32; /* for DFKconvert */<a name="wp316457"> </a>
-        ssize_t readlen = 0; /* for read */<a name="wp316458"> </a>
-        int32 *readibuf, *readibuf_swapped;<a name="wp316459"> </a>
-        /*<a name="wp316461"> </a>
-         * Open the file for reading without SD API.<a name="wp316462"> </a>
-         */<a name="wp316463"> </a>
-        fd = open(SIMPLE_FILE, O_RDONLY);<a name="wp316464"> </a>
-        /*<a name="wp316477"> </a>
-         * Forward to the position of the data.<a name="wp316478"> </a>
-         */<a name="wp316479"> </a>
-        lseek(fd, (off_t)offset, SEEK_SET);<a name="wp316480"> </a>
-        /*<a name="wp316482"> </a>
-         * Allocate buffers for SDS&#39; data.<a name="wp316483"> </a>
-         */<a name="wp316484"> </a>
-        readibuf = (int32 *) HDmalloc(N_VALUES * sizeof(int32));<a name="wp316485"> </a>
-        readibuf_swapped = (int32 *) HDmalloc(N_VALUES * sizeof(int32));<a name="wp316486"> </a>
-        /*<a name="wp316488"> </a>
-         * Read in this block of data.<a name="wp316489"> </a>
-         */<a name="wp316490"> </a>
-        readlen = read(fd, (VOIDP) readibuf, (size_t)length);<a name="wp316491"> </a>
-        /*<a name="wp316493"> </a>
-         * Convert data back to format on local machine.<a name="wp316494"> </a>
-         */<a name="wp316495"> </a>
-        ret32 = DFKconvert(readibuf, readibuf_swapped, DFNT_INT32,<a name="wp316496"> </a>
-                           N_VALUES, DFACC_WRITE, 0, 0);<a name="wp316497"> </a>
-        /*<a name="wp316499"> </a>
-         * Free resources.<a name="wp316500"> </a>
-         */<a name="wp316501"> </a>
-        HDfree (readibuf_swapped);<a name="wp316502"> </a>
-        HDfree (readibuf);<a name="wp316503"> </a>
-        /*<a name="wp316505"> </a>
-         * Close the file.<a name="wp316506"> </a>
-         */<a name="wp316507"> </a>
-        close(fd);<a name="wp316508"> </a>
-    }<a name="wp316509"> </a>
-}<a name="wp316510"> </a>
+#include &quot;mfhdf.h&quot;<a name="wp317066"> </a>
+#define SIMPLE_FILE  &quot;datainfo_simple.hdf&quot;   /* data file previously written */<a name="wp317068"> </a>
+main()<a name="wp317070"> </a>
+{<a name="wp317071"> </a>
+    /*********************** Variable Declaration **************************/<a name="wp317072"> </a>
+    int32 sd_id, sds_id;<a name="wp317073"> </a>
+    int32 offset, length;<a name="wp317074"> </a>
+    uintn info_count = 0;<a name="wp317075"> </a>
+    intn status;<a name="wp317076"> </a>
+    /*<a name="wp317078"> </a>
+     * Open the file for reading.<a name="wp317079"> </a>
+     */<a name="wp317080"> </a>
+    sd_id = SDstart(SIMPLE_FILE, DFACC_READ);<a name="wp317081"> </a>
+    /***********************************************************************<a name="wp317083"> </a>
+     Read data info for later accessing data without the use of HDF4 library<a name="wp317084"> </a>
+     ***********************************************************************/<a name="wp317085"> </a>
+    /*<a name="wp317087"> </a>
+     * Open the second dataset, get the number of data block, which is 1, then<a name="wp317088"> </a>
+     * retrieve and record the offset/length<a name="wp317089"> </a>
+     */<a name="wp317090"> </a>
+    sds_id = SDselect(sd_id, 1);<a name="wp317091"> </a>
+    /*<a name="wp317093"> </a>
+     * Passing in 0 for the info count and NULL for the offset and length<a name="wp317094"> </a>
+     * arrays to get the number of data blocks in the data set.  Note that<a name="wp317095"> </a>
+     * the second parameter is for chunk coordinates and because this data<a name="wp317096"> </a>
+     * set is not chunked, NULL should be passed in.  The third parameter<a name="wp317097"> </a>
+     * indicates to start retrieval at the beginning of the data.<a name="wp317098"> </a>
+     */<a name="wp317099"> </a>
+    info_count = SDgetdatainfo(sds_id, NULL, 0, 0, NULL, NULL);<a name="wp317100"> </a>
+    /*<a name="wp317102"> </a>
+     * Call SDgetdatainfo again to retrieve the offset and length of the<a name="wp317103"> </a>
+     * data block.  The info count is now 1 to specify the number of elements<a name="wp317104"> </a>
+     * in the offset and length arrays.<a name="wp317105"> </a>
+     */<a name="wp317106"> </a>
+    status = SDgetdatainfo(sds_id, NULL, 0, info_count, &amp;offset, &amp;length);<a name="wp317107"> </a>
+    /*<a name="wp317109"> </a>
+     * Terminate access to the data set.<a name="wp317110"> </a>
+     */<a name="wp317111"> </a>
+    status = SDendaccess(sds_id);<a name="wp317112"> </a>
+    /*<a name="wp317114"> </a>
+     * Close the file.<a name="wp317115"> </a>
+     */<a name="wp317116"> </a>
+    status = SDend(sd_id);<a name="wp317117"> </a>
+    /******************************************************************<a name="wp317119"> </a>
+     Read data using previously obtained data info without HDF4 library<a name="wp317120"> </a>
+     ******************************************************************/<a name="wp317121"> </a>
+    /* Open file and read in data without using SD API */<a name="wp317123"> </a>
+    {<a name="wp317124"> </a>
+        int fd; /* for open */<a name="wp317125"> </a>
+        int32 ret32; /* for DFKconvert */<a name="wp317126"> </a>
+        ssize_t readlen = 0; /* for read */<a name="wp317127"> </a>
+        int32 *readibuf, *readibuf_swapped;<a name="wp317128"> </a>
+        /*<a name="wp317130"> </a>
+         * Open the file for reading without SD API.<a name="wp317131"> </a>
+         */<a name="wp317132"> </a>
+        fd = open(SIMPLE_FILE, O_RDONLY);<a name="wp317133"> </a>
+        /*<a name="wp317135"> </a>
+         * Forward to the position of the data.<a name="wp317136"> </a>
+         */<a name="wp317137"> </a>
+        lseek(fd, (off_t)offset, SEEK_SET);<a name="wp317138"> </a>
+        /*<a name="wp317140"> </a>
+         * Allocate buffers for SDS&#39; data.<a name="wp317141"> </a>
+         */<a name="wp317142"> </a>
+        readibuf = (int32 *) HDmalloc(N_VALUES * sizeof(int32));<a name="wp317143"> </a>
+        readibuf_swapped = (int32 *) HDmalloc(N_VALUES * sizeof(int32));<a name="wp317144"> </a>
+        /*<a name="wp317146"> </a>
+         * Read in this block of data.<a name="wp317147"> </a>
+         */<a name="wp317148"> </a>
+        readlen = read(fd, (VOIDP) readibuf, (size_t)length);<a name="wp317149"> </a>
+        /*<a name="wp317151"> </a>
+         * Convert data back to format on local machine.<a name="wp317152"> </a>
+         */<a name="wp317153"> </a>
+        ret32 = DFKconvert(readibuf, readibuf_swapped, DFNT_INT32,<a name="wp317154"> </a>
+                           N_VALUES, DFACC_WRITE, 0, 0);<a name="wp317155"> </a>
+        /*<a name="wp317157"> </a>
+         * Free resources.<a name="wp317158"> </a>
+         */<a name="wp317159"> </a>
+        HDfree (readibuf_swapped);<a name="wp317160"> </a>
+        HDfree (readibuf);<a name="wp317161"> </a>
+        /*<a name="wp317163"> </a>
+         * Close the file.<a name="wp317164"> </a>
+         */<a name="wp317165"> </a>
+        close(fd);<a name="wp317166"> </a>
+    }<a name="wp317167"> </a>
+}<a name="wp317168"> </a>
 </pre></div>
     </blockquote>
 
@@ -2139,7 +2131,7 @@ main()<a name="wp316390"> </a>
     <table id="SummaryNotReq2" border="0" width="850" cellspacing="0" cellpadding="0">
       <tr>
         <td align="left">
-        HDF 4.2.6 - August 2011<br/>
+        HDF 4.2.7 - February 2012<br/>
         <a href="UG_Copyright.html">Copyright</a>
         <td align="right">
           <span style="font-size: 12px; font-weight: bold">
