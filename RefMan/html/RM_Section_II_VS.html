@@ -7,12 +7,12 @@
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.8.2296" />
     <meta name="TEMPLATEBASE" content="Dynamic HTML" />
-    <meta name="LASTUPDATED" content="08/01/11 12:50:29" />
+    <meta name="LASTUPDATED" content="02/15/12 18:14:33" />
     <title>VHstoredata/vhfsd/vhfscd</title>
     <link rel="StyleSheet" href="document.css" type="text/css" media="all" />
     <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
 <link rel="first" title="First" href="RM_Front.html" />
-<link rel="last" title="Last" href="Attributes.html" />
+<link rel="last" title="Last" href="RM_Section_II_HDFLOP.html" />
 <link rel="previous" title="Previous" href="RM_Section_II_VF.html" />
 <link rel="next" title="Next" href="RM_Section_II_VSQ.html" />
 
@@ -2739,7 +2739,7 @@ Length of the attribute&#39;s data
 Purpose
 </div></td>
     <td><a name="wp492611"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Retrieves location and size of the data of an attribute (H4 Mapping project specific.)
+Retrieves location and size of the data of an attribute.
 </div>
 </td>
 </tr>
@@ -3359,7 +3359,7 @@ Array to hold lengths of the data blocks
 Purpose
 </div></td>
     <td><a name="wp489900"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Retrieves location and size of data blocks in a specified vdata, after a specified data block (H4 Mapping project specific.)
+Retrieves location and size of data blocks in a specified vdata, after a specified data block.
 </div>
 </td>
 </tr>
@@ -3398,8 +3398,8 @@ The parameter <em class="cVarName">info_count</em> provides the number of offset
 The parameter <em class="cVarName">start_block</em> indicates the block number where to start reading the offsets from the file.  The combination of parameters <em class="cVarName">info_count</em> and <em class="cVarName">start_block</em> provide applications with flexibility of where and how much data information to retrieve.  The value for <em class="cVarName">start_block</em> must be non-negative and smaller than or equal to the number of blocks in the vdata&#39;s data.
 </div>
 <div style="margin-bottom: 6pt; margin-top: 0pt"><ul style="margin-bottom: 6pt; margin-top: 0pt">
-<a name="wp489932"> </a><div style="margin-bottom: 6pt; margin-top: 0pt"><li>When <em class="cVarName">start_block</em> is 0, <b class="cFunctionName">VSgetdatainfo</b> will start getting data info from the beginning of the vdata&#39;s data.</li></div>
-<a name="wp489793"> </a><div style="margin-bottom: 6pt; margin-top: 0pt"><li>When <em class="cVarName">start_block</em> is greater than the number of blocks in the vdata, <b class="cFunctionName">VSgetdatainfo</b> will return <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL </code>(or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>).</li></div>
+<a name="wp489932"> </a><div style="margin-bottom: 6pt; margin-top: 0pt">When <em class="cVarName">start_block</em> is 0, <b class="cFunctionName">VSgetdatainfo</b> will start getting data info from the beginning of the vdata&#39;s data.</div>
+<a name="wp489793"> </a><div style="margin-bottom: 6pt; margin-top: 0pt">When <em class="cVarName">start_block</em> is greater than the number of blocks in the vdata, <b class="cFunctionName">VSgetdatainfo</b> will return <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL </code>(or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>).</div>
 </ul></div>
 </td>
 </tr>
@@ -3447,121 +3447,135 @@ currently unavailable
 [VS Interface]</A><a HREF="RMTop.html"><b>[Top]</b></a>
 </p>
 <hr />
-VSgetexternalfile
+VSgetexternalinfo
 </h2>
-<a name="wp491305"> </a><p style="font-weight: normal" class="pSignature">
-intn VSgetexternalfile(int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">vdata_id,</span> uintn <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">buf_size</span>, char *<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">filename</span>, int32 *<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">offset</span>)
+<a name="wp492910"> </a><p style="font-weight: normal" class="pSignature">
+intn VSgetexternalinfo(int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">vdata_id,</span> uintn <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">buf_size</span>, char *<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">filename</span>, int32 *<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">offset</span>, int32 *<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">length</span>)
 </p>
-<a name="wp491365"> </a><p class="pBodyRelative">
+<a name="wp492972"> </a><p class="pBodyRelative">
 </p>
 <div align="left">
-<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp491308table491306">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp492913table492911">
   <caption></caption>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp491308"> </a><div style="margin-top: 0pt" class="pCellVariable">
+<a name="wp492913"> </a><div style="margin-top: 0pt" class="pCellVariable">
 vdata_id
 </div>
 </td>
-    <td><a name="wp491310"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp492915"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 IN:
 </div>
 </td>
-    <td><a name="wp491312"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp492917"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 Vdata identifier returned by <b class="cFunctionName">VSattach</b>
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp491314"> </a><div style="margin-top: 0pt" class="pCellVariable">
+<a name="wp492919"> </a><div style="margin-top: 0pt" class="pCellVariable">
 buf_size
 </div>
 </td>
-    <td><a name="wp491316"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp492921"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 IN:
 </div>
 </td>
-    <td><a name="wp491318"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp492923"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 Size of buffer for external file name
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp491320"> </a><div style="margin-top: 0pt" class="pCellVariable">
+<a name="wp492925"> </a><div style="margin-top: 0pt" class="pCellVariable">
 filename
 </div>
 </td>
-    <td><a name="wp491322"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp492927"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 OUT:
 </div>
 </td>
-    <td><a name="wp491324"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp492929"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 Buffer for external file name
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp491326"> </a><div style="margin-top: 0pt" class="pCellVariable">
+<a name="wp492931"> </a><div style="margin-top: 0pt" class="pCellVariable">
 offset
 </div>
 </td>
-    <td><a name="wp491328"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp492933"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 OUT:
 </div>
 </td>
-    <td><a name="wp491387"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp492935"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 Offset, in bytes, of the location in the external file where the data was written
 </div>
 </td>
 </tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp492937"> </a><div style="margin-top: 0pt" class="pCellVariable">
+length
+</div>
+</td>
+    <td><a name="wp492939"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+OUT:
+</div>
+</td>
+    <td><a name="wp492941"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Length, in bytes, of the external data
+</div>
+</td>
+</tr>
 </table>
 </div>
 <p class="pBodyRelative">
 </p>
 <div align="left">
-<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp491333table491331">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp492944table492942">
   <caption></caption>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp491333"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp492944"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 Purpose
 </div></td>
-    <td><a name="wp491335"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Retrieves information about external file of the vdata.
+    <td><a name="wp492946"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Retrieves information about external file and external data of the vdata.
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp491337"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp492948"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 Return value
 </div></td>
-    <td><a name="wp491339"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Returns length of the external file name if successful or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) otherwise.
+    <td><a name="wp492950"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Returns length of the external file name if successful, 0 if there is no external data, or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) if an error occurs.
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp491341"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp492952"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 Description
 </div></td>
-    <td><a name="wp491343"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-If the vdata has external element, <b class="cFunctionName">VSgetexternalfile</b> will retrieve the name of the external file and the offset where the data is being stored in the external file.  If the vdata does not have external element, <b class="cFunctionName">VSgetexternalfile</b> will return <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code>.
+    <td><a name="wp492954"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+If the vdata has external element, <b class="cFunctionName">VSgetexternalinfo</b> will retrieve the name of the external file, the offset where the data is being stored in the external file, and the length of the external data.  If the vdata does not have external element, <b class="cFunctionName">VSgetexternalinfo</b> will return <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>.
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp491345"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp492956"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 &#160;
 </div></td>
-    <td><a name="wp491347"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-To sufficiently allocate buffer for the file name, an application can call <b class="cFunctionName">VSgetexternalfile</b> passing in <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code> for <em class="cVarName">buf_size</em>.  If the length returned is greater than <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>, the application will use it to allocate the buffer before calling <b class="cFunctionName">VSgetexternalfile</b> again to get the actual file name.
+    <td><a name="wp492958"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+To sufficiently allocate buffer for the file name, an application can call <b class="cFunctionName">VSgetexternalinfo</b> passing in <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code> for <em class="cVarName">buf_size</em>.  If the length returned is greater than <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>, the application will use it to allocate the buffer before calling <b class="cFunctionName">VSgetexternalinfo</b> again to get the actual file name.
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp491349"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp492960"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 Note
 </div></td>
-    <td><a name="wp491351"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-It is the user&#39;s responsibility to see that the external files are kept with the main file prior to accessing the vdata with external element.  The function will fail if the external file is missing from the directory where the main file is located.
+    <td><a name="wp492962"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+It is the user&#39;s responsibility to see that the external files are kept with the main file prior to accessing the vdata with external element.  <b class="cFunctionName">VSgetexternalinfo</b>  does not check and the accessing functions will fail if the external file is missing from the directory where the main file is located.
 </div>
 </td>
 </tr>
@@ -3570,22 +3584,22 @@ It is the user&#39;s responsibility to see that the external files are kept with
 <p class="pBodyRelative">
 </p>
 <div align="left">
-<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp491354table491352">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp492965table492963">
   <caption></caption>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp491354"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp492965"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 FORTRAN
 </div></td>
-    <td><a name="wp491356"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortSyntax">
+    <td><a name="wp492967"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortSyntax">
 Currently unavailable
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp491358"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp492969"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 &#160;
 </div></td>
-    <td><a name="wp491360"> </a><div class="pCellFortran">
+    <td><a name="wp492971"> </a><div class="pCellFortran">
 &#160;
 </div>
 </td>
@@ -3595,7 +3609,7 @@ Currently unavailable
 <p class="pBodyRelative">
 
 </p>
-<a name="wp438991"> </a><h2 class="pRef_VS_RoutineName">
+<a name="wp492974"> </a><h2 class="pRef_VS_RoutineName">
 <p align=right><A HREF="RM_Section_II_VSLOP.html">
 [VS Interface]</A><a HREF="RMTop.html"><b>[Top]</b></a>
 </p>
@@ -4086,10 +4100,10 @@ character*(*) vdata_name
 [VS Interface]</A><a HREF="RMTop.html"><b>[Top]</b></a>
 </p>
 <hr />
-VSgetvdatas/vsfgvdatas
+VSgetvdatas
 </h2>
 <a name="wp489387"> </a><p style="font-weight: normal" class="pSignature">
-intn VSgetvdatas(int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">id</span>, const uintn <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">start_vd</span>, const uintn <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">vd_count</span>, uint16 *<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">refarray</span>)
+intn VSgetvdatas(int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">id</span>, const uintn <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">start_vd</span>, const uintn <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">n_vds</span>, uint16 *<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">refarray</span>)
 </p>
 <a name="wp489374"> </a><p class="pBodyRelative">
 </p>
@@ -4182,7 +4196,7 @@ Returns the actual number of user-created vdatas retrieved if successful, and <c
 Description
 </div></td>
     <td><a name="wp489346"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-<b class="cFunctionName">VSgetvdatas</b> retrieves a list containing the reference numbers of vdatas found in a file or under a vgroup.  The file or the vgroup is specified by <em class="cVarName">id</em>.
+<b class="cFunctionName">VSgetvdatas</b> retrieves a list containing the reference numbers of vdatas found in a file or a vgroup.  The file or the vgroup is specified by <em class="cVarName">id</em>.
 </div>
 </td>
 </tr>
@@ -4209,9 +4223,9 @@ The parameter <em class="cVarName">vd_count</em> provides the number of items th
 &#160;
 </div></td>
     <td><div style="margin-bottom: 6pt; margin-top: 0pt"><ul style="margin-bottom: 6pt; margin-top: 0pt">
-<a name="wp489522"> </a><div style="margin-bottom: 6pt; margin-top: 0pt"><li>When <em class="cVarName">start_vd</em> is 0, <b class="cFunctionName">VSgetvdatas</b> will start retrieving at the beginning of the file or the first vdata of the specified vgroup.</li></div>
-<a name="wp489523"> </a><div style="margin-bottom: 6pt; margin-top: 0pt"><li>When <em class="cVarName">start_vd</em> is between 0 and the number of user-created vdatas in the file or the vgroup, <b class="cFunctionName">VSgetvdatas</b> will start retrieving vdatas from the vdata number <em class="cVarName">start_vd</em>.</li></div>
-<a name="wp489454"> </a><div style="margin-bottom: 6pt; margin-top: 0pt"><li>When <em class="cVarName">start_vd</em> is greater than the number of user-created vdatas in the file or the vgroup, <b class="cFunctionName">VSgetvdatas</b> will return <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code>.</li></div>
+<a name="wp489522"> </a><div style="margin-bottom: 6pt; margin-top: 0pt">When <em class="cVarName">start_vd</em> is 0, <b class="cFunctionName">VSgetvdatas</b> will start retrieving at the beginning of the file or the first vdata of the specified vgroup.</div>
+<a name="wp489523"> </a><div style="margin-bottom: 6pt; margin-top: 0pt">When <em class="cVarName">start_vd</em> is between 0 and the number of user-created vdatas in the file or the vgroup, <b class="cFunctionName">VSgetvdatas</b> will start retrieving vdatas from the vdata number <em class="cVarName">start_vd</em>.</div>
+<a name="wp489454"> </a><div style="margin-bottom: 6pt; margin-top: 0pt">When <em class="cVarName">start_vd</em> is greater than the number of user-created vdatas in the file or the vgroup, <b class="cFunctionName">VSgetvdatas</b> will return <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code>.</div>
 </ul></div>
 </td>
 </tr>
@@ -4233,15 +4247,6 @@ When <em class="cVarName">id</em> is a vgroup identifier, only the immediate vda
 </div>
 </td>
 </tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp489363"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
-&#160;
-</div></td>
-    <td><a name="wp489365"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Note in the FORTRAN-77 version, if <em class="cVarName">vd_count</em> is -1 then the function will return the value of vd_count and disregard <em class="cVarName">refarray</em>; equivalent to passing <code style="font-family: Courier New; font-size: 8pt" class="cDefName">NULL</code> for <em class="cVarName">refarray</em> in the C version. 
-</div>
-</td>
-</tr>
 </table>
 </div>
 <p class="pBodyRelative">
@@ -4253,8 +4258,17 @@ Note in the FORTRAN-77 version, if <em class="cVarName">vd_count</em> is -1 then
 <a name="wp489367"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 FORTRAN
 </div></td>
-    <td><a name="wp489369"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortSyntax">
+    <td><a name="wp492981"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortSyntax">
 integer function vsfgvdatas(id, start_vd, vd_count, refarray)
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp492988"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+&#160;
+</div></td>
+    <td><a name="wp493003"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortVar">
+integer id, start_vd, vd_count
 </div>
 </td>
 </tr>
@@ -4262,17 +4276,8 @@ integer function vsfgvdatas(id, start_vd, vd_count, refarray)
 <a name="wp489371"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 &#160;
 </div></td>
-    <td><a name="wp489373"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" div class="pCellFortVar">
-integer id, start_vd, vd_count
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp489375"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
-</div></td>
-    <td><a name="wp489377"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" div class="pCellFortVar">
+    <td><a name="wp492995"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortVar">
 integer refarray(*)
-&#160;
 </div>
 </td>
 </tr>
@@ -4711,6 +4716,117 @@ integer vdata_id
 <p class="pBodyRelative">
 
 </p>
+<a name="wp493020"> </a><h2 class="pRef_VS_RoutineName">
+<p align=right><A HREF="RM_Section_II_VSLOP.html">
+[VS Interface]</A><a HREF="RMTop.html"><b>[Top]</b></a>
+</p>
+<hr />
+VSisinternal
+</h2>
+<a name="wp493021"> </a><p style="font-weight: normal" class="pSignature">
+intn VSisinternal(int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">vdata_id</span>)
+</p>
+<a name="wp493065"> </a><p class="pBodyRelative">
+</p>
+<div align="left">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp493024table493022">
+  <caption></caption>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp493024"> </a><div style="margin-top: 0pt" class="pCellVariable">
+vdata_id
+</div>
+</td>
+    <td><a name="wp493026"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+IN:
+</div>
+</td>
+    <td><a name="wp493028"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Vdata identifier returned by <b class="cFunctionName">VSattach</b>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="pBodyRelative">
+</p>
+<div align="left">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp493031table493029">
+  <caption></caption>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp493031"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+Purpose
+</div></td>
+    <td><a name="wp493033"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Determine if a vdata was created by the library internally.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp493035"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+Return value
+</div></td>
+    <td><a name="wp493037"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">TRUE</code> (<code style="font-family: Courier New; font-size: 8pt" class="cDefName">1</code>) if the inquired vdata is one that was internally created by the library, <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FALSE</code> (<code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) otherwise, and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (<code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) if failure occurs.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp493039"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+Description
+</div></td>
+    <td><a name="wp493041"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+<b class="cFunctionName">VSisinternal</b> checks the class name of the given vdata against the list <code style="font-family: Courier New; font-size: 8pt" class="cDefName">HDF_INTERNAL_VDS</code> to determine whether the vdata was previously created by the library instead of by a user application.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp493043"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+&#160;
+</div></td>
+    <td><a name="wp493045"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+The names in <code style="font-family: Courier New; font-size: 8pt" class="cDefName">HDF_INTERNAL_VDS</code> are:
+</div>
+<div style="margin-bottom: 6pt; margin-top: 0pt"><ul style="margin-bottom: 6pt; margin-top: 0pt">
+<a name="wp493101"> </a><div style="margin-bottom: 6pt; margin-top: 0pt"><code style="font-family: Courier New; font-size: 8pt" class="cDefName">DIM_VALS (&quot;DimVal0.0&quot;)</code></div>
+<a name="wp493111"> </a><div style="margin-bottom: 6pt; margin-top: 0pt"><code style="font-family: Courier New; font-size: 8pt" class="cDefName">DIM_VALS01 (&quot;DimVal0.1&quot;)</code></div>
+<a name="wp493118"> </a><div style="margin-bottom: 6pt; margin-top: 0pt"><code style="font-family: Courier New; font-size: 8pt" class="cDefName">_HDF_ATTRIBUTE (&quot;Attr0.0&quot;)</code></div>
+<a name="wp493125"> </a><div style="margin-bottom: 6pt; margin-top: 0pt"><code style="font-family: Courier New; font-size: 8pt" class="cDefName">HDF_SDSVAR (&quot;SDSVar&quot;)</code></div>
+<a name="wp493132"> </a><div style="margin-bottom: 6pt; margin-top: 0pt"><code style="font-family: Courier New; font-size: 8pt" class="cDefName">HDF_CRDVAR (&quot;CoordVar&quot;)</code></div>
+<a name="wp493139"> </a><div style="margin-bottom: 6pt; margin-top: 0pt"><code style="font-family: Courier New; font-size: 8pt" class="cDefName">_HDF_CHK_TBL_CLASS (&quot;_HDF_CHK_TBL_&quot;)</code></div>
+<a name="wp493147"> </a><div style="margin-bottom: 6pt; margin-top: 0pt"><code style="font-family: Courier New; font-size: 8pt" class="cDefName">RIGATTRCLASS(&quot;RIATTR0.0C&quot;)</code></div>
+</ul></div>
+</td>
+</tr>
+</table>
+</div>
+<p class="pBodyRelative">
+</p>
+<div align="left">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp493058table493056">
+  <caption></caption>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp493058"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+FORTRAN
+</div></td>
+    <td><a name="wp493060"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortSyntax">
+Currently unavailable
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp493062"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+&#160;
+</div></td>
+    <td><a name="wp493064"> </a><div class="pCellFortran">
+&#160;
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="pBodyRelative">
+
+</p>
 <a name="wp439118"> </a><h2 class="pRef_VS_RoutineName">
 <p align=right><A HREF="RM_Section_II_VSLOP.html">
 [VS Interface]</A><a HREF="RMTop.html"><b>[Top]</b></a>
@@ -4798,7 +4914,7 @@ Returns the total number of lone vdatas if successful and <code style="font-fami
 Description
 </div></td>
     <td><a name="wp447508"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-<b class="cFunctionName">VSlone</b> retrieves the reference numbers of lone vgroups in the file identified by the parameter <em class="cVarName">file_id</em>.  Although <b class="cFunctionName">VSlone</b> returns the number of lone vdatas in the file, only at most <em class="cVarName">max_refs</em> reference numbers are retrieved and stored in the buffer <em class="cVarName">ref_array</em>.  The array must have at least <em class="cVarName">max_refs</em> elements.
+<b class="cFunctionName">VSlone</b> retrieves the reference numbers of lone vdatas in the file identified by the parameter <em class="cVarName">file_id</em>.  Although <b class="cFunctionName">VSlone</b> returns the number of lone vdatas in the file, only at most <em class="cVarName">max_refs</em> reference numbers are retrieved and stored in the buffer <em class="cVarName">ref_array</em>.  The array must have at least <em class="cVarName">max_refs</em> elements.
 </div>
 </td>
 </tr>
@@ -5079,9 +5195,9 @@ The parameter <em class="cVarName">n_vds</em> provides the number of values that
 The parameter <em class="cVarName">start_vd</em> specifies the vdata number where the retrieval will start.
 </div>
 <div style="margin-bottom: 6pt; margin-top: 0pt"><ul style="margin-bottom: 6pt; margin-top: 0pt">
-<a name="wp490168"> </a><div style="margin-bottom: 6pt; margin-top: 0pt"><li>When <em class="cVarName">start_vd</em> is <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>, <b class="cFunctionName">VSofclass</b> will start retrieving at the beginning.</li></div>
-<a name="wp490169"> </a><div style="margin-bottom: 6pt; margin-top: 0pt"><li>When <em class="cVarName">start_vd</em> is between <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code> and the number of vdatas that meet the search criteria, <b class="cFunctionName">VSofclass</b> will start retrieving from the vdata number <em class="cVarName">start_vd</em>.</li></div>
-<a name="wp490139"> </a><div style="margin-bottom: 6pt; margin-top: 0pt"><li>When <em class="cVarName">start_vd</em> is greater than the number of vdatas that meet the search criteria, <b class="cFunctionName">VSofclass</b> will return <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code>.</li></div>
+<a name="wp490168"> </a><div style="margin-bottom: 6pt; margin-top: 0pt">When <em class="cVarName">start_vd</em> is <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>, <b class="cFunctionName">VSofclass</b> will start retrieving at the beginning.</div>
+<a name="wp490169"> </a><div style="margin-bottom: 6pt; margin-top: 0pt">When <em class="cVarName">start_vd</em> is between <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code> and the number of vdatas that meet the search criteria, <b class="cFunctionName">VSofclass</b> will start retrieving from the vdata number <em class="cVarName">start_vd</em>.</div>
+<a name="wp490139"> </a><div style="margin-bottom: 6pt; margin-top: 0pt">When <em class="cVarName">start_vd</em> is greater than the number of vdatas that meet the search criteria, <b class="cFunctionName">VSofclass</b> will return <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code>.</div>
 </ul></div>
 </td>
 </tr>
@@ -7099,7 +7215,7 @@ character*(*) databuf
     <table id="SummaryNotReq2" border="0" width="850" cellspacing="0" cellpadding="0">
       <tr>
         <td align="left">
-        HDF 4.2.6 - June 2011<br/>
+        HDF 4.2.7 - February 2012<br/>
         <a href="RM_Front.html">Copyright</a>
         <td align="right">
           <span style="font-size: 12px; font-weight: bold">

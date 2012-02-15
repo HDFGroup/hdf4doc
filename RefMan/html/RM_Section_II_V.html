@@ -7,12 +7,12 @@
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.8.2296" />
     <meta name="TEMPLATEBASE" content="Dynamic HTML" />
-    <meta name="LASTUPDATED" content="08/01/11 12:50:24" />
+    <meta name="LASTUPDATED" content="02/15/12 18:14:28" />
     <title>Vaddtagref/vfadtr</title>
     <link rel="StyleSheet" href="document.css" type="text/css" media="all" />
     <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
 <link rel="first" title="First" href="RM_Front.html" />
-<link rel="last" title="Last" href="Attributes.html" />
+<link rel="last" title="Last" href="RM_Section_II_HDFLOP.html" />
 <link rel="previous" title="Previous" href="RM_Section_II_SD.html" />
 <link rel="next" title="Next" href="RM_Section_II_VF.html" />
 
@@ -704,7 +704,7 @@ Description
 &#160;
 </div></td>
     <td><a name="wp464628"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-There are two types of attributes for vgroups; those created by Vsetattr (new style) and those created by non-<b class="cFunctionName">Vsetattr</b> approaches (old style.)  Please refer to the document <a href="Attributes.html"><span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Attributes in HDF</span></a> for details.
+There are two types of attributes for vgroups; those created by Vsetattr (new style) and those created by non-<b class="cFunctionName">Vsetattr</b> approaches (old style.)  Please refer to the Appendix A, <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Attributes in HDF</span>, for details.
 </div>
 </td>
 </tr>
@@ -1807,7 +1807,7 @@ Buffer to hold length of the attribute&#39;s data
 Purpose
 </div></td>
     <td><a name="wp463376"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Retrieves location and size of attribute&#39;s data. (H4 Mapping project specific)
+Retrieves location and size of attribute&#39;s data.
 </div>
 </td>
 </tr>
@@ -3381,7 +3381,7 @@ integer vgroup_id
 [V Interface]</A><a HREF="RMTop.html"><b>[Top]</b></a>
 </p>
 <hr />
-Vgetvgroups/vfgvgroups
+Vgetvgroups
 </h2>
 <a name="wp463835"> </a><p style="font-weight: normal" class="pSignature">
 intn Vgetvgroups(int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">id</span>, uintn <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">start_vg</span>, uintn <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">vg_count</span>, uint16 *<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">refarray</span>)
@@ -3504,9 +3504,9 @@ The retrieval starts at the vgroup number <em class="cVarName">start_vg</em> goi
 &#160;
 </div></td>
     <td><div style="margin-bottom: 6pt; margin-top: 0pt"><ul style="margin-bottom: 6pt; margin-top: 0pt">
-<a name="wp463959"> </a><div style="margin-bottom: 6pt; margin-top: 0pt"><li>When <em class="cVarName">start_vg</em> is 0, the retrieval will start at the beginning of the file or the first sub-vgroup of the specified vgroup.</li></div>
-<a name="wp463960"> </a><div style="margin-bottom: 6pt; margin-top: 0pt"><li>When <em class="cVarName">start_vg</em> is smaller than the number of user-created vgroups in the file or the specified vgroup, <b class="cFunctionName">Vgetvgroups</b> will start retrieving vgroups from the vgroup number <em class="cVarName">start_vg</em>.</li></div>
-<a name="wp463961"> </a><div style="margin-bottom: 6pt; margin-top: 0pt"><li>When <em class="cVarName">start_vg</em> is greater than the number of user-created vgroups in the file or the vgroup, <b class="cFunctionName">Vgetvgroups</b> will return <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code>.</li></div>
+<a name="wp463959"> </a><div style="margin-bottom: 6pt; margin-top: 0pt">When <em class="cVarName">start_vg</em> is 0, the retrieval will start at the beginning of the file or the first sub-vgroup of the specified vgroup.</div>
+<a name="wp463960"> </a><div style="margin-bottom: 6pt; margin-top: 0pt">When <em class="cVarName">start_vg</em> is smaller than the number of user-created vgroups in the file or the specified vgroup, <b class="cFunctionName">Vgetvgroups</b> will start retrieving vgroups from the vgroup number <em class="cVarName">start_vg</em>.</div>
+<a name="wp463961"> </a><div style="margin-bottom: 6pt; margin-top: 0pt">When <em class="cVarName">start_vg</em> is greater than the number of user-created vgroups in the file or the vgroup, <b class="cFunctionName">Vgetvgroups</b> will return <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code>.</div>
 </ul></div>
 </td>
 </tr>
@@ -3516,18 +3516,6 @@ The retrieval starts at the vgroup number <em class="cVarName">start_vg</em> goi
 </div></td>
     <td><a name="wp464065"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 The parameter <em class="cVarName">vg_count</em> specifies the number of items that the list <em class="cVarName">refarray</em> can hold.  When <em class="cVarName">id</em> is a vgroup identifier, only the immediate sub-vgroups will be retrieved; that is, the sub-vgroups will not be traversed.
-</div>
-</td>
-</tr>
-</div>
-</td>
-</tr>
-  <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp464067"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
-&#160;
-</div></td>
-    <td><a name="wp464069"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Note in the FORTRAN-77 version, if <em class="cVarName">vg_count</em> is -1 then the function will return the value of vg_count and disregard <em class="cVarName">refarray</em>; equivalent to passing <code style="font-family: Courier New; font-size: 8pt" class="cDefName">NULL</code> for <em class="cVarName">refarray</em> in the C version. 
 </div>
 </td>
 </tr>
@@ -3542,8 +3530,17 @@ Note in the FORTRAN-77 version, if <em class="cVarName">vg_count</em> is -1 then
 <a name="wp463870"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 FORTRAN
 </div></td>
-    <td><a name="wp463872"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortSyntax">
+    <td><a name="wp465788"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortSyntax">
 integer function vfgvgroups(id, start_vg, vg_count, refarray)
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp465806"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+&#160;
+</div></td>
+    <td><a name="wp465819"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortVar">
+integer id, start_vg, vg_count
 </div>
 </td>
 </tr>
@@ -3551,16 +3548,126 @@ integer function vfgvgroups(id, start_vg, vg_count, refarray)
 <a name="wp463874"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 &#160;
 </div></td>
-    <td><a name="wp463876"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" div class="pCellFortVar">
-integer id, start_vg, vg_count
+    <td><a name="wp463876"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortVar">
+integer refarray(*)
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="pBodyRelative">
+
+</p>
+<a name="wp466131"> </a><h2 class="pRef_V_RoutineName">
+<p align=right><A HREF="RM_Section_II_VLOP.html">
+[V Interface]</A><a HREF="RMTop.html"><b>[Top]</b></a>
+</p>
+<hr />
+Vgisinternal
+</h2>
+<a name="wp466132"> </a><p style="font-weight: normal" class="pSignature">
+intn Vgisinternal(int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">vgroup_id</span>)
+</p>
+<a name="wp466198"> </a><p class="pBodyRelative">
+</p>
+<div align="left">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp466135table466133">
+  <caption></caption>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp466135"> </a><div style="margin-top: 0pt" class="pCellVariable">
+vgroup_id
+</div>
+</td>
+    <td><a name="wp466137"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+IN:
+</div>
+</td>
+    <td><a name="wp466139"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Vgroup identifier returned by <b class="cFunctionName">Vattach</b>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="pBodyRelative">
+</p>
+<div align="left">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp466160table466158">
+  <caption></caption>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp466160"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+Purpose
+</div></td>
+    <td><a name="wp466162"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Determine if a vgroup was created by the library internally.
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp489378"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp466164"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+Return value
 </div></td>
-    <td><a name="wp489382"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" div class="pCellFortVar">
-integer refarray(*)
+    <td><a name="wp466166"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">TRUE</code> (<code style="font-family: Courier New; font-size: 8pt" class="cDefName">1</code>) if the inquired vgroup is one that was internally created by the library, <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FALSE</code> (<code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) otherwise, and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (<code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) if failure occurs.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp466168"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+Description
+</div></td>
+    <td><a name="wp466170"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+<b class="cFunctionName">Vgisinternal</b> checks the class name of the given vgroup against the list <code style="font-family: Courier New; font-size: 8pt" class="cDefName">HDF_INTERNAL_VGS</code> to determine whether the vgroup was previously created by the library instead of by a user application.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp466172"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+&#160;
+</div></td>
+    <td><a name="wp466174"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+The names in <code style="font-family: Courier New; font-size: 8pt" class="cDefName">HDF_INTERNAL_VGS</code> are:
+</div>
+<div style="margin-bottom: 6pt; margin-top: 0pt"><ul style="margin-bottom: 6pt; margin-top: 0pt">
+<a name="wp466175"> </a><div style="margin-bottom: 6pt; margin-top: 0pt"><code style="font-family: Courier New; font-size: 8pt" class="cDefName">_HDF_VARIABLE (&quot;Var0.0&quot;)</code></div>
+<a name="wp466176"> </a><div style="margin-bottom: 6pt; margin-top: 0pt"><code style="font-family: Courier New; font-size: 8pt" class="cDefName">_HDF_DIMENSION (&quot;Dim0.0&quot;)</code></div>
+<a name="wp466177"> </a><div style="margin-bottom: 6pt; margin-top: 0pt"><code style="font-family: Courier New; font-size: 8pt" class="cDefName">_HDF_UDIMENSION (&quot;UDim0.0&quot;)</code></div>
+<a name="wp466178"> </a><div style="margin-bottom: 6pt; margin-top: 0pt"><code style="font-family: Courier New; font-size: 8pt" class="cDefName">_HDF_CDF (&quot;CDF0.0&quot;)</code></div>
+<a name="wp466179"> </a><div style="margin-bottom: 6pt; margin-top: 0pt"><code style="font-family: Courier New; font-size: 8pt" class="cDefName">GR_NAME (&quot;RIG0.0&quot;)</code></div>
+<a name="wp466180"> </a><div style="margin-bottom: 6pt; margin-top: 0pt"><code style="font-family: Courier New; font-size: 8pt" class="cDefName">RI_NAME (&quot;RI0.0&quot;)</code></div>
+</ul></div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp466182"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+Note
+</div></td>
+    <td><a name="wp466184"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+There is one special case where an internal vgroup having a null class name and a name as <code style="font-family: Courier New; font-size: 8pt" class="cDefName">GR_NAME</code>.  This should be extremely rare, yet it is a possibility.
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="pBodyRelative">
+</p>
+<div align="left">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp466222table466185">
+  <caption></caption>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp466222"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+FORTRAN
+</div></td>
+    <td><a name="wp466224"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortSyntax">
+Currently unavailable
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp466226"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+&#160;
+</div></td>
+    <td><a name="wp466228"> </a><div class="pCellFortran">
 &#160;
 </div>
 </td>
@@ -5740,7 +5847,7 @@ integer vgroup_id
     <table id="SummaryNotReq2" border="0" width="850" cellspacing="0" cellpadding="0">
       <tr>
         <td align="left">
-        HDF 4.2.6 - June 2011<br/>
+        HDF 4.2.7 - February 2012<br/>
         <a href="RM_Front.html">Copyright</a>
         <td align="right">
           <span style="font-size: 12px; font-weight: bold">

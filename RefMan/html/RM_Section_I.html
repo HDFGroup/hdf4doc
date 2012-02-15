@@ -7,14 +7,14 @@
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.8.2296" />
     <meta name="TEMPLATEBASE" content="Dynamic HTML" />
-    <meta name="LASTUPDATED" content="08/01/11 12:50:05" />
-    <title>Section 1</title>
+    <meta name="LASTUPDATED" content="02/15/12 18:14:08" />
+    <title>Section 1	Introduction to the HDF APIs</title>
     <link rel="StyleSheet" href="document.css" type="text/css" media="all" />
     <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
 <link rel="first" title="First" href="RM_Front.html" />
-<link rel="last" title="Last" href="Attributes.html" />
-<link rel="previous" title="Previous" href="RM_Front.html" />
-<link rel="next" title="Next" href="RMTop.html" />
+<link rel="last" title="Last" href="RM_Section_II_HDFLOP.html" />
+<link rel="previous" title="Previous" href="RM_Top.html" />
+<link rel="next" title="Next" href="RM_Section_II_AN.html" />
 
     <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
     <script type="text/javascript" language="JavaScript1.2" src="scripts/seealso.js"></script>
@@ -46,21 +46,18 @@
     <hr />
 
     <blockquote>
-<a name="wp418460"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 18pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 11pt; margin-right: 410pt; margin-top: 18pt; text-align: center; text-decoration: none; text-indent: -11pt; text-transform: none">
-Section 1
-</div>
-<a name="wp418463"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 24pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 108pt; margin-right: 0pt; margin-top: 24pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Introduction to the HDF APIs
+<a name="wp442234"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 24pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 86pt; margin-right: 0pt; margin-top: 44pt; text-align: left; text-decoration: none; text-indent: -72pt; text-transform: none">
+Section 1	Introduction to the HDF APIs
 </div>
 <a name="wp418644"> </a><h2 class="pHeading1">
 	1.1	Overview of the HDF Interfaces
 </h2>
 <a name="wp432612"> </a><p style="color: #000000; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; margin-right: 0pt; text-align: left; text-decoration: none; text-transform: none" class="pBody">
-The HDF library structure consists of two interface layers and one application layer built upon a physical file format. <a href="RM_Section_I.html#wp432767">(See Figure 1a.)</a> The first layer, or the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">low-level interface</span>, is generally reserved for software developers because it provides support for low-level details such as file I/O, error handling, and memory management. The second layer, containing the single and multifile <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">application interfaces</span>, consists of a set of interfaces designed to simplify the process of storing and accessing data. The single-file interfaces operate on one file at a time, whereas the multifile interfaces can operate on several files simultaneously. The highest HDF layer includes various NCSA and commercial applications and a collection of command-line utilities that operate on HDF files or the data objects they contain.
+The HDF library structure consists of two interface layers and one application layer built upon a physical file format. <a href="RM_Section_I.html#wp432767">(See Figure 1a.)</a> The first layer, or the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">low-level interface</span>, is generally reserved for software developers because it provides support for low-level details such as file I/O, error handling, and memory management. The second layer, containing the single and multi-file <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">application interfaces</span>, consists of a set of interfaces designed to simplify the process of storing and accessing data. The single-file interfaces operate on one file at a time, whereas the multi-file interfaces can operate on several files simultaneously. The highest HDF layer includes various NCSA and commercial applications and a collection of command-line utilities that operate on HDF files or the data objects they contain.
 </p>
 <a name="wp432767"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
 FIGURE 1a	<em style="font-style: italic; font-weight: normal">Three Levels of Interaction with the HDF File</em></div>
-<div align="center"><img src="images/hdf4_RM-02-1-1.jpg" height="253" width="516" id="wp432618" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
+<div align="center"><img src="images/hdf4_RM-04-1-1.jpg" height="253" width="516" id="wp432618" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
 
 </div>
 <a name="wp432768"> </a><h2 class="pHeading2">
@@ -72,47 +69,47 @@ This is the layer of HDF reserved for software developers and provides routines 
 <a name="wp436110"> </a><p style="color: #000000; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; margin-right: 0pt; text-align: left; text-decoration: none; text-transform: none" class="pBody">
 The low-level interface provides a collection of routines that are prefaced with either &#39;H&#39;, &#39;HE&#39;, or &#39;HX&#39;.  The H routines are for managing HDF files.  The HE routines provide error handlings.  The HX routines are for managing HDF external files.
 </p>
-<a name="wp432862"> </a><p style="color: #000000; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; margin-right: 0pt; text-align: left; text-decoration: none; text-transform: none" class="pBody">
+<a name="wp442144"> </a><p style="color: #000000; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; margin-right: 0pt; text-align: left; text-decoration: none; text-transform: none" class="pBody">
 Prior to HDF version 3.2, all low-level routines began with the prefix &#39;DF&#39;. As of HDF version 3.3, the DF interface was no longer recommended for use. It is only supported to maintain backward compatibility with programs and files created under earlier versions of the HDF library.
 </p>
-<a name="wp418339"> </a><h2 class="pHeading2">
-	1.3	Multifile Application Interfaces
+<a name="wp442145"> </a><h2 class="pHeading2">
+	1.3	Multi-file Application Interfaces
 </h2>
-<a name="wp418340"> </a><p style="color: #000000; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; margin-right: 0pt; text-align: left; text-decoration: none; text-transform: none" class="pBody">
-The HDF multifile interfaces are designed to allow operations on more than one file and more than one data object at the same time. The multifile interfaces provided are AN, GR, SD, VS, VSQ, VF, V, and VH. The AN interface is the multifile version of the DFAN annotation interface.  The GR interface is the multifile version of the 8- and 24-bit raster image interfaces. The SD interface is the multifile version of the scientific data set interface. The VS, VSQ, and VF interfaces support the vdata model. The V and VH interfaces provide support for the vgroup data model.
+<a name="wp442146"> </a><p style="color: #000000; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; margin-right: 0pt; text-align: left; text-decoration: none; text-transform: none" class="pBody">
+The HDF multi-file interfaces are designed to allow operations on more than one file and more than one data object at the same time. The multi-file interfaces provided are AN, GR, SD, VS, VSQ, VF, V, and VH. The AN interface is the multi-file version of the DFAN annotation interface.  The GR interface is the multi-file version of the 8- and 24-bit raster image interfaces. The SD interface is the multi-file version of the scientific data set interface. The VS, VSQ, and VF interfaces support the vdata model. The V and VH interfaces provide support for the vgroup data model.
 </p>
 <a name="wp418341"> </a><p style="color: #000000; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; margin-right: 0pt; text-align: left; text-decoration: none; text-transform: none" class="pBody">
-Like the single-file interfaces, the multifile interfaces are built upon the low-level H routines. Unlike single-file operations, operations performed via a multifile interface are not implicitly preceded by <b class="cFunctionName">Hopen</b> and followed by <b class="cFunctionName">Hclose</b>. Instead, each series of operations on a file must be preceded by an explicit call to open and close the file. Once the file is opened, it remains open until an explicit call is made to close it. This process allows operations on more than one file at a time.
+Like the single-file interfaces, the multi-file interfaces are built upon the low-level H routines. Unlike single-file operations, operations performed via a multi-file interface are not implicitly preceded by <b class="cFunctionName">Hopen</b> and followed by <b class="cFunctionName">Hclose</b>. Instead, each series of operations on a file must be preceded by an explicit call to open and close the file. Once the file is opened, it remains open until an explicit call is made to close it. This process allows operations on more than one file at a time.
 </p>
 <a name="wp418342"> </a><h3 class="pHeading3">
 	1.3.1	Scientific Data Sets: SD Interface
 </h3>
 <a name="wp418343"> </a><p style="color: #000000; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; margin-right: 0pt; text-align: left; text-decoration: none; text-transform: none" class="pBody">
-The scientific data set interface provides a collection of routines for reading and writing arrays of data. Multidimensional arrays accompanied by a record of their dimension and number type are called scientific data sets. Under the multifile interface, scientific data sets may include predefined or user-defined attribute records. Each attribute record is optional and can be used to note or describe about the data being stored in scientific data sets.
+The scientific data set interface provides a collection of routines for reading and writing arrays of data. Multidimensional arrays accompanied by a record of their dimension and number type are called scientific data sets. Under the multi-file interface, scientific data sets may include predefined or user-defined attribute records. Each attribute record is optional and can be used to note or describe about the data being stored in scientific data sets.
 </p>
 <a name="wp441281"> </a><p style="color: #000000; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; margin-right: 0pt; text-align: left; text-decoration: none; text-transform: none" class="pBody">
 The SD interface is designed to be as compatible as possible with netCDF, an interface developed by the Unidata Program Center and used to store and manipulate scientific data sets. Consequently, the SD interface can read files written by the netCDF interface, and the netCDF interface version 2.3.2 (as implemented in HDF) can read both netCDF files and HDF files that contain scientific data sets.
 </p>
 <a name="wp441248"> </a><p style="color: #000000; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; margin-right: 0pt; text-align: left; text-decoration: none; text-transform: none" class="pBody">
-Further information regarding the netCDF interface routines and their equivalents in the HDF netCDF interface can be found  in the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span>, <a href="../../UsrGuide/html/UG_SD.html#wp47784">Section 3.15, &quot;netCDF.&quot;</a> Additional information on the netCDF interface can be found in the netCDF User&#39;s Guide available at <a href="http://www.unidata.ucar.edu/software/netcdf/docs/"><span class="cWebJump">http://www.unidata.ucar.edu/software/netcdf/docs/</span></a>.
+Further information regarding the netCDF interface routines and their equivalents in the HDF netCDF interface can be found  in the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span>, Section 3.14, &quot;netCDF.&quot; Additional information on the netCDF interface can be found in the netCDF User&#39;s Guide available at <a href="http://www.unidata.ucar.edu/software/netcdf/docs/"><span class="cWebJump">http://www.unidata.ucar.edu/software/netcdf/docs/</span></a>.
 </p>
 <a name="wp441271"> </a><p style="color: #000000; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; margin-right: 0pt; text-align: left; text-decoration: none; text-transform: none" class="pBody">
-The names of the routines in the multifile scientific data set interface are prefaced by &#39;SD&#39;. The equivalent FORTRAN-77 routine names are prefaced by &#39;sf&#39;.
+The names of the routines in the multi-file scientific data set interface are prefaced by &#39;SD&#39;. The equivalent FORTRAN-77 routine names are prefaced by &#39;sf&#39;.
 </p>
 <a name="wp432956"> </a><h3 class="pHeading3">
 	1.3.2	Annotations: AN Interface
 </h3>
 <a name="wp432957"> </a><p style="color: #000000; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; margin-right: 0pt; text-align: left; text-decoration: none; text-transform: none" class="pBody">
-The purpose of the AN multifile annotation interface is to permit concurrent operations on a set of annotations that exist in more than one file. Annotations consist of labels and descriptions.
+The purpose of the AN multi-file annotation interface is to permit concurrent operations on a set of annotations that exist in more than one file. Annotations consist of labels and descriptions.
 </p>
 <a name="wp423391"> </a><p style="color: #000000; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; margin-right: 0pt; text-align: left; text-decoration: none; text-transform: none" class="pBody">
-The C routine names of the multifile annotation interface are prefaced by the string &#39;AN&#39; and the FORTRAN-77 routine names are prefaced by &#39;af&#39;.
+The C routine names of the multi-file annotation interface are prefaced by the string &#39;AN&#39; and the FORTRAN-77 routine names are prefaced by &#39;af&#39;.
 </p>
 <a name="wp423140"> </a><h3 class="pHeading3">
 	1.3.3	General Raster Images: GR Interface
 </h3>
 <a name="wp423138"> </a><p style="color: #000000; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; margin-right: 0pt; text-align: left; text-decoration: none; text-transform: none" class="pBody">
-The routines in the GR interface provide multifile operations on general raster  image data sets. 
+The routines in the GR interface provide multi-file operations on general raster  image data sets. 
 </p>
 <a name="wp432166"> </a><p style="color: #000000; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; margin-right: 0pt; text-align: left; text-decoration: none; text-transform: none" class="pBody">
 The C routine names in the general raster interface have the prefix &#39;GR&#39; and the equivalent FORTRAN-77 routine names are prefaced by &#39;mg&#39;. 
@@ -124,21 +121,21 @@ The C routine names in the general raster interface have the prefix &#39;GR&#39;
 The VS interface provides a collection of routines for reading and writing customized tables. Each table is comprised of a series of records whose values are stored in fixed length fields. In addition to its records, a vdata may contain four kinds of identifying information: a name, class, data type and a number of field names.
 </p>
 <a name="wp418359"> </a><p style="color: #000000; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; margin-right: 0pt; text-align: left; text-decoration: none; text-transform: none" class="pBody">
-Routines in the VS interface are prefaced by &#39;VS&#39;. The equivalent FORTRAN-77 routine names are prefaced by &#39;vsf&#39;. 
+Routines in the VS interface are prefaced by &#39;VS&#39;. The equivalent FORTRAN-77 routine names are prefaced by &#39;vsf&#39;.
 </p>
 <a name="wp418367"> </a><h3 class="pHeading3">
 	1.3.5	Vdata Query: VSQ Interface
 </h3>
 <a name="wp418368"> </a><p style="color: #000000; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; margin-right: 0pt; text-align: left; text-decoration: none; text-transform: none" class="pBody">
-The VSQ interface provides a collection of routines for inquiring about existing vdata. These routines provide information such as the number of records in a vdata, its field names, number types, and name. All routines in the VSQ interface are prefaced by &#39;VSQ&#39;. The equivalent FORTRAN-77 routine names are prefaced by &#39;vsq&#39;. 
+The VSQ interface provides a collection of routines for inquiring about existing vdata. These routines provide information such as the number of records in a vdata, its field names, number types, and name. All routines in the VSQ interface are prefaced by &#39;VSQ&#39;. The equivalent FORTRAN-77 routine names are prefaced by &#39;vsq&#39;.
 </p>
 <a name="wp418372"> </a><h3 class="pHeading3">
 	1.3.6	Vdata Fields: VF Interface
 </h3>
-<a name="wp418373"> </a><p style="color: #000000; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; margin-right: 0pt; text-align: left; text-decoration: none; text-transform: none" class="pBody">
+<a name="wp442003"> </a><p style="color: #000000; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; margin-right: 0pt; text-align: left; text-decoration: none; text-transform: none" class="pBody">
 The VF interface provides a collection of routines for inquiring about the fields in an existing vdata. These routines provide information such as the field name, size, order, and number type.
 </p>
-<a name="wp423423"> </a><p style="color: #000000; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; margin-right: 0pt; text-align: left; text-decoration: none; text-transform: none" class="pBody">
+<a name="wp442004"> </a><p style="color: #000000; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; margin-right: 0pt; text-align: left; text-decoration: none; text-transform: none" class="pBody">
 All routines in the VF interface are prefaced by &#39;VF&#39;. There are no equivalent FORTRAN-77 functions.
 </p>
 <a name="wp418377"> </a><h3 class="pHeading3">
@@ -166,7 +163,7 @@ The high-level VQ interface provides one routine that returns tag information fr
 	1.4	Single-File Application Interfaces
 </h2>
 <a name="wp432876"> </a><p style="color: #000000; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; margin-right: 0pt; text-align: left; text-decoration: none; text-transform: none" class="pBody">
-The HDF single-file application interfaces include several independent modules each is designed to simplify the process of storing and accessing a specific type of data. These interfaces support the 8-bit raster image(DFR8), 24-bit raster image (DF24), palette (DFP), scientific data (DFSD), and annotation (DFAN) models. All single-file interfaces are built upon the H routines - unless otherwise specified, all the low-level details can be ignored.
+The HDF single-file application interfaces include several independent modules each is designed to simplify the process of storing and accessing a specific type of data. These interfaces support the 8-bit raster image(DFR8), 24-bit raster image (DF24), palette (DFP), scientific data (DFSD), and annotation (DFAN) models. All single-file interfaces are built upon the H routines - unless otherwise specified, all the low-level details can be ignored.  Note that, as of version 4.2.6, these single-file interfaces were documented as deprecated interfaces, except DFP, the single-file pallete interface.
 </p>
 <a name="wp433025"> </a><h3 class="pHeading3">
 	1.4.1	24-bit Raster Image Sets: DF24 Interface
@@ -199,7 +196,7 @@ The names of the routines in the palette interface are prefaced by &#39;DFP&#39;
 	1.4.4	Scientific Data Sets: DFSD Interface
 </h3>
 <a name="wp432887"> </a><p style="color: #000000; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; margin-right: 0pt; text-align: left; text-decoration: none; text-transform: none" class="pBody">
-There are two HDF interfaces that support multidimensional arrays: the single-file DFSD interface described here, which permits access to only one file at a time, and the newer multifile SD interface, which permits simultaneous access to more than one file.  The existence of the single-file scientific data set interface is simply to support backward compatibility for previously created files and applications.  It is recommended that the multifile scientific data set interface is to be used where possible.
+There are two HDF interfaces that support multidimensional arrays: the single-file DFSD interface described here, which permits access to only one file at a time, and the newer multi-file SD interface, which permits simultaneous access to more than one file.  The existence of the single-file scientific data set interface is simply to support backward compatibility for previously created files and applications.  It is recommended that the multi-file scientific data set interface is to be used where possible.
 </p>
 <a name="wp432888"> </a><p style="color: #000000; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; margin-right: 0pt; text-align: left; text-decoration: none; text-transform: none" class="pBody">
 The single-file scientific data set interface provides a collection of routines for reading and writing arrays of data. A scientific data set is comprised of a scientific data array and its accompanied rank, name and number type. Scientific data sets may also include predefined attribute records.
@@ -230,7 +227,7 @@ Nearly all of the HDF library code is written in C. The Fortran HDF API routines
 </p>
 <a name="wp432258"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
 FIGURE 1b	<em style="font-style: italic; font-weight: normal">Use of a Function Call Converter to Route FORTRAN-77 HDF Calls to the C Library</em></div>
-<div align="center"><img src="images/hdf4_RM-02-1-2.jpg" height="126" width="519" id="wp432200" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
+<div align="center"><img src="images/hdf4_RM-04-1-2.jpg" height="126" width="519" id="wp432200" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
 
 </div>
 <a name="wp432259"> </a><h3 class="pHeading3">
@@ -260,278 +257,278 @@ When mixing machines, compilers, and languages, it is difficult to maintain cons
 <a name="wp432530"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
 TABLE 1A	<em style="font-style: italic; font-weight: normal">Number Type Definitions</em></div>
 <div align="left">
-<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp433103table432373">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp441701table432373">
   <caption></caption>
-  <tr align="left" valign="top">    <td colspan="1" rowspan="2"><a name="wp433103"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr align="left" valign="top">    <td colspan="1" rowspan="2"><a name="wp441701"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Definition Name
 </div>
 </td>
-    <td colspan="1" rowspan="2"><a name="wp433105"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="1" rowspan="2"><a name="wp441703"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Definition Value
 </div>
 </td>
-    <td colspan="1" rowspan="2"><a name="wp433107"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="1" rowspan="2"><a name="wp441705"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Description
 </div>
 </td>
 </tr>
   <tr align="left" valign="top"></tr>
-  <tr align="left" valign="top">    <td><a name="wp433115"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+  <tr align="left" valign="top">    <td><a name="wp441713"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 DFNT_CHAR8
 </div>
 </td>
-    <td><a name="wp433117"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+    <td><a name="wp441715"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 4
 </div>
 </td>
-    <td><a name="wp433119"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp441717"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 8-bit character type
 </div>
 </td>
 </tr>
-  <tr align="left" valign="top">    <td><a name="wp433121"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+  <tr align="left" valign="top">    <td><a name="wp441719"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 DFNT_CHAR
 </div>
 </td>
-    <td><a name="wp433123"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+    <td><a name="wp441721"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 4
 </div>
 </td>
-    <td><a name="wp433125"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp441723"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 Same as DFNT_CHAR8
 </div>
 </td>
 </tr>
-  <tr align="left" valign="top">    <td><a name="wp433127"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+  <tr align="left" valign="top">    <td><a name="wp441725"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 DFNT_UCHAR8
 </div>
 </td>
-    <td><a name="wp433129"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+    <td><a name="wp441727"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 3
 </div>
 </td>
-    <td><a name="wp433131"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp441729"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 8-bit unsigned character type
 </div>
 </td>
 </tr>
-  <tr align="left" valign="top">    <td><a name="wp433133"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+  <tr align="left" valign="top">    <td><a name="wp441731"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 DFNT_UCHAR
 </div>
 </td>
-    <td><a name="wp433135"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+    <td><a name="wp441733"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 3
 </div>
 </td>
-    <td><a name="wp433137"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp441735"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 Same as DFNT_UCHAR8
 </div>
 </td>
 </tr>
-  <tr align="left" valign="top">    <td><a name="wp433139"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+  <tr align="left" valign="top">    <td><a name="wp441737"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 DFNT_INT8
 </div>
 </td>
-    <td><a name="wp433141"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+    <td><a name="wp441739"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 20
 </div>
 </td>
-    <td><a name="wp433143"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp441741"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 8-bit integer type
 </div>
 </td>
 </tr>
-  <tr align="left" valign="top">    <td><a name="wp433145"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+  <tr align="left" valign="top">    <td><a name="wp441743"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 DFNT_UINT8
 </div>
 </td>
-    <td><a name="wp433147"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+    <td><a name="wp441745"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 21
 </div>
 </td>
-    <td><a name="wp433149"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp441747"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 8-bit unsigned integer type
 </div>
 </td>
 </tr>
-  <tr align="left" valign="top">    <td><a name="wp433151"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+  <tr align="left" valign="top">    <td><a name="wp441749"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 DFNT_INT16
 </div>
 </td>
-    <td><a name="wp433153"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+    <td><a name="wp441751"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 22
 </div>
 </td>
-    <td><a name="wp433155"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp441753"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 16-bit integer type
 </div>
 </td>
 </tr>
-  <tr align="left" valign="top">    <td><a name="wp433157"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+  <tr align="left" valign="top">    <td><a name="wp441755"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 DFNT_UINT16
 </div>
 </td>
-    <td><a name="wp433159"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+    <td><a name="wp441757"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 23
 </div>
 </td>
-    <td><a name="wp433161"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp441759"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 16-bit unsigned integer type
 </div>
 </td>
 </tr>
-  <tr align="left" valign="top">    <td><a name="wp433163"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+  <tr align="left" valign="top">    <td><a name="wp441761"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 DFNT_INT32
 </div>
 </td>
-    <td><a name="wp433165"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+    <td><a name="wp441763"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 24
 </div>
 </td>
-    <td><a name="wp433167"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp441765"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 32-bit integer type
 </div>
 </td>
 </tr>
-  <tr align="left" valign="top">    <td><a name="wp433169"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+  <tr align="left" valign="top">    <td><a name="wp441767"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 DFNT_UINT32
 </div>
 </td>
-    <td><a name="wp433171"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+    <td><a name="wp441769"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 25
 </div>
 </td>
-    <td><a name="wp433173"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp441771"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 32-bit unsigned integer type
 </div>
 </td>
 </tr>
-  <tr align="left" valign="top">    <td><a name="wp433187"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+  <tr align="left" valign="top">    <td><a name="wp441773"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 DFNT_FLOAT32
 </div>
 </td>
-    <td><a name="wp433189"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+    <td><a name="wp441775"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 5
 </div>
 </td>
-    <td><a name="wp433191"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp441777"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 32-bit floating-point type
 </div>
 </td>
 </tr>
-  <tr align="left" valign="top">    <td><a name="wp433193"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+  <tr align="left" valign="top">    <td><a name="wp441779"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 DFNT_FLOAT64
 </div>
 </td>
-    <td><a name="wp433195"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+    <td><a name="wp441781"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 6
 </div>
 </td>
-    <td><a name="wp433197"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp441783"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 64-bit floating-point type
 </div>
 </td>
 </tr>
-  <tr align="left" valign="top">    <td><a name="wp433199"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+  <tr align="left" valign="top">    <td><a name="wp441785"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 DFNT_NINT8
 </div>
 </td>
-    <td><a name="wp433201"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+    <td><a name="wp441787"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 (DFNT_NATIVE | DFNT_INT8)
 </div>
 </td>
-    <td><a name="wp433203"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp441789"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 8-bit native integer type
 </div>
 </td>
 </tr>
-  <tr align="left" valign="top">    <td><a name="wp433205"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+  <tr align="left" valign="top">    <td><a name="wp441791"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 DFNT_NUINT8
 </div>
 </td>
-    <td><a name="wp433207"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+    <td><a name="wp441793"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 (DFNT_NATIVE | DFNT_UINT8)
 </div>
 </td>
-    <td><a name="wp433209"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp441795"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 8-bit native unsigned integer type
 </div>
 </td>
 </tr>
-  <tr align="left" valign="top">    <td><a name="wp433211"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+  <tr align="left" valign="top">    <td><a name="wp441797"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 DFNT_NINT16
 </div>
 </td>
-    <td><a name="wp433213"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+    <td><a name="wp441799"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 (DFNT_NATIVE | DFNT_INT16)
 </div>
 </td>
-    <td><a name="wp433215"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp441801"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 16-bit native integer type
 </div>
 </td>
 </tr>
-  <tr align="left" valign="top">    <td><a name="wp433217"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+  <tr align="left" valign="top">    <td><a name="wp441803"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 DFNT_NUINT16
 </div>
 </td>
-    <td><a name="wp433219"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+    <td><a name="wp441805"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 (DFNT_NATIVE | DFNT_UINT16)
 </div>
 </td>
-    <td><a name="wp433221"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp441807"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 16-bit native unsigned integer type
 </div>
 </td>
 </tr>
-  <tr align="left" valign="top">    <td><a name="wp433223"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+  <tr align="left" valign="top">    <td><a name="wp441809"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 DFNT_NINT32
 </div>
 </td>
-    <td><a name="wp433225"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+    <td><a name="wp441811"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 (DFNT_NATIVE | DFNT_INT32)
 </div>
 </td>
-    <td><a name="wp433227"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp441813"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 32-bit native integer type
 </div>
 </td>
 </tr>
-  <tr align="left" valign="top">    <td><a name="wp433229"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+  <tr align="left" valign="top">    <td><a name="wp441815"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 DFNT_NUINT32
 </div>
 </td>
-    <td><a name="wp433231"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+    <td><a name="wp441817"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 (DFNT_NATIVE | DFNT_UINT32)
 </div>
 </td>
-    <td><a name="wp433233"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp441819"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 32-bit native unsigned integer type
 </div>
 </td>
 </tr>
-  <tr align="left" valign="top">    <td><a name="wp433247"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+  <tr align="left" valign="top">    <td><a name="wp441821"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 DFNT_NFLOAT32
 </div>
 </td>
-    <td><a name="wp433249"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+    <td><a name="wp441823"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 (DFNT_NATIVE | DFNT_FLOAT32)
 </div>
 </td>
-    <td><a name="wp433251"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp441825"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 32-bit native floating-point type
 </div>
 </td>
 </tr>
-  <tr align="left" valign="top">    <td><a name="wp433253"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+  <tr align="left" valign="top">    <td><a name="wp441827"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 DFNT_NFLOAT64
 </div>
 </td>
-    <td><a name="wp433255"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
+    <td><a name="wp441829"> </a><div style="color: #000000; font-family: Courier New; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-top: 0pt; text-decoration: none; text-transform: none" class="pTableElement">
 (DFNT_NATIVE | DFNT_FLOAT64)
 </div>
 </td>
-    <td><a name="wp433257"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp441831"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 64-bit native floating-point type
 </div>
 </td>
@@ -1744,7 +1741,7 @@ Failed when finding a bit in a bit vector.
     <table id="SummaryNotReq2" border="0" width="850" cellspacing="0" cellpadding="0">
       <tr>
         <td align="left">
-        HDF 4.2.6 - June 2011<br/>
+        HDF 4.2.7 - February 2012<br/>
         <a href="RM_Front.html">Copyright</a>
         <td align="right">
           <span style="font-size: 12px; font-weight: bold">
