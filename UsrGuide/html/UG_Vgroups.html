@@ -7,11 +7,11 @@
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.8.2296" />
     <meta name="TEMPLATEBASE" content="HDF4 Version 1.0" />
-    <meta name="LASTUPDATED" content="02/23/12 05:01:09" />
+    <meta name="LASTUPDATED" content="03/06/12 09:59:38" />
     <title>Chapter 5	Vgroups (V API)</title>
     <link rel="StyleSheet" href="document.css" type="text/css" media="all" />
     <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
-<link rel="first" title="First" href="UG_Intro.html" />
+<link rel="first" title="First" href="UG_htmlLOF.html" />
 <link rel="last" title="Last" href="UG_Top.html" />
 <link rel="previous" title="Previous" href="UG_Vdatas.html" />
 <link rel="next" title="Next" href="UG_RIS8s.html" />
@@ -67,8 +67,8 @@ This chapter describes the vgroup data model and the Vgroup interface (also call
 A <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">vgroup</span> is a structure designed to associate related data objects. The general structure of a vgroup is similar to that of the UNIX file system in that the vgroup may contain references to other vgroups or HDF data objects just as the UNIX directory may contain subdirectories or files (see <a href="UG_Vgroups.html#wp2618">Figure 5a</a>). In previous versions of HDF, the data objects in a vgroup were limited to vdatas and vgroups. The data objects that belong to a vgroup are often referred to as the vgroup&#39;s <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">members</span>.
 </p>
 <a name="wp2618"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
-FIGURE 5a	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Similarity of the HDF Vgroup Structure and the UNIX File System</span></div>
-<div align="left"><img src="images/hdf4_05-UG_Vgroups-1-1.jpg" height="230" width="519" id="wp2525" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
+FIGURE 5a	Similarity of the HDF Vgroup Structure and the UNIX File System</div>
+<div align="left"><img src="images/hdf4_09-UG_Vgroups-1-1.jpg" height="230" width="519" id="wp2525" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
 
 </div>
 <a name="wp2619"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
@@ -93,16 +93,16 @@ The specific use of the vgroup name and class name is solely determined by HDF u
 There are many ways to organize vgroups through the use of the Vgroup interface. Vgroups may contain any number of vgroups and data objects, including data objects and vgroups that are members of other vgroups. Therefore, a data object may have more than one parent vgroup. For example, Data object A and Vgroup B, shown in <a href="UG_Vgroups.html#wp2857"><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Figure 5b</span></a>, are members of multiple vgroups with different organizational structures. 
 </p>
 <a name="wp2857"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
-FIGURE 5b	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Sharing Data Objects among Vgroups</span></div>
-<div align="left"><img src="images/hdf4_05-UG_Vgroups-1-2.jpg" height="187" width="521" id="wp294" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
+FIGURE 5b	Sharing Data Objects among Vgroups</div>
+<div align="left"><img src="images/hdf4_09-UG_Vgroups-1-2.jpg" height="187" width="521" id="wp294" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
 
 </div>
 <a name="wp57318"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 A vgroup can contain any combination of data objects. <a href="UG_Vgroups.html#wp46256"><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Figure 5c</span></a> illustrates a vgroup that contains two raster images and a vdata.
 </p>
 <a name="wp46256"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
-FIGURE 5c	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">A Vgroup Containing Two 8-Bit Raster Images, or RIS8 Objects, and a Vdata</span></div>
-<div align="left"><img src="images/hdf4_05-UG_Vgroups-1-3.jpg" height="176" width="520" id="wp46200" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
+FIGURE 5c	A Vgroup Containing Two 8-Bit Raster Images, or RIS8 Objects, and a Vdata</div>
+<div align="left"><img src="images/hdf4_09-UG_Vgroups-1-3.jpg" height="176" width="520" id="wp46200" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
 
 </div>
 <a name="wp46193"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
@@ -121,8 +121,8 @@ Each 2-dimensional coordinate in the list of coordinate data defines the relativ
 For example, consider a heated mesh of 400 triangles formed by connecting 1000 nodes. A vgroup describing this mesh might contain the coordinates of the vertices, the temperature value of the vertices, and a connectivity list describing the edges of the triangles. 
 </p>
 <a name="wp4083"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
-FIGURE 5d	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Vgroup Structure Describing a Heated Mesh</span></div>
-<div align="left"><img src="images/hdf4_05-UG_Vgroups-1-4.jpg" height="252" width="521" id="wp15398" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
+FIGURE 5d	Vgroup Structure Describing a Heated Mesh</div>
+<div align="left"><img src="images/hdf4_09-UG_Vgroups-1-4.jpg" height="252" width="521" id="wp15398" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
 
 </div>
 <a name="wp5575"> </a><h2 style="font-family: Times New Roman; font-size: 14pt; margin-top: 14pt" class="pHeading2">
@@ -150,7 +150,7 @@ Vgroup interface routine names are prefaced by &quot;V&quot; in C and by &quot;v
 The Vgroup interface routines are listed in <a href="UG_Vgroups.html#wp92920">Table 5A</a> below and described in the following sections.
 </p>
 <a name="wp92920"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 5A	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Vgroup Interface Routines</span></div>
+TABLE 5A	Vgroup Interface Routines</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp92527table92525">
   <caption></caption>
@@ -786,7 +786,7 @@ Successfully terminating access to a vgroup requires one<b class="cFunctionName"
 The parameters of <b class="cFunctionName">Vdetach</b> and <b class="cFunctionName">Vend</b> are also defined in <a href="UG_Vgroups.html#wp3060"><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Table 5B</span></a>.
 </p>
 <a name="wp3060"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 5B	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Vstart, Vattach, Vdetach, and Vend Parameter Lists</span></div>
+TABLE 5B	Vstart, Vattach, Vdetach, and Vend Parameter Lists</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp9382table739">
   <caption></caption>
@@ -1103,7 +1103,7 @@ vgroup_name, vgroup_class)
 The parameters of <b class="cFunctionName">VHmakegroup</b> are further defined in <a href="UG_Vgroups.html#wp24056">Table 5F</a>.
 </p>
 <a name="wp93397"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 5C	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Vsetname, Vsetclass, Vaddtagref, Vinsert, and VHmakegroup Parameter Lists</span></div>
+TABLE 5C	Vsetname, Vsetclass, Vaddtagref, Vinsert, and VHmakegroup Parameter Lists</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp93278table93276">
   <caption></caption>
@@ -1580,7 +1580,7 @@ This example illustrates the use of <b class="cFunctionName">Vaddtagref/vfadtr</
 </p>
 <a name="wp56583"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 In this example, the program first creates the HDF file &quot;General_Vgroups.hdf&quot;, then an SDS in the SD interface, and a vgroup in the Vgroup interface.  The SDS is named &quot;Test SD&quot; and is a one-dimensional array of type int32 of 10 elements.  The vgroup is named &quot;SD Vgroup&quot; and is of class &quot;Common Vgroups&quot;.  The program then adds the SDS to the vgroup using <b class="cFunctionName">Vaddtagref/vfadtr</b>.  Notice that, when the operations are complete, the program explicitly terminates access to the SDS, the vgroup, the SD interface, and the Vgroup interface before closing the HDF file.  Refer to <a href="UG_SD.html">Chapter 3, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Scientific Data Sets (SD API)</span></a> for the discussion of the SD routines used in this example.  <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"></span></p>
-<div align="left"><img src="images/hdf4_05-UG_Vgroups-1-5.jpg" height="170" width="521" id="wp56625" border="0" hspace="0" vspace="0"/></div><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
+<div align="left"><img src="images/hdf4_09-UG_Vgroups-1-5.jpg" height="170" width="521" id="wp56625" border="0" hspace="0" vspace="0"/></div><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"></span>
 </p>
 <a name="wp56605"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 2pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 108pt; text-transform: none">
@@ -2233,7 +2233,7 @@ There is one special case where an internal vgroup having a null class name and 
 <b class="cFunctionName">Vgisinternal</b> returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">TRUE</code> (<code style="font-family: Courier New; font-size: 8pt" class="cDefName">1</code>) if the inquired vgroup is one that was internally created by the library, <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FALSE</code> (<code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) otherwise, and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (<code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) if failure occurs.  The parameters of this routine are further defined in <a href="UG_Vgroups.html#wp109706">Table 5D on page 234</a>.
 </p>
 <a name="wp109706"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 5D	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Vlone, Vgetid, Vgetvgroups, and Vgisinternal Parameter Lists</span></div>
+TABLE 5D	Vlone, Vgetid, Vgetvgroups, and Vgisinternal Parameter Lists</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp111517table109587">
   <caption></caption>
@@ -2544,7 +2544,7 @@ Starting from release 4.2.5, the maximum length of vgroup&#39;s class name is no
 <b class="cFunctionName">Vgetclassnamelen</b> returns either <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). The parameters of this routine are further defined in <a href="UG_Vgroups.html#wp22645">Table 5E on page 235</a>.
 </p>
 <a name="wp22645"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 5E	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Vgetname, Vgetnamelen, Vgetclass, and Vgetclassnamelen Parameter Lists</span></div>
+TABLE 5E	Vgetname, Vgetnamelen, Vgetclass, and Vgetclassnamelen Parameter Lists</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp93124table22480">
   <caption></caption>
@@ -2794,7 +2794,7 @@ The parameters of <b class="cFunctionName">Vfind</b> are further defined in <a h
 The parameters of <b class="cFunctionName">Vfindclass</b> are further defined in <a href="UG_Vgroups.html#wp24056">Table 5F</a>.
 </p>
 <a name="wp24056"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 5F	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Vfind and Vfindclass Parameter Lists</span></div>
+TABLE 5F	Vfind and Vfindclass Parameter Lists</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp24013table24011">
   <caption></caption>
@@ -3172,7 +3172,7 @@ size);
 <b class="cFunctionName">Vgettagrefs</b> returns the number of tag/reference number pairs or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). The parameters of this routine are further defined in <a href="UG_Vgroups.html#wp21839">Table 5G</a>.
 </p>
 <a name="wp21839"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 5G	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Vntagrefs, Vgettagref, and Vgettagrefs Parameter Lists</span></div>
+TABLE 5G	Vntagrefs, Vgettagref, and Vgettagrefs Parameter Lists</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp21646table21644">
   <caption></caption>

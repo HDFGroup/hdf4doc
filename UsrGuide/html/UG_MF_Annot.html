@@ -7,11 +7,11 @@
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.8.2296" />
     <meta name="TEMPLATEBASE" content="HDF4 Version 1.0" />
-    <meta name="LASTUPDATED" content="02/23/12 05:01:40" />
+    <meta name="LASTUPDATED" content="03/06/12 10:00:09" />
     <title>Chapter 10	Annotations (AN API)</title>
     <link rel="StyleSheet" href="document.css" type="text/css" media="all" />
     <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
-<link rel="first" title="First" href="UG_Intro.html" />
+<link rel="first" title="First" href="UG_htmlLOF.html" />
 <link rel="last" title="Last" href="UG_Top.html" />
 <link rel="previous" title="Previous" href="UG_Palettes.html" />
 <link rel="next" title="Next" href="UG_Annot.html" />
@@ -94,8 +94,8 @@ In addition to the distinction made between labels and descriptions, HDF disting
 File annotations are assigned to a file to describe the origin, meaning, or intended use of its data. Any HDF file can be annotated with a label, description, or combination of both. <a href="UG_MF_Annot.html#wp3176">(See Figure 10a.)</a> The number of labels or descriptions an HDF file may contain is limited to the maximum number of tag/reference number pairs. File annotations may be assigned in any order and at any time after a file is created.
 </p>
 <a name="wp3176"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
-FIGURE 10a	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">File and Object Annotations</span></div>
-<div align="left"><img src="images/hdf4_10-UG_MF_Annot-1-1.jpg" height="277" width="517" id="wp3072" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
+FIGURE 10a	File and Object Annotations</div>
+<div align="left"><img src="images/hdf4_14-UG_MF_Annot-1-1.jpg" height="277" width="517" id="wp3072" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
 
 </div>
 <a name="wp3177"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
@@ -111,8 +111,8 @@ Object annotations are assigned to individual data objects to explain their orig
 The annotation interface takes advantage of this identification scheme by including the object&#39;s tag/reference number pair with the text of the annotation. Consider a scientific data set identified by the tag <code style="font-family: Courier New; font-size: 8pt" class="cDefName">DFTAG_NDG</code> and the reference number <code style="font-family: Courier New; font-size: 8pt" class="cDefName">10</code>. <a href="UG_MF_Annot.html#wp3658">(See Figure 10b.)</a> All object annotations assigned to this particular data set must be prefaced with the tag <code style="font-family: Courier New; font-size: 8pt" class="cDefName">DFTAG_NDG</code> followed by the reference number <code style="font-family: Courier New; font-size: 8pt" class="cDefName">10</code>.
 </p>
 <a name="wp3658"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
-FIGURE 10b	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Object Annotations with Tag/Reference Number Pairs</span></div>
-<div align="left"><img src="images/hdf4_10-UG_MF_Annot-1-2.jpg" height="115" width="517" id="wp212" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
+FIGURE 10b	Object Annotations with Tag/Reference Number Pairs</div>
+<div align="left"><img src="images/hdf4_14-UG_MF_Annot-1-2.jpg" height="115" width="517" id="wp212" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
 
 </div>
 <a name="wp44432"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
@@ -144,7 +144,7 @@ The C routine names of the AN interface are prefaced by the string &quot;AN&quot
 The AN routines are listed in <a href="UG_MF_Annot.html#wp5700">Table 10A</a> and are described in more detail in subsequent sections of this chapter.
 </p>
 <a name="wp5700"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 10A	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">AN Library Routines</span></div>
+TABLE 10A	AN Library Routines</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp19171table16317">
   <caption></caption>
@@ -183,7 +183,7 @@ afstart
 </div>
 </td>
     <td><a name="wp19193"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Initializes the AN interface (<a href="UG_MF_Annot.html#wp23134">Section&#160;10.3.4 on page&#160;369</a>)
+Initializes the AN interface (<a href="UG_MF_Annot.html#wp23134">Section&#160;10.3.4 on page&#160;371</a>)
 </div>
 </td>
 </tr>
@@ -196,7 +196,7 @@ afcreate
 </div>
 </td>
     <td><a name="wp19201"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Creates a new data annotation (<a href="UG_MF_Annot.html#wp23134">Section&#160;10.3.4 on page&#160;369</a>)
+Creates a new data annotation (<a href="UG_MF_Annot.html#wp23134">Section&#160;10.3.4 on page&#160;371</a>)
 </div>
 </td>
 </tr>
@@ -209,7 +209,7 @@ affcreate
 </div>
 </td>
     <td><a name="wp19209"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Creates a new file annotation (<a href="UG_MF_Annot.html#wp23134">Section&#160;10.3.4 on page&#160;369</a>)
+Creates a new file annotation (<a href="UG_MF_Annot.html#wp23134">Section&#160;10.3.4 on page&#160;371</a>)
 </div>
 </td>
 </tr>
@@ -222,7 +222,7 @@ afselect
 </div>
 </td>
     <td><a name="wp19217"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Obtains an existing annotation (<a href="UG_MF_Annot.html#wp20012">Section&#160;10.5.1 on page&#160;375</a>)
+Obtains an existing annotation (<a href="UG_MF_Annot.html#wp20012">Section&#160;10.5.1 on page&#160;377</a>)
 </div>
 </td>
 </tr>
@@ -235,7 +235,7 @@ afendaccess
 </div>
 </td>
     <td><a name="wp19225"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Terminates access to an annotation (<a href="UG_MF_Annot.html#wp23134">Section&#160;10.3.4 on page&#160;369</a>)
+Terminates access to an annotation (<a href="UG_MF_Annot.html#wp23134">Section&#160;10.3.4 on page&#160;371</a>)
 </div>
 </td>
 </tr>
@@ -248,7 +248,7 @@ afend
 </div>
 </td>
     <td><a name="wp19676"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Terminates access to AN interface (<a href="UG_MF_Annot.html#wp23134">Section&#160;10.3.4 on page&#160;369</a>)
+Terminates access to AN interface (<a href="UG_MF_Annot.html#wp23134">Section&#160;10.3.4 on page&#160;371</a>)
 </div>
 </td>
 </tr>
@@ -265,7 +265,7 @@ afreadeann
 </div>
 </td>
     <td><a name="wp19241"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Reads an annotation (<a href="UG_MF_Annot.html#wp6100">Section&#160;10.5.2 on page&#160;375</a>)
+Reads an annotation (<a href="UG_MF_Annot.html#wp6100">Section&#160;10.5.2 on page&#160;378</a>)
 </div>
 </td>
 </tr>
@@ -278,7 +278,7 @@ afwriteann
 </div>
 </td>
     <td><a name="wp19249"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Writes an annotation (<a href="UG_MF_Annot.html#wp5723">Section&#160;10.4 on page&#160;370</a>)
+Writes an annotation (<a href="UG_MF_Annot.html#wp5723">Section&#160;10.4 on page&#160;372</a>)
 </div>
 </td>
 </tr>
@@ -295,7 +295,7 @@ afannlen
 </div>
 </td>
     <td><a name="wp19273"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Returns the length of an annotation (<a href="UG_MF_Annot.html#wp8831">Section&#160;10.6.2 on page&#160;379</a>)
+Returns the length of an annotation (<a href="UG_MF_Annot.html#wp8831">Section&#160;10.6.2 on page&#160;382</a>)
 </div>
 </td>
 </tr>
@@ -308,7 +308,7 @@ afannlist
 </div>
 </td>
     <td><a name="wp19351"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Retrieves the annotation identifiers of an object (<a href="UG_MF_Annot.html#wp8038">Section&#160;10.6.4 on page&#160;380</a>)
+Retrieves the annotation identifiers of an object (<a href="UG_MF_Annot.html#wp8038">Section&#160;10.6.4 on page&#160;383</a>)
 </div>
 </td>
 </tr>
@@ -321,7 +321,7 @@ afatypetag
 </div>
 </td>
     <td><a name="wp19361"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Returns the annotation tag corresponding to an annotation type (<a href="UG_MF_Annot.html#wp13230">Section&#160;10.6.8 on page&#160;382</a>)
+Returns the annotation tag corresponding to an annotation type (<a href="UG_MF_Annot.html#wp13230">Section&#160;10.6.8 on page&#160;384</a>)
 </div>
 </td>
 </tr>
@@ -334,7 +334,7 @@ affileinfo
 </div>
 </td>
     <td><a name="wp19281"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Retrieves the number of annotations of each type in a file (<a href="UG_MF_Annot.html#wp8018">Section&#160;10.6.1 on page&#160;379</a>)
+Retrieves the number of annotations of each type in a file (<a href="UG_MF_Annot.html#wp8018">Section&#160;10.6.1 on page&#160;382</a>)
 </div>
 </td>
 </tr>
@@ -347,7 +347,7 @@ afnumann
 </div>
 </td>
     <td><a name="wp19391"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Returns the number of annotations of the given type attached to an object (<a href="UG_MF_Annot.html#wp23844">Section&#160;10.6.3 on page&#160;380</a>)
+Returns the number of annotations of the given type attached to an object (<a href="UG_MF_Annot.html#wp23844">Section&#160;10.6.3 on page&#160;382</a>)
 </div>
 </td>
 </tr>
@@ -360,7 +360,7 @@ afgettagref
 </div>
 </td>
     <td><a name="wp19289"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Retrieves the tag/reference number pair of an annotation specified by its index (<a href="UG_MF_Annot.html#wp13420">Section&#160;10.6.5 on page&#160;381</a>)
+Retrieves the tag/reference number pair of an annotation specified by its index (<a href="UG_MF_Annot.html#wp13420">Section&#160;10.6.5 on page&#160;383</a>)
 </div>
 </td>
 </tr>
@@ -373,7 +373,7 @@ afidtagref
 </div>
 </td>
     <td><a name="wp19297"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Retrieves the tag/reference number pair of an annotation specified by its identifier (<a href="UG_MF_Annot.html#wp13068">Section&#160;10.6.6 on page&#160;381</a>)
+Retrieves the tag/reference number pair of an annotation specified by its identifier (<a href="UG_MF_Annot.html#wp13068">Section&#160;10.6.6 on page&#160;384</a>)
 </div>
 </td>
 </tr>
@@ -386,7 +386,7 @@ aftagatype
 </div>
 </td>
     <td><a name="wp19321"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Returns the annotation type corresponding to an annotation tag (<a href="UG_MF_Annot.html#wp13319">Section&#160;10.6.9 on page&#160;382</a>)
+Returns the annotation type corresponding to an annotation tag (<a href="UG_MF_Annot.html#wp13319">Section&#160;10.6.9 on page&#160;385</a>)
 </div>
 </td>
 </tr>
@@ -399,7 +399,7 @@ aftagrefid
 </div>
 </td>
     <td><a name="wp19377"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Returns the identifier of an annotation given its tag/reference number pair (<a href="UG_MF_Annot.html#wp13623">Section&#160;10.6.7 on page&#160;382</a>)
+Returns the identifier of an annotation given its tag/reference number pair (<a href="UG_MF_Annot.html#wp13623">Section&#160;10.6.7 on page&#160;384</a>)
 </div>
 </td>
 </tr>
@@ -487,7 +487,7 @@ An HDF file must be opened by <b class="cFunctionName">Hopen</b> before it can b
 The HDF file must be closed by <b class="cFunctionName">Hclose</b> after all calls to <b class="cFunctionName">ANend</b> have been properly made. <b class="cFunctionName">Hclose</b> is described in <a href="UG_Fundmtls.html">Chapter 2, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF Fundamentals</span></a>.
 </p>
 <a name="wp24283"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 10B	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ANstart, ANcreate, ANcreatef, ANendaccess and ANend Parameter Lists</span></div>
+TABLE 10B	ANstart, ANcreate, ANcreatef, ANendaccess and ANend Parameter Lists</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp24162table24160">
   <caption></caption>
@@ -770,7 +770,7 @@ To write a file or data annotation, the calling program must contain the followi
 <b class="cFunctionName">ANwriteann</b> returns either <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). The parameters of <b class="cFunctionName">ANwriteann</b> are further defined in <a href="UG_MF_Annot.html#wp23343">Table 10C</a>.
 </p>
 <a name="wp23343"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 10C	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ANwriteann Parameter List</span></div>
+TABLE 10C	ANwriteann Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp23290table23288">
   <caption></caption>
@@ -1134,7 +1134,7 @@ Reading an annotation is done by first selecting the desired annotation of the a
 </p><a name="wp45335"> </a><p style="font-family: Courier New; font-size: 9pt" class="pSyntaxLine"><b style="font-family: Courier New; font-size: 9pt" class="cBold">FORTRAN:</b>	ann_id = afselect(an_id, index, annot_type)
 </p></ul></div>
 <a name="wp45280"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-The parameter <em class="cVarName">index</em> is a nonnegative integer and is less than the total number of annotations of type <em class="cVarName">annot_type</em> in the file. Use <b class="cFunctionName">ANfileinfo</b>, described in <a href="UG_MF_Annot.html#wp8018">Section&#160;10.6.1 on page&#160;379</a>, to obtain the total number of annotations of type <em class="cVarName">annot_type</em> in the file.
+The parameter <em class="cVarName">index</em> is a nonnegative integer and is less than the total number of annotations of type <em class="cVarName">annot_type</em> in the file. Use <b class="cFunctionName">ANfileinfo</b>, described in <a href="UG_MF_Annot.html#wp8018">Section&#160;10.6.1 on page&#160;382</a>, to obtain the total number of annotations of type <em class="cVarName">annot_type</em> in the file.
 </p>
 <a name="wp20311"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 Possible valid values of <em class="cVarName">annot_type</em> are <code style="font-family: Courier New; font-size: 8pt" class="cDefName">AN_DATA_LABEL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) for a data label, <code style="font-family: Courier New; font-size: 8pt" class="cDefName">AN_DATA_DESC</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">1</code>) for a data description, <code style="font-family: Courier New; font-size: 8pt" class="cDefName">AN_FILE_LABEL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">2</code>) for a file label, and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">AN_FILE_DESC</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">3</code>) for a file description.
@@ -1159,7 +1159,7 @@ The parameter <em class="cVarName">ann_length</em> specifies the size of the buf
 <b class="cFunctionName">ANreadann</b> returns either <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). The parameters of <b class="cFunctionName">ANreadann</b> are further described in <a href="UG_MF_Annot.html#wp7805">Table 10D</a>.
 </p>
 <a name="wp7805"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 10D	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ANselect and ANreadann Parameter Lists</span></div>
+TABLE 10D	ANselect and ANreadann Parameter Lists</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp16658table16656">
   <caption></caption>
@@ -1541,7 +1541,7 @@ The retrieved information will be stored in the parameters <em class="cVarName">
 The parameters of <b class="cFunctionName">ANannlen</b> are further described in <a href="UG_MF_Annot.html#wp8947">Table 10E</a>.
 </p>
 <a name="wp8947"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 10E	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ANfileinfo and ANannlen Parameter Lists</span></div>
+TABLE 10E	ANfileinfo and ANannlen Parameter Lists</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp16853table16851">
   <caption></caption>
@@ -1737,7 +1737,7 @@ The identifiers of the retrieved annotations are stored in the parameter <em cla
 <b class="cFunctionName">ANannlist</b> returns the number of identifiers found, if succesful, or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). The parameters of <b class="cFunctionName">ANannlist</b> are further described in <a href="UG_MF_Annot.html#wp8336">Table 10F</a>.
 </p>
 <a name="wp8336"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 10F	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ANnumann and ANannlist Parameter Lists</span></div>
+TABLE 10F	ANnumann and ANannlist Parameter Lists</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp16959table16957">
   <caption></caption>
@@ -1968,7 +1968,7 @@ The tag is stored in the parameter <em class="cVarName">ann_tag</em> and the ref
 The value of <em class="cVarName">annot_type</em> can be either <code style="font-family: Courier New; font-size: 8pt" class="cDefName">AN_DATA_LABEL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>), <code style="font-family: Courier New; font-size: 8pt" class="cDefName">AN_DATA_DESC</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">1</code>), <code style="font-family: Courier New; font-size: 8pt" class="cDefName">AN_FILE_LABEL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">2</code>), or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">AN_FILE_DESC</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">3</code>).
 </p>
 <a name="wp21458"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-<b class="cFunctionName">ANget_tagref</b> returns either <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). The parameters of <b class="cFunctionName">ANget_tagref</b> are further described in <a href="UG_MF_Annot.html#wp13397">Table 10G on page 383</a>.
+<b class="cFunctionName">ANget_tagref</b> returns either <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). The parameters of <b class="cFunctionName">ANget_tagref</b> are further described in <a href="UG_MF_Annot.html#wp13397">Table 10G on page 386</a>.
 </p>
 <a name="wp13068"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
 	10.6.6 Obtaining the Tag/Reference Number Pair from a Specified Annotation Identifier: ANid2tagref
@@ -1984,7 +1984,7 @@ The value of <em class="cVarName">annot_type</em> can be either <code style="fon
 <b class="cFunctionName">ANid2tagref</b> stores the retrieved tag and reference number into the parameters <em class="cVarName">ann_tag</em> and <em class="cVarName">ann_ref</em>. Possible values returned in <em class="cVarName">ann_tag</em> are <code style="font-family: Courier New; font-size: 8pt" class="cDefName">DFTAG_DIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">104</code>) for a data label, <code style="font-family: Courier New; font-size: 8pt" class="cDefName">DFTAG_DIA</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">105</code>) for a data description, <code style="font-family: Courier New; font-size: 8pt" class="cDefName">DFTAG_FID</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">100</code>) for a file label, and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">DFTAG_FD</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">101</code>) for a file description. 
 </p>
 <a name="wp21561"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-<b class="cFunctionName">ANid2tagref</b> returns either <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). The parameters of <b class="cFunctionName">ANid2tagref</b> are further described in <a href="UG_MF_Annot.html#wp13397">Table 10G on page 383</a>.
+<b class="cFunctionName">ANid2tagref</b> returns either <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). The parameters of <b class="cFunctionName">ANid2tagref</b> are further described in <a href="UG_MF_Annot.html#wp13397">Table 10G on page 386</a>.
 </p>
 <a name="wp13623"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
 	10.6.7 Obtaining the Annotation Identifier from a Specified Tag/Reference Number Pair: ANtagref2id
@@ -1997,7 +1997,7 @@ The value of <em class="cVarName">annot_type</em> can be either <code style="fon
 </p><a name="wp20448"> </a><p style="font-family: Courier New; font-size: 9pt" class="pSyntaxLine"><b style="font-family: Courier New; font-size: 9pt" class="cBold">FORTRAN:</b>	ann_id = aftagrefid(an_id, ann_tag, ann_ref)
 </p></ul></div>
 <a name="wp22174"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-The parameters of <b class="cFunctionName">ANtagref2id</b> are further described in <a href="UG_MF_Annot.html#wp13397">Table 10G on page 383</a>.
+The parameters of <b class="cFunctionName">ANtagref2id</b> are further described in <a href="UG_MF_Annot.html#wp13397">Table 10G on page 386</a>.
 </p>
 <a name="wp13230"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
 	10.6.8 Obtaining an Annotation Tag from a Specified Annotation Type: ANatype2tag
@@ -2142,7 +2142,7 @@ Annotation Type
 The parameters of <b class="cFunctionName">ANtag2atype</b> are further described in <a href="UG_MF_Annot.html#wp13397">Table 10G</a>.
 </p>
 <a name="wp13397"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 10G	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">ANget_tagref, ANid2tagref, ANtagref2id, ANatype2tag, and ANtag2atype Parameter Lists</span></div>
+TABLE 10G	ANget_tagref, ANid2tagref, ANtagref2id, ANatype2tag, and ANtag2atype Parameter Lists</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp17272table17270">
   <caption></caption>

@@ -7,11 +7,11 @@
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.8.2296" />
     <meta name="TEMPLATEBASE" content="HDF4 Version 1.0" />
-    <meta name="LASTUPDATED" content="02/23/12 05:00:32" />
+    <meta name="LASTUPDATED" content="03/06/12 09:59:02" />
     <title>Chapter 3	Scientific Data Sets (SD API)</title>
     <link rel="StyleSheet" href="document.css" type="text/css" media="all" />
     <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
-<link rel="first" title="First" href="UG_Intro.html" />
+<link rel="first" title="First" href="UG_htmlLOF.html" />
 <link rel="last" title="Last" href="UG_Top.html" />
 <link rel="previous" title="Previous" href="UG_Fundmtls.html" />
 <link rel="next" title="Next" href="UG_Vdatas.html" />
@@ -70,8 +70,8 @@ The scientific data set, or SDS, is a group of data structures used to store and
 A scientific data set consists of required and optional components, which will be discussed in the following subsections.
 </p>
 <a name="wp48894"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
-FIGURE 3a	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">The Contents of a Scientific Data Set</span></div>
-<div align="left"><img src="images/hdf4_03-UG_SD-1-1.jpg" height="289" width="524" id="wp48870" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
+FIGURE 3a	The Contents of a Scientific Data Set</div>
+<div align="left"><img src="images/hdf4_07-UG_SD-1-1.jpg" height="289" width="524" id="wp48870" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
 
 </div>
 <a name="wp145772"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
@@ -173,10 +173,10 @@ There is no cross-compatibility between attributes and annotations; creating one
 <a name="wp134865"> </a><h2 style="font-family: Times New Roman; font-size: 14pt; margin-top: 14pt" class="pHeading2">
 	3.3	The SD Interface
 </h2>
-<a name="wp134904"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-The SD interface provides routines that store, retrieve, and manipulate scientific data using the SD data model. The SD interface supports simultaneous access to more than one SDS in more than one HDF file. In addition, the SD interface is designed to support a general scientific data model which is very similar to the netCDF data model developed by the Unidata Program Center<a href="#wp134907"><sup class="Footnote">2</sup></a>.
+<a name="wp312087"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
+The SD interface provides routines that store, retrieve, and manipulate scientific data using the SD data model. The SD interface supports simultaneous access to more than one SDS in more than one HDF file. In addition, the SD interface is designed to support a general scientific data model which is very similar to the netCDF data model developed by the Unidata Program Center<a href="#wp312090"><sup class="Footnote">2</sup></a>.
 </p>
-<a name="wp134925"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
+<a name="wp312091"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 For those users who have been using the DFSD interface, the SD interface provide a model compatible with that supported by the DFSD interface. It is recommended that DFSD users apply the SD model and interface to their applications since the DFSD interface is less flexible and less powerful than the SD interface and will eventually be removed from the HDF library.
 </p>
 <a name="wp304060"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
@@ -213,7 +213,7 @@ All C routines in the SD interface begin with the prefix &quot;SD&quot;. The equ
 The SD routines are listed in the following table and are discussed in the following sections of this chapter.
 </p>
 <a name="wp147045"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 3A	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SD Interface Routines</span></div>
+TABLE 3A	SD Interface Routines</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp307536table146498">
   <caption></caption>
@@ -1163,7 +1163,7 @@ The argument <em class="cVarName">filename</em> is the name of an HDF or netCDF 
 The argument <em class="cVarName">access_mode</em> specifies the type of access required for operations on the file. All the valid values for <em class="cVarName">access_mode</em> are listed in <a href="UG_SD.html#wp226223">Table 3B</a>. If the file does not exist, specifying <code style="font-family: Courier New; font-size: 8pt" class="cDefName">DFACC_READ</code> or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">DFACC_WRITE </code>will cause <b class="cFunctionName">SDstart</b> to return a <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) . Specifying <code style="font-family: Courier New; font-size: 8pt" class="cDefName">DFACC_CREATE</code> creates a new file with read and write access. If <code style="font-family: Courier New; font-size: 8pt" class="cDefName">DFACC_CREATE</code> is specified and the file already exists, the contents of this file will be replaced.
 </p>
 <a name="wp226223"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 3B	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">File Access Code Flags</span></div>
+TABLE 3B	File Access Code Flags</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp226200table226198">
   <caption></caption>
@@ -1249,7 +1249,7 @@ The parameter <em class="cVarName">data_type</em> is a defined name, prefaced by
 The parameter <em class="cVarName">rank</em> is a positive integer specifying the number of dimensions of the SDS array. The maximum rank of an SDS array is defined by <code style="font-family: Courier New; font-size: 8pt" class="cDefName">H4_MAX_VAR_DIMS</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">32</code>), which is defined in the header file &quot;hlimits.h&quot;.  Note that, in order for HDF4 and NetCDF models to work together, HDF allows SDS to have rank 0.  However, there is no intention for data to be written to this type of SDS, but only to store attribute as part of the data description.  Consequently, setting compression and setting chunk are disallowed.
 </p>
 <a name="wp147662"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-Each element of the one-dimensional array <em class="cVarName">dim_sizes</em> specifies the length of the corresponding dimension of the SDS array. The size of <em class="cVarName">dim_sizes</em> must be the value of the parameter <em class="cVarName">rank</em>. To create a data set with an unlimited dimension, assign the value of <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SD_UNLIMITED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) to <em class="cVarName">dim_sizes[0]</em> in C, and to <em class="cVarName">dim_sizes(rank)</em> in FORTRAN-77. See the notes regarding the potential performance impact of unlimited dimension data sets in <a href="UG_Perform.html#wp178683">Section 14.4.3, &quot;Unlimited Dimension Data Sets (SDSs and Vdatas) and Performance&quot; on page 453</a>.
+Each element of the one-dimensional array <em class="cVarName">dim_sizes</em> specifies the length of the corresponding dimension of the SDS array. The size of <em class="cVarName">dim_sizes</em> must be the value of the parameter <em class="cVarName">rank</em>. To create a data set with an unlimited dimension, assign the value of <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SD_UNLIMITED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) to <em class="cVarName">dim_sizes[0]</em> in C, and to <em class="cVarName">dim_sizes(rank)</em> in FORTRAN-77. See the notes regarding the potential performance impact of unlimited dimension data sets in <a href="UG_Perform.html#wp178683">Section 14.4.3, &quot;Unlimited Dimension Data Sets (SDSs and Vdatas) and Performance&quot; on page 455</a>.
 </p>
 <a name="wp147637"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 Once an SDS is created, you cannot change its name, data type, size, or shape. However, it is possible to modify the data set&#39;s data or to create an empty data set and later add values. To add data or modify an existing data set, use <b class="cFunctionName">SDselect</b> to get the data set identifier instead of <b class="cFunctionName">SDcreate</b>.
@@ -1279,7 +1279,7 @@ Similar to SD interface identifiers, SDS identifiers can be obtained and discard
 <b class="cFunctionName">SDendaccess</b> and <b class="cFunctionName">SDend</b> each returns either a value of <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED </code>(or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). The parameters of <b class="cFunctionName">SDendaccess</b> and <b class="cFunctionName">SDend</b> are further described in <a href="UG_SD.html#wp227271"><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Table 3C</span></a>. 
 </p>
 <a name="wp227271"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 3C	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDstart, SDcreate, SDselect, SDendaccess, and SDend Parameter Lists</span></div>
+TABLE 3C	SDstart, SDcreate, SDselect, SDendaccess, and SDend Parameter Lists</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp227130table227128">
   <caption></caption>
@@ -1708,8 +1708,8 @@ The argument <em class="cVarName">stride</em> is a one-dimensional array specify
 The size of the array <em class="cVarName">stride</em> must be the same as the number of dimensions in the SDS array. Also, each value in <em class="cVarName">stride</em> must be smaller than or equal to its corresponding SDS array dimension unless the dimension is unlimited. Violating any of these conditions causes <b class="cFunctionName">SDwritedata</b> to return <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code>.
 </p>
 <a name="wp226372"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
-FIGURE 3b	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">An Example of Access Pattern (&quot;Strides&quot;)</span></div>
-<div align="left"><img src="images/hdf4_03-UG_SD-1-2.jpg" height="178" width="520" id="wp226343" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
+FIGURE 3b	An Example of Access Pattern (&quot;Strides&quot;)</div>
+<div align="left"><img src="images/hdf4_07-UG_SD-1-2.jpg" height="178" width="520" id="wp226343" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
 
 </div>
 <a name="wp226373"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
@@ -1734,7 +1734,7 @@ There are two FORTRAN-77 versions of this routine: <b style="font-weight: bold" 
 <b class="cFunctionName">SDwritedata</b> returns either a value of <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). The parameters of this routine are described in <a href="UG_SD.html#wp16757">Table 3D</a>.
 </p>
 <a name="wp16757"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 3D	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDwritedata Parameter List</span></div>
+TABLE 3D	SDwritedata Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp20053table16685">
   <caption></caption>
@@ -2386,7 +2386,7 @@ Any time an unlimited dimension is appended to, the HDF library will automatical
 <b class="cFunctionName">SDisrecord</b> returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">TRUE</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">1</code>) when the data set specified by <em class="cVarName">sds_id</em> is appendable and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FALSE</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) otherwise. The parameter of this routine is defined in <a href="UG_SD.html#wp158277">Table 3E</a>.
 </p>
 <a name="wp158277"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 3E	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDisrecord Parameter List</span></div>
+TABLE 3E	SDisrecord Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp158232table158230">
   <caption></caption>
@@ -2484,7 +2484,7 @@ Data set identifier
 <b class="cFunctionName">SDsetaccesstype</b> returns a value of <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) if the SDS data can be accessed via accesstype or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) otherwise. Its parameters are further described in <a href="UG_SD.html#wp144814">Table 3F</a>.
 </p>
 <a name="wp144814"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 3F	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDsetblocksize and SDsetaccesstype Parameter List</span></div>
+TABLE 3F	SDsetblocksize and SDsetaccesstype Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp144771table144769">
   <caption></caption>
@@ -2933,7 +2933,7 @@ The existing compression algorithms supported by HDF do <span style="color: #000
 <b class="cFunctionName">SDsetcompress</b> returns a value of <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). The C version parameters are further described in <a href="UG_SD.html#wp303806">Table 3G</a> and the FORTRAN-77 version parameters are further described in <a href="UG_SD.html#wp162895">Table 3H</a>.
 </p>
 <a name="wp303806"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 3G	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDsetcompress Parameter List</span></div>
+TABLE 3G	SDsetcompress Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp303763table303761">
   <caption></caption>
@@ -3014,7 +3014,7 @@ Pointer to compression information structure
 
 </div>
 <a name="wp162895"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 3H	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">sfscompress Parameter List</span></div>
+TABLE 3H	sfscompress Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp162845table162843">
   <caption></caption>
@@ -3087,7 +3087,7 @@ Compression parameters array
 </table>
 </div>
 <div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"></span>
+
 </div>
 <a name="wp162896"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 16pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 EXAMPLE 6.	Compressing SDS Data.
@@ -3354,7 +3354,7 @@ The syntax of <b class="cFunctionName">HXsetcreatedir</b> is as follows:
 <b style="font-weight: bold" class="cFunctionName">HXsetcreatedir</b><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> </span>returns a value of <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). The parameters of <b class="cFunctionName">HXsetcreatedir</b> are described in <a href="UG_SD.html#wp20603">Table 3I</a>.
 </p>
 <a name="wp20603"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 3I	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HXsetdir and HXsetcreatedir Parameter Lists</span></div>
+TABLE 3I	HXsetdir and HXsetcreatedir Parameter Lists</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp141022table20570">
   <caption></caption>
@@ -3558,7 +3558,7 @@ The application must provide sufficient buffer for the external file name.  When
 The parameters of <b class="cFunctionName">SDgetexternalinfo</b> are described in <a href="UG_SD.html#wp17239">Table 3J on page 56</a>.
 </p>
 <a name="wp17239"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 3J	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDsetexternalfile Parameter List</span></div>
+TABLE 3J	SDsetexternalfile Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp17207table17205">
   <caption></caption>
@@ -3908,7 +3908,7 @@ There are two FORTRAN-77 versions of this routine: <b style="font-weight: bold" 
 <b class="cFunctionName">SDreaddata</b> returns a value of <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>), including the situation when the data set does not contain data, or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). The parameters of <b class="cFunctionName">SDreaddata</b> are further described in <a href="UG_SD.html#wp17383">Table 3K</a>.
 </p>
 <a name="wp17383"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 3K	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDreaddata Parameter List</span></div>
+TABLE 3K	SDreaddata Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp157021table17311">
   <caption></caption>
@@ -4575,7 +4575,7 @@ When <em class="cVarName">comp_type</em> is <code style="font-family: Courier Ne
 <b style="font-weight: bold" class="cFunctionName">SDgetcompinfo</b><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> </span>returns a value of <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). The parameters of <b class="cFunctionName">SDgetcompinfo</b> are specified in <a href="UG_SD.html#wp297931">Table 3L</a>.
 </p>
 <a name="wp297931"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 3L	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDfileinfo,  SDgetinfo, and SDgetcompinfo Parameter Lists</span></div>
+TABLE 3L	SDfileinfo,  SDgetinfo, and SDgetcompinfo Parameter Lists</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp297774table297772">
   <caption></caption>
@@ -5103,7 +5103,7 @@ The parameter <em class="cVarName">sds_name</em> is a character string with the 
 <b class="cFunctionName">SDgetnumvars_byname</b> returns a value of <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). The parameters of <b class="cFunctionName">SDgetnumvars_byname</b> are specified in <a href="UG_SD.html#wp297717">Table 3M on page 73</a>.
 </p>
 <a name="wp297717"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 3M	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDnametoindex, SDnametoindices, and SDgetnumvars_byname Parameter Lists</span></div>
+TABLE 3M	SDnametoindex, SDnametoindices, and SDgetnumvars_byname Parameter Lists</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp298074table297626">
   <caption></caption>
@@ -5461,7 +5461,7 @@ The output parameter, <em class="cVarName">emptySDS</em>, indicates whether the 
 <b style="font-weight: bold" class="cFunctionName">SDcheckempty</b><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> </span>returns a value of <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). The parameters of <b class="cFunctionName">SDcheckempty</b> are specified in <a href="UG_SD.html#wp298272">Table 3N</a>.
 </p>
 <a name="wp298272"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 3N	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDreftoindex, SDidtoref, SDidtype, and SDcheckempty Parameter Lists</span></div>
+TABLE 3N	SDreftoindex, SDidtoref, SDidtype, and SDcheckempty Parameter Lists</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp298217table298215">
   <caption></caption>
@@ -5844,7 +5844,7 @@ The operation on <em class="cVarName">fill_one</em> is performed before the oper
 <b class="cFunctionName">SDsetnbitdataset</b> returns a positive value or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). The parameters for <b class="cFunctionName">SDsetnbitdataset</b> are specified in <a href="UG_SD.html#wp50163">Table 3O</a>.
 </p>
 <a name="wp50163"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 3O	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDsetnbitdataset Parameter List</span></div>
+TABLE 3O	SDsetnbitdataset Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp26367table26365">
   <caption></caption>
@@ -6028,7 +6028,7 @@ If the file being worked on was created by a pre-4.2.2 version of HDF, please re
 <b class="cFunctionName">SDsetdimname</b> returns a value of <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). The parameters of <b class="cFunctionName">SDsetdimname</b> are described in <a href="UG_SD.html#wp169683">Table 3P</a>.
 </p>
 <a name="wp169683"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 3P	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDgetdimid and SDsetdimname Parameter Lists</span></div>
+TABLE 3P	SDgetdimid and SDsetdimname Parameter Lists</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp169618table169616">
   <caption></caption>
@@ -6205,7 +6205,7 @@ Unlimited dimensions are always backward compatible. Therefore <b class="cFuncti
 The parameters of <b class="cFunctionName">SDisdimval_bwcomp</b> are specified in <a href="UG_SD.html#wp29159">Table 3Q</a>.
 </p>
 <a name="wp29159"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 3Q	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDsetdimval_comp and SDisdimval_bwcomp Parameter Lists</span></div>
+TABLE 3Q	SDsetdimval_comp and SDisdimval_bwcomp Parameter Lists</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp29118table29116">
   <caption></caption>
@@ -6400,7 +6400,7 @@ The fact that <b class="cFunctionName">SDgetdimscale</b> returns <code style="fo
 <b class="cFunctionName">SDgetdimscale</b> returns a value of <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). The parameters of this routine are specified in <a href="UG_SD.html#wp170595">Table 3R</a>.
 </p>
 <a name="wp170595"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 3R	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDsetdimscale, SDdiminfo, and SDgetdimscale Parameter Lists</span></div>
+TABLE 3R	SDsetdimscale, SDdiminfo, and SDgetdimscale Parameter Lists</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp170458table170456">
   <caption></caption>
@@ -6972,7 +6972,7 @@ If the file being worked on was created by a pre-4.2.2 version of HDF, please re
 <b class="cFunctionName">SDiscoordvar</b> returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">TRUE</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">1</code>) if the specified data set represents a dimension scale and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FALSE</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>), otherwise. This routine is further defined in <a href="UG_SD.html#wp142605">Table 3S</a>.
 </p>
 <a name="wp142605"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 3S	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDiscoordvar Parameter List</span></div>
+TABLE 3S	SDiscoordvar Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp158183table142570">
   <caption></caption>
@@ -7185,8 +7185,8 @@ In the SD interface, dimension records are only created for dimensions of a uniq
 As expected, assigning a dimension attribute to dimension 1 of either data set will create the required dimension scale and assign the appropriate attribute. However, because related data sets share dimension records, they also share dimension attributes. Therefore, it is impossible to assign an attribute to a dimension without assigning the same attribute to all dimensions of identical name and size, either within one data set or related data sets.
 </p>
 <a name="wp13426"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
-FIGURE 3c	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Dimension Records and Attributes Shared Between Related Data Sets</span></div>
-<div align="left"><img src="images/hdf4_03-UG_SD-1-3.jpg" height="195" width="521" id="wp8763" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
+FIGURE 3c	Dimension Records and Attributes Shared Between Related Data Sets</div>
+<div align="left"><img src="images/hdf4_07-UG_SD-1-3.jpg" height="195" width="521" id="wp8763" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
 
 </div>
 <a name="wp13428"> </a><h2 style="font-family: Times New Roman; font-size: 14pt; margin-top: 14pt" class="pHeading2">
@@ -7462,7 +7462,7 @@ There are three FORTRAN-77 versions of this routine: <b class="cFunctionName">sf
 <b class="cFunctionName">SDreadattr </b>returns a value of <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). The parameters of <b class="cFunctionName">SDreadattr </b>are further described in <a href="UG_SD.html#wp13643">Table 3T</a>.
 </p>
 <a name="wp13643"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 3T	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDsetattr, SDfindattr, SDattrinfo, and SDreadattr Parameter Lists</span></div>
+TABLE 3T	SDsetattr, SDfindattr, SDattrinfo, and SDreadattr Parameter Lists</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp22499table10232">
   <caption></caption>
@@ -8089,8 +8089,8 @@ C<a name="wp219313"> </a>
 <div class="pSmartList1" style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal"><ul class="pSmartList1" style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal">
 <div class="pSmartList2" style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal"><ul class="pSmartList2" style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal">
 <a name="wp6854"> </a><div style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal" class="pSmartList2"><li><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Labels</span> can be thought of as variable names. They are often used as keys in searches to find a particular predefined attribute.</li></div>
-<a name="wp222327"> </a><div style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal" class="pSmartList2"><li><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Units</span> are a means of declaring the units pertinent to a specific discipline. A freely-available library of routines is available to convert between character string and binary forms of unit specifications and to perform useful operations on the binary forms. This library is used in some netCDF applications and is recommended for use with HDF applications. For more information, refer to the <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">netCDF User&#39;s Guide for C</span> which can be obtained at <br /><a href="http://www.unidata.ucar.edu/packages/netcdf/guidec/"><span class="cWebJump">http://www.unidata.ucar.edu/packages/netcdf/guidec/</span></a>.</li></div>
-<a name="wp6856"> </a><div style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal" class="pSmartList2"><li><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Formats</span> describe the format in which numeric values will be printed and/or displayed. The recommended convention is to use standard FORTRAN-77 notation for describing the data format. For example, &quot;F7.2&quot; means to display seven digits with two digits to the right of the decimal point.</li></div>
+<a name="wp312038"> </a><div style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal" class="pSmartList2"><li><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Units</span> are a means of declaring the units pertinent to a specific discipline. A freely-available library of routines is available to convert between character string and binary forms of unit specifications and to perform useful operations on the binary forms. This library is used in some netCDF applications and is recommended for use with HDF applications. For more information, refer to the <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">netCDF User&#39;s Guide for C</span> which can be obtained at <br /><a href="http://www.unidata.ucar.edu/software/netcdf/docs/netcdf/"><span class="cWebJump">http://www.unidata.ucar.edu/software/netcdf/docs/netcdf/</span></a>.</li></div>
+<a name="wp312040"> </a><div style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal" class="pSmartList2"><li><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Formats</span> describe the format in which numeric values will be printed and/or displayed. The recommended convention is to use standard FORTRAN-77 notation for describing the data format. For example, &quot;F7.2&quot; means to display seven digits with two digits to the right of the decimal point.</li></div>
 <a name="wp6857"> </a><div style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal" class="pSmartList2"><li><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Coordinate systems</span> contain information that should be used when interpreting or displaying the data. For example, the text strings &quot;cartesian&quot;, &quot;polar&quot; and &quot;spherical&quot; are recommended coordinate system descriptions.</li></div>
 <a name="wp6858"> </a><div style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal" class="pSmartList2"><li><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Ranges</span> define the maximum and minimum values of a selected valid range. The range may cover the entire data set, values outside the data set, or a subset of values within a data set. Because the HDF library does not check or update the range attribute as data is added or removed from the file, the calling program may assign any values deemed appropriate as long as they are of the same data type as the SDS array.</li></div>
 <a name="wp6925"> </a><div style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal" class="pSmartList2"><li><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Fill value</span> is the value used to fill the areas between non-contiguous writes to SDS arrays. For more information about fill values, refer to <a href="UG_SD.html#wp13948">Section&#160;3.10.5 on page&#160;108</a>.</li></div>
@@ -8101,7 +8101,7 @@ C<a name="wp219313"> </a>
 Predefined attributes are useful because they establish conventions that applications can depend on and because they are understood by the HDF library without users having to define them. Predefined attributes also ensure backward compatibility with earlier versions of the HDF library. They can be assigned only to data sets and dimensions. <a href="UG_SD.html#wp13798">Table 3U</a> lists the predefined attributes and the types of object each attribute can be assigned to.
 </p>
 <a name="wp13798"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 3U	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Predefined Attributes List</span></div>
+TABLE 3U	Predefined Attributes List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp10607table10597">
   <caption></caption>
@@ -8291,7 +8291,7 @@ There is one exception: unlike predefined data set attributes, predefined dimens
 The predefined attribute parameters are described in <a href="UG_SD.html#wp29658">Table 3V</a>. Creating a predefined attribute with parameters different from these will produce unpredictable results when the attribute is read using the corresponding predefined-attribute routine.
 </p>
 <a name="wp29658"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 3V	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Predefined Attribute Definitions</span></div>
+TABLE 3V	Predefined Attribute Definitions</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp249954table36051">
   <caption></caption>
@@ -8576,7 +8576,7 @@ len);
 <b class="cFunctionName">SDgetdatastrs</b> returns a value of <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). Its parameters are further described in <a href="UG_SD.html#wp143881">Table 3W</a>.
 </p>
 <a name="wp143881"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 3W	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDsetdatastrs and SDgetdatastrs Parameter Lists</span></div>
+TABLE 3W	SDsetdatastrs and SDgetdatastrs Parameter Lists</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp143746table143744">
   <caption></caption>
@@ -8822,7 +8822,7 @@ Minimum length of the string buffers
 </table>
 </div>
 <div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"></span>
+
 </div>
 <a name="wp13874"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
 	3.10.3	String Attributes of Dimensions
@@ -8863,7 +8863,7 @@ The argument <em class="cVarName">dim_id</em> is the dimension identifier, retur
 <b class="cFunctionName">SDgetdimstrs</b> returns a value of <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). Its parameters are further described in <a href="UG_SD.html#wp7136">Table 3X</a>.
 </p>
 <a name="wp7136"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 3X	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDsetdimstrs and SDgetdimstrs Parameter Lists</span></div>
+TABLE 3X	SDsetdimstrs and SDgetdimstrs Parameter Lists</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp36322table36320">
   <caption></caption>
@@ -9116,7 +9116,7 @@ The maximum and minimum range values are stored in the parameters <em class="cVa
 <b class="cFunctionName">SDgetrange</b> returns a value of <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). Its parameters are further described in <a href="UG_SD.html#wp13946">Table 3Y</a>.
 </p>
 <a name="wp13946"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 3Y	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDsetrange and SDgetrange Parameter Lists</span></div>
+TABLE 3Y	SDsetrange and SDgetrange Parameter Lists</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp36440table36438">
   <caption></caption>
@@ -9360,7 +9360,7 @@ Note that whenever a file has been newly opened, or has been closed and then re-
 <b class="cFunctionName">SDsetfillmode</b> returns the fill mode value before it is reset or a value of <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). The parameters of this routine are further described in <a href="UG_SD.html#wp147975">Table 3Z</a>.
 </p>
 <a name="wp147975"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 3Z	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDsetfillvalue, SDgetfillvalue, and SDsetfillmode Parameter Lists</span></div>
+TABLE 3Z	SDsetfillvalue, SDgetfillvalue, and SDsetfillmode Parameter Lists</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp147886table147884">
   <caption></caption>
@@ -9593,7 +9593,7 @@ Because the HDF library does not actually apply calibration information to the d
 <b class="cFunctionName">SDgetcal</b> returns a value of <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). The parameters of <b class="cFunctionName">SDgetcal</b> are described in <a href="UG_SD.html#wp14040">Table 3AA</a>.
 </p>
 <a name="wp14040"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 3AA	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDsetcal and SDgetcal Parameter Lists</span></div>
+TABLE 3AA	SDsetcal and SDgetcal Parameter Lists</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp23993table10796">
   <caption></caption>
@@ -9960,7 +9960,7 @@ Furthermore, if the system maximum limit is reached, the library will push the e
 <b class="cFunctionName">SDget_numopenfiles</b> returns the number of opened files or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). The parameters of <b class="cFunctionName">SDget_numopenfiles </b> are specified in <a href="UG_SD.html#wp296407">Table 3AB</a>.
 </p>
 <a name="wp296407"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 3AB	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDgetfilename, SDgetnamelen, SDreset_maxopenfiles, SDget_maxopenfiles, and<br />	SDget_numopenfiles Parameter Lists</span></div>
+TABLE 3AB	SDgetfilename, SDgetnamelen, SDreset_maxopenfiles, SDget_maxopenfiles, and<br />	SDget_numopenfiles Parameter Lists</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp296411table296409">
   <caption></caption>
@@ -10238,7 +10238,7 @@ The operation on <em class="cVarName">fill_one</em> is performed before the oper
 <b class="cFunctionName">SDsetnbitdataset</b> returns a value of <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). The parameters for <b class="cFunctionName">SDsetnbitdataset</b> are specified in <a href="UG_SD.html#wp50163">Table 3O</a>.
 </p>
 <a name="wp252392"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 3AC	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDsetnbitdataset Parameter List</span></div>
+TABLE 3AC	SDsetnbitdataset Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp252319table252317">
   <caption></caption>
@@ -10588,7 +10588,7 @@ Refer to the description of the union <code style="font-family: Courier New; fon
 <b class="cFunctionName">SDsetchunk</b> returns either a value of <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). Refer to <a href="UG_SD.html#wp170663">Table 3AD</a> and <a href="UG_SD.html#wp170717">Table 3AE</a> for the descriptions of the parameters of both versions.
 </p>
 <a name="wp170663"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 3AD	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDsetchunk Parameter List</span></div>
+TABLE 3AD	SDsetchunk Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp170621table170619">
   <caption></caption>
@@ -10669,7 +10669,7 @@ Flag determining the behavior of the routine
 
 </div>
 <a name="wp170717"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 3AE	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">sfschnk Parameter List</span></div>
+TABLE 3AE	sfschnk Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp170667table170665">
   <caption></caption>
@@ -10782,7 +10782,7 @@ Currently the only allowed value of the parameter <em class="cVarName">flag</em>
 <b class="cFunctionName">SDsetchunkcache</b> returns the maximum number of chunks that can be cached (the value of the parameter <em class="cVarName">maxcache</em>) if successful and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) otherwise. The parameters of <b class="cFunctionName">SDsetchunkcache</b> are further described in <a href="UG_SD.html#wp158622">Table 3AF</a>.
 </p>
 <a name="wp158622"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 3AF	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDsetchunkcache Parameter List</span></div>
+TABLE 3AF	SDsetchunkcache Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp158568table158566">
   <caption></caption>
@@ -10899,8 +10899,8 @@ Both <b class="cFunctionName">SDwritedata</b> and <b class="cFunctionName">SDwri
 The location of data in a chunked SDS can be specified in two ways. The first is the standard method used in the routine <b class="cFunctionName">SDwritedata</b> that access both chunked and non-chunked SDSs; this method refers to the starting location as an offset in elements from the origin of the SDS array itself. The second method is used by the routine <b class="cFunctionName">SDwritechunk</b> that only access chunked SDSs; this method refers to the origin of the chunk as an offset in chunks from the origin of the chunk array itself. The parameter <em class="cVarName">origin</em> specifies this offset; it also may be considered as chunk&#39;s coordinates in the chunk array. <a href="UG_SD.html#wp117559">Figure&#160;3d on page&#160;119</a> illustrates this method of chunk indexing in a 4-by-4 element SDS array with 2-by-2 element chunks.
 </p>
 <a name="wp117559"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
-FIGURE 3d	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Chunk Indexing as an Offset in Chunks</span></div>
-<div align="left"><img src="images/hdf4_03-UG_SD-1-4.jpg" height="320" width="521" id="wp117501" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
+FIGURE 3d	Chunk Indexing as an Offset in Chunks</div>
+<div align="left"><img src="images/hdf4_07-UG_SD-1-4.jpg" height="320" width="521" id="wp117501" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
 
 </div>
 <a name="wp47046"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
@@ -10916,7 +10916,7 @@ There are two FORTRAN-77 versions of this routine: <span style="color: #000000; 
 <b class="cFunctionName">SDwritechunk</b> returns either a value of <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). The parameters of <b class="cFunctionName">SDwritechunk</b> are in <a href="UG_SD.html#wp47094">Table 3AG</a>. The parameters of <b class="cFunctionName">SDwritedata</b> are listed in <a href="UG_SD.html#wp16757">Table 3D on page 33</a>.
 </p>
 <a name="wp47094"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 3AG	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDwritechunk Parameter List</span></div>
+TABLE 3AG	SDwritechunk Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp47054table47052">
   <caption></caption>
@@ -11042,7 +11042,7 @@ There are two FORTRAN-77 versions of this routine: <span style="color: #000000; 
 <b class="cFunctionName">SDreadchunk</b> returns either a value of <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). The parameters of <b class="cFunctionName">SDreadchunk</b> are further described in <a href="UG_SD.html#wp47151">Table 3AH</a>. The parameters of <b class="cFunctionName">SDreaddata</b> are listed in <a href="UG_SD.html#wp17383">Table 3K on page 59</a>.
 </p>
 <a name="wp47151"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 3AH	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDreadchunk Parameter List</span></div>
+TABLE 3AH	SDreadchunk Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp158635table47109">
   <caption></caption>
@@ -11176,7 +11176,7 @@ Note that if the data set is empty, <b class="cFunctionName">SDgetchunkinfo</b> 
 <b class="cFunctionName">SDgetchunkinfo</b> returns either a value of <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). Refer to <a href="UG_SD.html#wp149604">Table 3AI</a> and <a href="UG_SD.html#wp149490">Table 3AJ</a> for the description of the parameters of both versions.
 </p>
 <a name="wp149604"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 3AI	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDgetchunkinfo Parameter List</span></div>
+TABLE 3AI	SDgetchunkinfo Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp149562table149560">
   <caption></caption>
@@ -11257,7 +11257,7 @@ Flag determining the behavior of the routine
 
 </div>
 <a name="wp149490"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 3AJ	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">sfgichnk Parameter List</span></div>
+TABLE 3AJ	sfgichnk Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp149670table149438">
   <caption></caption>
@@ -11907,8 +11907,8 @@ C<a name="wp219912"> </a>
 In cases where the size of the SDS array is not an even multiple of the chunk size, regions of excess array space beyond the defined dimensions of the SDS will be created. Refer to the following illustration.
 </p>
 <a name="wp47775"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
-FIGURE 3e	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Array Locations Created Beyond the Defined Dimensions of an SDS</span></div>
-<div align="left"><img src="images/hdf4_03-UG_SD-1-5.jpg" height="284" width="517" id="wp47699" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
+FIGURE 3e	Array Locations Created Beyond the Defined Dimensions of an SDS</div>
+<div align="left"><img src="images/hdf4_07-UG_SD-1-5.jpg" height="284" width="517" id="wp47699" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
 
 </div>
 <a name="wp47776"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
@@ -11974,7 +11974,7 @@ The first three models can create, read, and write SDSs in HDF files. Both the S
 The SD interface is the only HDF interface capable of accessing the XDR-based netCDF file format. The DFSD interface cannot access XDR-based files and can only access SDS arrays, dimension scales, and predefined attributes. A summary of file interoperability among the three interfaces is provided in <a href="UG_SD.html#wp29748">Table 3AK</a>.
 </p>
 <a name="wp29748"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 3AK	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Summary of HDF and XDR File Compatibility for the HDF and netCDF APIs</span></div>
+TABLE 3AK	Summary of HDF and XDR File Compatibility for the HDF and netCDF APIs</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp36623table36619">
   <caption></caption>
@@ -12091,7 +12091,7 @@ Yes
 A summary of NC function calls and their SD equivalents is presented in <a href="UG_SD.html#wp14092">Table 3AL</a>. 
 </p>
 <a name="wp14092"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 3AL	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">NC Interface Routine Calls and their SD Equivalents</span></div>
+TABLE 3AL	NC Interface Routine Calls and their SD Equivalents</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp159069table159067">
   <caption></caption>
@@ -12655,10 +12655,10 @@ When used with an HDF file on some platforms (reported on SGI), <b class="cFunct
 </p>
 
 <a name="wp303703"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 3pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-<a href="#wp303694"><sup class="Footnote">1</sup></a><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">netCDF-3 User&#39;s Guide for C</span> (June 5, 1997), Section 7, <a href="http://www.unidata.ucar.edu/packages/netcdf/guidec/"><span class="cWebJump">http://www.unidata.ucar.edu/packages/netcdf/guidec/</span></a>.
+<a href="#wp303694"><sup class="Footnote">1</sup></a><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">netCDF-3 User&#39;s Guide for C</span> (June 5, 1997), Section 7, <a href="http://www.unidata.ucar.edu/software/netcdf/docs/netcdf/"><span class="cWebJump">http://www.unidata.ucar.edu/software/netcdf/docs/netcdf/</span></a>.
 </div>
-<a name="wp134907"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 3pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-<a href="#wp134904"><sup class="Footnote">2</sup></a><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">netCDF-3 User&#39;s Guide for C</span> (June 5, 1997), Section 2, <a href="http://www.unidata.ucar.edu/packages/netcdf/guidec/"><span class="cWebJump">http://www.unidata.ucar.edu/packages/netcdf/guidec/</span></a>.
+<a name="wp312090"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 3pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+<a href="#wp312087"><sup class="Footnote">2</sup></a><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">netCDF-3 User&#39;s Guide for C</span> (June 5, 1997), Section 2, <a href="http://www.unidata.ucar.edu/software/netcdf/docs/netcdf/"><span class="cWebJump">http://www.unidata.ucar.edu/software/netcdf/docs/netcdf/</span></a>.
 </div>
     </blockquote>
 

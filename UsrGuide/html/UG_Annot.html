@@ -7,11 +7,11 @@
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.8.2296" />
     <meta name="TEMPLATEBASE" content="HDF4 Version 1.0" />
-    <meta name="LASTUPDATED" content="02/23/12 05:01:45" />
+    <meta name="LASTUPDATED" content="03/06/12 10:00:14" />
     <title>Chapter 11	Single-file Annotations (DFAN API)</title>
     <link rel="StyleSheet" href="document.css" type="text/css" media="all" />
     <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
-<link rel="first" title="First" href="UG_Intro.html" />
+<link rel="first" title="First" href="UG_htmlLOF.html" />
 <link rel="last" title="Last" href="UG_Top.html" />
 <link rel="previous" title="Previous" href="UG_MF_Annot.html" />
 <link rel="next" title="Next" href="UG_DFSD.html" />
@@ -90,7 +90,7 @@ These functions are divided into the following categories:
 The DFAN interface routines are listed in the following table and are discussed in the subsequent sections of this document.
 </p>
 <a name="wp3683"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 11A	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFAN Library Routines</span></div>
+TABLE 11A	DFAN Library Routines</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp15229table15227">
   <caption></caption>
@@ -339,7 +339,7 @@ Clears the internal tables and structures used by the DFAN interface
 <a href="UG_Annot.html#wp3696">Table 11B</a> lists the annotation tags defined in HDF versions 2.0, 3.0, and 4.0. Newly-defined tag names in each version are bolded. For a more complete list of tags, refer to the <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF Specifications and Developer&#39;s Guide v3.2</span> from the HDF web site at <a href="http://www.hdfgroup.org/"><span class="cWebJump">http://www.hdfgroup.org/</span></a>.
 </p>
 <a name="wp3696"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 11B	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">List of Annotation Interface Tags in HDF Versions 2.0, 3.0 and 4.0</span></div>
+TABLE 11B	List of Annotation Interface Tags in HDF Versions 2.0, 3.0 and 4.0</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp15372table15370">
   <caption></caption>
@@ -850,7 +850,7 @@ To write a file label, the calling program must call <b class="cFunctionName">DF
 <b class="cFunctionName">DFANaddfid</b> has two parameters: <em class="cVarName">file_id</em> and <em class="cVarName">label</em>. The <em class="cVarName">file_id</em> parameter contains the file identifier for the file to be annotated and the <em class="cVarName">label</em> parameter contains the annotation string. The label array must be null-terminated. 	In the FORTRAN-77 version, the length of the label should be the length of the label array as in FORTRAN-77 string lengths are assumed to be the declared length of the array that holds the string. 
 </p>
 <a name="wp9793"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-The parameters of <b class="cFunctionName">DFANaddfid</b> are further defined in <a href="UG_Annot.html#wp3822">Table 11C on page 392</a>.
+The parameters of <b class="cFunctionName">DFANaddfid</b> are further defined in <a href="UG_Annot.html#wp3822">Table 11C on page 394</a>.
 </p>
 <a name="wp3787"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
 	11.4.2	Assigning a File Description: DFANaddfds
@@ -869,7 +869,7 @@ To write a file description, the calling program must call <b class="cFunctionNa
 The parameters of <b class="cFunctionName">DFANaddfds</b> are defined in <a href="UG_Annot.html#wp3822">Table 11C</a>. 
 </p>
 <a name="wp3822"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 11C	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFANaddfid and DFANaddfds Parameter List</span></div>
+TABLE 11C	DFANaddfid and DFANaddfds Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp15638table15636">
   <caption></caption>
@@ -1096,7 +1096,7 @@ To write an object description, the calling program must contain a call to <b cl
 The parameters of <b class="cFunctionName">DFANputdesc</b> are further defined in <a href="UG_Annot.html#wp3951">Table 11D</a>.
 </p>
 <a name="wp3951"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 11D	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFANputlabel and DFANputdesc Parameter List</span></div>
+TABLE 11D	DFANputlabel and DFANputdesc Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp15718table15716">
   <caption></caption>
@@ -1468,7 +1468,7 @@ When <b class="cFunctionName">DFANgetfdslen</b> is first called for a given file
 The parameters of these routines are described further in the following table.
 </p>
 <a name="wp2971"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 11E	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFANgetfidlen, DFANgetfid, DFANgetfdslen, and DFANgetfds Parameter List</span></div>
+TABLE 11E	DFANgetfidlen, DFANgetfid, DFANgetfdslen, and DFANgetfds Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp15838table15836">
   <caption></caption>
@@ -1863,7 +1863,7 @@ To read the first object description in a file, the calling program must contain
 The parameters of <b class="cFunctionName">DFANgetdesclen</b> and <b class="cFunctionName">DFANgetdesc</b> are defined in the following table.
 </p>
 <a name="wp4351"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 11F	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFANgetlablen, DFANgetlabel, DFANgetdesc and DFANgetdesclen Parameter List</span></div>
+TABLE 11F	DFANgetlablen, DFANgetlabel, DFANgetdesc and DFANgetdesclen Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp15989table15987">
   <caption></caption>
@@ -2289,7 +2289,7 @@ When a file is regenerated in a single run by a library routine of another inter
 	<b class="cFunctionName">DFANclear</b> returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) if successful and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) otherwise. <b class="cFunctionName">DFANclear </b>takes no parameters, as described in the following table.
 </p>
 <a name="wp12883"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 11G	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFANclear Parameter List</span></div>
+TABLE 11G	DFANclear Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp16181table16179">
   <caption></caption>
@@ -2405,7 +2405,7 @@ The <b class="cFunctionName">DF*lastref</b> routines have no parameters. The <b 
 The <b class="cFunctionName">DF*lastref</b> and <b class="cFunctionName">DF*writeref</b> routines are further described in the following table.
 </p>
 <a name="wp4500"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 11H	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">List and Descriptions of the DF*writeref and DF*lastref Routines</span></div>
+TABLE 11H	List and Descriptions of the DF*writeref and DF*lastref Routines</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp2439table2431">
   <caption></caption>
@@ -2600,7 +2600,7 @@ To create a list of reference numbers and their labels for a given tag, the foll
 	Taken together, the contents of <em class="cVarName">ref_list</em> and <em class="cVarName">label_list</em> constitute a directory of all objects and their labels for a given tag. The contents of <em class="cVarName">label_list</em> can be displayed to show all of the labels for a given tag or it can be searched to find the reference number of a data object with a certain label. Once the reference number for a given label is found, the corresponding data object can be accessed by invoking other HDF routines. Therefore, this routine provides a mechanism for direct access to data objects in HDF files.
 </p>
 <a name="wp11431"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 11I	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFANlablist Parameter List</span></div>
+TABLE 11I	DFANlablist Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp16220table16218">
   <caption></caption>

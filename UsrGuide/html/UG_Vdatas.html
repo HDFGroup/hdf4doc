@@ -7,11 +7,11 @@
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.8.2296" />
     <meta name="TEMPLATEBASE" content="HDF4 Version 1.0" />
-    <meta name="LASTUPDATED" content="02/23/12 05:00:54" />
+    <meta name="LASTUPDATED" content="03/06/12 09:59:23" />
     <title>Chapter 4	Vdatas (VS API)</title>
     <link rel="StyleSheet" href="document.css" type="text/css" media="all" />
     <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
-<link rel="first" title="First" href="UG_Intro.html" />
+<link rel="first" title="First" href="UG_htmlLOF.html" />
 <link rel="last" title="Last" href="UG_Top.html" />
 <link rel="previous" title="Previous" href="UG_SD.html" />
 <link rel="next" title="Next" href="UG_Vgroups.html" />
@@ -70,8 +70,8 @@ The<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; f
 A vdata is like a table that consists of a collection of <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">records</span> whose values are stored in fixed-length <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">fields</span>. All records have the same structure and all values in each field have the same data type. <a href="UG_Vdatas.html#wp8180"><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">(See Figure 4a.)</span></a> The library does not check for uniqueness in vdata&#39;s name, class, or field names. For example, when two vdatas having the same name, the first vdata will always be returned by VSfind().
 </p>
 <a name="wp8180"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
-FIGURE 4a	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Vdata Table Structure</span></div>
-<div align="left"><img src="images/hdf4_04-UG_Vdatas-1-1.jpg" height="229" width="517" id="wp8100" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
+FIGURE 4a	Vdata Table Structure</div>
+<div align="left"><img src="images/hdf4_08-UG_Vdatas-1-1.jpg" height="229" width="517" id="wp8100" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
 	
 </div>
 <a name="wp8092"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
@@ -93,8 +93,8 @@ The Vdata model allows multiple entries per field as long as they have the same 
 The organizational structure of a vdata is often determined by the data types of its data set or sets. For example, given a data set describing the location (&quot;X,Y&quot;) and temperature (&quot;Temp&quot;) of points in a plane, there are several ways to organize the data. <a href="UG_Vdatas.html#wp5368">(See Figure 4b.)</a> If the &quot;X&quot;, &quot;Y&quot; and &quot;Temp&quot; values are of the same data type, they could be stored as three single-component fields, as a two-component &quot;X,Y&quot; field and a single-component &quot;Temp&quot; field, or as a three-component &quot;X,Y,Temp&quot; field. Generally the &quot;X,Y&quot; data is stored in a single field, but HDF places no restrictions on the organization of field data and there are no significant HDF performance issues involved in choosing one organizational regime over another.
 </p>
 <a name="wp5368"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
-FIGURE 4b	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Three Different Vdata Structures for Data of the Same Number Type</span></div>
-<div align="left"><img src="images/hdf4_04-UG_Vdatas-1-2.jpg" height="188" width="521" id="wp522" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
+FIGURE 4b	Three Different Vdata Structures for Data of the Same Number Type</div>
+<div align="left"><img src="images/hdf4_08-UG_Vdatas-1-2.jpg" height="188" width="521" id="wp522" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
 	
 </div>
 <a name="wp12906"> </a><h2 style="font-family: Times New Roman; font-size: 14pt; margin-top: 14pt" class="pHeading2">
@@ -128,7 +128,7 @@ Vdata routines let you define, organize and manipulate vdatas. They are categori
 </ul></div>
 </ul></div>
 <a name="wp81483"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 4A	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Vdata Interface Routines</span></div>
+TABLE 4A	Vdata Interface Routines</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp81416table81414">
   <caption></caption>
@@ -930,7 +930,7 @@ The parameters for <b class="cFunctionName">VSdetach</b> and <b class="cFunction
 <b class="cFunctionName">Hclose</b> terminates access to a file and should only be called after all <b class="cFunctionName">Vend</b> calls have been made to close the Vdata interface. Refer to <a href="UG_Fundmtls.html">Chapter 2, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF Fundamentals</span></a>, for a description of <b class="cFunctionName">Hclose</b>.
 </p>
 <a name="wp98079"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 4B	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Vstart, VSattach, VSdetach, and Vend Parameter Lists</span></div>
+TABLE 4B	Vstart, VSattach, VSdetach, and Vend Parameter Lists</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp97990table97988">
   <caption></caption>
@@ -1524,8 +1524,8 @@ The high-level VH routines are useful when writing one-field vdatas and complete
 <a href="UG_Vdatas.html#wp58649"><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Figure 4c</span></a> shows two examples of single-field vdatas. The fields can be single-component or multi-component fields. With a multi-component field, they may contain one or more values of the same data type.
 </p>
 <a name="wp58649"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
-FIGURE 4c	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Single- and Multi-component Vdatas</span></div>
-<div align="left"><img src="images/hdf4_04-UG_Vdatas-1-3.jpg" height="229" width="517" id="wp58549" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
+FIGURE 4c	Single- and Multi-component Vdatas</div>
+<div align="left"><img src="images/hdf4_08-UG_Vdatas-1-3.jpg" height="229" width="517" id="wp58549" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
 
 </div>
 <a name="wp8306"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
@@ -1579,7 +1579,7 @@ The FORTRAN-77 version of <b class="cFunctionName">VHstoredata</b> has two routi
 Both routines return the reference number of the newly-created vdata or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) if the operation is unsuccessful. The parameters for <b class="cFunctionName">VHstoredata</b> and <b class="cFunctionName">VHstoredatam</b> are further described in <a href="UG_Vdatas.html#wp5754">Table 4C</a>.
 </p>
 <a name="wp5754"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 4C	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">VHstoredata and VHstoredatam Parameter Lists</span></div>
+TABLE 4C	VHstoredata and VHstoredatam Parameter Lists</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp58677table22820">
   <caption></caption>
@@ -2146,7 +2146,7 @@ Note that <b class="cFunctionName">VSfdefine</b> does not allocate memory for th
 <b class="cFunctionName">VSfdefine</b> returns either <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). The parameters for <b class="cFunctionName">VSfdefine</b> are further described in <a href="UG_Vdatas.html#wp6006">Table 4E on page 159</a>.
 </p>
 <a name="wp84426"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 4D	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Predefined Data Types and Field Names for Vdata Fields</span></div>
+TABLE 4D	Predefined Data Types and Field Names for Vdata Fields</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp84371table84369">
   <caption></caption>
@@ -2282,8 +2282,8 @@ As with file interlacing, the default buffer interlace mode is <code style="font
 In <a href="UG_Vdatas.html#wp6001">Figure 4d</a>, the illustrated vdata has four fields and three records.
 </p>
 <a name="wp6001"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
-FIGURE 4d	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Interlaced and Non-Interlaced Vdata Contents</span></div>
-<div align="left"><img src="images/hdf4_04-UG_Vdatas-1-4.jpg" height="137" width="521" id="wp714" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
+FIGURE 4d	Interlaced and Non-Interlaced Vdata Contents</div>
+<div align="left"><img src="images/hdf4_08-UG_Vdatas-1-4.jpg" height="137" width="521" id="wp714" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
 
 </div>
 <a name="wp10550"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
@@ -2312,7 +2312,7 @@ If a file with the name specified by <em class="cVarName">filename</em> exists i
 <b class="cFunctionName">VSsetexternalfile</b> returns either <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). The parameters for <b class="cFunctionName">VSsetexternalfile</b> are further described in <a href="UG_Vdatas.html#wp6006">Table 4E on page 159</a>.
 </p>
 <a name="wp6006"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 4E	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">VSsetname, VSsetclass, VSfdefine, VSsetfields, and VSsetinterlace Parameter Lists</span></div>
+TABLE 4E	VSsetname, VSsetclass, VSfdefine, VSsetfields, and VSsetinterlace Parameter Lists</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp14296table2655">
   <caption></caption>
@@ -2729,8 +2729,8 @@ Note that, because the record location numbering starts at 0, the record locatio
 See the notes regarding the potential performance impact of appendable data sets in <a href="UG_Perform.html#wp178683">Section 14.4.3, &quot;Unlimited Dimension Data Sets (SDSs and Vdatas) and Performance.&quot;</a>
 </p>
 <a name="wp8228"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
-FIGURE 4e	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Setting the Record Pointer to the End of a Vdata</span></div>
-<div align="left"><img src="images/hdf4_04-UG_Vdatas-1-5.jpg" height="301" width="521" id="wp8265" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
+FIGURE 4e	Setting the Record Pointer to the End of a Vdata</div>
+<div align="left"><img src="images/hdf4_08-UG_Vdatas-1-5.jpg" height="301" width="521" id="wp8265" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
 
 </div>
 <a name="wp8262"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
@@ -2749,8 +2749,8 @@ In this illustration, the vdata to which we plan to append data contains 4 recor
 Recall that the <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">file interlacing</span> is set by <b class="cFunctionName">VSsetinterlace</b> when the vdata is created, and the <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">buffer interlacing</span> is specified by the parameter <em class="cVarName">interlace_mode</em> in the call to <b class="cFunctionName">VSwrite</b> when data is written to the file. The array <em class="cVarName">databuf</em> is assumed to be organized in memory as specified by <em class="cVarName">interlace_mode</em>. Setting <em class="cVarName">interlace_mode</em> to <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FULL_INTERLACE</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) indicates that the array in memory is organized by record, whereas to <code style="font-family: Courier New; font-size: 8pt" class="cDefName">NO_INTERLACE</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">1</code>) indicates that the array is organized by field. <a href="UG_Vdatas.html#wp6075">(See Figure 4f.)</a> <b class="cFunctionName">VSwrite</b> will write interlaced or non-interlaced data to a vdata in a file: interlaced data in the buffer can be written to the vdata in the file as non-interlaced data and vice versa. If the data is to be stored with an interlace mode different from that of the buffer, <b class="cFunctionName">VSsetinterlace</b> (described in <a href="UG_Vdatas.html#wp5992">Section&#160;4.5.1.4 on page&#160;157</a>) must be called prior to <b class="cFunctionName">VSwrite</b>. Multiple write operations can only be used on fully-interlaced vdatas in the file.
 </p>
 <a name="wp6075"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
-FIGURE 4f	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Writing Interlaced or Non-interlaced Buffers into Interlaced or Non-interlaced Vdatas</span></div>
-<div align="left"><img src="images/hdf4_04-UG_Vdatas-1-6.jpg" height="304" width="521" id="wp1078" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
+FIGURE 4f	Writing Interlaced or Non-interlaced Buffers into Interlaced or Non-interlaced Vdatas</div>
+<div align="left"><img src="images/hdf4_08-UG_Vdatas-1-6.jpg" height="304" width="521" id="wp1078" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
 
 </div>
 <a name="wp6077"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
@@ -2769,7 +2769,7 @@ The FORTRAN-77 version of <b class="cFunctionName">VSwrite</b> has three routine
 <b class="cFunctionName">VSwrite</b> returns the total number of records written or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). Its parameters are further defined in <a href="UG_Vdatas.html#wp6080">Table 4F</a>.
 </p>
 <a name="wp6080"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 4F	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">VSseek and VSwrite Parameter Lists</span></div>
+TABLE 4F	VSseek and VSwrite Parameter Lists</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp14573table3528">
   <caption></caption>
@@ -3159,7 +3159,7 @@ See the notes regarding the potential performance impact of block size in <a hre
 <b class="cFunctionName">VSsetblocksize </b>and<b class="cFunctionName"> VSsetnumblocks </b>both return <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCESS</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) upon successful completion or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). Their parameters are further defined in <a href="UG_Vdatas.html#wp115883">Table 4G</a>.
 </p>
 <a name="wp115883"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 4G	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">VSsetblocksize and VSsetnumblocks Parameter Lists</span></div>
+TABLE 4G	VSsetblocksize and VSsetnumblocks Parameter Lists</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp115818table115816">
   <caption></caption>
@@ -3306,8 +3306,8 @@ n_records, fieldname_list, bufptrs)
 The process of removing the alignment bytes is called &quot;packing the array.&quot; An illustration of this process is provided in <a href="UG_Vdatas.html#wp59353"><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Figure 4g</span></a>. The data provided by the user is stored in the structure in memory.  The field values are aligned with padded bytes.  <b class="cFunctionName">VSfpack</b> packs the data into the array in memory after removing the padded bytes.  The packed data is then written to the vdata in the file by <b class="cFunctionName">VSwrite</b>.
 </p>
 <a name="wp59353"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
-FIGURE 4g	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Removing Alignment Bytes When Writing Data From a C Structure to a Vdata</span></div>
-<div align="left"><img src="images/hdf4_04-UG_Vdatas-1-7.jpg" height="205" width="521" id="wp59107" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
+FIGURE 4g	Removing Alignment Bytes When Writing Data From a C Structure to a Vdata</div>
+<div align="left"><img src="images/hdf4_08-UG_Vdatas-1-7.jpg" height="205" width="521" id="wp59107" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
 
 </div>
 <a name="wp64398"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
@@ -3341,7 +3341,7 @@ The FORTRAN-77 version of <b class="cFunctionName">VSfpack</b> has two routines:
 <b class="cFunctionName">VSfpack</b> returns either <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). The parameters for <b class="cFunctionName">VSfpack</b> are described in <a href="UG_Vdatas.html#wp25099">Table 4H</a>.
 </p>
 <a name="wp25099"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 4H	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">VSfpack Parameter List</span></div>
+TABLE 4H	VSfpack Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp24991table24989">
   <caption></caption>
@@ -3838,7 +3838,7 @@ n_records, fieldname_list, bufptrs)
 	4.6.1	Initializing the Fields for Read Access: VSsetfields
 </h3>
 <a name="wp26072"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-<b class="cFunctionName">VSsetfields</b> establishes access to the fields to be read by the next read operation. The argument <em class="cVarName">fieldname_list</em> is a comma-separated string of the field names with no white space. The order the field names occur in <em class="cVarName">fieldname_list</em> is the order in which the fields will be read. For example, assume that a vdata contains fields named A, B, C, D, E, F in that order. The following declarations demonstrate how to use <em class="cVarName">fieldname_list</em> to read a single field, a collection of random fields, and all the fields in reverse order:
+<b class="cFunctionName">VSsetfields</b> is used to establish access to the fields to be read by the next read operation. The argument <em class="cVarName">fieldname_list</em> is a comma-separated string of the field names with no white space. The order the field names occur in <em class="cVarName">fieldname_list</em> is the order in which the fields will be read. For example, assume that a vdata contains fields named A, B, C, D, E, F in that order. The following declarations demonstrate how to use <em class="cVarName">fieldname_list</em> to read a single field, a collection of random fields, and all the fields in reverse order:
 </p>
 <div class="pSmartList1" style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal"><ul class="pSmartList1" style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal">
 <div class="pSmartList2" style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal"><ul class="pSmartList2" style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal">
@@ -3872,7 +3872,7 @@ The FORTRAN-77 version of <b class="cFunctionName">VSread</b> has three routines
 <b class="cFunctionName">VSread</b> returns the total number of records read if successful and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) otherwise. The parameters for <b class="cFunctionName">VSread</b> are further defined in <a href="UG_Vdatas.html#wp10766">Table 4I</a>.
 </p>
 <a name="wp10766"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 4I	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">VSread Parameter List</span></div>
+TABLE 4I	VSread Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp23007table23005">
   <caption></caption>
@@ -4478,7 +4478,7 @@ The parameter <em class="cVarName">fieldname_list</em> is a string of comma-sepa
 <b class="cFunctionName">VSfexist</b> returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) if all of the fields specified in the parameter <em class="cVarName">fieldname_list</em> are found and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) otherwise. The parameters for <b class="cFunctionName">VSfexist</b> are listed in <a href="UG_Vdatas.html#wp6857">Table 4J</a>.
 </p>
 <a name="wp6857"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 4J	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">VSlone, VSgetid, VSfind, and VSfexist Parameter Lists</span></div>
+TABLE 4J	VSlone, VSgetid, VSfind, and VSfexist Parameter Lists</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp15259table3910">
   <caption></caption>
@@ -5031,7 +5031,7 @@ When <em class="cVarName">start_vd</em> equals or is greater than the number of 
 <b class="cFunctionName">VSofclass</b> returns the number of vdatas retrieved, if successful, or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>), otherwise.  The parameters of this routine are further defined in <a href="UG_Vdatas.html#wp153863">Table 4K</a>.
 </p>
 <a name="wp153863"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 4K	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">VSgetvdatas, VSisinternal, and VSofclass Parameter Lists</span></div>
+TABLE 4K	VSgetvdatas, VSisinternal, and VSofclass Parameter Lists</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp155583table153692">
   <caption></caption>
@@ -5304,7 +5304,7 @@ The parameter <em class="cVarName">field_index</em> is the index number that uni
 <b class="cFunctionName">VSfindex</b> returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) if successful and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) otherwise. The parameters for <b class="cFunctionName">VSfindex</b> are further defined in <a href="UG_Vdatas.html#wp18550">Table 4L</a>.
 </p>
 <a name="wp18550"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 4L	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">VSfindex Parameter List</span></div>
+TABLE 4L	VSfindex Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp18499table18497">
   <caption></caption>
@@ -5459,7 +5459,7 @@ The FORTRAN-77 versions of <b class="cFunctionName">VSgetattr</b> has two routin
 <b class="cFunctionName">VSgetattr</b> returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) if successful and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) otherwise. The parameters for <b class="cFunctionName">VSgetattr</b> are described in <a href="UG_Vdatas.html#wp56380">Table 4M</a>.
 </p>
 <a name="wp56380"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 4M	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">VSsetattr and VSgetattr Parameter Lists</span></div>
+TABLE 4M	VSsetattr and VSgetattr Parameter Lists</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp56317table56315">
   <caption></caption>
@@ -5726,7 +5726,7 @@ If <em class="cVarName">field_index</em> is set to a zero-based integer value, i
 <b class="cFunctionName">VSfnattrs</b> returns the number of attributes assigned to the specified vdata or to the specified vdata field when successful, and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) otherwise. The parameters for <b class="cFunctionName">VSfnattrs</b> are described in <a href="UG_Vdatas.html#wp17850">Table 4N</a>.
 </p>
 <a name="wp17850"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 4N	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">VSnattrs and VSfnattrs Parameter Lists</span></div>
+TABLE 4N	VSnattrs and VSfnattrs Parameter Lists</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp17739table17737">
   <caption></caption>
@@ -5892,7 +5892,7 @@ The HDF library stores vdata attributes and vdata field attributes as vdatas. HD
 <b class="cFunctionName">VSisattr</b> returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">TRUE</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">1</code>) if the vdata contains an attribute data and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FALSE</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) otherwise. The parameters for <b class="cFunctionName">VSisattr</b> are described in <a href="UG_Vdatas.html#wp18318">Table 4O</a>.
 </p>
 <a name="wp18318"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 4O	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">VSfindattr, VSattrinfo, and VSisattr Parameter Lists</span></div>
+TABLE 4O	VSfindattr, VSattrinfo, and VSisattr Parameter Lists</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp61321table18205">
   <caption></caption>
@@ -6449,7 +6449,7 @@ If any of the parameters are set to <code style="font-family: Courier New; font-
 <b class="cFunctionName">VSinquire</b> returns either <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). The parameters for <b class="cFunctionName">VSinquire</b> are further defined in <a href="UG_Vdatas.html#wp51411">Table 4P</a>.
 </p>
 <a name="wp51411"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 4P	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">VSinquire Parameter List</span></div>
+TABLE 4P	VSinquire Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp51328table51326">
   <caption></caption>
@@ -6817,7 +6817,7 @@ The application must provide sufficient buffer for the external file name.  When
 The parameters of <b class="cFunctionName">VSgetexternalinfo</b> are described in <a href="UG_Vdatas.html#wp116101">Table 4Q</a>.
 </p>
 <a name="wp116101"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 4Q	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">VSgetblockinfo Parameter List</span></div>
+TABLE 4Q	VSgetblockinfo Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp115997table115995">
   <caption></caption>
@@ -7054,7 +7054,7 @@ All VSQuery routines except <b class="cFunctionName">VSQuerytag</b> and <b class
 <b class="cFunctionName">VSQuerytag</b> and <b class="cFunctionName">VSQueryref</b> return the tag and reference number, respectively, or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). All other routines return <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). The parameters for these routines are listed in <a href="UG_Vdatas.html#wp58217"><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Table 4R</span></a>.
 </p>
 <a name="wp58217"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 4R	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">VSQuery Routines Parameter Lists</span></div>
+TABLE 4R	VSQuery Routines Parameter Lists</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp58055table58053">
   <caption></caption>
@@ -7406,7 +7406,7 @@ With the exception of <b class="cFunctionName">VSgetclass</b>, the information o
 The parameters for these routines are described in <a href="UG_Vdatas.html#wp8663">Table 4S</a>.
 </p>
 <a name="wp8663"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 4S	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">VSelts, VSgetfields, VSgetinterlace, VSsizeof, VSgetname, and VSgetclass Parameter Lists</span></div>
+TABLE 4S	VSelts, VSgetfields, VSgetinterlace, VSsizeof, VSgetname, and VSgetclass Parameter Lists</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp8559table8557">
   <caption></caption>
@@ -7714,7 +7714,7 @@ The functionality of each of the VF routines is as follows:
 If the operations are unsuccessful, these routines return <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). The parameters for all of these routines are described in <a href="UG_Vdatas.html#wp9776">Table 4T</a>.
 </p>
 <a name="wp9776"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 4T	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">VF Routines Parameter Lists</span></div>
+TABLE 4T	VF Routines Parameter Lists</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp16164table9671">
   <caption></caption>

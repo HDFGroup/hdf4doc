@@ -7,11 +7,11 @@
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.8.2296" />
     <meta name="TEMPLATEBASE" content="HDF4 Version 1.0" />
-    <meta name="LASTUPDATED" content="02/23/12 05:01:27" />
+    <meta name="LASTUPDATED" content="03/06/12 09:59:56" />
     <title>Chapter 8	General Raster Images (GR API)</title>
     <link rel="StyleSheet" href="document.css" type="text/css" media="all" />
     <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
-<link rel="first" title="First" href="UG_Intro.html" />
+<link rel="first" title="First" href="UG_htmlLOF.html" />
 <link rel="last" title="Last" href="UG_Top.html" />
 <link rel="previous" title="Previous" href="UG_RIS24s.html" />
 <link rel="next" title="Next" href="UG_Palettes.html" />
@@ -67,8 +67,8 @@ This chapter describes the general raster (GR) data model, the GR interface (als
 HDF users familiar with the SD interface will find certain aspects of the GR data model similar to the SD data model. The interfaces are similar in that both interfaces support data storage in multiple files, attributes, compression, and chunking. They are dissimilar in that palettes can be created and attached to an image through GR interface routines, customized dimension information is not supported in the GR interface, and GR dataset chunking is constrained to two dimensions. 
 </p>
 <a name="wp55575"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
-FIGURE 8a	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">GR Data Set Contents</span></div>
-<div align="left"><img src="images/hdf4_08-UG_GR-1-1.jpg" height="270" width="524" id="wp55549" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
+FIGURE 8a	GR Data Set Contents</div>
+<div align="left"><img src="images/hdf4_12-UG_GR-1-1.jpg" height="270" width="524" id="wp55549" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
 
 </div>
 <a name="wp55597"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
@@ -87,7 +87,7 @@ Every GR data set must contain the following components: <span style="color: #00
 Image Array
 </div>
 <a name="wp44273"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-An <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">image array</span> is a two-dimensional array of pixels. This is the primary data component of the GR model and will be discussed later in this section; it can be compressed, chunked, and/or stored in external files. Refer to <a href="UG_GR.html#wp47497">Section&#160;8.6.2 on page&#160;309</a> for a description of raster image compression and <a href="UG_GR.html#wp47254">Section&#160;8.6.4 on page&#160;310</a> for a description of external image storage.
+An <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">image array</span> is a two-dimensional array of pixels. This is the primary data component of the GR model and will be discussed later in this section; it can be compressed, chunked, and/or stored in external files. Refer to <a href="UG_GR.html#wp47497">Section&#160;8.6.2 on page&#160;310</a> for a description of raster image compression and <a href="UG_GR.html#wp47254">Section&#160;8.6.4 on page&#160;311</a> for a description of external image storage.
 </p>
 <a name="wp44334"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 A raster image has an index and a reference number associated with it. The <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">index</span> is a non-negative integer that describes the relative position of the raster image in the file. A valid index ranges from 0 to the total number of images in the file minus 1. The <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">reference number</span> is a unique positive integer assigned to the raster image by the GR interface when the image is created. Various GR interface routines can be used to obtain an image index or reference number depending on the available information about the raster image. The index can also be determined if the sequence in which the images are created in the file is known.
@@ -135,7 +135,7 @@ Palettes
 <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Palettes</span> are lookup tables attached to images and define a set of color values for each pixel value in the image array. The GR interface provides similar capabilities for storing and manipulating palettes as the DFP interface described in <a href="UG_Palettes.html">Chapter 9, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Palettes (DFP API)</span></a>. However, the DFP interface is restricted to single-file operations while the GR interface allows multifile palette operations.
 </p>
 <a name="wp36967"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-Eventually, all palette manipulation functionality will reside only within the GR interface. In the meantime, the single-file DFP routines are fully compatible with palettes created with the GR palette routines. The GR palette routines are described in <a href="UG_GR.html#wp12074">Section&#160;8.11 on page&#160;334</a>.
+Eventually, all palette manipulation functionality will reside only within the GR interface. In the meantime, the single-file DFP routines are fully compatible with palettes created with the GR palette routines. The GR palette routines are described in <a href="UG_GR.html#wp12074">Section&#160;8.11 on page&#160;336</a>.
 </p>
 <a name="wp6315"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Attributes
@@ -172,7 +172,7 @@ All C routine names in the GR interface have the prefix <b class="cFunctionName"
 The GR routines are listed in the following table and described further in subsequent sections of this chapter.
 </p>
 <a name="wp7681"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 8A	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">GR Library Routines</span></div>
+TABLE 8A	GR Library Routines</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp55970table7398">
   <caption></caption>
@@ -283,7 +283,7 @@ mggcatt
 </div>
 </td>
     <td><a name="wp56050"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Reads an attribute of a raster image or a file (<a href="UG_GR.html#wp54927">Section&#160;8.10.4 on page&#160;329</a>)
+Reads an attribute of a raster image or a file (<a href="UG_GR.html#wp54927">Section&#160;8.10.4 on page&#160;331</a>)
 </div>
 </td>
 </tr>
@@ -296,7 +296,7 @@ mgid2rf
 </div>
 </td>
     <td><a name="wp56061"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Maps a raster image identifier to a reference number (<a href="UG_GR.html#wp31848">Section&#160;8.9.3 on page&#160;319</a>)
+Maps a raster image identifier to a reference number (<a href="UG_GR.html#wp31848">Section&#160;8.9.3 on page&#160;320</a>)
 </div>
 </td>
 </tr>
@@ -309,7 +309,7 @@ mgn2ndx
 </div>
 </td>
     <td><a name="wp56072"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Maps the name of a raster image name to an index (<a href="UG_GR.html#wp37853">Section&#160;8.9.5 on page&#160;320</a>)
+Maps the name of a raster image name to an index (<a href="UG_GR.html#wp37853">Section&#160;8.9.5 on page&#160;321</a>)
 </div>
 </td>
 </tr>
@@ -325,7 +325,7 @@ mgrcimg
 </div>
 </td>
     <td><a name="wp56085"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Reads raster image data (<a href="UG_GR.html#wp44146">Section&#160;8.7.1 on page&#160;312</a>)
+Reads raster image data (<a href="UG_GR.html#wp44146">Section&#160;8.7.1 on page&#160;313</a>)
 </div>
 </td>
 </tr>
@@ -338,7 +338,7 @@ mgr2idx
 </div>
 </td>
     <td><a name="wp56093"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Maps the reference number of a raster image to its index (<a href="UG_GR.html#wp37873">Section&#160;8.9.4 on page&#160;320</a>)
+Maps the reference number of a raster image to its index (<a href="UG_GR.html#wp37873">Section&#160;8.9.4 on page&#160;321</a>)
 </div>
 </td>
 </tr>
@@ -354,7 +354,7 @@ mgscatt
 </div>
 </td>
     <td><a name="wp56107"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Assigns an attribute to a raster image or a file (<a href="UG_GR.html#wp11603">Section&#160;8.10.2 on page&#160;325</a>)
+Assigns an attribute to a raster image or a file (<a href="UG_GR.html#wp11603">Section&#160;8.10.2 on page&#160;327</a>)
 </div>
 </td>
 </tr>
@@ -380,7 +380,7 @@ mgrimil
 </div>
 </td>
     <td><a name="wp56127"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Sets the interlace mode of the image read for subsequent read operations (<a href="UG_GR.html#wp12096">Section&#160;8.7.2 on page&#160;312</a>)
+Sets the interlace mode of the image read for subsequent read operations (<a href="UG_GR.html#wp12096">Section&#160;8.7.2 on page&#160;313</a>)
 </div>
 </td>
 </tr>
@@ -397,7 +397,7 @@ mggltid
 </div>
 </td>
     <td><a name="wp56140"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Gets a palette identifier given the palette&#39;s index (<a href="UG_GR.html#wp12076">Section&#160;8.11.1 on page&#160;334</a>)
+Gets a palette identifier given the palette&#39;s index (<a href="UG_GR.html#wp12076">Section&#160;8.11.1 on page&#160;336</a>)
 </div>
 </td>
 </tr>
@@ -410,7 +410,7 @@ mglt2rf
 </div>
 </td>
     <td><a name="wp56151"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Maps a palette identifier to a reference number (<a href="UG_GR.html#wp23231">Section&#160;8.11.3 on page&#160;335</a>)
+Maps a palette identifier to a reference number (<a href="UG_GR.html#wp23231">Section&#160;8.11.3 on page&#160;337</a>)
 </div>
 </td>
 </tr>
@@ -426,7 +426,7 @@ mgrclut
 </div>
 </td>
     <td><a name="wp56164"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Reads palette data from a raster image (<a href="UG_GR.html#wp43613">Section&#160;8.11.7 on page&#160;337</a>)
+Reads palette data from a raster image (<a href="UG_GR.html#wp43613">Section&#160;8.11.7 on page&#160;339</a>)
 </div>
 </td>
 </tr>
@@ -442,7 +442,7 @@ mgwclut
 </div>
 </td>
     <td><a name="wp56176"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Writes palette data to a raster image (<a href="UG_GR.html#wp34785">Section&#160;8.11.5 on page&#160;336</a>)
+Writes palette data to a raster image (<a href="UG_GR.html#wp34785">Section&#160;8.11.5 on page&#160;338</a>)
 </div>
 </td>
 </tr>
@@ -455,7 +455,7 @@ mgrltil
 </div>
 </td>
     <td><a name="wp66166"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Sets the interlace mode of the next palette for subsequent read operations (<a href="UG_GR.html#wp12096">Section&#160;8.7.2 on page&#160;312</a>)
+Sets the interlace mode of the next palette for subsequent read operations (<a href="UG_GR.html#wp12096">Section&#160;8.7.2 on page&#160;313</a>)
 </div>
 </td>
 </tr>
@@ -485,7 +485,7 @@ mgscomp
 </div>
 </td>
     <td><a name="wp56195"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Specifies whether the raster image will be stored in a file as a compressed raster image (<a href="UG_GR.html#wp47497">Section&#160;8.6.2 on page&#160;309</a>)
+Specifies whether the raster image will be stored in a file as a compressed raster image (<a href="UG_GR.html#wp47497">Section&#160;8.6.2 on page&#160;310</a>)
 </div>
 </td>
 </tr>
@@ -498,7 +498,7 @@ mggcompress
 </div>
 </td>
     <td><a name="wp66139"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Retrieves image compression type and compression information  (<a href="UG_GR.html#wp66280">Section&#160;8.9.6 on page&#160;320</a>)
+Retrieves image compression type and compression information  (<a href="UG_GR.html#wp66280">Section&#160;8.9.6 on page&#160;321</a>)
 </div>
 </td>
 </tr>
@@ -511,7 +511,7 @@ mgsxfil
 </div>
 </td>
     <td><a name="wp56206"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Specifies that the raster image will be written to an external file (<a href="UG_GR.html#wp44003">Section&#160;8.6.4.1 on page&#160;310</a>)
+Specifies that the raster image will be written to an external file (<a href="UG_GR.html#wp44003">Section&#160;8.6.4.1 on page&#160;311</a>)
 </div>
 </td>
 </tr>
@@ -541,7 +541,7 @@ mgatinf
 </div>
 </td>
     <td><a name="wp56220"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Retrieves information about an attribute (<a href="UG_GR.html#wp11685">Section&#160;8.10.3 on page&#160;329</a>)
+Retrieves information about an attribute (<a href="UG_GR.html#wp11685">Section&#160;8.10.3 on page&#160;330</a>)
 </div>
 </td>
 </tr>
@@ -554,7 +554,7 @@ mgfndat
 </div>
 </td>
     <td><a name="wp56228"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Finds the index of a data object&#39;s attribute given an attribute name (<a href="UG_GR.html#wp11685">Section&#160;8.10.3 on page&#160;329</a>)
+Finds the index of a data object&#39;s attribute given an attribute name (<a href="UG_GR.html#wp11685">Section&#160;8.10.3 on page&#160;330</a>)
 </div>
 </td>
 </tr>
@@ -567,7 +567,7 @@ mgfinfo
 </div>
 </td>
     <td><a name="wp56239"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Retrieves the number of raster images and the number of global attributes in the file (<a href="UG_GR.html#wp10756">Section&#160;8.9.1 on page&#160;318</a>)
+Retrieves the number of raster images and the number of global attributes in the file (<a href="UG_GR.html#wp10756">Section&#160;8.9.1 on page&#160;319</a>)
 </div>
 </td>
 </tr>
@@ -580,7 +580,7 @@ mggiinf
 </div>
 </td>
     <td><a name="wp56252"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Retrieves general information about a raster image (<a href="UG_GR.html#wp19016">Section&#160;8.9.2 on page&#160;319</a>)
+Retrieves general information about a raster image (<a href="UG_GR.html#wp19016">Section&#160;8.9.2 on page&#160;320</a>)
 </div>
 </td>
 </tr>
@@ -593,7 +593,7 @@ mgglinf
 </div>
 </td>
     <td><a name="wp56264"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Retrieves information about a palette (<a href="UG_GR.html#wp35164">Section&#160;8.11.4 on page&#160;335</a>)
+Retrieves information about a palette (<a href="UG_GR.html#wp35164">Section&#160;8.11.4 on page&#160;337</a>)
 </div>
 </td>
 </tr>
@@ -610,7 +610,7 @@ mgschnk
 </div>
 </td>
     <td><a name="wp56275"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Creates chunked raster image (<a href="UG_GR.html#wp61066">Section&#160;8.12.2 on page&#160;345</a>)
+Creates chunked raster image (<a href="UG_GR.html#wp61066">Section&#160;8.12.2 on page&#160;348</a>)
 </div>
 </td>
 </tr>
@@ -623,7 +623,7 @@ mggichnk
 </div>
 </td>
     <td><a name="wp56285"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Retrieves information about a chunked raster image (<a href="UG_GR.html#wp55146">Section&#160;8.12.5 on page&#160;353</a>)
+Retrieves information about a chunked raster image (<a href="UG_GR.html#wp55146">Section&#160;8.12.5 on page&#160;356</a>)
 </div>
 </td>
 </tr>
@@ -636,7 +636,7 @@ mgscchnk
 </div>
 </td>
     <td><a name="wp56296"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Sets maximum number of chunks to be cached (<a href="UG_GR.html#wp35107">Section&#160;8.12.6 on page&#160;354</a>)
+Sets maximum number of chunks to be cached (<a href="UG_GR.html#wp35107">Section&#160;8.12.6 on page&#160;357</a>)
 </div>
 </td>
 </tr>
@@ -652,7 +652,7 @@ mgrcchnk
 </div>
 </td>
     <td><a name="wp61752"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Reads a data chunk from a chunked raster image (pixel-interlace only) (<a href="UG_GR.html#wp65587">Section&#160;8.12.4 on page&#160;353</a>)
+Reads a data chunk from a chunked raster image (pixel-interlace only) (<a href="UG_GR.html#wp65587">Section&#160;8.12.4 on page&#160;356</a>)
 </div>
 </td>
 </tr>
@@ -668,7 +668,7 @@ mgwcchnk
 </div>
 </td>
     <td><a name="wp61738"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Writes a data chunk to a chunked raster image (pixel-interlace only) (<a href="UG_GR.html#wp62109">Section&#160;8.12.3 on page&#160;347</a>)
+Writes a data chunk to a chunked raster image (pixel-interlace only) (<a href="UG_GR.html#wp62109">Section&#160;8.12.3 on page&#160;349</a>)
 </div>
 </td>
 </tr>
@@ -737,10 +737,10 @@ In the GR interface, <b class="cFunctionName">Hopen</b> opens the files and <b c
 <b class="cFunctionName">GRstart</b> initializes the GR interface and must be called once after <b class="cFunctionName">Hopen</b> and before any other GR routines are called. It takes one argument, <em class="cVarName">file_id</em>, the file identifier returned by <b class="cFunctionName">Hopen</b>, and returns the interface identifier <em class="cVarName">gr_id</em> or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) upon unsuccessful completion. <b class="cFunctionName">Hopen</b> and <b class="cFunctionName">GRstart</b> can be called several times to access more than one file.
 </p>
 <a name="wp19914"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-<b class="cFunctionName">GRselect</b> specifies the given image as the current image to be accessed. It takes two arguments, the GR interface identifier <em class="cVarName">gr_id</em> and the raster image index <em class="cVarName">ri_index</em>, and returns the raster image identifier <em class="cVarName">ri_id</em> or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) upon unsuccessful completion. The GR interface identifier is returned by <b class="cFunctionName">GRstart</b>. The raster image index specifies the position of the image relative to the beginning of the file; it is zero-based, meaning that the index of the first image in the file is <sup class="cSuperscript">0</sup>. The index of a raster image can be obtained from the image&#39;s name using the routine <b class="cFunctionName">GRnametoindex</b> or from the image&#39;s reference number using <b class="cFunctionName">GRreftoindex</b>. These routines are discussed in <a href="UG_GR.html#wp37873"><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Section&#160;8.9.4 on page&#160;320</span></a> and <a href="UG_GR.html#wp37853">Section&#160;8.9.5 on page&#160;320</a>. The index value must be less than the total number of raster images in the file; that number can be obtained using <b class="cFunctionName">GRfileinfo</b>, described in <a href="UG_GR.html#wp10756"><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Section&#160;8.9.1 on page&#160;318</span></a>.
+<b class="cFunctionName">GRselect</b> specifies the given image as the current image to be accessed. It takes two arguments, the GR interface identifier <em class="cVarName">gr_id</em> and the raster image index <em class="cVarName">ri_index</em>, and returns the raster image identifier <em class="cVarName">ri_id</em> or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) upon unsuccessful completion. The GR interface identifier is returned by <b class="cFunctionName">GRstart</b>. The raster image index specifies the position of the image relative to the beginning of the file; it is zero-based, meaning that the index of the first image in the file is <sup class="cSuperscript">0</sup>. The index of a raster image can be obtained from the image&#39;s name using the routine <b class="cFunctionName">GRnametoindex</b> or from the image&#39;s reference number using <b class="cFunctionName">GRreftoindex</b>. These routines are discussed in <a href="UG_GR.html#wp37873"><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Section&#160;8.9.4 on page&#160;321</span></a> and <a href="UG_GR.html#wp37853">Section&#160;8.9.5 on page&#160;321</a>. The index value must be less than the total number of raster images in the file; that number can be obtained using <b class="cFunctionName">GRfileinfo</b>, described in <a href="UG_GR.html#wp10756"><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Section&#160;8.9.1 on page&#160;319</span></a>.
 </p>
 <a name="wp31076"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-The parameters for <b class="cFunctionName">GRstart</b> and <b class="cFunctionName">GRselect</b> are further defined in <a href="UG_GR.html#wp7836">Table 8B on page 299</a>.
+The parameters for <b class="cFunctionName">GRstart</b> and <b class="cFunctionName">GRselect</b> are further defined in <a href="UG_GR.html#wp7836">Table 8B on page 300</a>.
 </p>
 <a name="wp43731"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 <b class="cFunctionName">GRcreate</b> defines a new raster image using the arguments <em class="cVarName">gr_id</em>, <em class="cVarName">name</em>, <em class="cVarName">n_comps</em>, <em class="cVarName">data_type</em>, <em class="cVarName">interlace_mode</em>, and <em class="cVarName">dim_sizes</em>. Once a data set is created, you cannot change its name, data type, dimension, or number of components. <b class="cFunctionName">GRcreate</b> does not actually write the image to the file; this occurs only when <b class="cFunctionName">GRendaccess</b> is called. Thus, failing to call <b class="cFunctionName">GRendaccess</b> properly will cause a loss of data.
@@ -773,7 +773,7 @@ The parameter <em class="cVarName">dim_sizes</em> specifies the size of the two 
 <b class="cFunctionName">Hclose</b> terminates access to an HDF file and should only be called after <b class="cFunctionName">GRend</b> has been called properly. Refer to <a href="UG_Fundmtls.html">Chapter 2, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF Fundamentals</span></a>, for a description of <b class="cFunctionName">Hclose</b>.
 </p>
 <a name="wp7836"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 8B	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">GRstart, GRselect, GRcreate, GRendaccess, and GRend, Parameter Lists</span></div>
+TABLE 8B	GRstart, GRselect, GRcreate, GRendaccess, and GRend, Parameter Lists</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp8900table7746">
   <caption></caption>
@@ -1113,7 +1113,7 @@ Note that the FORTRAN-77 version of <b class="cFunctionName">GRwriteimage</b> ha
 <b class="cFunctionName">GRwriteimage</b> returns either <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED </code>(or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). The parameters for <b class="cFunctionName">GRwriteimage</b> are described in <a href="UG_GR.html#wp47935">Table 8C</a>.
 </p>
 <a name="wp47935"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 8C	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">GRwriteimage Parameter List</span></div>
+TABLE 8C	GRwriteimage Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp47861table47859">
   <caption></caption>
@@ -1764,7 +1764,7 @@ The access type is specified by the parameter <em class="cVarName">access_type</
 <b class="cFunctionName">GRsetaccesstype</b> returns either <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). The <b class="cFunctionName">GRsetaccesstype</b> parameters are further described in <a href="UG_GR.html#wp47095">Table 8D</a>.
 </p>
 <a name="wp47095"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 8D	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">GRsetcompress and GRsetaccesstype Parameter List</span><span style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"></span></div>
+TABLE 8D	GRsetcompress and GRsetaccesstype Parameter List<span style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"></span></div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp47149table47147">
   <caption></caption>
@@ -1973,7 +1973,7 @@ Use caution when writing to existing files because the routine <b class="cFuncti
 <b class="cFunctionName">GRsetexternalfile</b> returns either <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). The parameters of <b class="cFunctionName">GRsetexternalfile</b> are further defined in <a href="UG_GR.html#wp44083">Table 8E</a>.
 </p>
 <a name="wp44083"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 8E	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">GRsetexternalfile Parameter List</span></div>
+TABLE 8E	GRsetexternalfile Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp44030table44028">
   <caption></caption>
@@ -2161,7 +2161,7 @@ The <b class="cFunctionName">GRreqimageil</b> routine sets the interlace mode fo
 <b class="cFunctionName">GRreqimagetil</b> returns either <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL </code>(or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). The parameters of this routine are further defined in <a href="UG_GR.html#wp35874">Table 8F</a>.
 </p>
 <a name="wp35874"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 8F	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">GRreadimage and GRreqimageil Parameter Lists</span></div>
+TABLE 8F	GRreadimage and GRreqimageil Parameter Lists</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp35778table35776">
   <caption></caption>
@@ -2661,7 +2661,7 @@ These routines are described individually in the following subsections.
 The number of images in the file and the total number of file attributes will be stored in the arguments <em class="cVarName">n_images</em> and <em class="cVarName">n_file_attrs</em>, respectively. 
 </p>
 <a name="wp54861"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-<b class="cFunctionName">GRfileinfo</b> returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) if successful or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) otherwise.  The parameters for <b class="cFunctionName">GRfileinfo</b> are further described in <a href="UG_GR.html#wp10901">Table 8G on page 319</a>.
+<b class="cFunctionName">GRfileinfo</b> returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) if successful or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) otherwise.  The parameters for <b class="cFunctionName">GRfileinfo</b> are further described in <a href="UG_GR.html#wp10901">Table 8G on page 320</a>.
 </p>
 <a name="wp19016"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
 	8.9.2	Obtaining Information about an Image: GRgetiminfo
@@ -2682,7 +2682,7 @@ dim_sizes, n_attrs)
 <b class="cFunctionName">GRgetiminfo</b> returns either <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). The parameters of this routine are further defined in <a href="UG_GR.html#wp10901">Table 8G</a>.
 </p>
 <a name="wp10901"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 8G	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">GRfileinfo and GRgetiminfo Parameter Lists</span></div>
+TABLE 8G	GRfileinfo and GRgetiminfo Parameter Lists</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp16925table10773">
   <caption></caption>
@@ -2924,7 +2924,7 @@ Number of raster image attributes
 </p><a name="wp37718"> </a><p style="font-family: Courier New; font-size: 9pt" class="pSyntaxLine"><b style="font-family: Courier New; font-size: 9pt" class="cBold">FORTRAN:</b>	ref = mgid2rf(ri_id)
 </p></ul></div>
 <a name="wp37871"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-This routine is further defined in <a href="UG_GR.html#wp11169">Table 8H on page 321</a>.
+This routine is further defined in <a href="UG_GR.html#wp11169">Table 8H on page 323</a>.
 </p>
 <a name="wp37873"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
 	8.9.4	Obtaining the Index of a Raster Image from Its Reference Number: GRreftoindex
@@ -3040,7 +3040,7 @@ Another characteristic of the image to be reported by <b class="cFunctionName">G
 <b class="cFunctionName">GR2bmapped </b>returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>), if successful, or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>), otherwise.  When failure occurs, <em class="cVarName">tobe_mapped</em> and <em class="cVarName">name_generated</em> will be undefined.  This routine is further defined in <a href="UG_GR.html#wp11169">Table 8H</a>.
 </p>
 <a name="wp11169"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 8H	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">GRidtoref, GRreftoindex, GRnametoindex, and GRgetcompinfo Parameter Lists</span></div>
+TABLE 8H	GRidtoref, GRreftoindex, GRnametoindex, and GRgetcompinfo Parameter Lists</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp125867table11104">
   <caption></caption>
@@ -3565,7 +3565,7 @@ The arguments <em class="cVarName">data_type</em>, <em class="cVarName">n_values
 Note that the FORTRAN-77 version of <b class="cFunctionName">GRsetattr</b> has two routines; <b class="cFunctionName">mgsnatt</b> writes numeric attribute data and <b class="cFunctionName">mgscatt</b> writes character attribute data.
 </p>
 <a name="wp33558"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-<b class="cFunctionName">GRsetattr</b> returns either <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). The parameters for <b class="cFunctionName">GRsetattr</b> are further described in <a href="UG_GR.html#wp11895">Table 8I on page 330</a>.
+<b class="cFunctionName">GRsetattr</b> returns either <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). The parameters for <b class="cFunctionName">GRsetattr</b> are further described in <a href="UG_GR.html#wp11895">Table 8I on page 332</a>.
 </p>
 <a name="wp11626"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 16pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 EXAMPLE 5.	Operations on File and Raster Image Attributes.
@@ -3790,7 +3790,7 @@ Note that the FORTRAN-77 version of <b class="cFunctionName">GRgetattr</b> has t
 <b class="cFunctionName">GRgetattr</b> returns <em class="cVarName">SUCCEED</em> (or <em class="cVarName">0</em>) if successful and <em class="cVarName">FAIL</em> (or <em class="cVarName">-1</em>) otherwise.  The parameters for <b class="cFunctionName">GRgetattr </b>are further described in <a href="UG_GR.html#wp11895">Table 8I</a>.
 </p>
 <a name="wp11895"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 8I	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">GRsetattr, GRfindattr, GRattrinfo, and GRgetattr Parameter Lists</span></div>
+TABLE 8I	GRsetattr, GRfindattr, GRattrinfo, and GRgetattr Parameter Lists</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp16356table11711">
   <caption></caption>
@@ -4420,7 +4420,7 @@ The <b class="cFunctionName">GRluttoref</b> routine takes one argument, <em clas
 <b class="cFunctionName">GRluttoref</b> returns the reference number of the palette if successful and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code> otherwise. The <b class="cFunctionName">GRluttoref</b> parameters are further discussed in <a href="UG_GR.html#wp34782">Table 8J</a>.
 </p>
 <a name="wp34782"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 8J	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">GRgetlutid, GRgetlutinfo, and GRluttoref Parameter Lists</span></div>
+TABLE 8J	GRgetlutid, GRgetlutinfo, and GRluttoref Parameter Lists</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp34692table34690">
   <caption></caption>
@@ -4604,7 +4604,7 @@ The parameter <em class="cVarName">num_entries</em> specifies the number of entr
 Note that the FORTRAN-77 version of <b class="cFunctionName">GRwritelut</b> has two routines; <b class="cFunctionName">mgwrlut</b> writes buffered numeric palette data and <b class="cFunctionName">mgwclut</b> writes buffered character palette data.
 </p>
 <a name="wp38439"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-<b class="cFunctionName">GRwritelut</b> returns either <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). The parameters of this routine are further defined in <a href="UG_GR.html#wp15987">Table 8K on page 337</a>.
+<b class="cFunctionName">GRwritelut</b> returns either <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). The parameters of this routine are further defined in <a href="UG_GR.html#wp15987">Table 8K on page 340</a>.
 </p>
 <a name="wp34422"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
 	8.11.6	Setting the Interlace Mode for a Palette: GRreqlutil 
@@ -4623,7 +4623,7 @@ The parameter <em class="cVarName">interlace_mode</em> specifies the interlacing
 <b class="cFunctionName">GRreqlutil</b> may be called at anytime before the read operation of the specified palette. In addition, it may be called more than once; the interlace mode setting specified by the last call to the routine will be used for the next read operation.
 </p>
 <a name="wp34442"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-<b class="cFunctionName">GRreqlutil</b> returns either <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). The parameters of this routine are further defined in <a href="UG_GR.html#wp15987">Table 8K on page 337</a>.
+<b class="cFunctionName">GRreqlutil</b> returns either <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). The parameters of this routine are further defined in <a href="UG_GR.html#wp15987">Table 8K on page 340</a>.
 </p>
 <a name="wp43613"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
 	8.11.7	Reading Palette Data: GRreadlut
@@ -4646,7 +4646,7 @@ Note that the FORTRAN-77 version of <b class="cFunctionName">GRreadlut</b> has t
 <b class="cFunctionName">GRreadlut</b> returns either <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). The parameters of this routine are further defined in <a href="UG_GR.html#wp15987">Table 8K</a>.
 </p>
 <a name="wp15987"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 8K	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">GRgetlutid, GRwritelut, GRreqlutil, and GRreadlut Parameter Lists</span></div>
+TABLE 8K	GRgetlutid, GRwritelut, GRreqlutil, and GRreadlut Parameter Lists</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp15813table15811">
   <caption></caption>
@@ -5399,8 +5399,8 @@ Chunks of scientific datasets (SDSs) have the same dimensionality as the SDS its
 </p>
 <a name="wp61094"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
 FIGURE 8b	</div>
-<div align="left"><img src="images/hdf4_08-UG_GR-1-2.jpg" height="315" width="648" id="wp61095" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
-<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Chunks in a GR raster image dataset</span>
+<div align="left"><img src="images/hdf4_12-UG_GR-1-2.jpg" height="315" width="648" id="wp61095" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
+Chunks in a GR raster image dataset
 </div>
 <a name="wp61066"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
 	8.12.2	Making a Raster Image a Chunked Raster Image: GRsetchunk
@@ -5521,7 +5521,7 @@ Chunk dimensions are specified in the array <em class="cVarName">dim_length</em>
 The parameter <em class="cVarName">comp_prm</em> specifies the compression parameters for the Skipping Huffman and GZIP compression methods. It contains only one element which is set to the skipping size for Skipping Huffman compression or the deflate level for GZIP compression.  Currently, Szip compression is not yet supported by Fortran GR interface.
 </p>
 <a name="wp55149"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-<b class="cFunctionName">GRsetchunk</b> returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) if successful and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) otherwise. The <b class="cFunctionName">GRsetchunk</b> parameters are discussed further in <a href="UG_GR.html#wp124677">Table 8L on page 355</a>
+<b class="cFunctionName">GRsetchunk</b> returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) if successful and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) otherwise. The <b class="cFunctionName">GRsetchunk</b> parameters are discussed further in <a href="UG_GR.html#wp126832">Table 8L on page 358</a>
 </p>
 <a name="wp62109"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
 	8.12.3	Writing a Chunked Raster Image: GRwritechunk
@@ -5550,7 +5550,7 @@ The <em class="cVarName">datap </em>buffer contains the chunk data.  The data mu
 Note that the FORTRAN-77 version of <b class="cFunctionName">GRwritechunk</b> has two routines; <b class="cFunctionName">mgwchnk</b> writes buffered numeric data and <b class="cFunctionName">mgwcchnk</b> writes buffered character data.
 </p>
 <a name="wp63035"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-<b class="cFunctionName">GRwritechunk</b> returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) if successful and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) otherwise. The <b class="cFunctionName">GRwritechunk</b> parameters are discussed further in <a href="UG_GR.html#wp124677">Table 8L</a>.
+<b class="cFunctionName">GRwritechunk</b> returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) if successful and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) otherwise. The <b class="cFunctionName">GRwritechunk</b> parameters are discussed further in <a href="UG_GR.html#wp126832">Table 8L</a>.
 </p>
 <a name="wp65591"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 16pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 EXAMPLE 9.	Creating and Writing a Chunked Raster Image
@@ -5562,14 +5562,14 @@ This example illustrates the use of the routines <b class="cFunctionName">Hopen<
 In this example, the program creates an image of 6 rows by 10 columns in C and 10 rows by 6 columns in FORTRAN. The image is set up to be chunked with a chunk size of 3x2 in C and 2x3 in FORTRAN and compressed with the GZIP method. Three chunks are then written to the image. See <a href="UG_GR.html#wp65714">Figure 8c</a> through <a href="UG_GR.html#wp65829">Figure 8d</a> for illustrations.
 </p>
 <a name="wp65714"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
-FIGURE 8c	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Chunked GR image as written</span></div>
-<div align="left"><img src="images/hdf4_08-UG_GR-1-3.jpg" height="603" width="669" id="wp65602" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
-<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> by C example</span> 
+FIGURE 8c	Chunked GR image as written</div>
+<div align="left"><img src="images/hdf4_12-UG_GR-1-3.jpg" height="603" width="669" id="wp65602" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
+ by C example 
 </div>
 <a name="wp65829"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
-FIGURE 8d	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Chunked GR image as written</span></div>
-<div align="left"><img src="images/hdf4_08-UG_GR-1-4.jpg" height="460" width="648" id="wp65717" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
-<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> by FORTRAN example</span>
+FIGURE 8d	Chunked GR image as written</div>
+<div align="left"><img src="images/hdf4_12-UG_GR-1-4.jpg" height="460" width="648" id="wp65717" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
+ by FORTRAN example
 </div>
 <a name="wp65831"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 2pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 108pt; text-transform: none">
 C:
@@ -5817,7 +5817,7 @@ The <em class="cVarName">datap </em>buffer contains the chunk data.  The data is
 Note that the FORTRAN-77 version of <b class="cFunctionName">GRreadchunk</b> has two routines; <b class="cFunctionName">mgrchnk</b> reads numeric data and <b class="cFunctionName">mgrcchnk</b> reads character data to the buffer.
 </p>
 <a name="wp63313"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-<b class="cFunctionName">GRreadchunk</b> returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) if successful and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) otherwise. <b class="cFunctionName">GRreadchunk</b> will return <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) when an attempt is made to read from a non-chunked image. The <b class="cFunctionName">GRreadchunk</b> parameters are discussed further in <a href="UG_GR.html#wp124677">Table 8L</a>.
+<b class="cFunctionName">GRreadchunk</b> returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) if successful and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) otherwise. <b class="cFunctionName">GRreadchunk</b> will return <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) when an attempt is made to read from a non-chunked image. The <b class="cFunctionName">GRreadchunk</b> parameters are discussed further in <a href="UG_GR.html#wp126832">Table 8L</a>.
 </p>
 <a name="wp55146"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
 	8.12.5	Obtaining Information about a Chunked Raster Image: GRgetchunkinfo
@@ -5836,13 +5836,13 @@ Note that the FORTRAN-77 version of <b class="cFunctionName">GRreadchunk</b> has
 The value returned in the parameter <em class="cVarName">flag</em> indicates whether the raster image is not chunked, chunked, or chunked and compressed. <code style="font-family: Courier New; font-size: 8pt" class="cDefName">HDF_NONE</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) indicates that the raster image is not chunked. <code style="font-family: Courier New; font-size: 8pt" class="cDefName">HDF_CHUNK</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) indicates that the raster image is chunked and not compressed. (<code style="font-family: Courier New; font-size: 8pt" class="cDefName">HDF_CHUNK | HDF_COMP</code>) (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">1</code>) indicates that raster image is chunked and compressed with one of the allowed compression methods: RLE, Skipping Huffman, or GZIP.
 </p>
 <a name="wp38207"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-In C, if the raster image is chunked and not compressed, <b class="cFunctionName">GRgetchunkinfo</b> fills the array <em class="cVarName">chunk_lengths</em> in the union <em class="cVarName">c_def</em> with the values of the corresponding chunk dimensions. If the raster image is chunked and compressed, <b class="cFunctionName">GRgetchunkinfo</b> fills the array <em class="cVarName">chunk_lengths</em> in the structure <em class="cVarName">comp</em> of the union <em class="cVarName">c_def</em> with the values of the corresponding chunk dimensions. Refer to <a href="UG_GR.html#wp61066">Section&#160;8.12.2 on page&#160;345</a> on <b class="cFunctionName">GRsetchunk</b> for specific information on the union <code style="font-family: Courier New; font-size: 8pt" class="cDefName">HDF_CHUNK_DEF</code>. In C, if the chunk length for each dimension is not needed, <code style="font-family: Courier New; font-size: 8pt" class="cDefName">NULL</code> can be passed in as the value of the parameter <em class="cVarName">c_def</em>.
+In C, if the raster image is chunked and not compressed, <b class="cFunctionName">GRgetchunkinfo</b> fills the array <em class="cVarName">chunk_lengths</em> in the union <em class="cVarName">c_def</em> with the values of the corresponding chunk dimensions. If the raster image is chunked and compressed, <b class="cFunctionName">GRgetchunkinfo</b> fills the array <em class="cVarName">chunk_lengths</em> in the structure <em class="cVarName">comp</em> of the union <em class="cVarName">c_def</em> with the values of the corresponding chunk dimensions. Refer to <a href="UG_GR.html#wp61066">Section&#160;8.12.2 on page&#160;348</a> on <b class="cFunctionName">GRsetchunk</b> for specific information on the union <code style="font-family: Courier New; font-size: 8pt" class="cDefName">HDF_CHUNK_DEF</code>. In C, if the chunk length for each dimension is not needed, <code style="font-family: Courier New; font-size: 8pt" class="cDefName">NULL</code> can be passed in as the value of the parameter <em class="cVarName">c_def</em>.
 </p>
 <a name="wp38222"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 In FORTRAN-77, chunk dimensions are retrieved into the array <em class="cVarName">dim_length</em>.
 </p>
 <a name="wp55500"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-<b class="cFunctionName">GRgetchunkinfo</b> returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) if successful and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) otherwise. The <b class="cFunctionName">GRgetchunkinfo</b> parameters are discussed further in <a href="UG_GR.html#wp124677">Table 8L</a>.
+<b class="cFunctionName">GRgetchunkinfo</b> returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) if successful and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) otherwise. The <b class="cFunctionName">GRgetchunkinfo</b> parameters are discussed further in <a href="UG_GR.html#wp126832">Table 8L</a>.
 </p>
 <a name="wp35107"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
 	8.12.6	Setting the Maximum Number of Chunks in the Cache: GRsetchunkcache
@@ -5860,424 +5860,424 @@ The maximum number of chunks is specified by the parameter <em class="cVarName">
 <a name="wp32482"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 If <b class="cFunctionName">GRsetchunkcache</b> is not called, the maximum number of chunks in the cache is set to the number of chunks along the fastest-changing dimension. Since <b class="cFunctionName">GRsetchunkcache</b> is similar to the routine <b class="cFunctionName">SDsetchunkcache</b>, refer to <a href="UG_SD.html#wp158500">Section&#160;3.12.2 on page&#160;117</a><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> </span>for more detailed discussion of the routine&#39;s behavior.
 </p>
-<a name="wp124669"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-<b class="cFunctionName">GRsetchunkcache</b> returns the value of the parameter <em class="cVarName">maxcache</em> if successful and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) otherwise. The <b class="cFunctionName">GRsetchunkcache</b> parameters are discussed further in <a href="UG_GR.html#wp124677">Table 8L</a>.
+<a name="wp126824"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
+<b class="cFunctionName">GRsetchunkcache</b> returns the value of the parameter <em class="cVarName">maxcache</em> if successful and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) otherwise. The <b class="cFunctionName">GRsetchunkcache</b> parameters are discussed further in <a href="UG_GR.html#wp126832">Table 8L</a>.
 </p>
-<a name="wp124677"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 8L	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">GRsetchunk, GRgetchunkinfo, GRsetchunkcache, GRwritechunk, and <br />	GRreadchunk Parameter Lists</span></div>
+<a name="wp126832"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
+TABLE 8L	GRsetchunk, GRgetchunkinfo, GRsetchunkcache, GRwritechunk, and <br />	GRreadchunk Parameter Lists</div>
 <div align="left">
-<table border="1" cellpadding="3" cellspacing="1" id="wp124680table124678">
+<table border="1" cellpadding="3" cellspacing="1" id="wp126835table126833">
   <caption></caption>
-  <tr>    <td colspan="1" rowspan="2"><a name="wp124680"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td colspan="1" rowspan="2"><a name="wp126835"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Routine Name 
 </div>
-<a name="wp124681"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+<a name="wp126836"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 [Return Type]
 </div>
-<a name="wp124682"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+<a name="wp126837"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 (FORTRAN-77)
 </div>
 </td>
-    <td colspan="1" rowspan="2"><a name="wp124684"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="1" rowspan="2"><a name="wp126839"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Parameter
 </div>
 </td>
-    <td colspan="2" rowspan="1"><a name="wp124686"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="2" rowspan="1"><a name="wp126841"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Parameter Type
 </div>
 </td>
-    <td colspan="1" rowspan="2"><a name="wp124690"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td colspan="1" rowspan="2"><a name="wp126845"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 Description
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp124696"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td><a name="wp126851"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 C
 </div>
 </td>
-    <td><a name="wp124698"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp126853"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 FORTRAN-77
 </div>
 </td>
 </tr>
-  <tr>    <td colspan="1" rowspan="6"><a name="wp124702"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td colspan="1" rowspan="6"><a name="wp126857"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 GRsetchunk
 </div>
-<a name="wp124703"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+<a name="wp126858"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 [intn]
 </div>
-<a name="wp124704"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+<a name="wp126859"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 (mgschnk)
 </div>
 </td>
-    <td><a name="wp124706"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp126861"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 ri_id
 </div>
 </td>
-    <td><a name="wp124708"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp126863"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 int32
 </div>
 </td>
-    <td><a name="wp124710"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp126865"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 integer
 </div>
 </td>
-    <td><a name="wp124712"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp126867"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Raster image identifier
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp124716"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td><a name="wp126871"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 c_def
 </div>
 </td>
-    <td><a name="wp124718"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp126873"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 HDF_CHUNK_DEF
 </div>
 </td>
-    <td><a name="wp124720"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp126875"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 N/A
 </div>
 </td>
-    <td><a name="wp124722"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp126877"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Chunk definition
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp124726"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td><a name="wp126881"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 flags
 </div>
 </td>
-    <td><a name="wp124728"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp126883"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 int32*
 </div>
 </td>
-    <td><a name="wp124730"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp126885"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 N/A 
 </div>
 </td>
-    <td><a name="wp124732"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp126887"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Compression flags
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp124736"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td><a name="wp126891"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 dim_length
 </div>
 </td>
-    <td><a name="wp124738"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp126893"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 N/A
 </div>
 </td>
-    <td><a name="wp124740"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp126895"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 integer
 </div>
 </td>
-    <td><a name="wp124742"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp126897"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Chunk dimensions array
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp124746"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td><a name="wp126901"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 comp_type
 </div>
 </td>
-    <td><a name="wp124748"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp126903"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 N/A
 </div>
 </td>
-    <td><a name="wp124750"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp126905"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 integer 
 </div>
 </td>
-    <td><a name="wp124752"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp126907"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Type of compression
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp124756"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td><a name="wp126911"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 comp_prm
 </div>
 </td>
-    <td><a name="wp124758"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp126913"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 N/A
 </div>
 </td>
-    <td><a name="wp124760"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp126915"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 integer
 </div>
 </td>
-    <td><a name="wp124762"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp126917"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Compression parameters array
 </div>
 </td>
 </tr>
-  <tr>    <td colspan="1" rowspan="4"><a name="wp124764"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td colspan="1" rowspan="4"><a name="wp126919"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 GRgetchunkinfo
 </div>
-<a name="wp124765"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+<a name="wp126920"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 [intn]
 </div>
-<a name="wp124766"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+<a name="wp126921"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 (mggichnk)
 </div>
 </td>
-    <td><a name="wp124768"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp126923"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 ri_id
 </div>
 </td>
-    <td><a name="wp124770"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp126925"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 int32
 </div>
 </td>
-    <td><a name="wp124772"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp126927"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 integer
 </div>
 </td>
-    <td><a name="wp124774"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp126929"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Raster image identifier
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp124778"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td><a name="wp126933"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 c_def
 </div>
 </td>
-    <td><a name="wp124780"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp126935"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 HDF_CHUNK_DEF
 </div>
 </td>
-    <td><a name="wp124782"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp126937"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 N/A 
 </div>
 </td>
-    <td><a name="wp124784"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp126939"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Chunk definition
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp124788"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td><a name="wp126943"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 dim_length
 </div>
 </td>
-    <td><a name="wp124790"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp126945"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 N/A 
 </div>
 </td>
-    <td><a name="wp124792"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp126947"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 integer
 </div>
 </td>
-    <td><a name="wp124794"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp126949"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Chunk dimensions array
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp124798"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td><a name="wp126953"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 flag
 </div>
 </td>
-    <td><a name="wp124800"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp126955"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 int32
 </div>
 </td>
-    <td><a name="wp124802"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp126957"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 integer
 </div>
 </td>
-    <td><a name="wp124804"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp126959"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Compression flag
 </div>
 </td>
 </tr>
-  <tr>    <td colspan="1" rowspan="3"><a name="wp124806"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td colspan="1" rowspan="3"><a name="wp126961"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 GRsetchunkcache
 </div>
-<a name="wp124807"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+<a name="wp126962"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 [intn]
 </div>
-<a name="wp124808"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+<a name="wp126963"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 (mgscchnk)
 </div>
 </td>
-    <td><a name="wp124810"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp126965"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 ri_id
 </div>
 </td>
-    <td><a name="wp124812"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp126967"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 int32
 </div>
 </td>
-    <td><a name="wp124814"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp126969"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 integer
 </div>
 </td>
-    <td><a name="wp124816"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp126971"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Raster image identifier
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp124820"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td><a name="wp126975"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 maxcache
 </div>
 </td>
-    <td><a name="wp124822"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp126977"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 int32
 </div>
 </td>
-    <td><a name="wp124824"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp126979"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 integer
 </div>
 </td>
-    <td><a name="wp124826"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp126981"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Maximum number of chunks to cache
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp124830"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td><a name="wp126985"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 flags
 </div>
 </td>
-    <td><a name="wp124832"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp126987"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 int32
 </div>
 </td>
-    <td><a name="wp124834"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp126989"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 integer
 </div>
 </td>
-    <td><a name="wp124836"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp126991"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Flags determining routine behavior
 </div>
 </td>
 </tr>
-  <tr>    <td colspan="1" rowspan="3"><a name="wp124838"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td colspan="1" rowspan="3"><a name="wp126993"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 GRreadchunk
 </div>
-<a name="wp124840"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+<a name="wp126995"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 (mgrchnk/
 </div>
-<a name="wp124841"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+<a name="wp126996"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 mgrcchnk)
 </div>
 </td>
-    <td><a name="wp124843"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp126998"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 ri_id
 </div>
 </td>
-    <td><a name="wp124845"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp127000"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 int32
 </div>
 </td>
-    <td><a name="wp124847"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp127002"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 integer
 </div>
 </td>
-    <td><a name="wp124849"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp127004"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Raster image identifier
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp124853"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td><a name="wp127008"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 origin
 </div>
 </td>
-    <td><a name="wp124855"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp127010"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 int32
 </div>
 </td>
-    <td><a name="wp124857"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp127012"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 integer
 </div>
 </td>
-    <td><a name="wp124859"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp127014"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Array specifying the coordinates of the chunk
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp124863"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td><a name="wp127018"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 datap
 </div>
 </td>
-    <td><a name="wp124865"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp127020"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 VOIDP
 </div>
 </td>
-    <td><a name="wp124867"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp127022"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 &lt;valid_numeric_or_
 </div>
-<a name="wp124868"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+<a name="wp127023"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 char_data_type&gt;
 </div>
 </td>
-    <td><a name="wp124870"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp127025"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Buffer with chunk data in pixel interlace mode
 </div>
 </td>
 </tr>
-  <tr>    <td colspan="1" rowspan="3"><a name="wp124872"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td colspan="1" rowspan="3"><a name="wp127027"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 GRwritechunk
 </div>
-<a name="wp124873"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+<a name="wp127028"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 [intn]
 </div>
-<a name="wp124874"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+<a name="wp127029"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 (mgwchnk/
 </div>
-<a name="wp124875"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+<a name="wp127030"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 mgwcchnk)
 </div>
 </td>
-    <td><a name="wp124877"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp127032"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 ri_id
 </div>
 </td>
-    <td><a name="wp124879"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp127034"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 int32
 </div>
 </td>
-    <td><a name="wp124881"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp127036"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 integer
 </div>
 </td>
-    <td><a name="wp124883"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp127038"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Raster image identifier
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp124887"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td><a name="wp127042"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 origin
 </div>
 </td>
-    <td><a name="wp124889"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp127044"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 int32
 </div>
 </td>
-    <td><a name="wp124891"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp127046"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 integer
 </div>
 </td>
-    <td><a name="wp124893"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp127048"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Array specifying the coordinates of the chunk
 </div>
 </td>
 </tr>
-  <tr>    <td><a name="wp124897"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+  <tr>    <td><a name="wp127052"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 datap
 </div>
 </td>
-    <td><a name="wp124899"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp127054"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 const VOIDP
 </div>
 </td>
-    <td><a name="wp124901"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp127056"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 &lt;valid_numeric_or_
 </div>
-<a name="wp124902"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
+<a name="wp127057"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: center; text-decoration: none; text-indent: 0pt; text-transform: none">
 char_data_type&gt;
 </div>
 </td>
-    <td><a name="wp124904"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+    <td><a name="wp127059"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Buffer with chunk data in pixel interlace mode
 </div>
 </td>

@@ -7,11 +7,11 @@
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.8.2296" />
     <meta name="TEMPLATEBASE" content="HDF4 Version 1.0" />
-    <meta name="LASTUPDATED" content="02/23/12 05:01:23" />
+    <meta name="LASTUPDATED" content="03/06/12 09:59:52" />
     <title>Chapter 7	24-bit Raster Images (DF24 API)</title>
     <link rel="StyleSheet" href="document.css" type="text/css" media="all" />
     <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
-<link rel="first" title="First" href="UG_Intro.html" />
+<link rel="first" title="First" href="UG_htmlLOF.html" />
 <link rel="last" title="Last" href="UG_Top.html" />
 <link rel="previous" title="Previous" href="UG_RIS8s.html" />
 <link rel="next" title="Next" href="UG_GR.html" />
@@ -70,9 +70,9 @@ This chapter describes the 24-bit raster data model and the single-file DF24 rou
 The <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">24-bit raster image set</span>, or <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">RIS24</span>, data model supports two primary data objects: two-dimensional 24-bit raster images and dimensions. The primary member of the set is the <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">24-bit raster image</span>, a two-dimensional array of pixels or picture elements. Each pixel is represented by three 8-bit numbers of image data. An optional compression method describes the method used, if any, to compress the image. <a href="UG_RIS24s.html#wp22775">Figure 7a</a> shows the contents of a 24-bit raster image set.
 </p>
 <a name="wp22775"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
-FIGURE 7a	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">24-Bit Raster Image Set Contents</span></div>
-<div align="left"><img src="images/hdf4_07-UG_RIS24s-1-1.jpg" height="173" width="261" id="wp22781" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
-<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"></span>
+FIGURE 7a	24-Bit Raster Image Set Contents</div>
+<div align="left"><img src="images/hdf4_11-UG_RIS24s-1-1.jpg" height="173" width="261" id="wp22781" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
+
 </div>
 <a name="wp22777"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
 	7.2.1	Required 24-Bit Raster Image Data Set Objects
@@ -90,9 +90,9 @@ The <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; 
 As an example, consider a stream of 24-bit numbers representing a raster image (Fig. 4.1a). To display the image, the color associated with the first number in the data stream appears in the upper left corner of the image. The remainder of the first line is then painted from left-to-right using as many values from the data stream as necessary to complete the line. The remainder of the rows are similarly painted from left-to-right, top-to-bottom until every value in the data stream appears as one pixel in the image. 
 </p>
 <a name="wp5011"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
-FIGURE 7b	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">The Numerical Representation of a 24-Bit Raster Image</span></div>
-<div align="left"><img src="images/hdf4_07-UG_RIS24s-1-2.jpg" height="423" width="519" id="wp22790" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
-<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"></span>
+FIGURE 7b	The Numerical Representation of a 24-Bit Raster Image</div>
+<div align="left"><img src="images/hdf4_11-UG_RIS24s-1-2.jpg" height="423" width="519" id="wp22790" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
+
 </div>
 <a name="wp5012"> </a><h4 style="font-family: Times New Roman; font-size: 10pt; margin-top: 10pt" class="pHeading4">
 	7.2.1.2	24-Bit Raster Image Dimension 
@@ -110,7 +110,7 @@ The <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; 
 The only 24-bit compression method currently available in HDF is the JPEG algorithm . The applicable HDF compression tags are <code style="font-family: Courier New; font-size: 8pt" class="cDefName">COMP_JPEG</code>, and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">COMP_NONE</code>. <a href="UG_RIS24s.html#wp3906"><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">(See Table 7A.)</span></a> The HDF tags <code style="font-family: Courier New; font-size: 8pt" class="cDefName">COMP_JPEG</code> and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">COMP_NONE</code> are defined as the values <code style="font-family: Courier New; font-size: 8pt" class="cDefName">2</code>, and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code> respectively in the &quot;hdf.h&quot; header file. 
 </p>
 <a name="wp3906"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 7A	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">24-Bit Raster Image Compression Method List</span></div>
+TABLE 7A	24-Bit Raster Image Compression Method List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp8107table8105">
   <caption></caption>
@@ -189,15 +189,15 @@ Because graphics applications and hardware devices vary in the way they access i
 HDF provides three options for organizing the color components in 24-bit raster images. These options consist of pixel interlacing, scan-line interlacing, and scan-plane interlacing. (See <a href="UG_RIS24s.html#wp5150">Figure 7c</a>.) Storing the color components grouped by pixel, as in red-green-blue, red-green-blue, etc., is called <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">pixel interlacing</span>. Storing the color components by line, as in one row of red, one row of green, one row of blue, one row red, etc., is called <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">scan-line interlacing</span>. Finally, storing the color components grouped by color plane, as in the red components first, the green components second, and the blue components last, is called <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">scan-plane interlacing</span>. Unless otherwise specified, the HDF 24-bit raster model assumes that all 24-bit images are stored using pixel interlacing.
 </p>
 <a name="wp5150"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
-FIGURE 7c	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">RGB Interlace Format for 24-Bit Raster Images</span></div>
-<div align="left"><img src="images/hdf4_07-UG_RIS24s-1-3.jpg" height="137" width="530" id="wp22795" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
-<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"></span>
+FIGURE 7c	RGB Interlace Format for 24-Bit Raster Images</div>
+<div align="left"><img src="images/hdf4_11-UG_RIS24s-1-3.jpg" height="137" width="530" id="wp22795" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
+
 </div>
 <a name="wp5151"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 An interlace format describes both the physical format of an image as it is stored in memory and in the file. When writing to a file, HDF stores a 24-bit image using the same interlace format as it has in memory. However, when reading from a file, it is possible to make the in-core interlacing mode different from that used in the file. The following table contains a summary of the interlacing format available in the DF24 interface.
 </p>
 <a name="wp5189"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 7B	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">24-Bit Raster Image Interlace Format</span></div>
+TABLE 7B	24-Bit Raster Image Interlace Format</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp8066table8064">
   <caption></caption>
@@ -296,7 +296,7 @@ The names of all C routines in the 24-bit raster image interface are prefaced by
 The DF24 function calls are more explicitly defined in <a href="UG_RIS24s.html#wp2739">Table 7C</a> and on their respective pages in the <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF Reference Manual</span>.
 </p>
 <a name="wp2739"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 7C	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24 Library Routines</span></div>
+TABLE 7C	DF24 Library Routines</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp8139table8137">
   <caption></caption>
@@ -538,7 +538,7 @@ To write a raster image to an HDF file, the calling program must contain one of 
 <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24putimage</span> and <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24addimage</span> passes the raster data in the <em class="cVarName">image</em> parameter and the width and height of the image in the <em class="cVarName">width</em> and <em class="cVarName">height</em> parameters. The array <em class="cVarName">image</em> is assumed to be the width times the height times three bytes in length for each color component. The parameters for <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24putimage</span> and <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24addimage</span> are further defined below. <a href="UG_RIS24s.html#wp2786">Table 7D on page 282</a>
 </p>
 <a name="wp2786"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 7D	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24putimage and DF24addimage Parameter List</span></div>
+TABLE 7D	DF24putimage and DF24addimage Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp5375table1633">
   <caption></caption>
@@ -886,7 +886,7 @@ For more information about the <em class="cVarName">c_info</em> structure refer 
 Default values for quality and baseline (<em class="cVarName">quality=75%</em>, <em class="cVarName">baseline=on</em>) are used if <em class="cVarName">c_info</em> is a null structure or <b class="cFunctionName">d2sjpeg</b> is omitted. Parameters for <b class="cFunctionName">DF24setcompress</b> and <b class="cFunctionName">d24sjpeg</b> are further described in <a href="UG_RIS24s.html#wp3073"><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Table 7E</span></a> below.
 </p>
 <a name="wp3073"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 7E	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24setil and DF24setcompress Parameter List</span></div>
+TABLE 7E	DF24setil and DF24setcompress Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp5704table1798">
   <caption></caption>
@@ -1165,7 +1165,7 @@ To set or reset the interlace format, the calling program should call the follow
 The parameters of <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24reqil</span> is further defined below. <a href="UG_RIS24s.html#wp3285">(See Table 7F.)</a>
 </p>
 <a name="wp3285"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 7F	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24getimage, DF24getdims and DF24reqil Parameter List</span></div>
+TABLE 7F	DF24getimage, DF24getdims and DF24reqil Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp6000table967">
   <caption></caption>
@@ -1460,7 +1460,7 @@ To access a specific raster image set, use the following sequence of routine cal
 The parameters of <b class="cFunctionName">DF24readref </b>are further described in the following table. 
 </p>
 <a name="wp2834"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 7G	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24readref Parameter List</span><span style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"></span></div>
+TABLE 7G	DF24readref Parameter List<span style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"></span></div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp6179table4504">
   <caption></caption>
@@ -1556,7 +1556,7 @@ Reference number for the next call to <span style="color: #000000; font-family: 
 </p><a name="wp4581"> </a><p style="font-family: Courier New; font-size: 9pt" class="pSyntaxLine"><b style="font-family: Courier New; font-size: 9pt" class="cBold">FORTRAN:</b>	status = d2first( )
 </p></ul></div>
 <a name="wp6277"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 7H	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24restart Parameter List</span></div>
+TABLE 7H	DF24restart Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp6305table6233">
   <caption></caption>
@@ -1638,7 +1638,7 @@ None.
 </p><a name="wp4596"> </a><p style="font-family: Courier New; font-size: 9pt" class="pSyntaxLine"><b style="font-family: Courier New; font-size: 9pt" class="cBold">FORTRAN:</b>	num_of_images = d2nimg(filename)
 </p></ul></div>
 <a name="wp2913"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 7I	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24nimages Parameter List</span></div>
+TABLE 7I	DF24nimages Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp6337table2869">
   <caption></caption>
@@ -1725,7 +1725,7 @@ The following calling sequence uses <b class="cFunctionName">DF24lastref </b>to 
 <b class="cFunctionName">DF24putimage</b> or <b class="cFunctionName">DF24getimage</b> can be used in place of <b class="cFunctionName">DF24addimage</b> with similar results.
 </p>
 <a name="wp6412"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 7J	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DF24lastref Parameter List</span></div>
+TABLE 7J	DF24lastref Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp6381table6379">
   <caption></caption>

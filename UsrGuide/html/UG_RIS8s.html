@@ -7,11 +7,11 @@
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.8.2296" />
     <meta name="TEMPLATEBASE" content="HDF4 Version 1.0" />
-    <meta name="LASTUPDATED" content="02/23/12 05:01:19" />
+    <meta name="LASTUPDATED" content="03/06/12 09:59:48" />
     <title>Chapter 6	8-Bit Raster Images (DFR8 API)</title>
     <link rel="StyleSheet" href="document.css" type="text/css" media="all" />
     <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
-<link rel="first" title="First" href="UG_Intro.html" />
+<link rel="first" title="First" href="UG_htmlLOF.html" />
 <link rel="last" title="Last" href="UG_Top.html" />
 <link rel="previous" title="Previous" href="UG_Vgroups.html" />
 <link rel="next" title="Next" href="UG_RIS24s.html" />
@@ -70,8 +70,8 @@ The 8-Bit Raster Data Model
 The data model for the <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">8-bit raster image</span> set, or <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">RIS8</span>, an acronym for &quot;Raster Image Set, 8-bit&quot;, supports three types of objects; two-dimensional 8-bit raster images, dimensions and palettes. The latter two items occur once per RIS8. The following figure shows the contents of an 8-bit raster image set.
 </p>
 <a name="wp6032"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
-FIGURE 6a	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">8-Bit Raster Image Set Contents</span></div>
-<div align="left"><img src="images/hdf4_06-UG_RIS8s-1-1.jpg" height="205" width="520" id="wp5994" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
+FIGURE 6a	8-Bit Raster Image Set Contents</div>
+<div align="left"><img src="images/hdf4_10-UG_RIS8s-1-1.jpg" height="205" width="520" id="wp5994" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
 
 </div>
 <a name="wp2926"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
@@ -90,9 +90,9 @@ An<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; fo
 As an example, consider a stream of 8-bit numbers representing a raster image. <a href="UG_RIS8s.html#wp26757">(See Figure 6b.)</a> When the image is displayed, the color associated with the first number in the data stream is placed in the upper left corner of the image. The remainder of the first line is then painted from left-to-right using as many values from the data stream as is necessary to complete the line. The remainder of the rows are similarly painted from left-to-right and top-to-bottom until every value in the data stream appears is represented by one pixel in the image. 
 </p>
 <a name="wp26757"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
-FIGURE 6b	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">The Data Representation of an 8-Bit Raster Image</span></div>
-<div align="left"><img src="images/hdf4_06-UG_RIS8s-1-2.jpg" height="404" width="521" id="wp26755" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
-<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"></span>
+FIGURE 6b	The Data Representation of an 8-Bit Raster Image</div>
+<div align="left"><img src="images/hdf4_10-UG_RIS8s-1-2.jpg" height="404" width="521" id="wp26755" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
+
 </div>
 <a name="wp26758"> </a><h4 style="font-family: Times New Roman; font-size: 10pt; margin-top: 10pt" class="pHeading4">
 	6.1.1.2	8-Bit Raster Image Dimension
@@ -116,7 +116,7 @@ A <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; fo
 The compression method indicates if and how the image is compressed. It can be, at the programmer&#39;s option, explicitly set or left as its default setting of no compression. Compression schemes supported by HDF version 4.0 are run-length encoding or RLE, joint photographic expert group compression, or JPEG, and image compression, or IMCOMP . The list of compression methods is presented below. <a href="UG_RIS8s.html#wp2968">(See Table 6A.)</a> The HDF tags <code style="font-family: Courier New; font-size: 8pt" class="cDefName">COMP_RLE</code>, <code style="font-family: Courier New; font-size: 8pt" class="cDefName">COMP_IMCOMP</code> and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">COMP_JPEG</code> are respectively defined as the values 11, 12 and 2 in the &quot;hcomp.h&quot; header file. 
 </p>
 <a name="wp2968"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 6A	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">8-Bit Raster Image Compression Method List</span></div>
+TABLE 6A	8-Bit Raster Image Compression Method List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp9550table9548">
   <caption></caption>
@@ -259,7 +259,7 @@ The names of all C functions in the 8-bit raster image interface are prefaced by
 The DFR8 function calls are further defined in <a href="UG_RIS8s.html#wp11212">Table 6B</a> and in the <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF Reference Guide</span>.
 </p>
 <a name="wp11212"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 6B	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFR8 Library Routines</span></div>
+TABLE 6B	DFR8 Library Routines</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp11093table11091">
   <caption></caption>
@@ -508,7 +508,7 @@ In the <b class="cFunctionName">DFR8putimage</b> and <b class="cFunctionName">DF
 Parameters for <b class="cFunctionName">DFR8putimage</b> and <b class="cFunctionName">DFR8addimage</b> are further described below. <a href="UG_RIS8s.html#wp13125">Table 6C on page 263</a>
 </p>
 <a name="wp13125"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 6C	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFR8putimage and DFR8addimage Parameter List</span></div>
+TABLE 6C	DFR8putimage and DFR8addimage Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp13047table13045">
   <caption></caption>
@@ -722,7 +722,7 @@ C     Write the 8-bit raster image to the file<a name="wp10162"> </a>
 <b class="cFunctionName">DFR8setpalette</b> takes <em class="cVarName">palette</em> as its only parameter. To set the default palette to &quot;no palette&quot;, pass <code style="font-family: Courier New; font-size: 8pt" class="cDefName">NULL</code> as the <em class="cVarName">palette</em> parameter. <b class="cFunctionName">DFR8setpalette</b> is further defined in the following table.
 </p>
 <a name="wp5087"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 6D	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFR8setpalette Parameter List</span></div>
+TABLE 6D	DFR8setpalette Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp11422table5055">
   <caption></caption>
@@ -871,7 +871,7 @@ The <em class="cVarName">c_info</em> union is described in Chapter 3, titled <sp
 Parameters for <b class="cFunctionName">DFR8setcompress</b> and <b class="cFunctionName">d8sjpeg</b> are further described in <a href="UG_RIS8s.html#wp2424"><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Table 6E</span></a> below.
 </p>
 <a name="wp2424"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 6E	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFR8setcompress Parameter List</span></div>
+TABLE 6E	DFR8setcompress Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp6603table2362">
   <caption></caption>
@@ -1169,7 +1169,7 @@ C     Write the 8-bit image data to the HDF file.<a name="wp10379"> </a>
 It is unlikely that you will need this routine, but if you do, use it with caution. It is not safe to assume that a reference number indicates the file position of the corresponding image as there is no guarantee that reference numbers appear in sequence in an HDF file.
 </p>
 <a name="wp5222"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 6F	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFR8writeref Parameter List</span></div>
+TABLE 6F	DFR8writeref Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp9727table9725">
   <caption></caption>
@@ -1302,7 +1302,7 @@ To determine the dimensions of an image before attempting to read it, the callin
 <b class="cFunctionName">DFR8getdims</b> retrieves dimension and palette information about the next 8-bit image in the file specified by <em class="cVarName">filename</em>. The returned information is pointed to by the <em class="cVarName">width</em> and <em class="cVarName">height</em> parameters. The <em class="cVarName">haspalette</em> parameter determines the presence of a palette and returns a value of 1 if it exists and 0 otherwise. The parameters for <b class="cFunctionName">DFR8getdims</b> are defined further in the following table.
 </p>
 <a name="wp1951"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 6G	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFR8getdims and DFR8getimage Parameter List</span></div>
+TABLE 6G	DFR8getdims and DFR8getimage Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp6991table1837">
   <caption></caption>
@@ -1580,7 +1580,7 @@ To access a specific raster image set, use the following calling sequence:
 <b class="cFunctionName">DFR8readref</b> specifies that the target for the next read operation performed on the HDF file specified by the <em class="cVarName">filename</em> parameter is the object with the reference number named in the <em class="cVarName">ref</em> parameter. The parameters required for <b class="cFunctionName">DFR8readref</b> are defined further in the following table.
 </p>
 <a name="wp11055"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 6H	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFR8readref Parameter List</span><span style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"></span></div>
+TABLE 6H	DFR8readref Parameter List<span style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"></span></div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp11011table11009">
   <caption></caption>
@@ -1689,7 +1689,7 @@ Reference number for next call to <span style="color: #000000; font-family: Time
 </p><a name="wp5626"> </a><p style="font-family: Courier New; font-size: 9pt" class="pSyntaxLine"><b style="font-family: Courier New; font-size: 9pt" class="cBold">FORTRAN:</b>	num_of_images = d8nimg(filename)
 </p></ul></div>
 <a name="wp3645"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 6I	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFR8nimages Parameter List</span></div>
+TABLE 6I	DFR8nimages Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp7260table2099">
   <caption></caption>
@@ -1785,7 +1785,7 @@ The following calling sequence uses <b class="cFunctionName">DFR8lastref</b> to 
 There is currently no FORTRAN-77 version of the <b class="cFunctionName">DFR8getpalref</b> routine.
 </p>
 <a name="wp8624"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 6J	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFR8nimages Parameter List</span></div>
+TABLE 6J	DFR8nimages Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp11469table8591">
   <caption></caption>

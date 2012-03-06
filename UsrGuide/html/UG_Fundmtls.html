@@ -7,11 +7,11 @@
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.8.2296" />
     <meta name="TEMPLATEBASE" content="HDF4 Version 1.0" />
-    <meta name="LASTUPDATED" content="02/23/12 05:00:28" />
+    <meta name="LASTUPDATED" content="03/06/12 09:58:58" />
     <title>Chapter 2	HDF Fundamentals</title>
     <link rel="StyleSheet" href="document.css" type="text/css" media="all" />
     <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
-<link rel="first" title="First" href="UG_Intro.html" />
+<link rel="first" title="First" href="UG_htmlLOF.html" />
 <link rel="last" title="Last" href="UG_Top.html" />
 <link rel="previous" title="Previous" href="UG_Intro.html" />
 <link rel="next" title="Next" href="UG_SD.html" />
@@ -67,8 +67,8 @@ This chapter provides necessary information for the creation and manipulation of
 An HDF file contains a <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">file header</span>, at least one <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">data descriptor block</span>, and zero or more <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">data elements</span> as depicted in <a href="UG_Fundmtls.html#wp24015">Figure 2a</a>.
 </p>
 <a name="wp24015"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
-FIGURE 2a	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">The Physical Layout of an HDF File Containing One Data Object</span></div>
-<div align="left"><img src="images/hdf4_02-UG_Fundmtls-1-1.jpg" height="317" width="519" id="wp23968" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
+FIGURE 2a	The Physical Layout of an HDF File Containing One Data Object</div>
+<div align="left"><img src="images/hdf4_06-UG_Fundmtls-1-1.jpg" height="317" width="519" id="wp23968" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
 
 </div>
 <a name="wp23886"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
@@ -90,8 +90,8 @@ Note that, on some machines, the order of bytes in the file header might be swap
 A data object is comprised of a data descriptor and a data element. The data descriptor consists of information about the type, location, and size of the data element. The data element contains the actual data. This organization of HDF data makes HDF files <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">self-describing</span>. <a href="UG_Fundmtls.html#wp18890">Figure 2b</a> shows two examples of data objects.
 </p>
 <a name="wp18890"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
-FIGURE 2b	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Two Data Objects</span></div>
-<div align="left"><img src="images/hdf4_02-UG_Fundmtls-1-2.jpg" height="189" width="519" id="wp18864" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
+FIGURE 2b	Two Data Objects</div>
+<div align="left"><img src="images/hdf4_06-UG_Fundmtls-1-2.jpg" height="189" width="519" id="wp18864" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
 
 </div>
 <a name="wp18605"> </a><h4 style="font-family: Times New Roman; font-size: 10pt; margin-top: 10pt" class="pHeading4">
@@ -101,8 +101,8 @@ FIGURE 2b	<span style="color: #000000; font-family: Times New Roman; font-size: 
 All data descriptors are twelve bytes long and contain four fields, as depicted in <a href="UG_Fundmtls.html#wp18638">Figure 2c</a>. These fields are: a 16-bit <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">tag</span>, a 16-bit <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">reference number</span>, a 32-bit <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">data offset</span> and a 32-bit <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">data length</span>.
 </p>
 <a name="wp18638"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
-FIGURE 2c	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">The Contents of a Data Descriptor</span></div>
-<div align="left"><img src="images/hdf4_02-UG_Fundmtls-1-3.jpg" height="141" width="519" id="wp18612" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
+FIGURE 2c	The Contents of a Data Descriptor</div>
+<div align="left"><img src="images/hdf4_06-UG_Fundmtls-1-3.jpg" height="141" width="519" id="wp18612" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
 
 </div>
 <a name="wp25053"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
@@ -164,8 +164,8 @@ In addition to data descriptors, each data descriptor block contains a <span sty
 <a href="UG_Fundmtls.html#wp19091">Figure 2d</a> illustrates the layout of a data descriptor block.
 </p>
 <a name="wp19091"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
-FIGURE 2d	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Data Descriptor Block</span></div>
-<div align="left"><img src="images/hdf4_02-UG_Fundmtls-1-4.jpg" height="132" width="519" id="wp19044" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
+FIGURE 2d	Data Descriptor Block</div>
+<div align="left"><img src="images/hdf4_06-UG_Fundmtls-1-4.jpg" height="132" width="519" id="wp19044" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
 
 </div>
 <a name="wp19036"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
@@ -212,7 +212,7 @@ The routine <b class="cFunctionName">Hopen</b> creates or opens an HDF data file
 The <b class="cFunctionName">Hopen</b> parameters are defined in <a href="UG_Fundmtls.html#wp26158">Table 2A</a> and the following discussion. 
 </p>
 <a name="wp26158"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 2A	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Hopen Parameter List</span></div>
+TABLE 2A	Hopen Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp26105table26103">
   <caption></caption>
@@ -333,7 +333,7 @@ It has been reported that opening/closing file in loops is very slow; thus, it i
 Note that, in the SD interface, <b class="cFunctionName">SDstart</b> is used to open files instead of <b class="cFunctionName">Hopen</b>. (Refer to <a href="UG_SD.html">Chapter 3, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Scientific Data Sets (SD API)</span></a>, of this document for more information on <b class="cFunctionName">SDstart</b>.)
 </p>
 <a name="wp29514"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 2B	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">File Access Code Flags</span></div>
+TABLE 2B	File Access Code Flags</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp29485table29483">
   <caption></caption>
@@ -411,7 +411,7 @@ The <b class="cFunctionName">Hclose</b> routine closes the file designated by th
 Note that <b class="cFunctionName">Hclose</b> is not used to close files in the SD interface. <b class="cFunctionName">SDend</b> is used for this purpose. (Refer to <a href="UG_SD.html">Chapter 3, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Scientific Data Sets (SD API)</span></a> of this document for more information on <b class="cFunctionName">SDend</b>.)
 </p>
 <a name="wp19373"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 2C	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Hclose Parameter List</span></div>
+TABLE 2C	Hclose Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp32842table19340">
   <caption></caption>
@@ -502,7 +502,7 @@ string);
 Both routines return a value of <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) if successful or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) otherwise.
 </p>
 <a name="wp31848"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 2D	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Hgetlibversion and Hgetfileversion Parameter Lists</span><span style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"></span></div>
+TABLE 2D	Hgetlibversion and Hgetfileversion Parameter Lists<span style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"></span></div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp32406table32404">
   <caption></caption>
@@ -829,7 +829,7 @@ The definitions of the fundamental data types are in <a href="UG_Fundmtls.html#w
 If the machine used is big-endian, using these data types will result in no byte-order conversion being performed. If the machine used is little-endian, the library will convert the byte-order of the variables to big-endian.
 </p>
 <a name="wp3081"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 2F	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Standard HDF Data Types and Flags</span></div>
+TABLE 2F	Standard HDF Data Types and Flags</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp24357table4852">
   <caption></caption>
@@ -997,7 +997,7 @@ The method for constructing the data type flag for each native data type describ
 The definitions of the native format data types and the corresponding data type flags appear in <a href="UG_Fundmtls.html#wp23560">Table 2G</a>.
 </p>
 <a name="wp23560"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 2G	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Native Format Data Type Definitions</span></div>
+TABLE 2G	Native Format Data Type Definitions</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp32877table22842">
   <caption></caption>
@@ -1139,7 +1139,7 @@ If the user is on a little-endian machine, using these data types will result in
 The definitions of the little-endian data types and the corresponding data type flags appear in <a href="UG_Fundmtls.html#wp23237">Table 2H</a>.
 </p>
 <a name="wp23237"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 2H	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Little-Endian Format Data Type Definitions</span></div>
+TABLE 2H	Little-Endian Format Data Type Definitions</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp24674table23044">
   <caption></caption>
@@ -1278,7 +1278,7 @@ These definitions identify the object tags defined and used by the HDF interface
 These definitions declare the maximum size of specific data object parameters, such as the maximum length of a vdata field or the maximum number of objects in a vgroup. They are located in the header file <code style="font-family: Courier New; font-size: 8pt" class="cDefName">hlimits.h</code>. A selection of the most-commonly-used limit definitions appears in <a href="UG_Fundmtls.html#wp2412">Table 2I</a>.
 </p>
 <a name="wp2412"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 2I	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Limit Definitions</span></div>
+TABLE 2I	Limit Definitions</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp46080table5189">
   <caption></caption>
@@ -1586,8 +1586,8 @@ FORTRAN-77-to-C Translation
 Nearly all of the HDF library code is written in C. A FORTRAN-77 HDF interface routine translates all parameter data types to C data types, then calls the C routine that performs the functionality of the interface routine. For example, <b class="cFunctionName">d8aimg</b> is the FORTRAN-77 equivalent for <b class="cFunctionName">DFR8addimage</b>. Calls to either routine execute the same C code that adds an 8-bit raster image to an HDF file. See <a href="UG_Fundmtls.html#wp3603">Figure 2e</a>.
 </p>
 <a name="wp3603"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
-FIGURE 2e	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Use of a Function Call Converter to Route FORTRAN-77 HDF Calls to the C Library</span></div>
-<div align="left"><img src="images/hdf4_02-UG_Fundmtls-1-5.jpg" height="126" width="519" id="wp3545" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
+FIGURE 2e	Use of a Function Call Converter to Route FORTRAN-77 HDF Calls to the C Library</div>
+<div align="left"><img src="images/hdf4_06-UG_Fundmtls-1-5.jpg" height="126" width="519" id="wp3545" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
 
 </div>
 <a name="wp3604"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
@@ -1615,7 +1615,7 @@ Data Type Specifications
 When mixing machines, compilers, and languages, it is difficult to maintain consistent data type definitions. For instance, on some machines an integer is a 32-bit quantity and on others, a 16-bit quantity. In addition, the differences between FORTRAN-77 and C lead to difficulties in describing the data types found in the argument lists of HDF routines. To maintain portability, the HDF library expects assigned names for all data types used in HDF routines. See <a href="UG_Fundmtls.html#wp24789">Table 2J</a>.
 </p>
 <a name="wp24789"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 2J	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Correspondence Between Fortran and HDF C Data Types</span></div>
+TABLE 2J	Correspondence Between Fortran and HDF C Data Types</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp32626table24722">
   <caption></caption>

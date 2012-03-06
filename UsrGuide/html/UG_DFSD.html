@@ -7,11 +7,11 @@
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.8.2296" />
     <meta name="TEMPLATEBASE" content="HDF4 Version 1.0" />
-    <meta name="LASTUPDATED" content="02/23/12 05:01:49" />
+    <meta name="LASTUPDATED" content="03/06/12 10:00:18" />
     <title>Chapter 12	Single-File Scientific Data Sets (DFSD API)</title>
     <link rel="StyleSheet" href="document.css" type="text/css" media="all" />
     <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
-<link rel="first" title="First" href="UG_Intro.html" />
+<link rel="first" title="First" href="UG_htmlLOF.html" />
 <link rel="last" title="Last" href="UG_Top.html" />
 <link rel="previous" title="Previous" href="UG_Annot.html" />
 <link rel="next" title="Next" href="UG_Errors.html" />
@@ -67,8 +67,8 @@ The DFSD interface was one of two interfaces in the HDF library that support the
 The scientific data set, or SDS, data model supports four primary data objects: arrays, dimensions, dimension scales, and dimension attributes. As in the multifile SD SDS model, the fundamental object of the data model is the SDS array. Unlike the SD multifile SDS model the DFSD SDS model has, in addition to dimension attributes, attributes that refer to the SDS array itself.
 </p>
 <a name="wp14341"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
-FIGURE 12a	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">The Contents of a Three-Dimensional DFSD Scientific Data Set</span></div>
-<div align="left"><img src="images/hdf4_12-UG_DFSD-1-1.jpg" height="247" width="524" id="wp13985" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
+FIGURE 12a	The Contents of a Three-Dimensional DFSD Scientific Data Set</div>
+<div align="left"><img src="images/hdf4_16-UG_DFSD-1-1.jpg" height="247" width="524" id="wp13985" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
 
 </div>
 <a name="wp14344"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
@@ -129,7 +129,7 @@ The names of the C routines in the DFSD library are prefaced by &quot;DFSD&quot;
 DFSD library routines are more explicitly defined in <a href="UG_DFSD.html#wp4081">Table 12A</a> and on their respective pages in the <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF Reference Manual</span>.
 </p>
 <a name="wp4081"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 12A	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFSD Library Routines</span></div>
+TABLE 12A	DFSD Library Routines</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp12408table12406">
   <caption></caption>
@@ -651,7 +651,7 @@ To define and write a single SDS, the calling program must contain of of the fol
 The parameters of <b class="cFunctionName">DFSDadddata</b> and <b class="cFunctionName">DFSDputdata</b> are further described in the following table.
 </p>
 <a name="wp55211"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 12B	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFSDadddata and DFSDputdata Parameter List</span></div>
+TABLE 12B	DFSDadddata and DFSDputdata Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp56721table55126">
   <caption></caption>
@@ -944,7 +944,7 @@ Care should be taken when using <b class="cFunctionName">DFSDwriteref</b>, as on
 The parameters of <b class="cFunctionName">DFSDwriteref</b> are described in the following table.
 </p>
 <a name="wp4401"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 12C	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFSDsetNT and DFSDwriteref Parameter List</span></div>
+TABLE 12C	DFSDsetNT and DFSDwriteref Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp56925table4258">
   <caption></caption>
@@ -1060,10 +1060,10 @@ Reference number to be assigned to the data set created.
 	12.4.4 Writing Several Data Sets: DFSDsetdims and DFSDclear
 </h3>
 <a name="wp6802"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-The DFSD programming model for writing multiple data sets to an HDF file is identical to that for writing individual data sets. (Refer to <a href="UG_DFSD.html#wp4101"><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Section&#160;12.4 on page&#160;410</span></a>). To understand how multiple data sets are written to file, it is first necessary to take a closer look at each step of the programming model. First and most importantly, all DFSD routines that set a write option except <b class="cFunctionName">DFSDsetNT</b> and <b class="cFunctionName">DFSDsetfillvalue</b> add information to a special structure in primary memory. This information is used to determine how data is written to file for all subsequent write operations. 
+The DFSD programming model for writing multiple data sets to an HDF file is identical to that for writing individual data sets. (Refer to <a href="UG_DFSD.html#wp4101"><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Section&#160;12.4 on page&#160;412</span></a>). To understand how multiple data sets are written to file, it is first necessary to take a closer look at each step of the programming model. First and most importantly, all DFSD routines that set a write option except <b class="cFunctionName">DFSDsetNT</b> and <b class="cFunctionName">DFSDsetfillvalue</b> add information to a special structure in primary memory. This information is used to determine how data is written to file for all subsequent write operations. 
 </p>
 <a name="wp4294"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-Information stored in primary memory is retained by the HDF library until explicitly changed by a call to <b class="cFunctionName">DFSDsetdims</b> or reset to <code style="font-family: Courier New; font-size: 8pt" class="cDefName">NULL</code> by calling <b class="cFunctionName">DFSDclear</b>. <b class="cFunctionName">DFSDsetdims</b> and <b class="cFunctionName">DFSDclear</b> are used to prevent assignments of attributes created for a group of data sets to data sets outside the group. For more information on assigning attributes see <a href="UG_DFSD.html#wp4649">Section&#160;12.7.1 on page&#160;420</a> and <a href="UG_DFSD.html#wp4838">Section&#160;12.7.3 on page&#160;427</a>.
+Information stored in primary memory is retained by the HDF library until explicitly changed by a call to <b class="cFunctionName">DFSDsetdims</b> or reset to <code style="font-family: Courier New; font-size: 8pt" class="cDefName">NULL</code> by calling <b class="cFunctionName">DFSDclear</b>. <b class="cFunctionName">DFSDsetdims</b> and <b class="cFunctionName">DFSDclear</b> are used to prevent assignments of attributes created for a group of data sets to data sets outside the group. For more information on assigning attributes see <a href="UG_DFSD.html#wp4649">Section&#160;12.7.1 on page&#160;422</a> and <a href="UG_DFSD.html#wp4838">Section&#160;12.7.3 on page&#160;429</a>.
 </p>
 <a name="wp4296"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
 	12.4.5 Preventing the Reassignment of DFSD Data Set Attributes: DFSDsetdims
@@ -1088,7 +1088,7 @@ As a rule of thumb,<b class="cFunctionName"> DFSDsetdims</b> should be called if
 The parameters of <b class="cFunctionName">DFSDsetdims</b> are further defined in the following table.
 </p>
 <a name="wp4507"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 12D	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFSDsetdims Parameter List</span></div>
+TABLE 12D	DFSDsetdims Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp57179table12695">
   <caption></caption>
@@ -1187,7 +1187,7 @@ The syntax for <b class="cFunctionName">DFSDclear</b> is as follows:
 The <b class="cFunctionName">DFSDclear</b> routine clears all interface settings defined by any of the <b class="cFunctionName">DFSDset*</b> routines (<b class="cFunctionName">DFSDsetNT</b>, <b class="cFunctionName">DFSDsetfillvalue</b>, <b class="cFunctionName">DFSDsetdims</b>, <b class="cFunctionName">DFSDsetdatastrs</b>, <b class="cFunctionName">DFSDsetdatalengths</b>, <b class="cFunctionName">DFSDsetrange</b>, <b class="cFunctionName">DFSDsetcal</b>, <b class="cFunctionName">DFSDsetdimscale</b> and <b class="cFunctionName">DFSDsetdimstrs</b>). After the <b class="cFunctionName">DFSDclear</b> has been called, calls to any of the <b class="cFunctionName">DFSDset*</b> routines will result in the corresponding value not being written. To write new values, call the appropriate DFSDset routine again.
 </p>
 <a name="wp4339"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 12E	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFSDclear Parameter List</span></div>
+TABLE 12E	DFSDclear Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp57345table12743">
   <caption></caption>
@@ -1288,7 +1288,7 @@ To read an SDS of known dimension and number type, the calling program should in
 The parameters of <b class="cFunctionName">DFSDgetdata</b> are further defined in the following table.
 </p>
 <a name="wp8067"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 12F	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFSDgetdata Parameter List</span></div>
+TABLE 12F	DFSDgetdata Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp58070table12782">
   <caption></caption>
@@ -1431,7 +1431,7 @@ To determine the dimensions and data type of an array before attempting to read 
 The parameters of <b class="cFunctionName">DFSDgetdims</b> and <b class="cFunctionName">DFSDgetNT</b> are further defined in the following table.
 </p>
 <a name="wp51899"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 12G	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFSDgetNT and DFSDgetdims Parameter List</span></div>
+TABLE 12G	DFSDgetNT and DFSDgetdims Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp58574table51812">
   <caption></caption>
@@ -1677,7 +1677,7 @@ To syntax of <b class="cFunctionName">DFSDadddata</b> and <b class="cFunctionNam
 <b class="cFunctionName">DFSDputdata</b> can also be used with <b class="cFunctionName">DFSDlastref</b> to obtain similar results. In any case, <b class="cFunctionName">DFSDlastref</b> can be used before any operation that requires identifying a scientific data set by reference number, as in the assignment of annotations and inserting data sets into vgroups. For more information about annotations and vgroups refer to, <a href="UG_MF_Annot.html">Chapter 10, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Annotations (AN API)</span></a> and <a href="UG_Vgroups.html">Chapter 5, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Vgroups (V API)</span></a>. 
 </p>
 <a name="wp4509"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 12H	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFSDreadref Parameter List</span></div>
+TABLE 12H	DFSDreadref Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp58834table2907">
   <caption></caption>
@@ -1778,10 +1778,10 @@ There are two routines required for every DFSD slab operation - <b class="cFunct
 Given a new filename, <b class="cFunctionName">DFSDstartslab</b> will create a new HDF file with the specified name. Given an existing filename, it will open the named file and append the new data set to the end of the file. Its only parameter is <em class="cVarName">filename</em>. <b class="cFunctionName">DFSDendslab</b> has no parameters and need only be called once per file. <b class="cFunctionName">DFSDendslab</b> will write any attributes defined immediately before the data set is created.
 </p>
 <a name="wp8465"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-For more information on assigning attributes, see <a href="UG_DFSD.html#wp4838">Section&#160;12.7.3 on page&#160;427</a>.
+For more information on assigning attributes, see <a href="UG_DFSD.html#wp4838">Section&#160;12.7.3 on page&#160;429</a>.
 </p>
 <a name="wp8513"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 12I	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFSDstartslab Parameter List</span></div>
+TABLE 12I	DFSDstartslab Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp58991table8470">
   <caption></caption>
@@ -1873,7 +1873,7 @@ In addition to writing slabs to both new and existing data sets, <b class="cFunc
 </ul></div>
 </ul></div>
 <a name="wp4537"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-Although not specifically defined as a slab routine, in practice, the <b class="cFunctionName">DFSDsetfillvalue</b> routine is used to initialize array elements between non-contiguous slab write operations. Setting a fill value places the same value in every array location before the first slab is written. Any hole created by non-contiguous writes can then be recognized by identifying the known fill value. The fill value must have the same number type as the values in the data set. For more information on fill values refer to <a href="UG_DFSD.html#wp62447">Section&#160;12.7.1.2 on page&#160;421</a>.
+Although not specifically defined as a slab routine, in practice, the <b class="cFunctionName">DFSDsetfillvalue</b> routine is used to initialize array elements between non-contiguous slab write operations. Setting a fill value places the same value in every array location before the first slab is written. Any hole created by non-contiguous writes can then be recognized by identifying the known fill value. The fill value must have the same number type as the values in the data set. For more information on fill values refer to <a href="UG_DFSD.html#wp62447">Section&#160;12.7.1.2 on page&#160;423</a>.
 </p>
 <a name="wp4539"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 To write a slab to a new data set, the calling program must include the following routine calls:
@@ -1919,7 +1919,7 @@ The DFSD SDS model does not support strides. Pass the <em class="cVarName">start
 Although <b class="cFunctionName">DFSDendslab</b> need only be called once per file, it is required to write data to the file. It will also write any attributes defined immediately before the data set is created. 
 </p>
 <a name="wp4598"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 12J	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFSDwriteslab Parameter List</span></div>
+TABLE 12J	DFSDwriteslab Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp59110table2374">
   <caption></caption>
@@ -2078,7 +2078,7 @@ In addition to <b class="cFunctionName">DFSDreadref</b>, <b class="cFunctionName
 All parameters of the <b class="cFunctionName">DFSDreadslab</b> routine assume FORTRAN-77-style one-based arrays - the starting coordinates of the slab must be given as an offset from the origin of the data set where the origin is defined as (<em class="cVarName">dim 1 = 1, dim 2 = 1, . . . dim n-1 = 1, dim n = 1</em>). The first element of the slab will be the coordinates specified by the contents of the <em class="cVarName">start</em> array. <b class="cFunctionName">DFSDreadslab</b> will extract elements in increasing order until the until the dimensional offset specified by the contents of the <em class="cVarName">edge</em> array are encountered.
 </p>
 <a name="wp4641"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 12K	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFSDreadslab Parameter List</span></div>
+TABLE 12K	DFSDreadslab Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp59290table12932">
   <caption></caption>
@@ -2278,7 +2278,7 @@ To assign a predefined attribute to an HDF file, the program must contain the fo
 <b class="cFunctionName">DFSDsetdatastrs</b> writes null-terminated strings to an HDF file. It has the same four arguments: <em class="cVarName">label</em>, <em class="cVarName">unit</em>, <em class="cVarName">format</em>, and <em class="cVarName">coordsys</em>. To avoid the assignment of a string, pass <code style="font-family: Courier New; font-size: 8pt" class="cDefName">NULL</code> as the appropriate argument.
 </p>
 <a name="wp62444"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 12L	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFSDsetlengths and DFSDsetdatastrs Parameter List</span></div>
+TABLE 12L	DFSDsetlengths and DFSDsetdatastrs Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp62339table62337">
   <caption></caption>
@@ -2513,7 +2513,7 @@ In addition to the <em class="cVarName">scale</em> and <em class="cVarName">offs
 The parameters of <b class="cFunctionName">DFSDsetcal</b> are defined in the following table.
 </p>
 <a name="wp42546"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 12M	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFSDsetfillvalue, DFSDsetrange and DFSDsetcal Parameter List</span></div>
+TABLE 12M	DFSDsetfillvalue, DFSDsetrange and DFSDsetcal Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp42409table42407">
   <caption></caption>
@@ -2901,7 +2901,7 @@ To assign a predefined attribute to an HDF file, the following routines should b
 The parameters of <b class="cFunctionName">DFSDgetdatalen</b> and <b class="cFunctionName">DFSDgetdatastrs</b> are described in the following table.
 </p>
 <a name="wp4844"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 12N	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFSDgetdatalen and DFSDgetdatastrs Parameter List</span></div>
+TABLE 12N	DFSDgetdatalen and DFSDgetdatastrs Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp13274table13272">
   <caption></caption>
@@ -3172,7 +3172,7 @@ The maximum range of values in the data set isn&#39;t automatically stored with 
 The parameters for <b class="cFunctionName">DFSDgetfillvalue</b>, <b class="cFunctionName">DFSDgetcal</b>, and <b class="cFunctionName">DFSDgetrange</b> are defined in the following table.
 </p>
 <a name="wp4836"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 12O	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFSDgetfillvalue, DFSDgetcal and DFSDgetrange Parameter List </span></div>
+TABLE 12O	DFSDgetfillvalue, DFSDgetcal and DFSDgetrange Parameter List </div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp9765table4794">
   <caption></caption>
@@ -3439,7 +3439,7 @@ To assign a predefined attribute to a dimension, the following routines should b
 The parameters for <b class="cFunctionName">DFSDsetlengths</b> and <b class="cFunctionName">DFSDsetdimstrs</b> are further defined in the following table.
 </p>
 <a name="wp5000"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 12P	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFSDsetlengths and DFSDsetdimstrs Parameter List</span></div>
+TABLE 12P	DFSDsetlengths and DFSDsetdimstrs Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp13384table13382">
   <caption></caption>
@@ -3655,7 +3655,7 @@ The syntax of the two routines needed to write a dimension scale is the followin
 The parameters of <b class="cFunctionName">DFSDsetdiscale</b> are further described in the following table.
 </p>
 <a name="wp5023"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
-TABLE 12Q	<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">DFSDsetdimscale Parameter List</span></div>
+TABLE 12Q	DFSDsetdimscale Parameter List</div>
 <div align="left">
 <table border="1" cellpadding="3" cellspacing="1" id="wp13493table13491">
   <caption></caption>
