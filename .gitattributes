@@ -2,7 +2,9 @@
 RefMan/html/RMTOC.html -text
 RefMan/html/RMTop.html -text
 RefMan/html/RM_Front.html -text
+RefMan/html/RM_PDF.pdf -text svneol=unset#application/octet-stream
 RefMan/html/RM_Section_I.html -text
+RefMan/html/RM_Section_III.html -text
 RefMan/html/RM_Section_II_AN.html -text
 RefMan/html/RM_Section_II_ANLOP.html -text
 RefMan/html/RM_Section_II_DF24.html -text
@@ -40,6 +42,7 @@ RefMan/html/RM_Section_II_VSLOP.html -text
 RefMan/html/RM_Section_II_VSQ.html -text
 RefMan/html/RM_Section_II_VSQLOP.html -text
 RefMan/html/RM_Top.html -text
+RefMan/html/THG_Copyright.html -text
 RefMan/html/catalog.css -text
 RefMan/html/document.css -text
 RefMan/html/images/hdf4_RM-02-1-1.jpg -text
