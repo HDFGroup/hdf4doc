@@ -51,8 +51,8 @@
     <table id="$BP80Accessibility_SummaryNotReqID;" border="0" width="850" cellspacing="0" cellpadding="0">
       <tr>
         <td align="left">
-        HDF4.2.6 - June 2011<br />
-        <a href="RM_Front.html">Copyright</a>
+        HDF 4.2.7 - February 2012<br />
+        <a href="THG_Copyright.html">Copyright</a>
         <td align="right">
           <span style="font-size: 12px; font-weight: bold">
             The HDF Group<br />

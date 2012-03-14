@@ -100,8 +100,10 @@ RefMan/src/RM_print.book -text
 RefMan/webworks/hdf4_RM.wfp -text
 RefMan/webworks/support/CopyrightPage.asp -text
 RefMan/webworks/support/FirstInterfacePage.asp -text
+RefMan/webworks/support/Indx_Appdx.asp -text
 RefMan/webworks/support/InterfacePage.asp -text
 RefMan/webworks/support/Normal.asp -text
+RefMan/webworks/support/SectionPage.asp -text
 RefMan/webworks/support/TopPage.asp -text
 RefMan/webworks/support/images/hdf_logo.jpg -text
 RefMan/webworks/support/images/help.jpg -text
