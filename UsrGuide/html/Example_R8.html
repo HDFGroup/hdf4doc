@@ -7,11 +7,11 @@
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.8.2296" />
     <meta name="TEMPLATEBASE" content="HDF4 Version 1.0" />
-    <meta name="LASTUPDATED" content="03/06/12 10:01:03" />
+    <meta name="LASTUPDATED" content="03/14/12 04:38:00" />
     <title>r8_ex1.c</title>
     <link rel="StyleSheet" href="document.css" type="text/css" media="all" />
     <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
-<link rel="first" title="First" href="UG_htmlLOF.html" />
+<link rel="first" title="First" href="UG_Intro.html" />
 <link rel="last" title="Last" href="UG_Top.html" />
 <link rel="previous" title="Previous" href="Example_R24.html" />
 <link rel="next" title="Next" href="Example_PAL.html" />
@@ -54,44 +54,44 @@ r8_ex1.c
 </div>
 <div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
 #include &quot;hdf.h&quot;<a name="wp930692"> </a>
-#define WIDTH 5<a name="wp931381"> </a>
-#define HEIGHT 6<a name="wp931382"> </a>
-main( )<a name="wp931384"> </a>
-{<a name="wp931385"> </a>
-	/* Initialize the image array */<a name="wp931387"> </a>
-	static uint8 raster_data[HEIGHT][WIDTH] = <a name="wp931388"> </a>
-		{ 1, 2, 3, 4, 5,<a name="wp931389"> </a>
-		6, 7,	8, 9, 10,<a name="wp931390"> </a>
-		11, 12, 13,	14, 15,<a name="wp931391"> </a>
-		16, 17, 18, 19, 20,	<a name="wp931392"> </a>
-		21, 22, 23,	24, 25,<a name="wp931393"> </a>
-		26, 27, 28,	29, 30 };<a name="wp931394"> </a>
-	intn status;<a name="wp931396"> </a>
- <a name="wp931398"> </a>
-	/* Write the 8-bit raster image to file */<a name="wp931399"> </a>
-	status = DFR8addimage(&quot;Example1.hdf&quot;, raster_data, <a name="wp931400"> </a>
-					WIDTH, HEIGHT, 0);<a name="wp931401"> </a>
-}<a name="wp931403"> </a>
+#define WIDTH 5<a name="wp932075"> </a>
+#define HEIGHT 6<a name="wp932076"> </a>
+main( )<a name="wp932078"> </a>
+{<a name="wp932079"> </a>
+	/* Initialize the image array */<a name="wp932081"> </a>
+	static uint8 raster_data[HEIGHT][WIDTH] = <a name="wp932082"> </a>
+		{ 1, 2, 3, 4, 5,<a name="wp932083"> </a>
+		6, 7,	8, 9, 10,<a name="wp932084"> </a>
+		11, 12, 13,	14, 15,<a name="wp932085"> </a>
+		16, 17, 18, 19, 20,	<a name="wp932086"> </a>
+		21, 22, 23,	24, 25,<a name="wp932087"> </a>
+		26, 27, 28,	29, 30 };<a name="wp932088"> </a>
+	intn status;<a name="wp932090"> </a>
+ <a name="wp932092"> </a>
+	/* Write the 8-bit raster image to file */<a name="wp932093"> </a>
+	status = DFR8addimage(&quot;Example1.hdf&quot;, raster_data, <a name="wp932094"> </a>
+					WIDTH, HEIGHT, 0);<a name="wp932095"> </a>
+}<a name="wp932097"> </a>
 </pre></div>
 <a name="wp928476"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 6pt; margin-left: 0pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: underline; text-indent: 0pt; text-transform: none">
 r8_ex1.f
 </div>
 <div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
       PROGRAM RASTER8      <a name="wp930723"> </a>
-      character*1 raster_data(5,6)<a name="wp931412"> </a>
-      integer retn, d8aimg<a name="wp931413"> </a>
-      integer*4 WIDTH, HEIGHT<a name="wp931415"> </a>
-      parameter(WIDTH = 5, HEIGHT = 6)<a name="wp931416"> </a>
-C     Initialize the image array<a name="wp931418"> </a>
-      data raster_data /  1,  2,  3,  4,  5,<a name="wp931419"> </a>
-     $                    6,  7,  8,  9, 10,<a name="wp931420"> </a>
-     $                   11, 12, 13, 14, 15,<a name="wp931421"> </a>
-     $                   16, 17, 18, 19, 20,<a name="wp931422"> </a>
-     $                   21, 22, 23, 24, 25,<a name="wp931423"> </a>
-     $                   26, 27, 28, 29, 30 /<a name="wp931424"> </a>
-C     Write the 8-bit raster image to the file<a name="wp931426"> </a>
-      retn = d8aimg(`Example1.hdf&#39;, raster_data, WIDTH, HEIGHT, 0)<a name="wp931427"> </a>
-      end<a name="wp931429"> </a>
+      character*1 raster_data(5,6)<a name="wp932101"> </a>
+      integer retn, d8aimg<a name="wp932102"> </a>
+      integer*4 WIDTH, HEIGHT<a name="wp932104"> </a>
+      parameter(WIDTH = 5, HEIGHT = 6)<a name="wp932105"> </a>
+C     Initialize the image array<a name="wp932107"> </a>
+      data raster_data /  1,  2,  3,  4,  5,<a name="wp932108"> </a>
+     $                    6,  7,  8,  9, 10,<a name="wp932109"> </a>
+     $                   11, 12, 13, 14, 15,<a name="wp932110"> </a>
+     $                   16, 17, 18, 19, 20,<a name="wp932111"> </a>
+     $                   21, 22, 23, 24, 25,<a name="wp932112"> </a>
+     $                   26, 27, 28, 29, 30 /<a name="wp932113"> </a>
+C     Write the 8-bit raster image to the file<a name="wp932115"> </a>
+      retn = d8aimg(`Example1.hdf&#39;, raster_data, WIDTH, HEIGHT, 0)<a name="wp932116"> </a>
+      end<a name="wp932118"> </a>
 </pre></div>
 <a name="wp928479"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 6pt; margin-left: 0pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: underline; text-indent: 0pt; text-transform: none">
 r8_ex2.c
@@ -147,43 +147,43 @@ r8_ex3.c
 </div>
 <div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
  #include &quot;hdf.h&quot;<a name="wp930852"> </a>
-#define WIDTH 20<a name="wp931504"> </a>
-#define HEIGHT 20<a name="wp931505"> </a>
-main ( )<a name="wp931507"> </a>
-{<a name="wp931508"> </a>
-	uint8 paletteA[256*3], paletteB[256*3];<a name="wp931509"> </a>
-	uint8 picture1[HEIGHT][WIDTH], picture2[HEIGHT][WIDTH];<a name="wp931510"> </a>
-	uint8 picture3[HEIGHT][WIDTH], picture4[HEIGHT][WIDTH];<a name="wp931511"> </a>
-	uint8 i, j;<a name="wp931512"> </a>
-	int16 status;<a name="wp931513"> </a>
-    <a name="wp931514"> </a>
-	/* Initialize image arrays. */<a name="wp931515"> </a>
-	for (j = 0; j &lt; WIDTH; j++) {<a name="wp931516"> </a>
-		for (i = 0; i &lt; HEIGHT; i++) {<a name="wp931517"> </a>
-			picture1[j][i] = 1;<a name="wp931518"> </a>
-			picture2[j][i] = 1;<a name="wp931519"> </a>
-			picture3[j][i] = 1;<a name="wp931520"> </a>
-			picture4[j][i] = 1;<a name="wp931521"> </a>
-		}<a name="wp931522"> </a>
-	}<a name="wp931523"> </a>
-	/* Set the first palette. */<a name="wp931525"> </a>
-	status = DFR8setpalette(paletteA);<a name="wp931526"> </a>
-    <a name="wp931527"> </a>
-	/* Write the compressed image data to the HDF file. */<a name="wp931528"> </a>
-	status = DFR8putimage(&quot;Example3.hdf&quot;, (VOIDP)picture1, WIDTH, HEIGHT, \<a name="wp931529"> </a>
-					COMP_RLE);<a name="wp931530"> </a>
-	status = DFR8addimage(&quot;Example3.hdf&quot;, (VOIDP)picture2, WIDTH, HEIGHT, \<a name="wp931531"> </a>
-					COMP_RLE);<a name="wp931532"> </a>
-    <a name="wp931533"> </a>
-	/* Set the second palette. */<a name="wp931534"> </a>
-	status = DFR8setpalette(paletteB);<a name="wp931535"> </a>
-    <a name="wp931536"> </a>
-	/* Write the uncompressed image data to the HDF file. */<a name="wp931537"> </a>
-	status = DFR8addimage(&quot;Example3.hdf&quot;, (VOIDP)picture3, WIDTH, HEIGHT, \<a name="wp931538"> </a>
-					COMP_NONE);<a name="wp931539"> </a>
-	status = DFR8addimage(&quot;Example3.hdf&quot;, (VOIDP)picture4, WIDTH, HEIGHT, \<a name="wp931540"> </a>
-					COMP_NONE);<a name="wp931541"> </a>
-}<a name="wp931543"> </a>
+#define WIDTH 20<a name="wp932011"> </a>
+#define HEIGHT 20<a name="wp932012"> </a>
+main ( )<a name="wp932014"> </a>
+{<a name="wp932015"> </a>
+	uint8 paletteA[256*3], paletteB[256*3];<a name="wp932016"> </a>
+	uint8 picture1[HEIGHT][WIDTH], picture2[HEIGHT][WIDTH];<a name="wp932017"> </a>
+	uint8 picture3[HEIGHT][WIDTH], picture4[HEIGHT][WIDTH];<a name="wp932018"> </a>
+	uint8 i, j;<a name="wp932019"> </a>
+	int16 status;<a name="wp932020"> </a>
+    <a name="wp932021"> </a>
+	/* Initialize image arrays. */<a name="wp932022"> </a>
+	for (j = 0; j &lt; WIDTH; j++) {<a name="wp932023"> </a>
+		for (i = 0; i &lt; HEIGHT; i++) {<a name="wp932024"> </a>
+			picture1[j][i] = 1;<a name="wp932025"> </a>
+			picture2[j][i] = 1;<a name="wp932026"> </a>
+			picture3[j][i] = 1;<a name="wp932027"> </a>
+			picture4[j][i] = 1;<a name="wp932028"> </a>
+		}<a name="wp932029"> </a>
+	}<a name="wp932030"> </a>
+	/* Set the first palette. */<a name="wp932032"> </a>
+	status = DFR8setpalette(paletteA);<a name="wp932033"> </a>
+    <a name="wp932034"> </a>
+	/* Write the compressed image data to the HDF file. */<a name="wp932035"> </a>
+	status = DFR8putimage(&quot;Example3.hdf&quot;, (VOIDP)picture1, WIDTH, HEIGHT, \<a name="wp932036"> </a>
+					COMP_RLE);<a name="wp932037"> </a>
+	status = DFR8addimage(&quot;Example3.hdf&quot;, (VOIDP)picture2, WIDTH, HEIGHT, \<a name="wp932038"> </a>
+					COMP_RLE);<a name="wp932039"> </a>
+    <a name="wp932040"> </a>
+	/* Set the second palette. */<a name="wp932041"> </a>
+	status = DFR8setpalette(paletteB);<a name="wp932042"> </a>
+    <a name="wp932043"> </a>
+	/* Write the uncompressed image data to the HDF file. */<a name="wp932044"> </a>
+	status = DFR8addimage(&quot;Example3.hdf&quot;, (VOIDP)picture3, WIDTH, HEIGHT, \<a name="wp932045"> </a>
+					COMP_NONE);<a name="wp932046"> </a>
+	status = DFR8addimage(&quot;Example3.hdf&quot;, (VOIDP)picture4, WIDTH, HEIGHT, \<a name="wp932047"> </a>
+					COMP_NONE);<a name="wp932048"> </a>
+}<a name="wp932050"> </a>
 </pre></div>
 <a name="wp928489"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 6pt; margin-left: 0pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: underline; text-indent: 0pt; text-transform: none">
 r8_ex3.f
@@ -310,18 +310,18 @@ main( )<a name="wp931855"> </a>
 r8_ex5.f
 </div>
 <div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-      PROGRAM RASTER8      <a name="wp929664"> </a>
-      character*1 image(5, 6)<a name="wp931877"> </a>
-      integer status, height, width, d8gimg, d8gdims, haspal<a name="wp931878"> </a>
-      integer*4 width, height<a name="wp931879"> </a>
-C     Get the dimensions of the image.<a name="wp931881"> </a>
-      status = d8gdims(`Example1.hdf&#39;, width, height, haspal)<a name="wp931882"> </a>
-C     Read the raster data if the dimensions are correct.<a name="wp931884"> </a>
-      if (width .le. 5 .and. height .le. 6) then<a name="wp931885"> </a>
-         status = d8gimg(`Example1.hdf&#39;, image, width, height, 0)<a name="wp931886"> </a>
-      endif<a name="wp931887"> </a>
-      end<a name="wp931889"> </a>
-      PROGRAM GET LABEL LIST            <a name="wp931890"> </a>
+      PROGRAM RASTER8      <a name="wp931890"> </a>
+      character*1 image(5, 6)<a name="wp932122"> </a>
+      integer status, height, width, d8gimg, d8gdims, haspal<a name="wp932123"> </a>
+      integer*4 width, height<a name="wp932124"> </a>
+C     Get the dimensions of the image.<a name="wp932126"> </a>
+      status = d8gdims(`Example1.hdf&#39;, width, height, haspal)<a name="wp932127"> </a>
+C     Read the raster data if the dimensions are correct.<a name="wp932129"> </a>
+      if (width .le. 5 .and. height .le. 6) then<a name="wp932130"> </a>
+         status = d8gimg(`Example1.hdf&#39;, image, width, height, 0)<a name="wp932131"> </a>
+      endif<a name="wp932132"> </a>
+      end<a name="wp932134"> </a>
+      PROGRAM GET LABEL LIST            <a name="wp932135"> </a>
       integer dallist<a name="wp930990"> </a>
       integer*4 DFTAG_NDG, LISTSIZE, DFS_MAXLEN<a name="wp930991"> </a>
       parameter (DFTAG_NDG = 720,<a name="wp930993"> </a>
@@ -347,7 +347,7 @@ C     Read the raster data if the dimensions are correct.<a name="wp931884"> </a
       <tr>
         <td align="left">
         HDF 4.2.7 - February 2012<br/>
-        <a href="UG_Copyright.html">Copyright</a>
+        <a href="THG_Copyright.html">Copyright</a>
         <td align="right">
           <span style="font-size: 12px; font-weight: bold">
             The HDF Group<br />

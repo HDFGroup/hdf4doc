@@ -7,11 +7,11 @@
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.8.2296" />
     <meta name="TEMPLATEBASE" content="HDF4 Version 1.0" />
-    <meta name="LASTUPDATED" content="03/06/12 10:00:57" />
+    <meta name="LASTUPDATED" content="03/14/12 04:37:54" />
     <title>create_annotation.c</title>
     <link rel="StyleSheet" href="document.css" type="text/css" media="all" />
     <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
-<link rel="first" title="First" href="UG_htmlLOF.html" />
+<link rel="first" title="First" href="UG_Intro.html" />
 <link rel="last" title="Last" href="UG_Top.html" />
 <link rel="previous" title="Previous" href="Examples_DFSD.html" />
 <link rel="next" title="Next" href="Example_Vg.html" />
@@ -49,534 +49,534 @@
     <hr />
 
     <blockquote>
-<a name="wp929676"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 6pt; margin-left: 0pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: underline; text-indent: 0pt; text-transform: none">
+<a name="wp930398"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 6pt; margin-left: 0pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: underline; text-indent: 0pt; text-transform: none">
 create_annotation.c
 </div>
-<a name="wp929862"> </a><p style="font-family: Arial; font-size: 10pt" class="pBodyRelative">
+<a name="wp930635"> </a><p style="font-family: Arial; font-size: 10pt" class="pBodyRelative">
 </p>
 <div align="left">
-<table border="1" id="wp929865table929863">
+<table border="1" id="wp930403table930401">
   <caption></caption>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-<span style="color: #000000; font-family: Arial; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">#include &quot;hdf.h&quot;</span><a name="wp929865"> </a>
+<span style="color: #000000; font-family: Arial; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">#include &quot;hdf.h&quot;</span><a name="wp930403"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td>&#160;</td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-#define  FILE_NAME      &quot;General_HDFobjects.hdf&quot;<a name="wp929869"> </a>
+#define  FILE_NAME      &quot;General_HDFobjects.hdf&quot;<a name="wp930407"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-#define  VG_NAME        &quot;AN Vgroup&quot;<a name="wp929871"> </a>
+#define  VG_NAME        &quot;AN Vgroup&quot;<a name="wp930409"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-#define  FILE_LABEL_TXT &quot;General HDF objects&quot;<a name="wp929873"> </a>
+#define  FILE_LABEL_TXT &quot;General HDF objects&quot;<a name="wp930411"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-#define  FILE_DESC_TXT  &quot;This is an HDF file that contains general HDF objects&quot;<a name="wp929875"> </a>
+#define  FILE_DESC_TXT  &quot;This is an HDF file that contains general HDF objects&quot;<a name="wp930413"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-#define  DATA_LABEL_TXT &quot;Common AN Vgroup&quot;<a name="wp929877"> </a>
+#define  DATA_LABEL_TXT &quot;Common AN Vgroup&quot;<a name="wp930415"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-#define  DATA_DESC_TXT  &quot;This is a vgroup that is used to test data annotations&quot;<a name="wp929879"> </a>
-</pre></div>
-</td>
-</tr>
-  <tr align="left">    <td>&#160;</td>
-</tr>
-  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-main( )<a name="wp929883"> </a>
-</pre></div>
-</td>
-</tr>
-  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-{<a name="wp929885"> </a>
-</pre></div>
-</td>
-</tr>
-  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   /************************* Variable declaration **************************/<a name="wp929887"> </a>
+#define  DATA_DESC_TXT  &quot;This is a vgroup that is used to test data annotations&quot;<a name="wp930417"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td>&#160;</td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   intn   status_n;     /* returned status for functions returning an intn  */<a name="wp929891"> </a>
+main( )<a name="wp930421"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   int32  status_32,    /* returned status for functions returning an int32 */<a name="wp929893"> </a>
+{<a name="wp930423"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-          file_id,      /* HDF file identifier */<a name="wp929895"> </a>
-</pre></div>
-</td>
-</tr>
-  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-          an_id,        /* AN interface identifier */<a name="wp929897"> </a>
-</pre></div>
-</td>
-</tr>
-  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-          file_label_id,  /* file label identifier */<a name="wp929899"> </a>
-</pre></div>
-</td>
-</tr>
-  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-          file_desc_id,   /* file description identifier */<a name="wp929901"> </a>
-</pre></div>
-</td>
-</tr>
-  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-          data_label_id,  /* data label identifier */<a name="wp929903"> </a>
-</pre></div>
-</td>
-</tr>
-  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-          data_desc_id,   /* data description identifier */<a name="wp929905"> </a>
-</pre></div>
-</td>
-</tr>
-  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-          vgroup_id;<a name="wp929907"> </a>
-</pre></div>
-</td>
-</tr>
-  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   uint16 vgroup_tag, vgroup_ref;<a name="wp929909"> </a>
+   /************************* Variable declaration **************************/<a name="wp930425"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td>&#160;</td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   /********************** End of variable declaration **********************/<a name="wp929913"> </a>
+   intn   status_n;     /* returned status for functions returning an intn  */<a name="wp930429"> </a>
+</pre></div>
+</td>
+</tr>
+  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
+   int32  status_32,    /* returned status for functions returning an int32 */<a name="wp930431"> </a>
+</pre></div>
+</td>
+</tr>
+  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
+          file_id,      /* HDF file identifier */<a name="wp930433"> </a>
+</pre></div>
+</td>
+</tr>
+  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
+          an_id,        /* AN interface identifier */<a name="wp930435"> </a>
+</pre></div>
+</td>
+</tr>
+  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
+          file_label_id,  /* file label identifier */<a name="wp930437"> </a>
+</pre></div>
+</td>
+</tr>
+  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
+          file_desc_id,   /* file description identifier */<a name="wp930439"> </a>
+</pre></div>
+</td>
+</tr>
+  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
+          data_label_id,  /* data label identifier */<a name="wp930441"> </a>
+</pre></div>
+</td>
+</tr>
+  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
+          data_desc_id,   /* data description identifier */<a name="wp930443"> </a>
+</pre></div>
+</td>
+</tr>
+  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
+          vgroup_id;<a name="wp930445"> </a>
+</pre></div>
+</td>
+</tr>
+  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
+   uint16 vgroup_tag, vgroup_ref;<a name="wp930447"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td>&#160;</td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   /*<a name="wp929917"> </a>
-</pre></div>
-</td>
-</tr>
-  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   * Create the HDF file.<a name="wp929919"> </a>
-</pre></div>
-</td>
-</tr>
-  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   */<a name="wp929921"> </a>
-</pre></div>
-</td>
-</tr>
-  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   file_id = Hopen (FILE_NAME, DFACC_CREATE, 0);<a name="wp929923"> </a>
+   /********************** End of variable declaration **********************/<a name="wp930451"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td>&#160;</td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   /*<a name="wp929927"> </a>
+   /*<a name="wp930455"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   * Initialize the AN interface.<a name="wp929929"> </a>
+   * Create the HDF file.<a name="wp930457"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   */<a name="wp929931"> </a>
+   */<a name="wp930459"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   an_id = ANstart(file_id);<a name="wp929933"> </a>
-</pre></div>
-</td>
-</tr>
-  <tr align="left">    <td>&#160;</td>
-</tr>
-  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   /*<a name="wp929937"> </a>
-</pre></div>
-</td>
-</tr>
-  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   * Create the file label.<a name="wp929939"> </a>
-</pre></div>
-</td>
-</tr>
-  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   */<a name="wp929941"> </a>
-</pre></div>
-</td>
-</tr>
-  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   file_label_id = ANcreatef(an_id, AN_FILE_LABEL);<a name="wp929943"> </a>
+   file_id = Hopen (FILE_NAME, DFACC_CREATE, 0);<a name="wp930461"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td>&#160;</td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   /*<a name="wp929947"> </a>
+   /*<a name="wp930465"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   * Write the annotations to the file label.<a name="wp929949"> </a>
+   * Initialize the AN interface.<a name="wp930467"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   */<a name="wp929951"> </a>
+   */<a name="wp930469"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   status_32 = ANwriteann(file_label_id, FILE_LABEL_TXT, <a name="wp929953"> </a>
-</pre></div>
-</td>
-</tr>
-  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-                          strlen (FILE_LABEL_TXT));<a name="wp929955"> </a>
+   an_id = ANstart(file_id);<a name="wp930471"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td>&#160;</td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   /*<a name="wp929959"> </a>
+   /*<a name="wp930475"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   * Create file description.<a name="wp929961"> </a>
+   * Create the file label.<a name="wp930477"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   */<a name="wp929963"> </a>
+   */<a name="wp930479"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   file_desc_id = ANcreatef(an_id, AN_FILE_DESC);<a name="wp929965"> </a>
-</pre></div>
-</td>
-</tr>
-  <tr align="left">    <td>&#160;</td>
-</tr>
-  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   /*<a name="wp929969"> </a>
-</pre></div>
-</td>
-</tr>
-  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   * Write the annotation to the file description.  <a name="wp929971"> </a>
-</pre></div>
-</td>
-</tr>
-  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   */<a name="wp929973"> </a>
-</pre></div>
-</td>
-</tr>
-  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   status_32 = ANwriteann(file_desc_id, FILE_DESC_TXT, <a name="wp929975"> </a>
-</pre></div>
-</td>
-</tr>
-  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-                          strlen (FILE_DESC_TXT));<a name="wp929977"> </a>
+   file_label_id = ANcreatef(an_id, AN_FILE_LABEL);<a name="wp930481"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td>&#160;</td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   /*<a name="wp929981"> </a>
+   /*<a name="wp930485"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   * Create a vgroup in the V interface.  Note that the vgroup&#39;s ref number <a name="wp929983"> </a>
+   * Write the annotations to the file label.<a name="wp930487"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   * is set to -1 for creating and the access mode is &quot;w&quot; for writing.<a name="wp929985"> </a>
+   */<a name="wp930489"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   */<a name="wp929987"> </a>
+   status_32 = ANwriteann(file_label_id, FILE_LABEL_TXT, <a name="wp930491"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   status_n = Vstart(file_id);<a name="wp929989"> </a>
-</pre></div>
-</td>
-</tr>
-  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   vgroup_id = Vattach(file_id, -1, &quot;w&quot;);<a name="wp929991"> </a>
-</pre></div>
-</td>
-</tr>
-  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   status_32 = Vsetname (vgroup_id, VG_NAME);<a name="wp929993"> </a>
+                          strlen (FILE_LABEL_TXT));<a name="wp930493"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td>&#160;</td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   /*<a name="wp929997"> </a>
+   /*<a name="wp930497"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   * Obtain the tag and ref number of the vgroup for subsequent<a name="wp929999"> </a>
+   * Create file description.<a name="wp930499"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   * references.  <a name="wp930001"> </a>
+   */<a name="wp930501"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   */<a name="wp930003"> </a>
-</pre></div>
-</td>
-</tr>
-  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   vgroup_tag = (uint16) VQuerytag (vgroup_id);<a name="wp930005"> </a>
-</pre></div>
-</td>
-</tr>
-  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   vgroup_ref = (uint16) VQueryref (vgroup_id);<a name="wp930007"> </a>
+   file_desc_id = ANcreatef(an_id, AN_FILE_DESC);<a name="wp930503"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td>&#160;</td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   /*<a name="wp930011"> </a>
+   /*<a name="wp930507"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   * Create the data label for the vgroup identified by its tag <a name="wp930013"> </a>
+   * Write the annotation to the file description.  <a name="wp930509"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   * and ref number.<a name="wp930015"> </a>
+   */<a name="wp930511"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   */<a name="wp930017"> </a>
+   status_32 = ANwriteann(file_desc_id, FILE_DESC_TXT, <a name="wp930513"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   data_label_id = ANcreate(an_id, vgroup_tag, vgroup_ref, AN_DATA_LABEL);<a name="wp930019"> </a>
-</pre></div>
-</td>
-</tr>
-  <tr align="left">    <td>&#160;</td>
-</tr>
-  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   /*<a name="wp930023"> </a>
-</pre></div>
-</td>
-</tr>
-  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   * Write the annotation text to the data label.<a name="wp930025"> </a>
-</pre></div>
-</td>
-</tr>
-  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   */<a name="wp930027"> </a>
-</pre></div>
-</td>
-</tr>
-  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   status_32 = ANwriteann(data_label_id, DATA_LABEL_TXT, <a name="wp930029"> </a>
-</pre></div>
-</td>
-</tr>
-  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-                          strlen(DATA_LABEL_TXT));<a name="wp930031"> </a>
+                          strlen (FILE_DESC_TXT));<a name="wp930515"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td>&#160;</td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   /*<a name="wp930035"> </a>
+   /*<a name="wp930519"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   * Create the data description for the vgroup identified by its tag <a name="wp930037"> </a>
+   * Create a vgroup in the V interface.  Note that the vgroup&#39;s ref number <a name="wp930521"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   * and ref number.<a name="wp930039"> </a>
+   * is set to -1 for creating and the access mode is &quot;w&quot; for writing.<a name="wp930523"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   */<a name="wp930041"> </a>
+   */<a name="wp930525"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   data_desc_id = ANcreate(an_id, vgroup_tag, vgroup_ref, AN_DATA_DESC);<a name="wp930043"> </a>
-</pre></div>
-</td>
-</tr>
-  <tr align="left">    <td>&#160;</td>
-</tr>
-  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   /*<a name="wp930047"> </a>
+   status_n = Vstart(file_id);<a name="wp930527"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   * Write the annotation text to the data description.<a name="wp930049"> </a>
+   vgroup_id = Vattach(file_id, -1, &quot;w&quot;);<a name="wp930529"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   */<a name="wp930051"> </a>
-</pre></div>
-</td>
-</tr>
-  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   status_32 = ANwriteann(data_desc_id, DATA_DESC_TXT, strlen(DATA_DESC_TXT));<a name="wp930053"> </a>
+   status_32 = Vsetname (vgroup_id, VG_NAME);<a name="wp930531"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td>&#160;</td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   /*<a name="wp930057"> </a>
+   /*<a name="wp930535"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   * Teminate access to the vgroup and to the V interface.<a name="wp930059"> </a>
+   * Obtain the tag and ref number of the vgroup for subsequent<a name="wp930537"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   */<a name="wp930061"> </a>
+   * references.  <a name="wp930539"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   status_32 = Vdetach(vgroup_id);<a name="wp930063"> </a>
+   */<a name="wp930541"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   status_n = Vend(file_id);<a name="wp930065"> </a>
-</pre></div>
-</td>
-</tr>
-  <tr align="left">    <td>&#160;</td>
-</tr>
-  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   /*<a name="wp930069"> </a>
+   vgroup_tag = (uint16) VQuerytag (vgroup_id);<a name="wp930543"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   * Terminate access to each annotation explicitly.<a name="wp930071"> </a>
-</pre></div>
-</td>
-</tr>
-  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   */<a name="wp930073"> </a>
-</pre></div>
-</td>
-</tr>
-  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   status_n = ANendaccess(file_label_id);<a name="wp930075"> </a>
-</pre></div>
-</td>
-</tr>
-  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   status_n = ANendaccess(file_desc_id);<a name="wp930077"> </a>
-</pre></div>
-</td>
-</tr>
-  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   status_n = ANendaccess(data_label_id);<a name="wp930079"> </a>
-</pre></div>
-</td>
-</tr>
-  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   status_n = ANendaccess(data_desc_id);<a name="wp930081"> </a>
+   vgroup_ref = (uint16) VQueryref (vgroup_id);<a name="wp930545"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td>&#160;</td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   /*<a name="wp930085"> </a>
+   /*<a name="wp930549"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   * Terminate access to the AN interface and close the HDF file.<a name="wp930087"> </a>
+   * Create the data label for the vgroup identified by its tag <a name="wp930551"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   */<a name="wp930089"> </a>
+   * and ref number.<a name="wp930553"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   status_32 = ANend(an_id);<a name="wp930091"> </a>
+   */<a name="wp930555"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-   status_n = Hclose(file_id);<a name="wp930093"> </a>
+   data_label_id = ANcreate(an_id, vgroup_tag, vgroup_ref, AN_DATA_LABEL);<a name="wp930557"> </a>
+</pre></div>
+</td>
+</tr>
+  <tr align="left">    <td>&#160;</td>
+</tr>
+  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
+   /*<a name="wp930561"> </a>
 </pre></div>
 </td>
 </tr>
   <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
-}<a name="wp930095"> </a>
+   * Write the annotation text to the data label.<a name="wp930563"> </a>
+</pre></div>
+</td>
+</tr>
+  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
+   */<a name="wp930565"> </a>
+</pre></div>
+</td>
+</tr>
+  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
+   status_32 = ANwriteann(data_label_id, DATA_LABEL_TXT, <a name="wp930567"> </a>
+</pre></div>
+</td>
+</tr>
+  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
+                          strlen(DATA_LABEL_TXT));<a name="wp930569"> </a>
+</pre></div>
+</td>
+</tr>
+  <tr align="left">    <td>&#160;</td>
+</tr>
+  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
+   /*<a name="wp930573"> </a>
+</pre></div>
+</td>
+</tr>
+  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
+   * Create the data description for the vgroup identified by its tag <a name="wp930575"> </a>
+</pre></div>
+</td>
+</tr>
+  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
+   * and ref number.<a name="wp930577"> </a>
+</pre></div>
+</td>
+</tr>
+  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
+   */<a name="wp930579"> </a>
+</pre></div>
+</td>
+</tr>
+  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
+   data_desc_id = ANcreate(an_id, vgroup_tag, vgroup_ref, AN_DATA_DESC);<a name="wp930581"> </a>
+</pre></div>
+</td>
+</tr>
+  <tr align="left">    <td>&#160;</td>
+</tr>
+  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
+   /*<a name="wp930585"> </a>
+</pre></div>
+</td>
+</tr>
+  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
+   * Write the annotation text to the data description.<a name="wp930587"> </a>
+</pre></div>
+</td>
+</tr>
+  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
+   */<a name="wp930589"> </a>
+</pre></div>
+</td>
+</tr>
+  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
+   status_32 = ANwriteann(data_desc_id, DATA_DESC_TXT, strlen(DATA_DESC_TXT));<a name="wp930591"> </a>
+</pre></div>
+</td>
+</tr>
+  <tr align="left">    <td>&#160;</td>
+</tr>
+  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
+   /*<a name="wp930595"> </a>
+</pre></div>
+</td>
+</tr>
+  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
+   * Teminate access to the vgroup and to the V interface.<a name="wp930597"> </a>
+</pre></div>
+</td>
+</tr>
+  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
+   */<a name="wp930599"> </a>
+</pre></div>
+</td>
+</tr>
+  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
+   status_32 = Vdetach(vgroup_id);<a name="wp930601"> </a>
+</pre></div>
+</td>
+</tr>
+  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
+   status_n = Vend(file_id);<a name="wp930603"> </a>
+</pre></div>
+</td>
+</tr>
+  <tr align="left">    <td>&#160;</td>
+</tr>
+  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
+   /*<a name="wp930607"> </a>
+</pre></div>
+</td>
+</tr>
+  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
+   * Terminate access to each annotation explicitly.<a name="wp930609"> </a>
+</pre></div>
+</td>
+</tr>
+  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
+   */<a name="wp930611"> </a>
+</pre></div>
+</td>
+</tr>
+  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
+   status_n = ANendaccess(file_label_id);<a name="wp930613"> </a>
+</pre></div>
+</td>
+</tr>
+  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
+   status_n = ANendaccess(file_desc_id);<a name="wp930615"> </a>
+</pre></div>
+</td>
+</tr>
+  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
+   status_n = ANendaccess(data_label_id);<a name="wp930617"> </a>
+</pre></div>
+</td>
+</tr>
+  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
+   status_n = ANendaccess(data_desc_id);<a name="wp930619"> </a>
+</pre></div>
+</td>
+</tr>
+  <tr align="left">    <td>&#160;</td>
+</tr>
+  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
+   /*<a name="wp930623"> </a>
+</pre></div>
+</td>
+</tr>
+  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
+   * Terminate access to the AN interface and close the HDF file.<a name="wp930625"> </a>
+</pre></div>
+</td>
+</tr>
+  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
+   */<a name="wp930627"> </a>
+</pre></div>
+</td>
+</tr>
+  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
+   status_32 = ANend(an_id);<a name="wp930629"> </a>
+</pre></div>
+</td>
+</tr>
+  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
+   status_n = Hclose(file_id);<a name="wp930631"> </a>
+</pre></div>
+</td>
+</tr>
+  <tr align="left">    <td><div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
+}<a name="wp930633"> </a>
 </pre></div>
 </td>
 </tr>
@@ -586,7 +586,7 @@ main( )<a name="wp929883"> </a>
 
 
 </p>
-<a name="wp929641"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 6pt; margin-left: 0pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: underline; text-indent: 0pt; text-transform: none">
+<a name="wp930637"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 6pt; margin-left: 0pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: underline; text-indent: 0pt; text-transform: none">
 create_annotation.f
 </div>
 <div class="pPreformatted" style="font-family: Arial; font-size: 10pt"><pre class="pPreformatted" style="font-family: Arial; font-size: 10pt">
@@ -1110,7 +1110,7 @@ C<a name="wp929598"> </a>
       <tr>
         <td align="left">
         HDF 4.2.7 - February 2012<br/>
-        <a href="UG_Copyright.html">Copyright</a>
+        <a href="THG_Copyright.html">Copyright</a>
         <td align="right">
           <span style="font-size: 12px; font-weight: bold">
             The HDF Group<br />

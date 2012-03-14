@@ -173,6 +173,7 @@ UsrGuide/html/Examples_AN.html -text
 UsrGuide/html/Examples_DFSD.html -text
 UsrGuide/html/Examples_MAN.html -text
 UsrGuide/html/Examples_SD.html -text
+UsrGuide/html/THG_Copyright.html -text
 UsrGuide/html/UGTop.html -text
 UsrGuide/html/UG_Annot.html -text
 UsrGuide/html/UG_Appndx.html -text
@@ -189,6 +190,7 @@ UsrGuide/html/UG_Fundmtls.html -text
 UsrGuide/html/UG_GR.html -text
 UsrGuide/html/UG_Intro.html -text
 UsrGuide/html/UG_MF_Annot.html -text
+UsrGuide/html/UG_PDF.pdf -text
 UsrGuide/html/UG_Palettes.html -text
 UsrGuide/html/UG_Perform.html -text
 UsrGuide/html/UG_RIS24s.html -text

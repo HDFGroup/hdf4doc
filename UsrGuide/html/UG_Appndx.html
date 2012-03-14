@@ -7,11 +7,11 @@
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.8.2296" />
     <meta name="TEMPLATEBASE" content="HDF4 Version 1.0" />
-    <meta name="LASTUPDATED" content="03/06/12 10:00:48" />
+    <meta name="LASTUPDATED" content="03/14/12 04:37:46" />
     <title>Appendices</title>
     <link rel="StyleSheet" href="document.css" type="text/css" media="all" />
     <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
-<link rel="first" title="First" href="UG_htmlLOF.html" />
+<link rel="first" title="First" href="UG_Intro.html" />
 <link rel="last" title="Last" href="UG_Top.html" />
 <link rel="previous" title="Previous" href="UG_RawDatainfo.html" />
 <link rel="next" title="Next" href="Examples_SD.html" />
@@ -1450,7 +1450,7 @@ C.1	Attribute Overview
 </ul></div>
 </ul></div>
 <a name="wp37862"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-At the creation, an HDF attribute requires a name, data values, number type, and number of values. The attribute name is an ASCII string of any length from 1 to <code style="font-family: Courier New; font-size: 8pt" class="cDefName">H4_MAX_NC_NAME</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">256</code>).  The attribute data contains one or more values, in which case all the values must have the same number type as defined at the time the attribute is created.  Attributes take the form label=value, where label is the attribute&#39;s name and value is the attribute&#39;s data.   Number of values declares how many data entries the attribute has.  The number type can be any type supported by the HDF library. These number types are listed in <a href="../../RefMan/html/RM_Section_I.html#wp432530">Table 1A, &quot;Number Type Definitions&quot;</a> in Section I of the <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF4 Reference Manual</span>.
+At the creation, an HDF attribute requires a name, data values, number type, and number of values. The attribute name is an ASCII string of any length from 1 to <code style="font-family: Courier New; font-size: 8pt" class="cDefName">H4_MAX_NC_NAME</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">256</code>).  The attribute data contains one or more values, in which case all the values must have the same number type as defined at the time the attribute is created.  Attributes take the form label=value, where label is the attribute&#39;s name and value is the attribute&#39;s data.   Number of values declares how many data entries the attribute has.  The number type can be any type supported by the HDF library. These number types are listed in Table 1A, &quot;Number Type Definitions&quot; in Section I of the <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF4 Reference Manual</span>.
 </p>
 <a name="wp37867"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 7pt" class="pBody">
 For each attribute, an attribute count is maintained that identifies the number of values in the attribute. Each attribute has a unique attribute index, the value of which ranges from 0 to the total number of attributes minus 1. The attribute index is used to locate an attribute in the object which the attribute is attached to. Once the attribute is identified, its values and information can be retrieved.
@@ -1705,7 +1705,7 @@ Starting in version 4.2.6, the library provides the updated functions <b class="
       <tr>
         <td align="left">
         HDF 4.2.7 - February 2012<br/>
-        <a href="UG_Copyright.html">Copyright</a>
+        <a href="THG_Copyright.html">Copyright</a>
         <td align="right">
           <span style="font-size: 12px; font-weight: bold">
             The HDF Group<br />

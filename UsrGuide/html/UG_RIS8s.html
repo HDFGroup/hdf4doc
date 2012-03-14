@@ -7,11 +7,11 @@
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.8.2296" />
     <meta name="TEMPLATEBASE" content="HDF4 Version 1.0" />
-    <meta name="LASTUPDATED" content="03/06/12 09:59:48" />
-    <title>Chapter 6	8-Bit Raster Images (DFR8 API)</title>
+    <meta name="LASTUPDATED" content="03/14/12 04:36:46" />
+    <title>Chapter 6 --	8-Bit Raster Images (DFR8 API)</title>
     <link rel="StyleSheet" href="document.css" type="text/css" media="all" />
     <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
-<link rel="first" title="First" href="UG_htmlLOF.html" />
+<link rel="first" title="First" href="UG_Intro.html" />
 <link rel="last" title="Last" href="UG_Top.html" />
 <link rel="previous" title="Previous" href="UG_Vgroups.html" />
 <link rel="next" title="Next" href="UG_RIS24s.html" />
@@ -51,7 +51,7 @@
     <blockquote>
 <h1>
 <a name="wp27252"> </a>
-Chapter 6	8-Bit Raster Images (DFR8 API)
+Chapter 6 --	8-Bit Raster Images (DFR8 API)
 </h1>
 
 <hr /><a name="wp5969"> </a><h2 style="font-family: Times New Roman; font-size: 14pt; margin-top: 23pt" class="pHeading1">
@@ -71,7 +71,7 @@ The data model for the <span style="color: #000000; font-family: Times New Roman
 </p>
 <a name="wp6032"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
 FIGURE 6a	8-Bit Raster Image Set Contents</div>
-<div align="left"><img src="images/hdf4_10-UG_RIS8s-1-1.jpg" height="205" width="520" id="wp5994" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
+<div align="left"><img src="images/hdf4_09-UG_RIS8s-1-1.jpg" height="205" width="520" id="wp5994" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
 
 </div>
 <a name="wp2926"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
@@ -91,7 +91,7 @@ As an example, consider a stream of 8-bit numbers representing a raster image. <
 </p>
 <a name="wp26757"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
 FIGURE 6b	The Data Representation of an 8-Bit Raster Image</div>
-<div align="left"><img src="images/hdf4_10-UG_RIS8s-1-2.jpg" height="404" width="521" id="wp26755" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
+<div align="left"><img src="images/hdf4_09-UG_RIS8s-1-2.jpg" height="404" width="521" id="wp26755" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
 
 </div>
 <a name="wp26758"> </a><h4 style="font-family: Times New Roman; font-size: 10pt; margin-top: 10pt" class="pHeading4">
@@ -662,31 +662,31 @@ EXAMPLE 1.	Writing an 8-Bit Raster Image to an HDF File
 <a name="wp13128"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 In the following code examples, <b class="cFunctionName">DFR8addimage</b> and <b class="cFunctionName">d8aimg</b> are used to write an 8-bit image to a file named &quot;Example1.hdf&quot;. Note that the order in which the dimensions for the image array are declared differs between C and FORTRAN-77. 
 </p>
-<a name="wp8881"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 2pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 108pt; text-transform: none">
+<a name="wp27379"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 2pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 108pt; text-transform: none">
 C:	
 </div>
 <div class="pPreformatted" style="font-family: Courier New; font-size: 8pt"><pre class="pPreformatted" style="font-family: Courier New; font-size: 8pt">
-#include &quot;hdf.h&quot;<a name="wp9801"> </a>
-#define WIDTH 5<a name="wp10122"> </a>
-#define HEIGHT 6<a name="wp10123"> </a>
-main( )<a name="wp10125"> </a>
-{<a name="wp10126"> </a>
-	/* Initialize the image array */<a name="wp10128"> </a>
-	static uint8 raster_data[HEIGHT][WIDTH] = <a name="wp10129"> </a>
-		{ 1, 2, 3, 4, 5,<a name="wp10130"> </a>
-		6, 7,	8, 9, 10,<a name="wp10131"> </a>
-		11, 12, 13,	14, 15,<a name="wp10132"> </a>
-		16, 17, 18, 19, 20,	<a name="wp10133"> </a>
-		21, 22, 23,	24, 25,<a name="wp10134"> </a>
-		26, 27, 28,	29, 30 };<a name="wp10135"> </a>
-	intn status;<a name="wp10137"> </a>
- <a name="wp10139"> </a>
-	/* Write the 8-bit raster image to file */<a name="wp10140"> </a>
-	status = DFR8addimage(&quot;Example1.hdf&quot;, raster_data, <a name="wp10141"> </a>
-					WIDTH, HEIGHT, 0);<a name="wp10142"> </a>
-}<a name="wp10144"> </a>
+#include &quot;hdf.h&quot;<a name="wp27382"> </a>
+#define WIDTH 5<a name="wp27384"> </a>
+#define HEIGHT 6<a name="wp27385"> </a>
+main( )<a name="wp27387"> </a>
+{<a name="wp27388"> </a>
+	/* Initialize the image array */<a name="wp27390"> </a>
+	static uint8 raster_data[HEIGHT][WIDTH] = <a name="wp27391"> </a>
+		{ 1, 2, 3, 4, 5,<a name="wp27392"> </a>
+		6, 7,	8, 9, 10,<a name="wp27393"> </a>
+		11, 12, 13,	14, 15,<a name="wp27394"> </a>
+		16, 17, 18, 19, 20,	<a name="wp27395"> </a>
+		21, 22, 23,	24, 25,<a name="wp27396"> </a>
+		26, 27, 28,	29, 30 };<a name="wp27397"> </a>
+	intn status;<a name="wp27399"> </a>
+ <a name="wp27401"> </a>
+	/* Write the 8-bit raster image to file */<a name="wp27402"> </a>
+	status = DFR8addimage(&quot;Example1.hdf&quot;, raster_data, <a name="wp27403"> </a>
+					WIDTH, HEIGHT, 0);<a name="wp27404"> </a>
+}<a name="wp27406"> </a>
 </pre></div>
-<a name="wp8883"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 2pt; margin-left: 180pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: -85pt; text-transform: none">
+<a name="wp27410"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 2pt; margin-left: 180pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: -85pt; text-transform: none">
 FORTRAN:	
 </div>
 <div class="pPreformatted" style="font-family: Courier New; font-size: 8pt"><pre class="pPreformatted" style="font-family: Courier New; font-size: 8pt">
@@ -1868,7 +1868,7 @@ To maintain backward compatibility with older versions of HDF, the RIS8 interfac
       <tr>
         <td align="left">
         HDF 4.2.7 - February 2012<br/>
-        <a href="UG_Copyright.html">Copyright</a>
+        <a href="THG_Copyright.html">Copyright</a>
         <td align="right">
           <span style="font-size: 12px; font-weight: bold">
             The HDF Group<br />

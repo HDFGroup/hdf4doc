@@ -7,11 +7,11 @@
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.8.2296" />
     <meta name="TEMPLATEBASE" content="HDF4 Version 1.0" />
-    <meta name="LASTUPDATED" content="03/06/12 10:00:07" />
-    <title>Chapter 9	Palettes (DFP API)</title>
+    <meta name="LASTUPDATED" content="03/14/12 04:37:05" />
+    <title>Chapter 9 --	Palettes (DFP API)</title>
     <link rel="StyleSheet" href="document.css" type="text/css" media="all" />
     <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
-<link rel="first" title="First" href="UG_htmlLOF.html" />
+<link rel="first" title="First" href="UG_Intro.html" />
 <link rel="last" title="Last" href="UG_Top.html" />
 <link rel="previous" title="Previous" href="UG_GR.html" />
 <link rel="next" title="Next" href="UG_MF_Annot.html" />
@@ -51,7 +51,7 @@
     <blockquote>
 <h1>
 <a name="wp17674"> </a>
-Chapter 9	Palettes (DFP API)
+Chapter 9 --	Palettes (DFP API)
 </h1>
 
 <hr /><a name="wp2883"> </a><h2 style="font-family: Times New Roman; font-size: 14pt; margin-top: 23pt" class="pHeading1">
@@ -74,11 +74,11 @@ For each of the 256 colors in a palette, there are three 8-bit numbers describin
 </p>
 <a name="wp1695"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
 FIGURE 9a	Color Mapping Using a Palette</div>
-<div align="left"><img src="images/hdf4_13-UG_Palettes-1-1.jpg" height="188" width="447" id="wp17333" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
+<div align="left"><img src="images/hdf4_12-UG_Palettes-1-1.jpg" height="188" width="447" id="wp17333" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
 
 </div>
 <a name="wp6513"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-In the HDF library, there are four interfaces that support the reading and writing of palette data; the raster image interfaces, covered in <a href="UG_RIS8s.html">Chapter 6, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">8-Bit Raster Images (DFR8 API)</span></a>, <a href="UG_RIS24s.html">Chapter 7, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">24-bit Raster Images (DF24 API)</span></a>, <a href="UG_Palettes.html">Chapter 9, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Palettes (DFP API)</span></a>, and the DFP palette interface covered in this chapter. The raster image interfaces store palettes with raster images and the palette interface reads and writes palettes outside of raster image sets. Palettes stored using the palette interface are stored as isolated data objects. In other words they are not included as members of any set, although they can be grouped with other objects using the Vgroup interface. For more information on the Vgroup interface, refer to <a href="UG_Vgroups.html">Chapter 5, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Vgroups (V API)</span></a>.
+In the HDF library, there are four interfaces that support the reading and writing of palette data; the raster image interfaces, covered in <a href="UG_RIS8s.html">Chapter 6, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">8-Bit Raster Images (DFR8 API)</span></a>, <a href="UG_RIS24s.html">Chapter 7, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">24-bit is it Raster Images (DF24 API)</span></a>, <a href="UG_Palettes.html">Chapter 9, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Palettes (DFP API)</span></a>, and the DFP palette interface covered in this chapter. The raster image interfaces store palettes with raster images and the palette interface reads and writes palettes outside of raster image sets. Palettes stored using the palette interface are stored as isolated data objects. In other words they are not included as members of any set, although they can be grouped with other objects using the Vgroup interface. For more information on the Vgroup interface, refer to <a href="UG_Vgroups.html">Chapter 5, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Vgroups (V API)</span></a>.
 </p>
 <a name="wp6539"> </a><h2 style="font-family: Times New Roman; font-size: 14pt; margin-top: 14pt" class="pHeading2">
 	9.3	The Palette API
@@ -956,7 +956,7 @@ As HDF has evolved, a variety of internal structures have been used to store pal
       <tr>
         <td align="left">
         HDF 4.2.7 - February 2012<br/>
-        <a href="UG_Copyright.html">Copyright</a>
+        <a href="THG_Copyright.html">Copyright</a>
         <td align="right">
           <span style="font-size: 12px; font-weight: bold">
             The HDF Group<br />
