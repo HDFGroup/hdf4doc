@@ -1,5 +1,4 @@
 * text=auto !eol
-RefMan/html/RMTOC.html -text
 RefMan/html/RMTop.html -text
 RefMan/html/RM_Front.html -text
 RefMan/html/RM_PDF.pdf -text svneol=unset#application/octet-stream
@@ -52,7 +51,6 @@ RefMan/html/images/help.jpg -text
 RefMan/html/netCDF_copyright.html -text
 RefMan/src/RM_Front.fm -text
 RefMan/src/RM_PDF.book -text
-RefMan/src/RM_PDF.pdf -text svneol=unset#application/octet-stream
 RefMan/src/RM_Section_I.fm -text
 RefMan/src/RM_Section_III.fm -text
 RefMan/src/RM_Section_II_AN.fm -text
@@ -187,7 +185,6 @@ UsrGuide/html/UG_BookLOE.html -text
 UsrGuide/html/UG_BookLOF.html -text
 UsrGuide/html/UG_BookLOT.html -text
 UsrGuide/html/UG_BookTOC.html -text
-UsrGuide/html/UG_Copyright.html -text
 UsrGuide/html/UG_DFSD.html -text
 UsrGuide/html/UG_Errors.html -text
 UsrGuide/html/UG_Front.html -text
@@ -295,9 +292,7 @@ UsrGuide/src/UG_BookTOCTOP.fm -text
 UsrGuide/src/UG_BookprintIX.fm -text
 UsrGuide/src/UG_BookprintLOE.fm -text
 UsrGuide/src/UG_BookprintLOF.fm -text
-UsrGuide/src/UG_BookprintLOT.fm -text
 UsrGuide/src/UG_BookprintTOC.fm -text
-UsrGuide/src/UG_Copyright.fm -text
 UsrGuide/src/UG_DFSD.fm -text
 UsrGuide/src/UG_Errors.fm -text
 UsrGuide/src/UG_Front.fm -text
@@ -306,7 +301,6 @@ UsrGuide/src/UG_GR.fm -text
 UsrGuide/src/UG_Intro.fm -text
 UsrGuide/src/UG_MF_Annot.fm -text
 UsrGuide/src/UG_PDF.book -text
-UsrGuide/src/UG_PDF.pdf -text
 UsrGuide/src/UG_Palettes.fm -text
 UsrGuide/src/UG_Perform.fm -text
 UsrGuide/src/UG_RIS24s.fm -text
