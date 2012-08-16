@@ -7,7 +7,7 @@
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.8.2296" />
     <meta name="TEMPLATEBASE" content="Dynamic HTML" />
-    <meta name="LASTUPDATED" content="03/15/12 12:27:38" />
+    <meta name="LASTUPDATED" content="08/16/12 01:47:05" />
     <title>SDattrinfo/sfgainfo</title>
     <link rel="StyleSheet" href="document.css" type="text/css" media="all" />
     <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
@@ -38,7 +38,7 @@
         </td>
         <td valign="middle" align="center">
           <b><H1>HDF Reference Manual</H1>
-		Version 4.2.7</b><br />
+		4.2.8</b><br />
 	</td>
       </tr>
     </table>
@@ -517,7 +517,7 @@ The <em class="cVarName">ntype</em> parameter can contain any data type supporte
 &#160;
 </div></td>
     <td><a name="wp547887"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-See the notes regarding the potential performance impact of unlimited dimension data sets in  Section 14.4.3, &quot;Unlimited Dimension Data Sets (SDSs and Vdatas) and Performance.&quot; the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span>.
+See the notes regarding the potential performance impact of unlimited dimension data sets in  <a href="../../UsrGuide/html/UG_Perform.html#wp178683">Section 14.4.3, &quot;Unlimited Dimension Data Sets (SDSs and Vdatas) and Performance.&quot;</a> the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span>.
 </div>
 </td>
 </tr>
@@ -2112,25 +2112,25 @@ cdef.nbit.chunk_lengths[]
 <p class="pBodyRelative">
 
 </p>
-<a name="wp568418"> </a><p class="pBodyRelative">
+<a name="wp607372"> </a><p class="pBodyRelative">
 </p>
 <div align="left">
-<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp568411table568409">
+<table border="0" cellpadding="2" cellspacing="8" bgcolor="White" id="wp607365table607363">
   <caption></caption>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp568411"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp607365"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 FORTRAN
 </div></td>
-    <td><a name="wp568413"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortSyntax">
+    <td><a name="wp607367"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortSyntax">
 integer function sfgichnk(sds_id, dim_length, flag)
 </div>
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
-<a name="wp568415"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+<a name="wp607369"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 &#160;
 </div></td>
-    <td><a name="wp568417"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortVar">
+    <td><a name="wp607371"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellFortVar">
 integer sds_id, dim_length(*), flag
 </div>
 </td>
@@ -2140,14 +2140,14 @@ integer sds_id, dim_length(*), flag
 <p class="pBodyRelative">
 
 </p>
-<a name="wp583486"> </a><h2 class="pRef_SD_RoutineName">
+<a name="wp607374"> </a><h2 class="pRef_SD_RoutineName">
 <p align=right><A HREF="RM_Section_II_SDLOP.html">
 [SD Interface]</A><a HREF="RM_Top.html"><b>[Top]</b></a>
 </p>
 <hr />
 SDgetcompinfo/sfgcompress
 </h2>
-<a name="wp583487"> </a><p style="font-weight: normal" class="pSignature">
+<a name="wp607375"> </a><p style="font-weight: normal" class="pSignature">
 intn SDgetcompinfo(int32 <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">sds_id</span>, comp_coder_t *<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">comp_type</span>, comp_info *<span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">c_info</span>)
 </p>
 <a name="wp583593"> </a><p class="pBodyRelative">
@@ -2712,7 +2712,7 @@ Returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">
 Description
 </div></td>
     <td><a name="wp511863"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-<span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDgetdatastrs</span> retrieves the predefined attributes for the data set specified by the parameter <em class="cVarName">sds_id</em>.  The predefined attributes are label, unit, format, and coordinate system.  They are then stored in the parameters <em class="cVarName">label</em>, <em class="cVarName">unit</em>, <em class="cVarName">format</em>, and <em class="cVarName">coordsys</em>, respectively.   Refer to Section 3.10, &quot;Predefined Attributes.&quot; of the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span> for more information on predefined attributes.
+<span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDgetdatastrs</span> retrieves the predefined attributes for the data set specified by the parameter <em class="cVarName">sds_id</em>.  The predefined attributes are label, unit, format, and coordinate system.  They are then stored in the parameters <em class="cVarName">label</em>, <em class="cVarName">unit</em>, <em class="cVarName">format</em>, and <em class="cVarName">coordsys</em>, respectively.   Refer to <a href="../../UsrGuide/html/UG_SD.html#wp35909">Section 3.10, &quot;Predefined Attributes.&quot;</a> of the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span> for more information on predefined attributes.
 </div>
 </td>
 </tr>
@@ -3129,7 +3129,7 @@ Returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">
 Description
 </div></td>
     <td><a name="wp517245"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-<span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDgetdimstrs</span> retrieves the predefined attributes associated with the dimension identified by the parameter <em class="cVarName">dim_id</em>.  The predefined attributes are label, unit, and format.  These predefined attributes are stored in the parameters <em class="cVarName">label</em>, <em class="cVarName">unit</em>, and <em class="cVarName">format</em>, respectively.   Refer to Table 3.10, Predefined Attributes, in the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span> for more information on predefined attributes.
+<span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDgetdimstrs</span> retrieves the predefined attributes associated with the dimension identified by the parameter <em class="cVarName">dim_id</em>.  The predefined attributes are label, unit, and format.  These predefined attributes are stored in the parameters <em class="cVarName">label</em>, <em class="cVarName">unit</em>, and <em class="cVarName">format</em>, respectively.   Refer to <a href="../../UsrGuide/html/UG_SD.html#wp35909">Table 3.10, Predefined Attributes</a>, in the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span> for more information on predefined attributes.
 </div>
 </td>
 </tr>
@@ -5122,7 +5122,7 @@ Determines whether a dimension has the old and new representations or the new re
 &#160;
 </div></td>
     <td><a name="wp512525"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Refer to Chapter 3, &quot;Scientific Data Sets (SD API)&quot; of the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span>,   for information on old and new dimension representations.
+Refer to <a href="../../UsrGuide/html/UG_SD.html#wp311694">Chapter 3, &quot;Scientific Data Sets (SD API)&quot;</a> of the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span>,   for information on old and new dimension representations.
 </div>
 </td>
 </tr>
@@ -5896,7 +5896,7 @@ Description
 &#160;
 </div></td>
     <td><a name="wp568306"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-The parameter <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">origin</span> specifies the coordinates of the chunk according to the chunk position in the chunked array. Refer to the Chapter 3, &quot;Scientific Data Sets (SD API)&quot; of the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span>, for a description of the organization of chunks in a data set.
+The parameter <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">origin</span> specifies the coordinates of the chunk according to the chunk position in the chunked array. Refer to the <a href="../../UsrGuide/html/UG_SD.html#wp311694">Chapter 3, &quot;Scientific Data Sets (SD API)&quot;</a> of the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span>, for a description of the organization of chunks in a data set.
 </div>
 </td>
 </tr>
@@ -6144,7 +6144,7 @@ The array <em class="cVarName">stride</em> specifies the reading pattern along e
 &#160;
 </div></td>
     <td><a name="wp518456"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-When reading data from a &quot;chunked&quot; data set using <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDreaddata</span>, consideration should be given to the issues presented in the section on chunking in Chapter 3, &quot;Scientific Data Sets (SD API)&quot; and Chapter 14, &quot;HDF Performance Issues&quot; in the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span>.
+When reading data from a &quot;chunked&quot; data set using <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDreaddata</span>, consideration should be given to the issues presented in the section on chunking in <a href="../../UsrGuide/html/UG_SD.html#wp311694">Chapter 3, &quot;Scientific Data Sets (SD API)&quot;</a> and <a href="../../UsrGuide/html/UG_Perform.html#wp185418">Chapter 14, &quot;HDF Performance Issues&quot;</a> in the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span>.
 </div>
 </td>
 </tr>
@@ -6184,7 +6184,7 @@ When writing applications or tools to manipulate both images and two-dimensional
 &#160;
 </div></td>
     <td><a name="wp566182"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-It is sometimes necessary to determine whether and how a dataset is compressed and whether the software necessary to read that data is available.  The compression method used on the dataset can be determined with <a href="RM_Section_II_SD.html#wp583486">SDgetcompinfo/sfgcompress</a> and the availability and configuration of the compression software with <a href="RM_Section_II_H.html#wp448174">HCget_config_info</a>.  Further information is available in the respective entries in this reference manual.
+It is sometimes necessary to determine whether and how a dataset is compressed and whether the software necessary to read that data is available.  The compression method used on the dataset can be determined with <a href="RM_Section_II_SD.html#wp607374">SDgetcompinfo/sfgcompress</a> and the availability and configuration of the compression software with <a href="RM_Section_II_H.html#wp448174">HCget_config_info</a>.  Further information is available in the respective entries in this reference manual.
 </div>
 </td>
 </tr>
@@ -6211,7 +6211,7 @@ If the Szip available configuration is encode/decode, <a href="RM_Section_II_H.h
 &#160;
 </div>
 <a name="wp549568"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-See the <a href="RM_Section_II_H.html#wp448174">HCget_config_info</a> and <a href="RM_Section_II_SD.html#wp583486">SDgetcompinfo/sfgcompress</a> entries in this reference manual for further information.
+See the <a href="RM_Section_II_H.html#wp448174">HCget_config_info</a> and <a href="RM_Section_II_SD.html#wp607374">SDgetcompinfo/sfgcompress</a> entries in this reference manual for further information.
 </div>
 </td>
 </tr>
@@ -7987,7 +7987,7 @@ If the chunk cache is full and the value of the parameter <em class="cVarName">m
 &#160;
 </div></td>
     <td><a name="wp513648"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Do not set the value of <em class="cVarName">maxcache</em> to be less than the number of chunks along the fastest-changing dimension of the biggest slab to be written or read via <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDreaddata</span> or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDwritedata</span>. Doing this will cause internal thrashing. See the section on chunking in Chapter 14, &quot;HDF Performance Issues&quot; in the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span>, for more information on this.
+Do not set the value of <em class="cVarName">maxcache</em> to be less than the number of chunks along the fastest-changing dimension of the biggest slab to be written or read via <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDreaddata</span> or <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDwritedata</span>. Doing this will cause internal thrashing. See the section on chunking in <a href="../../UsrGuide/html/UG_Perform.html#wp185418">Chapter 14, &quot;HDF Performance Issues&quot;</a> in the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span>, for more information on this.
 </div>
 </td>
 </tr>
@@ -8522,7 +8522,7 @@ Description
 &#160;
 </div></td>
     <td><a name="wp516965"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-For more information about predefined attributes, refer to Section 3.10, &quot;Predefined Attributes.&quot; of the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span>. 
+For more information about predefined attributes, refer to <a href="../../UsrGuide/html/UG_SD.html#wp35909">Section 3.10, &quot;Predefined Attributes.&quot;</a> of the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span>. 
 </div>
 </td>
 </tr>
@@ -8992,7 +8992,7 @@ Returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">
 Description
 </div></td>
     <td><a name="wp513999"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-<span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDsetdimstrs</span> sets the  predefined attribute (label, unit, and format) for a dimension and its scale to the values specified in the parameters <em class="cVarName">label</em>, <em class="cVarName">unit</em> and <em class="cVarName">format</em>. If a parameter is set to <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">NULL</span> in C and an empty string in Fortran, then the attribute corresponding to that parameter will not be written. For more information about predefined attributes, refer to Section 3.10, &quot;Predefined Attributes.&quot; of the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span>.
+<span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDsetdimstrs</span> sets the  predefined attribute (label, unit, and format) for a dimension and its scale to the values specified in the parameters <em class="cVarName">label</em>, <em class="cVarName">unit</em> and <em class="cVarName">format</em>. If a parameter is set to <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">NULL</span> in C and an empty string in Fortran, then the attribute corresponding to that parameter will not be written. For more information about predefined attributes, refer to <a href="../../UsrGuide/html/UG_SD.html#wp35909">Section 3.10, &quot;Predefined Attributes.&quot;</a> of the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span>.
 </div>
 </td>
 </tr>
@@ -10289,7 +10289,7 @@ Description
 &#160;
 </div></td>
     <td><a name="wp514662"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-The parameter <em class="cVarName">origin</em> specifies the coordinates of the chunk according to the chunk position in the overall chunk array. Refer to Chapter 3, &quot;Scientific Data Sets (SD API)&quot; in the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span>, for a description of the organization of chunks in a data set.
+The parameter <em class="cVarName">origin</em> specifies the coordinates of the chunk according to the chunk position in the overall chunk array. Refer to <a href="../../UsrGuide/html/UG_SD.html#wp311694">Chapter 3, &quot;Scientific Data Sets (SD API)&quot;</a> in the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span>, for a description of the organization of chunks in a data set.
 </div>
 </td>
 </tr>
@@ -10313,7 +10313,7 @@ Note
 &#160;
 </div>
 <a name="wp549666"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-See the <a href="RM_Section_II_SD.html#wp583486">SDgetcompinfo/sfgcompress</a> and <a href="RM_Section_II_H.html#wp448174">HCget_config_info</a> entries in this reference manual for further discussion of compression methods and configuration.
+See the <a href="RM_Section_II_SD.html#wp607374">SDgetcompinfo/sfgcompress</a> and <a href="RM_Section_II_H.html#wp448174">HCget_config_info</a> entries in this reference manual for further discussion of compression methods and configuration.
 </div>
 </td>
 </tr>
@@ -10555,7 +10555,7 @@ The array <em class="cVarName">stride</em> specifies the writing pattern along e
 &#160;
 </div></td>
     <td><a name="wp582296"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-When writing data to a chunked data set using <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDwritedata</span>, consideration should be given to the issues presented in the section on chunking in Chapter 3, &quot;Scientific Data Sets (SD API)&quot; and Chapter 14, &quot;HDF Performance Issues&quot; in the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span>.
+When writing data to a chunked data set using <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">SDwritedata</span>, consideration should be given to the issues presented in the section on chunking in <a href="../../UsrGuide/html/UG_SD.html#wp311694">Chapter 3, &quot;Scientific Data Sets (SD API)&quot;</a> and <a href="../../UsrGuide/html/UG_Perform.html#wp185418">Chapter 14, &quot;HDF Performance Issues&quot;</a> in the <span style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span>.
 </div>
 </td>
 </tr>
@@ -10732,7 +10732,7 @@ character*(*) buffer(*)
     <table id="SummaryNotReq2" border="0" width="850" cellspacing="0" cellpadding="0">
       <tr>
         <td align="left">
-        HDF 4.2.7 - February 2012<br/>
+        HDF 4.2.8 - August 2012<br/>
         <a href="THG_Copyright.html">Copyright</a>
         <td align="right">
           <span style="font-size: 12px; font-weight: bold">

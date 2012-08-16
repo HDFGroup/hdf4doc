@@ -7,7 +7,7 @@
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.8.2296" />
     <meta name="TEMPLATEBASE" content="HDF4 Version 1.0" />
-    <meta name="LASTUPDATED" content="03/15/12 11:42:29" />
+    <meta name="LASTUPDATED" content="08/16/12 02:55:46" />
     <title>Appendices</title>
     <link rel="StyleSheet" href="document.css" type="text/css" media="all" />
     <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
@@ -36,7 +36,7 @@
         </td>
         <td valign="middle" align="center">
           <b><H1>HDF User’s Guide</H1>
-           Version 4.2.7</b><br />
+           4.2.8</b><br />
         </td>
         <td valign="middle" align="right">
         <br/>
@@ -1450,7 +1450,7 @@ C.1	Attribute Overview
 </ul></div>
 </ul></div>
 <a name="wp37862"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-At the creation, an HDF attribute requires a name, data values, number type, and number of values. The attribute name is an ASCII string of any length from 1 to <code style="font-family: Courier New; font-size: 8pt" class="cDefName">H4_MAX_NC_NAME</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">256</code>).  The attribute data contains one or more values, in which case all the values must have the same number type as defined at the time the attribute is created.  Attributes take the form label=value, where label is the attribute&#39;s name and value is the attribute&#39;s data.   Number of values declares how many data entries the attribute has.  The number type can be any type supported by the HDF library. These number types are listed in Table 1A, &quot;Number Type Definitions&quot; in Section I of the <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF4 Reference Manual</span>.
+At the creation, an HDF attribute requires a name, data values, number type, and number of values. The attribute name is an ASCII string of any length from 1 to <code style="font-family: Courier New; font-size: 8pt" class="cDefName">H4_MAX_NC_NAME</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">256</code>).  The attribute data contains one or more values, in which case all the values must have the same number type as defined at the time the attribute is created.  Attributes take the form label=value, where label is the attribute&#39;s name and value is the attribute&#39;s data.   Number of values declares how many data entries the attribute has.  The number type can be any type supported by the HDF library. These number types are listed in <a href="../../RefMan/html/RM_Section_I.html#wp432530">Table 1A, &quot;Number Type Definitions&quot;</a> in Section I of the <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF4 Reference Manual</span>.
 </p>
 <a name="wp37867"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 7pt" class="pBody">
 For each attribute, an attribute count is maintained that identifies the number of values in the attribute. Each attribute has a unique attribute index, the value of which ranges from 0 to the total number of attributes minus 1. The attribute index is used to locate an attribute in the object which the attribute is attached to. Once the attribute is identified, its values and information can be retrieved.
@@ -1697,6 +1697,36 @@ In addition, the file format was changed for the vgroup/vdata header to store th
 <a name="wp37827"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 Starting in version 4.2.6, the library provides the updated functions <b class="cFunctionName">Vnattrs2</b>, <b class="cFunctionName">Vattrinfo2</b>, and <b class="cFunctionName">Vgetattr2</b> for applications to get access to attributes that were not created by <b class="cFunctionName">Vsetattr</b>.  These functions access both types of attributes.  In addition, the HDF library provides the function <b class="cFunctionName">Vnoldattrs</b> to get the number of old-style attributes in a vgroup.  The old-style attributes are likely to present in older files or files that were modified by older applications.  Please refer to <a href="UG_Vgroups.html#wp23720">Section 5.8, &quot;Vgroup Attributes,&quot;</a> of the <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">HDF User&#39;s Guide</span> for details on these functions.
 </p>
+<a name="wp39685"> </a><h2 style="font-family: Times New Roman; font-size: 14pt; margin-top: 14pt" class="pHeading1">
+Appendix D	Issue of Missing Palettes
+</h2>
+<a name="wp39686"> </a><h2 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading2">
+D.1	Description
+</h2>
+<a name="wp39715"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
+HDF4&#39;s representation of palettes and rasters has evolved over the lifetime of the library.  As new representations were adopted, &quot;old-style&quot; representations were also written to the HDF4 file for backward compatibility. This practice occasionally introduce some issues inadvertently. This appendix presents one of those situations.
+</p>
+<a name="wp39716"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
+As discussed in Chapter 2 of the HDF4 Specification and Developer&#39;s Guide, the basic building blocks of an HDF4 file are data objects.  A data object has two parts - a data descriptor (DD) and a data element (DE). 
+</p>
+<a name="wp39717"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
+The original representation for palettes in HDF4 used DDs with tag <code style="font-family: Courier New; font-size: 8pt" class="cDefName">DFTAG_IP8</code> (<code style="font-family: Courier New; font-size: 8pt" class="cDefName">201</code>) while the later representation used DDs with tag <code style="font-family: Courier New; font-size: 8pt" class="cDefName">DFTAG_LUT</code> (<code style="font-family: Courier New; font-size: 8pt" class="cDefName">301</code>).  Typically, when an HDF4 file has a pair of DDs with [tag 201, ref=R] and [tag 301, ref=R], they are old/new representations of the same palette and both refer to the same DE at the same offset.  The DFP APIs and other GR APIs dealing with LUTs expect this behavior.
+</p>
+<a name="wp39718"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
+In some cases, an HDF4 file will have a 201 DD and a 301 DD that have the same reference number, but that refer to DEs at different offsets. In these cases, it is impossible to retrieve all the palette information in the file using the DFP and other GR APIs.
+</p>
+<a name="wp39719"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
+<b class="cFunctionName">DFPgetpal</b> attempts to read a DD with tag 201 first, and only attempts to read a DD with tag 301 and the same reference number if failure occurs for the first read.  This effectively means that <b class="cFunctionName">DFPgetpal</b> cannot be used to retrieve a DD with tag 301/ref=R if a DD with tag 201/ref=R exists - even if the two DDs reference DEs at different offsets.
+</p>
+<a name="wp39720"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
+Another limitation of the DFP APIs is rooted in the fact that multiple palette DDs (for example 201/ref=2 and 201/ref=3) may refer to the same DE.  This can be an issue even if both DDs in any 201/301 pair have the same offset.
+</p>
+<a name="wp39721"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
+<b class="cFunctionName">DFPnpals</b> returns the number of palette Data Elements in the file, not the number of palette Data Descriptors. Because multiple palette DDs can reference the same DE, the value (N) returned by <b class="cFunctionName">DFPnpals</b> cannot reliably be used as the upper bound on the number of calls needed to <b class="cFunctionName">DFPgetpal</b> to retrieve all the palettes in the file. Internally, <b class="cFunctionName">DFPgetpal</b> gets the next Palette DD and then uses the offset to retrieve the palette data.  If multiple Palette DDs reference the same DE, then making N calls to <b class="cFunctionName">DFPgetpal</b> will not retrieve all of the DDs in the file (there will be more DDs than DEs). If the missed DDs reference DEs that don&#39;t appear in the first N DDs, then the palette data in those DEs will never be read.
+</p>
+<a name="wp39722"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
+To avoid changing the behavior of existing functions, <b class="cFunctionName">GRgetpalinfo</b> was added to give full access to all palette DDs in an HDF4 file.  With this information, the <b class="cFunctionName">Hgetelement</b> function can be used to retrieve the palette data from the DE associated with each DD. <b class="cFunctionName">GRgetpalinfo</b> also provides a way to retrieve palettes that are not associated with any raster.
+</p>
     </blockquote>
 
     <hr />
@@ -1704,7 +1734,7 @@ Starting in version 4.2.6, the library provides the updated functions <b class="
     <table id="SummaryNotReq2" border="0" width="850" cellspacing="0" cellpadding="0">
       <tr>
         <td align="left">
-        HDF 4.2.7 - February 2012<br/>
+        HDF 4.2.8 - August 2012<br/>
         <a href="THG_Copyright.html">Copyright</a>
         <td align="right">
           <span style="font-size: 12px; font-weight: bold">
