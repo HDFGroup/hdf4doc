@@ -1,4 +1,21 @@
 * text=auto !eol
+DSpec/html/DS.pdf -text svneol=unset#unset
+DSpec/src/DS00_Front.fm -text
+DSpec/src/DS01_Intro.fm -text
+DSpec/src/DS02_BasicStruct.fm -text
+DSpec/src/DS03_Software.fm -text
+DSpec/src/DS04_GeneralPurpose.fm -text
+DSpec/src/DS05_SetsAndGroups.fm -text
+DSpec/src/DS06_Annotations.fm -text
+DSpec/src/DS07_SDS.fm -text
+DSpec/src/DS08_GR.fm -text
+DSpec/src/DS09_TagSpec.fm -text
+DSpec/src/DS10_ExtendedTags.fm -text
+DSpec/src/DS11_Portability.fm -text
+DSpec/src/DSA1_Tags.fm -text
+DSpec/src/DSA2_Trees.fm -text
+DSpec/src/DSA3_FuncSpecs.fm -text
+DSpec/src/DS_PDF.book -text
 RefMan/html/RM_Front.html -text
 RefMan/html/RM_PDF.pdf -text svneol=unset#application/octet-stream
 RefMan/html/RM_Section_I.html -text
