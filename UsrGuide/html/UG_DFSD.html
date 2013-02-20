@@ -7,7 +7,7 @@
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.8.2296" />
     <meta name="TEMPLATEBASE" content="HDF4 Version 1.0" />
-    <meta name="LASTUPDATED" content="08/16/12 02:55:16" />
+    <meta name="LASTUPDATED" content="02/20/13 04:39:33" />
     <title>Chapter 12 --	Single-File Scientific Data Sets (DFSD API)</title>
     <link rel="StyleSheet" href="document.css" type="text/css" media="all" />
     <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
@@ -36,7 +36,7 @@
         </td>
         <td valign="middle" align="center">
           <b><H1>HDF User’s Guide</H1>
-           4.2.8</b><br />
+           4.2.9</b><br />
         </td>
         <td valign="middle" align="right">
         <br/>
@@ -1060,10 +1060,10 @@ Reference number to be assigned to the data set created.
 	12.4.4 Writing Several Data Sets: DFSDsetdims and DFSDclear
 </h3>
 <a name="wp6802"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-The DFSD programming model for writing multiple data sets to an HDF file is identical to that for writing individual data sets. (Refer to <a href="UG_DFSD.html#wp4101"><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Section&#160;12.4 on page&#160;416</span></a>). To understand how multiple data sets are written to file, it is first necessary to take a closer look at each step of the programming model. First and most importantly, all DFSD routines that set a write option except <b class="cFunctionName">DFSDsetNT</b> and <b class="cFunctionName">DFSDsetfillvalue</b> add information to a special structure in primary memory. This information is used to determine how data is written to file for all subsequent write operations. 
+The DFSD programming model for writing multiple data sets to an HDF file is identical to that for writing individual data sets. (Refer to <a href="UG_DFSD.html#wp4101"><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Section&#160;12.4 on page&#160;412</span></a>). To understand how multiple data sets are written to file, it is first necessary to take a closer look at each step of the programming model. First and most importantly, all DFSD routines that set a write option except <b class="cFunctionName">DFSDsetNT</b> and <b class="cFunctionName">DFSDsetfillvalue</b> add information to a special structure in primary memory. This information is used to determine how data is written to file for all subsequent write operations. 
 </p>
 <a name="wp4294"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-Information stored in primary memory is retained by the HDF library until explicitly changed by a call to <b class="cFunctionName">DFSDsetdims</b> or reset to <code style="font-family: Courier New; font-size: 8pt" class="cDefName">NULL</code> by calling <b class="cFunctionName">DFSDclear</b>. <b class="cFunctionName">DFSDsetdims</b> and <b class="cFunctionName">DFSDclear</b> are used to prevent assignments of attributes created for a group of data sets to data sets outside the group. For more information on assigning attributes see <a href="UG_DFSD.html#wp4649">Section&#160;12.7.1 on page&#160;426</a> and <a href="UG_DFSD.html#wp4838">Section&#160;12.7.3 on page&#160;433</a>.
+Information stored in primary memory is retained by the HDF library until explicitly changed by a call to <b class="cFunctionName">DFSDsetdims</b> or reset to <code style="font-family: Courier New; font-size: 8pt" class="cDefName">NULL</code> by calling <b class="cFunctionName">DFSDclear</b>. <b class="cFunctionName">DFSDsetdims</b> and <b class="cFunctionName">DFSDclear</b> are used to prevent assignments of attributes created for a group of data sets to data sets outside the group. For more information on assigning attributes see <a href="UG_DFSD.html#wp4649">Section&#160;12.7.1 on page&#160;422</a> and <a href="UG_DFSD.html#wp4838">Section&#160;12.7.3 on page&#160;429</a>.
 </p>
 <a name="wp4296"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
 	12.4.5 Preventing the Reassignment of DFSD Data Set Attributes: DFSDsetdims
@@ -1778,7 +1778,7 @@ There are two routines required for every DFSD slab operation - <b class="cFunct
 Given a new filename, <b class="cFunctionName">DFSDstartslab</b> will create a new HDF file with the specified name. Given an existing filename, it will open the named file and append the new data set to the end of the file. Its only parameter is <em class="cVarName">filename</em>. <b class="cFunctionName">DFSDendslab</b> has no parameters and need only be called once per file. <b class="cFunctionName">DFSDendslab</b> will write any attributes defined immediately before the data set is created.
 </p>
 <a name="wp8465"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-For more information on assigning attributes, see <a href="UG_DFSD.html#wp4838">Section&#160;12.7.3 on page&#160;433</a>.
+For more information on assigning attributes, see <a href="UG_DFSD.html#wp4838">Section&#160;12.7.3 on page&#160;429</a>.
 </p>
 <a name="wp8513"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
 TABLE 12I	DFSDstartslab Parameter List</div>
@@ -1873,7 +1873,7 @@ In addition to writing slabs to both new and existing data sets, <b class="cFunc
 </ul></div>
 </ul></div>
 <a name="wp4537"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-Although not specifically defined as a slab routine, in practice, the <b class="cFunctionName">DFSDsetfillvalue</b> routine is used to initialize array elements between non-contiguous slab write operations. Setting a fill value places the same value in every array location before the first slab is written. Any hole created by non-contiguous writes can then be recognized by identifying the known fill value. The fill value must have the same number type as the values in the data set. For more information on fill values refer to <a href="UG_DFSD.html#wp62447">Section&#160;12.7.1.2 on page&#160;427</a>.
+Although not specifically defined as a slab routine, in practice, the <b class="cFunctionName">DFSDsetfillvalue</b> routine is used to initialize array elements between non-contiguous slab write operations. Setting a fill value places the same value in every array location before the first slab is written. Any hole created by non-contiguous writes can then be recognized by identifying the known fill value. The fill value must have the same number type as the values in the data set. For more information on fill values refer to <a href="UG_DFSD.html#wp62447">Section&#160;12.7.1.2 on page&#160;423</a>.
 </p>
 <a name="wp4539"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 To write a slab to a new data set, the calling program must include the following routine calls:
@@ -3770,7 +3770,7 @@ The DFSD interface provides three routines for reading dimension attributes: <b 
     <table id="SummaryNotReq2" border="0" width="850" cellspacing="0" cellpadding="0">
       <tr>
         <td align="left">
-        HDF 4.2.8 - August 2012<br/>
+        HDF 4.2.9 - February 2013<br/>
         <a href="THG_Copyright.html">Copyright</a>
         <td align="right">
           <span style="font-size: 12px; font-weight: bold">
