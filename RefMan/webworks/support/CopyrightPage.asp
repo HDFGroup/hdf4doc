@@ -34,7 +34,7 @@
           <img id="$BP80Accessibility_LongDescNotReqID;" border="0"src="images/hdf_logo.jpg" width="90" height="70" alt="The HDF Group" valign="top" />
         </td>
         <td valign="middle" align="center">
-          <b><H1>HDF Reference Manual</H1></b>
+          <b><H1>HDF Reference Manual</H1>Version 4.2.10</b>
 	</td>
         <td valign="middle" align="right">
 <!--BeginHiddenExpansion $APageNoButton_Next; EndHiddenExpansion-->
@@ -57,7 +57,7 @@
 <!--BeginHiddenExpansion $APageNoButton_Next; EndHiddenExpansion-->
         </td>
         <td align="center">
-        HDF 4.2.7 - February 2012<br />
+        HDF 4.2.10 - February 2014<br />
         <a href="THG_Copyright.html">Copyright</a>
         <td align="right">
           <span style="font-size: 12px; font-weight: bold">

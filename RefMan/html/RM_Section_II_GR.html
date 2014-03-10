@@ -7,12 +7,12 @@
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.8.2296" />
     <meta name="TEMPLATEBASE" content="Dynamic HTML" />
-    <meta name="LASTUPDATED" content="02/19/13 23:06:38" />
+    <meta name="LASTUPDATED" content="03/10/14 00:42:12" />
     <title>GRattrinfo/mgatinf</title>
     <link rel="StyleSheet" href="document.css" type="text/css" media="all" />
     <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
 <link rel="first" title="First" href="RM_Section_I.html" />
-<link rel="last" title="Last" href="RM_Top.html" />
+<link rel="last" title="Last" href="netCDF_copyright.html" />
 <link rel="previous" title="Previous" href="RM_Section_II_AN.html" />
 <link rel="next" title="Next" href="RM_Section_II_H.html" />
 
@@ -38,7 +38,8 @@
         </td>
         <td valign="middle" align="center">
           <b><H1>HDF Reference Manual</H1>
-		4.2.9</b><br />
+		Version 4.2.10</b><br />
+
 	</td>
       </tr>
     </table>
@@ -3466,6 +3467,15 @@ Each element of the array <em class="cVarName">edges</em> specifies the number o
 </td>
 </tr>
   <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp507330"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+&#160;
+</div></td>
+    <td><a name="wp507332"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Note that, if there were any un-written elements in the image, they would have been filled with the image&#39;s fill value, which could be provided prior to writing the image, or the default fill-value, which is <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
 <a name="wp477395"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 &#160;
 </div></td>
@@ -4462,7 +4472,7 @@ The parameter <em class="cVarName">attr_nt</em> can contain any data type suppor
 <a name="wp490828"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
 &#160;
 </div></td>
-    <td><a name="wp490830"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+    <td><a name="wp507273"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 Attribute values are passed in the parameter <em class="cVarName">values</em>. The number of attribute values is defined by the parameter <em class="cVarName">count</em> . If more than one value is stored, all values must have the same data type. If an attribute with the given name, data type and number of values exists, it will be overwritten. Currently, the only predefined attribute is the fill value, identified by the <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FILL_ATTR</code> definition.
 </div>
 </td>
@@ -4472,7 +4482,7 @@ Attribute values are passed in the parameter <em class="cVarName">values</em>. T
 &#160;
 </div></td>
     <td><a name="wp506731"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-Note that if an image does not have a fill value defined, and is written partially, a <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FILL_ATTR</code> attribute will be added.  This attribute has a value of 0, which is the image&#39;s fill value.  Thus, any un-written elements in the image will be filled with 0.
+Note that if an image does not have a fill value defined, and is written partially, a <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FILL_ATTR</code> attribute will be added.  This attribute has a value of 0, which is the image&#39;s fill value.  Thus, any un-written elements in the image will be filled with the default fill value of 0.
 </div>
 </td>
 </tr>
@@ -5456,7 +5466,7 @@ Data can only be moved once for any given raster image, and it is the user&#39;s
 &#160;
 </div></td>
     <td><a name="wp446342"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
-If the raster image already exists, its data will be moved to the external file . Space occupied by the data in the primary file will not be released. To release the space in the primary file use the <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">hdfpack</span> command-line utility. If the raster image does not exist, its data will be written to the external file during the subsequent calls to <b class="cFunctionName">GRwritedata</b>.
+If the raster image already exists, its data will be moved to the external file . Space occupied by the data in the primary file will not be released. To release the space in the primary file use the <span style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">hdfpack</span> command-line utility. If the raster image does not exist, its data will be written to the external file during the subsequent calls to <b class="cFunctionName">GRwriteimage</b>.
 </div>
 </td>
 </tr>
@@ -5946,6 +5956,15 @@ The array <em class="cVarName">stride</em> specifies the writing pattern along e
 </div></td>
     <td><a name="wp446431"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
 Each element of the array <em class="cVarName">edges</em> specifies the number of data elements to be written along the corresponding dimension. The correspondence between the elements of the array <em class="cVarName">edges</em>  and the dimensions of the array <em class="cVarName">data</em> is the same as described above for the array <em class="cVarName">start</em>.
+</div>
+</td>
+</tr>
+  <tr align="left" valign="top">    <td><td nowrap>
+<a name="wp507323"> </a><div style="font-style: normal; margin-bottom: 0pt; margin-top: 0pt; text-transform: none" class="pCellHeadingWW">
+&#160;
+</div></td>
+    <td><a name="wp507325"> </a><div style="margin-bottom: 0pt; margin-top: 0pt" class="pCellDescription">
+Any un-written elements in the image will be filled with the image&#39;s fill value.  If the fill-value is previously set, it will be used, otherwise, the default fill-value, which is <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>, will be used.
 </div>
 </td>
 </tr>
@@ -6454,7 +6473,7 @@ Currently unavailable
     <table id="SummaryNotReq2" border="0" width="850" cellspacing="0" cellpadding="0">
       <tr>
         <td align="left">
-        HDF 4.2.9 - February 2013<br/>
+        HDF 4.2.10 - February 2014<br/>
         <a href="THG_Copyright.html">Copyright</a>
         <td align="right">
           <span style="font-size: 12px; font-weight: bold">

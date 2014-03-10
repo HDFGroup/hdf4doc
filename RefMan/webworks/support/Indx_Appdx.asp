@@ -32,8 +32,8 @@
           <a href="http://www.hdfgroup.org"><img id="$BP80Accessibility_LongDescNotReqID;" border="0" src="images/hdf_logo.jpg" width="90" height="70" alt="The HDF Group" valign="top" /></a>
         </td>
         <td valign="middle" align="center">
-          <b><H1>HDF User’s Guide</H1>
-           Version 4.2.7</b><br />
+          <b><H1>HDF Reference Manual</H1>
+           Version 4.2.10 - February 2014</b><br />
         </td>
         <td valign="middle" align="right">
         <br/>
