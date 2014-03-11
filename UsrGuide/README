@@ -1,0 +1,10 @@
+History of the contents in UsrGuide directory (Mar 11, 2014)
+---------------------------------------------
+
+The directory "graphics" contains jpeg files of the images in the User's
+Guide.  They were generated when the documents were in FrameMaker 7.1
+and WebWork Publisher 8.  After we moved to FrameMaker 11, the images
+were generated in GIF files and are put in the html directory.
+
+The directory html_4.2.10_FM11_WWP has the old html files generated
+by WWP.
