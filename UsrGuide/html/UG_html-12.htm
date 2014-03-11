@@ -1,0 +1,5174 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN"><HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 11.0/HTML Export Filter">
+<LINK REL="STYLESHEET" HREF="UG_html.css" CHARSET="UTF-8" TYPE="text/css">
+<table id="Topofpage" border="0" width="850" cellspacing="0" cellpadding="0"><tr><td align="left"><a href="http://www.hdfgroup.org"><img id="THG_logo" border="0" src="images/hdf_logo.jpg" width="90" height="70" alt="The HDF Group" valign="top" /></a></td><td valign="middle" align="center"><H1>HDF User’s Guide</H1><span style="font-size: 14px; font-weight: bold"><b>4.2.10</b></td><td valign="middle" align="center"><a HREF=UG_html.htm> [Top]</a> <a HREF=UG_html-11.htm> [Prev]</a><a HREF=UG_html-13.htm> [Next]</a></td></tr></table><HR></HEAD>
+<BODY>
+<DIV>
+<span style="font-size: 14px; font-weight: bold"><a href="UG_html-17.htm">Index</a>] [<a href="UG_html-20.htm">List of Examples</a>] [<a href="UG_html-19.htm">List of Tables</a>] [<a href="UG_html-18.htm">List of Figures</a>]</DIV>
+<H1 CLASS="ChapterTitle">
+<A NAME="50593882_pgfId-62791"></A>Chapter 12 --	<A NAME="50593882_marker-11391"></A><A NAME="50593882_22796"></A>Single-File Scientific Data Sets (DFSD API)</H1>
+<DIV>
+<H4 CLASS="Heading1">
+<A NAME="50593882_pgfId-11395"></A>	12.1	Chapter Overview<DIV>
+<IMG SRC="UG_html-69.gif" ALT="">
+</DIV>
+</H4>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-62471"></A>The DFSD interface was one of two interfaces in the HDF library that support the scientific data model. With the release of HDF version 3.3, the multifile SD interface described in <A HREF="UG_html-3.htm#50593873_13938" CLASS="XRef">Scientific Data Sets (SD API)</A>, was made available. The DFSD interface is now deprecated, only the SD interface should be used.</P>
+<DIV>
+<H5 CLASS="Heading2">
+<A NAME="50593882_pgfId-3798"></A>	12.2	The DFSD Scientific Data Set Data Model<DIV>
+<IMG SRC="UG_html-69.gif" ALT="">
+</DIV>
+</H5>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-13982"></A>Th<A NAME="50593882_marker-13981"></A>e scientific data set, or SDS, data model supports four primary data objects: arrays, dimensions, dimension scales, and dimension attributes. As in the multifile SD SDS model, the fundamental object of the data model is the SDS array. Unlike the SD multifile SDS model the DFSD SDS model has, in addition to dimension attributes, attributes that refer to the SDS array itself.</P>
+<DIV>
+<H6 CLASS="Figure">
+<A NAME="50593882_pgfId-14341"></A><DIV>
+<IMG SRC="UG_html-70.gif" ALT="">
+</DIV>
+FIGURE 12a	The Co<A NAME="50593882_marker-13983"></A>ntents of a Three-Dimensional DFSD Scientific Data Set</H6>
+<DIV>
+<MAP NAME="UG_html-71">
+</MAP>
+<IMG SRC="UG_html-71.gif" USEMAP="#UG_html-71" ALT="">
+</DIV>
+</DIV>
+<DIV>
+<H6 CLASS="Heading3">
+<A NAME="50593882_pgfId-14344"></A>	12.2.1 <A NAME="50593882_89021"></A>Requ<A NAME="50593882_marker-14343"></A>ired DFSD SDS Objects</H6>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4215"></A>The only required objects in the DFSD SDS model are the <EM CLASS="Definition">
+array</EM>
+ and the <EM CLASS="Definition">
+data type</EM>
+ of the array data. Without this information, the data set is inaccessible. Required objects are created by the library using the information supplied at the time the SDS is defined.</P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4016"></A>Descriptions of these objects are in <A HREF="UG_html-3.htm#50593873_13938" CLASS="XRef">Scientific Data Sets (SD API)</A>.</P>
+<DIV>
+<H6 CLASS="Heading4">
+<A NAME="50593882_pgfId-4018"></A>	12.2.1.1	Dimensions</H6>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4022"></A>Unlimited dimensions, supported in the multifile SD SDS model, aren’t supported in the single-file DFSD SDS model. </P>
+</DIV>
+</DIV>
+<DIV>
+<H6 CLASS="Heading3">
+<A NAME="50593882_pgfId-4024"></A>	12.2.2 Optional D<A NAME="50593882_marker-10836"></A>FSD SDS Objects</H6>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4026"></A>There are two types of optional objects available for inclusion in an SDS: dimension scales and attributes. Optional objects are only created when specified by the calling program. </P>
+<DIV>
+<H6 CLASS="Heading4">
+<A NAME="50593882_pgfId-4028"></A>	12.2.2.1	Dimension Scales</H6>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4030"></A>Conceptually, a dimension <EM CLASS="Definition">
+scale</EM>
+ is a series of numbers placed along a dimension to demarcate intervals in a data set. They are assigned one per dimension. Structurally, each dimension scale is a one-dimensional array with size and name equal to its assigned dimension name and size.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading4">
+<A NAME="50593882_pgfId-4032"></A>	12.2.2.2	Predefined Attributes</H6>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4034"></A><EM CLASS="Definition">
+Predefined attributes</EM>
+ are attributes that have reserved labels and in some cases predefined number types. They are described in <A HREF="UG_html-3.htm#50593873_13938" CLASS="XRef">Scientific Data Sets (SD API)</A>.</P>
+</DIV>
+</DIV>
+</DIV>
+</DIV>
+<DIV>
+<H4 CLASS="Heading1">
+<A NAME="50593882_pgfId-4052"></A>	12.3	The Single<A NAME="50593882_marker-10837"></A>-File Scientific Data Set Interface<DIV>
+<IMG SRC="UG_html-69.gif" ALT="">
+</DIV>
+</H4>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4054"></A>The HDF library currently contains several routines for storing scientific data sets in the HDF format. <EM CLASS="FunctionName">
+DFSDadddata</EM>
+, <EM CLASS="FunctionName">
+DFSDputdata</EM>
+, and <EM CLASS="FunctionName">
+DFSDgetdata</EM>
+ perform data I/O and by default assume that all scientific data is uncompressed 32-bit floating-point data stored in row-major order. DFSD library routines also read and write subsets and slabs of data, set defaults, determine the number of data sets in a file, and inquire about or assigning reference numbers before reading or writing data.</P>
+<DIV>
+<H6 CLASS="Heading3">
+<A NAME="50593882_pgfId-4056"></A>	12.3.1 DFSD Library Routines</H6>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4060"></A>The names of the <A NAME="50593882_marker-10838"></A>C routines in the DFSD library are prefaced by &quot;DFSD&quot; and the names of the equivalent FORTRAN-77 functions are prefaced by &quot;ds&quot;. They are categorized as follows:</P>
+<UL>
+<LI CLASS="Bullet">
+<A NAME="50593882_pgfId-4062"></A><EM CLASS="Definition">
+Write routines</EM>
+ create new data sets and add slabs to existing data sets.</LI>
+<LI CLASS="Bullet">
+<A NAME="50593882_pgfId-4064"></A><EM CLASS="Definition">
+Read routines</EM>
+ read whole scientific data sets.</LI>
+<LI CLASS="Bullet">
+<A NAME="50593882_pgfId-4066"></A><EM CLASS="Definition">
+Slab routines</EM>
+ read and write subsets and slabs of scientific data.</LI>
+<LI CLASS="Bullet">
+<A NAME="50593882_pgfId-18991"></A><EM CLASS="Definition">
+Data set attribute routines</EM>
+ read and write the predefined string and value attributes assigned to data sets.</LI>
+<LI CLASS="Bullet">
+<A NAME="50593882_pgfId-18992"></A><EM CLASS="Definition">
+Dimension attribute routines</EM>
+ read and write the predefined string and value attributes assigned to dimensions.</LI>
+</UL>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-18996"></A>DFSD library routines are more explicitly defined in <A HREF="UG_html-12.htm#50593882_36149" CLASS="XRef">Table 12A</A> and on their respective pages in the <EM CLASS="TextItalic">
+HDF Reference Manual</EM>
+.</P>
+<DIV>
+<H6 CLASS="Table">
+<A NAME="50593882_pgfId-4081"></A><DIV>
+<IMG SRC="UG_html-70.gif" ALT="">
+</DIV>
+DFSD Lib<A NAME="50593882_marker-10839"></A>rary Routines<A NAME="50593882_36149"></A></H6>
+<TABLE>
+<TR>
+<TH ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-12408"></A>Category</P>
+</TH>
+<TH ROWSPAN="1" COLSPAN="2">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-12410"></A>Routine Name</P>
+</TH>
+<TH ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-12414"></A>Description</P>
+</TH>
+</TR>
+<TR>
+<TH ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-12418"></A>C</P>
+</TH>
+<TH ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-12420"></A>FORTRAN-77</P>
+</TH>
+</TR>
+<TR>
+<TD ROWSPAN="6" COLSPAN="1">
+<P CLASS="TableCategory">
+<A NAME="50593882_pgfId-12424"></A>Write</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12426"></A>DFSDadddata</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12428"></A>dsadata</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-12430"></A>Appends a data set to a file.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12434"></A>DFSDclear</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12436"></A>dsclear</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-12438"></A>Clears all possible set values.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12442"></A>DFSDputdata</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12444"></A>dspdata</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-12446"></A>Overwrites new data to a file.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12450"></A>DFSDsetdims</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12452"></A>dssdims</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-12454"></A>Sets the rank and dimension for succeeding data sets.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12458"></A>DFSDsetNT</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12460"></A>dssnt</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-12462"></A>Sets the number type for the data set.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12466"></A>DFSDwriteref</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12468"></A>dswref</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-12470"></A>Assigns a reference number to the next data set written.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="8" COLSPAN="1">
+<P CLASS="TableCategory">
+<A NAME="50593882_pgfId-12472"></A>Read</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12474"></A>DFSDgetdata</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12476"></A>dsgdata</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-12478"></A>Retrieves the next data set in the file.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12482"></A>DFSDgetdims</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12484"></A>dsgdims</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-12486"></A>Returns the number and dimensions for the next data set.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12490"></A>DFSDgetNT</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12492"></A>dsgnt</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-12494"></A>Determines the number type for the data in the data set.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12498"></A>DFSDlastref</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12500"></A>dslref</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-12502"></A>Returns the reference number of last data set accessed.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12506"></A>DFSDndatasets</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12508"></A>dsnum</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-12510"></A>Returns the number of data sets in a file.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12514"></A>DFSDpre32sdg</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12516"></A>dsp32sd</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-12518"></A>Determines if the data set was created before HDF version 3.2.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12522"></A>DFSDreadref</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12524"></A>dsrref</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-12526"></A>Locates a data set with the specified reference number.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12530"></A>DFSDrestart</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12532"></A>dsfirst</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-12534"></A>Sets the location of the next access operation to be the first data set in the file.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="4" COLSPAN="1">
+<P CLASS="TableCategory">
+<A NAME="50593882_pgfId-12536"></A> Slabs</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12538"></A>DFSDendslab</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12540"></A>dssslab</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-12542"></A>Terminates a read or write slab operation.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12546"></A>DFSDreadslab</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12548"></A>dsrslab</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-12550"></A>Reads a slab of data from a data set.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12554"></A>DFSDstartslab</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12556"></A>dssslab</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-12558"></A>Begins a read or write slab operation.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12562"></A>DFSDwriteslab</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12564"></A>dswslab</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-12566"></A>Writes a slab of data to a data set.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="10" COLSPAN="1">
+<P CLASS="TableCategory">
+<A NAME="50593882_pgfId-12568"></A>Data Set Attribute</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12570"></A>DFSDgetcal</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12572"></A>dsgcal</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-12574"></A>Retrieves the calibration information for the data se.t</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12578"></A>DFSDgetdatalen</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12580"></A>dsgdaln</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-12582"></A>Retrieves the length of the attributes assigned to the data.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12586"></A>DFSDgetdatastrs</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12588"></A>dsgdast</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-12590"></A>Returns the label, unit, format and coordinate system for data.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12594"></A>DFSDgetfillvalue</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12596"></A>dsgfill</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-12598"></A>Retrieves the fill value used to complete the data set.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12602"></A>DFSDgetrange</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12604"></A>dsgrang</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-12606"></A>Retrieves the range of values for the data set.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12610"></A>DFSDsetcal</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12612"></A>dsscal</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-12614"></A>Sets the calibration information for the data set.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12618"></A>DFSDsetdatastrs</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12620"></A>dssdast</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-12622"></A>Sets label, unit, format and coordinate system for data.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12626"></A>DFSDsetfillvalue</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12628"></A>dssfill</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-12630"></A>Sets the fill value to use when completing a data set.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12634"></A>DFSDsetlengths</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12636"></A>dsslens</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-12638"></A>Sets the length for the data set and dimension attributes.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12642"></A>DFSDsetrange</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12644"></A>dssrang</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-12646"></A>Sets the range of values for the data set.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="5" COLSPAN="1">
+<P CLASS="TableCategory">
+<A NAME="50593882_pgfId-12648"></A>Dimension Attribute</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12650"></A>DFSDgetdimlen</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12652"></A>dsgdiln</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-12654"></A>Retrieves the length of the attributes assigned to the dimension.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12658"></A>DFSDgetdimscale</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12660"></A>dsgdisc</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-12662"></A>Returns the scale for a dimension.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12666"></A>DFSDgetdimstrs</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12668"></A>dsgdist</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-12670"></A>Returns the label, unit, and format for a dimension.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12674"></A>DFSDsetdimscale</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12676"></A>dssdisc</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-12678"></A>Sets the scale for a dimension.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12682"></A>DFSDsetdimstrs</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593882_pgfId-12684"></A>dssdist</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-12686"></A>Sets the label, unit and format for the dimension.</P>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+</DIV>
+<DIV>
+<H6 CLASS="Heading3">
+<A NAME="50593882_pgfId-4091"></A>	12.3.2 File Identifie<A NAME="50593882_marker-10840"></A>rs in the DFSD Interface</H6>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4093"></A>File identifiers are handled internally by each routine and access to a file is granted simply by providing a filename. As the file identifier is handled by the function call, the calling program need not keep track of how to open and close files. </P>
+</DIV>
+<DIV>
+<H5 CLASS="Heading2">
+<A NAME="50593882_pgfId-4101"></A>	12.4	<A NAME="50593882_16679"></A>Writing D<A NAME="50593882_marker-10841"></A>FSD Scientific Data Sets<DIV>
+<IMG SRC="UG_html-69.gif" ALT="">
+</DIV>
+</H5>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4103"></A>The DFSD programming model for writing an SDS to an HDF file involves the following steps: </P>
+<DIV>
+<H6 CLASS="FM1Step">
+<A NAME="50593882_pgfId-4105"></A>Define data set options. (optional)</H6>
+<OL>
+<LI CLASS="Step">
+<A NAME="50593882_pgfId-4107"></A>2.	Write all or part of the data set. </LI>
+</OL>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4109"></A>These steps are performed for every data set written to a file. However, it is not always necessary to define data set options for every write operation as setting an option places information about the data set in a structure in primary memory. This information is retained until explicitly altered by another set call.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading3">
+<A NAME="50593882_pgfId-4111"></A>	12.4.1 Creating a DFSD S<A NAME="50593882_marker-10843"></A>cientific Data Set: DFSDadddata and DFSDputdata</H6>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4113"></A>To define and write a single SDS, the calling program must contain of of the following routines:</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593882_pgfId-4115"></A><EM CLASS="syntaxLang">
+C:</EM>
+		status = DFSDadddata(filename, rank, dim_sizes, data);</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593882_pgfId-4117"></A><EM CLASS="syntaxLang">
+FORTRAN:</EM>
+	status = dsadata(filename, rank, dim_sizes, data)		</P>
+<P CLASS="syntax-or-top">
+<A NAME="50593882_pgfId-4119"></A>	<EM CLASS="syntaxLang">
+OR</EM>
+</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593882_pgfId-4121"></A><EM CLASS="syntaxLang">
+C:</EM>
+		status = DFSDputdata(filename, rank, dim_sizes, data);</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593882_pgfId-4123"></A><EM CLASS="syntaxLang">
+FORTRAN:</EM>
+	status = dspdata(filename, rank, dim_sizes, data)</P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4125"></A><EM CLASS="FunctionName">
+DFSDadddata</EM>
+<A NAME="50593882_marker-10844"></A> appends data to a file when given an existing file name and creates a new file when given a unique file name. <EM CLASS="FunctionName">
+DFSDputdata</EM>
+<A NAME="50593882_marker-10845"></A> replaces the contents of a file when given an existing file name and creates a new file when given a unique file name. To avoid accidentally overwriting data in a file, the use of <EM CLASS="FunctionName">
+DFSDadddata</EM>
+ is recommended.</P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4127"></A><EM CLASS="FunctionName">
+DFSDadddata</EM>
+ and <EM CLASS="FunctionName">
+DFSDputdata</EM>
+ have four parameters: <EM CLASS="VarName">
+filename</EM>
+, <EM CLASS="VarName">
+rank</EM>
+, <EM CLASS="VarName">
+dim_sizes</EM>
+, and <EM CLASS="VarName">
+data</EM>
+. In both routines, the data set is written to the file specified by the <EM CLASS="VarName">
+filename</EM>
+ parameter. The total number of dimensions in the array and the size of each dimension are passed in the <EM CLASS="VarName">
+rank</EM>
+ and <EM CLASS="VarName">
+dim_sizes</EM>
+ parameters. A pointer to the data or slab of data written to the named file is passed in the <EM CLASS="VarName">
+data</EM>
+ parameter.</P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-7168"></A>The parameters of <EM CLASS="FunctionName">
+DFSDadddata</EM>
+ and <EM CLASS="FunctionName">
+DFSDputdata</EM>
+ are further described in the following table.</P>
+<DIV>
+<H6 CLASS="Table">
+<A NAME="50593882_pgfId-55211"></A><DIV>
+<IMG SRC="UG_html-70.gif" ALT="">
+</DIV>
+DFSD<A NAME="50593882_marker-55124"></A>adddata and DFS<A NAME="50593882_marker-55125"></A>Dputdata Parameter List</H6>
+<TABLE>
+<TR>
+<TD ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-56721"></A>Routine Name</P>
+<H6 CLASS="ReturnType">
+<A NAME="50593882_pgfId-56722"></A>[Return Type]</H6>
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-56723"></A>(FORTRAN-77)</P>
+</TD>
+<TD ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-56725"></A>Parameter</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="2">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-56727"></A>Parameter Type</P>
+</TD>
+<TD ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-56731"></A>Description</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-56737"></A>C</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-56739"></A>FORTRAN-77</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="4" COLSPAN="1">
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-56743"></A>DFSDadddata</H6>
+<H6 CLASS="ReturnType">
+<A NAME="50593882_pgfId-56744"></A>[intn]</H6>
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-56745"></A>(dsadata)</H6>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-56747"></A>filename</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-56749"></A>char *</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-56751"></A>character*(*)</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-56753"></A>Name of the file containing the data set.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-56757"></A>rank</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-56759"></A>int32</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-56761"></A>integer</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-56763"></A>Number of dimensions in the array.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-56767"></A>dim_sizes</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-56769"></A>int32 *</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-56771"></A>integer(*)</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-56773"></A>Size of each dimension in the data array.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-56777"></A>data</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-56779"></A>VOIDP</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-56781"></A>&lt;valid numeric data type&gt;</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-56783"></A>Array containing the data.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="4" COLSPAN="1">
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-56785"></A>DFSDputdata</H6>
+<H6 CLASS="ReturnType">
+<A NAME="50593882_pgfId-56786"></A>[intn]</H6>
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-56787"></A>(dsadatas)</H6>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-56789"></A>filename</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-56791"></A>char *</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-56793"></A>character*(*)</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-56795"></A>Name of the file containing the data set.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-56799"></A>rank</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-56801"></A>int32</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-56803"></A>integer</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-56805"></A>Number of dimensions in the array.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-56809"></A>dim_sizes</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-56811"></A>int32 *</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-56813"></A>integer(*)</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-56815"></A>Size of each dimension in the data array.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-56819"></A>data</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-56821"></A>VOIDP</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-56823"></A>&lt;valid numeric data type&gt;</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-56825"></A>Array containing the data.</P>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+</DIV>
+<DIV>
+<H6 CLASS="Heading3">
+<A NAME="50593882_pgfId-55214"></A>	12.4.2 Specifyi<A NAME="50593882_marker-55213"></A>ng the Data Type of a DFSD SDS: DFSDsetNT</H6>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4131"></A>The default data type for scientific data is <EM CLASS="DefName">
+DFNT_FLOAT32</EM>
+. To change the default setting, the calling program must contain calls to the following routines:</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593882_pgfId-4133"></A><EM CLASS="syntaxLang">
+C:</EM>
+		status = DFSDsetNT(number_type);</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-4135"></A>		status = DFSDadddata(filename, rank, dim_sizes, data);</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593882_pgfId-4137"></A><EM CLASS="syntaxLang">
+FORTRAN:</EM>
+	status = dssnt(number_type)</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-4139"></A>		status = dsadata(filename, rank, dim_sizes, data)</P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-35681"></A>		<EM CLASS="FunctionName">
+DFSDsetNT</EM>
+<A NAME="50593882_marker-35680"></A> defines the data type for all subsequent <EM CLASS="FunctionName">
+DFSDadddata</EM>
+ and <EM CLASS="FunctionName">
+DFSDputdata</EM>
+ calls until it is changed by a subsequent call to <EM CLASS="FunctionName">
+DFSDsetNT</EM>
+ or reset to the default by <EM CLASS="FunctionName">
+DFSDclear</EM>
+. <EM CLASS="FunctionName">
+DFSDsetNT</EM>
+’s only parameter is the data type.</P>
+<DIV>
+<H6 CLASS="Example">
+<A NAME="50593882_pgfId-35682"></A><DIV>
+<IMG SRC="UG_html-70.gif" ALT="">
+</DIV>
+Creating and Writing to a DFSD Scientific Data Set</H6>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-35683"></A>In the following code<EM CLASS="FunctionName">
+ </EM>
+examples, <EM CLASS="FunctionName">
+DFSDadddata</EM>
+ is used to write an array of 64-bit floating-point numbers to a file named &quot;Example1.hdf&quot;. Although the <EM CLASS="FunctionName">
+DFSDsetNT</EM>
+ function call is optional, it is included here to demonstrate how to override the float32 default. </P>
+</DIV>
+</DIV>
+</DIV>
+</DIV>
+<DIV>
+<H4 CLASS="Code-C-Title">
+<A NAME="50593882_pgfId-11792"></A><DIV>
+<IMG SRC="UG_html-72.gif" ALT="">
+</DIV>
+C:		</H4>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-13729"></A>#include &quot;hdf.h&quot;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14377"></A>&nbsp;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14378"></A>#define LENGTH 3</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14379"></A>#define HEIGHT 2</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14380"></A>#define WIDTH 5</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14381"></A>&nbsp;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14382"></A>main( )</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14383"></A>{</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14384"></A>&nbsp;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14385"></A>	/* Create data array - store dimensions in array ’dims’ */</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14386"></A>	static float64 scien_data[LENGTH][HEIGHT][WIDTH] = </P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14387"></A>  		{ 1., 2., 3., 4., 5.,</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14388"></A>		6., 7., 8., 9.,10.,</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14389"></A>		11.,12.,13.,14.,15.,</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14390"></A>		16.,17.,18.,19.,20.,</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14391"></A>		21.,22.,23.,24.,25.,</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14392"></A>		26.,27.,28.,29.,30. };</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14393"></A>&nbsp;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14394"></A>	intn status;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14395"></A>&nbsp;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14396"></A>	int32 dims[3] = {LENGTH, HEIGHT, WIDTH};</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14397"></A>&nbsp;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14398"></A>	/* Set number type to 64-bit float */</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14399"></A>	status = DFSDsetNT(DFNT_FLOAT64);</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14400"></A>&nbsp;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14401"></A>	/* Write the data to file */</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14402"></A>	status = DFSDadddata(&quot;Example1.hdf&quot;, 3, dims, scien_data);</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14403"></A>&nbsp;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14404"></A>}</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14405"></A>&nbsp;</P>
+</DIV>
+<DIV>
+<H4 CLASS="Code-F-Title">
+<A NAME="50593882_pgfId-11794"></A><DIV>
+<IMG SRC="UG_html-72.gif" ALT="">
+</DIV>
+FORTRAN:	</H4>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-4203"></A>	 PROGRAM WRITE SDS      </P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14407"></A>&nbsp;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14408"></A>      integer  dsadata, dssnt, dims(3), status</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14409"></A>      real*8   sci_data(5,2,3)</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14410"></A>&nbsp;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14411"></A>C     Create array called ’sci_data’; store dimensions in array ’dims’.</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14412"></A>      data     sci_data/ 1., 2., 3., 4., 5.,</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14413"></A>     $                   6., 7., 8., 9.,10.,</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14414"></A>     $                   11.,12.,13.,14.,15.,</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14415"></A>     $                   16.,17.,18.,19.,20.,</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14416"></A>     $                   21.,22.,23.,24.,25.,</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14417"></A>     $                   26.,27.,28.,29.,30./</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14418"></A>&nbsp;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14419"></A>      data dims /3,2,5/</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14420"></A>&nbsp;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14421"></A>C     Set number type to 64-bit float</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14422"></A>      status = dssnt(6)</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14423"></A>&nbsp;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14424"></A>C     Write the data to file</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14425"></A>      status = dsadata(’Example1.hdf’, 3, dims, sci_data)</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14426"></A>&nbsp;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14427"></A>      end</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14428"></A>&nbsp;</P>
+<DIV>
+<H6 CLASS="Heading3">
+<A NAME="50593882_pgfId-4251"></A>	12.4.3 Overwriting Data for a Given Reference Number<A NAME="50593882_marker-10850"></A>: DFSDwriteref</H6>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-55829"></A><EM CLASS="FunctionName">
+DFSDwriteref</EM>
+<A NAME="50593882_marker-55828"></A> is a highly specialized function call that overwrites data referred to by the specified reference number.</P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-55830"></A>If <EM CLASS="FunctionName">
+DFSDwriteref</EM>
+ is called with a reference number that doesn’t exist, an error return value of -1 will be returned.</P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4261"></A>The following series of function calls should appear in your program:</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593882_pgfId-4263"></A><EM CLASS="syntaxLang">
+C:</EM>
+		status = DFSDwriteref(filename, ref_number);</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-10965"></A>		status = DFSDadddata(filename, rank, dim_sizes, data);</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593882_pgfId-55834"></A><EM CLASS="syntaxLang">
+FORTRAN:</EM>
+	status = dswref(filename, ref_number)</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-55835"></A>		status = dsadata(filename, rank, dim_sizes, data)	</P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-55836"></A>If the filename passed to <EM CLASS="FunctionName">
+DFSDwriteref</EM>
+ is different from the filename in the <EM CLASS="FunctionName">
+DFSDadddata</EM>
+ or <EM CLASS="FunctionName">
+DFSDputdata</EM>
+ routine calls, it will be ignored. The next scientific data set written, regardless of the filename, is assigned the reference number <EM CLASS="VarName">
+ref_number</EM>
+. </P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-7575"></A>Care should be taken when using <EM CLASS="FunctionName">
+DFSDwriteref</EM>
+, as once the new data has been written the old data cannot be retrieved.</P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-7565"></A>The parameters of <EM CLASS="FunctionName">
+DFSDwriteref</EM>
+ are described in the following table.</P>
+<DIV>
+<H6 CLASS="Table">
+<A NAME="50593882_pgfId-4401"></A><DIV>
+<IMG SRC="UG_html-70.gif" ALT="">
+</DIV>
+<A NAME="50593882_15619"></A>DFSDse<A NAME="50593882_marker-10852"></A>tNT and DFSD<A NAME="50593882_marker-10853"></A>writeref Parameter List</H6>
+<TABLE>
+<TR>
+<TD ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-56925"></A>Routine Name</P>
+<H6 CLASS="ReturnType">
+<A NAME="50593882_pgfId-56926"></A>[Return Type]</H6>
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-56927"></A>(FORTRAN-77)</P>
+</TD>
+<TD ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-56929"></A>Parameter</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="2">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-56931"></A>Parameter Type</P>
+</TD>
+<TD ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-56935"></A>Description</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-56941"></A>C</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-56943"></A>FORTRAN-77</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-56947"></A>DFSDsetNT</H6>
+<H6 CLASS="ReturnType">
+<A NAME="50593882_pgfId-56948"></A>[intn]</H6>
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-56949"></A>(dssNT)</H6>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-56951"></A>number_type</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-56953"></A>int32</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-56955"></A>integer</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-56957"></A>Number type tag.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="2" COLSPAN="1">
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-56959"></A>DFSDwriteref</H6>
+<H6 CLASS="ReturnType">
+<A NAME="50593882_pgfId-56960"></A>[intn]</H6>
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-56961"></A>(dswref)</H6>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-56963"></A>filename</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-56965"></A>char *</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-56967"></A>character*(*)</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-56969"></A>Name of the file containing the data.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-56973"></A>ref_number</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-56975"></A>int16</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-56977"></A>integer</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-56979"></A>Reference number to be assigned to the data set created.</P>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+</DIV>
+<DIV>
+<H6 CLASS="Heading3">
+<A NAME="50593882_pgfId-6801"></A>	12.4.4 Writing S<A NAME="50593882_marker-10854"></A>everal Data Sets: DFSDsetdims and DFSDclear</H6>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-6802"></A>The DFSD programming model for writing multiple data sets to an HDF file is identical to that for writing individual data sets. (Refer to <EM CLASS="Body">
+<A HREF="UG_html-12.htm#50593882_16679" CLASS="XRef">Writing DFSD Scientific Data Sets</A></EM>
+). To understand how multiple data sets are written to file, it is first necessary to take a closer look at each step of the programming model. First and most importantly, all DFSD routines that set a write option except <EM CLASS="FunctionName">
+DFSDsetNT</EM>
+ and <EM CLASS="FunctionName">
+DFSDsetfillvalue</EM>
+ add information to a special structure in primary memory. This information is used to determine how data is written to file for all subsequent write operations. </P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4294"></A>Information stored in primary memory is retained by the HDF library until explicitly changed by a call to <EM CLASS="FunctionName">
+DFSDsetdims</EM>
+ or reset to <EM CLASS="DefName">
+NULL</EM>
+ by calling <EM CLASS="FunctionName">
+DFSDclear</EM>
+. <EM CLASS="FunctionName">
+DFSDsetdims</EM>
+ and <EM CLASS="FunctionName">
+DFSDclear</EM>
+ are used to prevent assignments of attributes created for a group of data sets to data sets outside the group. For more information on assigning attributes see <A HREF="UG_html-12.htm#50593882_14369" CLASS="XRef">Writing Data Set Attributes</A> and <A HREF="UG_html-12.htm#50593882_37915" CLASS="XRef">Writing the Dimension Attributes of a DFSD SDS</A>.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading3">
+<A NAME="50593882_pgfId-4296"></A>	12.4.5 Preventing the Reassignm<A NAME="50593882_marker-10855"></A>ent of DFSD Data Set Attributes: DFSDsetdims</H6>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4298"></A>Information stored in primary memory is retained by the HDF library until explicitly changed by a call to <EM CLASS="FunctionName">
+DFSDsetdims</EM>
+<A NAME="50593882_marker-10856"></A> or reset to <EM CLASS="DefName">
+NULL</EM>
+ by calling <EM CLASS="FunctionName">
+DFSDclear</EM>
+. <EM CLASS="FunctionName">
+DFSDsetdims</EM>
+ and <EM CLASS="FunctionName">
+DFSDclear</EM>
+ are used to prevent assignments of attributes created for a group of data sets to data sets outside the group.</P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-7703"></A>The syntax of <EM CLASS="FunctionName">
+DFSDsetdims</EM>
+ is the following:</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593882_pgfId-4300"></A><EM CLASS="syntaxLang">
+C:</EM>
+		status = DFSDsetdims(rank, dim_sizes);</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593882_pgfId-4304"></A><EM CLASS="syntaxLang">
+FORTRAN:</EM>
+	status = dssdims(rank, dim_sizes)</P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4312"></A><EM CLASS="FunctionName">
+DFSDsetdims</EM>
+ is not used here to define the rank and dimension sizes to be used in the next operation, but to alert the DFSD interface to stop the automatic assignment of attributes to the data sets to be written to file. <EM CLASS="FunctionName">
+DFSDsetdims</EM>
+ has two parameters: <EM CLASS="VarName">
+rank</EM>
+ and <EM CLASS="VarName">
+dim_sizes</EM>
+. The rank of an array is the total number of dimensions in the array and the dimension sizes are the length of each individual dimension. </P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-6815"></A>As a rule of thumb,<EM CLASS="FunctionName">
+ DFSDsetdims</EM>
+ should be called if any <EM CLASS="FunctionName">
+DFSDset*</EM>
+ routine (<EM CLASS="FunctionName">
+DFSDsetNT</EM>
+, for example) has been called. This insures that all attribute values that have been reset will be assigned in future data set operations.</P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-6812"></A>The parameters of <EM CLASS="FunctionName">
+DFSDsetdims</EM>
+ are further defined in the following table.</P>
+<DIV>
+<H6 CLASS="Table">
+<A NAME="50593882_pgfId-4507"></A><DIV>
+<IMG SRC="UG_html-70.gif" ALT="">
+</DIV>
+DFSDs<A NAME="50593882_marker-10857"></A>etdims Parameter List<A NAME="50593882_22986"></A></H6>
+<TABLE>
+<TR>
+<TD ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-57179"></A>Routine Name</P>
+<H6 CLASS="ReturnType">
+<A NAME="50593882_pgfId-57180"></A>[Return Type]</H6>
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-57181"></A>(FORTRAN-77)</P>
+</TD>
+<TD ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-57183"></A>Parameter</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="2">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-57185"></A>Parameter Type</P>
+</TD>
+<TD ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-57189"></A>Description</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-57195"></A>C</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-57197"></A>FORTRAN-77</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="2" COLSPAN="1">
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-57201"></A>DFSDsetdims</H6>
+<H6 CLASS="ReturnType">
+<A NAME="50593882_pgfId-57202"></A>[intn]</H6>
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-57203"></A>(dssdims)</H6>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-57205"></A>rank</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-57207"></A>intn</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-57209"></A>integer</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-57211"></A>Number of dimensions in the array.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-57215"></A>dim_sizes</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-57217"></A>int32*</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-57219"></A>integer (*)</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-57221"></A>Size of each dimension in the array.</P>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+</DIV>
+<DIV>
+<H6 CLASS="Heading3">
+<A NAME="50593882_pgfId-4316"></A>	12.4.6 Resetting the D<A NAME="50593882_marker-10858"></A>efault DFSD Interface Settings: DFSDclear</H6>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4556"></A>The syntax for <EM CLASS="FunctionName">
+DFSDclear</EM>
+ is as follows:</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593882_pgfId-4526"></A><EM CLASS="syntaxLang">
+C:</EM>
+		status = DFSDclear( );</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593882_pgfId-4528"></A><EM CLASS="syntaxLang">
+FORTRAN:</EM>
+	status = dsclear( )</P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-7792"></A>The <EM CLASS="FunctionName">
+DFSDclear</EM>
+<A NAME="50593882_marker-10859"></A> routine clears all interface settings defined by any of the <EM CLASS="FunctionName">
+DFSDset*</EM>
+ routines (<EM CLASS="FunctionName">
+DFSDsetNT</EM>
+, <EM CLASS="FunctionName">
+DFSDsetfillvalue</EM>
+, <EM CLASS="FunctionName">
+DFSDsetdims</EM>
+, <EM CLASS="FunctionName">
+DFSDsetdatastrs</EM>
+, <EM CLASS="FunctionName">
+DFSDsetdatalengths</EM>
+, <EM CLASS="FunctionName">
+DFSDsetrange</EM>
+, <EM CLASS="FunctionName">
+DFSDsetcal</EM>
+, <EM CLASS="FunctionName">
+DFSDsetdimscale</EM>
+ and <EM CLASS="FunctionName">
+DFSDsetdimstrs</EM>
+). After the <EM CLASS="FunctionName">
+DFSDclear</EM>
+ has been called, calls to any of the <EM CLASS="FunctionName">
+DFSDset*</EM>
+ routines will result in the corresponding value not being written. To write new values, call the appropriate DFSDset routine again.</P>
+<DIV>
+<H6 CLASS="Table">
+<A NAME="50593882_pgfId-4339"></A><DIV>
+<IMG SRC="UG_html-70.gif" ALT="">
+</DIV>
+DFS<A NAME="50593882_marker-10860"></A>Dclear Parameter List</H6>
+<TABLE>
+<TR>
+<TD ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-57345"></A>Routine Name</P>
+<H6 CLASS="ReturnType">
+<A NAME="50593882_pgfId-57346"></A>[Return Type]</H6>
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-57347"></A>(FORTRAN-77)</P>
+</TD>
+<TD ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-57349"></A>Parameter</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="2">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-57351"></A>Parameter Type</P>
+</TD>
+<TD ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-57355"></A>Description</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-57361"></A>C</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-57363"></A>FORTRAN-77</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-57367"></A>DFSDclear</H6>
+<H6 CLASS="ReturnType">
+<A NAME="50593882_pgfId-57368"></A>[intn]</H6>
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-57369"></A>(dsclear)</H6>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-57371"></A>None</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-57373"></A>None</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-57375"></A>None</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-57378"></A>Clears all DFSD interface settings.</P>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+</DIV>
+<DIV>
+<H5 CLASS="Heading2">
+<A NAME="50593882_pgfId-4341"></A>	12.5	Readin<A NAME="50593882_marker-10861"></A>g DFSD Scientific Data Sets<DIV>
+<IMG SRC="UG_html-69.gif" ALT="">
+</DIV>
+</H5>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4343"></A>The DFSD programming model for reading an SDS is also a two-step operation:</P>
+<DIV>
+<H6 CLASS="FM1Step">
+<A NAME="50593882_pgfId-4345"></A>Obtain information about the data set if necessary.</H6>
+<OL>
+<LI CLASS="Step">
+<A NAME="50593882_pgfId-4347"></A>2.	Read all or part of the data set. </LI>
+</OL>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4349"></A>These steps are performed for every data set read. In some cases, calls to determine the data set definition may be reduced or avoided completely. For example, if the data set dimensions are known, the call that returns the data set dimensions may be eliminated. </P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading3">
+<A NAME="50593882_pgfId-4351"></A>	12.5.1 Reading a DFSD SDS: DFSDgetdata</H6>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4353"></A>If the <A NAME="50593882_marker-10863"></A>dimensions of the data set are known, <EM CLASS="FunctionName">
+DFSDgetdata</EM>
+ is the only function call required to read an SDS. If the file is being opened for the first time, <EM CLASS="FunctionName">
+DFSDgetdata</EM>
+ returns the first data set in the file. Any subsequent calls will return successive data sets in the file - data sets are read in the same order they were written. Normally, <EM CLASS="FunctionName">
+DFSDgetdims</EM>
+ is called before <EM CLASS="FunctionName">
+DFSDgetdata</EM>
+ so that space allocations for the array can be checked if necessary and the dimensions verified. If this information is already known, <EM CLASS="FunctionName">
+DFSDgetdims</EM>
+ may be omitted.</P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4355"></A>To read an SDS of known dimension and number type, the calling program should include the following routine:</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593882_pgfId-4357"></A><EM CLASS="syntaxLang">
+C:</EM>
+		status = DFSDgetdata(filename, rank, dim_sizes, data);</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593882_pgfId-4359"></A><EM CLASS="syntaxLang">
+FORTRAN:</EM>
+	status = dsgdata(filename, rank, dim_sizes, data)</P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-3903"></A><EM CLASS="FunctionName">
+DFSDgetdata</EM>
+ has four parameters: <EM CLASS="VarName">
+filename</EM>
+, <EM CLASS="VarName">
+rank</EM>
+, <EM CLASS="VarName">
+dim_sizes</EM>
+, and <EM CLASS="VarName">
+data</EM>
+. <EM CLASS="FunctionName">
+DFSDgetdata</EM>
+ returns a data set specified by the parameter <EM CLASS="VarName">
+filename</EM>
+. The total number of dimensions is specified in <EM CLASS="VarName">
+rank</EM>
+ and the size of each dimension is specified in <EM CLASS="VarName">
+dim_sizes.</EM>
+ <EM CLASS="FunctionName">
+DFSDgetdata</EM>
+ returns the array in <EM CLASS="VarName">
+data</EM>
+.</P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-7854"></A>The parameters of <EM CLASS="FunctionName">
+DFSDgetdata</EM>
+ are further defined in the following table.</P>
+<DIV>
+<H6 CLASS="Table">
+<A NAME="50593882_pgfId-8067"></A><DIV>
+<IMG SRC="UG_html-70.gif" ALT="">
+</DIV>
+<A NAME="50593882_19892"></A>DFSDget<A NAME="50593882_marker-10864"></A>data Parameter List</H6>
+<TABLE>
+<TR>
+<TD ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-58070"></A>Routine Name</P>
+<H6 CLASS="ReturnType">
+<A NAME="50593882_pgfId-58071"></A>[Return Type]</H6>
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-58072"></A>(FORTRAN-77)</P>
+</TD>
+<TD ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-58074"></A>Parameter</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="2">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-58076"></A>Parameter Type</P>
+</TD>
+<TD ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-58080"></A>Description</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-58086"></A>C</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-58088"></A>FORTRAN-77</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="4" COLSPAN="1">
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-58092"></A>DFSDgetdata</H6>
+<H6 CLASS="ReturnType">
+<A NAME="50593882_pgfId-58093"></A>[intn]</H6>
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-58094"></A>(dsgdata)</H6>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-58096"></A>filename</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-58098"></A>char </P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-58100"></A>character*(*)</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-58102"></A>Name of the file containing the data.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-58106"></A>rank </P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-58108"></A>int32</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-58110"></A>integer</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-58112"></A>Number of dimensions.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-58116"></A>dim_sizes</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-58118"></A>int32 *</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-58120"></A>integer (*)</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-58122"></A>Buffer for the dimension sizes.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-58126"></A>data</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-58128"></A>VOIDP</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-58130"></A>&lt;valid numeric data type&gt;</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-58132"></A>Buffer for the stored scientific data.</P>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+</DIV>
+<DIV>
+<H6 CLASS="Heading3">
+<A NAME="50593882_pgfId-8068"></A>	12.5.2 Specifying the Dime<A NAME="50593882_marker-10865"></A>nsions and Data Type of an SDS: DFSDgetdims and DFSDgetNT</H6>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4369"></A>When <EM CLASS="FunctionName">
+DFSDgetdims</EM>
+<A NAME="50593882_marker-10866"></A> is first called, it returns dimension information of the first data set. Subsequent calls will return this information for successive data sets. If you need to determine the dimensions or the data type of an array before reading it, call <EM CLASS="FunctionName">
+DFSDgetdims</EM>
+ and <EM CLASS="FunctionName">
+DFSDgetNT</EM>
+. <EM CLASS="FunctionName">
+DFSDgetNT</EM>
+<A NAME="50593882_marker-10867"></A> gets the data type (or, in HDF parlance, number type) of the data retrieved in the next read operation.</P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4371"></A>To determine the dimensions and data type of an array before attempting to read it, the calling program must include the following:</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593882_pgfId-4373"></A><EM CLASS="syntaxLang">
+C:</EM>
+		status = DFSDgetdims(filename, rank, dimsizes, max_rank);</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-4375"></A>		status = DFSDgetNT(number_type);</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-4377"></A>		status = DFSDgetdata(filename, rank, dimsizes, data);</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593882_pgfId-4379"></A><EM CLASS="syntaxLang">
+FORTRAN:</EM>
+	status = dsgnt(filename, rank, dimsizes, max_rank)</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-4381"></A>		status = dsgdims(number_type)</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-4383"></A>		status = dsgdata(filename, rank, dimsizes, data)</P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-6075"></A><EM CLASS="FunctionName">
+DFSDgetdims</EM>
+ has four parameters: <EM CLASS="VarName">
+filename</EM>
+, <EM CLASS="VarName">
+rank</EM>
+, <EM CLASS="VarName">
+dim_sizes</EM>
+, and <EM CLASS="VarName">
+maxrank</EM>
+. The number of dimensions is returned in <EM CLASS="VarName">
+rank</EM>
+, the size of each dimension in the array <EM CLASS="VarName">
+dim_sizes</EM>
+, and the size of the array containing the dimensions sizes in <EM CLASS="VarName">
+max_rank</EM>
+. <EM CLASS="FunctionName">
+DFSDgetNT</EM>
+ has only one parameter: <EM CLASS="VarName">
+number_type</EM>
+. As there is no way to specify the file or data set through the use of <EM CLASS="FunctionName">
+DFSDgetNT,</EM>
+ it is only valid if it is called after <EM CLASS="FunctionName">
+DFSDgetdims</EM>
+. </P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-51808"></A>The parameters of <EM CLASS="FunctionName">
+DFSDgetdims</EM>
+ and <EM CLASS="FunctionName">
+DFSDgetNT</EM>
+ are further defined in the following table.</P>
+<DIV>
+<H6 CLASS="Table">
+<A NAME="50593882_pgfId-51899"></A><DIV>
+<IMG SRC="UG_html-70.gif" ALT="">
+</DIV>
+<A NAME="50593882_11332"></A>DFS<A NAME="50593882_marker-51810"></A>DgetNT and DFSD<A NAME="50593882_marker-51811"></A>getdims Parameter List</H6>
+<TABLE>
+<TR>
+<TD ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-58574"></A>Routine Name</P>
+<H6 CLASS="ReturnType">
+<A NAME="50593882_pgfId-58575"></A>[Return Type]</H6>
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-58576"></A>(FORTRAN-77)</P>
+</TD>
+<TD ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-58578"></A>Parameter</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="2">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-58580"></A>Parameter Type</P>
+</TD>
+<TD ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-58584"></A>Description</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-58590"></A>C</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-58592"></A>FORTRAN-77</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="4" COLSPAN="1">
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-58596"></A>DFSDgetdims</H6>
+<H6 CLASS="ReturnType">
+<A NAME="50593882_pgfId-58597"></A>[intn]</H6>
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-58598"></A>(dsgdims)</H6>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-58600"></A>filename</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-58602"></A>char *</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-58604"></A>character*(*)</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-58606"></A>Name of file containing the data.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-58610"></A>rank </P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-58612"></A>intn *</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-58614"></A>integer</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-58616"></A>Number of dimensions.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-58620"></A>dim_sizes</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-58622"></A>int32 *</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-58624"></A>integer</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-58626"></A>Buffer for the dimension sizes.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-58630"></A>max_rank</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-58632"></A>int</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-58634"></A>integer</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-58636"></A>Size of the dimension size buffer.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-58638"></A>DFSDgetNT</H6>
+<H6 CLASS="ReturnType">
+<A NAME="50593882_pgfId-58639"></A>[intn]</H6>
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-58640"></A>(dsgnt)</H6>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-58642"></A>number_type</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-58644"></A>int32 *</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-58646"></A>integer</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-58648"></A>Data type of the data to be read.</P>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+<DIV>
+<H6 CLASS="Example">
+<A NAME="50593882_pgfId-51900"></A><DIV>
+<IMG SRC="UG_html-70.gif" ALT="">
+</DIV>
+Reading from a DFSD Scientific Data Set</H6>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-18876"></A>The following examples search the file named &quot;Example1.hdf&quot; for the dimensions and data type of a DFSD array. Although use of <EM CLASS="FunctionName">
+DFSDgetdims</EM>
+ and <EM CLASS="FunctionName">
+DFSDgetNT</EM>
+ is optional, they are included here as a demonstration of how to verify the array dimensions and number type before reading any data. If the dimensions and type are known, only a call to <EM CLASS="FunctionName">
+DFSDgetdata</EM>
+ is required. </P>
+</DIV>
+</DIV>
+</DIV>
+</DIV>
+<DIV>
+<H4 CLASS="Code-C-Title">
+<A NAME="50593882_pgfId-15054"></A><DIV>
+<IMG SRC="UG_html-72.gif" ALT="">
+</DIV>
+C:		</H4>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-15057"></A>#include &quot;hdf.h&quot;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-15058"></A>&nbsp;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-15059"></A>#define LENGTH 3</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-15060"></A>#define HEIGHT 2</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-15061"></A>#define WIDTH 5</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-15062"></A>&nbsp;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-15063"></A>main( )</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-15064"></A>{</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-15065"></A>&nbsp;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-15066"></A>	float64 scien_data[LENGTH][HEIGHT][WIDTH];</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-15067"></A>	int32 number_type;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-15068"></A>	intn rank, status;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-15069"></A>	int32 dims[3];</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-15070"></A>&nbsp;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-15071"></A>	/* Get the dimensions and number type of the array */</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-15072"></A>	status = DFSDgetdims(&quot;Example1.hdf&quot;, &amp;rank, dims, 3);</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-15073"></A>	status = DFSDgetNT(&amp;number_type);</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-15074"></A>&nbsp;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-15075"></A>	/* Read the array if the dimensions are correct */</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-15076"></A>	if (dims[0] &lt;= LENGTH &amp;&amp; dims[1] &lt;= HEIGHT &amp;&amp; dims[2] &lt;= WIDTH)</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-15077"></A>    		status = DFSDgetdata(&quot;Example1.hdf&quot;, rank, dims, scien_data);</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-15078"></A>&nbsp;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-15079"></A>}</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-15081"></A>&nbsp;</P>
+</DIV>
+<DIV>
+<H4 CLASS="Code-F-Title">
+<A NAME="50593882_pgfId-11945"></A><DIV>
+<IMG SRC="UG_html-72.gif" ALT="">
+</DIV>
+FORTRAN:	</H4>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-4263"></A>	 PROGRAM READ SDS      </P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14459"></A>&nbsp;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14460"></A>      integer  dsgdata, dsgdims, dsgnt, dims(3), status</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14461"></A>      integer rank, num_type</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14462"></A>      real*8   sci_data(5, 2, 3)</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14463"></A>&nbsp;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14464"></A>C     Get the dimensions and number type of the array.</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14465"></A>      status = dsgdims(’Example1.hdf’, rank, dims, 3)</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14466"></A>      status = dsgnt(num_type)</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14467"></A>&nbsp;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14468"></A>C     Read the array if the dimensions are correct.</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14469"></A>      if ((dims(1) .eq. 3) .and. (dims(2) .eq. 2) .and. </P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14470"></A>     +    (dims(3) .eq. 5)) then </P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14471"></A>            status = dsgdata(’Example1.hdf’, rank, dims, sci_data)</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14472"></A>      endif</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14473"></A>&nbsp;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14474"></A>      end</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14475"></A>&nbsp;</P>
+<DIV>
+<H6 CLASS="Heading3">
+<A NAME="50593882_pgfId-11354"></A>	12.5.3 Determining the Nu<A NAME="50593882_marker-11353"></A>mber of DFSD Data Sets: DFSDndatasets and DFSDrestart</H6>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4464"></A><EM CLASS="FunctionName">
+DFSDgetdims</EM>
+ and<EM CLASS="FunctionName">
+ DFSDgetdata</EM>
+ sequentially access DFSD data sets. By repeatedly calling either function, a program can step through an entire file by reading one data set at a time. However, before attempting to sequentially access all of the data sets in a file the total number of data sets in the file should be determined. To do so, the <A NAME="50593882_marker-10871"></A>calling program must call the following routine: </P>
+<P CLASS="FM1-syntax">
+<A NAME="50593882_pgfId-4466"></A><EM CLASS="syntaxLang">
+C:</EM>
+		num_of_datasets = DFSDndatasets(filename);</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593882_pgfId-4468"></A><EM CLASS="syntaxLang">
+FORTRAN:</EM>
+	num_of_datasets = dsnum(filename)</P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4470"></A>Once the total number of data sets is known, a calling program can at any time, reset the current data set to the first data set in the file <A NAME="50593882_marker-10872"></A>by calling the following routine:</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593882_pgfId-4472"></A><EM CLASS="syntaxLang">
+C:</EM>
+		status = DFSDrestart( );</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593882_pgfId-4474"></A><EM CLASS="syntaxLang">
+FORTRAN:</EM>
+	status = dsfirst( )</P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4476"></A>Use of <EM CLASS="FunctionName">
+DFSDndatasets</EM>
+ and <EM CLASS="FunctionName">
+DFSDrestart</EM>
+ is optional, it is usually more convenient than cycling through the entire file one SDS at a time.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading3">
+<A NAME="50593882_pgfId-4478"></A>	12.5.4 Obtaining Ref<A NAME="50593882_marker-10873"></A>erence Numbers of DFSD Data Sets: DFSDreadref and DFSDlastref</H6>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4480"></A>As the HDF library handles the assignment and tracking of reference numbers, reference numbers must be explicitly returned. Obtaining the reference number is an operation best performed immediately after data set creation. </P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4482"></A>The DFSD interface uses the function <EM CLASS="FunctionName">
+DFSDreadref</EM>
+ to initiate access to individual scientific data sets. <EM CLASS="FunctionName">
+DFSDreadref</EM>
+<A NAME="50593882_marker-10874"></A> specifies the reference number of the next SDS to be read. </P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-8340"></A>To access a specific SDS, the calling program must contain the following routines:</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593882_pgfId-4484"></A><EM CLASS="syntaxLang">
+C:</EM>
+		status = DFSDreadref(filename, ref);</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-36027"></A>		status = DFSDgetdata(filename, rank, dim_sizes, data);</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593882_pgfId-36029"></A><EM CLASS="syntaxLang">
+FORTRAN:</EM>
+	status = dsrref(filename, ref)</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-4490"></A>		status = dsgdata(filename, rank, dim_sizes, data)</P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-36037"></A><EM CLASS="FunctionName">
+DFSDreadref</EM>
+ has two parameters: <EM CLASS="VarName">
+filename</EM>
+ and <EM CLASS="VarName">
+ref</EM>
+. <EM CLASS="FunctionName">
+DFSDreadref</EM>
+ specifies the reference number of the object to be next operated on in the HDF file <EM CLASS="VarName">
+filename</EM>
+ as <EM CLASS="VarName">
+ref</EM>
+. Determining the correct reference number is the most difficult part of this operation. As a result, <EM CLASS="FunctionName">
+DFSDreadref</EM>
+ is often used in conjunction with <EM CLASS="FunctionName">
+DFSDlastref</EM>
+<A NAME="50593882_marker-36038"></A>, which determines the reference number of the last data set accessed.</P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-36039"></A>To syntax of <EM CLASS="FunctionName">
+DFSDadddata</EM>
+ and <EM CLASS="FunctionName">
+DFSDlastref</EM>
+ is:</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593882_pgfId-4496"></A><EM CLASS="syntaxLang">
+C:</EM>
+		status = DFSDadddata(filename, rank, dim_sizes, data);</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-4498"></A>		ref_num = DFSDlastref( );</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593882_pgfId-4500"></A><EM CLASS="syntaxLang">
+FORTRAN:</EM>
+	status = dsadata(filename, rank, dim_sizes, data)</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-4502"></A>		ref_num = dslref( )</P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4504"></A><EM CLASS="FunctionName">
+DFSDputdata</EM>
+ can also be used with <EM CLASS="FunctionName">
+DFSDlastref</EM>
+ to obtain similar results. In any case, <EM CLASS="FunctionName">
+DFSDlastref</EM>
+ can be used before any operation that requires identifying a scientific data set by reference number, as in the assignment of annotations and inserting data sets into vgroups. For more information about annotations and vgroups refer to, <A HREF="UG_html-10.htm#50593880_10210" CLASS="XRef">Annotations (AN API)</A> and <A HREF="UG_html-5.htm#50593875_34180" CLASS="XRef">Vgroups (V API)</A>. </P>
+<DIV>
+<H6 CLASS="Table">
+<A NAME="50593882_pgfId-4509"></A><DIV>
+<IMG SRC="UG_html-70.gif" ALT="">
+</DIV>
+D<A NAME="50593882_Table 3H"></A>FSDr<A NAME="50593882_marker-10876"></A>eadref Parameter List</H6>
+<TABLE>
+<TR>
+<TD ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-58834"></A>Routine Name</P>
+<H6 CLASS="ReturnType">
+<A NAME="50593882_pgfId-58835"></A>[Return Type]</H6>
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-58836"></A>(FORTRAN-77)</P>
+</TD>
+<TD ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-58838"></A>Parameter</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="2">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-58840"></A>Parameter Type</P>
+</TD>
+<TD ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-58844"></A>Description</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-58850"></A>C</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-58852"></A>FORTRAN-77</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="2" COLSPAN="1">
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-58856"></A>DFSDreadref</H6>
+<H6 CLASS="ReturnType">
+<A NAME="50593882_pgfId-58857"></A>[intn]</H6>
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-58858"></A>(dsrref)</H6>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-58860"></A>filename</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-58862"></A>char *</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-58864"></A>character*(*)</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-58866"></A>Name of the file containing the data set.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-58870"></A>ref_number</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-58872"></A>uint16</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-58874"></A>integer</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-58877"></A>Reference number of the next data set to be read.</P>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+</DIV>
+<DIV>
+<H5 CLASS="Heading2">
+<A NAME="50593882_pgfId-4511"></A>	12.6	Slabs in the DF<A NAME="50593882_marker-10877"></A>SD Interface<DIV>
+<IMG SRC="UG_html-69.gif" ALT="">
+</DIV>
+</H5>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4513"></A>To review, a slab is an n-dimensional array whose dimensions are smaller than those of the SDS array into which it is written or from which it is read.</P>
+<DIV>
+<H6 CLASS="Heading3">
+<A NAME="50593882_pgfId-4515"></A>	12.6.1 Accessing<A NAME="50593882_marker-10879"></A> Slabs: DFSDstartslab and DFSDendslab</H6>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4517"></A>There are two routines required for every DFSD slab operation - <EM CLASS="FunctionName">
+DFSDstartslab</EM>
+ and <EM CLASS="FunctionName">
+DFSDendslab</EM>
+. <EM CLASS="FunctionName">
+DFSDstartslab</EM>
+<A NAME="50593882_marker-10880"></A> is used to initialize the slab interface and to initiate access to new or existing data sets. <EM CLASS="FunctionName">
+DFSDendslab</EM>
+<A NAME="50593882_marker-10881"></A> is used to terminate access to open data sets. <EM CLASS="FunctionName">
+DFSDstartslab</EM>
+ must be called before any read or write slab operation and <EM CLASS="FunctionName">
+DFSDendslab</EM>
+ must be called after the slab operation is completed. Both routines are required when reading and writing slabs.</P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4296"></A>Given a new filename, <EM CLASS="FunctionName">
+DFSDstartslab</EM>
+ will create a new HDF file with the specified name. Given an existing filename, it will open the named file and append the new data set to the end of the file. Its only parameter is <EM CLASS="VarName">
+filename</EM>
+. <EM CLASS="FunctionName">
+DFSDendslab</EM>
+ has no parameters and need only be called once per file. <EM CLASS="FunctionName">
+DFSDendslab</EM>
+ will write any attributes defined immediately before the data set is created.</P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-8465"></A>For more information on assigning attributes, see <A HREF="UG_html-12.htm#50593882_37915" CLASS="XRef">Writing the Dimension Attributes of a DFSD SDS</A>.</P>
+<DIV>
+<H6 CLASS="Table">
+<A NAME="50593882_pgfId-8513"></A><DIV>
+<IMG SRC="UG_html-70.gif" ALT="">
+</DIV>
+DFSDsta<A NAME="50593882_marker-10882"></A>rtslab Parameter List</H6>
+<TABLE>
+<TR>
+<TD ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-58991"></A>Routine Name</P>
+<H6 CLASS="ReturnType">
+<A NAME="50593882_pgfId-58992"></A>[Return Type]</H6>
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-58993"></A>(FORTRAN-77)</P>
+</TD>
+<TD ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-58995"></A>Parameter</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="2">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-58997"></A>Parameter Type</P>
+</TD>
+<TD ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-59001"></A>Description</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-59007"></A>C</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-59009"></A>FORTRAN-77</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-59013"></A>DFSDstartslab</H6>
+<H6 CLASS="ReturnType">
+<A NAME="50593882_pgfId-59014"></A>[intn]</H6>
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-59015"></A>(dssslab)</H6>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-59017"></A>filename</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-59019"></A>char *</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-59021"></A>character*(*)</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-59023"></A>Name of the file containing the data set.</P>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+</DIV>
+<DIV>
+<H6 CLASS="Heading3">
+<A NAME="50593882_pgfId-4297"></A>	12.6.2 Wri<A NAME="50593882_marker-10883"></A>ting Slabs: DFSDwriteslab</H6>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4523"></A>In the DFSD interface, writing an entire data set array and writing slabs follow the same programming model. The difference between the two is that calls to three routines is needed to write slabs, while a call to one routine is needed to write whole data sets. </P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-8527"></A>More specifically, the DFSD programming model for writing slabs to an SDS is as follows:</P>
+<DIV>
+<H6 CLASS="FM1Step">
+<A NAME="50593882_pgfId-4525"></A>Set the appropriate options to define the new SDS or select an existing SDS.</H6>
+<OL>
+<LI CLASS="Step">
+<A NAME="50593882_pgfId-4527"></A>2.	Write the data set using three specialized slab routines. </LI>
+</OL>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4529"></A>In addition to writing s<A NAME="50593882_marker-10885"></A>labs to both new and existing data sets, <EM CLASS="FunctionName">
+DFSDwriteslab</EM>
+ can also perform the following sequential write operations:</P>
+<UL>
+<LI CLASS="Bullet">
+<A NAME="50593882_pgfId-4345"></A>Write slabs to a single data set when called repeatedly. </LI>
+<LI CLASS="Bullet">
+<A NAME="50593882_pgfId-4346"></A>Write slabs to sequential data sets when repeatedly called between calls to <EM CLASS="FunctionName">
+DFSDgetdims</EM>
+.</LI>
+<LI CLASS="Bullet">
+<A NAME="50593882_pgfId-4347"></A>Write slabs to selected data sets when repeatedly called between calls to <EM CLASS="FunctionName">
+DFSDwriteref</EM>
+.</LI>
+</UL>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4537"></A>Although not specifically defined as a slab routine, in practice, the <EM CLASS="FunctionName">
+DFSDsetfillvalue</EM>
+ routine is used to initialize array elements between non-contiguous slab write operations. Setting a fill value places the same value in every array location before the first slab is written. Any hole created by non-contiguous writes can then be recognized by identifying the known fill value. The fill value must have the same number type as the values in the data set. For more information on fill values refer to <A HREF="UG_html-12.htm#50593882_35013" CLASS="XRef">Assigning Value Attributes to a DFSD SDS: DFSDsetfillvalue, DFSDsetrange, and DFSDsetcal</A>.</P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4539"></A>To write a slab to a new data set, the calling program must include the following routine calls:</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593882_pgfId-4541"></A><EM CLASS="syntaxLang">
+C:</EM>
+		status = DFSDsetdims(rank, dimsizes);</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-4543"></A>		status = DFSDsetNT(num_type);</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-4545"></A>		status = DFSDstartslab(filename);</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-4547"></A>		status = DFSDwriteslab(start, stride, count, data);</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-4549"></A>		status = DFSDendslab( );</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593882_pgfId-4551"></A><EM CLASS="syntaxLang">
+FORTRAN:</EM>
+	status = dssnt(num_type)</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-4553"></A>		status = dssdims(rank, dim_sizes)</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-4555"></A>		status = dssslab(filename)</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-4557"></A>		status = dswslab(start, stride, edge, data)</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-4559"></A>		status = dseslab( )</P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4561"></A>When writing slabs to an existing data set, it is impossible to change the number type, array boundaries, fill value, or calibration information. Consequently <EM CLASS="FunctionName">
+DFSDsetNT</EM>
+, <EM CLASS="FunctionName">
+DFSDsetdims</EM>
+, <EM CLASS="FunctionName">
+DFSDsetcal</EM>
+, and <EM CLASS="FunctionName">
+DFSDsetfillvalue</EM>
+ will generate errors if called for an existing data set. </P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-8565"></A>To write a slab to an existing data set, your program should include the following calls:</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593882_pgfId-4563"></A><EM CLASS="syntaxLang">
+C:</EM>
+		status = DFSDwriteref(filename, ref);</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-4565"></A>		status = DFSDstartslab(filename);</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-4567"></A>		status = DFSDwriteslab(start, stride, count, data);</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-4569"></A>		status = DFSDendslab( );</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593882_pgfId-4571"></A><EM CLASS="syntaxLang">
+FORTRAN:</EM>
+	status = dswref(filename, ref)</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-4316"></A>		status = dssslab(filename)</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-4317"></A>		status = dswslab(start, stride, edge, data)</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-4318"></A>		status = dseslab( )</P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4579"></A>Because <EM CLASS="FunctionName">
+DFSDwriteslab</EM>
+ offers no overwrite protection, the calling program is responsible for eliminating overlap when arranging slabs within the newly defined data set. </P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4581"></A><EM CLASS="FunctionName">
+DFSDwriteslab</EM>
+ has four arguments: <EM CLASS="VarName">
+start</EM>
+, <EM CLASS="VarName">
+stride</EM>
+, <EM CLASS="VarName">
+edge</EM>
+, and <EM CLASS="VarName">
+data</EM>
+.<EM CLASS="VarName">
+ </EM>
+The arguments <EM CLASS="VarName">
+start</EM>
+, <EM CLASS="VarName">
+stride</EM>
+, and <EM CLASS="VarName">
+edge</EM>
+ are defined as they are in the corresponding SD routines.</P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4591"></A>The <A NAME="50593882_marker-10886"></A>DFSD SDS model does not support strides. Pass the <EM CLASS="VarName">
+start</EM>
+ array as the <EM CLASS="VarName">
+stride</EM>
+ parameter as a place holder. Whatever is passed as the <EM CLASS="VarName">
+stride</EM>
+ parameter will be ignored by the DFSD interface.</P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4593"></A>Although <EM CLASS="FunctionName">
+DFSDendslab</EM>
+ need only be called once per file, it is required to write data to the file. It will also write any attributes defined immediately before the data set is created. </P>
+</DIV>
+<DIV>
+<H6 CLASS="Table">
+<A NAME="50593882_pgfId-4598"></A><DIV>
+<IMG SRC="UG_html-70.gif" ALT="">
+</DIV>
+DFSD<A NAME="50593882_marker-10887"></A>writeslab Parameter List</H6>
+<TABLE>
+<TR>
+<TD ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-59110"></A>Routine Name</P>
+<H6 CLASS="ReturnType">
+<A NAME="50593882_pgfId-59111"></A>[Return Type]</H6>
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-59112"></A>(FORTRAN-77)</P>
+</TD>
+<TD ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-59114"></A>Parameter</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="2">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-59116"></A>Parameter Type</P>
+</TD>
+<TD ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-59120"></A>Description</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-59126"></A>C</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-59128"></A>FORTRAN-77</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="4" COLSPAN="1">
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-59132"></A>DFSDwriteslab</H6>
+<H6 CLASS="ReturnType">
+<A NAME="50593882_pgfId-59133"></A>[intn]</H6>
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-59134"></A>(sdwslab)</H6>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-59136"></A>start</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-59138"></A>int32 *</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-59140"></A>integer (*)</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-59142"></A>Array containing the starting coordinate the write.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-59146"></A>stride</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-59148"></A>int32 *</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-59150"></A>integer (*)</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-59152"></A>Ignored parameter.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-59156"></A>count</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-59158"></A>int32 *</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-59160"></A>integer (*)</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-59162"></A>Array defining the boundaries of the slab.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-59166"></A>data</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-59168"></A>VOIDP</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-59170"></A>&lt;valid numeric data type&gt;</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-59173"></A>Buffer for the data to be written<A NAME="50593882_marker-59172"></A>.</P>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+</DIV>
+<DIV>
+<H6 CLASS="Heading3">
+<A NAME="50593882_pgfId-4600"></A>	12.6.3 Reading S<A NAME="50593882_marker-10888"></A>labs: DFSDreadslab</H6>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4602"></A>The programming model for reading one or more slabs involves the following steps:</P>
+<DIV>
+<H6 CLASS="FM1Step">
+<A NAME="50593882_pgfId-4604"></A>Select an existing SDS.</H6>
+<OL>
+<LI CLASS="Step">
+<A NAME="50593882_pgfId-4606"></A>2.	Read the data set using three specialized slab routines. </LI>
+</OL>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4351"></A>In addit<A NAME="50593882_marker-10889"></A>ion to reading single slabs of data, <EM CLASS="FunctionName">
+DFSDreadslab</EM>
+ can perform the following sequential access operations:</P>
+<UL>
+<LI CLASS="Bullet">
+<A NAME="50593882_pgfId-4352"></A>Read multiple slabs from the first data set in a file when called repeatedly. </LI>
+<LI CLASS="Bullet">
+<A NAME="50593882_pgfId-4353"></A>Read multiple slabs from a specified data set when repeatedly called after <EM CLASS="FunctionName">
+DFSDreadref</EM>
+.</LI>
+<LI CLASS="Bullet">
+<A NAME="50593882_pgfId-4614"></A>Read multiple slabs from sequential data sets when repeatedly called between calls to <EM CLASS="FunctionName">
+DFSDgetdims</EM>
+.</LI>
+</UL>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4616"></A>To read a slab, the calling program must include the following routine calls:</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593882_pgfId-4618"></A><EM CLASS="syntaxLang">
+C:</EM>
+		status = DFSDreadref(filename, ref);</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-4620"></A>		status = DFSDstartslab(filename);</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-4622"></A>		status = DFSDreadslab(start, stride, edge, data);</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-4624"></A>		status = DFSDendslab( );</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593882_pgfId-4626"></A><EM CLASS="syntaxLang">
+FORTRAN:</EM>
+	status = dsrref(filename, ref)</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-4628"></A>		status = dssslab(filename)</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-4630"></A>		status = dsrslab(start, stride, edge, data)</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-4632"></A>		status = dseslab( )</P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4634"></A>In addition to <EM CLASS="FunctionName">
+DFSDreadref</EM>
+, <EM CLASS="FunctionName">
+DFSDgetdims </EM>
+may also be used to position the read pointer to the appropriate data set. When <EM CLASS="FunctionName">
+DFSDreadslab</EM>
+ is used to read slabs, the coordinates of the <EM CLASS="VarName">
+start</EM>
+ array must begin at 0 for each dimension (<EM CLASS="VarName">
+start={0,0, ... 0}</EM>
+) and the size of each dimension must equal the size of the array itself (<EM CLASS="VarName">
+edge={dim_size_1, dim_size_2, dim_size_n}</EM>
+). As with <EM CLASS="FunctionName">
+DFSDwriteslab</EM>
+, whatever is passed in as the <EM CLASS="VarName">
+stride</EM>
+ parameter is ignored. Finally, the <EM CLASS="VarName">
+data</EM>
+ buffer must allocate enough space to hold the data: excess data is truncated.</P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4636"></A>All parameters of the <EM CLASS="FunctionName">
+DFSDreadslab</EM>
+ routine assume FORTRAN-77-style one-based arrays - the starting coordinates of the slab must be given as an offset from the origin of the data set where the origin is defined as (<EM CLASS="VarName">
+dim 1 = 1, dim 2 = 1, . . . dim n-1 = 1, dim n = 1</EM>
+). The first element of the slab will be the coordinates specified by the contents of the <EM CLASS="VarName">
+start</EM>
+ array. <EM CLASS="FunctionName">
+DFSDreadslab</EM>
+ will extract elements in increasing order until the until the dimensional offset specified by the contents of the <EM CLASS="VarName">
+edge</EM>
+ array are encountered.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Table">
+<A NAME="50593882_pgfId-4641"></A><DIV>
+<IMG SRC="UG_html-70.gif" ALT="">
+</DIV>
+<A NAME="50593882_24598"></A>DF<A NAME="50593882_marker-10890"></A>SDreadslab Parameter List</H6>
+<TABLE>
+<TR>
+<TD ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-59290"></A>Routine Name</P>
+<H6 CLASS="ReturnType">
+<A NAME="50593882_pgfId-59291"></A>[Return Type]</H6>
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-59292"></A>(FORTRAN-77)</P>
+</TD>
+<TD ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-59294"></A>Parameter</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="2">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-59296"></A>Parameter Type</P>
+</TD>
+<TD ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-59300"></A>Description</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-59306"></A>C</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-59308"></A>FORTRAN-77</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="6" COLSPAN="1">
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-59312"></A>DFSDreadslab</H6>
+<H6 CLASS="ReturnType">
+<A NAME="50593882_pgfId-59313"></A>[intn]</H6>
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-59314"></A>(dswslab)</H6>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-59316"></A>filename</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-59318"></A>char *</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-59320"></A>character*(*)</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-59322"></A>Name of the HDF file.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-59326"></A>start</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-59328"></A>int32 *</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-59330"></A>integer (*)</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-59332"></A>Array containing the coordinates for start of the slab.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-59336"></A>slab_size</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-59338"></A>int32</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-59340"></A>integer (*)</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-59342"></A>Array of rank containing the size of each dimension of the slab.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-59346"></A>stride</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-59348"></A>int32 *</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-59350"></A>integer (*)</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-59352"></A>Place holder array.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-59356"></A>buffer</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-59358"></A>VOIDP</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-59360"></A>&lt;valid numeric data type&gt;</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-59362"></A>Array the will used to store the extracted slab.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-59366"></A>buffer_size</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-59368"></A>int32 *</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-59370"></A>integer (*)</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-59372"></A>Array containing the dimensions of the buffer param<A NAME="50593882_marker-59373"></A>eter<A NAME="50593882_marker-59374"></A>.</P>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+</DIV>
+</DIV>
+<DIV>
+<H5 CLASS="Heading2">
+<A NAME="50593882_pgfId-4643"></A>	12.7	Predefin<A NAME="50593882_marker-10892"></A>ed Attributes and the DFSD Interface<DIV>
+<IMG SRC="UG_html-69.gif" ALT="">
+</DIV>
+</H5>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4645"></A>Although they often contain important information, attributes are optional to the data set array and the dimension record. Although both types of attributes use similar names, they are read and written using different sets of routines. All attributes are predefined by the DFSD library. </P>
+<DIV>
+<H6 CLASS="Heading3">
+<A NAME="50593882_pgfId-4649"></A>	12.7.1 <A NAME="50593882_14369"></A>Writing Data Set Attributes</H6>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4651"></A><EM CLASS="Definition">
+Data set attributes</EM>
+ are described in <A HREF="UG_html-3.htm#50593873_13938" CLASS="XRef">Scientific Data Sets (SD API)</A>. There is a limit of one string attribute per data set.</P>
+<DIV>
+<H6 CLASS="Heading4">
+<A NAME="50593882_pgfId-4655"></A>	12.7.1.1	Assigning S<A NAME="50593882_marker-10894"></A>tring Attributes to a DFSD SDS: DFSDsetlengths and DFSDsetdatastrs</H6>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4657"></A>The DFSD interface provides two function calls for creating data set string attributes: <EM CLASS="FunctionName">
+DFSDsetlengths</EM>
+ and <EM CLASS="FunctionName">
+DFSDsetdatastrs</EM>
+. <EM CLASS="FunctionName">
+DFSDsetlengths</EM>
+<A NAME="50593882_marker-10895"></A> overrides the default string length and <EM CLASS="FunctionName">
+DFSDsetdatastrs</EM>
+<A NAME="50593882_marker-10901"></A> writes the string. <EM CLASS="FunctionName">
+DFSDsetlengths</EM>
+ and <EM CLASS="FunctionName">
+DFSDsetdatastrs</EM>
+ are optional and may be called individually, or in any order as long as they precede calls to <EM CLASS="FunctionName">
+DFSDadddata</EM>
+ or <EM CLASS="FunctionName">
+DFSDputdata</EM>
+. </P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4659"></A>Predefi<A NAME="50593882_marker-10902"></A>ned string attributes are defined as follows:</P>
+<UL>
+<LI CLASS="Bullet">
+<A NAME="50593882_pgfId-4661"></A><EM CLASS="Definition">
+Coordinate system attributes</EM>
+<A NAME="50593882_marker-10903"></A> specify the coordinate system used to generate the original data.</LI>
+<LI CLASS="Bullet">
+<A NAME="50593882_pgfId-4663"></A><EM CLASS="Definition">
+Format attributes</EM>
+<A NAME="50593882_marker-10904"></A> specify the format to use when displaying values for the data.</LI>
+<LI CLASS="Bullet">
+<A NAME="50593882_pgfId-4665"></A><EM CLASS="Definition">
+Label attributes</EM>
+<A NAME="50593882_marker-10905"></A> contains data array names.</LI>
+<LI CLASS="Bullet">
+<A NAME="50593882_pgfId-4667"></A><EM CLASS="Definition">
+Unit attributes</EM>
+<A NAME="50593882_marker-10906"></A> identifies the units of measurement associated with the data.</LI>
+</UL>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4669"></A>To assign a predefined attribute to an HDF file, the program must contain the following routine calls:</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593882_pgfId-4671"></A><EM CLASS="syntaxLang">
+C:</EM>
+		status = DFSDsetlengths(label_len, unit_len, format_len, coords_len);</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-4673"></A>		status = DFSDsetdatastrs(label, unit, format, coordsys);</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-4675"></A>		status = DFSDadddata(filename, rank, dimsizes, data);</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593882_pgfId-4677"></A><EM CLASS="syntaxLang">
+FORTRAN:</EM>
+	status = dsslens(label_len, unit_len, format_len, coords_len)</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-4679"></A>		status = dssdast(label, unit, format, coordsys)</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-4681"></A>		status = dsadata(filename, rank, dimsizes, data)</P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4683"></A><EM CLASS="FunctionName">
+DFSDsetlengths</EM>
+ has four arguments: <EM CLASS="VarName">
+label_len</EM>
+, <EM CLASS="VarName">
+unit_len</EM>
+, <EM CLASS="VarName">
+format_len</EM>
+, and <EM CLASS="VarName">
+coords_len</EM>
+. Each parameter reflects the maximum length for the string that will hold the label, unit, format, and coordinate system. Use of <EM CLASS="FunctionName">
+DFSDsetlengths</EM>
+ is optional and usually not necessary. </P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4685"></A><EM CLASS="FunctionName">
+DFSDsetdatastrs</EM>
+ writes null-terminated strings to an HDF file. It has the same four arguments: <EM CLASS="VarName">
+label</EM>
+, <EM CLASS="VarName">
+unit</EM>
+, <EM CLASS="VarName">
+format</EM>
+, and <EM CLASS="VarName">
+coordsys</EM>
+. To avoid the assignment of a string, pass <EM CLASS="DefName">
+NULL</EM>
+ as the appropriate argument.</P>
+<DIV>
+<H6 CLASS="Table">
+<A NAME="50593882_pgfId-62444"></A><DIV>
+<IMG SRC="UG_html-70.gif" ALT="">
+</DIV>
+DFS<A NAME="50593882_marker-62335"></A>Dsetlengths and DFSDse<A NAME="50593882_marker-62336"></A>tdatastrs Parameter List</H6>
+<TABLE>
+<TR>
+<TD ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-62339"></A>Routine Name</P>
+<H6 CLASS="ReturnType">
+<A NAME="50593882_pgfId-62340"></A>[Return Type]</H6>
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-62341"></A>(FORTRAN-77)</P>
+</TD>
+<TD ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-62343"></A>Parameter</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="2">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-62345"></A>Parameter Type</P>
+</TD>
+<TD ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-62349"></A>Description</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-62355"></A>C</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-62357"></A>FORTRAN-77</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="4" COLSPAN="1">
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-62361"></A>DFSDsetlengths</H6>
+<H6 CLASS="ReturnType">
+<A NAME="50593882_pgfId-62362"></A>[intn]</H6>
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-62363"></A>(dsslens)</H6>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-62365"></A>label_len</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-62367"></A>intn</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-62369"></A>integer</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-62371"></A>Maximum length for any label string.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-62375"></A>unit_len</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-62377"></A>intn</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-62379"></A>integer</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-62381"></A>Maximum length for any unit string.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-62385"></A>format_len</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-62387"></A>intn</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-62389"></A>integer</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-62391"></A>Maximum length for any format string.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-62395"></A>coords_len</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-62397"></A>intn</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-62399"></A>integer</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-62401"></A>Maximum length for any coordinate system string.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="4" COLSPAN="1">
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-62403"></A>DFSDsetdatastrs</H6>
+<H6 CLASS="ReturnType">
+<A NAME="50593882_pgfId-62404"></A>[intn]</H6>
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-62405"></A>(dssdast)</H6>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-62407"></A>label</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-62409"></A>char *</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-62411"></A>character*(*)</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-62413"></A>Label describing the data.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-62417"></A>unit</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-62419"></A>char *</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-62421"></A>character*(*)</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-62423"></A>Unit to be applied to the data.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-62427"></A>format</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-62429"></A>char *</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-62431"></A>character*(*)</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-62433"></A>Format to be applied in displaying the data.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-62437"></A>coordsys</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-62439"></A>char*</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-62441"></A>character*(*)</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-62443"></A>Coordinate system of the data set.</P>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+</DIV>
+<DIV>
+<H6 CLASS="Heading4">
+<A NAME="50593882_pgfId-62447"></A>	12.7.1.2	<A NAME="50593882_35013"></A>Assign<A NAME="50593882_marker-62446"></A>ing Value Attributes to a DFSD SDS: DFSDsetfillvalue, DFSDsetrange, and<BR>
+		DFSDsetcal</H6>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4694"></A>The DFSD interface provides the following routines for defining value attributes. All three function calls are optional and may be called in any order provided they precede a call to <EM CLASS="FunctionName">
+DFSDadddata</EM>
+ or <EM CLASS="FunctionName">
+DFSDputdata</EM>
+.</P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4696"></A>To assign a value attribute to a data set, the following routines must be called:</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593882_pgfId-4698"></A><EM CLASS="syntaxLang">
+C:</EM>
+		status = DFSDsetfillvalue(fill_val);</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-42061"></A>		status = DFSDsetcal(scale, scale_err, offset, offset_err, num_type);</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-42063"></A>		status = DFSDsetrange(max, min);</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-42064"></A>		status = DFSDadddata(filename, rank, dimsizes, data);</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593882_pgfId-4706"></A><EM CLASS="syntaxLang">
+FORTRAN:</EM>
+	status = dssfill(fill_val)</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-4708"></A>		status = dsscal(scale, scale_err, offset, offset_err, num_type)</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-4710"></A>		status = dssrang(max, min)</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-4712"></A>		status = dsadata(filename, rank, dimsizes, data)</P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4718"></A><EM CLASS="FunctionName">
+DFSDsetrange</EM>
+<A NAME="50593882_marker-10912"></A> sets a new range attribute for the current DFSD SDS. <EM CLASS="FunctionName">
+DFSDsetrange</EM>
+ has two arguments: <EM CLASS="VarName">
+max</EM>
+ and <EM CLASS="VarName">
+min</EM>
+. The HDF library will not check or update the range attributes as new data are added to the file, therefore <EM CLASS="VarName">
+max</EM>
+ and <EM CLASS="VarName">
+min</EM>
+ will always reflect the values supplied by the last <EM CLASS="FunctionName">
+DFSDsetrange</EM>
+ call. The parameters for <EM CLASS="FunctionName">
+DFSDsetrange</EM>
+ is defined in <A HREF="UG_html-12.htm#50593882_24598" CLASS="XRef">Table 12K</A> below. </P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4724"></A><EM CLASS="FunctionName">
+DFSDsetfillvalue</EM>
+<A NAME="50593882_marker-10913"></A> specifies a new value to the default fill value attribute for an SDS array. It’s only argument is <EM CLASS="VarName">
+fill_val</EM>
+, which specifies the new fill value. The fill value must be of the same number type as the array it’s written to. To avoid conversion errors, use data-specific fill values instead of special architecture-specific values, such as infinity or Not-a-Number (or <EM CLASS="Definition">
+NaN</EM>
+). Setting the fill value after data is written to the SDS will not update the fill values already written to the data set - it will only change the attribute. </P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-9090"></A>The parameters for <EM CLASS="FunctionName">
+DFSDsetfillvalue</EM>
+ are further defined in <A HREF="UG_html-12.htm#50593882_24598" CLASS="XRef">Table 12K</A> below.</P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4726"></A>The <EM CLASS="FunctionName">
+DFSDsetcal</EM>
+<A NAME="50593882_marker-10914"></A> routine creates a calibration record for a specified array and by doing so adds five attributes to the current data set. As the HDF library does not specifically apply calibration information to the data, <EM CLASS="FunctionName">
+SDsetcal</EM>
+ can be called anytime before or after the data is written. <EM CLASS="FunctionName">
+DFSDsetcal</EM>
+ has five arguments; <EM CLASS="VarName">
+scale</EM>
+, <EM CLASS="VarName">
+scale_error</EM>
+, <EM CLASS="VarName">
+offset</EM>
+, <EM CLASS="VarName">
+off_err</EM>
+, and <EM CLASS="VarName">
+num_type</EM>
+. The arguments <EM CLASS="VarName">
+scale</EM>
+ and <EM CLASS="VarName">
+offset</EM>
+ are defined as they are for the multifile SD API routines.</P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4736"></A>In addition to the <EM CLASS="VarName">
+scale</EM>
+ and <EM CLASS="VarName">
+offset</EM>
+, <EM CLASS="FunctionName">
+DFSDsetcal</EM>
+ also includes both a scale and offset error. The argument <EM CLASS="VarName">
+scale_err</EM>
+ contains the potential error of the calibrated data due to scaling and <EM CLASS="VarName">
+offset_err</EM>
+ contains the potential error for the calibrated data due to the offset. The <EM CLASS="VarName">
+num_type</EM>
+ parameter specifies the number type of the uncalibrated data. </P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-9094"></A>The parameters of <EM CLASS="FunctionName">
+DFSDsetcal</EM>
+ are defined in the following table.</P>
+<DIV>
+<H6 CLASS="Table">
+<A NAME="50593882_pgfId-42546"></A><DIV>
+<IMG SRC="UG_html-70.gif" ALT="">
+</DIV>
+DFSDs<A NAME="50593882_marker-42404"></A>etfillvalue, DFSDset<A NAME="50593882_marker-42405"></A>range and DFS<A NAME="50593882_marker-42406"></A>Dsetcal Parameter List </H6>
+<TABLE>
+<TR>
+<TD ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-42409"></A>Routine Name</P>
+<H6 CLASS="ReturnType">
+<A NAME="50593882_pgfId-42410"></A>[Return Type]</H6>
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-42411"></A>(FORTRAN-77)</P>
+</TD>
+<TD ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-42413"></A>Parameter</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="2">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-42415"></A>Parameter Type</P>
+</TD>
+<TD ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-42419"></A>Description</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-42425"></A>C</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-42427"></A>FORTRAN-77</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="4" COLSPAN="1">
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-42431"></A>DFSDsetfillvalue</H6>
+<H6 CLASS="ReturnType">
+<A NAME="50593882_pgfId-42432"></A>[intn]</H6>
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-42433"></A>(dssfill)</H6>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-42435"></A>label</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-42437"></A>char *</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-42439"></A>character*(*)</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-42441"></A>Label describing the data.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-42445"></A>unit</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-42447"></A>char *</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-42449"></A>character*(*)</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-42451"></A>Unit to be applied to the data.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-42455"></A>format</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-42457"></A>char *</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-42459"></A>character*(*)</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-42461"></A>Format to be applied in displaying the data.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-42465"></A>coordsys</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-42467"></A>char *</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-42469"></A>character*(*)</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-42471"></A>Coordinate system of the data set.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="2" COLSPAN="1">
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-42473"></A>DFSDsetrange</H6>
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-42474"></A>[intn]</H6>
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-42475"></A>(dssrang)</H6>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-42477"></A>max</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-42479"></A>VOIDP</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-42481"></A>&lt;valid numeric data type&gt;</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-42483"></A>Highest value in the selected range of data.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-42487"></A>min</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-42489"></A>VOIDP</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-42491"></A>&lt;valid numeric data type&gt;</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-42493"></A>Lowest value in the selected range of data.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="5" COLSPAN="1">
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-42495"></A>DFSDsetcal</H6>
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-42496"></A>[intn]</H6>
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-42497"></A>(dsscal)</H6>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-42499"></A>cal</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-42501"></A>float64</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-42503"></A>real*8</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-42505"></A>Calibration scale.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-42509"></A>cal_error</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-42511"></A>float64</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-42513"></A>real*8</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-42515"></A>Calibration scale error.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-42519"></A>off</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-42521"></A>float64</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-42523"></A>real*8</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-42525"></A>Uncalibrated offset.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-42529"></A>off_err</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-42531"></A>float64</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-42533"></A>real*8</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-42535"></A>Uncalibrated offset error.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-42539"></A>num_type</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-42541"></A>int32</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-42543"></A>integer</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-42545"></A>Number type of uncalibrated data.</P>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+</DIV>
+<DIV>
+<H6 CLASS="Example">
+<A NAME="50593882_pgfId-42548"></A><DIV>
+<IMG SRC="UG_html-70.gif" ALT="">
+</DIV>
+<A NAME="50593882_14222"></A>Assigning Predefined String Attributes to a File</H6>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-42549"></A>The following examples demonstrate the steps necessary to assign predefined string attributes to the data set and stores the data set in the file &quot;Example1.hdf&quot;. They create a string attribute using <EM CLASS="FunctionName">
+DFSDsetdatastrs</EM>
+ and a value attribute using <EM CLASS="FunctionName">
+DFSDsetrange</EM>
+. It also demonstrates the use of <EM CLASS="FunctionName">
+DFSDsetlengths</EM>
+ in altering the maximum string length from 255 characters to 50. It then writes the SDS array by calling <EM CLASS="FunctionName">
+DFSDadddata</EM>
+.</P>
+</DIV>
+</DIV>
+</DIV>
+</DIV>
+<DIV>
+<H4 CLASS="Code-C-Title">
+<A NAME="50593882_pgfId-12025"></A><DIV>
+<IMG SRC="UG_html-72.gif" ALT="">
+</DIV>
+C:		</H4>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-13853"></A>#include &quot;hdf.h&quot;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14482"></A>		</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14483"></A>/*  </P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14484"></A> *  Write an array of floating point values representing</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14485"></A> *  pressure in a 3x2x5 array.</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14486"></A> */</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14487"></A>&nbsp;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14488"></A>main( ) </P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14489"></A>{</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14490"></A>&nbsp;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14491"></A>	float32 data[3][2][5];</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14492"></A>	int32 dimsizes[3];</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14493"></A>	float32 max, min;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14494"></A>	intn status, rank;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14495"></A>	int i, j, k; </P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14496"></A>&nbsp;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14497"></A>	/* Set the rank and dimension sizes. */</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14498"></A>	rank = 3;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14499"></A>	dimsizes[0] = 3;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14500"></A>	dimsizes[1] = 2;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14501"></A>	dimsizes[2] = 5;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14502"></A>&nbsp;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14503"></A>	/* Set the dimensions, to define the beginning of a data set. */</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14504"></A>	status = DFSDsetdims(rank, dimsizes);</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14505"></A>&nbsp;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14506"></A>	/* Set the maximum string length to 50. */</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14507"></A>	status = DFSDsetlengths(50, 50, 50, 50);</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14508"></A>&nbsp;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14509"></A>	/* Define the attribute strings and values. */</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14510"></A>	status = DFSDsetdatastrs(&quot;Pressure Data&quot;, &quot;Millibars&quot;, </P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14511"></A>						&quot;F5.5&quot;, &quot;None&quot;);</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14512"></A>	max = 1500.0;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14513"></A>	min = 0.0;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14514"></A>	status = DFSDsetrange(&amp;max, &amp;min);</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14515"></A>&nbsp;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14516"></A>	/* Set the rank to 3. */</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14517"></A>	rank = 3;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14518"></A>&nbsp;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14519"></A>	/* Calculate the data values. */</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14520"></A>	for (i = 0; i &lt; 3; i++)</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14521"></A>		for (j = 0; j &lt; 2; j++)</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14522"></A>			for (k = 0; k &lt; 5; k++)</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14523"></A>				data[i][j][k] = i*100.0 + j*10.0 + k;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14524"></A>   </P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14525"></A>	/* Write the data set and its attributes to file. */</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14526"></A>	status = DFSDadddata(&quot;Example3.hdf&quot;, rank, dimsizes, data);</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14527"></A>&nbsp;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14528"></A>}</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14529"></A>&nbsp;</P>
+</DIV>
+<DIV>
+<H4 CLASS="Code-F-Title">
+<A NAME="50593882_pgfId-12247"></A><DIV>
+<IMG SRC="UG_html-72.gif" ALT="">
+</DIV>
+FORTRAN:	</H4>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-12248"></A>	 PROGRAM SET ATTRIBS</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14531"></A>&nbsp;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14532"></A>      real*8 data(5, 2, 3), max, min, i, j, k</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14533"></A>      integer*4 dimsizes(3)</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14534"></A>      integer status, rank</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14535"></A>&nbsp;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14536"></A>      integer dsslens, dssdast, dssrang, dsadata</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14537"></A>      integer dssdims</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14538"></A>&nbsp;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14539"></A>      character*13 label /&quot;Pressure Data&quot;/</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14540"></A>      character*9 unit /&quot;Millibars&quot;/</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14541"></A>      character*4 format /&quot;F5.5&quot;/</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14542"></A>      character*4 coordsys /&quot;None&quot;/</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14543"></A>&nbsp;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14544"></A>C     Set the dimensions, to define the beginning of a data set.</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14545"></A>      rank = 3</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14546"></A>      dimsizes(1) = 5</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14547"></A>      dimsizes(2) = 2</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14548"></A>      dimsizes(3) = 3</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14549"></A>      status = dssdims(rank, dimsizes)</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14550"></A>&nbsp;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14551"></A>C     Set the maximum string lengths to 50.</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14552"></A>      status = dsslens(50, 50, 50, 50)</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14553"></A>&nbsp;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14554"></A>C     Define the attribute strings and values.</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14555"></A>      status = dssdast(label, unit, format, coordsys)</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14556"></A>      max = 1500.0</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14557"></A>      min = 0.0</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14558"></A>      status = dssrang(max, min)</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14559"></A>&nbsp;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14560"></A>C     Fill the data array with values.</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14561"></A>      do 30 k = 1, 3</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14562"></A>       do 20 j = 1, 2</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14563"></A>        do 10 i = 1, 5</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14564"></A>          data(i, j, k) = i*100.0 + j*10.0 + k</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14565"></A>10      continue</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14566"></A>20     continue</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14567"></A>30    continue</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14568"></A>&nbsp;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14569"></A>C     Write the data set and its attributes to file.</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14570"></A>      status = dsadata(&quot;Example3.hdf&quot;, rank, dimsizes, data)</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14571"></A>&nbsp;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14572"></A>      end</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14573"></A>&nbsp;</P>
+<DIV>
+<H6 CLASS="Heading3">
+<A NAME="50593882_pgfId-12250"></A>	12.7.2 Read<A NAME="50593882_marker-12249"></A>ing DFSD Data Set Attributes</H6>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4803"></A>The DFSD interface provides two function calls for reading predefined data set attribute strings.</P>
+<DIV>
+<H6 CLASS="Heading4">
+<A NAME="50593882_pgfId-9608"></A>	12.7.2.1	Reading Data Set Attributes: DFSDgetdatalen and DFSDgetdatastrs</H6>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-9610"></A><EM CLASS="FunctionName">
+DFSDgetdatalen</EM>
+<A NAME="50593882_marker-10919"></A> returns the length of each string in the attribute. It is useful for determining the length of an attribute before reading it. <EM CLASS="FunctionName">
+DFSDgetdatastrs</EM>
+<A NAME="50593882_marker-10920"></A> reads the label, unit, format, and coordinate system strings.</P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4807"></A>Attribute data is not read by <EM CLASS="FunctionName">
+DFSDgetdatastrs</EM>
+ until the appropriate routine is called to read the array and its dimension record. If <EM CLASS="FunctionName">
+DFSDgetdatastrs</EM>
+ and <EM CLASS="FunctionName">
+DFSDgetrange</EM>
+ are not called, the array and its dimension record can be read without reading its associated data set attributes. It is also possible to read string and value attributes individually. As attribute data is not actually read by <EM CLASS="FunctionName">
+DFSDgetdatastrs</EM>
+ or <EM CLASS="FunctionName">
+DFSDgetrange</EM>
+, these calls must be made before calling <EM CLASS="FunctionName">
+DFSDgetdata</EM>
+.</P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-9374"></A>Reading the attributes of a data set involves the following steps:</P>
+<DIV>
+<H6 CLASS="FM1Step">
+<A NAME="50593882_pgfId-4809"></A>Determine the length of each attribute string.</H6>
+<OL>
+<LI CLASS="Step">
+<A NAME="50593882_pgfId-4811"></A>2.	Read the attribute strings.</LI>
+<LI CLASS="Step">
+<A NAME="50593882_pgfId-4813"></A>3.	Read the maximum and minimum values.</LI>
+<LI CLASS="Step">
+<A NAME="50593882_pgfId-4815"></A>4.	Read the remainder of the data set.</LI>
+</OL>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4817"></A>To assign a predefined attribute to an HDF file, the following routines should be called:</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593882_pgfId-4819"></A><EM CLASS="syntaxLang">
+C:</EM>
+		status = DFSDgetdatalen(label_len, unit_len, format_len, coords_len);</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-4821"></A>		status = DFSDgetdatastrs(label, unit, format, coordsys);</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-4823"></A>		status = DFSDgetrange(max, min);</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-4825"></A>		status = DFSDgetdata(filename, rank, dimsizes, data);</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593882_pgfId-4827"></A><EM CLASS="syntaxLang">
+FORTRAN:</EM>
+	status = dsgdghaln(label_len, unit_len, format_len, coords_len)</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-4829"></A>		status = dsgdast(label, unit, format, coordsys)</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-4831"></A>		status = dsgrang(max, min)</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-4833"></A>		status = dsgdata(filename, rank, dimsizes, data)</P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4839"></A>The parameters of <EM CLASS="FunctionName">
+DFSDgetdatalen</EM>
+ and <EM CLASS="FunctionName">
+DFSDgetdatastrs</EM>
+ are described in the following table.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Table">
+<A NAME="50593882_pgfId-4844"></A><DIV>
+<IMG SRC="UG_html-70.gif" ALT="">
+</DIV>
+<A NAME="50593882_24598"></A>DFSDgetda<A NAME="50593882_marker-10922"></A>talen and DFS<A NAME="50593882_marker-10923"></A>Dgetdatastrs Parameter List</H6>
+<TABLE>
+<TR>
+<TD ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-13274"></A>Routine Name</P>
+<H6 CLASS="ReturnType">
+<A NAME="50593882_pgfId-14720"></A>[Return Type]</H6>
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-13275"></A>(FORTRAN-77)</P>
+</TD>
+<TD ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-13277"></A>Parameter</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="2">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-13279"></A>Parameter Type</P>
+</TD>
+<TD ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-13283"></A>Description</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-13289"></A>C</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-13291"></A>FORTRAN-77</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="4" COLSPAN="1">
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-13295"></A>DFSDgetdatalen</H6>
+<H6 CLASS="ReturnType">
+<A NAME="50593882_pgfId-14721"></A>[intn]</H6>
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-13296"></A>(dsgdaln)</H6>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13298"></A>label_len</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13300"></A>intn *</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13302"></A>integer</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-13304"></A>Length of any label string.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13308"></A>unit_len</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13310"></A>intn *</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13312"></A>integer</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-13314"></A>Length of any unit string.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13318"></A>format_len</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13320"></A>intn *</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13322"></A>integer</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-13324"></A>Length of any format string.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13328"></A>coords_len</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13330"></A>intn *</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13332"></A>integer</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-13334"></A>Length of any coordinate system string.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="4" COLSPAN="1">
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-13336"></A>DFSDgetdatastrs</H6>
+<H6 CLASS="ReturnType">
+<A NAME="50593882_pgfId-14722"></A>[intn]</H6>
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-13337"></A>(dsgdast)</H6>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13339"></A>label</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13341"></A>char *</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13343"></A>character*(*)</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-13345"></A>Label describing the data.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13349"></A>unit</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13351"></A>char *</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13353"></A>character*(*)</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-13355"></A>Unit applied to the data.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13359"></A>format</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13361"></A>char *</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13363"></A>character*(*)</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-13365"></A>Format applied to the data.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13369"></A>coordsys</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13371"></A>char *</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13373"></A>character*(*)</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-13375"></A>Coordinate system of the data set.</P>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+</DIV>
+<DIV>
+<H6 CLASS="Example">
+<A NAME="50593882_pgfId-4846"></A><DIV>
+<IMG SRC="UG_html-70.gif" ALT="">
+</DIV>
+Reading a Data Set and its Attribute Record </H6>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-11335"></A>These examples read the pressure data set and the dimension attribute record stored in the &quot;Example1.hdf&quot; file into the arrays pointed to by the <EM CLASS="VarName">
+data</EM>
+, <EM CLASS="VarName">
+datalabel</EM>
+, <EM CLASS="VarName">
+dataunit</EM>
+, <EM CLASS="VarName">
+datafmt</EM>
+ and <EM CLASS="VarName">
+coordsys</EM>
+ pointer variables. It assumes the dimension sizes and rank are correct and data strings are less than 10 characters long, with one additional character for the null termination.</P>
+</DIV>
+</DIV>
+</DIV>
+<DIV>
+<H4 CLASS="Code-C-Title">
+<A NAME="50593882_pgfId-12322"></A><DIV>
+<IMG SRC="UG_html-72.gif" ALT="">
+</DIV>
+C:		</H4>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-13921"></A>#include &quot;hdf.h&quot;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14580"></A>&nbsp;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14581"></A>main( )</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14582"></A>{</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14583"></A>&nbsp;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14584"></A>	intn rank, maxrank, status;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14585"></A>	int32 dimsizes[3];</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14586"></A>	char datalabel[50], dataunit[50], datafmt[50], coordsys[50];</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14587"></A>	float64 data[3][2][5];</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14588"></A>&nbsp;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14589"></A>	maxrank = 3;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14590"></A>	status = DFSDgetdims(&quot;Example3.hdf&quot;, &amp;rank, dimsizes, </P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14591"></A>					maxrank);</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14592"></A>	status = DFSDgetdatastrs(datalabel, dataunit, datafmt, </P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14593"></A>					coordsys);</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14594"></A>	status = DFSDgetdata(&quot;Example3.hdf&quot;, rank, dimsizes, data);</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14595"></A>&nbsp;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14596"></A>}</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14597"></A>&nbsp;</P>
+</DIV>
+<DIV>
+<H4 CLASS="Code-F-Title">
+<A NAME="50593882_pgfId-12324"></A><DIV>
+<IMG SRC="UG_html-72.gif" ALT="">
+</DIV>
+FORTRAN:	</H4>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-12315"></A>	 PROGRAM READ SD INFO</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14599"></A>&nbsp;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14600"></A>      integer dsgdata, dsgdast, dsgdims</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14601"></A>      integer*4 dimsizes(3)</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14602"></A>      integer status, rank, maxrank</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14603"></A>      character*50 datalabel, dataunit, datafmt</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14604"></A>      character*10 coordsys</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14605"></A>      real*8 data(5, 2, 3)</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14606"></A>      </P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14607"></A>      maxrank = 3</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14608"></A>      status = dsgdims(’Example3.hdf’, rank, dimsizes, maxrank)</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14609"></A>      status = dsgdast(datalabel, dataunit, datafmt, coordsys)</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14610"></A>      status = dsgdata(’Example3.hdf’, rank, dimsizes, data)</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14611"></A>      </P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14612"></A>      end</P>
+<P CLASS="ExampleCode">
+<A NAME="50593882_pgfId-14613"></A>&nbsp;</P>
+<DIV>
+<H6 CLASS="Heading4">
+<A NAME="50593882_pgfId-4932"></A>	12.7.2.2	Reading the Value Attribut<A NAME="50593882_marker-10924"></A>es of a DFSD Data Set: DFSDgetfillvalue and DFSDgetcal</H6>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4934"></A>There are three routines in the DFSD interface that retrieve the fill value, range and calibration information of a data set array: <EM CLASS="FunctionName">
+DFSDgetfillvalue</EM>
+, <EM CLASS="FunctionName">
+DFSDgetrange</EM>
+, and <EM CLASS="FunctionName">
+DFSDgetcal</EM>
+. </P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-9588"></A>The syntax of these routines are as follows:</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593882_pgfId-6629"></A><EM CLASS="syntaxLang">
+C:</EM>
+		status = DFSDgetfillvalue(sds_id, fill_val);</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-6630"></A>		status = DFSDgetrange(max, min);</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-6631"></A>		status = DFSDgetcal(cal, cal_err, offset, offset_err, num_type);</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593882_pgfId-6632"></A><EM CLASS="syntaxLang">
+FORTRAN:</EM>
+	status = dsgfill(fill_value)</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-6633"></A>		status = dsgrang(max, min)</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-6634"></A>		status = dsadata(cal, cal_err, offset, offset_err, num_type)</P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4789"></A><EM CLASS="FunctionName">
+DFSDgetfillvalue</EM>
+<A NAME="50593882_marker-10925"></A> has two arguments; <EM CLASS="VarName">
+sds_id</EM>
+ and <EM CLASS="VarName">
+fill_val</EM>
+. The <EM CLASS="VarName">
+sds_id</EM>
+ is the data set identifier and <EM CLASS="VarName">
+fill_val</EM>
+ is the space allocated to store the fill value. </P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-6609"></A>The maximum ra<A NAME="50593882_marker-10926"></A>nge of values in the data set isn’t automatically stored with the data set data; it is explicitly stored through a call to <EM CLASS="FunctionName">
+DFSDgetrange</EM>
+. The defined range of values can be less than the actual range of values stored in the data set. The value of the <EM CLASS="VarName">
+max</EM>
+ parameter is the maximum value of the defined range and the value of the <EM CLASS="VarName">
+min</EM>
+ parameter is the minimum value. These values must be of the same number type as the values stored in the data array. In C, the <EM CLASS="VarName">
+max</EM>
+ and <EM CLASS="VarName">
+min</EM>
+ parameters are indirect pointers specifying the range values, while in FORTRAN-77 they are variables set to the range values.</P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-6599"></A><EM CLASS="FunctionName">
+DFSDgetcal</EM>
+<A NAME="50593882_marker-10927"></A> reads the calibration record of the current data set, if one exists. Each of the parameters of <EM CLASS="FunctionName">
+DFSDgetcal</EM>
+ correspond to the five elements of the calibration record; - four 64-bit floating-point integers followed by a 32-bit integer. The <EM CLASS="VarName">
+cal</EM>
+, <EM CLASS="VarName">
+offset</EM>
+, <EM CLASS="VarName">
+offset_err</EM>
+ and <EM CLASS="VarName">
+cal_err</EM>
+ parameters are defined as they are in the multifile SD API. This calibration record exists for information only.</P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-6600"></A>The parameters for <EM CLASS="FunctionName">
+DFSDgetfillvalue</EM>
+, <EM CLASS="FunctionName">
+DFSDgetcal</EM>
+, and <EM CLASS="FunctionName">
+DFSDgetrange</EM>
+ are defined in the following table.</P>
+<DIV>
+<H6 CLASS="Table">
+<A NAME="50593882_pgfId-4836"></A><DIV>
+<IMG SRC="UG_html-70.gif" ALT="">
+</DIV>
+<A NAME="50593882_55881"></A>DFSD<A NAME="50593882_marker-10928"></A>getfillvalue, DFSDge<A NAME="50593882_marker-10929"></A>tcal and DF<A NAME="50593882_marker-10930"></A>SDgetrange Parameter List </H6>
+<TABLE>
+<TR>
+<TD ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-9765"></A>Routine Name</P>
+<H6 CLASS="ReturnType">
+<A NAME="50593882_pgfId-14725"></A>[Return Type]</H6>
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-9766"></A>(FORTRAN-77)</P>
+</TD>
+<TD ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-9768"></A>Parameter</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="2">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-9770"></A>Parameter Type</P>
+</TD>
+<TD ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-9774"></A>Description</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-9780"></A>C</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-9782"></A>FORTRAN-77</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="2" COLSPAN="1">
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-9786"></A>DFSDgetfillvalue</H6>
+<H6 CLASS="ReturnType">
+<A NAME="50593882_pgfId-14726"></A>[intn]</H6>
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-9787"></A>(dsgfill)</H6>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-9789"></A>sds_id</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-9791"></A>int32</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-9793"></A>integer</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-9795"></A>Data set identifier.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-9799"></A>fill_val</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-9801"></A>VOIDP</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-9803"></A>&lt;valid numeric data type&gt;</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-9805"></A>Buffer for the fill value.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="5" COLSPAN="1">
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-9807"></A>DFSDgetcal</H6>
+<H6 CLASS="ReturnType">
+<A NAME="50593882_pgfId-14727"></A>[int32]</H6>
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-9808"></A>(dsgcal)</H6>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-9810"></A>cal</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-9812"></A>float64 *</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-9814"></A>real*8</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-9816"></A>Calibration factor.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-9820"></A>cal_err</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-9822"></A>float64 *</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-9824"></A>real*8</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-9826"></A>Calibration error.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-9830"></A>offset</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-9832"></A>float64 *</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-9834"></A>real*8</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-9836"></A>Uncalibrated offset.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-9840"></A>offset_err</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-9842"></A>float64 *</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-9844"></A>real*8</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-9846"></A>Uncalibrated offset error.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-9850"></A>num_type</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-9852"></A>int32 *</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-9854"></A>integer</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-9856"></A>Type of the uncalibrated data.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="2" COLSPAN="1">
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-9858"></A>DFSDgetrange</H6>
+<H6 CLASS="ReturnType">
+<A NAME="50593882_pgfId-14728"></A>[intn]</H6>
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-9859"></A>(dsgrang)</H6>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-9861"></A>max</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-9863"></A>VOIDP</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-9865"></A>&lt;valid numeric data type&gt;</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-9867"></A>Highest value of the selected range.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-9871"></A>min</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-9873"></A>VOIDP</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-9875"></A>&lt;valid numeric data type&gt;</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-9877"></A>Lowest value of the selected rang<A NAME="50593882_marker-10921"></A>e.</P>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+</DIV>
+<DIV>
+<H6 CLASS="Heading3">
+<A NAME="50593882_pgfId-4838"></A>	12.7.3 <A NAME="50593882_37915"></A>Writin<A NAME="50593882_marker-10931"></A>g the Dimension Attributes of a DFSD SDS</H6>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4963"></A><EM CLASS="Definition">
+Dimension attributes</EM>
+ are described in <A HREF="UG_html-3.htm#50593873_13938" CLASS="XRef">Scientific Data Sets (SD API)</A>.</P>
+<DIV>
+<H6 CLASS="Heading4">
+<A NAME="50593882_pgfId-4967"></A>	12.7.3.1	Writing the Str<A NAME="50593882_marker-10938"></A>ing Attributes of a Dimension: DFSDsetlengths and DFSDsetdimstrs</H6>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4969"></A>The DFSD interface provides two routines for creating dimension string attributes: <EM CLASS="FunctionName">
+DFSDsetlengths</EM>
+ and <EM CLASS="FunctionName">
+DFSDsetdimstrs</EM>
+. <EM CLASS="FunctionName">
+DFSDsetlengths</EM>
+<A NAME="50593882_marker-10939"></A> overwrites the default string length and <EM CLASS="FunctionName">
+DFSDsetdimstrs</EM>
+<A NAME="50593882_marker-10940"></A> is defines the string text. <EM CLASS="FunctionName">
+DFSDsetdatalengths</EM>
+ and <EM CLASS="FunctionName">
+DFSDsetdimstrs</EM>
+ are optional and must precede calls to <EM CLASS="FunctionName">
+DFSDadddata</EM>
+ or <EM CLASS="FunctionName">
+DFSDputdata</EM>
+. </P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4971"></A>Prede<A NAME="50593882_marker-10941"></A>fined dimension string attributes are limited to one per dimension and contain the following:</P>
+<UL>
+<LI CLASS="Bullet">
+<A NAME="50593882_pgfId-4973"></A><EM CLASS="Definition">
+Format attributes</EM>
+<A NAME="50593882_marker-10942"></A> specify the format to use when displaying values for the dimension.</LI>
+<LI CLASS="Bullet">
+<A NAME="50593882_pgfId-4975"></A><EM CLASS="Definition">
+Label attributes</EM>
+<A NAME="50593882_marker-10943"></A> contain dimension names.</LI>
+<LI CLASS="Bullet">
+<A NAME="50593882_pgfId-4977"></A><EM CLASS="Definition">
+Unit attributes</EM>
+<A NAME="50593882_marker-10944"></A> identify the unit of measurement associated with the dimension.</LI>
+</UL>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4979"></A>To assign a predefined attribute to a dimension, the following routines should be called:</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593882_pgfId-4981"></A><EM CLASS="syntaxLang">
+C:</EM>
+		status = DFSDsetlengths(label_len, unit_len, format_len, coords_len);</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-4983"></A>		status = DFSDsetdimstrs(label, unit, format);</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-4985"></A>		status = DFSDadddata(filename, rank, dimsizes, data);</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593882_pgfId-4987"></A><EM CLASS="syntaxLang">
+FORTRAN:</EM>
+	status = dsslens(label_len, unit_len, format_len, coords_len)</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-4989"></A>		status = dssdist(label, unit, format)</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-4991"></A>		status = dsadata(filename, rank, dimsizes, data)</P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4993"></A><EM CLASS="FunctionName">
+DFSDsetlengths </EM>
+has four arguments: <EM CLASS="VarName">
+label_len</EM>
+, <EM CLASS="VarName">
+unit_len</EM>
+, <EM CLASS="VarName">
+format_len</EM>
+, and <EM CLASS="VarName">
+coords_len</EM>
+. Each parameter specifies the maximum length of the string that defines the label, unit, format, and coordinate system. As mentioned earlier in this chapter, attribute lengths seldom need to be reset.</P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-4995"></A><EM CLASS="FunctionName">
+DFSDsetdimstrs</EM>
+ also has four arguments; <EM CLASS="VarName">
+dim</EM>
+, <EM CLASS="VarName">
+label</EM>
+, <EM CLASS="VarName">
+unit</EM>
+, and <EM CLASS="VarName">
+format</EM>
+. The parameter <EM CLASS="VarName">
+dim = 1</EM>
+ for the first dimension, <EM CLASS="VarName">
+dim = 2</EM>
+ for the second dimension, etc. To avoid assigning a string to the coordinate length, pass <EM CLASS="DefName">
+NULL</EM>
+ in the appropriate parameter. <EM CLASS="FunctionName">
+DFSDsetdimstrs</EM>
+ writes null-terminated strings to a file.</P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-9909"></A>The parameters for <EM CLASS="FunctionName">
+DFSDsetlengths</EM>
+ and <EM CLASS="FunctionName">
+DFSDsetdimstrs</EM>
+ are further defined in the following table.</P>
+<DIV>
+<H6 CLASS="Table">
+<A NAME="50593882_pgfId-5000"></A><DIV>
+<IMG SRC="UG_html-70.gif" ALT="">
+</DIV>
+<A NAME="50593882_24598"></A>DFSDse<A NAME="50593882_marker-10945"></A>tlengths and DFSDsetd<A NAME="50593882_marker-10946"></A>imstrs Parameter List</H6>
+<TABLE>
+<TR>
+<TD ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-13384"></A>Routine Name</P>
+<H6 CLASS="ReturnType">
+<A NAME="50593882_pgfId-14730"></A>[Return Type]</H6>
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-13385"></A>(FORTRAN-77)</P>
+</TD>
+<TD ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-13387"></A>Parameter</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="2">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-13389"></A>Parameter Type</P>
+</TD>
+<TD ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-13393"></A>Description</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-13399"></A>C</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-13401"></A>FORTRAN-77</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="4" COLSPAN="1">
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-13405"></A>DFSDsetlengths</H6>
+<H6 CLASS="ReturnType">
+<A NAME="50593882_pgfId-14731"></A>[intn]</H6>
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-13406"></A>(dsslen)</H6>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13408"></A>label_len</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13410"></A>intn</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13412"></A>integer</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-13414"></A>Maximum length of any label string.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13418"></A>unit_len</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13420"></A>intn</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13422"></A>integer</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-13424"></A>Maximum length of any unit string.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13428"></A>format_len</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13430"></A>intn</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13432"></A>integer</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-13434"></A>Maximum length of any format string.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13438"></A>coords_len</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13440"></A>intn</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13442"></A>integer</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-13444"></A>Maximum length of any coordinate system string.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="4" COLSPAN="1">
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-13446"></A>DFSDsetdimstrs</H6>
+<H6 CLASS="ReturnType">
+<A NAME="50593882_pgfId-14732"></A>[intn]</H6>
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-13447"></A>(dssdist)</H6>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13449"></A>dim</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13451"></A>intn</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13453"></A>integer</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-13455"></A>Dimension of the attribute strings.specified by the remaining three parameters</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13459"></A>label</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13461"></A>char *</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13463"></A>character*(*)</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-13465"></A>Label describing the data.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13469"></A>unit</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13471"></A>char *</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13473"></A>character*(*)</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-13475"></A>Unit to be applied to the data.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13479"></A>format</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13481"></A>char *</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13483"></A>character*(*)</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-13485"></A>Format to be applied in displaying the data.</P>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+</DIV>
+<DIV>
+<H6 CLASS="Heading4">
+<A NAME="50593882_pgfId-5002"></A>	12.7.3.2	Writing a Dimension Scale of a DFSD SDS<A NAME="50593882_marker-10947"></A>: DFSDsetdimscale</H6>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-5004"></A>The syntax of the two routines needed to write a dimension scale is the following:</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593882_pgfId-5006"></A><EM CLASS="syntaxLang">
+C:</EM>
+		status = DFSDsetdimscale(dim, dimsize, scale);</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-5008"></A>		status = DFSDadddata(filename, rank, dimsizes, data);</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593882_pgfId-5010"></A><EM CLASS="syntaxLang">
+FORTRAN:</EM>
+	status = dssdisc(dim, dimsize, scale)</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-5012"></A>		status = dsadata(filename, rank, dimsizes, data)</P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-5018"></A><EM CLASS="FunctionName">
+DFSDsetdimscale</EM>
+<A NAME="50593882_marker-10948"></A> has three arguments; <EM CLASS="VarName">
+dim</EM>
+, <EM CLASS="VarName">
+dimsize</EM>
+, and <EM CLASS="VarName">
+scale</EM>
+.   These arguments identify the dimension, specify its size, and assign a value to each of its grid points. The parameter <EM CLASS="VarName">
+dim = 1</EM>
+ for the first dimension, and <EM CLASS="VarName">
+dim = 2</EM>
+ for the second dimension. The <EM CLASS="VarName">
+dimsize</EM>
+ argument must contain a value equal to the dimension it describes in order for the scale to be applied correctly. </P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-10213"></A>The parameters of <EM CLASS="FunctionName">
+DFSDsetdiscale</EM>
+ are further described in the following table.</P>
+<DIV>
+<H6 CLASS="Table">
+<A NAME="50593882_pgfId-5023"></A><DIV>
+<IMG SRC="UG_html-70.gif" ALT="">
+</DIV>
+<A NAME="50593882_24598"></A>DFSDsetdim<A NAME="50593882_marker-10949"></A>scale Parameter List</H6>
+<TABLE>
+<TR>
+<TD ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-13493"></A>Routine Name</P>
+<H6 CLASS="ReturnType">
+<A NAME="50593882_pgfId-14733"></A>[Return Type]</H6>
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-13494"></A>(FORTRAN-77)</P>
+</TD>
+<TD ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-13496"></A>Parameter</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="2">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-13498"></A>Parameter Type</P>
+</TD>
+<TD ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-13502"></A>Description</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-13508"></A>C</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-13510"></A>FORTRAN-77</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="3" COLSPAN="1">
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-13514"></A>DFSDsetdimscale</H6>
+<H6 CLASS="ReturnType">
+<A NAME="50593882_pgfId-14734"></A>[intn]</H6>
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-13515"></A>(dssdisc)</H6>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13517"></A>dim</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13519"></A>intn</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13521"></A>integer</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-13523"></A>Dimension of the current scale.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13527"></A>dim_size</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13529"></A>int32</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13531"></A>integer</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-13533"></A>Size of the current scale.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13537"></A>scale</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13539"></A>VOIDP</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-13541"></A>&lt;valid numeric data type&gt;</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-13544"></A>Values of the current scale<A NAME="50593882_marker-13543"></A>.</P>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+</DIV>
+</DIV>
+<DIV>
+<H6 CLASS="Heading3">
+<A NAME="50593882_pgfId-5025"></A>	12.7.4 Reading t<A NAME="50593882_marker-10950"></A>he Dimension Attributes of a DFSD SDS</H6>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-63009"></A>The DFSD interface provides three routines for reading dimension attributes: <EM CLASS="FunctionName">
+DFSDgetdimlen</EM>
+, <EM CLASS="FunctionName">
+DFSDgetdimstrs</EM>
+ and <EM CLASS="FunctionName">
+DFSDgetdimscale</EM>
+. <EM CLASS="FunctionName">
+DFSDgetdimlen</EM>
+<A NAME="50593882_marker-63010"></A> returns the string length for each string in the attribute record. It is a useful routine to call before reading an attribute. <EM CLASS="FunctionName">
+DFSDgetdimstrs</EM>
+ and <EM CLASS="FunctionName">
+DFSDgetdimscale</EM>
+ are used as instructions for reading the dimension attributes. <EM CLASS="FunctionName">
+DFSDgetdimstrs</EM>
+<A NAME="50593882_marker-63011"></A> reads the dimension strings and <EM CLASS="FunctionName">
+DFSDgetdimscale</EM>
+<A NAME="50593882_marker-63012"></A> reads the dimension scale. By avoiding calls to <EM CLASS="FunctionName">
+DFSDgetdimstrs</EM>
+ and <EM CLASS="FunctionName">
+DFSDgetdimscale</EM>
+, it is possible to read an array andits dimension record without reading the data set attributes associated with it. It is also possible to omit one function call in order to read one attribute without the other. DFSDgetdimstrs and DFSDgetdimscale must be called before DFSDgetdata.</P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-63076"></A>Reading data set attributes involves the following steps:</P>
+<DIV>
+<H6 CLASS="FM1Step">
+<A NAME="50593882_pgfId-63081"></A>Determine the length of each attribute string.</H6>
+<OL>
+<LI CLASS="Step">
+<A NAME="50593882_pgfId-63086"></A>2.	Read the attribute strings.</LI>
+<LI CLASS="Step">
+<A NAME="50593882_pgfId-63109"></A>3.	Read the scale values.</LI>
+<LI CLASS="Step">
+<A NAME="50593882_pgfId-63113"></A>4.	Read the remainder of the data set.</LI>
+</OL>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-63114"></A>To assign a predefined attribute to an HDF file, the following routines must be called:</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593882_pgfId-63115"></A>C:	status = DFSDgetdimlen(label_len, unit_len, format_len, coords_len);</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-63054"></A>		status = DFSDgetdimstrs(label, unit, format);</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-63055"></A>		status = DFSDgetdimscale(dim, dim_size, scale);</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-63056"></A>		status = DFSDgetdata(filename, rank, dimsizes, data);</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593882_pgfId-63057"></A>FORTRAN:	status = dsgdiln(label_len, unit_len, format_len, coords_len)</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-63058"></A>		status = dsgdist(label, unit, format)</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-63059"></A>		status = dsgdisc(dim, dim_size, scale)</P>
+<P CLASS="syntax">
+<A NAME="50593882_pgfId-63060"></A>		status = dsgdata(filename, rank, dimsizes, data)</P>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-63252"></A>The parameters for DFSDgetdimlen, DFSDgetdimstrs and DFSDgetdimscale are described in the following table.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Table">
+<A NAME="50593882_pgfId-63516"></A><DIV>
+<IMG SRC="UG_html-70.gif" ALT="">
+</DIV>
+<EM CLASS="TitleText">
+DFSDgetdimlen, DFSDgetdimstrs and DFSDgetdimscale Parameter List</EM>
+<A NAME="50593882_marker-63371"></A><A NAME="50593882_marker-63372"></A><A NAME="50593882_marker-63373"></A></H6>
+<TABLE>
+<TR>
+<TD ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-63376"></A>Routine Name</P>
+<H6 CLASS="ReturnType">
+<A NAME="50593882_pgfId-63377"></A>[Return Type]</H6>
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-63378"></A>(FORTRAN-77)</P>
+</TD>
+<TD ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-63380"></A>Parameter</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="2">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-63382"></A>Parameter Type</P>
+</TD>
+<TD ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-63386"></A>Description</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-63392"></A>C</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593882_pgfId-63394"></A>FORTRAN-77</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="4" COLSPAN="1">
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-63398"></A>DFSDgetdimlen</H6>
+<H6 CLASS="ReturnType">
+<A NAME="50593882_pgfId-63399"></A>[intn]</H6>
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-63400"></A>(dsgdiln)</H6>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-63402"></A>dim</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-63404"></A>intn</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-63406"></A>integer</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-63408"></A>Dimension of the string attributes describe.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-63412"></A>label_len</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-63414"></A>intn *</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-63416"></A>integer</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-63418"></A>Length of the label attribute string.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-63422"></A>unit_len</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-63424"></A>intn *</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-63426"></A>integer</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-63428"></A>Length of the unit attribute string.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-63432"></A>format_len</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-63434"></A>intn *</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-63436"></A>integer</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-63438"></A>Length of the format attribute string.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="4" COLSPAN="1">
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-63440"></A>DFSDgetdimstrs</H6>
+<H6 CLASS="ReturnType">
+<A NAME="50593882_pgfId-63441"></A>[intn]</H6>
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-63442"></A>(dsgdist)</H6>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-63444"></A>dim</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-63446"></A>intn</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-63448"></A>integer</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-63450"></A>Dimension the string attributes describe.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-63454"></A>label</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-63456"></A>char *</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-63458"></A>character*(*)</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-63460"></A>Label of the dimension.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-63464"></A>unit</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-63466"></A>char *</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-63468"></A>character*(*)</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-63470"></A>Unit to be applied to this dimension.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-63474"></A>format</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-63476"></A>char *</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-63478"></A>character*(*)</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-63480"></A>Format to be applied when displaying the scale.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="3" COLSPAN="1">
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-63482"></A>DFSDgetdimscale</H6>
+<H6 CLASS="ReturnType">
+<A NAME="50593882_pgfId-63483"></A>[intn]</H6>
+<H6 CLASS="CellFunctionBold">
+<A NAME="50593882_pgfId-63484"></A>(dsgdisc)</H6>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-63486"></A>dim</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-63488"></A>intn</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-63490"></A>integer</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-63492"></A>Dimension the current scale is attached to</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-63496"></A>dim_size</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-63498"></A>int32</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-63500"></A>integer</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-63502"></A>Size of the current scale.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-63506"></A>scale</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-63508"></A>VOIDP</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593882_pgfId-63510"></A>&lt;valid numeric data type&gt;</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593882_pgfId-63515"></A>Values of the curre<A NAME="50593882_marker-63512"></A>nt scal<A NAME="50593882_marker-63513"></A>e.<A NAME="50593882_marker-63514"></A></P>
+</TD>
+</TR>
+</TABLE>
+<P CLASS="Body">
+<A NAME="50593882_pgfId-63258"></A>&nbsp;</P>
+<P CLASS="Body">
+<A NAME="50593883_pgfId-21847"></A>&nbsp;</P>
+</DIV>
+</DIV>
+</DIV>
+<HR><P><table id="Botofpage" border="0" width="850" cellspacing="0" cellpadding="0">      <tr>        <td align="left">        HDF 4.2.10 - February 2014<br/>        <a href="THG_Copyright.html">Copyright</a>        <td align="right">          <span style="font-size: 12px; font-weight: bold">            The HDF Group<br />          </span>          <span style="font-size: 12px">            <a href="http://www.hdfgroup.org">www.hdfgroup.org</a><br />            <img valign="bottom" border="0" src="images/help.jpg" height="12" alt="The HDF Group" valign="top" />          </span>        </td>      </tr>    </table></BODY>
+</HTML>

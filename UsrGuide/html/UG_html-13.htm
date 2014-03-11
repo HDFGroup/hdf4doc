@@ -1,0 +1,1658 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN"><HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 11.0/HTML Export Filter">
+<LINK REL="STYLESHEET" HREF="UG_html.css" CHARSET="UTF-8" TYPE="text/css">
+<table id="Topofpage" border="0" width="850" cellspacing="0" cellpadding="0"><tr><td align="left"><a href="http://www.hdfgroup.org"><img id="THG_logo" border="0" src="images/hdf_logo.jpg" width="90" height="70" alt="The HDF Group" valign="top" /></a></td><td valign="middle" align="center"><H1>HDF User’s Guide</H1><span style="font-size: 14px; font-weight: bold"><b>4.2.10</b></td><td valign="middle" align="center"><a HREF=UG_html.htm> [Top]</a> <a HREF=UG_html-12.htm> [Prev]</a><a HREF=UG_html-14.htm> [Next]</a></td></tr></table><HR></HEAD>
+<BODY>
+<DIV>
+<span style="font-size: 14px; font-weight: bold"><a href="UG_html-17.htm">Index</a>] [<a href="UG_html-20.htm">List of Examples</a>] [<a href="UG_html-19.htm">List of Tables</a>] [<a href="UG_html-18.htm">List of Figures</a>]</DIV>
+<H1 CLASS="ChapterTitle">
+<A NAME="50593883_pgfId-21768"></A>Chapter 13 --	<A NAME="50593883_marker-5773"></A>Er<A NAME="50593883_23732"></A>ror Reporting</H1>
+<DIV>
+<H4 CLASS="Heading1">
+<A NAME="50593883_pgfId-5775"></A>	13.1	Chapter Overview<DIV>
+<IMG SRC="UG_html-73.gif" ALT="">
+</DIV>
+</H4>
+<P CLASS="Body">
+<A NAME="50593883_pgfId-5776"></A>This chapter describes the main error reporting routines designed for general HDF use and the types of errors handled by the error reporting API and the general structure of the API.</P>
+<DIV>
+<H5 CLASS="Heading2">
+<A NAME="50593883_pgfId-4171"></A>	13.2	The HDF Error Reporting API<DIV>
+<IMG SRC="UG_html-73.gif" ALT="">
+</DIV>
+</H5>
+<P CLASS="Body">
+<A NAME="50593883_pgfId-4136"></A>Th<A NAME="50593883_marker-5121"></A>e HDF error reporting API consists of routines that query error stack information, the names of which are prefaced by “HE”. They are described briefly in <A HREF="UG_html-13.htm#50593883_21471" CLASS="XRef">Table 13A</A>. Some are primarily for use by HDF developers while others are available to HDF users. In this chapter, three error reporting functions are covered: <EM CLASS="FunctionName">
+HEprint</EM>
+, <EM CLASS="FunctionName">
+HEvalue</EM>
+ and <EM CLASS="FunctionName">
+HEstring</EM>
+. Note that only one C error reporting routine has a FORTRAN-77 counterpart: <EM CLASS="FunctionName">
+heprnt/heprntf</EM>
+ (<EM CLASS="FunctionName">
+heprntf</EM>
+ is the newer function, supported on all platforms; <EM CLASS="FunctionName">
+heprnt</EM>
+ is the original function, supported on non-Microsoft Windows platforms).</P>
+<DIV>
+<H6 CLASS="Table">
+<A NAME="50593883_pgfId-864"></A><DIV>
+<IMG SRC="UG_html-74.gif" ALT="">
+</DIV>
+<A NAME="50593883_21471"></A>Error Reporti<A NAME="50593883_marker-5122"></A>ng Routine List</H6>
+<TABLE>
+<TR>
+<TH ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593883_pgfId-924"></A>Category</P>
+</TH>
+<TH ROWSPAN="1" COLSPAN="2">
+<P CLASS="TableHead">
+<A NAME="50593883_pgfId-926"></A>Routine Name</P>
+</TH>
+<TH ROWSPAN="2" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593883_pgfId-930"></A>Description</P>
+</TH>
+</TR>
+<TR>
+<TH ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593883_pgfId-934"></A>C </P>
+</TH>
+<TH ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593883_pgfId-936"></A>FORTRAN-77</P>
+</TH>
+</TR>
+<TR>
+<TD ROWSPAN="3" COLSPAN="1">
+<P CLASS="TableCategory">
+<A NAME="50593883_pgfId-5662"></A>Error Reporting</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-951"></A>HEprint</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-953"></A>heprnt<BR>
+heprntf</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-955"></A>Prints the errors on the error stack to a specified file.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-975"></A>HEstring</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-977"></A>hestringf</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-979"></A>Returns the error message associated with an error code.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-983"></A>HEvalue</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-985"></A>None</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-987"></A>Returns the nth most recent error reported.</P>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+</DIV>
+<DIV>
+<H5 CLASS="Heading2">
+<A NAME="50593883_pgfId-14482"></A>	13.3	Error Reporting in HDF<DIV>
+<IMG SRC="UG_html-73.gif" ALT="">
+</DIV>
+</H5>
+<P CLASS="Body">
+<A NAME="50593883_pgfId-5725"></A>Most HDF error reporting routines return <EM CLASS="DefName">
+FAIL</EM>
+ (or <EM CLASS="DefName">
+-1</EM>
+) if the operation is successful and <EM CLASS="DefName">
+SUCCEED</EM>
+ (or <EM CLASS="DefName">
+0</EM>
+) otherwise. Each time a <EM CLASS="DefName">
+FAIL</EM>
+ code is returned one or more error codes are pushed onto the error code stack. The following pseudo-code will demonstrate the two methods commonly used to access and print the contents of this stack.</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593883_pgfId-12979"></A>if (&lt;general HDF function() &gt;= FAIL) {</P>
+<P CLASS="syntax">
+<A NAME="50593883_pgfId-12980"></A>	&lt;HDF error reporting API routines&gt;</P>
+<P CLASS="syntax">
+<A NAME="50593883_pgfId-12981"></A>}</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593883_pgfId-5714"></A><EM CLASS="syntaxLang">
+OR</EM>
+</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593883_pgfId-5715"></A>status = &lt;general HDF function( );</P>
+<P CLASS="syntax">
+<A NAME="50593883_pgfId-5716"></A>if (status == FAIL) {</P>
+<P CLASS="syntax">
+<A NAME="50593883_pgfId-5717"></A>	&lt;HDF error reporting API routines&gt;</P>
+<P CLASS="syntax">
+<A NAME="50593883_pgfId-5718"></A>}</P>
+<P CLASS="Body">
+<A NAME="50593883_pgfId-5095"></A>A list of error codes is included at the end of this chapter. </P>
+<DIV>
+<H6 CLASS="Heading3">
+<A NAME="50593883_pgfId-4989"></A>	13.3.1	Writing Errors<A NAME="50593883_marker-5123"></A> to a File: HEprint</H6>
+<P CLASS="Body">
+<A NAME="50593883_pgfId-1132"></A><EM CLASS="FunctionName">
+HEprint</EM>
+<A NAME="50593883_marker-5124"></A> writes the errors on the stack to the specified file. There are four sections of an <EM CLASS="FunctionName">
+HEprint</EM>
+ error report:</P>
+<OL>
+<LI CLASS="Step">
+<A NAME="50593883_pgfId-4991"></A>1.	A description of the error.</LI>
+<LI CLASS="Step">
+<A NAME="50593883_pgfId-4993"></A>2.	The routine in which the error was detected.</LI>
+<LI CLASS="Step">
+<A NAME="50593883_pgfId-4995"></A>3.	The source file in which the error was detected.</LI>
+<LI CLASS="Step">
+<A NAME="50593883_pgfId-4997"></A>4.	The line number in which the error was detected.</LI>
+</OL>
+<P CLASS="Body">
+<A NAME="50593883_pgfId-1152"></A>The syntax for <EM CLASS="FunctionName">
+HEprint</EM>
+ is as follows:</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593883_pgfId-1155"></A><EM CLASS="syntaxLang">
+C:</EM>
+		HEprint(stream, level);</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593883_pgfId-1156"></A><EM CLASS="syntaxLang">
+FORTRAN:</EM>
+	status = heprnt(level)</P>
+<P CLASS="Body">
+<A NAME="50593883_pgfId-14554"></A>The <EM CLASS="VarName">
+stream</EM>
+ parameter is a UNIX file handle indicating the output stream the error information will be written to. The <EM CLASS="VarName">
+level</EM>
+ parameter specifies the amount of error information to report. In FORTRAN-77, <EM CLASS="FunctionName">
+heprnt</EM>
+ (supported on non-Microsoft Windows platforms) always writes to the standard error stream, or <EM CLASS="VarName">
+stderr</EM>
+; therefore the only parameter is <EM CLASS="VarName">
+level</EM>
+. To facilitate Microsoft Windows support, a newer function <EM CLASS="FunctionName">
+heprntf</EM>
+ (supported on all platforms) requires two parameters, <EM CLASS="VarName">
+filename</EM>
+ to identify the file to which the error information is to be written and <EM CLASS="VarName">
+level</EM>
+.</P>
+<P CLASS="Body">
+<A NAME="50593883_pgfId-14555"></A>Errors are written in sequential order starting from the bottom of the stack. Consequently, specifying a <EM CLASS="VarName">
+level</EM>
+ parameter value of 1 will write the first error that occurred, or the first error pushed onto the stack. Specifying a <EM CLASS="VarName">
+level</EM>
+ parameter of value 0 will write all errors on the stack to the specified file. For example, the following C code will write all errors on the stack to the file named “errors”.</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593883_pgfId-1185"></A>	f = fopen(&quot;errors&quot;, &quot;w&quot;);</P>
+<P CLASS="syntax">
+<A NAME="50593883_pgfId-1186"></A>		HEprint(f, 0);</P>
+<P CLASS="Body">
+<A NAME="50593883_pgfId-1183"></A>As an example of the output of <EM CLASS="FunctionName">
+HEprint</EM>
+, suppose an attempt is made to open an nonexistent file with <EM CLASS="FunctionName">
+Hopen</EM>
+. Calling <EM CLASS="Code">
+HEprint(stdout, 0)</EM>
+ or <EM CLASS="Code">
+heprnt(0)</EM>
+ will produce the following output:</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593883_pgfId-1208"></A>	HDF error: &lt;error opening file&gt;</P>
+<P CLASS="syntax">
+<A NAME="50593883_pgfId-1209"></A>		Detected in Hopen() [hfile.c line 305]</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading3">
+<A NAME="50593883_pgfId-1206"></A>	13.3.2	Ret<A NAME="50593883_marker-5125"></A>urning the Code of the Nth Most Recent Error: HEvalue</H6>
+<P CLASS="Body">
+<A NAME="50593883_pgfId-3139"></A><EM CLASS="FunctionName">
+HEvalue</EM>
+<A NAME="50593883_marker-5126"></A> returns the error code for the nth most recent error and is only available as a C routine. The <EM CLASS="VarName">
+level</EM>
+ parameter specifies the number of errors to regress from the top of the error stack, i.e., <EM CLASS="Code">
+HEvalue(1)</EM>
+ will return the error code at the top of the stack. Refer to <A HREF="UG_html-13.htm#50593883_Table 13B - HDF Error Codes" CLASS="XRef">HDF Error Codes</A> for a complete list of HDF4 error codes.</P>
+<P CLASS="Body">
+<A NAME="50593883_pgfId-3192"></A>The syntax for <EM CLASS="FunctionName">
+HEvalue</EM>
+ is as follows:</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593883_pgfId-3171"></A><EM CLASS="syntaxLang">
+C:</EM>
+		status = HEvalue(level);</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading3">
+<A NAME="50593883_pgfId-14710"></A>	13.3.3	Returning the Description of a<A NAME="50593883_marker-14709"></A>n Error Code: HEstring/hestringf</H6>
+<P CLASS="Body">
+<A NAME="50593883_pgfId-14712"></A><EM CLASS="FunctionName">
+HEstring</EM>
+<A NAME="50593883_marker-14711"></A> returns the error description associated with the error code specified by the <EM CLASS="VarName">
+error_code</EM>
+ parameter as a character string. </P>
+<P CLASS="Body">
+<A NAME="50593883_pgfId-3178"></A>The syntax for <EM CLASS="FunctionName">
+HEstring</EM>
+ is as follows:</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593883_pgfId-3181"></A><EM CLASS="syntaxLang">
+C:</EM>
+		error_message = HEstring(error_code);</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593883_pgfId-14692"></A><EM CLASS="syntaxLang">
+FORTRAN:</EM>
+	status = hestringf(error_code, error_message)</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading3">
+<A NAME="50593883_pgfId-14725"></A>	13.3.4	Clearing the error stack: HEclear</H6>
+<P CLASS="Body">
+<A NAME="50593883_pgfId-14727"></A><EM CLASS="FunctionName">
+HEclear</EM>
+<A NAME="50593883_marker-14726"></A> clears all information on reported errors from the error stack and is only available as a C routine. The syntax for <EM CLASS="FunctionName">
+HEclear</EM>
+ is as follows:</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593883_pgfId-14729"></A><EM CLASS="syntaxLang">
+C:</EM>
+		status = HEclear();</P>
+<P CLASS="Body">
+<A NAME="50593883_pgfId-14801"></A>Note that every HDF4 API calls <EM CLASS="FunctionName">
+HEclear</EM>
+ to clear the error stack.</P>
+<DIV>
+<H6 CLASS="Example">
+<A NAME="50593883_pgfId-14694"></A><DIV>
+<IMG SRC="UG_html-74.gif" ALT="">
+</DIV>
+Writing <A NAME="50593883_marker-14693"></A>Errors to a Console Window</H6>
+<P CLASS="Body">
+<A NAME="50593883_pgfId-14695"></A>The following C code fragment will copy errors from the stack to a console window.</P>
+</DIV>
+</DIV>
+</DIV>
+</DIV>
+<DIV>
+<H4 CLASS="Code-C-Title">
+<A NAME="50593883_pgfId-3120"></A><DIV>
+<IMG SRC="UG_html-75.gif" ALT="">
+</DIV>
+C:		</H4>
+<P CLASS="ExampleCode">
+<A NAME="50593883_pgfId-9314"></A>#include &quot;hdf.h&quot;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593883_pgfId-3118"></A>&nbsp;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593883_pgfId-1234"></A>	main( )</P>
+<P CLASS="ExampleCode">
+<A NAME="50593883_pgfId-3127"></A>{</P>
+<P CLASS="ExampleCode">
+<A NAME="50593883_pgfId-3128"></A>&nbsp;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593883_pgfId-3129"></A>	int32 i, e;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593883_pgfId-14426"></A>	const char *str;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593883_pgfId-14428"></A>	...</P>
+<P CLASS="ExampleCode">
+<A NAME="50593883_pgfId-1242"></A>	i = 0;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593883_pgfId-1246"></A>	while ((e = HEvalue(i)) != DFE_NONE) {</P>
+<P CLASS="ExampleCode">
+<A NAME="50593883_pgfId-1247"></A>			str = HEstring(e);</P>
+<P CLASS="ExampleCode">
+<A NAME="50593883_pgfId-1259"></A>			&lt;device-specific code to print the string to a console&gt;</P>
+<P CLASS="ExampleCode">
+<A NAME="50593883_pgfId-1266"></A>			i++</P>
+<P CLASS="ExampleCode">
+<A NAME="50593883_pgfId-1270"></A>	...</P>
+<P CLASS="ExampleCode">
+<A NAME="50593883_pgfId-13230"></A>}</P>
+<DIV>
+<H6 CLASS="Table">
+<A NAME="50593883_pgfId-13822"></A><DIV>
+<IMG SRC="UG_html-74.gif" ALT="">
+</DIV>
+<A NAME="50593883_Table 13B - HDF Error Codes"></A>HDF Error Codes</H6>
+<TABLE>
+<TR>
+<TH ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593883_pgfId-13930"></A>Error Code</P>
+</TH>
+<TH ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593883_pgfId-13932"></A>Code Definition</P>
+</TH>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-13934"></A>DFE_NONE</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-13936"></A>No error.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-13938"></A>DFE_FNF</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-13940"></A>File not found.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-13942"></A>DFE_DENIED</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-13944"></A>Access to file denied.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-13946"></A>DFE_ALROPEN</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-13948"></A>File already open.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-13950"></A>DFE_TOOMANY</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-13952"></A>Too many AID's or files open.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-13954"></A>DFE_BADNAME</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-13956"></A>Bad file name on open.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-13958"></A>DFE_BADACC</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-13960"></A>Bad file access mode.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-13962"></A>DFE_BADOPEN</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-13964"></A>Miscellaneous open error.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-13966"></A>DFE_NOTOPEN</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-13968"></A>File can't be closed because it hasn’t been opened.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-13970"></A>DFE_CANTCLOSE</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-13972"></A><EM CLASS="Figure7ptBold">
+fclose</EM>
+ error</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-13974"></A>DFE_READERROR</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-13976"></A>Read error.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-13978"></A>DFE_WRITEERROR</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-13980"></A>Write error.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-13982"></A>DFE_SEEKERROR</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-13984"></A>Seek error.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-13986"></A>DFE_RDONLY</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-13988"></A>File is read only.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-13990"></A>DFE_BADSEEK</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-13992"></A>Attempt to seek past end of element.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-13994"></A>DFE_PUTELEM</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-13996"></A><EM CLASS="Figure7ptBold">
+Hputelement</EM>
+ error.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-13998"></A>DFE_GETELEM</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14000"></A><EM CLASS="Figure7ptBold">
+Hgetelement</EM>
+ error.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14002"></A>DFE_CANTLINK</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14004"></A>Cannot initialize link information.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14006"></A>DFE_CANTSYNC</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14008"></A>Cannot synchronize memory with file.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14010"></A>DFE_BADGROUP</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14012"></A>Error from <EM CLASS="Figure7ptBold">
+DFdiread</EM>
+ in opening a group.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14014"></A>DFE_GROUPSETUP</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14016"></A>Error from <EM CLASS="Figure7ptBold">
+DFdisetup</EM>
+ in opening a group.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14018"></A>DFE_PUTGROUP</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14020"></A>Error on  putting a tag/reference number pair into a group.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14022"></A>DFE_GROUPWRITE</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14024"></A>Error when writing group contents.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14026"></A>DFE_DFNULL</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14028"></A>Data file reference is a null pointer.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14030"></A>DFE_ILLTYPE</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14032"></A>Data file contains an illegal type: internal error.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14034"></A>DFE_BADDDLIST</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14036"></A>The DD list is non-existent: internal error.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14038"></A>DFE_NOTDFFILE</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14040"></A>The current file is not an HDF file and it is not zero length.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14042"></A>DFE_SEEDTWICE</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14044"></A>The DD list already seeded: internal error.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14046"></A>DFE_NOSUCHTAG</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14048"></A>No such tag in the file: search failed.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14050"></A>DFE_NOFREEDD</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14052"></A>There are no free DDs left: internal error.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14054"></A>DFE_BADTAG</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14056"></A>Illegal WILDCARD tag.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14058"></A>DFE_BADREF</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14060"></A>Illegal WILDCARD reference number.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14062"></A>DFE_NOMATCH</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14064"></A>No DDs (or no more DDs) that match the specified tag/reference number pair.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14066"></A>DFE_NOTINSET</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14068"></A>Warning: Set contained unknown tag. Ignored.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14070"></A>DFE_BADOFFSET</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14072"></A>Illegal offset specified.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14074"></A>DFE_CORRUPT</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14076"></A>File is corrupted.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14078"></A>DFE_NOREF</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14080"></A>No more reference numbers are available.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14082"></A>DFE_DUPDD</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14084"></A>The new tag/reference number pair has been allocated.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14086"></A>DFE_CANTMOD</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14088"></A>Old element doesn’t exist.  Cannot modify.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14090"></A>DFE_DIFFFILES</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14092"></A>Attempt to merge objects in different files.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14094"></A>DFE_BADAID</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14096"></A>An invalid AID was received.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14098"></A>DFE_OPENAID</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14100"></A>Active AIDs still exist.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14102"></A>DFE_CANTFLUSH</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14104"></A>Cannot flush DD back to file.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14106"></A>DFE_CANTUPDATE</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14108"></A>Cannot update the DD block.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14110"></A>DFE_CANTHASH</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14112"></A>Cannot add a DD to the hash table.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14114"></A>DFE_CANTDELDD</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14116"></A>Cannot delete a DD in the file.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14118"></A>DFE_CANTDELHASH</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14120"></A>Cannot delete a DD from the hash table.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14122"></A>DFE_CANTACCESS</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14124"></A>Cannot access specified tag/reference number pair.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14126"></A>DFE_CANTENDACCESS</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14128"></A>Cannot end access to data element.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14130"></A>DFE_TABLEFULL</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14132"></A>Access table is full.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14134"></A>DFE_NOTINTABLE</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14136"></A>Cannot find element in table.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14138"></A>DFE_UNSUPPORTED</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14140"></A>Feature not currently supported.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14142"></A>DFE_NOSPACE</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14144"></A><EM CLASS="Figure7ptBold">
+malloc</EM>
+ failed.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14146"></A>DFE_BADCALL</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14148"></A>Routine calls were in the wrong order.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14150"></A>DFE_BADPTR</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14152"></A><EM CLASS="DefName">
+NULL</EM>
+ pointer argument was specified.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14154"></A>DFE_BADLEN</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14156"></A>Invalid length was specified.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14158"></A>DFE_NOTENOUGH</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14160"></A>Not enough space for the data.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14162"></A>DFE_NOVALS</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14164"></A>Values were not available.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14166"></A>DFE_ARGS</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14168"></A>Invalid arguments passed to the routine.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14170"></A>DFE_INTERNAL</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14172"></A>Serious internal error.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14174"></A>DFE_NORESET</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14176"></A>Too late to modify this value.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14178"></A>DFE_GENAPP</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14180"></A>Generic application level error.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14182"></A>DFE_UNINIT</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14184"></A>Interface was not initialized correctly.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14186"></A>DFE_CANTINIT</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14188"></A>Cannot initialize the interface the operation requires.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14190"></A>DFE_CANTSHUTDOWN</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14192"></A>Cannot shut down the interface the operation requires.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14194"></A>DFE_BADDIM</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14196"></A>Negative number of dimensions, or zero dimensions, was specified.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14198"></A>DFE_BADFP</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14200"></A>File contained an illegal floating point number.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14202"></A>DFE_BADDATATYPE</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14204"></A>Unknown or unavailable data type was specified.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14206"></A>DFE_BADMCTYPE</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14208"></A>Unknown or unavailable machine type was specified.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14210"></A>DFE_BADNUMTYPE</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14212"></A>Unknown or unavailable number type was specified.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14214"></A>DFE_BADORDER</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14216"></A>Unknown or illegal array order was specified.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14218"></A>DFE_RANGE</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14220"></A>Improper range for attempted access.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14222"></A>DFE_BADCONV</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14224"></A>Invalid data type conversion was specified.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14226"></A>DFE_BADTYPE</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14228"></A>Incompatible types were specified.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14230"></A>DFE_BADSCHEME</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14232"></A>Unknown compression scheme was specified.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14234"></A>DFE_BADMODEL</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14236"></A>Invalid compression model was specified.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14238"></A>DFE_BADCODER</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14240"></A>Invalid compression encoder was specified.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14242"></A>DFE_MODEL</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14244"></A>Error in the modeling layer of the compression operation.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14246"></A>DFE_CODER</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14248"></A>Error in the encoding layer of the compression operation.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14250"></A>DFE_CINIT</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14252"></A>Error in encoding initialization.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14254"></A>DFE_CDECODE</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14256"></A>Error in decoding compressed data.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14258"></A>DFE_CENCODE</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14260"></A>Error in encoding compressed data.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14262"></A>DFE_CTERM</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14264"></A>Error in encoding termination.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14266"></A>DFE_CSEEK</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14268"></A>Error seeking in an encoded data set.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14270"></A>DFE_MINIT</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14272"></A>Error in modeling initialization.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14274"></A>DFE_COMPINFO</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14276"></A>Invalid compression header.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14278"></A>DFE_CANTCOMP</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14280"></A>Cannot compress an object.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14282"></A>DFE_CANTDECOMP</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14284"></A>Cannot decompress an object.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14563"></A>DFE_NOENCODER</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14565"></A>Encoder not available.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14567"></A>DFE_NOSZLIB</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14569"></A>SZIP library not available.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14571"></A>DFE_COMPVERSION</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14573"></A>Version error from zlib</P>
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14574"></A>Note: when <EM CLASS="DefName">
+Z_VERSION_ERROR</EM>
+ (-6) returned from zlib.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14576"></A>DFE_READCOMP</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14578"></A>Error in reading compressed data.</P>
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14579"></A>Note: when one of the following error codes returned from zlib:</P>
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14580"></A><EM CLASS="DefName">
+Z_ERRNO</EM>
+         (-1)</P>
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14581"></A><EM CLASS="DefName">
+Z_STREAM_ERROR</EM>
+  (-2)</P>
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14582"></A><EM CLASS="DefName">
+Z_DATA_ERROR</EM>
+    (-3)</P>
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14583"></A><EM CLASS="DefName">
+Z_MEM_ERROR</EM>
+     (-4)</P>
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14584"></A><EM CLASS="DefName">
+Z_BUF_ERROR</EM>
+     (-5)</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14286"></A>DFE_NODIM</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14288"></A>A dimension record was not associated with the image.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14290"></A>DFE_BADRIG</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14292"></A>Error processing a RIG.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14294"></A>DFE_RINOTFOUND</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14296"></A>Cannot find raster image.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14298"></A>DFE_BADATTR</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14300"></A>Invalid attribute.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14302"></A>DFE_BADTABLE</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14304"></A>The nsdg table has incorrect information.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14306"></A>DFE_BADSDG</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14308"></A>Error in processing an SDG.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14310"></A>DFE_BADNDG</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14312"></A>Error in processing an NDG.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14314"></A>DFE_VGSIZE</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14316"></A>Too many elements in the vgroup.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14318"></A>DFE_VTAB</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14320"></A>Element not in <EM CLASS="DefName">
+vtab[]</EM>
+.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14322"></A>DFE_CANTADDELEM</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14324"></A>Cannot add the  tag/reference number pair to the vgroup.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14326"></A>DFE_BADVGNAME</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14328"></A>Cannot set the vgroup name.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14330"></A>DFE_BADVGCLASS</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14332"></A>Cannot set the vgroup class.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14334"></A>DFE_BADFIELDS</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14336"></A>Invalid fields string passed to vset routine.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14338"></A>DFE_NOVS</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14340"></A>Cannot find the vset in the file.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14342"></A>DFE_SYMSIZE</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14344"></A>Too many symbols in the users table.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14346"></A>DFE_BADATTACH</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14348"></A>Cannot write to a previously attached vdata.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14350"></A>DFE_BADVSNAME</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14352"></A>Cannot set the vdata name.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14354"></A>DFE_BADVSCLASS</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14356"></A>Cannot set the vdata class.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14358"></A>DFE_VSWRITE</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14360"></A>Error writing to the vdata.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14362"></A>DFE_VSREAD</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14364"></A>Error reading from the vdata.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14366"></A>DFE_BADVH</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14368"></A>Error in the vdata header.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14370"></A>DFE_VSCANTCREATE</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14372"></A>Cannot create the vdata.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14374"></A>DFE_VGCANTCREATE</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14376"></A>Cannot create the vgroup.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14378"></A>DFE_CANTATTACH</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14380"></A>Cannot attach to a vdata or vset.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14382"></A>DFE_CANTDETACH</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14384"></A>Cannot detach a vdata or vset with write access.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14386"></A>DFE_BITREAD</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14388"></A>A bit read error occurred.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14390"></A>DFE_BITWRITE</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14392"></A>A bit write error occurred.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14394"></A>DFE_BITSEEK</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14396"></A>A bit seek error occurred.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14398"></A>DFE_TBBTINS</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14400"></A>Failed to insert the element into tree.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14402"></A>DFE_BVNEW</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14404"></A>Failed to create a bit vector.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14406"></A>DFE_BVSET</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14408"></A>Failed when setting a bit in a bit vector.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14410"></A>DFE_BVGET</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14412"></A>Failed when getting a bit in a bit vector.</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellFunction">
+<A NAME="50593883_pgfId-14414"></A>DFE_BVFIND</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellDescription">
+<A NAME="50593883_pgfId-14416"></A>Failed when finding a bit in a bit vector.</P>
+</TD>
+</TR>
+</TABLE>
+<P CLASS="Body">
+<A NAME="50593883_pgfId-13097"></A><A NAME="50593883_marker-5767"></A>&nbsp;</P>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-18778"></A>&nbsp;</P>
+</DIV>
+</DIV>
+<HR><P><table id="Botofpage" border="0" width="850" cellspacing="0" cellpadding="0">      <tr>        <td align="left">        HDF 4.2.10 - February 2014<br/>        <a href="THG_Copyright.html">Copyright</a>        <td align="right">          <span style="font-size: 12px; font-weight: bold">            The HDF Group<br />          </span>          <span style="font-size: 12px">            <a href="http://www.hdfgroup.org">www.hdfgroup.org</a><br />            <img valign="bottom" border="0" src="images/help.jpg" height="12" alt="The HDF Group" valign="top" />          </span>        </td>      </tr>    </table></BODY>
+</HTML>

@@ -1,0 +1,901 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN"><HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 11.0/HTML Export Filter">
+<LINK REL="STYLESHEET" HREF="UG_html.css" CHARSET="UTF-8" TYPE="text/css">
+<table id="Topofpage" border="0" width="850" cellspacing="0" cellpadding="0"><tr><td align="left"><a href="http://www.hdfgroup.org"><img id="THG_logo" border="0" src="images/hdf_logo.jpg" width="90" height="70" alt="The HDF Group" valign="top" /></a></td><td valign="middle" align="center"><H1>HDF User’s Guide</H1><span style="font-size: 14px; font-weight: bold"><b>4.2.10</b></td><td valign="middle" align="center"><a HREF=UG_html.htm> [Top]</a> <a HREF=UG_html-13.htm> [Prev]</a><a HREF=UG_html-15.htm> [Next]</a></td></tr></table><HR></HEAD>
+<BODY>
+<DIV>
+<span style="font-size: 14px; font-weight: bold"><a href="UG_html-17.htm">Index</a>] [<a href="UG_html-20.htm">List of Examples</a>] [<a href="UG_html-19.htm">List of Tables</a>] [<a href="UG_html-18.htm">List of Figures</a>]</DIV>
+<H1 CLASS="ChapterTitle">
+<A NAME="50593884_pgfId-185418"></A>Chapter 14 --	<A NAME="50593884_marker-26834"></A><A NAME="50593884_34005"></A>HDF Performance Issues</H1>
+<DIV>
+<H4 CLASS="Heading1">
+<A NAME="50593884_pgfId-15476"></A>	14.1	Chapter Overview and Introduction<DIV>
+<IMG SRC="UG_html-76.gif" ALT="">
+</DIV>
+</H4>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-15477"></A>This chapter describes many of the concepts the HDF user should understand to gain better performance from their applications that use the HDF library. It also covers many of the ways in which HDF can be used to cause impaired performance and methods for correcting these problems.</P>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-28691"></A>As stated earlier in this manual, HDF has been designed to be very general-purpose, and it has been used in many different applications involving scientific data. Each application has its own set of software and hardware resource constraints that will affect performance in a different way, and to a different extent, from the resource constraints in other applications. </P>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-144805"></A>Therefore, it is impossible to outline <EM CLASS="TextItalic">
+all</EM>
+ of the performance issues that may relate to a particular application of HDF. However, this chapter should give the reader sufficient knowledge of the most common performance issues encountered by the HDF Group. This knowledge should enable the reader to explore different ways of storing data on the platforms they use for the purpose of increasing library performance.</P>
+<DIV>
+<H5 CLASS="Heading2">
+<A NAME="50593884_pgfId-15479"></A>	14.2	Examples of HDF Performance Enhancement<DIV>
+<IMG SRC="UG_html-76.gif" ALT="">
+</DIV>
+</H5>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-153485"></A>In this section, four pairs of HDF object models along with their C implementations will be presented. Each pair will illustrate a specific aspect of HDF library performance as it relates to scientific data sets. They will be employed here as general pointers on how to model scientific data sets for optimized performance.</P>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-153497"></A>In developing and testing these examples, the Sun Solaris OS version supported by HDF version 4.1 release 1 was used. Version 2.0 of the Quantify performance profiler was used to measure the relative differences in library performance between the SDS models in each pair. It should be noted that, while the examples reliably reflect which SDS configurations result in better performance, the specifics of how much performance will be improved depend on many factors such as OS configuration, compiler used and profiler used. Therefore, any specific measurements of performance mentioned in the chapter should be interpreted only as general indicators.</P>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-161069"></A>The reader should keep in mind that the following examples have been designed for illustrative purposes only, and should not be considered as real-world examples. It is expected that the reader will apply the library performance concepts covered by these examples to their specific usage of the HDF library.</P>
+<DIV>
+<H6 CLASS="Heading3">
+<A NAME="50593884_pgfId-145962"></A>	14.2.1 One Large SDS versus Several Smaller SDSs</H6>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-153484"></A>The scientific data set is an example of what in HDF parlance is referred to as a <EM CLASS="Definition">
+primary object</EM>
+. The primary objects accessed and manipulated by the HDF library include, beside scientific data sets, raster images, annotations, vdatas and vgroups. Each primary object has <EM CLASS="Definition">
+metadata</EM>
+, or data describing the data, associated with it. Refer to the <EM CLASS="TextItalic">
+HDF Specifications Manual</EM>
+ for a description of the components of this metadata and how to calculate its size on disk.</P>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-157902"></A>An opportunity for performance enhancement can exist when the size of the metadata far exceeds the size of the data described by the metadata. In this situation, more CPU time and disk space will be used to maintain the metadata than the data contained in the SDS. Consolidating the data into fewer, or even one, SDS can increase performance.</P>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-165032"></A>To illustrate this, consider 1,000 1 <EM CLASS="TextItalic">
+x</EM>
+ 1 <EM CLASS="TextItalic">
+x</EM>
+ 1 element scientific data sets of 32-bit floating-point numbers. No user-defined dimension, dimension scales or fill values have been defined or created. </P>
+<DIV>
+<H6 CLASS="Figure">
+<A NAME="50593884_pgfId-165110"></A><DIV>
+<IMG SRC="UG_html-77.gif" ALT="">
+</DIV>
+FIGURE 14a	1,000 1 x 1 x 1 Element Scientific Data Sets</H6>
+<DIV>
+<IMG SRC="UG_html-78.gif" ALT="">
+</DIV>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-165111"></A>In this example, 1,000 32-bit floating-point numbers are first buffered in-core, then written as 1,000 SDSs. </P>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-166338"></A>In <A HREF="UG_html-14.htm#50593884_37813" CLASS="XRef">Table 14A</A>, the results of this operation are reflected in two metrics: the total number of CPU cycles used by the example program, and the size of the HDF file after the write operation.</P>
+<DIV>
+<H6 CLASS="Table">
+<A NAME="50593884_pgfId-166349"></A><DIV>
+<IMG SRC="UG_html-77.gif" ALT="">
+</DIV>
+<A NAME="50593884_37813"></A>Results of the Write Operation to 1,000 1x1x1 Element Scientific Data Sets</H6>
+<TABLE>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593884_pgfId-166342"></A>Total Number of CPU Cycles</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593884_pgfId-166344"></A>Size of the HDF File (in bytes)</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593884_pgfId-166346"></A>136,680,037</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593884_pgfId-166348"></A>896,803</P>
+</TD>
+</TR>
+</TABLE>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-166350"></A>Now the 1,000 32-bit floating point numbers that were split into 1,000 SDSs are combined into one 10 x 10 x 10 element SDS. This is illustrated in the following figure.</P>
+</DIV>
+</DIV>
+<DIV>
+<H6 CLASS="Figure">
+<A NAME="50593884_pgfId-153823"></A><DIV>
+<IMG SRC="UG_html-77.gif" ALT="">
+</DIV>
+FIGURE 14b	One 10 x 10 x 10 Element Scientific Data Set</H6>
+<DIV>
+<IMG SRC="UG_html-79.gif" ALT="">
+</DIV>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-153824"></A>As with the last example, 1,000 32-bit floating-point numbers are first buffered in-core, then written to a single SDS. The following table contains the performance metrics of this operation.</P>
+<DIV>
+<H6 CLASS="Table">
+<A NAME="50593884_pgfId-153850"></A><DIV>
+<IMG SRC="UG_html-77.gif" ALT="">
+</DIV>
+Results of the Write Operation to One 10x10x10 Element Scientific Data Set</H6>
+<TABLE>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593884_pgfId-160847"></A>Total Number of CPU Cycles</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593884_pgfId-160849"></A>Size of the HDF File (in bytes)</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593884_pgfId-160855"></A>205,201</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593884_pgfId-160857"></A>7,258</P>
+</TD>
+</TR>
+</TABLE>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-153851"></A>It is apparent from these results that merging the data into one scientific data set results in a substantial increase in I/O efficiency - in this case, a 99.9% reduction in total CPU load. In addition, the size of the HDF file is dramatically reduced by a factor of more than 100, even through the amount of SDS data stored is the same.</P>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-158004"></A>The extent to which the data consolidation described in this section should be done is dependent on the specific I/O requirements of the HDF user application.</P>
+</DIV>
+</DIV>
+</DIV>
+<DIV>
+<H6 CLASS="Heading3">
+<A NAME="50593884_pgfId-146041"></A>	14.2.2 Sharing Dimensions between Scientific Data Sets</H6>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-154170"></A>When several scientific data sets have dimensions of the same length, name and data type, they can share these dimensions to reduce storage overhead and CPU cycles in writing out data.</P>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-185104"></A>To illustrate this, again consider the example of 1,000 1 x 1 x 1 scientific data sets of 32-bit floating point numbers. Three dimensions are attached by default to each scientific data set by the HDF library. The HDF library assigns each of these dimensions a default name prefaced by the string <EM CLASS="VarName">
+fakeDim</EM>
+. See <A HREF="UG_html-3.htm#50593873_13938" CLASS="XRef">Scientific Data Sets (SD API)</A>, for a specific explanation of default dimension naming conventions.</P>
+<DIV>
+<H6 CLASS="Figure">
+<A NAME="50593884_pgfId-154267"></A><DIV>
+<IMG SRC="UG_html-77.gif" ALT="">
+</DIV>
+FIGURE 14c	1,000 1 x 1 x 1 Element Scientific Data Sets</H6>
+<DIV>
+<IMG SRC="UG_html-80.gif" ALT="">
+</DIV>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-154178"></A>One 32-bit floating point number is written to each scientific data set. The following table lists the performance metrics of this operation.</P>
+<DIV>
+<H6 CLASS="Table">
+<A NAME="50593884_pgfId-155574"></A><DIV>
+<IMG SRC="UG_html-77.gif" ALT="">
+</DIV>
+Results of the Write Operation to 1,000 1x1x1 Element Scientific Data Sets</H6>
+<TABLE>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593884_pgfId-160828"></A>Total Number of CPU Cycles</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593884_pgfId-160830"></A>Size of the HDF File (in bytes)</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593884_pgfId-160836"></A>136,680,037</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593884_pgfId-160838"></A>896,803</P>
+</TD>
+</TR>
+</TABLE>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-155599"></A>Now consider the 1,000 SDSs described previously in this section. In this case, the 1,000 SDSs share the program-defined <EM CLASS="VarName">
+X_Axis</EM>
+, <EM CLASS="VarName">
+Y_Axis</EM>
+ and <EM CLASS="VarName">
+Z_Axis</EM>
+ dimensions as illustrated in the following figure.</P>
+</DIV>
+</DIV>
+<DIV>
+<H6 CLASS="Figure">
+<A NAME="50593884_pgfId-155909"></A><DIV>
+<IMG SRC="UG_html-77.gif" ALT="">
+</DIV>
+FIGURE 14d	1,000 1 x 1 x 1 Element Scientific Data Sets Sharing Dimensions</H6>
+<DIV>
+<IMG SRC="UG_html-81.gif" ALT="">
+</DIV>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-146105"></A>The performance metrics that result from writing one 32-bit floating-point number to each dataset are in the following table.</P>
+<DIV>
+<H6 CLASS="Table">
+<A NAME="50593884_pgfId-155945"></A><DIV>
+<IMG SRC="UG_html-77.gif" ALT="">
+</DIV>
+Results of the Write Operation to 1,000 1x1x1 SDSs with Shared Dimensions</H6>
+<TABLE>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593884_pgfId-160809"></A>Total Number of CPU Cycles</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593884_pgfId-160811"></A>Size of the HDF File (in bytes)</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593884_pgfId-160817"></A>24,724,384</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593884_pgfId-160819"></A>177,172</P>
+</TD>
+</TR>
+</TABLE>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-155917"></A>An 82% performance improvement in this example program can be seen from the information in this table, due to the fewer write operations involved in writing dimension data to shared dimensions. Also, the HDF file is significantly smaller in this case, due to the smaller amount of dimension data that is written. </P>
+</DIV>
+</DIV>
+</DIV>
+<DIV>
+<H6 CLASS="Heading3">
+<A NAME="50593884_pgfId-154163"></A>	14.2.3 Setting the Fill Mode</H6>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-149133"></A>When a scientific data set is created, the default action of the HDF library is to fill every element with the default fill value. This action can be disabled, and reenabled once it has been disabled, by a call to the <EM CLASS="FunctionName">
+SDsetfillmode</EM>
+ routine.</P>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-161141"></A>The library’s default writing of fill values can degrade performance when, after the fill values have been written, every element in the dataset is written to again. This operation involves writing every element in the SDS twice. This section will demonstrate that disabling the initial fill value write operation by calling <EM CLASS="FunctionName">
+SDsetfillmode</EM>
+ can improve library performance.</P>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-158026"></A>Consider 50 10 x 10 x 10 scientific data sets of 32-bit floating-point numbers.</P>
+<DIV>
+<H6 CLASS="Figure">
+<A NAME="50593884_pgfId-156068"></A><DIV>
+<IMG SRC="UG_html-77.gif" ALT="">
+</DIV>
+FIGURE 14e	50 10 x 10 x 10 Element Scientific Data Sets</H6>
+<DIV>
+<IMG SRC="UG_html-82.gif" ALT="">
+</DIV>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-156922"></A>By default, the fill value is written to every element in all 50 SDSs. The contents of a two-dimensional buffer containing 32-bit floating-point numbers is then written to these datasets. The way these two-dimensional slices are written to the three-dimensional SDSs is illustrated in the following figure. Each slice (represented by each shaded area in the figure) is written along the third dimension of each SDS, or if the dimensions are related to a Cartesian grid, the z-dimension, until the entire SDS is filled.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Figure">
+<A NAME="50593884_pgfId-157670"></A><DIV>
+<IMG SRC="UG_html-77.gif" ALT="">
+</DIV>
+FIGURE 14f	Writing to the 50 10 x 10 x 10 Element Scientific Data Sets</H6>
+<DIV>
+<IMG SRC="UG_html-83.gif" ALT="">
+</DIV>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-160976"></A>It should be noted that the reason each SDS is not rewritten to in one write operation is because the HDF library will detect this and automatically disable the initial write of the fill values as a performance-saving measure. Hence, the partial writes in two-dimensional slabs.</P>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-160974"></A>The following table shows the number of CPU cycles needed in our tests to perform this write operation with the fill value write enabled. The &quot;Size of the HDF File&quot; metric has been left out of this table, because it will not change substantially regardless of whether the default fill value write operation is enabled.</P>
+<DIV>
+<H6 CLASS="Table">
+<A NAME="50593884_pgfId-160945"></A><DIV>
+<IMG SRC="UG_html-77.gif" ALT="">
+</DIV>
+Results of the Write Operation to the 50 10x10x10 SDSs with the Fill Value Write Enabled</H6>
+<TABLE>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593884_pgfId-160940"></A>Total Number of CPU Cycles</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593884_pgfId-160944"></A>584,956,078</P>
+</TD>
+</TR>
+</TABLE>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-155977"></A>The following table shows the number of CPU cycles needed to perform the same write operation with the fill value write disabled.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Table">
+<A NAME="50593884_pgfId-156215"></A><DIV>
+<IMG SRC="UG_html-77.gif" ALT="">
+</DIV>
+Results of the Write Operation to the 50 SDSs with the Fill Value Write Disabled</H6>
+<TABLE>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593884_pgfId-160783"></A>Total Number of CPU Cycles</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593884_pgfId-160787"></A>390,015,933</P>
+</TD>
+</TR>
+</TABLE>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-155979"></A>The information in these tables demonstrate that eliminating the I/O overhead of the default fill value write operation when an entire SDS is rewritten to results in a substantial reduction of the CPU cycles needed to perform the operation -- in this case, a reduction of 33%.</P>
+</DIV>
+</DIV>
+</DIV>
+<DIV>
+<H6 CLASS="Heading3">
+<A NAME="50593884_pgfId-153380"></A>	14.2.4 Disabling Fake Dimension Scale Values in Large One-dimensional Scientific Data Sets</H6>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-153381"></A>In versions 4.0 and earlier of the HDF library, dimension scales were represented by a vgroup containing a vdata. This vdata consisted of as many records as there are elements along the dimension. Each record contained one number which represented each value along the dimension scale, and these values are referred to as <EM CLASS="Definition">
+fake</EM>
+ dimension scale values.</P>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-156376"></A>In HDF version 4.0 a new representation of the dimension scale was implemented alongside the old one -- a vdata containing only one value representing the total number of values in the dimension scale. In version 4.1 release 2, this representation was made the default. A <EM CLASS="Definition">
+compatible</EM>
+ mode is also supported where both the older and newer representations of the dimension scale are written to file.</P>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-156377"></A>In the earlier representation, a substantial amount of I/O overhead is involved in writing the fake dimension scale values into the vdata. When one of the dimensions of the SDS array is very large, performance can be improved, and the size of the HDF file can be reduced, if the old representation of dimension scales is disabled by a call to the <EM CLASS="FunctionName">
+SDsetdimval_comp</EM>
+ routine. The examples in this section will illustrate this.</P>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-156379"></A>First, consider one 10,000 element array of 32-bit floating point numbers, as shown in the following figure. Both the new and old dimension scale representations are enabled by the library.</P>
+<DIV>
+<H6 CLASS="Figure">
+<A NAME="50593884_pgfId-153462"></A><DIV>
+<IMG SRC="UG_html-77.gif" ALT="">
+</DIV>
+FIGURE 14g	One 10,000 Element Scientific Data Set with Old- and New-Style Dimension Scales</H6>
+<DIV>
+<IMG SRC="UG_html-84.gif" ALT="">
+</DIV>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-147663"></A>10,000 32-bit floating-point numbers are buffered in-core, then written to the scientific data set. In addition, 10,000 integers are written to the SDS as dimension scale values. The following table contains the results of this operation from our tests.</P>
+<DIV>
+<H6 CLASS="Table">
+<A NAME="50593884_pgfId-156254"></A><DIV>
+<IMG SRC="UG_html-77.gif" ALT="">
+</DIV>
+Results of the SDS Write Operation with the New and Old Dimension Scales</H6>
+<TABLE>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593884_pgfId-160764"></A>Total Number of CPU Cycles</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593884_pgfId-160766"></A>Size of the HDF File (in bytes)</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593884_pgfId-160772"></A>439,428</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593884_pgfId-160774"></A>82,784</P>
+</TD>
+</TR>
+</TABLE>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-156222"></A>Now consider the same SDS with the fake dimension scale values disabled. The following figure illustrates this.</P>
+</DIV>
+</DIV>
+<DIV>
+<H6 CLASS="Figure">
+<A NAME="50593884_pgfId-156304"></A><DIV>
+<IMG SRC="UG_html-77.gif" ALT="">
+</DIV>
+FIGURE 14h	One 10,000 Element Scientific Data Set with the Old-Style Dimension Scale Disabled</H6>
+<DIV>
+<IMG SRC="UG_html-85.gif" ALT="">
+</DIV>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-156223"></A>The following table contains the performance metrics of this write operation.</P>
+<DIV>
+<H6 CLASS="Table">
+<A NAME="50593884_pgfId-156331"></A><DIV>
+<IMG SRC="UG_html-77.gif" ALT="">
+</DIV>
+Results of the SDS Write Operation with Only the New Dimension Scale</H6>
+<TABLE>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593884_pgfId-160745"></A>Total Number of CPU Cycles</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead">
+<A NAME="50593884_pgfId-160747"></A>Size of the HDF File</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593884_pgfId-160753"></A>318,696</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellParameter">
+<A NAME="50593884_pgfId-160755"></A>42,720</P>
+</TD>
+</TR>
+</TABLE>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-156225"></A>The old-style dimension scale is not written to the HDF file, which results in the size of the file being reduced by nearly 50%. There is also a marginal reduction in the total number of CPU cycles.</P>
+</DIV>
+</DIV>
+</DIV>
+</DIV>
+<DIV>
+<H5 CLASS="Heading2">
+<A NAME="50593884_pgfId-149138"></A>	14.3	Data Chunking<DIV>
+<IMG SRC="UG_html-76.gif" ALT="">
+</DIV>
+</H5>
+<DIV>
+<H6 CLASS="Heading3">
+<A NAME="50593884_pgfId-151476"></A>	14.3.1 What Is Data Chunking?</H6>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-149179"></A>Data chunking is a method of organizing data within an SDS where data is stored in <EM CLASS="Definition">
+chunks</EM>
+ of a predefined size, rather than contiguously by array element. Its two-dimensional instance is sometimes referred to as <EM CLASS="Definition">
+data tiling</EM>
+. Data chunking is generally beneficial to I/O performance in very large arrays, e.g., arrays with thousands of rows and columns.</P>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-161142"></A>If correctly applied, data chunking may reduce the number of seeks through the SDS data array to find the data to be read or written, thereby improving I/O performance. However, it should be remembered that data chunking, if incorrectly applied, can significantly reduce the performance of reading and/or writing to an SDS. Knowledge of how chunked SDSs are created and accessed and application-specific knowledge of how data is to be read from the chunked SDSs are necessary in avoiding situations where data chunking works against the goal of I/O performance optimization.</P>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-149180"></A>The following figure illustrates the difference between a non-chunked SDS and a chunked SDS.</P>
+<DIV>
+<H6 CLASS="Figure">
+<A NAME="50593884_pgfId-149660"></A><DIV>
+<IMG SRC="UG_html-77.gif" ALT="">
+</DIV>
+FIGURE 14i	Comparison between Chunked and Non-chunked Scientific Data Sets<A NAME="50593884_marker-149181"></A></H6>
+<DIV>
+<IMG SRC="UG_html-86.gif" ALT="">
+</DIV>
+</DIV>
+</DIV>
+<DIV>
+<H6 CLASS="Heading3">
+<A NAME="50593884_pgfId-152263"></A>	14.3.2 <A NAME="50593884_33238"></A>Writing Concerns and Reading Concerns in Chunking </H6>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-152264"></A>There are issues in working with chunks that are related to the reading process and others that are related to the writing process. </P>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-152265"></A>Specifically, the issues that affect the process of reading from chunked SDSs are</P>
+<UL>
+<LI CLASS="Bullet">
+<A NAME="50593884_pgfId-152266"></A>Compression</LI>
+<LI CLASS="Bullet">
+<A NAME="50593884_pgfId-152267"></A>Subsetting</LI>
+<LI CLASS="Bullet">
+<A NAME="50593884_pgfId-152268"></A>Chunk sizing</LI>
+<LI CLASS="Bullet">
+<A NAME="50593884_pgfId-153283"></A>Chunk cache sizing</LI>
+</UL>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-152269"></A>The issues that affect the process of writing to chunked SDSs are</P>
+<UL>
+<LI CLASS="Bullet">
+<A NAME="50593884_pgfId-152270"></A>Compression</LI>
+<LI CLASS="Bullet">
+<A NAME="50593884_pgfId-153284"></A>Chunk cache sizing</LI>
+</UL>
+</DIV>
+<DIV>
+<H6 CLASS="Heading3">
+<A NAME="50593884_pgfId-149139"></A>	14.3.3 Chunking without Compression</H6>
+<DIV>
+<H6 CLASS="BodyBold">
+<A NAME="50593884_pgfId-157789"></A>Accessing Subsets According to Storage Order</H6>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-152519"></A>The main consideration to keep in mind when subsetting from chunked and non-chunked SDSs is that if the subset can be accessed in the same order as it was stored, subsetting will be efficient. If not, subsetting may result in less-than-optimal performance considering the number of elements to be accessed.</P>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-152520"></A>To illustrate this, the instance of subsetting in non-chunked SDSs will first be described. Consider the example of a non-chunked, two-dimensional, 2,000 x 1,600 SDS array of integer data. The following figure shows how this array is filled with data in a row-wise fashion. (Each square in the array shown represents 100 x 100 integers.)</P>
+</DIV>
+<DIV>
+<H6 CLASS="Figure">
+<A NAME="50593884_pgfId-152599"></A><DIV>
+<IMG SRC="UG_html-77.gif" ALT="">
+</DIV>
+FIGURE 14j	Filling a Two-dimensional Array with Data Using Row-major Ordering<A NAME="50593884_marker-152521"></A></H6>
+<DIV>
+<IMG SRC="UG_html-87.gif" ALT="">
+</DIV>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-165695"></A>The most efficient way an application can read a row of data, or a portion of a row, from this array, is a contiguous, row-wise read of array elements. This is because this is the way the data was originally written to the array. Only one seek is needed to perform this. <A HREF="UG_html-14.htm#50593884_32929" CLASS="XRef">(See Figure 14k)</A></P>
+</DIV>
+<DIV>
+<H6 CLASS="Figure">
+<A NAME="50593884_pgfId-165753"></A><DIV>
+<IMG SRC="UG_html-77.gif" ALT="">
+</DIV>
+FIGURE 14k	<A NAME="50593884_32929"></A>Number of Seeks Needed to Access a Row of Data in a Non-chunked SDS<A NAME="50593884_marker-165700"></A></H6>
+<DIV>
+<IMG SRC="UG_html-88.gif" ALT="">
+</DIV>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-153336"></A>If the subset of data to be read from this array is one 2,000 integer <EM CLASS="TextItalic">
+column</EM>
+, then 2,000 seeks will be required to complete the operation. This is the most inefficient method of reading this subset as nearly all of the array locations will be accessed in the process of seeking to a relatively small number of target locations.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Figure">
+<A NAME="50593884_pgfId-152758"></A><DIV>
+<IMG SRC="UG_html-77.gif" ALT="">
+</DIV>
+FIGURE 14l	Number of Seeks Needed to Access a Column of Data in a Non-chunked SDS<A NAME="50593884_marker-152659"></A></H6>
+<DIV>
+<IMG SRC="UG_html-89.gif" ALT="">
+</DIV>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-153338"></A>Now suppose this SDS is chunked, and the chunk size is 400 x 400 integers. A read of the aforementioned row is performed. In this case, four seeks are needed to read all of the chunks that contain the target locations. This is less efficient than the one seek needed in the non-chunked SDS.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Figure">
+<A NAME="50593884_pgfId-153110"></A><DIV>
+<IMG SRC="UG_html-77.gif" ALT="">
+</DIV>
+FIGURE 14m	Number of Seeks Needed to Access a Row of Data in a Chunked SDS<A NAME="50593884_marker-153039"></A></H6>
+<DIV>
+<IMG SRC="UG_html-90.gif" ALT="">
+</DIV>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-153032"></A>To read the aforementioned column of data, five chunks must be read into memory in order to access the 2,000 locations of the subset. Therefore, five seeks to the starting location of each of these chunks are necessary to complete the read operation, far fewer than the 2,000 needed in the non-chunked SDS.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Figure">
+<A NAME="50593884_pgfId-152857"></A><DIV>
+<IMG SRC="UG_html-77.gif" ALT="">
+</DIV>
+FIGURE 14n	<A NAME="50593884_40785"></A>Number of Seeks Needed to Access a Column of Data in a Chunked SDS<A NAME="50593884_marker-152761"></A></H6>
+<DIV>
+<IMG SRC="UG_html-91.gif" ALT="">
+</DIV>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-152931"></A>These examples show that, in many cases, chunking can be used to reduce the I/O overhead of subsetting, but in certain cases, chunking can impair I/O performance. </P>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-153302"></A>The efficiency of subsetting from chunked SDSs is partly determined by the size of the chunk: the smaller the chunk size, the more seeks will be necessary. Chunking can substantially improve I/O performance when data is read along the slowest-varying dimension. It can substantially degrade performance when data is read along the fastest-varying dimension.</P>
+</DIV>
+</DIV>
+<DIV>
+<H6 CLASS="Heading3">
+<A NAME="50593884_pgfId-152154"></A>	14.3.4 Chunking with Compression</H6>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-151622"></A>Chunking can be particularly effective when used in conjunction with compression. It allows subsets to be read (or written) without having to uncompress (or compress) the entire array.</P>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-165859"></A>Consider the example of a tiled, two-dimensional SDS containing one million bytes of image data. Each tile of image data has been compressed as illustrated in the following figure.</P>
+<DIV>
+<H6 CLASS="Figure">
+<A NAME="50593884_pgfId-165933"></A><DIV>
+<IMG SRC="UG_html-77.gif" ALT="">
+</DIV>
+FIGURE 14o	Compressing and Writing Chunks of Data to a Compressed and Tiled SDS<A NAME="50593884_marker-165860"></A></H6>
+<DIV>
+<IMG SRC="UG_html-92.gif" ALT="">
+</DIV>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-152019"></A>When it becomes necessary to read a subset of the image data, the application passes in the location of a tile, reads the entire tile into a buffer, and extracts the data-of-interest from that buffer.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Figure">
+<A NAME="50593884_pgfId-152011"></A><DIV>
+<IMG SRC="UG_html-77.gif" ALT="">
+</DIV>
+FIGURE 14p	<A NAME="50593884_27379"></A>Extracting a Subset from a Compressed and Tiled SDS<A NAME="50593884_marker-151933"></A></H6>
+<DIV>
+<IMG SRC="UG_html-93.gif" ALT="">
+</DIV>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-153341"></A>In a compressed and <EM CLASS="TextItalic">
+non-tiled</EM>
+ SDS, retrieving a subset of the compressed image data necessitates reading the entire contents of the SDS array into a memory buffer and uncompressing it in-core. <A HREF="UG_html-14.htm#50593884_16405" CLASS="XRef">(See Figure 14q)</A> The subset is then extracted from this buffer. (Keep in mind that, even though the illustrations show two-dimensional data tiles for clarity, this process can be extended to data chunks of any number of dimensions.)</P>
+</DIV>
+<DIV>
+<H6 CLASS="Figure">
+<A NAME="50593884_pgfId-149820"></A><DIV>
+<IMG SRC="UG_html-77.gif" ALT="">
+</DIV>
+FIGURE 14q	<A NAME="50593884_16405"></A>Extracting a Subset from a Compressed Non-tiled SDS<A NAME="50593884_marker-149699"></A></H6>
+<DIV>
+<IMG SRC="UG_html-94.gif" ALT="">
+</DIV>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-149987"></A>As compressed image files can be as large as hundreds of megabytes in size, and a gigabyte or more uncompressed, it is clear that the I/O requirements of reading to and writing from non-tiled, compressed SDSs can be immense, if not prohibitive. Add to this the additional I/O burden inherent in situations where portions of several image files must be read at the same time for comparison, and the benefits of tiling become even more apparent.</P>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-152286"></A>NOTE: It is recommended that the <EM CLASS="FunctionName">
+SDwritechunk</EM>
+ routine be used to write to a compressed and chunked SDS. <EM CLASS="FunctionName">
+SDwritechunk</EM>
+ can perform this operation more efficiently than the combination of <EM CLASS="FunctionName">
+SDsetcompress</EM>
+ and <EM CLASS="FunctionName">
+SDwritedata</EM>
+. This is because the chunk information provided by the user to the <EM CLASS="FunctionName">
+SDwritechunk</EM>
+ routine must be retrieved from the file by <EM CLASS="FunctionName">
+SDwritedata</EM>
+, and therefore involves more computational overhead.</P>
+</DIV>
+</DIV>
+<DIV>
+<H6 CLASS="Heading3">
+<A NAME="50593884_pgfId-153236"></A>	14.3.5 Effect of Chunk Size on Performance</H6>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-152302"></A>The main concern in modelling data for chunking is that the chunk size be approximately equal to the average expected size of the data block needed by the application. </P>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-153273"></A>If the chunk size is substantially larger than this, increased I/O overhead will be involved in reading the chunk and increased performance overhead will be involved in the decompression of the data if it is compressed. If the chunk size is substantially smaller than this, increased performance and memory/disk storage overhead will be involved in the HDF library’s operations of accessing and keeping track of more chunks, as well as the danger of exceeding the maximum number of chunks per file. (64K)</P>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-152304"></A>It is recommended that the chunk size be at least 8K bytes. </P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading3">
+<A NAME="50593884_pgfId-178637"></A>	14.3.6 Insufficient Chunk Cache Space Can Impair Chunking Performance</H6>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-150710"></A>The HDF library provides caching chunks. This can substantially improve I/O performance when a particular chunk must be accessed more than once.</P>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-161146"></A>There is a potential performance problem when subsets are read from chunked datasets and insufficient chunk cache space has been allocated. The cause of this problem is the fact that two separate levels of the library are working to read the subset into memory and these two levels have a different perspective on how the data in the dataset is organized. </P>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-150711"></A>Specifically, higher-level routines like <EM CLASS="FunctionName">
+SDreaddata</EM>
+ access the data in a strictly row-wise fashion, not according to the chunked layout. However, the lower-level code that directly performs the read operation accesses the data according to the chunked layout.</P>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-150712"></A>As an illustration of this, consider the 4 x 12 dataset depicted in the following figure.</P>
+<DIV>
+<H6 CLASS="Figure">
+<A NAME="50593884_pgfId-150787"></A><DIV>
+<IMG SRC="UG_html-77.gif" ALT="">
+</DIV>
+FIGURE 14r	Example 4 x 12 Element Scientific Data Set</H6>
+<DIV>
+<IMG SRC="UG_html-95.gif" ALT="">
+</DIV>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-153343"></A>Suppose this dataset is untiled, and the subset shown in the following figure must be read.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Figure">
+<A NAME="50593884_pgfId-150865"></A><DIV>
+<IMG SRC="UG_html-77.gif" ALT="">
+</DIV>
+FIGURE 14s	2 x 8 Element Subset of the 4 x 12 Scientific Data Set</H6>
+<DIV>
+<IMG SRC="UG_html-96.gif" ALT="">
+</DIV>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-150866"></A>As this dataset is untiled, the numbers are stored in linear order. <EM CLASS="FunctionName">
+SDreaddata</EM>
+ finds the longest contiguous stream of numbers, and requests the lower level of the library code to read it into memory. First, the first row of numbers will be read:</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593884_pgfId-150868"></A>3  4  5  6  7  8  9 10</P>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-150870"></A>Then the second row:</P>
+<P CLASS="FM1-syntax">
+<A NAME="50593884_pgfId-150872"></A>23 24 25 26 27 28 29 30</P>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-150874"></A>This involves two reads, two disk accesses and sixteen numbers.</P>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-150875"></A>Now suppose that this dataset is tiled with 2 x 2 element tiles. On the disk, the data in this dataset is stored as twelve separate tiles, which for the purposes of this example will be labelled A through L.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Figure">
+<A NAME="50593884_pgfId-151011"></A><DIV>
+<IMG SRC="UG_html-77.gif" ALT="">
+</DIV>
+FIGURE 14t	4 x 12 Element Data Set with 2 x 2 Element Tiles</H6>
+<DIV>
+<IMG SRC="UG_html-97.gif" ALT="">
+</DIV>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-151012"></A>Also, the chunk cache size is set to 2.</P>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-151013"></A>A request is made to read the aforementioned subset of numbers into memory. As before, <EM CLASS="FunctionName">
+SDreaddata</EM>
+ will determine the order the numbers will be read in. The routine has no information about the tiled layout. The higher-level code will again request the values in the first rows of tiles B through E from the lower level code on the first read operation.</P>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-173203"></A>In order to access those numbers the lower level code must read in four tiles: B, C, D, E. It reads in tiles B and C, retrieving the values <EM CLASS="Flag">
+3</EM>
+, <EM CLASS="Flag">
+4</EM>
+, <EM CLASS="Flag">
+5</EM>
+, and <EM CLASS="Flag">
+6</EM>
+. However, as the cache space is now completely filled, it must overwrite tile B in the cache to access the values <EM CLASS="Flag">
+7 and 8</EM>
+, which are in tile D. It then has to overwrite tile C to access the values <EM CLASS="Flag">
+9 and 10</EM>
+, which are in tile E. Note that, in each case, half of the values from the tiles that are read in are unused, even though those values will be needed later.</P>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-151015"></A>Next, the higher-level code requests the second row of the subset. The lower-level code must <EM CLASS="TextItalic">
+reread</EM>
+ tile B to access the values <EM CLASS="Flag">
+23</EM>
+ and <EM CLASS="Flag">
+24</EM>
+. But tile B is no longer in the chunk cache. In order to access tile B, the lower-level code must overwrite tile D, and so on. By the time the subset read operation is complete, it has had to read in each of the tiles twice. Also, it has had to perform 8 disk accesses and has read 32 values.</P>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-151016"></A>Now consider a more practical example with the following parameters: </P>
+<UL>
+<LI CLASS="Bullet">
+<A NAME="50593884_pgfId-151017"></A>A scientific data set has 3,000 rows and 8,400 columns.</LI>
+<LI CLASS="Bullet">
+<A NAME="50593884_pgfId-151018"></A>The target subset is 300 rows by 1,000 columns, and contains 300,000 numbers.</LI>
+</UL>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-151019"></A>If the dataset is untiled the numbers are read into memory row-by-row. This involves 300 disk accesses for 300 rows, with each disk access reading in 1,000 numbers. The total number of numbers that will be read is 300,000.</P>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-151020"></A>Suppose the dataset is tiled as follows:</P>
+<UL>
+<LI CLASS="Bullet">
+<A NAME="50593884_pgfId-151021"></A>The tile size is 300 rows by 200 columns, or 60,000 numbers.</LI>
+<LI CLASS="Bullet">
+<A NAME="50593884_pgfId-151022"></A>The size of the chunk cache is 2.</LI>
+</UL>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-159646"></A>Each square in the following figure represents one 100 x 100 element region of the dataset. Five tiles span the 300 x 1,000 target subset. For the purposes of this example, they will be labelled A, B, C, D and E. </P>
+</DIV>
+<DIV>
+<H6 CLASS="Figure">
+<A NAME="50593884_pgfId-159643"></A><DIV>
+<IMG SRC="UG_html-77.gif" ALT="">
+</DIV>
+FIGURE 14u	5 200 x 300 Element Tiles Labelled A, B, C, D and E</H6>
+<DIV>
+<IMG SRC="UG_html-98.gif" ALT="">
+</DIV>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-158362"></A>First, the higher-level code instructs the lower-level code to read in the first row of subset numbers. The lower-level code must read all five tiles (A through E) into memory, as they all contain numbers in the first row. Tiles A and B are read into the cache without problem, then the following set of cache overwrites occurs.</P>
+<DIV>
+<H6 CLASS="FM1Step">
+<A NAME="50593884_pgfId-151024"></A>Tile A is overwritten when tile C is read.</H6>
+<OL>
+<LI CLASS="Step">
+<A NAME="50593884_pgfId-151025"></A>2.	Tile B is overwritten when tile D is read.</LI>
+<LI CLASS="Step">
+<A NAME="50593884_pgfId-151026"></A>3.	Tile C is overwritten when tile E is read.</LI>
+</OL>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-151027"></A>When the first row has been read, the cache contains tiles D and E.</P>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-151028"></A>The second row is then read. The higher-level code first requests tile A, however the cache is full, so it must overwrite tile D to read tile A. Then the following set of cache overwrites occur.</P>
+</DIV>
+<DIV>
+<H6 CLASS="FM1Step">
+<A NAME="50593884_pgfId-151029"></A>Tile E is overwritten when tile B is read.</H6>
+<OL>
+<LI CLASS="Step">
+<A NAME="50593884_pgfId-151030"></A>2.	Tile A is overwritten when tile C is read.</LI>
+<LI CLASS="Step">
+<A NAME="50593884_pgfId-151031"></A>3.	Tile B is overwritten when tile D is read.</LI>
+<LI CLASS="Step">
+<A NAME="50593884_pgfId-151032"></A>4.	Tile C is overwritten when tile E is read.</LI>
+</OL>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-151033"></A>For each row, five tiles must be read in. No actual caching results from this overwriting. When the subset read operation is complete, 300 * 5 = 1,500 tiles have been read, or 60,000 * 1,500 = 90,000,000 numbers.</P>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-151034"></A>Essentially, five times more disk accesses are being performed and 900 times more data is being read than with the untiled 3,000 x 8,400 dataset. The severity of the performance degradation increases in a non-linear fashion as the size of the dataset increases.</P>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-153351"></A>From this example it should be apparent that, to prevent this kind of chunk cache &quot;thrashing&quot; from occurring, the size of the chunk cache should be made equal to, or greater than, the number of chunks along the fastest-varying dimension of the dataset. In this case, the chunk cache size should be set to 4.</P>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-160049"></A>When a chunked SDS is opened for reading or writing, the default cache size is set to the number of chunks along the fastest-varying dimension of the SDS. This will prevent cache thrashing from occurring in situations where the user does not set the size of the the chunk cache. Caution should be exercised by the user when altering this default chunk cache size.</P>
+</DIV>
+</DIV>
+</DIV>
+</DIV>
+<DIV>
+<H5 CLASS="Heading2">
+<A NAME="50593884_pgfId-173503"></A>	14.4	Block Size Tuning Issues<DIV>
+<IMG SRC="UG_html-76.gif" ALT="">
+</DIV>
+</H5>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-173511"></A>A key to I/O performance in HDF is the number of disk accesses that must be made during any <BR>
+I/O operation.  If you can decrease significantly the number of disk accesses required, you may be able to improve performance correspondingly.  In this section we examine two such strategies for improving HDF I/O performance.</P>
+<DIV>
+<H6 CLASS="Heading3">
+<A NAME="50593884_pgfId-173517"></A>	14.4.1 <A NAME="50593884_42729"></A>Tuning Data Descriptor Block Size to Enhance Performance</H6>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-173519"></A>HDF objects are identified in HDF files by 12-byte headers called data descriptors (DDs).  Most composite HDF objects, such as SDSs, are made up of many small HDF objects, so it is not unusual to have a large number of DDs in an HDF file.  DDs are stored in blocks called data descriptor blocks (DD blocks). </P>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-173524"></A>When an HDF file is created, the file’s DD block size is specified.  The default size is 16 DDs per DD block.  When you start putting objects into an HDF file, their DDs are inserted into the first DD block.  When the DD block gets filled up, a new DD block is created, stored at some other location in the file, and linked with the previous DD block.  If a large number of objects are stored in an HDF file whose DD block size is small, a large number of DD blocks will be needed, and each DD block is likely to be stored on a different disk page. </P>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-173532"></A>Consider, for example, an HDF file with 1,000 SDSs and a DD block size of 16. Each SDS could easily require 10 DDs to describe all the objects comprising the SDS, so the entire file might contain 10,000 DDs. This would require 625 (10,000/16) DD blocks, each stored on a different disk page.</P>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-173537"></A>Whenever an HDF file is opened, all of the DDs are read into memory.  Hence, in our example, 625 disk accesses might be required just to open the file.</P>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-173540"></A>Fortunately, there is a way we can use this kind of information to improve performance.  When we create an HDF file, we can specify the DD block size.  If we know that the file will have many objects stored in it, we should choose a large DD block size so that each disk access will read in a large number of DDs, and hence there will be fewer disk accesses.  In our example, we might have chosen the DD block size to be 10,000, resulting in only one disk access. (Of course, this example goes deliberately to a logical extreme. For a variety of reasons, a more common approach would be to set the DD block size to something between 1,000 and 5,000 DDs.)</P>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-173547"></A>From this discussion we can derive the following rules of thumb for achieving good performance by altering the DD block size.</P>
+<UL>
+<LI CLASS="Bullet">
+<A NAME="50593884_pgfId-173550"></A>Increasing the size of the data descriptor block may improve performance when opening a file, especially when working with large HDF files with lots of objects. It will reduce the number of times that HDF has to go out and read another DD block. This will be particularly valuable in code that does large numbers of HDF file opens.</LI>
+<LI CLASS="Bullet">
+<A NAME="50593884_pgfId-173555"></A>The same principle applies when closing an HDF file that has been written to.  Since all DDs are flushed to an HDF file when it is written to and then closed, the DD block size can similarly impact performance. </LI>
+<LI CLASS="Bullet">
+<A NAME="50593884_pgfId-173560"></A>Notice that these actions only affect the opening and closing of a file.  Once a file is opened, DDs are accessed in memory; no further disk accesses are required. </LI>
+<LI CLASS="Bullet">
+<A NAME="50593884_pgfId-173563"></A>Large DD blocks can negatively affect storage efficiency, particularly if very large DD blocks are used.  Since the last DD block may only be partially filled up, you probably should not use large DD blocks for very small HDF files.</LI>
+</UL>
+</DIV>
+<DIV>
+<H6 CLASS="Heading3">
+<A NAME="50593884_pgfId-173578"></A>	14.4.2 <A NAME="50593884_99984"></A>Tuning Linked Block Size to Enhance Performance</H6>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-173580"></A>Linked blocks get created whenever compression, chunking, external files, or appendable datasets are used. They provide a means of linking new data blocks to a pre-existing data element.  If you have ever looked at an HDF file and seen <EM CLASS="Flag">
+Special Scientific Data</EM>
+ or <EM CLASS="Flag">
+Linked Block Indicator</EM>
+ tags with strange tag values, these are used in specifying linked blocks.   As with DD blocks, linked block size can affect both storage efficiency and I/O performance.</P>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-173587"></A>You can change the linked block size for SDSs by use of the function <EM CLASS="FunctionName">
+SDsetblocksize</EM>
+. To change the linked block size for Vdatas, prior to version 4.1r5, you must edit the <EM CLASS="Flag">
+hlimits.h</EM>
+ file, change the value of <EM CLASS="Flag">
+HDF_APPENDABLE_BLOCK_LEN</EM>
+, and re-build the HDF library. However, starting in version 4.1r5, applications can use the public function <EM CLASS="FunctionName">
+VSsetblocksize</EM>
+ for the same purpose. Changing the linked block size only affects the size of the linked blocks used <EM CLASS="TextItalic">
+after</EM>
+ the change is made; it does not affect the size of blocks that have already been written.</P>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-173594"></A>There is a certain amount of overhead when creating linked blocks.  For every linked block that is added there will be a specified number of block accesses, disk space used, and reference numbers added to the file. If you increase the size of the linked block, it will decrease the number of block accesses, disk space used, and reference numbers added to the file. Making the linked block size larger will decrease the number of reference numbers required; this is sometimes necessary because there are a limited number of available reference numbers.</P>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-173603"></A>Linked block size can also affect I/O performance, depending on how the data is accessed.  If the data will typically be accessed in large chunks, then making the linked block size large could improve performance.  If the data is accessed in small chunks, then making the linked block size small could improve performance.  </P>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-173607"></A>If data will be randomly accessed in small amounts, then it is better to have small linked blocks. </P>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-173610"></A>Ideally one might say that making the linked block size equal to the size of the dataset that will typically be accessed, is the best solution.  However, there are other things that will affect performance, such as the operating system being used, the sector size on the disk being accessed, the amount of memory available, and access patterns. </P>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-173616"></A>Here are some rules of thumb for specifying linked block size:</P>
+<UL>
+<LI CLASS="Bullet">
+<A NAME="50593884_pgfId-173618"></A>Linked block size should be at least as large as the smallest number of bytes accessed in a single disk access.  This amount varies from one system to another, but 4K bytes is probably a safe minimum.</LI>
+<LI CLASS="Bullet">
+<A NAME="50593884_pgfId-173622"></A>Linked block size should be a power of 2.</LI>
+<LI CLASS="Bullet">
+<A NAME="50593884_pgfId-173624"></A>Linked blocks should be approximately equal to the number of bytes accessed in a typical access.  This rule should be mitigated by the amount of locality from one disk access to another, however, as the next rule indicates.</LI>
+<LI CLASS="Bullet">
+<A NAME="50593884_pgfId-173628"></A>If memory is large, it may be possible to take advantage of caching that your operating system does by using a large block size.  If successive accesses are close to one another, blocks may be cached by the OS, so that actual physical disk accesses are not always required.  If successive accesses are not close to one another, this strategy could backfire, however.</LI>
+<LI CLASS="Bullet">
+<A NAME="50593884_pgfId-173634"></A>Although very large blocks can result in efficient access, they can also result in inefficient storage.  For instance if the block size is 100K bytes, and 101K bytes of data are stored per SDS in an HDF file, the file will be twice as large as necessary. </LI>
+</UL>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-173639"></A>Unfortunately, there are so many factors affected by block size that there is no simple formula that you can follow for deciding what the linked block size should be.  A little experimentation on the target platform can help a great deal in determining the ideal block size for your situation.</P>
+</DIV>
+<DIV>
+<H6 CLASS="Heading3">
+<A NAME="50593884_pgfId-178683"></A>	14.4.3 <A NAME="50593884_97527"></A>Unlimited Dimension Data Sets (SDSs and Vdatas) and Performance</H6>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-178692"></A>In some circumstances, repeatedly appending to unlimited dimension data sets can lead to significant performance problems. </P>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-178699"></A>Each time data is appended to a Vdata or an unlimited dimension SDS, a new linked block may be created. Eventually, the linked block list may become so large that data seeking performance deteriorates substantially. In the worst case, one can exceed the allowable number of reference numbers, corrupting the HDF file.</P>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-178746"></A>In many such instances, increasing the linked block size (see <A HREF="UG_html-14.htm#50593884_99984" CLASS="XRef">Tuning Linked Block Size to Enhance Performance</A> in this <EM CLASS="Citation">
+User’s Guide</EM>
+ or, for SDSs only, <A HREF="../../RefMan/src/RM_Section_II_SD.htm#27489" CLASS="XRef">SDsetblocksize/sfsblsz</A> in the <EM CLASS="Citation">
+HDF Reference Manual</EM>
+) or DD block size (see <A HREF="UG_html-14.htm#50593884_42729" CLASS="XRef">Tuning Data Descriptor Block Size to Enhance Performance</A>) will alleviate the reference number problems and improve performance.</P>
+<P CLASS="Body">
+<A NAME="50593884_pgfId-178427"></A>&nbsp;</P>
+<P CLASS="Body">
+<A NAME="50593885_pgfId-90885"></A>&nbsp;</P>
+</DIV>
+</DIV>
+</DIV>
+<HR><P><table id="Botofpage" border="0" width="850" cellspacing="0" cellpadding="0">      <tr>        <td align="left">        HDF 4.2.10 - February 2014<br/>        <a href="THG_Copyright.html">Copyright</a>        <td align="right">          <span style="font-size: 12px; font-weight: bold">            The HDF Group<br />          </span>          <span style="font-size: 12px">            <a href="http://www.hdfgroup.org">www.hdfgroup.org</a><br />            <img valign="bottom" border="0" src="images/help.jpg" height="12" alt="The HDF Group" valign="top" />          </span>        </td>      </tr>    </table></BODY>
+</HTML>
