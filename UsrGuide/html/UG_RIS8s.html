@@ -7,7 +7,7 @@
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.8.2296" />
     <meta name="TEMPLATEBASE" content="HDF4 Version 1.0" />
-    <meta name="LASTUPDATED" content="04/22/14 12:42:29" />
+    <meta name="LASTUPDATED" content="02/13/15 13:14:16" />
     <title>Chapter 6 --	8-Bit Raster Images (DFR8 API)</title>
     <link rel="StyleSheet" href="document.css" type="text/css" media="all" />
     <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
@@ -36,7 +36,7 @@
         </td>
         <td valign="middle" align="center">
           <b><H1>HDF User’s Guide</H1>
-           4.2.10</b><br />
+           4.2.11</b><br />
         </td>
         <td valign="middle" align="right">
         <br/>
@@ -71,7 +71,7 @@ The data model for the <span style="color: #000000; font-family: Times New Roman
 </p>
 <a name="wp6032"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
 FIGURE 6a	8-Bit Raster Image Set Contents</div>
-<div align="left"><img src="images/hdf4_06-UG_RIS8s-1-1.jpg" height="205" width="520" id="wp5994" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
+<div align="left"><img src="images/hdf4_07-UG_RIS8s-1-1.jpg" height="205" width="520" id="wp5994" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
 
 </div>
 <a name="wp2926"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
@@ -91,7 +91,7 @@ As an example, consider a stream of 8-bit numbers representing a raster image. <
 </p>
 <a name="wp26757"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
 FIGURE 6b	The Data Representation of an 8-Bit Raster Image</div>
-<div align="left"><img src="images/hdf4_06-UG_RIS8s-1-2.jpg" height="404" width="521" id="wp26755" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
+<div align="left"><img src="images/hdf4_07-UG_RIS8s-1-2.jpg" height="404" width="521" id="wp26755" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
 
 </div>
 <a name="wp26758"> </a><h4 style="font-family: Times New Roman; font-size: 10pt; margin-top: 10pt" class="pHeading4">
@@ -505,7 +505,7 @@ To write a raster image to an HDF file, the calling program must contain the fol
 In the <b class="cFunctionName">DFR8putimage</b> and <b class="cFunctionName">DFR8addimage</b> functions, the raster data is passed in the image parameter and the width and height of the image are passed in the width and height parameters. The compression algorithm used to store the image is passed in the compress parameter. Valid compress values include <code style="font-family: Courier New; font-size: 8pt" class="cDefName">COMP_NONE</code>, <code style="font-family: Courier New; font-size: 8pt" class="cDefName">COMP_RLE</code>, <code style="font-family: Courier New; font-size: 8pt" class="cDefName">COMP_JPEG</code> and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">COMP_IMCOMP</code>. <code style="font-family: Courier New; font-size: 8pt" class="cDefName">COMP_NONE</code> represents no compression (storage only), <code style="font-family: Courier New; font-size: 8pt" class="cDefName">COMP_RLE</code> represents run-length encoding, <code style="font-family: Courier New; font-size: 8pt" class="cDefName">COMP_JPEG</code> represents JPEG compression and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">COMP_IMCOMP</code> represents IMCOMP encoding.
 </p>
 <a name="wp8148"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-Parameters for <b class="cFunctionName">DFR8putimage</b> and <b class="cFunctionName">DFR8addimage</b> are further described below. <a href="UG_RIS8s.html#wp13125">Table 6C on page 263</a>
+Parameters for <b class="cFunctionName">DFR8putimage</b> and <b class="cFunctionName">DFR8addimage</b> are further described below. <a href="UG_RIS8s.html#wp13125">Table 6C on page 265</a>
 </p>
 <a name="wp13125"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: -135pt; text-transform: none">
 TABLE 6C	DFR8putimage and DFR8addimage Parameter List</div>
@@ -1867,7 +1867,7 @@ To maintain backward compatibility with older versions of HDF, the RIS8 interfac
     <table id="SummaryNotReq2" border="0" width="850" cellspacing="0" cellpadding="0">
       <tr>
         <td align="left">
-        HDF 4.2.10 - February 2014<br/>
+        HDF 4.2.11 - February 2015<br/>
         <a href="THG_Copyright.html">Copyright</a>
         <td align="right">
           <span style="font-size: 12px; font-weight: bold">

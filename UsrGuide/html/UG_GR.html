@@ -7,7 +7,7 @@
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.8.2296" />
     <meta name="TEMPLATEBASE" content="HDF4 Version 1.0" />
-    <meta name="LASTUPDATED" content="04/22/14 12:42:34" />
+    <meta name="LASTUPDATED" content="02/13/15 13:14:21" />
     <title>Chapter 8 --	General Raster Images (GR API)</title>
     <link rel="StyleSheet" href="document.css" type="text/css" media="all" />
     <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
@@ -36,7 +36,7 @@
         </td>
         <td valign="middle" align="center">
           <b><H1>HDF User’s Guide</H1>
-           4.2.10</b><br />
+           4.2.11</b><br />
         </td>
         <td valign="middle" align="right">
         <br/>
@@ -68,14 +68,14 @@ HDF users familiar with the SD interface will find certain aspects of the GR dat
 </p>
 <a name="wp55575"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
 FIGURE 8a	GR Data Set Contents</div>
-<div align="left"><img src="images/hdf4_08-UG_GR-1-1.jpg" height="270" width="524" id="wp55549" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
+<div align="left"><img src="images/hdf4_09-UG_GR-1-1.jpg" height="270" width="524" id="wp55549" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
 
 </div>
 <a name="wp55597"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 The terms <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">GR data set</span>, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">raster image</span>, and <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">image </span>are used interchangeably in this chapter.
 </p>
 <a name="wp55587"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-Refer to <a href="UG_GR.html#wp55575">Figure&#160;8a on page&#160;293</a> for a graphical overview of the raster image, or GR data set, structure. Note that GR data sets consist of required and optional components.
+Refer to <a href="UG_GR.html#wp55575">Figure&#160;8a on page&#160;295</a> for a graphical overview of the raster image, or GR data set, structure. Note that GR data sets consist of required and optional components.
 </p>
 <a name="wp55578"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
 	8.2.1	Required GR Data Set Components
@@ -87,7 +87,7 @@ Every GR data set must contain the following components: <span style="color: #00
 Image Array
 </div>
 <a name="wp44273"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-An <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">image array</span> is a two-dimensional array of pixels. This is the primary data component of the GR model and will be discussed later in this section; it can be compressed, chunked, and/or stored in external files. Refer to <a href="UG_GR.html#wp47497">Section&#160;8.6.2 on page&#160;310</a> for a description of raster image compression and <a href="UG_GR.html#wp47254">Section&#160;8.6.4 on page&#160;311</a> for a description of external image storage.
+An <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">image array</span> is a two-dimensional array of pixels. This is the primary data component of the GR model and will be discussed later in this section; it can be compressed, chunked, and/or stored in external files. Refer to <a href="UG_GR.html#wp47497">Section&#160;8.6.2 on page&#160;312</a> for a description of raster image compression and <a href="UG_GR.html#wp47254">Section&#160;8.6.4 on page&#160;313</a> for a description of external image storage.
 </p>
 <a name="wp44334"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 A raster image has an index and a reference number associated with it. The <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">index</span> is a non-negative integer that describes the relative position of the raster image in the file. A valid index ranges from 0 to the total number of images in the file minus 1. The <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">reference number</span> is a unique positive integer assigned to the raster image by the GR interface when the image is created. Various GR interface routines can be used to obtain an image index or reference number depending on the available information about the raster image. The index can also be determined if the sequence in which the images are created in the file is known.
@@ -105,7 +105,7 @@ Each image array has a <span style="color: #000000; font-family: Times New Roman
 Pixels and Pixel Type
 </div>
 <a name="wp31406"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-Each element in an image array corresponds to one <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">pixel</span> and each pixel can consist of a number of color component values or <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">pixel components</span>, e.g., Red-Green-Blue or RGB, Cyan-Magenta-Yellow-Black or CMYK, etc. Pixel components can be represented by different methods (8-bit lookup table or 24-bit direct representation, graphically depicted by <a href="UG_RIS8s.html#wp6032">Figure&#160;6a on page&#160;259</a> and <a href="UG_RIS24s.html#wp5011">Figure&#160;7b on page&#160;278</a>, respectively) and may have different data types. 
+Each element in an image array corresponds to one <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">pixel</span> and each pixel can consist of a number of color component values or <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">pixel components</span>, e.g., Red-Green-Blue or RGB, Cyan-Magenta-Yellow-Black or CMYK, etc. Pixel components can be represented by different methods (8-bit lookup table or 24-bit direct representation, graphically depicted by <a href="UG_RIS8s.html#wp6032">Figure&#160;6a on page&#160;261</a> and <a href="UG_RIS24s.html#wp5011">Figure&#160;7b on page&#160;280</a>, respectively) and may have different data types. 
 </p>
 <a name="wp36821"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 The data type of pixel components and the number of components in each pixel are collectively known as the <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">pixel type</span>. The GR data model supports all of the HDF-supported data types. A list of these data types appears provided in <a href="UG_Fundmtls.html#wp3081">Table 2F on page 14</a>.
@@ -135,7 +135,7 @@ Palettes
 <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Palettes</span> are lookup tables attached to images and define a set of color values for each pixel value in the image array. The GR interface provides similar capabilities for storing and manipulating palettes as the DFP interface described in <a href="UG_Palettes.html">Chapter 9, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Palettes (DFP API)</span></a>. However, the DFP interface is restricted to single-file operations while the GR interface allows multifile palette operations.
 </p>
 <a name="wp36967"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-Eventually, all palette manipulation functionality will reside only within the GR interface. In the meantime, the single-file DFP routines are fully compatible with palettes created with the GR palette routines. The GR palette routines are described in <a href="UG_GR.html#wp12074">Section&#160;8.11 on page&#160;336</a>.
+Eventually, all palette manipulation functionality will reside only within the GR interface. In the meantime, the single-file DFP routines are fully compatible with palettes created with the GR palette routines. The GR palette routines are described in <a href="UG_GR.html#wp12074">Section&#160;8.11 on page&#160;338</a>.
 </p>
 <a name="wp6315"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 12pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 Attributes
@@ -211,7 +211,7 @@ mgstart
 </div>
 </td>
     <td><a name="wp56314"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Initializes the GR interface (<a href="UG_GR.html#wp7730">Section&#160;8.5.1 on page&#160;298</a>)
+Initializes the GR interface (<a href="UG_GR.html#wp7730">Section&#160;8.5.1 on page&#160;300</a>)
 </div>
 </td>
 </tr>
@@ -224,7 +224,7 @@ mgcreat
 </div>
 </td>
     <td><a name="wp55995"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Creates a new raster image (<a href="UG_GR.html#wp7730">Section&#160;8.5.1 on page&#160;298</a>)
+Creates a new raster image (<a href="UG_GR.html#wp7730">Section&#160;8.5.1 on page&#160;300</a>)
 </div>
 </td>
 </tr>
@@ -237,7 +237,7 @@ mgselct
 </div>
 </td>
     <td><a name="wp56332"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Selects the raster image (<a href="UG_GR.html#wp7730">Section&#160;8.5.1 on page&#160;298</a>)
+Selects the raster image (<a href="UG_GR.html#wp7730">Section&#160;8.5.1 on page&#160;300</a>)
 </div>
 </td>
 </tr>
@@ -250,7 +250,7 @@ mgendac
 </div>
 </td>
     <td><a name="wp56017"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Terminates access to the raster image (<a href="UG_GR.html#wp7736">Section&#160;8.5.2 on page&#160;299</a>)
+Terminates access to the raster image (<a href="UG_GR.html#wp7736">Section&#160;8.5.2 on page&#160;301</a>)
 </div>
 </td>
 </tr>
@@ -263,7 +263,7 @@ mgend
 </div>
 </td>
     <td><a name="wp56323"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Terminates access to the GR interface (<a href="UG_GR.html#wp7736">Section&#160;8.5.2 on page&#160;299</a>)
+Terminates access to the GR interface (<a href="UG_GR.html#wp7736">Section&#160;8.5.2 on page&#160;301</a>)
 </div>
 </td>
 </tr>
@@ -283,7 +283,7 @@ mggcatt
 </div>
 </td>
     <td><a name="wp56050"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Reads an attribute of a raster image or a file (<a href="UG_GR.html#wp54927">Section&#160;8.10.4 on page&#160;331</a>)
+Reads an attribute of a raster image or a file (<a href="UG_GR.html#wp54927">Section&#160;8.10.4 on page&#160;333</a>)
 </div>
 </td>
 </tr>
@@ -296,7 +296,7 @@ mgid2rf
 </div>
 </td>
     <td><a name="wp56061"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Maps a raster image identifier to a reference number (<a href="UG_GR.html#wp31848">Section&#160;8.9.3 on page&#160;320</a>)
+Maps a raster image identifier to a reference number (<a href="UG_GR.html#wp31848">Section&#160;8.9.3 on page&#160;322</a>)
 </div>
 </td>
 </tr>
@@ -309,7 +309,7 @@ mgn2ndx
 </div>
 </td>
     <td><a name="wp56072"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Maps the name of a raster image name to an index (<a href="UG_GR.html#wp37853">Section&#160;8.9.5 on page&#160;321</a>)
+Maps the name of a raster image name to an index (<a href="UG_GR.html#wp37853">Section&#160;8.9.5 on page&#160;323</a>)
 </div>
 </td>
 </tr>
@@ -325,7 +325,7 @@ mgrcimg
 </div>
 </td>
     <td><a name="wp56085"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Reads raster image data (<a href="UG_GR.html#wp44146">Section&#160;8.7.1 on page&#160;313</a>)
+Reads raster image data (<a href="UG_GR.html#wp44146">Section&#160;8.7.1 on page&#160;315</a>)
 </div>
 </td>
 </tr>
@@ -338,7 +338,7 @@ mgr2idx
 </div>
 </td>
     <td><a name="wp56093"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Maps the reference number of a raster image to its index (<a href="UG_GR.html#wp37873">Section&#160;8.9.4 on page&#160;321</a>)
+Maps the reference number of a raster image to its index (<a href="UG_GR.html#wp37873">Section&#160;8.9.4 on page&#160;323</a>)
 </div>
 </td>
 </tr>
@@ -354,7 +354,7 @@ mgscatt
 </div>
 </td>
     <td><a name="wp56107"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Assigns an attribute to a raster image or a file (<a href="UG_GR.html#wp11603">Section&#160;8.10.2 on page&#160;327</a>)
+Assigns an attribute to a raster image or a file (<a href="UG_GR.html#wp11603">Section&#160;8.10.2 on page&#160;329</a>)
 </div>
 </td>
 </tr>
@@ -367,7 +367,7 @@ mgwrimg/mgwcimg
 </div>
 </td>
     <td><a name="wp56119"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Writes raster image data (<a href="UG_GR.html#wp44102">Section&#160;8.6.1 on page&#160;300</a>)
+Writes raster image data (<a href="UG_GR.html#wp44102">Section&#160;8.6.1 on page&#160;302</a>)
 </div>
 </td>
 </tr>
@@ -380,7 +380,7 @@ mgrimil
 </div>
 </td>
     <td><a name="wp56127"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Sets the interlace mode of the image read for subsequent read operations (<a href="UG_GR.html#wp12096">Section&#160;8.7.2 on page&#160;313</a>)
+Sets the interlace mode of the image read for subsequent read operations (<a href="UG_GR.html#wp12096">Section&#160;8.7.2 on page&#160;315</a>)
 </div>
 </td>
 </tr>
@@ -397,7 +397,7 @@ mggltid
 </div>
 </td>
     <td><a name="wp56140"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Gets a palette identifier given the palette&#39;s index (<a href="UG_GR.html#wp12076">Section&#160;8.11.1 on page&#160;336</a>)
+Gets a palette identifier given the palette&#39;s index (<a href="UG_GR.html#wp12076">Section&#160;8.11.1 on page&#160;338</a>)
 </div>
 </td>
 </tr>
@@ -410,7 +410,7 @@ mglt2rf
 </div>
 </td>
     <td><a name="wp56151"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Maps a palette identifier to a reference number (<a href="UG_GR.html#wp23231">Section&#160;8.11.3 on page&#160;337</a>)
+Maps a palette identifier to a reference number (<a href="UG_GR.html#wp23231">Section&#160;8.11.3 on page&#160;339</a>)
 </div>
 </td>
 </tr>
@@ -426,7 +426,7 @@ mgrclut
 </div>
 </td>
     <td><a name="wp56164"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Reads palette data from a raster image (<a href="UG_GR.html#wp43613">Section&#160;8.11.7 on page&#160;339</a>)
+Reads palette data from a raster image (<a href="UG_GR.html#wp43613">Section&#160;8.11.7 on page&#160;341</a>)
 </div>
 </td>
 </tr>
@@ -442,7 +442,7 @@ mgwclut
 </div>
 </td>
     <td><a name="wp56176"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Writes palette data to a raster image (<a href="UG_GR.html#wp34785">Section&#160;8.11.5 on page&#160;338</a>)
+Writes palette data to a raster image (<a href="UG_GR.html#wp34785">Section&#160;8.11.5 on page&#160;340</a>)
 </div>
 </td>
 </tr>
@@ -455,7 +455,7 @@ mgrltil
 </div>
 </td>
     <td><a name="wp66166"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Sets the interlace mode of the next palette for subsequent read operations (<a href="UG_GR.html#wp12096">Section&#160;8.7.2 on page&#160;313</a>)
+Sets the interlace mode of the next palette for subsequent read operations (<a href="UG_GR.html#wp12096">Section&#160;8.7.2 on page&#160;315</a>)
 </div>
 </td>
 </tr>
@@ -485,7 +485,7 @@ mgscomp
 </div>
 </td>
     <td><a name="wp56195"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Specifies whether the raster image will be stored in a file as a compressed raster image (<a href="UG_GR.html#wp47497">Section&#160;8.6.2 on page&#160;310</a>)
+Specifies whether the raster image will be stored in a file as a compressed raster image (<a href="UG_GR.html#wp47497">Section&#160;8.6.2 on page&#160;312</a>)
 </div>
 </td>
 </tr>
@@ -498,7 +498,7 @@ mggcompress
 </div>
 </td>
     <td><a name="wp66139"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Retrieves image compression type and compression information  (<a href="UG_GR.html#wp66280">Section&#160;8.9.6 on page&#160;321</a>)
+Retrieves image compression type and compression information  (<a href="UG_GR.html#wp66280">Section&#160;8.9.6 on page&#160;323</a>)
 </div>
 </td>
 </tr>
@@ -511,7 +511,7 @@ mgsxfil
 </div>
 </td>
     <td><a name="wp56206"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Specifies that the raster image will be written to an external file (<a href="UG_GR.html#wp44003">Section&#160;8.6.4.1 on page&#160;311</a>)
+Specifies that the raster image will be written to an external file (<a href="UG_GR.html#wp44003">Section&#160;8.6.4.1 on page&#160;313</a>)
 </div>
 </td>
 </tr>
@@ -541,7 +541,7 @@ mgatinf
 </div>
 </td>
     <td><a name="wp56220"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Retrieves information about an attribute (<a href="UG_GR.html#wp11685">Section&#160;8.10.3 on page&#160;330</a>)
+Retrieves information about an attribute (<a href="UG_GR.html#wp11685">Section&#160;8.10.3 on page&#160;332</a>)
 </div>
 </td>
 </tr>
@@ -554,7 +554,7 @@ mgfndat
 </div>
 </td>
     <td><a name="wp56228"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Finds the index of a data object&#39;s attribute given an attribute name (<a href="UG_GR.html#wp11685">Section&#160;8.10.3 on page&#160;330</a>)
+Finds the index of a data object&#39;s attribute given an attribute name (<a href="UG_GR.html#wp11685">Section&#160;8.10.3 on page&#160;332</a>)
 </div>
 </td>
 </tr>
@@ -567,7 +567,7 @@ mgfinfo
 </div>
 </td>
     <td><a name="wp56239"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Retrieves the number of raster images and the number of global attributes in the file (<a href="UG_GR.html#wp10756">Section&#160;8.9.1 on page&#160;319</a>)
+Retrieves the number of raster images and the number of global attributes in the file (<a href="UG_GR.html#wp10756">Section&#160;8.9.1 on page&#160;321</a>)
 </div>
 </td>
 </tr>
@@ -580,7 +580,7 @@ mggiinf
 </div>
 </td>
     <td><a name="wp56252"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Retrieves general information about a raster image (<a href="UG_GR.html#wp19016">Section&#160;8.9.2 on page&#160;320</a>)
+Retrieves general information about a raster image (<a href="UG_GR.html#wp19016">Section&#160;8.9.2 on page&#160;322</a>)
 </div>
 </td>
 </tr>
@@ -593,7 +593,7 @@ mgglinf
 </div>
 </td>
     <td><a name="wp56264"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Retrieves information about a palette (<a href="UG_GR.html#wp35164">Section&#160;8.11.4 on page&#160;337</a>)
+Retrieves information about a palette (<a href="UG_GR.html#wp35164">Section&#160;8.11.4 on page&#160;339</a>)
 </div>
 </td>
 </tr>
@@ -610,7 +610,7 @@ mgschnk
 </div>
 </td>
     <td><a name="wp56275"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Creates chunked raster image (<a href="UG_GR.html#wp61066">Section&#160;8.12.2 on page&#160;348</a>)
+Creates chunked raster image (<a href="UG_GR.html#wp61066">Section&#160;8.12.2 on page&#160;350</a>)
 </div>
 </td>
 </tr>
@@ -623,7 +623,7 @@ mggichnk
 </div>
 </td>
     <td><a name="wp56285"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Retrieves information about a chunked raster image (<a href="UG_GR.html#wp55146">Section&#160;8.12.5 on page&#160;358</a>)
+Retrieves information about a chunked raster image (<a href="UG_GR.html#wp55146">Section&#160;8.12.5 on page&#160;360</a>)
 </div>
 </td>
 </tr>
@@ -636,7 +636,7 @@ mgscchnk
 </div>
 </td>
     <td><a name="wp56296"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Sets maximum number of chunks to be cached (<a href="UG_GR.html#wp35107">Section&#160;8.12.6 on page&#160;358</a>)
+Sets maximum number of chunks to be cached (<a href="UG_GR.html#wp35107">Section&#160;8.12.6 on page&#160;360</a>)
 </div>
 </td>
 </tr>
@@ -652,7 +652,7 @@ mgrcchnk
 </div>
 </td>
     <td><a name="wp61752"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Reads a data chunk from a chunked raster image (pixel-interlace only) (<a href="UG_GR.html#wp65587">Section&#160;8.12.4 on page&#160;356</a>)
+Reads a data chunk from a chunked raster image (pixel-interlace only) (<a href="UG_GR.html#wp65587">Section&#160;8.12.4 on page&#160;358</a>)
 </div>
 </td>
 </tr>
@@ -668,7 +668,7 @@ mgwcchnk
 </div>
 </td>
     <td><a name="wp61738"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
-Writes a data chunk to a chunked raster image (pixel-interlace only) (<a href="UG_GR.html#wp62109">Section&#160;8.12.3 on page&#160;349</a>)
+Writes a data chunk to a chunked raster image (pixel-interlace only) (<a href="UG_GR.html#wp62109">Section&#160;8.12.3 on page&#160;351</a>)
 </div>
 </td>
 </tr>
@@ -737,10 +737,10 @@ In the GR interface, <b class="cFunctionName">Hopen</b> opens the files and <b c
 <b class="cFunctionName">GRstart</b> initializes the GR interface and must be called once after <b class="cFunctionName">Hopen</b> and before any other GR routines are called. It takes one argument, <em class="cVarName">file_id</em>, the file identifier returned by <b class="cFunctionName">Hopen</b>, and returns the interface identifier <em class="cVarName">gr_id</em> or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) upon unsuccessful completion. <b class="cFunctionName">Hopen</b> and <b class="cFunctionName">GRstart</b> can be called several times to access more than one file.
 </p>
 <a name="wp19914"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-<b class="cFunctionName">GRselect</b> specifies the given image as the current image to be accessed. It takes two arguments, the GR interface identifier <em class="cVarName">gr_id</em> and the raster image index <em class="cVarName">ri_index</em>, and returns the raster image identifier <em class="cVarName">ri_id</em> or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) upon unsuccessful completion. The GR interface identifier is returned by <b class="cFunctionName">GRstart</b>. The raster image index specifies the position of the image relative to the beginning of the file; it is zero-based, meaning that the index of the first image in the file is <sup class="cSuperscript">0</sup>. The index of a raster image can be obtained from the image&#39;s name using the routine <b class="cFunctionName">GRnametoindex</b> or from the image&#39;s reference number using <b class="cFunctionName">GRreftoindex</b>. These routines are discussed in <a href="UG_GR.html#wp37873"><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Section&#160;8.9.4 on page&#160;321</span></a> and <a href="UG_GR.html#wp37853">Section&#160;8.9.5 on page&#160;321</a>. The index value must be less than the total number of raster images in the file; that number can be obtained using <b class="cFunctionName">GRfileinfo</b>, described in <a href="UG_GR.html#wp10756"><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Section&#160;8.9.1 on page&#160;319</span></a>.
+<b class="cFunctionName">GRselect</b> specifies the given image as the current image to be accessed. It takes two arguments, the GR interface identifier <em class="cVarName">gr_id</em> and the raster image index <em class="cVarName">ri_index</em>, and returns the raster image identifier <em class="cVarName">ri_id</em> or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) upon unsuccessful completion. The GR interface identifier is returned by <b class="cFunctionName">GRstart</b>. The raster image index specifies the position of the image relative to the beginning of the file; it is zero-based, meaning that the index of the first image in the file is <sup class="cSuperscript">0</sup>. The index of a raster image can be obtained from the image&#39;s name using the routine <b class="cFunctionName">GRnametoindex</b> or from the image&#39;s reference number using <b class="cFunctionName">GRreftoindex</b>. These routines are discussed in <a href="UG_GR.html#wp37873"><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Section&#160;8.9.4 on page&#160;323</span></a> and <a href="UG_GR.html#wp37853">Section&#160;8.9.5 on page&#160;323</a>. The index value must be less than the total number of raster images in the file; that number can be obtained using <b class="cFunctionName">GRfileinfo</b>, described in <a href="UG_GR.html#wp10756"><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Section&#160;8.9.1 on page&#160;321</span></a>.
 </p>
 <a name="wp31076"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-The parameters for <b class="cFunctionName">GRstart</b> and <b class="cFunctionName">GRselect</b> are further defined in <a href="UG_GR.html#wp7836">Table 8B on page 300</a>.
+The parameters for <b class="cFunctionName">GRstart</b> and <b class="cFunctionName">GRselect</b> are further defined in <a href="UG_GR.html#wp7836">Table 8B on page 302</a>.
 </p>
 <a name="wp43731"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 <b class="cFunctionName">GRcreate</b> defines a new raster image using the arguments <em class="cVarName">gr_id</em>, <em class="cVarName">name</em>, <em class="cVarName">n_comps</em>, <em class="cVarName">data_type</em>, <em class="cVarName">interlace_mode</em>, and <em class="cVarName">dim_sizes</em>. Once a data set is created, you cannot change its name, data type, dimension, or number of components. <b class="cFunctionName">GRcreate</b> does not actually write the image to the file; this occurs only when <b class="cFunctionName">GRendaccess</b> is called. Thus, failing to call <b class="cFunctionName">GRendaccess</b> properly will cause a loss of data.
@@ -749,7 +749,7 @@ The parameters for <b class="cFunctionName">GRstart</b> and <b class="cFunctionN
 The buffer <em class="cVarName">name</em> contains the name of the image; it must not exceed <code style="font-family: Courier New; font-size: 8pt" class="cDefName">H4_MAX_GR_NAME </code>(or<code style="font-family: Courier New; font-size: 8pt" class="cDefName"> 256</code>). The parameter <em class="cVarName">n_comps</em> specifies the number of pixel components in the raster image; it must have a value of at least 1. The parameter <em class="cVarName">data_type</em> specifies the data type of the image data; it can be any of the data types supported by the HDF library. The HDF supported data type are defined in the header file &quot;hntdefs.h&quot; and listed in <a href="UG_Fundmtls.html#wp3081"><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Table 2F on page 14</span></a>.
 </p>
 <a name="wp43560"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-The parameter <em class="cVarName">interlace_mode</em> specifies the interlacing in which the raster image is to be written; it can be set to either <code style="font-family: Courier New; font-size: 8pt" class="cDefName">MFGR_INTERLACE_PIXEL</code><span style="color: #000000; font-family: Times New Roman; font-size: 8pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> </span>(or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>), <code style="font-family: Courier New; font-size: 8pt" class="cDefName">MFGR_INTERLACE_LINE</code> (or<code style="font-family: Courier New; font-size: 8pt" class="cDefName"> 1</code>), or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">MFGR_INTERLACE_COMPONENT</code> (or<code style="font-family: Courier New; font-size: 8pt" class="cDefName"> 2</code>). These definitions respectively correspond to pixel interlacing, line interlacing, and component interlacing. The first two interlacing modes are illustrated for the instance of 24-bit pixel representation in <a href="UG_RIS24s.html#wp5150">Figure&#160;7c on page&#160;279</a> of <a href="UG_RIS24s.html">Chapter 7, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">24-bit is it Raster Images (DF24 API)</span></a>.  Component interlacing, as the name implies, describes interlacing raster data by color component.  Note that images created with the GR interface are actually written to disk in pixel interlace mode; any user-specified interlace mode is stored in the file with the image and the image is automatically converted to that mode when it is read with a GR interface function.
+The parameter <em class="cVarName">interlace_mode</em> specifies the interlacing in which the raster image is to be written; it can be set to either <code style="font-family: Courier New; font-size: 8pt" class="cDefName">MFGR_INTERLACE_PIXEL</code><span style="color: #000000; font-family: Times New Roman; font-size: 8pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> </span>(or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>), <code style="font-family: Courier New; font-size: 8pt" class="cDefName">MFGR_INTERLACE_LINE</code> (or<code style="font-family: Courier New; font-size: 8pt" class="cDefName"> 1</code>), or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">MFGR_INTERLACE_COMPONENT</code> (or<code style="font-family: Courier New; font-size: 8pt" class="cDefName"> 2</code>). These definitions respectively correspond to pixel interlacing, line interlacing, and component interlacing. The first two interlacing modes are illustrated for the instance of 24-bit pixel representation in <a href="UG_RIS24s.html#wp5150">Figure&#160;7c on page&#160;281</a> of <a href="UG_RIS24s.html">Chapter 7, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">24-bit is it Raster Images (DF24 API)</span></a>.  Component interlacing, as the name implies, describes interlacing raster data by color component.  Note that images created with the GR interface are actually written to disk in pixel interlace mode; any user-specified interlace mode is stored in the file with the image and the image is automatically converted to that mode when it is read with a GR interface function.
 </p>
 <a name="wp43762"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 The parameter <em class="cVarName">dim_sizes</em> specifies the size of the two dimensions of the image. The dimension sizes must be specified; their values must be at least 1.
@@ -2133,7 +2133,7 @@ To read data from an image array, the calling program must contain the following
 </p><a name="wp10410"> </a><p style="font-family: Courier New; font-size: 9pt" class="pSyntaxLine">		status = mgendac(gr_id)
 </p></ul></div>
 <a name="wp34551"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-<b class="cFunctionName">GRreadimage</b> can be used to read either an entire image or a subsample of the image. The <em class="cVarName">ri_id </em>argument is the raster image identifier returned by <b class="cFunctionName">GRselect</b>. As with <b class="cFunctionName">GRwriteimage</b>, the arguments <em class="cVarName">start</em>, <em class="cVarName">stride</em>, and <em class="cVarName">edges</em> respectively describe the starting location for the read operation, the number of locations the current image array location will be moved forward after each read, and the length of each dimension to be read. Refer to <a href="UG_GR.html#wp44102">Section&#160;8.6.1 on page&#160;300</a> for detailed descriptions of the parameters <em class="cVarName">start</em>, <em class="cVarName">stride</em>, and <em class="cVarName">edges</em>. If the image array is smaller than the <em class="cVarName">data</em> argument array, the amount of data read will be limited to the maximum size of the image array. 
+<b class="cFunctionName">GRreadimage</b> can be used to read either an entire image or a subsample of the image. The <em class="cVarName">ri_id </em>argument is the raster image identifier returned by <b class="cFunctionName">GRselect</b>. As with <b class="cFunctionName">GRwriteimage</b>, the arguments <em class="cVarName">start</em>, <em class="cVarName">stride</em>, and <em class="cVarName">edges</em> respectively describe the starting location for the read operation, the number of locations the current image array location will be moved forward after each read, and the length of each dimension to be read. Refer to <a href="UG_GR.html#wp44102">Section&#160;8.6.1 on page&#160;302</a> for detailed descriptions of the parameters <em class="cVarName">start</em>, <em class="cVarName">stride</em>, and <em class="cVarName">edges</em>. If the image array is smaller than the <em class="cVarName">data</em> argument array, the amount of data read will be limited to the maximum size of the image array. 
 </p>
 <a name="wp22880"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 Note that the FORTRAN-77 version of <b class="cFunctionName">GRreadimage</b> has two routines; <b class="cFunctionName">mgrdimg</b> reads numeric image data and <b class="cFunctionName">mgrcimg</b> reads character image data.
@@ -2152,7 +2152,7 @@ The <b class="cFunctionName">GRreqimageil</b> routine sets the interlace mode fo
 </p><a name="wp37322"> </a><p style="font-family: Courier New; font-size: 9pt" class="pSyntaxLine"><b style="font-family: Courier New; font-size: 9pt" class="cBold">FORTRAN:</b>	status = mgrimil(ri_id, interlace_mode)
 </p></ul></div>
 <a name="wp37317"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-<b class="cFunctionName">GRreqimageil</b> can be called at any time before the read operation and takes two parameters, <em class="cVarName">ri_id</em> and <em class="cVarName">interlace_mode</em>. The parameter <em class="cVarName">ri_id</em> is the raster image identifier returned by the <b class="cFunctionName">GRselect</b> routine and the parameter <em class="cVarName">interlace_mode</em> specifies the interlace mode that will be in effect for the image read operation. Refer to <a href="UG_GR.html#wp7730">Section&#160;8.5.1 on page&#160;298</a> for a description of the GR interlace modes.
+<b class="cFunctionName">GRreqimageil</b> can be called at any time before the read operation and takes two parameters, <em class="cVarName">ri_id</em> and <em class="cVarName">interlace_mode</em>. The parameter <em class="cVarName">ri_id</em> is the raster image identifier returned by the <b class="cFunctionName">GRselect</b> routine and the parameter <em class="cVarName">interlace_mode</em> specifies the interlace mode that will be in effect for the image read operation. Refer to <a href="UG_GR.html#wp7730">Section&#160;8.5.1 on page&#160;300</a> for a description of the GR interlace modes.
 </p>
 <a name="wp35888"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 <b class="cFunctionName">GRreqimagetil</b> may be called more than once; the interlace mode setting specified by the last call to the routine will be used for the next read operation.
@@ -2642,7 +2642,7 @@ The routines covered in this section provide methods for obtaining information a
 <b class="cFunctionName">GRfileinfo</b> retrieves the number of images and file attributes in a file. <b class="cFunctionName">GRgetiminfo</b> provides information about individual images. To retrieve information about all images in a file, a calling program can use <b class="cFunctionName">GRfileinfo</b> to determine the number of images, followed by repeated calls to <b class="cFunctionName">GRgetiminfo</b> to obtain information about each image.
 </p>
 <a name="wp37493"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-<b class="cFunctionName">GRnametoindex</b> or <b class="cFunctionName">GRreftoindex</b> can be used to obtain the index of a raster image in a file knowing its name or reference number, respectively. Refer to <a href="UG_GR.html#wp55578"><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Section&#160;8.2.1 on page&#160;294</span></a> for a description of the raster image index and reference number. <b class="cFunctionName">GRidtoref</b> is used when the reference number of an image is required by another routine and the raster image identifier is available.
+<b class="cFunctionName">GRnametoindex</b> or <b class="cFunctionName">GRreftoindex</b> can be used to obtain the index of a raster image in a file knowing its name or reference number, respectively. Refer to <a href="UG_GR.html#wp55578"><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Section&#160;8.2.1 on page&#160;296</span></a> for a description of the raster image index and reference number. <b class="cFunctionName">GRidtoref</b> is used when the reference number of an image is required by another routine and the raster image identifier is available.
 </p>
 <a name="wp37497"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 These routines are described individually in the following subsections.
@@ -2661,7 +2661,7 @@ These routines are described individually in the following subsections.
 The number of images in the file and the total number of file attributes will be stored in the arguments <em class="cVarName">n_images</em> and <em class="cVarName">n_file_attrs</em>, respectively. 
 </p>
 <a name="wp54861"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-<b class="cFunctionName">GRfileinfo</b> returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) if successful or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) otherwise.  The parameters for <b class="cFunctionName">GRfileinfo</b> are further described in <a href="UG_GR.html#wp10901">Table 8G on page 320</a>.
+<b class="cFunctionName">GRfileinfo</b> returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) if successful or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) otherwise.  The parameters for <b class="cFunctionName">GRfileinfo</b> are further described in <a href="UG_GR.html#wp10901">Table 8G on page 322</a>.
 </p>
 <a name="wp19016"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
 	8.9.2	Obtaining Information about an Image: GRgetiminfo
@@ -2924,7 +2924,7 @@ Number of raster image attributes
 </p><a name="wp37718"> </a><p style="font-family: Courier New; font-size: 9pt" class="pSyntaxLine"><b style="font-family: Courier New; font-size: 9pt" class="cBold">FORTRAN:</b>	ref = mgid2rf(ri_id)
 </p></ul></div>
 <a name="wp37871"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-This routine is further defined in <a href="UG_GR.html#wp11169">Table 8H on page 323</a>.
+This routine is further defined in <a href="UG_GR.html#wp11169">Table 8H on page 325</a>.
 </p>
 <a name="wp37873"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
 	8.9.4	Obtaining the Index of a Raster Image from Its Reference Number: GRreftoindex
@@ -3565,7 +3565,7 @@ The arguments <em class="cVarName">data_type</em>, <em class="cVarName">n_values
 Note that the FORTRAN-77 version of <b class="cFunctionName">GRsetattr</b> has two routines; <b class="cFunctionName">mgsnatt</b> writes numeric attribute data and <b class="cFunctionName">mgscatt</b> writes character attribute data.
 </p>
 <a name="wp33558"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-<b class="cFunctionName">GRsetattr</b> returns either <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). The parameters for <b class="cFunctionName">GRsetattr</b> are further described in <a href="UG_GR.html#wp11895">Table 8I on page 332</a>.
+<b class="cFunctionName">GRsetattr</b> returns either <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). The parameters for <b class="cFunctionName">GRsetattr</b> are further described in <a href="UG_GR.html#wp11895">Table 8I on page 334</a>.
 </p>
 <a name="wp11626"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 16pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 EXAMPLE 5.	Operations on File and Raster Image Attributes.
@@ -4595,7 +4595,7 @@ num_entries, pal_data)
 The parameter <em class="cVarName">n_comps</em> specifies the number of pixel components in the palette; it must have a value of at least 1. The parameter <em class="cVarName">data_type</em> specifies the data type of the palette data. Refer to <a href="UG_Fundmtls.html#wp3081">Table 2F on page 14</a> for all data types supported by HDF.
 </p>
 <a name="wp38418"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-The parameter <em class="cVarName">interlace_mode</em> specifies the interlacing in which the palette is to be written. The valid values of <em class="cVarName">interlace_mode</em> are: <code style="font-family: Courier New; font-size: 8pt" class="cDefName">MFGR_INTERLACE_PIXEL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>), <code style="font-family: Courier New; font-size: 8pt" class="cDefName">MFGR_INTERLACE_LINE</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">1</code>) and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">MFGR_INTERLACE_COMPONENT</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">2</code>). Refer to <a href="UG_GR.html#wp7730">Section&#160;8.5.1 on page&#160;298</a> for further information.
+The parameter <em class="cVarName">interlace_mode</em> specifies the interlacing in which the palette is to be written. The valid values of <em class="cVarName">interlace_mode</em> are: <code style="font-family: Courier New; font-size: 8pt" class="cDefName">MFGR_INTERLACE_PIXEL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>), <code style="font-family: Courier New; font-size: 8pt" class="cDefName">MFGR_INTERLACE_LINE</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">1</code>) and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">MFGR_INTERLACE_COMPONENT</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">2</code>). Refer to <a href="UG_GR.html#wp7730">Section&#160;8.5.1 on page&#160;300</a> for further information.
 </p>
 <a name="wp38430"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 The parameter <em class="cVarName">num_entries</em> specifies the number of entries in the palette. The buffer <em class="cVarName">pal_data</em> contains the palette data.
@@ -4604,7 +4604,7 @@ The parameter <em class="cVarName">num_entries</em> specifies the number of entr
 Note that the FORTRAN-77 version of <b class="cFunctionName">GRwritelut</b> has two routines; <b class="cFunctionName">mgwrlut</b> writes buffered numeric palette data and <b class="cFunctionName">mgwclut</b> writes buffered character palette data.
 </p>
 <a name="wp38439"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-<b class="cFunctionName">GRwritelut</b> returns either <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). The parameters of this routine are further defined in <a href="UG_GR.html#wp15987">Table 8K on page 340</a>.
+<b class="cFunctionName">GRwritelut</b> returns either <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). The parameters of this routine are further defined in <a href="UG_GR.html#wp15987">Table 8K on page 342</a>.
 </p>
 <a name="wp34422"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
 	8.11.6	Setting the Interlace Mode for a Palette: GRreqlutil 
@@ -4617,13 +4617,13 @@ Note that the FORTRAN-77 version of <b class="cFunctionName">GRwritelut</b> has 
 </p><a name="wp43496"> </a><p style="font-family: Courier New; font-size: 9pt" class="pSyntaxLine"><b style="font-family: Courier New; font-size: 9pt" class="cBold">FORTRAN:</b>	status = mgrltil(pal_id, interlace_mode)
 </p></ul></div>
 <a name="wp43532"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-The parameter <em class="cVarName">interlace_mode</em> specifies the interlacing that will be in effect for the next palette read operation. The valid values of <em class="cVarName">interlace_mode</em> are: <code style="font-family: Courier New; font-size: 8pt" class="cDefName">MFGR_INTERLACE_PIXEL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>), <code style="font-family: Courier New; font-size: 8pt" class="cDefName">MFGR_INTERLACE_LINE</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">1</code>) and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">MFGR_INTERLACE_COMPONENT</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">2</code>). Refer to <a href="UG_GR.html#wp7730">Section&#160;8.5.1 on page&#160;298</a> for further information.
+The parameter <em class="cVarName">interlace_mode</em> specifies the interlacing that will be in effect for the next palette read operation. The valid values of <em class="cVarName">interlace_mode</em> are: <code style="font-family: Courier New; font-size: 8pt" class="cDefName">MFGR_INTERLACE_PIXEL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>), <code style="font-family: Courier New; font-size: 8pt" class="cDefName">MFGR_INTERLACE_LINE</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">1</code>) and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">MFGR_INTERLACE_COMPONENT</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">2</code>). Refer to <a href="UG_GR.html#wp7730">Section&#160;8.5.1 on page&#160;300</a> for further information.
 </p>
 <a name="wp43593"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 <b class="cFunctionName">GRreqlutil</b> may be called at anytime before the read operation of the specified palette. In addition, it may be called more than once; the interlace mode setting specified by the last call to the routine will be used for the next read operation.
 </p>
 <a name="wp34442"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-<b class="cFunctionName">GRreqlutil</b> returns either <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). The parameters of this routine are further defined in <a href="UG_GR.html#wp15987">Table 8K on page 340</a>.
+<b class="cFunctionName">GRreqlutil</b> returns either <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>). The parameters of this routine are further defined in <a href="UG_GR.html#wp15987">Table 8K on page 342</a>.
 </p>
 <a name="wp43613"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
 	8.11.7	Reading Palette Data: GRreadlut
@@ -5399,7 +5399,7 @@ Chunks of scientific datasets (SDSs) have the same dimensionality as the SDS its
 </p>
 <a name="wp61094"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
 FIGURE 8b	</div>
-<div align="left"><img src="images/hdf4_08-UG_GR-1-2.jpg" height="315" width="648" id="wp61095" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
+<div align="left"><img src="images/hdf4_09-UG_GR-1-2.jpg" height="315" width="648" id="wp61095" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
 Chunks in a GR raster image dataset
 </div>
 <a name="wp61066"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
@@ -5521,7 +5521,7 @@ Chunk dimensions are specified in the array <em class="cVarName">dim_length</em>
 The parameter <em class="cVarName">comp_prm</em> specifies the compression parameters for the Skipping Huffman and GZIP compression methods. It contains only one element which is set to the skipping size for Skipping Huffman compression or the deflate level for GZIP compression.  Currently, Szip compression is not yet supported by Fortran GR interface.
 </p>
 <a name="wp55149"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-<b class="cFunctionName">GRsetchunk</b> returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) if successful and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) otherwise. The <b class="cFunctionName">GRsetchunk</b> parameters are discussed further in <a href="UG_GR.html#wp126832">Table 8L on page 359</a>
+<b class="cFunctionName">GRsetchunk</b> returns <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SUCCEED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) if successful and <code style="font-family: Courier New; font-size: 8pt" class="cDefName">FAIL</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) otherwise. The <b class="cFunctionName">GRsetchunk</b> parameters are discussed further in <a href="UG_GR.html#wp126832">Table 8L on page 361</a>
 </p>
 <a name="wp62109"> </a><h3 style="font-family: Times New Roman; font-size: 12pt; margin-top: 14pt" class="pHeading3">
 	8.12.3	Writing a Chunked Raster Image: GRwritechunk
@@ -5563,12 +5563,12 @@ In this example, the program creates an image of 6 rows by 10 columns in C and 1
 </p>
 <a name="wp65714"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
 FIGURE 8c	Chunked GR image as written</div>
-<div align="left"><img src="images/hdf4_08-UG_GR-1-3.jpg" height="603" width="669" id="wp65602" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
+<div align="left"><img src="images/hdf4_09-UG_GR-1-3.jpg" height="603" width="669" id="wp65602" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
  by C example 
 </div>
 <a name="wp65829"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
 FIGURE 8d	Chunked GR image as written</div>
-<div align="left"><img src="images/hdf4_08-UG_GR-1-4.jpg" height="460" width="648" id="wp65717" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
+<div align="left"><img src="images/hdf4_09-UG_GR-1-4.jpg" height="460" width="648" id="wp65717" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
  by FORTRAN example
 </div>
 <a name="wp127130"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 2pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 108pt; text-transform: none">
@@ -5901,7 +5901,7 @@ int main()<a name="wp127245"> </a>
 The value returned in the parameter <em class="cVarName">flag</em> indicates whether the raster image is not chunked, chunked, or chunked and compressed. <code style="font-family: Courier New; font-size: 8pt" class="cDefName">HDF_NONE</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">-1</code>) indicates that the raster image is not chunked. <code style="font-family: Courier New; font-size: 8pt" class="cDefName">HDF_CHUNK</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) indicates that the raster image is chunked and not compressed. (<code style="font-family: Courier New; font-size: 8pt" class="cDefName">HDF_CHUNK | HDF_COMP</code>) (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">1</code>) indicates that raster image is chunked and compressed with one of the allowed compression methods: RLE, Skipping Huffman, or GZIP.
 </p>
 <a name="wp38207"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-In C, if the raster image is chunked and not compressed, <b class="cFunctionName">GRgetchunkinfo</b> fills the array <em class="cVarName">chunk_lengths</em> in the union <em class="cVarName">c_def</em> with the values of the corresponding chunk dimensions. If the raster image is chunked and compressed, <b class="cFunctionName">GRgetchunkinfo</b> fills the array <em class="cVarName">chunk_lengths</em> in the structure <em class="cVarName">comp</em> of the union <em class="cVarName">c_def</em> with the values of the corresponding chunk dimensions. Refer to <a href="UG_GR.html#wp61066">Section&#160;8.12.2 on page&#160;348</a> on <b class="cFunctionName">GRsetchunk</b> for specific information on the union <code style="font-family: Courier New; font-size: 8pt" class="cDefName">HDF_CHUNK_DEF</code>. In C, if the chunk length for each dimension is not needed, <code style="font-family: Courier New; font-size: 8pt" class="cDefName">NULL</code> can be passed in as the value of the parameter <em class="cVarName">c_def</em>.
+In C, if the raster image is chunked and not compressed, <b class="cFunctionName">GRgetchunkinfo</b> fills the array <em class="cVarName">chunk_lengths</em> in the union <em class="cVarName">c_def</em> with the values of the corresponding chunk dimensions. If the raster image is chunked and compressed, <b class="cFunctionName">GRgetchunkinfo</b> fills the array <em class="cVarName">chunk_lengths</em> in the structure <em class="cVarName">comp</em> of the union <em class="cVarName">c_def</em> with the values of the corresponding chunk dimensions. Refer to <a href="UG_GR.html#wp61066">Section&#160;8.12.2 on page&#160;350</a> on <b class="cFunctionName">GRsetchunk</b> for specific information on the union <code style="font-family: Courier New; font-size: 8pt" class="cDefName">HDF_CHUNK_DEF</code>. In C, if the chunk length for each dimension is not needed, <code style="font-family: Courier New; font-size: 8pt" class="cDefName">NULL</code> can be passed in as the value of the parameter <em class="cVarName">c_def</em>.
 </p>
 <a name="wp38222"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 In FORTRAN-77, chunk dimensions are retrieved into the array <em class="cVarName">dim_length</em>.
@@ -6359,7 +6359,7 @@ Buffer with chunk data in pixel interlace mode
     <table id="SummaryNotReq2" border="0" width="850" cellspacing="0" cellpadding="0">
       <tr>
         <td align="left">
-        HDF 4.2.10 - February 2014<br/>
+        HDF 4.2.11 - February 2015<br/>
         <a href="THG_Copyright.html">Copyright</a>
         <td align="right">
           <span style="font-size: 12px; font-weight: bold">

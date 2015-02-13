@@ -7,7 +7,7 @@
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.8.2296" />
     <meta name="TEMPLATEBASE" content="HDF4 Version 1.0" />
-    <meta name="LASTUPDATED" content="04/22/14 12:41:52" />
+    <meta name="LASTUPDATED" content="02/13/15 13:13:39" />
     <title>Chapter 3 --	Scientific Data Sets (SD API)</title>
     <link rel="StyleSheet" href="document.css" type="text/css" media="all" />
     <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
@@ -36,7 +36,7 @@
         </td>
         <td valign="middle" align="center">
           <b><H1>HDF User’s Guide</H1>
-           4.2.10</b><br />
+           4.2.11</b><br />
         </td>
         <td valign="middle" align="right">
         <br/>
@@ -6350,7 +6350,7 @@ A <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; fo
 For example, if a dimension of length 6 named &quot;depth&quot; is assigned a dimension scale, its scale is a one-dimensional array of length 6 and is also assigned the name &quot;depth&quot;. The name of the dimension will also appear as the name of the dimension scale.
 </p>
 <a name="wp25450"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-Recall that when dimension scale is assigned to a dimension, the dimension is implemented as an SDS array with data being the data scale. Although dimension scales are conceptually different from SDS arrays, they are implemented as SDS arrays by the SDS interface and are treated similarly by the routines in the interface. For example, when the <b class="cFunctionName">SDfileinfo</b> routine returns the number of data sets in a file, it includes dimension scales in that number. The <b class="cFunctionName">SDiscoordvar</b> routine (described in <a href="UG_SD.html#wp187619">Section&#160;3.8.4.4 on page&#160;88</a>) distinguishes SDS data sets from dimension scales.
+Recall that when dimension scale is assigned to a dimension, the dimension is implemented as an SDS array with data being the data scale. Although dimension scales are conceptually different from SDS arrays, they are implemented as SDS arrays by the SD interface and are treated similarly by the routines in the interface. For example, when the <b class="cFunctionName">SDfileinfo</b> routine returns the number of data sets in a file, it includes dimension scales in that number. The <b class="cFunctionName">SDiscoordvar</b> routine (described in <a href="UG_SD.html#wp187619">Section&#160;3.8.4.4 on page&#160;88</a>) distinguishes SDS data sets from dimension scales.
 </p>
 <a name="wp187593"> </a><h4 style="font-family: Times New Roman; font-size: 10pt; margin-top: 10pt" class="pHeading4">
 	3.8.4.1	Writing Dimension Scales: SDsetdimscale
@@ -12531,15 +12531,24 @@ Deletes an attribute
 <a name="wp250368"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 The <b class="cFunctionName">ncdump</b> summary capability works on both HDF and netCDF files.
 </p>
-<a name="wp250369"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
+<a name="wp314043"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 The <b class="cFunctionName">ncgen</b> summary capability works only on netCDF files.
 </p>
-<a name="wp250367"> </a><h4 style="font-family: Times New Roman; font-size: 10pt; margin-top: 10pt" class="pHeading4">
+<a name="wp314044"> </a><h4 style="font-family: Times New Roman; font-size: 10pt; margin-top: 10pt" class="pHeading4">
 	3.14.2.1	Using ncdump on HDF Files
 </h4>
-<a name="wp250328"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
+<a name="wp314045"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 When used with an HDF file on some platforms (reported on SGI), <b class="cFunctionName">ncdump</b> may display signed 8-bit integer data (<span style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">int8</span>, with the intended signed range of <em class="cVarName">-127</em> through <em class="cVarName">128</em>) as unsigned 8-bit integer data (<span style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">uint8</span>, with the unsigned range <em class="cVarName">0</em> through <em class="cVarName">255</em>).  This is due to the mapping of <span style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">int8</span> and <span style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">uint8</span> data types in HDF to a common data type, <span style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">NC_BYTE</span>, in netCDF.
 </p>
+<a name="wp314048"> </a><h4 style="font-family: Times New Roman; font-size: 10pt; margin-top: 10pt" class="pHeading4">
+	3.14.2.2	New error code from ncdump
+</h4>
+<a name="wp314024"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
+Prior to 4.2.11, ncdump did not report failure in reading corrupted data even though the internal reading function failed, thus, ncdump appeared to succeed when data corruption exists.  Starting in version 4.2.11, when corrupted data is encountered, ncdump will display the following message for the variable with corrupted data and proceed to the next variable or exit if there are no more variables to read:
+</p>
+<a name="wp314031"> </a><div style="color: #000000; font-family: Courier New; font-size: 8pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 126pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+ &quot;Reading failed for variable &lt;<span style="color: #000000; font-family: Courier New; font-size: 8pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Variable name</span>&gt;, the data is possibly corrupted.&quot;
+</div>
 
 <a name="wp312379"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 9pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 135pt; margin-right: 0pt; margin-top: 3pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
 <a href="#wp312370"><sup class="Footnote">1</sup></a><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">netCDF-3 User&#39;s Guide for C</span> (June 5, 1997), Section 7, <a href="http://www.unidata.ucar.edu/software/netcdf/docs/netcdf/"><span class="cWebJump">http://www.unidata.ucar.edu/software/netcdf/docs/netcdf/</span></a>.
@@ -12554,7 +12563,7 @@ When used with an HDF file on some platforms (reported on SGI), <b class="cFunct
     <table id="SummaryNotReq2" border="0" width="850" cellspacing="0" cellpadding="0">
       <tr>
         <td align="left">
-        HDF 4.2.10 - February 2014<br/>
+        HDF 4.2.11 - February 2015<br/>
         <a href="THG_Copyright.html">Copyright</a>
         <td align="right">
           <span style="font-size: 12px; font-weight: bold">
