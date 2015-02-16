@@ -204,7 +204,7 @@ UsrGuide/html/UG_Fundmtls.html -text
 UsrGuide/html/UG_GR.html -text
 UsrGuide/html/UG_Intro.html -text
 UsrGuide/html/UG_MF_Annot.html -text
-UsrGuide/html/UG_PDF.pdf -text
+UsrGuide/html/UG_PDF.pdf -text svneol=unset#unset
 UsrGuide/html/UG_Palettes.html -text
 UsrGuide/html/UG_Perform.html -text
 UsrGuide/html/UG_RIS24s.html -text
