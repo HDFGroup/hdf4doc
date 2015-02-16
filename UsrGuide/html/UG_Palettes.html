@@ -7,12 +7,12 @@
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.8.2296" />
     <meta name="TEMPLATEBASE" content="HDF4 Version 1.0" />
-    <meta name="LASTUPDATED" content="02/13/15 13:14:31" />
+    <meta name="LASTUPDATED" content="02/16/15 08:45:51" />
     <title>Chapter 9 --	Palettes (DFP API)</title>
     <link rel="StyleSheet" href="document.css" type="text/css" media="all" />
     <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
 <link rel="first" title="First" href="UG_Intro.html" />
-<link rel="last" title="Last" href="UG_Top.html" />
+<link rel="last" title="Last" href="UG_BookIX.html" />
 <link rel="previous" title="Previous" href="UG_GR.html" />
 <link rel="next" title="Next" href="UG_MF_Annot.html" />
 
@@ -74,7 +74,7 @@ For each of the 256 colors in a palette, there are three 8-bit numbers describin
 </p>
 <a name="wp1695"> </a><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
 FIGURE 9a	Color Mapping Using a Palette</div>
-<div align="left"><img src="images/hdf4_10-UG_Palettes-1-1.jpg" height="188" width="447" id="wp17333" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
+<div align="left"><img src="images/hdf4_09-UG_Palettes-1-1.jpg" height="188" width="447" id="wp17333" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 0pt; margin-left: 95pt; margin-right: 0pt; margin-top: 8pt; text-align: left; text-decoration: none; text-indent: -95pt; text-transform: none">
 
 </div>
 <a name="wp6513"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
@@ -741,7 +741,7 @@ To access a specific palette, use the following calling sequence:
 <b class="cFunctionName">DFPreadref</b> specifies the reference number for the next read operation performed on the HDF file<span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> </span><em style="font-style: italic" class="cVarName">filename</em><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault"> to the reference number specified by </span><em style="font-style: italic" class="cVarName">ref</em><span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">.</span>
 </p>
 <a name="wp17781"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-Due to an oversight in the library, in very rare cases, a palette may not be seen by the DFP API, the application may need to use GR API to obtain it. Please refer to Appendix D, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Issue of Missing Palettes</span> of this document for a detailed description of the issue and for help in determining which functions to use.
+Due to an oversight in the library, in very rare cases, a palette may not be seen by the DFP API, the application may need to use GR API to obtain it. Please refer to <a href="UG_Appndx.html#wp39700">Appendix D, <span style="color: #000000; font-family: Times New Roman; font-size: 10pt; font-style: italic; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none; vertical-align: baseline" class="cDefault">Issue of Missing Palettes</span></a> of this document for a detailed description of the issue and for help in determining which functions to use.
 </p>
 <a name="wp3322"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 The parameters of <b class="cFunctionName">DFPreadref</b> are further defined in the following table.

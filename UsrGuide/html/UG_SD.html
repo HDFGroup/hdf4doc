@@ -7,12 +7,12 @@
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.8.2296" />
     <meta name="TEMPLATEBASE" content="HDF4 Version 1.0" />
-    <meta name="LASTUPDATED" content="02/13/15 13:13:39" />
+    <meta name="LASTUPDATED" content="02/16/15 08:44:45" />
     <title>Chapter 3 --	Scientific Data Sets (SD API)</title>
     <link rel="StyleSheet" href="document.css" type="text/css" media="all" />
     <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
 <link rel="first" title="First" href="UG_Intro.html" />
-<link rel="last" title="Last" href="UG_Top.html" />
+<link rel="last" title="Last" href="UG_BookIX.html" />
 <link rel="previous" title="Previous" href="UG_Fundmtls.html" />
 <link rel="next" title="Next" href="UG_Vdatas.html" />
 
@@ -1264,7 +1264,7 @@ The parameter <em class="cVarName">data_type</em> is a defined name, prefaced by
 The parameter <em class="cVarName">rank</em> is a positive integer specifying the number of dimensions of the SDS array. The maximum rank of an SDS array is defined by <code style="font-family: Courier New; font-size: 8pt" class="cDefName">H4_MAX_VAR_DIMS</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">32</code>), which is defined in the header file &quot;hlimits.h&quot;.  Note that, in order for HDF4 and NetCDF models to work together, HDF allows SDS to have rank 0.  However, there is no intention for data to be written to this type of SDS, but only to store attribute as part of the data description.  Consequently, setting compression and setting chunk are disallowed.
 </p>
 <a name="wp147662"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
-Each element of the one-dimensional array <em class="cVarName">dim_sizes</em> specifies the length of the corresponding dimension of the SDS array. The size of <em class="cVarName">dim_sizes</em> must be the value of the parameter <em class="cVarName">rank</em>. To create a data set with an unlimited dimension, assign the value of <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SD_UNLIMITED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) to <em class="cVarName">dim_sizes[0]</em> in C, and to <em class="cVarName">dim_sizes(rank)</em> in FORTRAN-77. See the notes regarding the potential performance impact of unlimited dimension data sets in <a href="UG_Perform.html#wp178683">Section 14.4.3, &quot;Unlimited Dimension Data Sets (SDSs and Vdatas) and Performance&quot; on page 455</a>.
+Each element of the one-dimensional array <em class="cVarName">dim_sizes</em> specifies the length of the corresponding dimension of the SDS array. The size of <em class="cVarName">dim_sizes</em> must be the value of the parameter <em class="cVarName">rank</em>. To create a data set with an unlimited dimension, assign the value of <code style="font-family: Courier New; font-size: 8pt" class="cDefName">SD_UNLIMITED</code> (or <code style="font-family: Courier New; font-size: 8pt" class="cDefName">0</code>) to <em class="cVarName">dim_sizes[0]</em> in C, and to <em class="cVarName">dim_sizes(rank)</em> in FORTRAN-77. See the notes regarding the potential performance impact of unlimited dimension data sets in <a href="UG_Perform.html#wp178683">Section 14.4.3, &quot;Unlimited Dimension Data Sets (SDSs and Vdatas) and Performance&quot; on page 461</a>.
 </p>
 <a name="wp147637"> </a><p style="font-family: Times New Roman; font-size: 10pt; font-style: normal; font-weight: normal; line-height: 12pt; margin-bottom: 0pt; margin-right: 0pt; margin-top: 6pt" class="pBody">
 Once an SDS is created, you cannot change its name, data type, size, or shape. However, it is possible to modify the data set&#39;s data or to create an empty data set and later add values. To add data or modify an existing data set, use <b class="cFunctionName">SDselect</b> to get the data set identifier instead of <b class="cFunctionName">SDcreate</b>.
