@@ -1,0 +1,2745 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rhlayout majorversion="1" minorversion="0">
+	<flags>1</flags>
+	<media>
+		<query name="Print" id="print" css_selector="@media print"/>
+		<query name="desktop" id="desktop" css_selector="@media screen and (min-width: 81em)"/>
+		<query name="Tablet Landscape" id="tablet_landscape" css_selector="@media screen and (min-width: 59.5em) and (max-width: 80.99em)"/>
+		<query name="Tablet Portrait" id="tablet_portrait" css_selector="@media screen and (min-width: 43.69em) and (max-width: 59.49em)"/>
+		<query name="Phone" id="phone" css_selector="@media screen and (max-width: 43.68em)"/>
+	</media>
+	<groups>
+		<group res_ID="ID_GROUP_HEADER" layoutimage="preview/header.png">Header</group>
+		<group res_ID="ID_GROUP_FUNCTIONBAR" layoutimage="preview/functionbar.png">Function bar</group>
+		<group res_ID="ID_GROUP_GLOBAL" layoutimage="preview/global.png">Global</group>
+		<group res_ID="ID_GROUP_SIDEBAR" layoutimage="preview/sidebar.png">Sidebar</group>
+		<group res_ID="ID_GROUP_SEARCH" layoutimage="preview/search.png">Search</group>
+		<group res_ID="ID_GROUP_TOCTREE" layoutimage="preview/toctree.png">TOC Desktop</group>
+		<group res_ID="ID_GROUP_TOCNODE" layoutimage="preview/tocnode.png">TOC Mobile/Tablet</group>
+		<group res_ID="ID_GROUP_INDEX_DESKTOP" layoutimage="preview/index.png">Index Desktop</group>
+		<group res_ID="ID_GROUP_INDEX_MOBILE" layoutimage="preview/index_mobile.png">Index Mobile/Tablet</group>
+		<group res_ID="ID_GROUP_GLOSSARY_DESKTOP" layoutimage="preview/glossary.png">Glossary Desktop</group>
+		<group res_ID="ID_GROUP_GLOSSARY_MOBILE" layoutimage="preview/glossary_mobile.png">Glossary Mobile/Tablet</group>
+		<group res_ID="ID_GROUP_SPECIALPAGE" layoutimage="preview/specialpage.png">Title Mobile</group>
+		<group res_ID="ID_GROUP_MOBILE_NAVIGATION" layoutimage="preview/mobile_navigation.png">Navigation Mobile/Tablet</group>
+	</groups>
+	<variables>
+		<variable>
+			<name>header_bgcolor</name>
+			<uiname res_ID="ID_NAME_HEADER_BGCOLOR">Background</uiname>
+			<type>HTML_COLOR</type>
+			<value>#0079ac</value>
+			<group res_ID="ID_GROUP_HEADER"/>
+			<visual_properties left="499px" top="1px" height="10px" width="80px"/>
+			<description res_ID="ID_DESC_HEADER_BGCOLOR">The background color of the header</description>
+			<default-value>#0079ac</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source filename="main.css" cssproperty="background-color" css_selector="div.header"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>logo</name>
+			<uiname res_ID="ID_NAME_LOGO">Logo</uiname>
+			<type>FILE</type>
+			<value>logo.png</value>
+			<group res_ID="ID_GROUP_HEADER"/>
+			<visual_properties left="82px" top="1px" height="10px" width="50px"/>
+			<description res_ID="ID_DESC_Logo">The logo used in the layout. Use an image OF 80x80 pixels for best results.</description>
+			<default-value>logo.png</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source filename="topic.slp" attribute="src" id="wLogoImage"></source>
+				<source filename="table_of_contents.slp" attribute="src" id="wLogoImage"></source>
+				<source filename="glossary.slp" attribute="src" id="wLogoImage"></source>
+				<source filename="index.slp" attribute="src" id="wLogoImage"></source>
+				<source filename="searrchresults.slp" attribute="src" id="wLogoImage"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>homelink_font_family</name>
+			<uiname res_ID="ID_NAME_HOMELINK_FONT_FAMILY">Font</uiname>
+			<type>CSS_FONT_FAMILY</type>
+			<value>Times New Roman</value>
+			<group res_ID="ID_GROUP_HEADER"/>
+			<visual_properties left="191px" top="1px" height="10px" width="50px"/>
+			<description res_ID="ID_DESC_HOMELINK_FONT_FAMILY">The title font</description>
+			<default-value>"Arial Black", Arial, sans-serif</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source filename="main.css" cssproperty="font-family" css_selector="a.homelink"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>homelink_font_weight</name>
+			<uiname res_ID="ID_NAME_HOMELINK_FONT_WEIGHT">Font weight</uiname>
+			<type>CSS_FONT_WEIGHT</type>
+			<value>700</value>
+			<group res_ID="ID_GROUP_HEADER"/>
+			<visual_properties left="7px" top="87px" height="10px" width="90px"/>
+			<description res_ID="ID_DESC_HOMELINK_FONT_WEIGHT">The title font weight (only works if you do not use the default font).</description>
+			<default-value>900</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source filename="main.css" cssproperty="font-weight" css_selector="a.homelink"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>homelink_color</name>
+			<uiname res_ID="ID_NAME_HOMELINK_COLOR">Color</uiname>
+			<type>HTML_COLOR</type>
+			<value>#ffffff</value>
+			<group res_ID="ID_GROUP_HEADER"/>
+			<visual_properties left="254px" top="1px" height="10px" width="50px"/>
+			<description res_ID="ID_DESC_HOMELINK_COLOR">Link color</description>
+			<default-value>#ffffff</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="main.css" cssproperty="color" css_selector="a.homelink"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>homelink_hcolor</name>
+			<uiname res_ID="ID_NAME_HOMELINK_HCOLOR">Hover color</uiname>
+			<type>HTML_COLOR</type>
+			<value>#ffffff</value>
+			<group res_ID="ID_GROUP_HEADER"/>
+			<visual_properties left="315px" top="1px" height="10px" width="90px"/>
+			<description res_ID="ID_DESC_HOMELINK_HCOLOR">Title hover color</description>
+			<default-value>#ffffff</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source filename="main.css" cssproperty="color" css_selector="a.homelink:hover"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>sidebar_bgcolor</name>
+			<uiname res_ID="ID_NAME_SIDEBAR_BGCOLOR">Background color</uiname>
+			<type>HTML_COLOR</type>
+			<value>#dcd7d2</value>
+			<group res_ID="ID_GROUP_SIDEBAR"/>
+			<visual_properties left="83px" top="408px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_SIDEBAR_BGCOLOR">The background color of the sidebar</description>
+			<default-value>#dcd7d2</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source media="desktop" filename="main.css" cssproperty="background-color" css_selector="div.sidebar"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>resize_bgcolor</name>
+			<uiname res_ID="ID_NAME_DESKTOP_RESIZE_BGCOLOR">Resizer color</uiname>
+			<type>HTML_COLOR</type>
+			<value>#cfcbc6</value>
+			<group res_ID="ID_GROUP_SIDEBAR"/>
+			<visual_properties left="199px" top="6px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_DESKTOP_RESIZE_BGCOLOR">The color of the content paneresize bar</description>
+			<default-value>#cfcbc6</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source media="desktop" filename="main.css" cssproperty="background-color" css_selector="div.sidebar .ui-resizable-e"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>closebutton_border_color</name>
+			<uiname res_ID="ID_NAME_CLOSEBUTTON_BORDER_COLOR">Close border</uiname>
+			<type>HTML_COLOR</type>
+			<value>#cfcbc6</value>
+			<group res_ID="ID_GROUP_SIDEBAR"/>
+			<visual_properties left="4px" top="298px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_CLOSEBUTTON_BORDER_COLOR">The border color of the sidebar close button</description>
+			<default-value>#cfcbc6</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source media="desktop" filename="main.css" cssproperty="border-color" css_selector="div.sidebar div.closebutton"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>closebutton_bgcolor</name>
+			<uiname res_ID="ID_NAME_CLOSEBUTTON_BGCOLOR">Close background</uiname>
+			<type>HTML_COLOR</type>
+			<value>#f1ede9</value>
+			<group res_ID="ID_GROUP_SIDEBAR"/>
+			<visual_properties left="4px" top="268px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_CLOSEBUTTON_BGCOLOR">The background color of the sidebar close button</description>
+			<default-value>#f1ede9</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source media="desktop" filename="main.css" cssproperty="background-color" css_selector="div.sidebar .buttonOpened"></source>
+				<source media="desktop" filename="main.css" cssproperty="background-color" css_selector="div.sidebar .buttonClosed"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>closebutton_opened_image</name>
+			<uiname res_ID="ID_NAME_CLOSEBUTTON_OPENED_IMAGE">Open button</uiname>
+			<type>FILE</type>
+			<value>open_sidebar.png</value>
+			<group res_ID="ID_GROUP_SIDEBAR"/>
+			<visual_properties left="366px" top="408px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_CLOSEBUTTON_OPENED_IMAGE">The image of the button to open the sidebar</description>
+			<default-value>open_sidebar.png</default-value>
+			<allowedvalues/>
+			<sources>
+				<source media="desktop" filename="main.css" cssproperty="border-image" css_selector="div.sidebar .buttonClosed"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>closebutton_closed_image</name>
+			<uiname res_ID="ID_NAME_CLOSEBUTTON_CLOSED_IMAGE">Close button</uiname>
+			<type>FILE</type>
+			<value>close_sidebar.png</value>
+			<group res_ID="ID_GROUP_SIDEBAR"/>
+			<visual_properties left="233px" top="408px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_CLOSEBUTTON_CLOSED_IMAGE">The image of the button to close the sidebar</description>
+			<default-value>close_sidebar.png</default-value>
+			<allowedvalues/>
+			<sources>
+				<source media="desktop" filename="main.css" cssproperty="border-image" css_selector="div.sidebar .buttonOpened"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>tabs_group_bgcolor</name>
+			<uiname res_ID="ID_NAME_TABS_GROUP_BGCOLOR">Bar background</uiname>
+			<type>HTML_COLOR</type>
+			<value>#363530</value>
+			<group res_ID="ID_GROUP_SIDEBAR"/>
+			<visual_properties left="297px" top="251px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_TABS_GROUP_BGCOLOR">Tab bar background</description>
+			<default-value>#363530</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source filename="main.css" cssproperty="background-color" css_selector="ul.wTabGroup"></source>
+				<source filename="main.css" cssproperty="background-color" css_selector="ul.wVTabGroup"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>tabs_hbgcolor</name>
+			<uiname res_ID="ID_NAME_TABS_HBGCOLOR">Hover background</uiname>
+			<type>HTML_COLOR</type>
+			<value>#dcd7d2</value>
+			<group res_ID="ID_GROUP_SIDEBAR"/>
+			<visual_properties left="8px" top="6px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_TABS_HBGCOLOR">Tab background color when hovered/selected</description>
+			<default-value>#dcd7d2</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source filename="main.css" cssproperty="background-color" css_selector="li.wTabHover"></source>
+				<source filename="main.css" cssproperty="background-color" css_selector="li.wTabSelected"></source>
+				<source filename="main.css" cssproperty="background-color" css_selector="li.wVTabHover"></source>
+				<source filename="main.css" cssproperty="background-color" css_selector="li.wVTabSelected"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>tabs_toc_image</name>
+			<uiname res_ID="ID_NAME_TABS_TOC_IMAGE">TOC</uiname>
+			<type>FILE</type>
+			<value>toc.png</value>
+			<group res_ID="ID_GROUP_SIDEBAR"/>
+			<visual_properties left="4px" top="87px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_TABS_TOC_IMAGE">Image used for the TOC tab. Use an image of 60x45 pixels..</description>
+			<default-value>toc.png</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="topic.slp" attribute="src" id="xmlEditorTOCSidebarButton"></source>
+				<source filename="glossary.slp" attribute="src" id="xmlEditorTOCSidebarButton"></source>
+				<source filename="index.slp" attribute="src" id="xmlEditorTOCSidebarButton"></source>
+				<source filename="searrchresults.slp" attribute="src" id="xmlEditorTOCSidebarButton"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>tabs_toc_image_hover</name>
+			<uiname res_ID="ID_NAME_TABS_TOC_IMAGE_HOVER">TOC hover</uiname>
+			<type>FILE</type>
+			<value>toc_hover.png</value>
+			<group res_ID="ID_GROUP_SIDEBAR"/>
+			<visual_properties left="4px" top="144px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_TABS_TOC_IMAGE_HOVER">Image used for the TOC tab when hovered. Use an image of 60x45 pixels.</description>
+			<default-value>toc_hover.png</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="topic.slp" attribute="src" id="xmlEditorTOCSidebarButtonHover"></source>
+				<source filename="glossary.slp" attribute="src" id="xmlEditorTOCSidebarButtonHover"></source>
+				<source filename="index.slp" attribute="src" id="xmlEditorTOCSidebarButtonHover"></source>
+				<source filename="searrchresults.slp" attribute="src" id="xmlEditorTOCSidebarButtonHover"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>tabs_idx_image</name>
+			<uiname res_ID="ID_NAME_TABS_IDX_IMAGE">Index</uiname>
+			<type>FILE</type>
+			<value>index.png</value>
+			<group res_ID="ID_GROUP_SIDEBAR"/>
+			<visual_properties left="296px" top="161px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_TABS_IDX_IMAGE">Image used for the index tab. Use an image of 60x45 pixels.</description>
+			<default-value>index.png</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="topic.slp" attribute="src" id="xmlEditorIDXSidebarButton"></source>
+				<source filename="glossary.slp" attribute="src" id="xmlEditorIDXSidebarButton"></source>
+				<source filename="table_of_contents.slp" attribute="src" id="xmlEditorIDXSidebarButton"></source>
+				<source filename="searrchresults.slp" attribute="src" id="xmlEditorIDXSidebarButton"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>tabs_idx_image_hover</name>
+			<uiname res_ID="ID_NAME_TABS_IDX_IMAGE_HOVER">Index hover</uiname>
+			<type>FILE</type>
+			<value>index_hover.png</value>
+			<group res_ID="ID_GROUP_SIDEBAR"/>
+			<visual_properties left="297px" top="213px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_TABS_IDX_IMAGE_HOVER">Image used for the index tab when hovered. Use an image of 60x45 pixels.</description>
+			<default-value>index_hover.png</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="topic.slp" attribute="src" id="xmlEditorIDXSidebarButtonHover"></source>
+				<source filename="glossary.slp" attribute="src" id="xmlEditorIDXSidebarButtonHover"></source>
+				<source filename="table_of_contents.slp" attribute="src" id="xmlEditorIDXSidebarButtonHover"></source>
+				<source filename="searrchresults.slp" attribute="src" id="xmlEditorIDXSidebarButtonHover"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>tabs_glo_image</name>
+			<uiname res_ID="ID_NAME_TABS_GLO_IMAGE">Glossary</uiname>
+			<type>FILE</type>
+			<value>glo.png</value>
+			<group res_ID="ID_GROUP_SIDEBAR"/>
+			<visual_properties left="315px" top="6px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_TABS_GLO_IMAGE">Image used for the glossary tab. Use an image of 60x45 pixels.</description>
+			<default-value>glo.png</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="topic.slp" attribute="src" id="xmlEditorGLOSidebarButton"></source>
+				<source filename="index.slp" attribute="src" id="xmlEditorGLOSidebarButton"></source>
+				<source filename="table_of_contents.slp" attribute="src" id="xmlEditorGLOSidebarButton"></source>
+				<source filename="searrchresults.slp" attribute="src" id="xmlEditorGLOSidebarButton"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>tabs_glo_image_hover</name>
+			<uiname res_ID="ID_NAME_TABS_GLO_IMAGE_HOVER">Glossary hover</uiname>
+			<type>FILE</type>
+			<value>glo_hover.png</value>
+			<group res_ID="ID_GROUP_SIDEBAR"/>
+			<visual_properties left="395px" top="6px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_TABS_GLO_IMAGE_HOVER">Image used for the glossary tab when hovered. Use an image of 60x45 pixels.</description>
+			<default-value>glo_hover.png</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="topic.slp" attribute="src" id="xmlEditorGLOSidebarButtonHover"></source>
+				<source filename="index.slp" attribute="src" id="xmlEditorGLOSidebarButtonHover"></source>
+				<source filename="table_of_contents.slp" attribute="src" id="xmlEditorGLOSidebarButtonHover"></source>
+				<source filename="searrchresults.slp" attribute="src" id="xmlEditorGLOSidebarButtonHover"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>toc_font</name>
+			<uiname res_ID="ID_NAME_TOCTREE_FONT">Font</uiname>
+			<type>CSS_FONT_FAMILY</type>
+			<value>inherit</value>
+			<group res_ID="ID_GROUP_TOCTREE"/>
+			<visual_properties left="99px" top="46px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_TOC_FONT">The font used for TOC entries. The value 'inherit' means that the TOC will use the default page font.</description>
+			<default-value>inherit</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source filename="main.css" cssproperty="font-family" css_selector="div.wTOCTreeCloseBook"></source>
+				<source filename="main.css" cssproperty="font-family" css_selector="div.wTOCTreeCloseBookSelected"></source>
+				<source filename="main.css" cssproperty="font-family" css_selector="span.wTOCTreeCloseBookText"></source>
+				<source filename="main.css" cssproperty="font-family" css_selector="div.wTOCTreeOpenBook"></source>
+				<source filename="main.css" cssproperty="font-family" css_selector="div.wTOCTreeOpenBookSelected"></source>
+				<source filename="main.css" cssproperty="font-family" css_selector="span.wTOCTreeOpenBookText"></source>
+				<source filename="main.css" cssproperty="font-family" css_selector="div.wTOCTreePage"></source>
+				<source filename="main.css" cssproperty="font-family" css_selector="div.wTOCTreePageSelected"></source>
+				<source filename="main.css" cssproperty="font-family" css_selector="span.wTOCTreePageText"></source>
+				<source filename="main.css" cssproperty="font-family" css_selector="div.wTOCTreeLink"></source>
+				<source filename="main.css" cssproperty="font-family" css_selector="div.wTOCTreeLinkSelected"></source>
+				<source filename="main.css" cssproperty="font-family" css_selector="span.wTOCTreeLinkText"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>toc_tree_link_color</name>
+			<uiname res_ID="ID_NAME_TOC_TREE_LINK_COLOR">Color</uiname>
+			<type>HTML_COLOR</type>
+			<value>#363530</value>
+			<group res_ID="ID_GROUP_TOCTREE"/>
+			<visual_properties left="209px" top="407px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_TOC_TREE_LINK_COLOR">Text color of TOC entries</description>
+			<default-value>#363530</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source filename="main.css" cssproperty="color" css_selector="div.wTOCTreeCloseBook"></source>
+				<source filename="main.css" cssproperty="color" css_selector="div.wTOCTreeCloseBookSelected"></source>
+				<source filename="main.css" cssproperty="color" css_selector="span.wTOCTreeCloseBookText"></source>
+				<source filename="main.css" cssproperty="color" css_selector="div.wTOCTreeOpenBook"></source>
+				<source filename="main.css" cssproperty="color" css_selector="div.wTOCTreeOpenBookSelected"></source>
+				<source filename="main.css" cssproperty="color" css_selector="span.wTOCTreeOpenBookText"></source>
+				<source filename="main.css" cssproperty="color" css_selector="div.wTOCTreePage"></source>
+				<source filename="main.css" cssproperty="color" css_selector="div.wTOCTreePageSelected"></source>
+				<source filename="main.css" cssproperty="color" css_selector="span.wTOCTreePageText"></source>
+				<source filename="main.css" cssproperty="color" css_selector="div.wTOCTreeLink"></source>
+				<source filename="main.css" cssproperty="color" css_selector="div.wTOCTreeLinkSelected"></source>
+				<source filename="main.css" cssproperty="color" css_selector="span.wTOCTreeLinkText"></source>
+				<source filename="main.css" cssproperty="color" css_selector="div.wTOCTreeCloseBookHover"></source>
+				<source filename="main.css" cssproperty="color" css_selector="div.wTOCTreeOpenBookHover"></source>
+				<source filename="main.css" cssproperty="color" css_selector="div.wTOCTreePageHover"></source>
+				<source filename="main.css" cssproperty="color" css_selector="div.wTOCTreeLinkHover"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>toc_tree_link_sbgcolor</name>
+			<uiname res_ID="ID_NAME_TOC_TREE_LINK_SBGCOLOR">Selected background</uiname>
+			<type>HTML_COLOR</type>
+			<value>#ffffff</value>
+			<group res_ID="ID_GROUP_TOCTREE"/>
+			<visual_properties left="157px" top="3px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_TOC_TREE_LINK_SBGCOLOR">Background color of selected entries in the TOC</description>
+			<default-value>#ffffff</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="main.css" cssproperty="background-color" css_selector="div.wTOCTreeCloseBookSelected"></source>
+				<source filename="main.css" cssproperty="background-color" css_selector="div.wTOCTreeOpenBookSelected"></source>
+				<source filename="main.css" cssproperty="background-color" css_selector="div.wTOCTreePageSelected"></source>
+				<source filename="main.css" cssproperty="background-color" css_selector="div.wTOCTreeLinkSelected"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>toc_tree_close_book_image</name>
+			<uiname res_ID="ID_NAME_TOCTREE_CLOSE_BOOK_IMAGE">Closed book</uiname>
+			<type>FILE</type>
+			<value>TOCTreeCloseBook.png</value>
+			<group res_ID="ID_GROUP_TOCTREE"/>
+			<visual_properties left="30px" top="132px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_TOCTREE_CLOSE_BOOK_IMAGE">The closed book icon used in the desktop TOC. Use an image of 15x15 pixels.</description>
+			<default-value>TOCTreeCloseBook.png</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="topic.slp" attribute="src" id="xmlEditorTOCTREECloseBook"></source>
+				<source filename="glossary.slp" attribute="src" id="xmlEditorTOCTREECloseBook"></source>
+				<source filename="index.slp" attribute="src" id="xmlEditorTOCTREECloseBook"></source>
+				<source filename="searrchresults.slp" attribute="src" id="xmlEditorTOCTREECloseBook"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>toc_tree_close_book_image_hover</name>
+			<uiname res_ID="ID_NAME_TOCTREE_CLOSE_BOOK_IMAGE_HOVER">Closed hover</uiname>
+			<type>FILE</type>
+			<value>TOCTreeCloseBookHover.png</value>
+			<group res_ID="ID_GROUP_TOCTREE"/>
+			<visual_properties left="328px" top="147px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_TOCTREE_CLOSE_BOOK_IMAGE_HOVER">The closed book icon used in the desktop TOC when hovered. Use an image of 15x15 pixels.</description>
+			<default-value>TOCTreeCloseBookHover.png</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="topic.slp" attribute="hoversrc" id="xmlEditorTOCTREECloseBook"></source>
+				<source filename="glossary.slp" attribute="hoversrc" id="xmlEditorTOCTREECloseBook"></source>
+				<source filename="index.slp" attribute="hoversrc" id="xmlEditorTOCTREECloseBook"></source>
+				<source filename="searrchresults.slp" attribute="hoversrc" id="xmlEditorTOCTREECloseBook"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>toc_tree_close_book_image_selected</name>
+			<uiname res_ID="ID_NAME_TOCTREE_CLOSE_BOOK_IMAGE_SELECTED">Closed selected</uiname>
+			<type>FILE</type>
+			<value>TOCTreeCloseBookSelected.png</value>
+			<group res_ID="ID_GROUP_TOCTREE"/>
+			<visual_properties left="-2px" top="163px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_TOCTREE_CLOSE_BOOK_IMAGE_SELECTED">The closed book icon used in the desktop TOC when selected. Use an image of 15x15 pixels.</description>
+			<default-value>TOCTreeCloseBookSelected.png</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="topic.slp" attribute="selectedsrc" id="xmlEditorTOCTREECloseBook"></source>
+				<source filename="glossary.slp" attribute="selectedsrc" id="xmlEditorTOCTREECloseBook"></source>
+				<source filename="index.slp" attribute="selectedsrc" id="xmlEditorTOCTREECloseBook"></source>
+				<source filename="searrchresults.slp" attribute="selectedsrc" id="xmlEditorTOCTREECloseBook"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>toc_tree_open_book_image</name>
+			<uiname res_ID="ID_NAME_TOCTREE_OPEN_BOOK_IMAGE">Open book</uiname>
+			<type>FILE</type>
+			<value>TOCTreeOpenBook.png</value>
+			<group res_ID="ID_GROUP_TOCTREE"/>
+			<visual_properties left="328px" top="181px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_TOCTREE_OPEN_BOOK_IMAGE">The open book icon used in the desktop TOC. Use an image of 15x15 pixels.</description>
+			<default-value>TOCTreeOpenBook.png</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="topic.slp" attribute="src" id="xmlEditorTOCTREEOpenBook"></source>
+				<source filename="glossary.slp" attribute="src" id="xmlEditorTOCTREEOpenBook"></source>
+				<source filename="index.slp" attribute="src" id="xmlEditorTOCTREEOpenBook"></source>
+				<source filename="searrchresults.slp" attribute="src" id="xmlEditorTOCTREEOpenBook"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>toc_tree_open_book_image_hover</name>
+			<uiname res_ID="ID_NAME_TOCTREE_OPEN_BOOK_IMAGE_HOVER">Open hover</uiname>
+			<type>FILE</type>
+			<value>TOCTreeOpenBookHover.png</value>
+			<group res_ID="ID_GROUP_TOCTREE"/>
+			<visual_properties left="38px" top="207px" height="14px" width="10px"/>
+			<description res_ID="ID_DESC_TOCTREE_OPEN_BOOK_IMAGE_HOVER">The open book icon used in the desktop TOC when hovered. Use an image of 15x15 pixels.</description>
+			<default-value>TOCTreeOpenBookHover.png</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="topic.slp" attribute="hoversrc" id="xmlEditorTOCTREEOpenBook"></source>
+				<source filename="glossary.slp" attribute="hoversrc" id="xmlEditorTOCTREEOpenBook"></source>
+				<source filename="index.slp" attribute="hoversrc" id="xmlEditorTOCTREEOpenBook"></source>
+				<source filename="searrchresults.slp" attribute="hoversrc" id="xmlEditorTOCTREEOpenBook"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>toc_tree_open_book_image_selected</name>
+			<uiname res_ID="ID_NAME_TOCTREE_OPEN_BOOK_IMAGE_SELECTED">Open selected</uiname>
+			<type>FILE</type>
+			<value>TOCTreeOpenBookSelected.png</value>
+			<group res_ID="ID_GROUP_TOCTREE"/>
+			<visual_properties left="8px" top="238px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_TOCTREE_OPEN_BOOK_IMAGE_SELECTED">The open book icon used in the desktop TOC when selected. Use an image of 15x15 pixels.</description>
+			<default-value>TOCTreeOpenBookSelected.png</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="topic.slp" attribute="selectedsrc" id="xmlEditorTOCTREEOpenBook"></source>
+				<source filename="glossary.slp" attribute="selectedsrc" id="xmlEditorTOCTREEOpenBook"></source>
+				<source filename="index.slp" attribute="selectedsrc" id="xmlEditorTOCTREEOpenBook"></source>
+				<source filename="searrchresults.slp" attribute="selectedsrc" id="xmlEditorTOCTREEOpenBook"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>toc_tree_page_image</name>
+			<uiname res_ID="ID_NAME_TOCTREE_PAGE_IMAGE">Page</uiname>
+			<type>FILE</type>
+			<value>TOCTreePage.png</value>
+			<group res_ID="ID_GROUP_TOCTREE"/>
+			<visual_properties left="89px" top="268px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_TOCTREE_PAGE_IMAGE">The page icon used in the desktop TOC. Use an image of 15x15 pixels.</description>
+			<default-value>TOCTreePage.png</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="topic.slp" attribute="src" id="xmlEditorTOCTREEPage"></source>
+				<source filename="glossary.slp" attribute="src" id="xmlEditorTOCTREEPage"></source>
+				<source filename="index.slp" attribute="src" id="xmlEditorTOCTREEPage"></source>
+				<source filename="searrchresults.slp" attribute="src" id="xmlEditorTOCTREEPage"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>toc_tree_page_image_hover</name>
+			<uiname res_ID="ID_NAME_TOCTREE_PAGE_IMAGE_HOVER">Page hover</uiname>
+			<type>FILE</type>
+			<value>TOCTreePageHover.png</value>
+			<group res_ID="ID_GROUP_TOCTREE"/>
+			<visual_properties left="328px" top="283px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_TOCTREE_PAGE_IMAGE_HOVER">The page icon used in the desktop TOC when hovered. Use an image of 15x15 pixels.</description>
+			<default-value>TOCTreePageHover.png</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="topic.slp" attribute="hoversrc" id="xmlEditorTOCTREEPage"></source>
+				<source filename="glossary.slp" attribute="hoversrc" id="xmlEditorTOCTREEPage"></source>
+				<source filename="index.slp" attribute="hoversrc" id="xmlEditorTOCTREEPage"></source>
+				<source filename="searrchresults.slp" attribute="hoversrc" id="xmlEditorTOCTREEPage"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>toc_tree_page_image_selected</name>
+			<uiname res_ID="ID_NAME_TOCTREE_PAGE_IMAGE_SELECTED">Page selected</uiname>
+			<type>FILE</type>
+			<value>TOCTreePageSelected.png</value>
+			<group res_ID="ID_GROUP_TOCTREE"/>
+			<visual_properties left="10px" top="297px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_TOCTREE_PAGE_IMAGE_SELECTED">The page icon used in the desktop TOC when selected. Use an image of 15x15 pixels.</description>
+			<default-value>TOCTreePageSelected.png</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="topic.slp" attribute="selectedsrc" id="xmlEditorTOCTREEPage"></source>
+				<source filename="glossary.slp" attribute="selectedsrc" id="xmlEditorTOCTREEPage"></source>
+				<source filename="index.slp" attribute="selectedsrc" id="xmlEditorTOCTREEPage"></source>
+				<source filename="searrchresults.slp" attribute="selectedsrc" id="xmlEditorTOCTREEPage"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>toc_tree_link_image</name>
+			<uiname res_ID="ID_NAME_TOCTREE_LINK_IMAGE">Link</uiname>
+			<type>FILE</type>
+			<value>TOCTreeLink.png</value>
+			<group res_ID="ID_GROUP_TOCTREE"/>
+			<visual_properties left="328px" top="312px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_TOCTREE_LINK_IMAGE">The link icon used in the desktop TOC. Use an image of 15x15 pixels.</description>
+			<default-value>TOCTreeLink.png</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="topic.slp" attribute="src" id="xmlEditorTOCTREELink"></source>
+				<source filename="glossary.slp" attribute="src" id="xmlEditorTOCTREELink"></source>
+				<source filename="index.slp" attribute="src" id="xmlEditorTOCTREELink"></source>
+				<source filename="searrchresults.slp" attribute="src" id="xmlEditorTOCTREELink"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>toc_tree_link_image_hover</name>
+			<uiname res_ID="ID_NAME_TOCTREE_LINK_IMAGE_HOVER">Link hover</uiname>
+			<type>FILE</type>
+			<value>TOCTreeLinkHover.png</value>
+			<group res_ID="ID_GROUP_TOCTREE"/>
+			<visual_properties left="46px" top="328px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_TOCTREE_LINK_IMAGE_HOVER">The link icon used in the desktop TOC when hovered. Use an image of 15x15 pixels.</description>
+			<default-value>TOCTreeLinkHover.png</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="topic.slp" attribute="hoversrc" id="xmlEditorTOCTREELink"></source>
+				<source filename="glossary.slp" attribute="hoversrc" id="xmlEditorTOCTREELink"></source>
+				<source filename="index.slp" attribute="hoversrc" id="xmlEditorTOCTREELink"></source>
+				<source filename="searrchresults.slp" attribute="hoversrc" id="xmlEditorTOCTREELink"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>toc_tree_link_image_selected</name>
+			<uiname res_ID="ID_NAME_TOCTREE_LINK_IMAGE_SELECTED">Link selected</uiname>
+			<type>FILE</type>
+			<value>TOCTreeLinkSelected.png</value>
+			<group res_ID="ID_GROUP_TOCTREE"/>
+			<visual_properties left="328px" top="340px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_TOCTREE_LINK_IMAGE_SELECTED">The link icon used in the desktop TOC when selected. Use an image of 15x15 pixels.</description>
+			<default-value>TOCTreeLinkSelected.png</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="topic.slp" attribute="selectedsrc" id="xmlEditorTOCTREELink"></source>
+				<source filename="glossary.slp" attribute="selectedsrc" id="xmlEditorTOCTREELink"></source>
+				<source filename="index.slp" attribute="selectedsrc" id="xmlEditorTOCTREELink"></source>
+				<source filename="searrchresults.slp" attribute="selectedsrc" id="xmlEditorTOCTREELink"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>toc_node_font</name>
+			<uiname res_ID="ID_NAME_TOC_FONT">Font</uiname>
+			<type>CSS_FONT_FAMILY</type>
+			<value>inherit</value>
+			<group res_ID="ID_GROUP_TOCNODE"/>
+			<visual_properties left="603px" top="383px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_TOC_FONT">The font used for TOC entries. The value 'inherit' means that the TOC will use the default page font.</description>
+			<default-value>inherit</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source filename="main.css" cssproperty="font-family" css_selector="div.wTOCNodeCloseBook"></source>
+				<source filename="main.css" cssproperty="font-family" css_selector="div.wTOCNodeCloseBookHover"></source>
+				<source filename="main.css" cssproperty="font-family" css_selector="div.wTOCNodeCloseBookSelected"></source>
+				<source filename="main.css" cssproperty="font-family" css_selector="div.wTOCNodeOpenBook"></source>
+				<source filename="main.css" cssproperty="font-family" css_selector="div.wTOCNodeOpenBookHover"></source>
+				<source filename="main.css" cssproperty="font-family" css_selector="div.wTOCNodeOpenBookSelected"></source>
+				<source filename="main.css" cssproperty="font-family" css_selector="div.wTOCNodePage"></source>
+				<source filename="main.css" cssproperty="font-family" css_selector="div.wTOCNodePageHover"></source>
+				<source filename="main.css" cssproperty="font-family" css_selector="div.wTOCNodePageSelected"></source>
+				<source filename="main.css" cssproperty="font-family" css_selector="div.wTOCNodeLink"></source>
+				<source filename="main.css" cssproperty="font-family" css_selector="div.wTOCNodeLinkHover"></source>
+				<source filename="main.css" cssproperty="font-family" css_selector="div.wTOCNodeLinkSelected"></source>
+				<source filename="main.css" cssproperty="font-family" css_selector="div.wTOCNodeUp"></source>
+				<source filename="main.css" cssproperty="font-family" css_selector="div.wTOCNodeUpHover"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>toc_node_link_color</name>
+			<uiname res_ID="ID_NAME_TOC_NODE_LINK_COLOR">Color</uiname>
+			<type>HTML_COLOR</type>
+			<value>#363530</value>
+			<group res_ID="ID_GROUP_TOCNODE"/>
+			<visual_properties left="603px" top="295px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_TOC_NODE_LINK_COLOR">Link color of TOC entries</description>
+			<default-value>#363530</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source filename="main.css" cssproperty="color" css_selector="span.wTOCNodeCloseBookText"></source>
+				<source filename="main.css" cssproperty="color" css_selector="span.wTOCNodeOpenBookText"></source>
+				<source filename="main.css" cssproperty="color" css_selector="span.wTOCNodePageText"></source>
+				<source filename="main.css" cssproperty="color" css_selector="span.wTOCNodeLinkText"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>toc_node_separatorcolor</name>
+			<uiname res_ID="ID_NAME_TOC_NODE_SEPARATORCOLOR">Separator</uiname>
+			<type>HTML_COLOR</type>
+			<value>#f1ede9</value>
+			<group res_ID="ID_GROUP_TOCNODE"/>
+			<visual_properties left="603px" top="109px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_TOC_NODE_SEPARATORCOLOR">Color of the separator between TOC entries</description>
+			<default-value>#f1ede9</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="main.css" cssproperty="border-top-color" css_selector="div.wTOCNodeCloseBook"></source>
+				<source filename="main.css" cssproperty="border-top-color" css_selector="div.wTOCNodeCloseBookHover"></source>
+				<source filename="main.css" cssproperty="border-top-color" css_selector="div.wTOCNodeCloseBookSelected"></source>
+				<source filename="main.css" cssproperty="border-top-color" css_selector="div.wTOCNodeOpenBook"></source>
+				<source filename="main.css" cssproperty="border-top-color" css_selector="div.wTOCNodeOpenBookHover"></source>
+				<source filename="main.css" cssproperty="border-top-color" css_selector="div.wTOCNodeOpenBookSelected"></source>
+				<source filename="main.css" cssproperty="border-top-color" css_selector="div.wTOCNodePage"></source>
+				<source filename="main.css" cssproperty="border-top-color" css_selector="div.wTOCNodePageHover"></source>
+				<source filename="main.css" cssproperty="border-top-color" css_selector="div.wTOCNodePageSelected"></source>
+				<source filename="main.css" cssproperty="border-top-color" css_selector="div.wTOCNodeLink"></source>
+				<source filename="main.css" cssproperty="border-top-color" css_selector="div.wTOCNodeLinkHover"></source>
+				<source filename="main.css" cssproperty="border-top-color" css_selector="div.wTOCNodeLinkSelected"></source>
+				<source filename="main.css" cssproperty="border-top-color" css_selector="div.wTOCNodeUp"></source>
+				<source filename="main.css" cssproperty="border-top-color" css_selector="div.wTOCNodeUpHover"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>toc_node_scolor</name>
+			<uiname res_ID="ID_NAME_TOC_NODE_SCOLOR">Selected background</uiname>
+			<type>HTML_COLOR</type>
+			<value>#f1ede9</value>
+			<group res_ID="ID_GROUP_TOCNODE"/>
+			<visual_properties left="603px" top="180px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_TOC_NODE_SCOLOR">Background of selected TOC entry</description>
+			<default-value>#f1ede9</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="main.css" cssproperty="background-color" css_selector="div.wTOCNodeCloseBookHover"></source>
+				<source filename="main.css" cssproperty="background-color" css_selector="div.wTOCNodeCloseBookSelected"></source>
+				<source filename="main.css" cssproperty="background-color" css_selector="div.wTOCNodeOpenBookHover"></source>
+				<source filename="main.css" cssproperty="background-color" css_selector="div.wTOCNodeOpenBookSelected"></source>
+				<source filename="main.css" cssproperty="background-color" css_selector="div.wTOCNodePageHover"></source>
+				<source filename="main.css" cssproperty="background-color" css_selector="div.wTOCNodePageSelected"></source>
+				<source filename="main.css" cssproperty="background-color" css_selector="div.wTOCNodeLinkHover"></source>
+				<source filename="main.css" cssproperty="background-color" css_selector="div.wTOCNodeLinkSelected"></source>
+				<source filename="main.css" cssproperty="background-color" css_selector="div.wTOCNodeUpHover"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>toc_node_closebook_bgicon</name>
+			<uiname res_ID="ID_NAME_TOC_NODE_CLOSEBOOK_BGICON">Closed icon</uiname>
+			<type>FILE</type>
+			<value>TOCNodeCloseBook.png</value>
+			<group res_ID="ID_GROUP_TOCNODE"/>
+			<visual_properties left="57px" top="190px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_TOC_NODE_CLOSEBOOK_BGICON">Icon used for a closed book. Use an image of 33x33 pixels.</description>
+			<default-value>TOCNodeCloseBook.png</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source filename="main.css" cssproperty="background-image" css_selector="div.wTOCNodeCloseBook"></source>
+				<source filename="main.css" cssproperty="background-image" css_selector="div.wTOCNodeCloseBookHover"></source>
+				<source filename="main.css" cssproperty="background-image" css_selector="div.wTOCNodeCloseBookSelected"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>toc_node_openbook_bgicon</name>
+			<uiname res_ID="ID_NAME_TOC_NODE_OPENBOOK_BGICON">Open icon</uiname>
+			<type>FILE</type>
+			<value>TOCNodeOpenBook.png</value>
+			<group res_ID="ID_GROUP_TOCNODE"/>
+			<visual_properties left="72px" top="134px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_TOC_NODE_OPENBOOK_BGICON">Icon used for an opened book. Use an image of 33x33 pixels.</description>
+			<default-value>TOCNodeOpenBook.png</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source filename="main.css" cssproperty="background-image" css_selector="div.wTOCNodeOpenBook"></source>
+				<source filename="main.css" cssproperty="background-image" css_selector="div.wTOCNodeOpenBookHover"></source>
+				<source filename="main.css" cssproperty="background-image" css_selector="div.wTOCNodeOpenBookSelected"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>toc_node_page_bgicon</name>
+			<uiname res_ID="ID_NAME_TOC_NODE_PAGE_BGICON">Page icon</uiname>
+			<type>FILE</type>
+			<value>TOCNodePage.png</value>
+			<group res_ID="ID_GROUP_TOCNODE"/>
+			<visual_properties left="73px" top="276px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_TOC_NODE_PAGE_BGICON">Icon used for a page. Use an image of 33x33 pixels.</description>
+			<default-value>TOCNodePage.png</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source filename="main.css" cssproperty="background-image" css_selector="div.wTOCNodePage"></source>
+				<source filename="main.css" cssproperty="background-image" css_selector="div.wTOCNodePageHover"></source>
+				<source filename="main.css" cssproperty="background-image" css_selector="div.wTOCNodePageSelected"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>toc_node_link_bgicon</name>
+			<uiname res_ID="ID_NAME_TOC_NODE_LINK_BGICON">Link icon</uiname>
+			<type>FILE</type>
+			<value>TOCNodeLink.png</value>
+			<group res_ID="ID_GROUP_TOCNODE"/>
+			<visual_properties left="86px" top="363px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_TOC_NODE_LINK_BGICON">Icon used for a link to an external page. Use an image of 33x33 pixels.</description>
+			<default-value>TOCNodeLink.png</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source filename="main.css" cssproperty="background-image" css_selector="div.wTOCNodeLink"></source>
+				<source filename="main.css" cssproperty="background-image" css_selector="div.wTOCNodeLinkHover"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>toc_node_link_upicon</name>
+			<uiname res_ID="ID_NAME_TOC_NODE_LINK_UPICON">Back icon</uiname>
+			<type>FILE</type>
+			<value>TOCNodeUp.png</value>
+			<group res_ID="ID_GROUP_TOCNODE"/>
+			<visual_properties left="74px" top="75px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_TOC_NODE_LINK_UPICON">Icon used for the link to go up a level in the TOC. Use an image of 33x33 pixels.</description>
+			<default-value>TOCNodeUp.png</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source filename="main.css" cssproperty="background-image" css_selector="div.wTOCNodeUp"></source>
+				<source filename="main.css" cssproperty="background-image" css_selector="div.wTOCNodeUpHover"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>toc_node_closebook_bgicon_phone</name>
+			<uiname res_ID="ID_NAME_TOC_NODE_CLOSEBOOK_BGICON_PHONE">Closed (phone)</uiname>
+			<type>FILE</type>
+			<value>TOCTreeCloseBook.png</value>
+			<group res_ID="ID_GROUP_TOCNODE"/>
+			<visual_properties left="31px" top="220px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_TOC_NODE_CLOSEBOOK_BGICON_PHONE">Icon used for a closed book. Phone only. Use an image of 15x16 pixels.</description>
+			<default-value>TOCTreeCloseBook.png</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source media="phone" filename="main.css" cssproperty="background-image" css_selector="div.wTOCNodeCloseBook"></source>
+				<source media="phone" filename="main.css" cssproperty="background-image" css_selector="div.wTOCNodeCloseBookHover"></source>
+				<source media="phone" filename="main.css" cssproperty="background-image" css_selector="div.wTOCNodeCloseBookSelected"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>toc_node_openbook_bgicon_phone</name>
+			<uiname res_ID="ID_NAME_TOC_NODE_OPENBOOK_BGICON_PHONE">Open (phone)</uiname>
+			<type>FILE</type>
+			<value>TOCTreeOpenBook.png</value>
+			<group res_ID="ID_GROUP_TOCNODE"/>
+			<visual_properties left="43px" top="164px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_TOC_NODE_OPENBOOK_BGICON_PHONE">Icon used for an opened book. Phone only. Use an image of 15x16 pixels.</description>
+			<default-value>TOCTreeOpenBook.png</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source media="phone" filename="main.css" cssproperty="background-image" css_selector="div.wTOCNodeOpenBook"></source>
+				<source media="phone" filename="main.css" cssproperty="background-image" css_selector="div.wTOCNodeOpenBookHover"></source>
+				<source media="phone" filename="main.css" cssproperty="background-image" css_selector="div.wTOCNodeOpenBookSelected"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>toc_node_page_bgicon_phone</name>
+			<uiname res_ID="ID_NAME_TOC_NODE_PAGE_BGICON_PHONE">Page (phone)</uiname>
+			<type>FILE</type>
+			<value>TOCTreePage.png</value>
+			<group res_ID="ID_GROUP_TOCNODE"/>
+			<visual_properties left="47px" top="307px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_TOC_NODE_PAGE_BGICON_PHONE">Icon used for a page. Phone only. Use an image of 15x16 pixels.</description>
+			<default-value>TOCTreePage.png</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source media="phone" filename="main.css" cssproperty="background-image" css_selector="div.wTOCNodePage"></source>
+				<source media="phone" filename="main.css" cssproperty="background-image" css_selector="div.wTOCNodePageHover"></source>
+				<source media="phone" filename="main.css" cssproperty="background-image" css_selector="div.wTOCNodePageSelected"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>toc_node_link_bgicon_phone</name>
+			<uiname res_ID="ID_NAME_TOC_NODE_LINK_BGICON_PHONE">Link (phone)</uiname>
+			<type>FILE</type>
+			<value>TOCTreeLink.png</value>
+			<group res_ID="ID_GROUP_TOCNODE"/>
+			<visual_properties left="57px" top="394px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_TOC_NODE_LINK_BGICON_PHONE">Icon used for a link to an external page. Phone only. Use an image of 15x16 pixels.</description>
+			<default-value>TOCTreeLink.png</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source media="phone" filename="main.css" cssproperty="background-image" css_selector="div.wTOCNodeLink"></source>
+				<source media="phone" filename="main.css" cssproperty="background-image" css_selector="div.wTOCNodeLinkHover"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>toc_node_link_upicon_phone</name>
+			<uiname res_ID="ID_NAME_TOC_NODE_LINK_UPICON_PHONE">Back (phone)</uiname>
+			<type>FILE</type>
+			<value>TOCNodeUpSmall.png</value>
+			<group res_ID="ID_GROUP_TOCNODE"/>
+			<visual_properties left="46px" top="106px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_TOC_NODE_LINK_UPICON_PHONE">Icon used for the link to go up a level in the TOC. Phone only. Use an image of 15x16 pixels.</description>
+			<default-value>TOCNodeUpSmall.png</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source media="phone" filename="main.css" cssproperty="background-image" css_selector="div.wTOCNodeUp"></source>
+				<source media="phone" filename="main.css" cssproperty="background-image" css_selector="div.wTOCNodeUpHover"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>special_pagetitle_font</name>
+			<uiname res_ID="ID_NAME_SPECIAL_PAGETITLE_FONT">Title font</uiname>
+			<type>CSS_FONT_FAMILY</type>
+			<value>"Arial Black", Arial, sans-serif;</value>
+			<group res_ID="ID_GROUP_SPECIALPAGE"/>
+			<visual_properties left="603px" top="60px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_SPECIAL_PAGETITLE_FONT">The font of the title for the mobile TOC, Index and Glossary</description>
+			<default-value>"Arial Black", Arial, sans-serif;</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source filename="main.css" cssproperty="font-family" css_selector="div.specialpagetitle"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>special_pagetitle_color</name>
+			<uiname res_ID="ID_NAME_SPECIAL_PAGETITLE_COLOR">Title color</uiname>
+			<type>HTML_COLOR</type>
+			<value>#0079ac</value>
+			<group res_ID="ID_GROUP_SPECIALPAGE"/>
+			<visual_properties left="78px" top="55px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_SPECIAL_PAGETITLE_COLOR">The color of the title for the mobile TOC, Index and Glossary</description>
+			<default-value>#0079ac</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source filename="main.css" cssproperty="color" css_selector="div.specialpagetitle"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>idx_font</name>
+			<uiname res_ID="ID_NAME_IDX_FONT">Font</uiname>
+			<type>CSS_FONT_FAMILY</type>
+			<value>inherit</value>
+			<group res_ID="ID_GROUP_INDEX_MOBILE"/>
+			<visual_properties left="583px" top="379px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_IDX_FONT">The font used for index entries. The value 'inherit' means that the Index will use the default page font.</description>
+			<default-value>inherit</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source filename="main.css" cssproperty="font-family" css_selector="div.wIdxAlphabet"></source>
+				<source filename="main.css" cssproperty="font-family" css_selector="div.wIdxKeyword"></source>
+				<source filename="main.css" cssproperty="font-family" css_selector="div.wIdxLink"></source>
+				<source filename="main.css" cssproperty="font-family" css_selector="span.wIdxLinkText"></source>
+				<source filename="main.css" cssproperty="font-family" css_selector="div.wIdxKeywordHover"></source>
+				<source filename="main.css" cssproperty="font-family" css_selector="div.wIdxLinkHover"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>idx_search_bg</name>
+			<uiname res_ID="ID_IDX_SEARCHBG">Search background</uiname>
+			<type>HTML_COLOR</type>
+			<value>#eeeeee</value>
+			<group res_ID="ID_GROUP_INDEX_MOBILE"/>
+			<visual_properties left="15px" top="105px" height="10px" width="10px"/>
+			<description res_ID="ID_GLO_SEARCHBG_DESC">Background color of the index search</description>
+			<default-value>#eeeeee</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="main.css" cssproperty="background-color" css_selector="input.wIdxFilter"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>idx_search_border</name>
+			<uiname res_ID="ID_IDX_SEARCHBORDER">Search border</uiname>
+			<type>HTML_COLOR</type>
+			<value>#a99f95</value>
+			<group res_ID="ID_GROUP_INDEX_MOBILE"/>
+			<visual_properties left="583px" top="105px" height="10px" width="10px"/>
+			<description res_ID="ID_IDX_SEARCHBORDER_DESC">Border color of the index search</description>
+			<default-value>#a99f95</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="main.css" cssproperty="border-color" css_selector="input.wIdxFilter"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>index_alphabet_color</name>
+			<uiname res_ID="ID_NAME_INDEX_ALPHABET_COLOR">Alphabet color</uiname>
+			<type>HTML_COLOR</type>
+			<value>#59caff</value>
+			<group res_ID="ID_GROUP_INDEX_MOBILE"/>
+			<visual_properties left="583px" top="145px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_INDEX_ALPHABET_COLOR">Color of an alphabet letter separator</description>
+			<default-value>#59caff</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="main.css" cssproperty="color" css_selector="div.wIdxAlphabet"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>index_entry_color</name>
+			<uiname res_ID="ID_NAME_INDEX_ENTRY_COLOR">Entry color</uiname>
+			<type>HTML_COLOR</type>
+			<value>#363530</value>
+			<group res_ID="ID_GROUP_INDEX_MOBILE"/>
+			<visual_properties left="15px" top="184px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_INDEX_ENTRY_COLOR">Color of an index entry</description>
+			<default-value>#363530</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source filename="main.css" cssproperty="color" css_selector="div.wIdxKeyword"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>index_entry_hcolor</name>
+			<uiname res_ID="ID_NAME_INDEX_ENTRY_HCOLOR">Entry hover color</uiname>
+			<type>HTML_COLOR</type>
+			<value>#363530</value>
+			<group res_ID="ID_GROUP_INDEX_MOBILE"/>
+			<visual_properties left="583px" top="224px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_INDEX_ENTRY_HCOLOR">Color of an index entry when hovered</description>
+			<default-value>#363530</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source filename="main.css" cssproperty="color" css_selector="div.wIdxKeywordHover"></source>
+				<source filename="main.css" cssproperty="color" css_selector="div.wIdxLinkHover"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>index_link_color</name>
+			<uiname res_ID="ID_NAME_INDEX_LINK_COLOR">Link color</uiname>
+			<type>HTML_COLOR</type>
+			<value>#0079ac</value>
+			<group res_ID="ID_GROUP_INDEX_MOBILE"/>
+			<visual_properties left="583px" top="341px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_INDEX_LINK_COLOR">Color of an index link</description>
+			<default-value>#0079ac</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source filename="main.css" cssproperty="color" css_selector="div.wIdxLink"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>index_term_separatorcolor</name>
+			<uiname res_ID="ID_NAME_INDEX_TERM_SEPARATORCOLOR">Index separator</uiname>
+			<type>HTML_COLOR</type>
+			<value>#f1ede9</value>
+			<group res_ID="ID_GROUP_INDEX_MOBILE"/>
+			<visual_properties left="583px" top="276px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_INDEX_TERM_SEPARATORCOLOR">Color of the separator between index entries</description>
+			<default-value>#f1ede9</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="main.css" cssproperty="border-top-color" css_selector="div.wIdxKeyword"></source>
+				<source filename="main.css" cssproperty="border-top-color" css_selector="div.wIdxKeywordHover"></source>
+				<source filename="main.css" cssproperty="border-top-color" css_selector="div.wIdxLink"></source>
+				<source filename="main.css" cssproperty="border-top-color" css_selector="div.wIdxLinkHover"></source>
+				<source filename="main.css" cssproperty="border-top-color" css_selector="div.wIdxAlphabet"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>index_entry_bookbg</name>
+			<uiname res_ID="ID_NAME_INDEX_ENTRY_BOOKBG">Entry image</uiname>
+			<type>FILE</type>
+			<value>TOCNodeOpenBook.png</value>
+			<group res_ID="ID_GROUP_INDEX_MOBILE"/>
+			<visual_properties left="15px" top="359px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_INDEX_ENTRY_BOOKBG">Image of an index entry with multiple topics</description>
+			<default-value>TOCNodeOpenBook.png</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source filename="main.css" cssproperty="background-image" css_selector="div.wIdxKeyword"></source>
+				<source filename="main.css" cssproperty="background-image" css_selector="div.wIdxKeywordHover"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>index_entrybg</name>
+			<uiname res_ID="ID_NAME_INDEX_ENTRYBG">Link image</uiname>
+			<type>FILE</type>
+			<value>TOCNodePage.png</value>
+			<group res_ID="ID_GROUP_INDEX_MOBILE"/>
+			<visual_properties left="25px" top="285px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_INDEX_ENTRYBG">Image of an index link</description>
+			<default-value>TOCNodePage.png</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source filename="main.css" cssproperty="background-image" css_selector="div.wIdxLink"></source>
+				<source filename="main.css" cssproperty="background-image" css_selector="div.wIdxLinkHover"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>index_entrybookbg_phone</name>
+			<uiname res_ID="ID_NAME_INDEX_ENTRYBG_PHONE1">Entry image (phone)</uiname>
+			<type>FILE</type>
+			<value>TOCTreePage.png</value>
+			<group res_ID="ID_GROUP_INDEX_MOBILE"/>
+			<visual_properties left="-27px" top="389px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_INDEX_ENTRYBG_PHONE1">Image of an index entry (phone)</description>
+			<default-value>TOCTreePage.png</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source media="phone" filename="main.css" cssproperty="background-image" css_selector="div.wIdxKeyword"></source>
+				<source media="phone" filename="main.css" cssproperty="background-image" css_selector="div.wIdxKeywordHover"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>index_entrybg_phone</name>
+			<uiname res_ID="ID_NAME_INDEX_ENTRYBG_PHONE2">Link image (phone)</uiname>
+			<type>FILE</type>
+			<value>TOCTreePage.png</value>
+			<group res_ID="ID_GROUP_INDEX_MOBILE"/>
+			<visual_properties left="-18px" top="317px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_INDEX_ENTRYBG_PHONE2">Image of an index link (phone)</description>
+			<default-value>TOCTreePage.png</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source media="phone" filename="main.css" cssproperty="background-image" css_selector="div.wIdxLink"></source>
+				<source media="phone" filename="main.css" cssproperty="background-image" css_selector="div.wIdxLinkHover"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>idx_font_sidebar</name>
+			<uiname res_ID="ID_NAME_IDX_FONT">Font</uiname>
+			<type>CSS_FONT_FAMILY</type>
+			<value>inherit</value>
+			<group res_ID="ID_GROUP_INDEX_DESKTOP"/>
+			<visual_properties left="193px" top="340px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_IDX_FONT">The font used for index entries. The value 'inherit' means that the Index will use the default page font.</description>
+			<default-value>inherit</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source media="desktop" filename="main.css" cssproperty="font-family" css_selector="div.wIdxAlphabet"></source>
+				<source media="desktop" filename="main.css" cssproperty="font-family" css_selector="div.wIdxKeyword"></source>
+				<source media="desktop" filename="main.css" cssproperty="font-family" css_selector="div.wIdxLink"></source>
+				<source media="desktop" filename="main.css" cssproperty="font-family" css_selector="span.wIdxLinkText"></source>
+				<source media="desktop" filename="main.css" cssproperty="font-family" css_selector="div.wIdxKeywordHover"></source>
+				<source media="desktop" filename="main.css" cssproperty="font-family" css_selector="div.wIdxLinkHover"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>idx_search_bg_desktop</name>
+			<uiname res_ID="ID_IDX_SEARCHBG_DESKTOP">Search background</uiname>
+			<type>HTML_COLOR</type>
+			<value>#ffffff</value>
+			<group res_ID="ID_GROUP_INDEX_DESKTOP"/>
+			<visual_properties left="377px" top="138px" height="10px" width="10px"/>
+			<description res_ID="ID_IDX_SEARCHBG_DESC_DESKTOP">Background color of the index search</description>
+			<default-value>#ffffff</default-value>
+			<allowedvalues/>
+			<sources>
+				<source media="desktop" filename="main.css" cssproperty="background-color" css_selector="input.wIdxFilter"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>idx_search_border_sidebar</name>
+			<uiname res_ID="ID_NAME_IDX_SEARCH_BORDER_DESKTOP">Search border</uiname>
+			<type>HTML_COLOR</type>
+			<value>#a99f95</value>
+			<group res_ID="ID_GROUP_INDEX_DESKTOP"/>
+			<visual_properties left="76px" top="141px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_IDX_SEARCH_BORDER_DESKTOP">Border color of the search field</description>
+			<default-value>#a99f95</default-value>
+			<allowedvalues/>
+			<sources>
+				<source media="desktop" filename="main.css" cssproperty="border-color" css_selector="input.wIdxFilter"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>index_alphabet_color_sidebar</name>
+			<uiname res_ID="ID_NAME_INDEX_ALPHABET_COLOR_DESKTOP">Alphabet color</uiname>
+			<type>HTML_COLOR</type>
+			<value>#0079ac</value>
+			<group res_ID="ID_GROUP_INDEX_DESKTOP"/>
+			<visual_properties left="377px" top="179px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_INDEX_ALPHABET_COLOR_DESKTOP">Color of an alphabet letter separator in the sidebar</description>
+			<default-value>#0079ac</default-value>
+			<allowedvalues/>
+			<sources>
+				<source media="desktop" filename="main.css" cssproperty="color" css_selector="div.wIdxAlphabet"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>index_alphabet_separator_color</name>
+			<uiname res_ID="ID_NAME_INDEX_ALPHABET_SEPARATOR_COLOR">Alphabet separator</uiname>
+			<type>HTML_COLOR</type>
+			<value>#cfcbc6</value>
+			<group res_ID="ID_GROUP_INDEX_DESKTOP"/>
+			<visual_properties left="18px" top="194px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_INDEX_ALPHABET_SEPARATOR_COLOR">Color of the separator betweeen an alphabet letter and an index entry</description>
+			<default-value>#cfcbc6</default-value>
+			<allowedvalues/>
+			<sources>
+				<source media="desktop" filename="main.css" cssproperty="border-bottom-color" css_selector="div.wIdxAlphabet"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>index_entry_color_sidebar</name>
+			<uiname res_ID="ID_NAME_INDEX_ENTRY_COLOR">Entry color</uiname>
+			<type>HTML_COLOR</type>
+			<value>#363530</value>
+			<group res_ID="ID_GROUP_INDEX_DESKTOP"/>
+			<visual_properties left="377px" top="220px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_INDEX_ENTRY_COLOR">Color of an index entry</description>
+			<default-value>#363530</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source media="desktop" filename="main.css" cssproperty="color" css_selector="div.wIdxKeyword"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>index_entry_hcolor_sidebar</name>
+			<uiname res_ID="ID_NAME_INDEX_ENTRY_HCOLOR">Entry hover color</uiname>
+			<type>HTML_COLOR</type>
+			<value>#363530</value>
+			<group res_ID="ID_GROUP_INDEX_DESKTOP"/>
+			<visual_properties left="377px" top="277px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_INDEX_ENTRY_HCOLOR">Color of an index entry when hovered</description>
+			<default-value>#363530</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source media="desktop" filename="main.css" cssproperty="color" css_selector="div.wIdxKeywordHover"></source>
+				<source media="desktop" filename="main.css" cssproperty="color" css_selector="div.wIdxLinkHover"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>index_link_color_sidebar</name>
+			<uiname res_ID="ID_NAME_INDEX_LINK_COLOR">Link color</uiname>
+			<type>HTML_COLOR</type>
+			<value>#0079ac</value>
+			<group res_ID="ID_GROUP_INDEX_DESKTOP"/>
+			<visual_properties left="105px" top="250px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_INDEX_LINK_COLOR">Color of an index link</description>
+			<default-value>#0079ac</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source media="desktop" filename="main.css" cssproperty="color" css_selector="div.wIdxLink"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>desktop_functionholder_background</name>
+			<uiname res_ID="ID_NAME_BUTTONBAR_BACKGROUND">Background</uiname>
+			<type>HTML_COLOR</type>
+			<value>#3366FF</value>
+			<group res_ID="ID_GROUP_FUNCTIONBAR"/>
+			<visual_properties left="82px" top="1px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_BUTTONBAR_BACKGROUND">The background color of the function bar</description>
+			<default-value>#474641</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source media="desktop" filename="main.css" cssproperty="background-color" css_selector="div.desktop_functionholder"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>desktop_functionholder_buttonhbg</name>
+			<uiname res_ID="ID_NAME_DESKTOP_FUNCTIONHOLDER_BUTTONHBG">Hover background</uiname>
+			<type>HTML_COLOR</type>
+			<value>#dcd7d2</value>
+			<group res_ID="ID_GROUP_FUNCTIONBAR"/>
+			<visual_properties left="652px" top="1px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_DESKTOP_FUNCTIONHOLDER_BUTTONHBG">The background color of the buttons in the options bar when hovered (print, browse sequences)</description>
+			<default-value>#dcd7d2</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source media="desktop" filename="main.css" cssproperty="background-color" css_selector="div.print a:hover"></source>
+				<source media="desktop" filename="main.css" cssproperty="background-color" css_selector="div.brsBack a:hover"></source>
+				<source media="desktop" filename="main.css" cssproperty="background-color" css_selector="div.brsNext a:hover"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>search_image_desktop</name>
+			<uiname res_ID="ID_NAME_SEARCH_IMAGE">Search image</uiname>
+			<type>FILE</type>
+			<value>Search.png</value>
+			<group res_ID="ID_GROUP_FUNCTIONBAR"/>
+			<visual_properties left="355px" top="169px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_SEARCH_DESC">The image used as button to start the search. For best results, use an image of 28x27 pixels.</description>
+			<default-value>Search.png</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="topic.slp" attribute="src" id="xmlEditwSearchLink"></source>
+				<source filename="table_of_contents.slp" attribute="src" id="xmlEditwSearchLink"></source>
+				<source filename="glossary.slp" attribute="src" id="xmlEditwSearchLink"></source>
+				<source filename="index.slp" attribute="src" id="xmlEditwSearchLink"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>search_field_bgcolor_desktop</name>
+			<uiname res_ID="ID_NAME_SEARCH_FIELD_BGCOLOR_DESKTOP">Search background</uiname>
+			<type>HTML_COLOR</type>
+			<value>#363530</value>
+			<group res_ID="ID_GROUP_FUNCTIONBAR"/>
+			<visual_properties left="241px" top="208px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_SEARCH_FIELD_BGCOLOR_DESKTOP">Search field background</description>
+			<default-value>#363530</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source media="desktop" filename="main.css" cssproperty="background-color" css_selector="div.desktop_functionholder div.wSearchField"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>search_field_color_desktop</name>
+			<uiname res_ID="ID_NAME_SEARCH_FIELD_COLOR_DESKTOP">Text color</uiname>
+			<type>HTML_COLOR</type>
+			<value>#ffffff</value>
+			<group res_ID="ID_GROUP_FUNCTIONBAR"/>
+			<visual_properties left="233px" top="169px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_SEARCH_FIELD_COLOR_DESKTOP">Search field text color</description>
+			<default-value>#ffffff</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source media="desktop" filename="main.css" cssproperty="color" css_selector="div.desktop_functionholder input.wSearchField"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>search_field_search_button_bgcolor_desktop</name>
+			<uiname res_ID="ID_NAME_SEARCH_FIELD_SEARCH_BUTTON_BGCOLOR_DESKTOP">Button background</uiname>
+			<type>HTML_COLOR</type>
+			<value>#000000</value>
+			<group res_ID="ID_GROUP_FUNCTIONBAR"/>
+			<visual_properties left="410px" top="1px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_SEARCH_FIELD_SEARCH_BUTTON_BGCOLOR_DESKTOP">Search field search button background color</description>
+			<default-value>#000000</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source media="desktop" filename="main.css" cssproperty="background-color" css_selector="div.desktop_functionholder a.wSearchLink"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>misc_brs_next_image</name>
+			<uiname res_ID="ID_NAME_BRS_NEXT_BUTTON">Next button</uiname>
+			<type>FILE</type>
+			<value>BSNext.png</value>
+			<group res_ID="ID_GROUP_FUNCTIONBAR"/>
+			<visual_properties left="524px" top="322px" height="10px" width="10px"/>
+			<description res_ID="IS_DESC_BRS_NEXT_BUTTON">Browse sequence next button image. Use an image of 80x80 pixels.</description>
+			<default-value>BSNext.png</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source filename="topic.slp" attribute="src" id="xmlEditorBSNextButton"></source>
+				<source filename="topic.slp" attribute="src" id="xmlEditorBSNextButtonMobile"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>misc_brs_next_image_hover</name>
+			<uiname res_ID="ID_NAME_BRS_NEXT_BUTTON_HOVER">Next button hover</uiname>
+			<type>FILE</type>
+			<value>BSNext_hover.png</value>
+			<group res_ID="ID_GROUP_FUNCTIONBAR"/>
+			<visual_properties left="469px" top="362px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_BRS_NEXT_BUTTON_HOVER">Browse sequence next button image when hovered. Use an image of 80x80 pixels.</description>
+			<default-value>BSNext_hover.png</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source filename="topic.slp" attribute="src" id="xmlEditorBSNextButtonHover"></source>
+				<source filename="topic.slp" attribute="src" id="xmlEditorBSNextButtonMobileHover"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>misc_brs_back_image</name>
+			<uiname res_ID="ID_NAME_BRS_BACK_BUTTON">Back button</uiname>
+			<type>FILE</type>
+			<value>BSBack.png</value>
+			<group res_ID="ID_GROUP_FUNCTIONBAR"/>
+			<visual_properties left="518px" top="169px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_BRS_BACK_BUTTON">Browse sequence back button image. Use an image of 80x80 pixels.</description>
+			<default-value>BSBack.png</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source filename="topic.slp" attribute="src" id="xmlEditorBSBackButton"></source>
+				<source filename="topic.slp" attribute="src" id="xmlEditorBSBackButtonMobile"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>misc_brs_back_image_hover</name>
+			<uiname res_ID="ID_NAME_BRS_BACK_BUTTON_HOVER">Back button hover</uiname>
+			<type>FILE</type>
+			<value>BSBack_hover.png</value>
+			<group res_ID="ID_GROUP_FUNCTIONBAR"/>
+			<visual_properties left="463px" top="208px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_BRS_BACK_BUTTON_HOVER">Browse sequence back button image when hovered. Use an image of 80x80 pixels.</description>
+			<default-value>BSBack_hover.png</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source filename="topic.slp" attribute="src" id="xmlEditorBSBackButtonHover"></source>
+				<source filename="topic.slp" attribute="src" id="xmlEditorBSBackButtonMobileHover"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>misc_print_image</name>
+			<uiname res_ID="ID_NAME_PRINT_BUTTON">Print</uiname>
+			<type>FILE</type>
+			<value>Print.png</value>
+			<group res_ID="ID_GROUP_FUNCTIONBAR"/>
+			<visual_properties left="583px" top="245px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_PRINT_BUTTON">Print button image. Use an image of 80x80 pixels.</description>
+			<default-value>Print.png</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source filename="glossary.slp" attribute="src" id="xmlEditorPrintButton"></source>
+				<source filename="index.slp" attribute="src" id="xmlEditorPrintButton"></source>
+				<source filename="searchresults.slp" attribute="src" id="xmlEditorPrintButton"></source>
+				<source filename="table_of_contents.slp" attribute="src" id="xmlEditorPrintButton"></source>
+				<source filename="topic.slp" attribute="src" id="xmlEditorPrintButton"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>misc_print_image_hover</name>
+			<uiname res_ID="ID_NAME_PRINT_BUTTON_HOVER">Print hover</uiname>
+			<type>FILE</type>
+			<value>Print_hover.png</value>
+			<group res_ID="ID_GROUP_FUNCTIONBAR"/>
+			<visual_properties left="529px" top="284px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_PRINT_BUTTON_HOVER">Print button image when hovered. Use an image of 80x80 pixels.</description>
+			<default-value>Print_hover.png</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="glossary.slp" attribute="src" id="xmlEditorPrintButtonHover"></source>
+				<source filename="index.slp" attribute="src" id="xmlEditorPrintButtonHover"></source>
+				<source filename="searchresults.slp" attribute="src" id="xmlEditorPrintButtonHover"></source>
+				<source filename="table_of_contents.slp" attribute="src" id="xmlEditorPrintButtonHover"></source>
+				<source filename="topic.slp" attribute="src" id="xmlEditorPrintButtonHover"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>body_bgcolor</name>
+			<uiname res_ID="ID_NAME_BODY_BGCOLOR">Page background</uiname>
+			<type>HTML_COLOR</type>
+			<value>#dcd7d2</value>
+			<group res_ID="ID_GROUP_MOBILE_NAVIGATION"/>
+			<visual_properties left="564px" top="50px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_BODY_BGCOLOR">The background color of the page. Changing this will give a different background on mobile devices.</description>
+			<default-value>#dcd7d2</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source filename="main.css" cssproperty="background-color" css_selector="body"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>mobile_brsholder_bgcolor</name>
+			<uiname res_ID="ID_NAME_MOBILE_BRSHOLDER_BGCOLOR">BRS background</uiname>
+			<type>HTML_COLOR</type>
+			<value>#f1ede9</value>
+			<group res_ID="ID_GROUP_MOBILE_NAVIGATION"/>
+			<visual_properties left="16px" top="48px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_MOBILE_BRSHOLDER_BGCOLOR">The bar that holds the buttons for the browse seqences on mobile devices</description>
+			<default-value>#f1ede9</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source filename="main.css" cssproperty="background-color" css_selector="div.mobile_browseholder"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>bar_bgcolor</name>
+			<uiname res_ID="ID_NAME_BAR_BGCOLOR">Bar color</uiname>
+			<type>HTML_COLOR</type>
+			<value>#474641;</value>
+			<group res_ID="ID_GROUP_MOBILE_NAVIGATION"/>
+			<visual_properties left="560px" top="490px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_BAR_BGCOLOR">The background color for the mobile navigation bar</description>
+			<default-value>#474641;</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source filename="main.css" cssproperty="background-color" css_selector="div.buttonbar"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>bar_hbgcolor</name>
+			<uiname res_ID="ID_NAME_BAR_HBGCOLOR">Hover color</uiname>
+			<type>HTML_COLOR</type>
+			<value>#dcd7d2</value>
+			<group res_ID="ID_GROUP_MOBILE_NAVIGATION"/>
+			<visual_properties left="49px" top="490px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_BAR_HBGCOLOR">The background color used for the links when hovered</description>
+			<default-value>#dcd7d2</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source filename="main.css" cssproperty="background-color" css_selector="div.bar_toc:hover"></source>
+				<source filename="main.css" cssproperty="background-color" css_selector="div.bar_index:hover"></source>
+				<source filename="main.css" cssproperty="background-color" css_selector="div.bar_glossary:hover"></source>
+				<source filename="main.css" cssproperty="background-color" css_selector="div.bar_search:hover"></source>
+				<source filename="main.css" cssproperty="background-color" css_selector="div.bar_topic:hover"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>bar_idx_image</name>
+			<uiname res_ID="ID_NAME_BAR_IDX_IMAGE">Index</uiname>
+			<type>FILE</type>
+			<value>index.png</value>
+			<group res_ID="ID_GROUP_MOBILE_NAVIGATION"/>
+			<visual_properties left="111px" top="138px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_BAR_IDX_IMAGE">The image used for the link to the Index. Use an image of 60x45 for best results.</description>
+			<default-value>index.png</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="main.css" cssproperty="background-image" css_selector="div.bar_index"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>bar_idx_himage</name>
+			<uiname res_ID="ID_NAME_BAR_IDX_HIMAGE">Index hover</uiname>
+			<type>FILE</type>
+			<value>index_hover.png</value>
+			<group res_ID="ID_GROUP_MOBILE_NAVIGATION"/>
+			<visual_properties left="56px" top="181px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_BAR_IDX_HIMAGE">The image used for the link to the Index when hovered. Use an image of 60x45 for best results.</description>
+			<default-value>index_hover.png</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="main.css" cssproperty="background-image" css_selector="div.bar_index:hover"></source>
+				<source filename="main.css" cssproperty="background-image" css_selector="div.bar_index_active"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>bar_idx_image_phone</name>
+			<uiname res_ID="ID_NAME_BAR_IDX_IMAGE_PHONE">Index phone</uiname>
+			<type>FILE</type>
+			<value>index_buttonbar_small.png</value>
+			<group res_ID="ID_GROUP_MOBILE_NAVIGATION"/>
+			<visual_properties left="50px" top="221px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_BAR_IDX_IMAGE_PHONE">The image used for the link to the Index (phone only). Use an image of 30x30 for best results.</description>
+			<default-value>index_buttonbar_small.png</default-value>
+			<allowedvalues/>
+			<sources>
+				<source media="phone" filename="main.css" cssproperty="background-image" css_selector="div.bar_index"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>bar_idx_himage_phone</name>
+			<uiname res_ID="ID_NAME_BAR_IDX_HIMAGE_PHONE">Index hover phone</uiname>
+			<type>FILE</type>
+			<value>index_hover_buttonbar_small.png</value>
+			<group res_ID="ID_GROUP_MOBILE_NAVIGATION"/>
+			<visual_properties left="-6px" top="257px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_BAR_IDX_HIMAGE_PHONE">The image used for the link to the Index when hovered (phone only). Use an image of 30x30 for best results.</description>
+			<default-value>index_hover_buttonbar_small.png</default-value>
+			<allowedvalues/>
+			<sources>
+				<source media="phone" filename="main.css" cssproperty="background-image" css_selector="div.bar_index:hover"></source>
+				<source media="phone" filename="main.css" cssproperty="background-image" css_selector="div.bar_index_active"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>bar_toc_image</name>
+			<uiname res_ID="ID_NAME_BAR_TOC_IMAGE">TOC</uiname>
+			<type>FILE</type>
+			<value>toc.png</value>
+			<group res_ID="ID_GROUP_MOBILE_NAVIGATION"/>
+			<visual_properties left="117px" top="298px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_BAR_TOC_IMAGE">The image used for the link to the TOC. Use an image of 60x45 for best results.</description>
+			<default-value>toc.png</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="main.css" cssproperty="background-image" css_selector="div.bar_toc"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>bar_toc_himage</name>
+			<uiname res_ID="ID_NAME_BAR_TOC_HIMAGE">TOC hover</uiname>
+			<type>FILE</type>
+			<value>toc_hover.png</value>
+			<group res_ID="ID_GROUP_MOBILE_NAVIGATION"/>
+			<visual_properties left="62px" top="337px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_BAR_TOC_HIMAGE">The image used for the link to the TOC when hovered. Use an image of 60x45 for best results.</description>
+			<default-value>toc_hover.png</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="main.css" cssproperty="background-image" css_selector="div.bar_toc:hover"></source>
+				<source filename="main.css" cssproperty="background-image" css_selector="div.bar_toc_active"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>bar_toc_image_phone</name>
+			<uiname res_ID="ID_NAME_BAR_TOC_IMAGE_PHONE">TOC phone</uiname>
+			<type>FILE</type>
+			<value>toc_buttonbar_small.png</value>
+			<group res_ID="ID_GROUP_MOBILE_NAVIGATION"/>
+			<visual_properties left="56px" top="380px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_BAR_TOC_IMAGE_PHONE">The image used for the link to the TOC (phone only). Use an image of 30x30 for best results.</description>
+			<default-value>toc_buttonbar_small.png</default-value>
+			<allowedvalues/>
+			<sources>
+				<source media="phone" filename="main.css" cssproperty="background-image" css_selector="div.bar_toc"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>bar_toc_himage_phone</name>
+			<uiname res_ID="ID_NAME_BAR_TOC_HIMAGE_PHONE">TOC hover phone</uiname>
+			<type>FILE</type>
+			<value>toc_hover_buttonbar_small.png</value>
+			<group res_ID="ID_GROUP_MOBILE_NAVIGATION"/>
+			<visual_properties left="0px" top="416px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_BAR_TOC_HIMAGE_PHONE">The image used for the link to the TOC when hovered (phone only). Use an image of 30x30 for best results.</description>
+			<default-value>toc_hover_buttonbar_small.png</default-value>
+			<allowedvalues/>
+			<sources>
+				<source media="phone" filename="main.css" cssproperty="background-image" css_selector="div.bar_toc:hover"></source>
+				<source media="phone" filename="main.css" cssproperty="background-image" css_selector="div.bar_toc_active"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>bar_glo_image</name>
+			<uiname res_ID="ID_NAME_BAR_GLO_IMAGE">Glossary</uiname>
+			<type>FILE</type>
+			<value>glo.png</value>
+			<group res_ID="ID_GROUP_MOBILE_NAVIGATION"/>
+			<visual_properties left="256px" top="551px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_BAR_GLO_IMAGE">The image used for the link to the glossary. Use an image of 60x45 for best results.</description>
+			<default-value>glo.png</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="main.css" cssproperty="background-image" css_selector="div.bar_glossary"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>bar_glo_himage</name>
+			<uiname res_ID="ID_NAME_BAR_GLO_HIMAGE">Glossary hover</uiname>
+			<type>FILE</type>
+			<value>glo_hover.png</value>
+			<group res_ID="ID_GROUP_MOBILE_NAVIGATION"/>
+			<visual_properties left="201px" top="591px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_BAR_GLO_HIMAGE">The image used for the link to the glossary when hovered. Use an image of 60x45 for best results.</description>
+			<default-value>glo_hover.png</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="main.css" cssproperty="background-image" css_selector="div.bar_glossary:hover"></source>
+				<source filename="main.css" cssproperty="background-image" css_selector="div.bar_glossary_active"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>bar_glo_image_phone</name>
+			<uiname res_ID="ID_NAME_BAR_GLO_IMAGE_PHONE">Glossary phone</uiname>
+			<type>FILE</type>
+			<value>glo_buttonbar_small.png</value>
+			<group res_ID="ID_GROUP_MOBILE_NAVIGATION"/>
+			<visual_properties left="377px" top="551px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_BAR_GLO_IMAGE_PHONE">The image used for the link to the glossary (phone only). Use an image of 30x30 for best results.</description>
+			<default-value>glo_buttonbar_small.png</default-value>
+			<allowedvalues/>
+			<sources>
+				<source media="phone" filename="main.css" cssproperty="background-image" css_selector="div.bar_glossary"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>bar_glo_himage_phone</name>
+			<uiname res_ID="ID_NAME_BAR_GLO_HIMAGE_PHONE">Glossary hover phone</uiname>
+			<type>FILE</type>
+			<value>glo_hover_buttonbar_small.png</value>
+			<group res_ID="ID_GROUP_MOBILE_NAVIGATION"/>
+			<visual_properties left="377px" top="591px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_BAR_GLO_HIMAGE_PHONE">The image used for the link to the glossary when hovered (phone only). Use an image of 30x30 for best results.</description>
+			<default-value>glo_hover_buttonbar_small.png</default-value>
+			<allowedvalues/>
+			<sources>
+				<source media="phone" filename="main.css" cssproperty="background-image" css_selector="div.bar_glossary:hover"></source>
+				<source media="phone" filename="main.css" cssproperty="background-image" css_selector="div.bar_glossary_active"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>bar_fts_image</name>
+			<uiname res_ID="ID_NAME_BAR_FTS_IMAGE">Search</uiname>
+			<type>FILE</type>
+			<value>search_buttonbar.png</value>
+			<group res_ID="ID_GROUP_MOBILE_NAVIGATION"/>
+			<visual_properties left="558px" top="139px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_BAR_FTS_IMAGE">The image used for the link to the search. Use an image of 60x45 for best results.</description>
+			<default-value>search_buttonbar.png</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="main.css" cssproperty="background-image" css_selector="div.bar_search"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>bar_fts_himage</name>
+			<uiname res_ID="ID_NAME_BAR_FTS_HIMAGE">Search hover</uiname>
+			<type>FILE</type>
+			<value>search_buttonbar_hover.png</value>
+			<group res_ID="ID_GROUP_MOBILE_NAVIGATION"/>
+			<visual_properties left="558px" top="178px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_BAR_FTS_HIMAGE">The image used for the link to the search when hovered. Use an image of 60x45 for best results.</description>
+			<default-value>search_buttonbar_hover.png</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="main.css" cssproperty="background-image" css_selector="div.bar_search:hover"></source>
+				<source filename="main.css" cssproperty="background-image" css_selector="div.bar_search_active"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>bar_fts_image_phone</name>
+			<uiname res_ID="ID_NAME_BAR_FTS_IMAGE_PHONE">Search phone</uiname>
+			<type>FILE</type>
+			<value>search_buttonbar_small.png</value>
+			<group res_ID="ID_GROUP_MOBILE_NAVIGATION"/>
+			<visual_properties left="558px" top="221px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_BAR_FTS_IMAGE_PHONE">The image used for the link to the search (phone only). Use an image of 30x30 for best results.</description>
+			<default-value>search_buttonbar_small.png</default-value>
+			<allowedvalues/>
+			<sources>
+				<source media="phone" filename="main.css" cssproperty="background-image" css_selector="div.bar_search"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>bar_fts_himage_phone</name>
+			<uiname res_ID="ID_NAME_BAR_FTS_HIMAGE_PHONE">Search hover phone</uiname>
+			<type>FILE</type>
+			<value>search_hover_buttonbar_small.png</value>
+			<group res_ID="ID_GROUP_MOBILE_NAVIGATION"/>
+			<visual_properties left="558px" top="260px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_BAR_FTS_HIMAGE_PHONE">The image used for the link to the search when hovered (phone only). Use an image of 30x30 for best results.</description>
+			<default-value>search_buttonbar_hover_buttonbar_small.png</default-value>
+			<allowedvalues/>
+			<sources>
+				<source media="phone" filename="main.css" cssproperty="background-image" css_selector="div.bar_search:hover"></source>
+				<source media="phone" filename="main.css" cssproperty="background-image" css_selector="div.bar_search_active"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>bar_topic_image</name>
+			<uiname res_ID="ID_NAME_BAR_TOPIC_IMAGE">Topic</uiname>
+			<type>FILE</type>
+			<value>topic.png</value>
+			<group res_ID="ID_GROUP_MOBILE_NAVIGATION"/>
+			<visual_properties left="558px" top="298px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_BAR_TOPIC_IMAGE">The image used for the link to the topic. Use an image of 60x45 for best results.</description>
+			<default-value>topic.png</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="main.css" cssproperty="background-image" css_selector="div.bar_topic"></source>
+				<source filename="main.css" cssproperty="background-image" css_selector="div.bar_topic:hover"></source>
+				<source filename="main.css" cssproperty="background-image" css_selector="div.bar_topic_active"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>bar_topic_image_phone</name>
+			<uiname res_ID="ID_NAME_BAR_TOPIC_IMAGE_PHONE">Topic phone</uiname>
+			<type>FILE</type>
+			<value>icon_back_small.png</value>
+			<group res_ID="ID_GROUP_MOBILE_NAVIGATION"/>
+			<visual_properties left="558px" top="336px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_BAR_TOPIC_IMAGE_PHONE">The image used for the link to the topic (phone only). Use an image of 30x30 for best results.</description>
+			<default-value>icon_back_small.png</default-value>
+			<allowedvalues/>
+			<sources>
+				<source media="phone" filename="main.css" cssproperty="background-image" css_selector="div.bar_topic"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>glo_font</name>
+			<uiname res_ID="ID_NAME_GLO_FONT">Font</uiname>
+			<type>CSS_FONT_FAMILY</type>
+			<value>inherit</value>
+			<group res_ID="ID_GROUP_GLOSSARY_MOBILE"/>
+			<visual_properties left="340px" top="350px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_GLO_FONT">The font used for glossary entries. The value 'inherit' means that the TOC will use the default page font.</description>
+			<default-value>inherit</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source filename="main.css" cssproperty="font-family" css_selector="div.wGloAlphabet"></source>
+				<source filename="main.css" cssproperty="font-family" css_selector="div.wGloTerm"></source>
+				<source filename="main.css" cssproperty="font-family" css_selector="div.wGloTermHover"></source>
+				<source filename="main.css" cssproperty="font-family" css_selector="div.wGloTermSelected"></source>
+				<source filename="main.css" cssproperty="font-family" css_selector="span.wGloDefinitionText"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>glo_search_bg</name>
+			<uiname res_ID="ID_GLO_SEARCHBG">Search background</uiname>
+			<type>HTML_COLOR</type>
+			<value>#eeeeee</value>
+			<group res_ID="ID_GROUP_GLOSSARY_MOBILE"/>
+			<visual_properties left="0px" top="122px" height="10px" width="10px"/>
+			<description res_ID="ID_GLO_SEARCHBG_DESC">Background color of the glossary search</description>
+			<default-value>#eeeeee</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="main.css" cssproperty="background-color" css_selector="input.wGloFilter"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>glo_search_border</name>
+			<uiname res_ID="ID_GLO_SEARCHBORDER">Search border</uiname>
+			<type>HTML_COLOR</type>
+			<value>#a99f95</value>
+			<group res_ID="ID_GROUP_GLOSSARY_MOBILE"/>
+			<visual_properties left="585px" top="119px" height="10px" width="10px"/>
+			<description res_ID="ID_GLO_SEARCHBORDER_DESC">Border color of the glossary search</description>
+			<default-value>#a99f95</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="main.css" cssproperty="border-color" css_selector="input.wGloFilter"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>glossary_alphabet_color</name>
+			<uiname res_ID="ID_NAME_GLOSSARY_ALPHABET_COLOR">Alphabet color</uiname>
+			<type>HTML_COLOR</type>
+			<value>#59caff</value>
+			<group res_ID="ID_GROUP_GLOSSARY_MOBILE"/>
+			<visual_properties left="585px" top="165px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_GLOSSARY_ALPHABET_COLOR">Color of an alphabet letter separator</description>
+			<default-value>#59caff</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="main.css" cssproperty="color" css_selector="div.wGloAlphabet"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>glossary_term_color</name>
+			<uiname res_ID="ID_NAME_GLOSSARY_TERM_COLOR">Term color</uiname>
+			<type>HTML_COLOR</type>
+			<value>#363530</value>
+			<group res_ID="ID_GROUP_GLOSSARY_MOBILE"/>
+			<visual_properties left="40px" top="200px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_GLOSSARY_TERM_COLOR">Color of a glossary term</description>
+			<default-value>#363530</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="main.css" cssproperty="color" css_selector="div.wGloTerm"></source>
+				<source filename="main.css" cssproperty="color" css_selector="div.wGloTermSelected"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>glossary_term_hcolor</name>
+			<uiname res_ID="ID_NAME_GLOSSARY_TERM_HCOLOR">Term hover color</uiname>
+			<type>HTML_COLOR</type>
+			<value>#363530</value>
+			<group res_ID="ID_GROUP_GLOSSARY_MOBILE"/>
+			<visual_properties left="-17px" top="248px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_GLOSSARY_TERM_HCOLOR">Color of a glossary term when hovered</description>
+			<default-value>#363530</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="main.css" cssproperty="color" css_selector="div.wGloTermHover"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>glossary_term_separatorcolor</name>
+			<uiname res_ID="ID_NAME_GLOSSARY_TERM_SEPARATORCOLOR">Term separator color</uiname>
+			<type>HTML_COLOR</type>
+			<value>#f1ede9</value>
+			<group res_ID="ID_GROUP_GLOSSARY_MOBILE"/>
+			<visual_properties left="585px" top="224px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_GLOSSARY_TERM_SEPARATORCOLOR">Color of the separator between glossary terms</description>
+			<default-value>#f1ede9</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="main.css" cssproperty="border-top-color" css_selector="div.wGloTerm"></source>
+				<source filename="main.css" cssproperty="border-top-color" css_selector="div.wGloTermHover"></source>
+				<source filename="main.css" cssproperty="border-top-color" css_selector="div.wGloTermSelected"></source>
+				<source filename="main.css" cssproperty="border-top-color" css_selector="div.wGloAlphabet"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>glossary_definition_color</name>
+			<uiname res_ID="ID_NAME_GLOSSARY_DEFINITION_COLOR">Definition color</uiname>
+			<type>HTML_COLOR</type>
+			<value>#363530</value>
+			<group res_ID="ID_GROUP_GLOSSARY_MOBILE"/>
+			<visual_properties left="4px" top="310px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_GLOSSARY_DEFINITION_COLOR">Color of a glossary definition</description>
+			<default-value>#363530</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="main.css" cssproperty="color" css_selector="span.wGloDefinitionText"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>glo_font_sidebar</name>
+			<uiname res_ID="ID_NAME_GLO_FONT">Font</uiname>
+			<type>CSS_FONT_FAMILY</type>
+			<value>inherit</value>
+			<group res_ID="ID_GROUP_GLOSSARY_DESKTOP"/>
+			<visual_properties left="223px" top="317px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_GLO_FONT">The font used for glossary entries. The value 'inherit' means that the TOC will use the default page font.</description>
+			<default-value>inherit</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source media="desktop" filename="main.css" cssproperty="font-family" css_selector="div.wGloAlphabet"></source>
+				<source media="desktop" filename="main.css" cssproperty="font-family" css_selector="div.wGloTerm"></source>
+				<source media="desktop" filename="main.css" cssproperty="font-family" css_selector="div.wGloTermHover"></source>
+				<source media="desktop" filename="main.css" cssproperty="font-family" css_selector="div.wGloTermSelected"></source>
+				<source media="desktop" filename="main.css" cssproperty="font-family" css_selector="span.wGloDefinitionText"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>glo_search_bg_sidebar</name>
+			<uiname res_ID="ID_GLO_SEARCHBG_DESKTOP">Search background</uiname>
+			<type>HTML_COLOR</type>
+			<value>#ffffff</value>
+			<group res_ID="ID_GROUP_GLOSSARY_DESKTOP"/>
+			<visual_properties left="375px" top="144px" height="10px" width="10px"/>
+			<description res_ID="ID_GLO_SEARCHBG_DESC_DESKTOP">Background color of the glossary search (sidebar)</description>
+			<default-value>#ffffff</default-value>
+			<allowedvalues/>
+			<sources>
+				<source media="desktop" filename="main.css" cssproperty="background-color" css_selector="input.wGloFilter"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>glo_search_border_sidebar</name>
+			<uiname res_ID="ID_NAME_GLO_SEARCH_BORDER_DESKTOP">Search border</uiname>
+			<type>HTML_COLOR</type>
+			<value>#a99f95</value>
+			<group res_ID="ID_GROUP_GLOSSARY_DESKTOP"/>
+			<visual_properties left="68px" top="144px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_GLO_SEARCH_BORDER_DESKTOP">Border color of the search field</description>
+			<default-value>#a99f95</default-value>
+			<allowedvalues/>
+			<sources>
+				<source media="desktop" filename="main.css" cssproperty="border-color" css_selector="input.wGloFilter"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>glossary_alphabet_color_desktop</name>
+			<uiname res_ID="ID_NAME_GLOSSARY_ALPHABET_COLOR_DESKTOP">Alphabet color</uiname>
+			<type>HTML_COLOR</type>
+			<value>#0079ac</value>
+			<group res_ID="ID_GROUP_GLOSSARY_DESKTOP"/>
+			<visual_properties left="375px" top="184px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_GLOSSARY_ALPHABET_COLOR_DESKTOP">Color of an alphabet letter separator in the sidebar</description>
+			<default-value>#0079ac</default-value>
+			<allowedvalues/>
+			<sources>
+				<source media="desktop" filename="main.css" cssproperty="color" css_selector="div.wGloAlphabet"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>glossary_alphabet_separator_color</name>
+			<uiname res_ID="ID_NAME_GLOSSARY_ALPHABET_SEPARATOR_COLOR">Alphabet separator</uiname>
+			<type>HTML_COLOR</type>
+			<value>#cfcbc6</value>
+			<group res_ID="ID_GROUP_GLOSSARY_DESKTOP"/>
+			<visual_properties left="12px" top="200px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_GLOSSARY_ALPHABET_SEPARATOR_COLOR">Color of the separator betweeen an alphabet letter and a glossary term</description>
+			<default-value>#cfcbc6</default-value>
+			<allowedvalues/>
+			<sources>
+				<source media="desktop" filename="main.css" cssproperty="border-bottom-color" css_selector="div.wGloAlphabet"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>glossary_term_color_sidebar</name>
+			<uiname res_ID="ID_NAME_GLOSSARY_TERM_COLOR">Term color</uiname>
+			<type>HTML_COLOR</type>
+			<value>#363530</value>
+			<group res_ID="ID_GROUP_GLOSSARY_DESKTOP"/>
+			<visual_properties left="375px" top="212px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_GLOSSARY_TERM_COLOR">Color of a glossary term</description>
+			<default-value>#363530</default-value>
+			<allowedvalues/>
+			<sources>
+				<source media="desktop" filename="main.css" cssproperty="color" css_selector="div.wGloTerm"></source>
+				<source media="desktop" filename="main.css" cssproperty="color" css_selector="div.wGloTermSelected"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>glossary_term_hcolor_sidebar</name>
+			<uiname res_ID="ID_NAME_GLOSSARY_TERM_HCOLOR">Term hover color</uiname>
+			<type>HTML_COLOR</type>
+			<value>#363530</value>
+			<group res_ID="ID_GROUP_GLOSSARY_DESKTOP"/>
+			<visual_properties left="34px" top="230px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_GLOSSARY_TERM_HCOLOR">Color of a glossary term when hovered</description>
+			<default-value>#363530</default-value>
+			<allowedvalues/>
+			<sources>
+				<source media="desktop" filename="main.css" cssproperty="color" css_selector="div.wGloTermHover"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>glossary_definition_color_sidebar</name>
+			<uiname res_ID="ID_NAME_GLOSSARY_DEFINITION_COLOR">Definition color</uiname>
+			<type>HTML_COLOR</type>
+			<value>#363530</value>
+			<group res_ID="ID_GROUP_GLOSSARY_DESKTOP"/>
+			<visual_properties left="50px" top="260px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_GLOSSARY_DEFINITION_COLOR">Color of a glossary definition</description>
+			<default-value>#363530</default-value>
+			<allowedvalues/>
+			<sources>
+				<source media="desktop" filename="main.css" cssproperty="color" css_selector="span.wGloDefinitionText"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>fts_font</name>
+			<uiname res_ID="ID_NAME_FTS_FONT">Font</uiname>
+			<type>CSS_FONT_FAMILY</type>
+			<value>inherit</value>
+			<group res_ID="ID_GROUP_SEARCH"/>
+			<visual_properties left="779px" top="238px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_FTS_FONT">The font used to display search results. The value 'inherit' means that the TOC will use the default page font.</description>
+			<default-value>inherit</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source filename="main.css" cssproperty="font-family" css_selector="select.wSearchCount"></source>
+				<source filename="main.css" cssproperty="font-family" css_selector="div.wSearchMessage"></source>
+				<source filename="main.css" cssproperty="font-family" css_selector="div.wSearchMessageSmallScr"></source>
+				<source filename="main.css" cssproperty="font-family" css_selector="div.wSearchResultTitle"></source>
+				<source filename="main.css" cssproperty="font-family" css_selector="div.wSearchResultTitleSmallScr"></source>
+				<source filename="main.css" cssproperty="font-family" css_selector="div.wSearchResultTitleHover"></source>
+				<source filename="main.css" cssproperty="font-family" css_selector="div.wSearchResultTitleHoverSmallScr"></source>
+				<source filename="main.css" cssproperty="font-family" css_selector="a.wSearchBack"></source>
+				<source filename="main.css" cssproperty="font-family" css_selector="a.wSearchNext"></source>
+				<source filename="main.css" cssproperty="font-family" css_selector="a.wSearchBackSmallScr"></source>
+				<source filename="main.css" cssproperty="font-family" css_selector="a.wSearchNextSmallScr"></source>
+				<source filename="main.css" cssproperty="font-family" css_selector="li.wSearchPageNumberSelected"></source>
+				<source filename="main.css" cssproperty="font-family" css_selector="li.wSearchPageNumberLink"></source>
+				<source filename="main.css" cssproperty="font-family" css_selector="div.wSearchField"></source>
+				<source media="desktop" filename="main.css" cssproperty="font-family" css_selector="div.desktop_functionholder div.wSearchField"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>searchfield_bg</name>
+			<uiname res_ID="ID_SEARCH_BG">Search background</uiname>
+			<type>HTML_COLOR</type>
+			<value>#eeeeee</value>
+			<group res_ID="ID_GROUP_SEARCH"/>
+			<visual_properties left="779px" top="80px" height="10px" width="10px"/>
+			<description res_ID="ID_SEARCH_BG_DESC">The background color of the search field</description>
+			<default-value>#eeeeee</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="main.css" cssproperty="background-color" css_selector="input.wSearchField"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>searchfield_border</name>
+			<uiname res_ID="ID_SEARCHBORDER">Search border</uiname>
+			<type>HTML_COLOR</type>
+			<value>#a99f95</value>
+			<group res_ID="ID_GROUP_SEARCH"/>
+			<visual_properties left="33px" top="80px" height="10px" width="10px"/>
+			<description res_ID="ID_SEARCHBORDER_DESC">The border color of the search field</description>
+			<default-value>#a99f95</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="main.css" cssproperty="border-color" css_selector="input.wSearchField"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>search_image</name>
+			<uiname res_ID="ID_NAME_SEARCH_IMAGE">Search image</uiname>
+			<type>FILE</type>
+			<value>Search.png</value>
+			<group res_ID="ID_GROUP_SEARCH"/>
+			<visual_properties left="779px" top="45px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_SEARCH_DESC">The image used as button to start the search. For best results, use an image of 28x27 pixels.</description>
+			<default-value>Search.png</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="searrchresults.slp" attribute="src" id="xmlEditwSearchLink"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>search_count</name>
+			<uiname res_ID="ID_NAME_SEARCH_COUNT">Number of results background</uiname>
+			<type>HTML_COLOR</type>
+			<value>#e0dcd7</value>
+			<group res_ID="ID_GROUP_SEARCH"/>
+			<visual_properties left="779px" top="162px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_SEARCH_COUNT">Background of the selection box for number of search results</description>
+			<default-value>#e0dcd7</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source filename="main.css" cssproperty="border-color" css_selector="select.wSearchCount"></source>
+				<source filename="main.css" cssproperty="background-color" css_selector="select.wSearchCount"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>search_message_separator</name>
+			<uiname res_ID="ID_NAME_SEARCH_MESSAGE_SEPARATOR">Separator</uiname>
+			<type>HTML_COLOR</type>
+			<value>#a99f95</value>
+			<group res_ID="ID_GROUP_SEARCH"/>
+			<visual_properties left="779px" top="196px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_SEARCH_MESSAGE_SEPARATOR">Separator of the search message</description>
+			<default-value>#a99f95</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source filename="main.css" cssproperty="border-bottom-color" css_selector="div.wSearchMessage"></source>
+				<source filename="main.css" cssproperty="border-bottom-color" css_selector="div.wSearchMessageSmallScr"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>search_result_title_color</name>
+			<uiname res_ID="ID_NAME_SEARCH_RESULT_TITLE_COLOR">Title color</uiname>
+			<type>HTML_COLOR</type>
+			<value>#0079ac</value>
+			<group res_ID="ID_GROUP_SEARCH"/>
+			<visual_properties left="69px" top="264px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_SEARCH_RESULT_TITLE_COLOR">Color of the found page title.</description>
+			<default-value>#0079ac</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source filename="main.css" cssproperty="color" css_selector="div.wSearchResultTitle"></source>
+				<source filename="main.css" cssproperty="color" css_selector="div.wSearchResultTitleSmallScr"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>search_result_title_hcolor</name>
+			<uiname res_ID="ID_NAME_SEARCH_RESULT_TITLE_HCOLOR">Title hover color</uiname>
+			<type>HTML_COLOR</type>
+			<value>#0079ac</value>
+			<group res_ID="ID_GROUP_SEARCH"/>
+			<visual_properties left="14px" top="313px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_SEARCH_RESULT_TITLE_HCOLOR">Color of the found page title when hovered.</description>
+			<default-value>#0079ac</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source filename="main.css" cssproperty="color" css_selector="div.wSearchResultTitleHover"></source>
+				<source filename="main.css" cssproperty="color" css_selector="div.wSearchResultTitleHoverSmallScr"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>search_result_url_color</name>
+			<uiname res_ID="ID_NAME_SEARCH_RESULT_URL_COLOR">Url color</uiname>
+			<type>HTML_COLOR</type>
+			<value>#59caff</value>
+			<group res_ID="ID_GROUP_SEARCH"/>
+			<visual_properties left="83px" top="224px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_SEARCH_RESULT_URL_COLOR">The color of the url of the found topic.</description>
+			<default-value>#59caff</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source filename="main.css" cssproperty="color" css_selector="span.wSearchURL"></source>
+				<source filename="main.css" cssproperty="color" css_selector="span.wSearchURLSmallScr"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>search_result_text_color</name>
+			<uiname res_ID="ID_NAME_SEARCH_RESULT_TEXT_COLOR">Preview color</uiname>
+			<type>HTML_COLOR</type>
+			<value>#363530</value>
+			<group res_ID="ID_GROUP_SEARCH"/>
+			<visual_properties left="37px" top="397px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_SEARCH_RESULT_TEXT_COLOR">The color of the topic text shown as preview.</description>
+			<default-value>#363530</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source filename="main.css" cssproperty="color" css_selector="span.wSearchContext"></source>
+				<source filename="main.css" cssproperty="color" css_selector="span.wSearchContextSmallScr"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>search_result_curpage_color</name>
+			<uiname res_ID="ID_NAME_SEARCH_RESULT_CURPAGE_COLOR">Current page color</uiname>
+			<type>HTML_COLOR</type>
+			<value>#59caff</value>
+			<group res_ID="ID_GROUP_SEARCH"/>
+			<visual_properties left="27px" top="518px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_SEARCH_RESULT_CURPAGE_COLOR">Result current page link color</description>
+			<default-value>#59caff</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source filename="main.css" cssproperty="color" css_selector="li.wSearchPageNumberSelected"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>search_result_page_color</name>
+			<uiname res_ID="ID_NAME_SEARCH_RESULT_PAGE_COLOR">Page number color</uiname>
+			<type>HTML_COLOR</type>
+			<value>#363530</value>
+			<group res_ID="ID_GROUP_SEARCH"/>
+			<visual_properties left="407px" top="518px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_SEARCH_RESULT_PAGE_COLOR">Result page link color</description>
+			<default-value>#363530</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source filename="main.css" cssproperty="color" css_selector="li.wSearchPageNumberLink"></source>
+				<source filename="main.css" cssproperty="border-left-color" css_selector="li.wSearchPageNumberSelected"></source>
+				<source filename="main.css" cssproperty="border-left-color" css_selector="li.wSearchPageNumberLink"></source>
+				<source media="desktop" filename="main.css" cssproperty="border-left-color" css_selector="a.wSearchBack"></source>
+				<source media="desktop" filename="main.css" cssproperty="border-right-color" css_selector="a.wSearchNext"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>switch_bgimage</name>
+			<uiname res_ID="ID_NAME_SWITCH_BGIMAGE">On/Off switch</uiname>
+			<type>FILE</type>
+			<value>switch.png</value>
+			<group res_ID="ID_GROUP_SEARCH"/>
+			<visual_properties left="46px" top="121px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_SWITCH_BGIMAGE">The image used for the On/Off switch. Use an image with both the on and off switch with dimensions 58x42 pixels. (One switch is 29x21 pixels.)</description>
+			<default-value>switch.png</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="main.css" cssproperty="background-image" css_selector="label.switch-toggle"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>switch_on_color</name>
+			<uiname res_ID="ID_NAME_SWITCH_ON_COLOR">On color</uiname>
+			<type>HTML_COLOR</type>
+			<value>#ffffff</value>
+			<group res_ID="ID_GROUP_SEARCH"/>
+			<visual_properties left="85px" top="150px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_SWITCH_ON_COLOR">The color of the text on the on switch</description>
+			<default-value>#ffffff</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="main.css" cssproperty="color" css_selector="label.switch-toggle.on"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>switch_off_color</name>
+			<uiname res_ID="ID_NAME_SWITCH_OFF_COLOR">Off color</uiname>
+			<type>HTML_COLOR</type>
+			<value>#a99f95</value>
+			<group res_ID="ID_GROUP_SEARCH"/>
+			<visual_properties left="86px" top="183px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_SWITCH_OFF_COLOR">The color of the text on the off switch</description>
+			<default-value>#a99f95</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="main.css" cssproperty="color" css_selector="label.switch-toggle.off"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>next_search_page_bgimage</name>
+			<uiname res_ID="ID_NAME_NEXT_SEARCH_PAGE_BGIMAGE">Next page</uiname>
+			<type>FILE</type>
+			<value>BSNext.png</value>
+			<group res_ID="ID_GROUP_SEARCH"/>
+			<visual_properties left="779px" top="478px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_NEXT_SEARCH_PAGE_BGIMAGE">The image to go to the next page with search results. Use an image of 60x60 pixels for best results.</description>
+			<default-value>BSNext.png</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="main.css" cssproperty="background-image" css_selector="a.wSearchNext"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>back_search_page_bgimage</name>
+			<uiname res_ID="ID_NAME_BACK_SEARCH_PAGE_BGIMAGE">Previous page</uiname>
+			<type>FILE</type>
+			<value>BSBack.png</value>
+			<group res_ID="ID_GROUP_SEARCH"/>
+			<visual_properties left="27px" top="478px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_BACK_SEARCH_PAGE_BGIMAGE">The image to go to the previous page with search results. Use an image of 60x60 pixels for best results.</description>
+			<default-value>BSBack.png</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="main.css" cssproperty="background-image" css_selector="a.wSearchBack"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>body_font_family</name>
+			<uiname res_ID="ID_NAME_BODY_FONT_FAMILY">Font</uiname>
+			<type>CSS_FONT_FAMILY</type>
+			<value>Times New Roman</value>
+			<group res_ID="ID_GROUP_GLOBAL"/>
+			<visual_properties left="451px" top="15px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_BODY_FONT_FAMILY">The default font. Changing this font changes the TOC, Index, Glossary and Search results. (Only works if you do not set a font for any of these elements.)</description>
+			<default-value>"Century Gothic", Arial, sans-serif</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="main.css" cssproperty="font-family" css_selector="body"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>body_font_color</name>
+			<uiname res_ID="ID_NAME_BODY_FONT_COLOR">Text color</uiname>
+			<type>HTML_COLOR</type>
+			<value>#363530</value>
+			<group res_ID="ID_GROUP_GLOBAL"/>
+			<visual_properties left="521px" top="15px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_BODY_FONT_COLOR">The default text color. All elements without a custom color will use this color. (Also works for topic content.)</description>
+			<default-value>#363530</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="main.css" cssproperty="color" css_selector="body"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>search_result_highlight_color</name>
+			<uiname res_ID="ID_NAME_SEARCH_RESULT_HIGHLIGHT_COLOR">Search highlight color</uiname>
+			<type>HTML_COLOR</type>
+			<value>#b2b4bf</value>
+			<group res_ID="ID_GROUP_GLOBAL"/>
+			<visual_properties left="522px" top="389px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_SEARCH_RESULT_HIGHLIGHT_COLOR">The highlight color for search results in the current topic.</description>
+			<default-value>#b2b4bf</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="SearchResults.slp" attribute="bgcolorval" id="highlightsearch"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>search_result_highlight_text_color</name>
+			<uiname res_ID="ID_NAME_SEARCH_RESULT_HIGHLIGHT_TEXT_COLOR">Search text color</uiname>
+			<type>HTML_COLOR</type>
+			<value>#000000</value>
+			<group res_ID="ID_GROUP_GLOBAL"/>
+			<visual_properties left="343px" top="389px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_SEARCH_RESULT_HIGHLIGHT_TEXT_COLOR">The text color for highlighted search results in the current topic.</description>
+			<default-value>#000000</default-value>
+			<allowedvalues/>
+			<sources>
+				<source filename="SearchResults.slp" attribute="textcolorval" id="highlightsearch"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>top_link_bgimage</name>
+			<uiname res_ID="ID_NAME_TOP_LINK_BGIMAGE">Top image</uiname>
+			<type>FILE</type>
+			<value>to_top.png</value>
+			<group res_ID="ID_GROUP_GLOBAL"/>
+			<visual_properties left="832px" top="375px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_TOP_LINK_BGIMAGE">Image used for the back to top link</description>
+			<default-value>to_top.png</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source filename="main.css" cssproperty="background-color" css_selector="div.content_top_link a"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>webkit_scrollbar_track</name>
+			<uiname res_ID="ID_NAME_WEBKIT_SCROLLBAR_TRACK">Scrollbar background</uiname>
+			<type>HTML_COLOR</type>
+			<value>#f1ede9</value>
+			<group res_ID="ID_GROUP_GLOBAL"/>
+			<visual_properties left="832px" top="280px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_WEBKIT_SCROLLBAR_TRACK">The background color of scrollbar. Only works on Chrome and Safari.</description>
+			<default-value>#f1ede9</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source media="desktop" filename="main.css" cssproperty="background-color" css_selector="::-webkit-scrollbar-track"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>webkit_scrollbar_thumb</name>
+			<uiname res_ID="ID_NAME_WEBKIT_SCROLLBAR_THUMB">Scrollbar highlight</uiname>
+			<type>HTML_COLOR</type>
+			<value>#cfcbc6</value>
+			<group res_ID="ID_GROUP_GLOBAL"/>
+			<visual_properties left="832px" top="165px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_WEBKIT_SCROLLBAR_THUMB">The color of scrollbar highlight. Only works on Chrome and Safari.</description>
+			<default-value>#cfcbc6</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source media="desktop" filename="main.css" cssproperty="background-color" css_selector="::-webkit-scrollbar-thumb"></source>
+			</sources>
+		</variable>
+		<variable>
+			<name>content_bgcolor</name>
+			<uiname res_ID="ID_NAME_CONTENT_BGCOLOR">Content background</uiname>
+			<type>HTML_COLOR</type>
+			<value>#ffffff</value>
+			<group res_ID="ID_GROUP_GLOBAL"/>
+			<visual_properties left="134px" top="389px" height="10px" width="10px"/>
+			<description res_ID="ID_DESC_CONTENT_BGCOLOR">The background color of the page content. This is the section that holds the topic content.</description>
+			<default-value>#ffffff</default-value>
+			<allowedvalues>
+				<value type="NULL"></value>
+			</allowedvalues>
+			<sources>
+				<source filename="main.css" cssproperty="background-color" css_selector="div.content"></source>
+			</sources>
+		</variable>
+	</variables>
+	<resources>
+		<resource lang="en_us">
+			<element value="Browse sequence next button image. Use an image of 80x80 pixels." name="IS_DESC_BRS_NEXT_BUTTON"/>
+			<element value="The background color of the search field" name="ID_SEARCH_BG_DESC"/>
+			<element value="Search background" name="ID_SEARCH_BG"/>
+			<element value="The border color of the search field" name="ID_SEARCHBORDER_DESC"/>
+			<element value="Search border" name="ID_SEARCHBORDER"/>
+			<element value="Scrollbar background" name="ID_NAME_WEBKIT_SCROLLBAR_TRACK"/>
+			<element value="Scrollbar highlight" name="ID_NAME_WEBKIT_SCROLLBAR_THUMB"/>
+			<element value="Top image" name="ID_NAME_TOP_LINK_BGIMAGE"/>
+			<element value="Selected background" name="ID_NAME_TOC_TREE_LINK_SBGCOLOR"/>
+			<element value="Color" name="ID_NAME_TOC_TREE_LINK_COLOR"/>
+			<element value="Separator" name="ID_NAME_TOC_NODE_SEPARATORCOLOR"/>
+			<element value="Selected background" name="ID_NAME_TOC_NODE_SCOLOR"/>
+			<element value="Page (phone)" name="ID_NAME_TOC_NODE_PAGE_BGICON_PHONE"/>
+			<element value="Page icon" name="ID_NAME_TOC_NODE_PAGE_BGICON"/>
+			<element value="Open (phone)" name="ID_NAME_TOC_NODE_OPENBOOK_BGICON_PHONE"/>
+			<element value="Open icon" name="ID_NAME_TOC_NODE_OPENBOOK_BGICON"/>
+			<element value="Back (phone)" name="ID_NAME_TOC_NODE_LINK_UPICON_PHONE"/>
+			<element value="Back icon" name="ID_NAME_TOC_NODE_LINK_UPICON"/>
+			<element value="Color" name="ID_NAME_TOC_NODE_LINK_COLOR"/>
+			<element value="Link (phone)" name="ID_NAME_TOC_NODE_LINK_BGICON_PHONE"/>
+			<element value="Link icon" name="ID_NAME_TOC_NODE_LINK_BGICON"/>
+			<element value="Closed (phone)" name="ID_NAME_TOC_NODE_CLOSEBOOK_BGICON_PHONE"/>
+			<element value="Closed icon" name="ID_NAME_TOC_NODE_CLOSEBOOK_BGICON"/>
+			<element value="Font" name="ID_NAME_TOC_FONT"/>
+			<element value="Page selected" name="ID_NAME_TOCTREE_PAGE_IMAGE_SELECTED"/>
+			<element value="Page hover" name="ID_NAME_TOCTREE_PAGE_IMAGE_HOVER"/>
+			<element value="Page" name="ID_NAME_TOCTREE_PAGE_IMAGE"/>
+			<element value="Open selected" name="ID_NAME_TOCTREE_OPEN_BOOK_IMAGE_SELECTED"/>
+			<element value="Open hover" name="ID_NAME_TOCTREE_OPEN_BOOK_IMAGE_HOVER"/>
+			<element value="Open book" name="ID_NAME_TOCTREE_OPEN_BOOK_IMAGE"/>
+			<element value="Link selected" name="ID_NAME_TOCTREE_LINK_IMAGE_SELECTED"/>
+			<element value="Link hover" name="ID_NAME_TOCTREE_LINK_IMAGE_HOVER"/>
+			<element value="Link" name="ID_NAME_TOCTREE_LINK_IMAGE"/>
+			<element value="Font" name="ID_NAME_TOCTREE_FONT"/>
+			<element value="Closed selected" name="ID_NAME_TOCTREE_CLOSE_BOOK_IMAGE_SELECTED"/>
+			<element value="Closed hover" name="ID_NAME_TOCTREE_CLOSE_BOOK_IMAGE_HOVER"/>
+			<element value="Closed book" name="ID_NAME_TOCTREE_CLOSE_BOOK_IMAGE"/>
+			<element value="TOC hover" name="ID_NAME_TABS_TOC_IMAGE_HOVER"/>
+			<element value="TOC" name="ID_NAME_TABS_TOC_IMAGE"/>
+			<element value="Index hover" name="ID_NAME_TABS_IDX_IMAGE_HOVER"/>
+			<element value="Index" name="ID_NAME_TABS_IDX_IMAGE"/>
+			<element value="Hover background" name="ID_NAME_TABS_HBGCOLOR"/>
+			<element value="Bar background" name="ID_NAME_TABS_GROUP_BGCOLOR"/>
+			<element value="Glossary hover" name="ID_NAME_TABS_GLO_IMAGE_HOVER"/>
+			<element value="Glossary" name="ID_NAME_TABS_GLO_IMAGE"/>
+			<element value="On color" name="ID_NAME_SWITCH_ON_COLOR"/>
+			<element value="Off color" name="ID_NAME_SWITCH_OFF_COLOR"/>
+			<element value="On/Off switch" name="ID_NAME_SWITCH_BGIMAGE"/>
+			<element value="Title font" name="ID_NAME_SPECIAL_PAGETITLE_FONT"/>
+			<element value="Title color" name="ID_NAME_SPECIAL_PAGETITLE_COLOR"/>
+			<element value="Background color" name="ID_NAME_SIDEBAR_BGCOLOR"/>
+			<element value="Url color" name="ID_NAME_SEARCH_RESULT_URL_COLOR"/>
+			<element value="Title hover color" name="ID_NAME_SEARCH_RESULT_TITLE_HCOLOR"/>
+			<element value="Title color" name="ID_NAME_SEARCH_RESULT_TITLE_COLOR"/>
+			<element value="Preview color" name="ID_NAME_SEARCH_RESULT_TEXT_COLOR"/>
+			<element value="Page number color" name="ID_NAME_SEARCH_RESULT_PAGE_COLOR"/>
+			<element value="Search text color" name="ID_NAME_SEARCH_RESULT_HIGHLIGHT_TEXT_COLOR"/>
+			<element value="Search highlight color" name="ID_NAME_SEARCH_RESULT_HIGHLIGHT_COLOR"/>
+			<element value="Current page color" name="ID_NAME_SEARCH_RESULT_CURPAGE_COLOR"/>
+			<element value="Separator" name="ID_NAME_SEARCH_MESSAGE_SEPARATOR"/>
+			<element value="Search image" name="ID_NAME_SEARCH_IMAGE"/>
+			<element value="Search width" name="ID_NAME_SEARCH_FIELD_width_DESKTOP"/>
+			<element value="Button background" name="ID_NAME_SEARCH_FIELD_SEARCH_BUTTON_BGCOLOR_DESKTOP"/>
+			<element value="Text color" name="ID_NAME_SEARCH_FIELD_COLOR_DESKTOP"/>
+			<element value="Search background" name="ID_NAME_SEARCH_FIELD_BGCOLOR_DESKTOP"/>
+			<element value="Number of results background" name="ID_NAME_SEARCH_COUNT"/>
+			<element value="Print hover" name="ID_NAME_PRINT_BUTTON_HOVER"/>
+			<element value="Print" name="ID_NAME_PRINT_BUTTON"/>
+			<element value="Next page" name="ID_NAME_NEXT_SEARCH_PAGE_BGIMAGE"/>
+			<element value="BRS background" name="ID_NAME_MOBILE_BRSHOLDER_BGCOLOR"/>
+			<element value="Logo" name="ID_NAME_LOGO"/>
+			<element value="Index separator" name="ID_NAME_INDEX_TERM_SEPARATORCOLOR"/>
+			<element value="Link color" name="ID_NAME_INDEX_LINK_COLOR"/>
+			<element value="Entry hover color" name="ID_NAME_INDEX_ENTRY_HCOLOR"/>
+			<element value="Entry color" name="ID_NAME_INDEX_ENTRY_COLOR"/>
+			<element value="Entry image" name="ID_NAME_INDEX_ENTRY_BOOKBG"/>
+			<element value="Link image (phone)" name="ID_NAME_INDEX_ENTRYBG_PHONE2"/>
+			<element value="Entry image (phone)" name="ID_NAME_INDEX_ENTRYBG_PHONE1"/>
+			<element value="Link image" name="ID_NAME_INDEX_ENTRYBG"/>
+			<element value="Alphabet separator" name="ID_NAME_INDEX_ALPHABET_SEPARATOR_COLOR"/>
+			<element value="Alphabet color" name="ID_NAME_INDEX_ALPHABET_COLOR_DESKTOP"/>
+			<element value="Alphabet color" name="ID_NAME_INDEX_ALPHABET_COLOR"/>
+			<element value="Search width" name="ID_NAME_IDX_SEARCH_WIDTH"/>
+			<element value="Search border" name="ID_NAME_IDX_SEARCH_BORDER_DESKTOP"/>
+			<element value="Font" name="ID_NAME_IDX_FONT"/>
+			<element value="Hover color" name="ID_NAME_HOMELINK_HCOLOR"/>
+			<element value="Font weight" name="ID_NAME_HOMELINK_FONT_WEIGHT"/>
+			<element value="Font" name="ID_NAME_HOMELINK_FONT_FAMILY"/>
+			<element value="Color" name="ID_NAME_HOMELINK_COLOR"/>
+			<element value="Background" name="ID_NAME_HEADER_BGCOLOR"/>
+			<element value="Search width" name="ID_NAME_GLO_SEARCH_WIDTH"/>
+			<element value="Search border" name="ID_NAME_GLO_SEARCH_BORDER_DESKTOP"/>
+			<element value="Font" name="ID_NAME_GLO_FONT"/>
+			<element value="Term separator color" name="ID_NAME_GLOSSARY_TERM_SEPARATORCOLOR"/>
+			<element value="Term selected color" name="ID_NAME_GLOSSARY_TERM_SCOLOR"/>
+			<element value="Term hover color" name="ID_NAME_GLOSSARY_TERM_HCOLOR"/>
+			<element value="Term color" name="ID_NAME_GLOSSARY_TERM_COLOR"/>
+			<element value="Definition color" name="ID_NAME_GLOSSARY_DEFINITION_COLOR"/>
+			<element value="Alphabet separator" name="ID_NAME_GLOSSARY_ALPHABET_SEPARATOR_COLOR"/>
+			<element value="Alphabet color" name="ID_NAME_GLOSSARY_ALPHABET_COLOR_DESKTOP"/>
+			<element value="Alphabet color" name="ID_NAME_GLOSSARY_ALPHABET_COLOR"/>
+			<element value="Search width" name="ID_NAME_FTS_SEARCH_WIDTH"/>
+			<element value="Font" name="ID_NAME_FTS_FONT"/>
+			<element value="Resizer color" name="ID_NAME_DESKTOP_RESIZE_BGCOLOR"/>
+			<element value="Hover background" name="ID_NAME_DESKTOP_FUNCTIONHOLDER_BUTTONHBG"/>
+			<element value="Content background" name="ID_NAME_CONTENT_BGCOLOR"/>
+			<element value="Open button" name="ID_NAME_CLOSEBUTTON_OPENED_IMAGE"/>
+			<element value="Close button" name="ID_NAME_CLOSEBUTTON_CLOSED_IMAGE"/>
+			<element value="Close border" name="ID_NAME_CLOSEBUTTON_BORDER_COLOR"/>
+			<element value="Close background" name="ID_NAME_CLOSEBUTTON_BGCOLOR"/>
+			<element value="Background" name="ID_NAME_BUTTONBAR_BACKGROUND"/>
+			<element value="Next button hover" name="ID_NAME_BRS_NEXT_BUTTON_HOVER"/>
+			<element value="Next button" name="ID_NAME_BRS_NEXT_BUTTON"/>
+			<element value="Back button hover" name="ID_NAME_BRS_BACK_BUTTON_HOVER"/>
+			<element value="Back button" name="ID_NAME_BRS_BACK_BUTTON"/>
+			<element value="Font" name="ID_NAME_BODY_FONT_FAMILY"/>
+			<element value="Text color" name="ID_NAME_BODY_FONT_COLOR"/>
+			<element value="Page background" name="ID_NAME_BODY_BGCOLOR"/>
+			<element value="Topic phone" name="ID_NAME_BAR_TOPIC_IMAGE_PHONE"/>
+			<element value="Topic" name="ID_NAME_BAR_TOPIC_IMAGE"/>
+			<element value="Topic hover phone" name="ID_NAME_BAR_TOPIC_HIMAGE_PHONE"/>
+			<element value="Topic hover" name="ID_NAME_BAR_TOPIC_HIMAGE"/>
+			<element value="TOC phone" name="ID_NAME_BAR_TOC_IMAGE_PHONE"/>
+			<element value="TOC" name="ID_NAME_BAR_TOC_IMAGE"/>
+			<element value="TOC hover phone" name="ID_NAME_BAR_TOC_HIMAGE_PHONE"/>
+			<element value="TOC hover" name="ID_NAME_BAR_TOC_HIMAGE"/>
+			<element value="Index phone" name="ID_NAME_BAR_IDX_IMAGE_PHONE"/>
+			<element value="Index" name="ID_NAME_BAR_IDX_IMAGE"/>
+			<element value="Index hover phone" name="ID_NAME_BAR_IDX_HIMAGE_PHONE"/>
+			<element value="Index hover" name="ID_NAME_BAR_IDX_HIMAGE"/>
+			<element value="Hover color" name="ID_NAME_BAR_HBGCOLOR"/>
+			<element value="Glossary phone" name="ID_NAME_BAR_GLO_IMAGE_PHONE"/>
+			<element value="Glossary" name="ID_NAME_BAR_GLO_IMAGE"/>
+			<element value="Glossary hover phone" name="ID_NAME_BAR_GLO_HIMAGE_PHONE"/>
+			<element value="Glossary hover" name="ID_NAME_BAR_GLO_HIMAGE"/>
+			<element value="Search phone" name="ID_NAME_BAR_FTS_IMAGE_PHONE"/>
+			<element value="Search" name="ID_NAME_BAR_FTS_IMAGE"/>
+			<element value="Search hover phone" name="ID_NAME_BAR_FTS_HIMAGE_PHONE"/>
+			<element value="Search hover" name="ID_NAME_BAR_FTS_HIMAGE"/>
+			<element value="Bar color" name="ID_NAME_BAR_BGCOLOR"/>
+			<element value="Previous page" name="ID_NAME_BACK_SEARCH_PAGE_BGIMAGE"/>
+			<element value="Background color of the index search" name="ID_INDEX_SEARCHBG_DESC"/>
+			<element value="Border color of the index search" name="ID_IDX_SEARCHBORDER_DESC"/>
+			<element value="Search border" name="ID_IDX_SEARCHBORDER"/>
+			<element value="Search background" name="ID_IDX_SEARCHBG_DESKTOP"/>
+			<element value="Background color of the index search" name="ID_IDX_SEARCHBG_DESC_DESKTOP"/>
+			<element value="Search background" name="ID_IDX_SEARCHBG"/>
+			<element value="TOC Desktop" name="ID_GROUP_TOCTREE"/>
+			<element value="TOC Mobile/Tablet" name="ID_GROUP_TOCNODE"/>
+			<element value="Title Mobile" name="ID_GROUP_SPECIALPAGE"/>
+			<element value="Sidebar" name="ID_GROUP_SIDEBAR"/>
+			<element value="Navigation Mobile/Tablet" name="ID_GROUP_MOBILE_NAVIGATION"/>
+			<element value="Index Mobile/Tablet" name="ID_GROUP_INDEX_MOBILE"/>
+			<element value="Index Desktop" name="ID_GROUP_INDEX_DESKTOP"/>
+			<element value="Header" name="ID_GROUP_HEADER"/>
+			<element value="Glossary Mobile/Tablet" name="ID_GROUP_GLOSSARY_MOBILE"/>
+			<element value="Glossary Desktop" name="ID_GROUP_GLOSSARY_DESKTOP"/>
+			<element value="Global" name="ID_GROUP_GLOBAL"/>
+			<element value="Function bar" name="ID_GROUP_FUNCTIONBAR"/>
+			<element value="Border color of the glossary search" name="ID_GLO_SEARCHBORDER_DESC"/>
+			<element value="Search border" name="ID_GLO_SEARCHBORDER"/>
+			<element value="Search background" name="ID_GLO_SEARCHBG_DESKTOP"/>
+			<element value="Background color of the glossary search (sidebar)" name="ID_GLO_SEARCHBG_DESC_DESKTOP"/>
+			<element value="Background color of the glossary search" name="ID_GLO_SEARCHBG_DESC"/>
+			<element value="Search background" name="ID_GLO_SEARCHBG"/>
+			<element value="The background color of scrollbar. Only works on Chrome and Safari." name="ID_DESC_WEBKIT_SCROLLBAR_TRACK"/>
+			<element value="The color of scrollbar highlight. Only works on Chrome and Safari." name="ID_DESC_WEBKIT_SCROLLBAR_THUMB"/>
+			<element value="Image used for the back to top link" name="ID_DESC_TOP_LINK_BGIMAGE"/>
+			<element value="Background color of selected entries in the TOC" name="ID_DESC_TOC_TREE_LINK_SBGCOLOR"/>
+			<element value="Text color of TOC entries" name="ID_DESC_TOC_TREE_LINK_COLOR"/>
+			<element value="Color of the separator between TOC entries" name="ID_DESC_TOC_NODE_SEPARATORCOLOR"/>
+			<element value="Background of selected TOC entry" name="ID_DESC_TOC_NODE_SCOLOR"/>
+			<element value="Icon used for a page. Phone only. Use an image of 15x16 pixels." name="ID_DESC_TOC_NODE_PAGE_BGICON_PHONE"/>
+			<element value="Icon used for a page. Use an image of 33x33 pixels." name="ID_DESC_TOC_NODE_PAGE_BGICON"/>
+			<element value="Icon used for an opened book. Phone only. Use an image of 15x16 pixels." name="ID_DESC_TOC_NODE_OPENBOOK_BGICON_PHONE"/>
+			<element value="Icon used for an opened book. Use an image of 33x33 pixels." name="ID_DESC_TOC_NODE_OPENBOOK_BGICON"/>
+			<element value="Icon used for the link to go up a level in the TOC. Phone only. Use an image of 15x16 pixels." name="ID_DESC_TOC_NODE_LINK_UPICON_PHONE"/>
+			<element value="Icon used for the link to go up a level in the TOC. Use an image of 33x33 pixels." name="ID_DESC_TOC_NODE_LINK_UPICON"/>
+			<element value="Link color of TOC entries" name="ID_DESC_TOC_NODE_LINK_COLOR"/>
+			<element value="Icon used for a link to an external page. Phone only. Use an image of 15x16 pixels." name="ID_DESC_TOC_NODE_LINK_BGICON_PHONE"/>
+			<element value="Icon used for a link to an external page. Use an image of 33x33 pixels." name="ID_DESC_TOC_NODE_LINK_BGICON"/>
+			<element value="Icon used for a closed book. Phone only. Use an image of 15x16 pixels." name="ID_DESC_TOC_NODE_CLOSEBOOK_BGICON_PHONE"/>
+			<element value="Icon used for a closed book. Use an image of 33x33 pixels." name="ID_DESC_TOC_NODE_CLOSEBOOK_BGICON"/>
+			<element value="The font used for TOC entries. The value 'inherit' means that the TOC will use the default page font." name="ID_DESC_TOC_FONT"/>
+			<element value="The page icon used in the desktop TOC when selected. Use an image of 15x15 pixels." name="ID_DESC_TOCTREE_PAGE_IMAGE_SELECTED"/>
+			<element value="The page icon used in the desktop TOC when hovered. Use an image of 15x15 pixels." name="ID_DESC_TOCTREE_PAGE_IMAGE_HOVER"/>
+			<element value="The page icon used in the desktop TOC. Use an image of 15x15 pixels." name="ID_DESC_TOCTREE_PAGE_IMAGE"/>
+			<element value="The open book icon used in the desktop TOC when selected. Use an image of 15x15 pixels." name="ID_DESC_TOCTREE_OPEN_BOOK_IMAGE_SELECTED"/>
+			<element value="The open book icon used in the desktop TOC when hovered. Use an image of 15x15 pixels." name="ID_DESC_TOCTREE_OPEN_BOOK_IMAGE_HOVER"/>
+			<element value="The open book icon used in the desktop TOC. Use an image of 15x15 pixels." name="ID_DESC_TOCTREE_OPEN_BOOK_IMAGE"/>
+			<element value="The link icon used in the desktop TOC when selected. Use an image of 15x15 pixels." name="ID_DESC_TOCTREE_LINK_IMAGE_SELECTED"/>
+			<element value="The link icon used in the desktop TOC when hovered. Use an image of 15x15 pixels." name="ID_DESC_TOCTREE_LINK_IMAGE_HOVER"/>
+			<element value="The link icon used in the desktop TOC. Use an image of 15x15 pixels." name="ID_DESC_TOCTREE_LINK_IMAGE"/>
+			<element value="The closed book icon used in the desktop TOC when selected. Use an image of 15x15 pixels." name="ID_DESC_TOCTREE_CLOSE_BOOK_IMAGE_SELECTED"/>
+			<element value="The closed book icon used in the desktop TOC when hovered. Use an image of 15x15 pixels." name="ID_DESC_TOCTREE_CLOSE_BOOK_IMAGE_HOVER"/>
+			<element value="The closed book icon used in the desktop TOC. Use an image of 15x15 pixels." name="ID_DESC_TOCTREE_CLOSE_BOOK_IMAGE"/>
+			<element value="The color of the page title" name="ID_DESC_TITLE_COLOR"/>
+			<element value="Image used for the TOC tab when hovered. Use an image of 60x45 pixels." name="ID_DESC_TABS_TOC_IMAGE_HOVER"/>
+			<element value="Image used for the TOC tab. Use an image of 60x45 pixels.." name="ID_DESC_TABS_TOC_IMAGE"/>
+			<element value="Image used for the index tab when hovered. Use an image of 60x45 pixels." name="ID_DESC_TABS_IDX_IMAGE_HOVER"/>
+			<element value="Image used for the index tab. Use an image of 60x45 pixels." name="ID_DESC_TABS_IDX_IMAGE"/>
+			<element value="Tab background color when hovered/selected" name="ID_DESC_TABS_HBGCOLOR"/>
+			<element value="Tab bar background" name="ID_DESC_TABS_GROUP_BGCOLOR"/>
+			<element value="Image used for the glossary tab when hovered. Use an image of 60x45 pixels." name="ID_DESC_TABS_GLO_IMAGE_HOVER"/>
+			<element value="Image used for the glossary tab. Use an image of 60x45 pixels." name="ID_DESC_TABS_GLO_IMAGE"/>
+			<element value="The color of the text on the on switch" name="ID_DESC_SWITCH_ON_COLOR"/>
+			<element value="The color of the text on the off switch" name="ID_DESC_SWITCH_OFF_COLOR"/>
+			<element value="The image used for the On/Off switch. Use an image with both the on and off switch with dimensions 58x42 pixels. (One switch is 29x21 pixels.)" name="ID_DESC_SWITCH_BGIMAGE"/>
+			<element value="The font of the title for the mobile TOC, Index and Glossary" name="ID_DESC_SPECIAL_PAGETITLE_FONT"/>
+			<element value="The color of the title for the mobile TOC, Index and Glossary" name="ID_DESC_SPECIAL_PAGETITLE_COLOR"/>
+			<element value="The background color of the sidebar" name="ID_DESC_SIDEBAR_BGCOLOR"/>
+			<element value="The color of the url of the found topic." name="ID_DESC_SEARCH_RESULT_URL_COLOR"/>
+			<element value="Color of the found page title when hovered." name="ID_DESC_SEARCH_RESULT_TITLE_HCOLOR"/>
+			<element value="Color of the found page title." name="ID_DESC_SEARCH_RESULT_TITLE_COLOR"/>
+			<element value="The color of the topic text shown as preview." name="ID_DESC_SEARCH_RESULT_TEXT_COLOR"/>
+			<element value="Result page link color" name="ID_DESC_SEARCH_RESULT_PAGE_COLOR"/>
+			<element value="The text color for highlighted search results in the current topic." name="ID_DESC_SEARCH_RESULT_HIGHLIGHT_TEXT_COLOR"/>
+			<element value="The highlight color for search results in the current topic." name="ID_DESC_SEARCH_RESULT_HIGHLIGHT_COLOR"/>
+			<element value="Result current page link color" name="ID_DESC_SEARCH_RESULT_CURPAGE_COLOR"/>
+			<element value="Separator of the search message" name="ID_DESC_SEARCH_MESSAGE_SEPARATOR"/>
+			<element value="Search field width. Use any CSS Unit: px, pt, % and em." name="ID_DESC_SEARCH_FIELD_WIDTH_DESKTOP"/>
+			<element value="Search field search button background color" name="ID_DESC_SEARCH_FIELD_SEARCH_BUTTON_BGCOLOR_DESKTOP"/>
+			<element value="Search field text color" name="ID_DESC_SEARCH_FIELD_COLOR_DESKTOP"/>
+			<element value="Search field background" name="ID_DESC_SEARCH_FIELD_BGCOLOR_DESKTOP"/>
+			<element value="The image used as button to start the search. For best results, use an image of 28x27 pixels." name="ID_DESC_SEARCH_DESC"/>
+			<element value="Background of the selection box for number of search results" name="ID_DESC_SEARCH_COUNT"/>
+			<element value="Print button image when hovered. Use an image of 80x80 pixels." name="ID_DESC_PRINT_BUTTON_HOVER"/>
+			<element value="Print button image. Use an image of 80x80 pixels." name="ID_DESC_PRINT_BUTTON"/>
+			<element value="The image to go to the next page with search results. Use an image of 60x60 pixels for best results." name="ID_DESC_NEXT_SEARCH_PAGE_BGIMAGE"/>
+			<element value="The bar that holds the buttons for the browse seqences on mobile devices" name="ID_DESC_MOBILE_BRSHOLDER_BGCOLOR"/>
+			<element value="The logo used in the layout. Use an image of 80x80 pixels for best results." name="ID_DESC_Logo"/>
+			<element value="Color of the separator between index entries" name="ID_DESC_INDEX_TERM_SEPARATORCOLOR"/>
+			<element value="Color of an index link" name="ID_DESC_INDEX_LINK_COLOR"/>
+			<element value="Color of an index entry when hovered" name="ID_DESC_INDEX_ENTRY_HCOLOR"/>
+			<element value="Color of an index entry" name="ID_DESC_INDEX_ENTRY_COLOR"/>
+			<element value="Image of an index entry with multiple topics" name="ID_DESC_INDEX_ENTRY_BOOKBG"/>
+			<element value="Image of an index link (phone)" name="ID_DESC_INDEX_ENTRYBG_PHONE2"/>
+			<element value="Image of an index entry (phone)" name="ID_DESC_INDEX_ENTRYBG_PHONE1"/>
+			<element value="Image of an index link" name="ID_DESC_INDEX_ENTRYBG"/>
+			<element value="Color of the separator betweeen an alphabet letter and an index entry" name="ID_DESC_INDEX_ALPHABET_SEPARATOR_COLOR"/>
+			<element value="Color of an alphabet letter separator in the sidebar" name="ID_DESC_INDEX_ALPHABET_COLOR_DESKTOP"/>
+			<element value="Color of an alphabet letter separator" name="ID_DESC_INDEX_ALPHABET_COLOR"/>
+			<element value="Width of the search field" name="ID_DESC_IDX_SEARCH_WIDTH"/>
+			<element value="Border color of the search field" name="ID_DESC_IDX_SEARCH_BORDER_DESKTOP"/>
+			<element value="The font used for index entries. The value 'inherit' means that the Index will use the default page font." name="ID_DESC_IDX_FONT"/>
+			<element value="Title hover color" name="ID_DESC_HOMELINK_HCOLOR"/>
+			<element value="The title font weight (only works if you do not use the default font)." name="ID_DESC_HOMELINK_FONT_WEIGHT"/>
+			<element value="The title font" name="ID_DESC_HOMELINK_FONT_FAMILY"/>
+			<element value="Link color" name="ID_DESC_HOMELINK_COLOR"/>
+			<element value="The background color of the header" name="ID_DESC_HEADER_BGCOLOR"/>
+			<element value="Width of the search field" name="ID_DESC_GLO_SEARCH_WIDTH"/>
+			<element value="Border color of the search field" name="ID_DESC_GLO_SEARCH_BORDER_DESKTOP"/>
+			<element value="The font used for glossary entries. The value 'inherit' means that the TOC will use the default page font." name="ID_DESC_GLO_FONT"/>
+			<element value="Color of the separator between glossary terms" name="ID_DESC_GLOSSARY_TERM_SEPARATORCOLOR"/>
+			<element value="Color of a glossary term when selected" name="ID_DESC_GLOSSARY_TERM_SCOLOR"/>
+			<element value="Color of a glossary term when hovered" name="ID_DESC_GLOSSARY_TERM_HCOLOR"/>
+			<element value="Color of a glossary term" name="ID_DESC_GLOSSARY_TERM_COLOR"/>
+			<element value="Color of a glossary definition" name="ID_DESC_GLOSSARY_DEFINITION_COLOR"/>
+			<element value="Color of the separator betweeen an alphabet letter and a glossary term" name="ID_DESC_GLOSSARY_ALPHABET_SEPARATOR_COLOR"/>
+			<element value="Color of an alphabet letter separator in the sidebar" name="ID_DESC_GLOSSARY_ALPHABET_COLOR_DESKTOP"/>
+			<element value="Color of an alphabet letter separator" name="ID_DESC_GLOSSARY_ALPHABET_COLOR"/>
+			<element value="Width of the search field" name="ID_DESC_FTS_SEARCH_WIDTH"/>
+			<element value="The font used to display search results. The value 'inherit' means that the TOC will use the default page font." name="ID_DESC_FTS_FONT"/>
+			<element value="The color of the content paneresize bar" name="ID_DESC_DESKTOP_RESIZE_BGCOLOR"/>
+			<element value="The background color of the buttons in the options bar when hovered (print, browse sequences)" name="ID_DESC_DESKTOP_FUNCTIONHOLDER_BUTTONHBG"/>
+			<element value="The background color of the page content. This is the section that holds the topic content." name="ID_DESC_CONTENT_BGCOLOR"/>
+			<element value="The image of the button to open the sidebar" name="ID_DESC_CLOSEBUTTON_OPENED_IMAGE"/>
+			<element value="The image of the button to close the sidebar" name="ID_DESC_CLOSEBUTTON_CLOSED_IMAGE"/>
+			<element value="The border color of the sidebar close button" name="ID_DESC_CLOSEBUTTON_BORDER_COLOR"/>
+			<element value="The background color of the sidebar close button" name="ID_DESC_CLOSEBUTTON_BGCOLOR"/>
+			<element value="The background color of the function bar" name="ID_DESC_BUTTONBAR_BACKGROUND"/>
+			<element value="Browse sequence next button image when hovered. Use an image of 80x80 pixels." name="ID_DESC_BRS_NEXT_BUTTON_HOVER"/>
+			<element value="Browse sequence back button image when hovered. Use an image of 80x80 pixels." name="ID_DESC_BRS_BACK_BUTTON_HOVER"/>
+			<element value="Browse sequence back button image. Use an image of 80x80 pixels." name="ID_DESC_BRS_BACK_BUTTON"/>
+			<element value="The default font. Changing this font changes the TOC, Index, Glossary and Search results. (Only works if you do not set a font for any of these elements.)" name="ID_DESC_BODY_FONT_FAMILY"/>
+			<element value="The default text color. All elements without a custom color will use this color. (Also works for topic content.)" name="ID_DESC_BODY_FONT_COLOR"/>
+			<element value="The background color of the page. Changing this will give a different background on mobile devices." name="ID_DESC_BODY_BGCOLOR"/>
+			<element value="The image used for the link to the topic (phone only). Use an image of 30x30 for best results." name="ID_DESC_BAR_TOPIC_IMAGE_PHONE"/>
+			<element value="The image used for the link to the topic. Use an image of 60x45 for best results." name="ID_DESC_BAR_TOPIC_IMAGE"/>
+			<element value="The image used for the link to the topic when hovered (phone only). Use an image of 30x30 for best results." name="ID_DESC_BAR_TOPIC_HIMAGE_PHONE"/>
+			<element value="The image used for the link to the topic when hovered. Use an image of 60x45 for best results." name="ID_DESC_BAR_TOPIC_HIMAGE"/>
+			<element value="The image used for the link to the TOC (phone only). Use an image of 30x30 for best results." name="ID_DESC_BAR_TOC_IMAGE_PHONE"/>
+			<element value="The image used for the link to the TOC. Use an image of 60x45 for best results." name="ID_DESC_BAR_TOC_IMAGE"/>
+			<element value="The image used for the link to the TOC when hovered (phone only). Use an image of 30x30 for best results." name="ID_DESC_BAR_TOC_HIMAGE_PHONE"/>
+			<element value="The image used for the link to the TOC when hovered. Use an image of 60x45 for best results." name="ID_DESC_BAR_TOC_HIMAGE"/>
+			<element value="The image used for the link to the Index (phone only). Use an image of 30x30 for best results." name="ID_DESC_BAR_IDX_IMAGE_PHONE"/>
+			<element value="The image used for the link to the Index. Use an image of 60x45 for best results." name="ID_DESC_BAR_IDX_IMAGE"/>
+			<element value="The image used for the link to the Index when hovered (phone only). Use an image of 30x30 for best results." name="ID_DESC_BAR_IDX_HIMAGE_PHONE"/>
+			<element value="The image used for the link to the Index when hovered. Use an image of 60x45 for best results." name="ID_DESC_BAR_IDX_HIMAGE"/>
+			<element value="The background color used for the links when hovered" name="ID_DESC_BAR_HBGCOLOR"/>
+			<element value="The image used for the link to the glossary (phone only). Use an image of 30x30 for best results." name="ID_DESC_BAR_GLO_IMAGE_PHONE"/>
+			<element value="The image used for the link to the glossary. Use an image of 60x45 for best results." name="ID_DESC_BAR_GLO_IMAGE"/>
+			<element value="The image used for the link to the glossary when hovered (phone only). Use an image of 30x30 for best results." name="ID_DESC_BAR_GLO_HIMAGE_PHONE"/>
+			<element value="The image used for the link to the glossary when hovered. Use an image of 60x45 for best results." name="ID_DESC_BAR_GLO_HIMAGE"/>
+			<element value="The image used for the link to the search (phone only). Use an image of 30x30 for best results." name="ID_DESC_BAR_FTS_IMAGE_PHONE"/>
+			<element value="The image used for the link to the search. Use an image of 60x45 for best results." name="ID_DESC_BAR_FTS_IMAGE"/>
+			<element value="The image used for the link to the search when hovered (phone only). Use an image of 30x30 for best results." name="ID_DESC_BAR_FTS_HIMAGE_PHONE"/>
+			<element value="The image used for the link to the search when hovered. Use an image of 60x45 for best results." name="ID_DESC_BAR_FTS_HIMAGE"/>
+			<element value="The background color for the mobile navigation bar" name="ID_DESC_BAR_BGCOLOR"/>
+			<element value="The image to go to the previous page with search results. Use an image of 60x60 pixels for best results." name="ID_DESC_BACK_SEARCH_PAGE_BGIMAGE"/>
+		</resource>
+	</resources>
+</rhlayout>

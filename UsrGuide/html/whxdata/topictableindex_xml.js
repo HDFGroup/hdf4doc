@@ -1,0 +1,1 @@
+gXMLBuffer="<?xml version=\"1.0\" encoding=\"UTF-8\"?><cki><ck fm=\"UG_Intro\" to=\"netCDF_copyright\" num=\"32\"/></cki>";

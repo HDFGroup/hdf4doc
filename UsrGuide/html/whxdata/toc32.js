@@ -1,0 +1,1 @@
+gXMLBuffer ="<?xml version=\"1.0\" encoding=\"utf-8\" ?><data  src=\"toc.js\"  name=\"netCDF_copyright\"><item name=\"netCDF_copyright\" url=\"UG_html/netCDF_copyright/netCDF_copyright.htm\" /></data>";

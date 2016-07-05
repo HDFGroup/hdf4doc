@@ -1,0 +1,1 @@
+gXMLBuffer ="<?xml version=\"1.0\" encoding=\"utf-8\" ?><glossary>  <chunkinfo url=\"gdata1.js\" first=\"8-bit raster image\\    a bit-mapped image whose rows are painted from left to right using pixel\" last=\"SD scientific data set data model: description\" num=\"8\" />  </glossary>";
