@@ -1,0 +1,2061 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="OriginalFile" content="C:\hdf\H4\releases\4.2.12\Doc\hdf4doc\UsrGuide\src\Example_Vd.fm" />
+ <meta name="Originator" content="ImportMif" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=100%, initial-scale=1" />
+<meta name="generator" content="Adobe FrameMaker 12" />
+<title>HDF User’s Guide - 4.2.12</title>
+<link href="../../template/Theme1_Standard/main.css" type="text/css" rel="stylesheet" />
+<link href="../../template/Theme1_Standard/jqueryui-custom.css" type="text/css" rel="stylesheet" />
+ <link rel="stylesheet" href="Example_Vd.css" type="text/css" />
+ <link rel="StyleSheet" href="../../Responsive_HTML5_stylesheet.css" type="text/css" /><script type="text/javascript" language="JavaScript">//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]></script><style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" src="../../template/scripts/constants.js"></script>
+<script type="text/javascript" src="../../template/scripts/utils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhver.js"></script>
+<script type="text/javascript" src="../../template/scripts/settings.js"></script>
+<script type="text/javascript" src="../../template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadcsh.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/showhidecontrols.js"></script>
+<script type="text/javascript" src="../../template/scripts/pageloader.js"></script>
+<script type="text/javascript" src="../../template/scripts/toctree.js"></script>
+<script type="text/javascript" src="../../template/scripts/toctreeloader.js"></script>
+<script type="text/javascript" src="../../template/scripts/indextree.js"></script>
+<script type="text/javascript" src="../../template/scripts/indextreeloader.js"></script>
+<script type="text/javascript" src="../../template/scripts/glossarylist.js"></script>
+<script type="text/javascript" src="../../template/scripts/glossarylistloader.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhtopic.js"></script>
+<script type="text/javascript" src="../../template/scripts/searchfield.js"></script>
+<script type="text/javascript" src="../../template/scripts/tabpanels.js"></script>
+<script type="text/javascript" >
+gTocPageHtml = "{%ICON%}<span  class=\"wTOCTreePageText\">{%LINK_NAME%}</span>";
+gTocBookClosedHtml = "{%ICON%}<span  class=\"wTOCTreeCloseBookText\">{%LINK_NAME%}</span>";
+gTocBookOpenHtml = "{%ICON%}<span  class=\"wTOCTreeCloseBookText\">{%LINK_NAME%}</span>";
+gTocUrlHtml = "{%ICON%}<span  class=\"wTOCTreeLinkText\">{%LINK_NAME%}</span>";
+gTocPageIconSrc = "../../template/Theme1_Standard/TOCTreePage.png";
+gTocPageIconHoverSrc = "../../template/Theme1_Standard/TOCTreePageHover.png";
+gTocPageIconSelSrc = "../../template/Theme1_Standard/TOCTreePageSelected.png";
+gTocPageIconClass = "wTOCTreePageIcon";
+gTocPageIconStyle = "";
+gTocBookClosedIconSrc = "../../template/Theme1_Standard/TOCTreeCloseBook.png";
+gTocBookClosedIconHoverSrc = "../../template/Theme1_Standard/TOCTreeCloseBookHover.png";
+gTocBookClosedIconSelSrc = "../../template/Theme1_Standard/TOCTreeCloseBookSelected.png";
+gTocBookClosedIconClass = "wTOCTreeCloseBookIcon";
+gTocBookClosedIconStyle = "";
+gTocBookOpenIconSrc = "../../template/Theme1_Standard/TOCTreeOpenBook.png";
+gTocBookOpenIconHoverSrc = "../../template/Theme1_Standard/TOCTreeOpenBookHover.png";
+gTocBookOpenIconSelSrc = "../../template/Theme1_Standard/TOCTreeOpenBookHoverSelected.png";
+gTocBookOpenIconClass = "wTOCTreeOpenBookIcon";
+gTocBookOpenIconStyle = "";
+gTocUrlIconSrc = "../../template/Theme1_Standard/TOCTreeLink.png";
+gTocUrlIconHoverSrc = "../../template/Theme1_Standard/TOCTreeLinkHover.png";
+gTocUrlIconSelSrc = "../../template/Theme1_Standard/TOCTreeLinkSelected.png";
+gTocUrlIconClass = "wTOCTreeLinkIcon";
+gTocUrlIconStyle = "";
+</script>
+<script type="text/javascript" >
+gRootRelPath = "../..";
+gCommonRootRelPath = "../..";
+</script>
+<script type="text/javascript" >
+gIdxKWHtml = "<span  class=\"wIdxKeywordText\">{%LINK_NAME%}</span>";
+	gIdxLinkHtml = "<span  class=\"wIdxLinkText\">{%LINK_NAME%}</span>";
+	gIdxCategoryHtml = "<span  class=\"wIdxAlphabetText\">{%LINK_NAME%}</span>";
+</script>
+<script type="text/javascript" >
+gTopicId = "22.0_1";
+</script>
+<script type="text/javascript" >
+gGloTermHtml = "<span  class=\"wGloTermText\">{%LINK_NAME%}</span>";
+	gGloDefHtml = "<span  class=\"wGloDefinitionText\">{%LINK_NAME%}</span>";
+	gGloCategoryHtml = "<span  class=\"wGloAlphabetText\">{%LINK_NAME%}</span>";
+</script>
+ <link rel="SHORTCUT ICON" href="../../Responsive HTML5_favicon.png" />
+</head>
+
+<body>
+<script type="text/javascript" src="../../ehlpdhtm.js"></script>
+
+<div class="floatholder">
+	<div class="phone_scrollarea overthrow">
+		<div class="header">
+			<div class="logo">
+				<a href="../UG_Intro/UG_Intro.htm" class="homelink"><img src="../../template/Theme1_Standard/logo.png" alt="Logo" id="wLogoImage" style=" border:none; width:100%; max-width:90px;" border="0" /></a> 
+				 
+			</div>
+			<div class="title">
+				<a href="../UG_Intro/UG_Intro.htm" class="homelink"><span>HDF User’s Guide - 4.2.12</span></a> 
+				 
+			</div>
+		</div>
+		<div class="sidebar">
+			<div data-showin="Always" class="wTabbedPanel" id="tabbedpanel">
+				<ul class="wTabGroup" id="tab" data-tabid="tocTabButton" style="margin: 0px;">
+					<li class="wTab" id="tocTabButton" data-contentid="tocTabPane" onmouseout="onTabHoverOut(this, 'tab')" data-class="wTab" ontouchend="onTabHoverOut(this, 'tab')" onclick="selectTab(this, 'tab')" ontouchstart="onTabHover(this, 'tab')" data-classhover="wTabHover" style="display: inline;" ontouchmove="onTabHoverOut(this, 'tab')" data-classsel="wTabSelected" onmouseover="onTabHover(this, 'tab')"><img src="../../template/Theme1_Standard/toc.png" class="normal" alt="Table of Contents" title="Table of Contents" id="xmlEditorTOCSidebarButton" style=" border:none; width:100%; max-width:42px;" border="0" /><img src="../../template/Theme1_Standard/toc_hover.png" class="hover" alt="Table of Contents" title="Table of Contents" id="xmlEditorTOCSidebarButtonHover" style=" border:none; width:100%; max-width:48px;" border="0" /></li>
+					<li class="wTab" id="idxTabButton" data-contentid="idxTabPane" onmouseout="onTabHoverOut(this, 'tab')" data-class="wTab" ontouchend="onTabHoverOut(this, 'tab')" onclick="selectTab(this, 'tab')" ontouchstart="onTabHover(this, 'tab')" data-classhover="wTabHover" style="display: inline;" ontouchmove="onTabHoverOut(this, 'tab')" data-classsel="wTabSelected" onmouseover="onTabHover(this, 'tab')"><img src="../../template/Theme1_Standard/index.png" class="normal" alt="Index" title="Index" id="xmlEditorIDXSidebarButton" style=" border:none; width:100%; max-width:48px;" border="0" /><img src="../../template/Theme1_Standard/index_hover.png" class="hover" alt="Index" title="Index" id="xmlEditorIDXSidebarButtonHover" style=" border:none; width:100%; max-width:48px;" border="0" /></li>
+					<li class="wTab" id="gloTabButton" data-contentid="gloTabPane" onmouseout="onTabHoverOut(this, 'tab')" data-class="wTab" ontouchend="onTabHoverOut(this, 'tab')" onclick="selectTab(this, 'tab')" ontouchstart="onTabHover(this, 'tab')" data-classhover="wTabHover" style="display: inline;" ontouchmove="onTabHoverOut(this, 'tab')" data-classsel="wTabSelected" onmouseover="onTabHover(this, 'tab')"><img src="../../template/Theme1_Standard/glo.png" class="normal" alt="Glossary" title="Glossary" id="xmlEditorGLOSidebarButton" style=" border:none; width:100%; max-width:48px;" border="0" /><img src="../../template/Theme1_Standard/glo_hover.png" class="hover" alt="Glossary" title="Glossary" id="xmlEditorGLOSidebarButtonHover" style=" border:none; width:100%; max-width:48px;" border="0" /></li>
+				</ul>
+				<div class="wTabContentGroup">
+					<div id="tocTabPane" class="wTabContent">
+						<div id="toc" class="wTOCTree" tabindex="554">
+							
+							
+							
+							
+						</div>
+					</div>
+					<div id="idxTabPane" class="wTabContent">
+						<div id="idx" class="wIndex">
+							<input class="wIdxFilter" id="idxFilterBox" type="text" data-placeholder="Filter Keyword" onkeyup="filterIdx()"></input>
+							
+							
+							
+						</div>
+					</div>
+					<div id="gloTabPane" class="wTabContent">
+						<div id="glo" class="wGlossary">
+							<input class="wGloFilter" id="gloFilterBox" type="text" data-placeholder="Filter Term" onkeyup="filterGlo()"></input>
+							
+							
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="closebutton buttonOpened">
+				&#160; 
+			</div>
+		</div>
+		<div class="content">
+			<div class="desktop_functionholder">
+				<div class="searchholder">
+					<div class="wSearchField">
+						<input id="searchBox" class="wSearchField" type="search" data-placeholder="-Search-" onkeydown="searchHelp(event, 'searchBox')" data-search="true" /><a class="wSearchLink" onclick="searchHelp(null, 'searchBox')" href="#"><img src="../../template/Theme1_Standard/Search.png" alt="" id="xmlEditwSearchLink" class="wSearchLink" border="0" style="width:100%; max-width:28px" /></a> 
+						 
+					</div>
+				</div>
+				<div class="brsNext">
+					<a id="browseSeqNext" class="wBSNextButton" href="../Example_GR/Example_GR.htm"><img alt="" src="../../template/Theme1_Standard/BSNext.png" class="wBSNextButton normal" id="xmlEditorBSNextButton" border="0" style="width:100%; max-width:48px" /><img alt="" src="../../template/Theme1_Standard/BSNext_hover.png" class="wBSNextButton hover" id="xmlEditorBSNextButtonHover" border="0" style="width:100%; max-width:48px" /></a> 
+					 
+				</div>
+				<div class="print">
+					<a href="javascript:window.print()" class="wPrintButton"><img src="../../template/Theme1_Standard/Print.png" alt="" class="wPrintButton normal" id="xmlEditorPrintButton" border="0" style="width:100%; max-width:48px" /><img src="../../template/Theme1_Standard/Print_hover.png" alt="" class="wPrintButton hover" id="xmlEditorPrintButtonHover" border="0" style="width:100%; max-width:48px" /></a> 
+				</div>
+				<div class="brsBack">
+					<a id="browseSeqBack" class="wBSBackButton" href="../Example_DFAN/Example_DFAN.htm"><img alt="" src="../../template/Theme1_Standard/BSBack.png" class="wBSBackButton normal" id="xmlEditorBSBackButton" border="0" style="width:100%; max-width:48px" /><img alt="" src="../../template/Theme1_Standard/BSBack_hover.png" class="wBSBackButton hover" id="xmlEditorBSBackButtonHover" border="0" style="width:100%; max-width:56px" /></a> 
+					 
+				</div>
+			</div>
+			<div class="contentholder">
+				<div class="mobile_browseholder">
+					<div class="brsBack">
+						<a id="browseSeqBack0" class="wBSBackButton" href="../Example_DFAN/Example_DFAN.htm"><img alt="" src="../../template/Theme1_Standard/BSBack.png" class="wBSBackButton" border="0" style="width:100%; max-width:48px" /></a> 
+					</div>
+					<div class="brsNext">
+						<a id="browseSeqNext0" class="wBSNextButton" href="../Example_GR/Example_GR.htm"><img alt="" src="../../template/Theme1_Standard/BSNext.png" class="wBSNextButton" border="0" style="width:100%; max-width:48px" /></a> 
+					</div>
+				</div>
+				<a name="content_top_placeholder"></a> 
+				<div class="wTopic" id="rh_default_topic_placeholder_id">
+
+ <p class="FM_ExamplePage"><a name="XREF_17461_create_vdatas_c"></a>create_vdatas.c</p>
+ <p class="FM_ExampleCode">#include “hdf.h”</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">#define &#160;FILE1_NAME &#160;&#160;&#160;&#160;“General_Vdatas.hdf” </p>
+ <p class="FM_ExampleCode">#define &#160;FILE2_NAME &#160;&#160;&#160;&#160;“Two_Vdatas.hdf” </p>
+ <p class="FM_ExampleCode">#define &#160;VDATA_NAME &#160;&#160;&#160;&#160;“Vdata 1”</p>
+ <p class="FM_ExampleCode">#define &#160;VDATA_CLASS &#160;&#160;&#160;“Empty Vdatas”</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">main( )</p>
+ <p class="FM_ExampleCode">{</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/************************* Variable declaration **************************/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;intn &#160;status_n; &#160;&#160;&#160;&#160;&#160;/* returned status for functions returning an intn &#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;int32 status_32, &#160;&#160;&#160;&#160;/* returned status for functions returning an int32 */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;file1_id, file2_id,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;vdata_id, vdata1_id, vdata2_id,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;vdata_ref = -1; &#160;&#160;&#160;&#160;/* ref number of a vdata, set to -1 to create &#160;*/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/********************** End of variable declaration **********************/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Create the first HDF file. </p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;file1_id = Hopen (FILE1_NAME, DFACC_CREATE, 0);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Initialize the VS interface associated with the first HDF file. </p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = Vstart (file1_id);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Create a vdata in the first HDF file. </p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;vdata_id = VSattach (file1_id, vdata_ref, “w”);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Assign a name to the vdata.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_32 = VSsetname (vdata_id, VDATA_NAME);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Other operations on the vdata identified by vdata_id can be carried</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* out starting from this point.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Create the second HDF file. </p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;file2_id = Hopen (FILE2_NAME, DFACC_CREATE, 0);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Initialize the VS interface associated with the second HDF file. </p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = Vstart (file2_id);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Create the first vdata in the second HDF file. </p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;vdata1_id = VSattach (file2_id, vdata_ref, “w”);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Create the second vdata in the second HDF file. </p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;vdata2_id = VSattach (file2_id, vdata_ref, “w”);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Assign a class name to these vdatas.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_32 = VSsetclass (vdata1_id, VDATA_CLASS);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_32 = VSsetclass (vdata2_id, VDATA_CLASS);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Other operations on the vdatas identified by vdata1_id and vdata2_id </p>
+ <p class="FM_ExampleCode"> &#160;&#160;* can be carried out starting from this point.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Terminate access to the first vdata in the second HDF file. </p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_32 = VSdetach (vdata1_id);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Terminate access to the second vdata in the second HDF file. </p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_32 = VSdetach (vdata2_id);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* From this point on, any operations on the vdatas identified by vdata1_id </p>
+ <p class="FM_ExampleCode"> &#160;&#160;and vdata2_id are invalid but not on the vdata identified by vdata_id.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Terminate access to the VS interface associated with the second HDF file. </p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = Vend (file2_id);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Close the second HDF file. </p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = Hclose (file2_id);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Terminate access to the vdata in the first HDF file. </p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_32 = VSdetach (vdata_id);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Terminate access to the VS interface associated with the first HDF file. </p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = Vend (file1_id);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Close the first HDF file. </p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = Hclose (file1_id);</p>
+ <p class="FM_ExampleCode">}</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExamplePage"><a name="XREF_39038_create_vdatas_f"></a>create_vdatas.f</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;program create_vdatas</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;implicit none</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Parameter declaration</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*18 FILE1_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*14 FILE2_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*7 &#160;VDATA_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*12 VDATA_CLASS</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (FILE1_NAME &#160;= ‘General_Vdatas.hdf’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;FILE2_NAME &#160;= ‘Two_Vdatas.hdf’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;VDATA_NAME &#160;= ‘Vdata 1’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;VDATA_CLASS = ‘Empty Vdatas’)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer DFACC_CREATE</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (DFACC_CREATE = 4)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Function declaration</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer hopen, hclose</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;integer vfstart, vsfatch, vsfsnam, vsfscls, vsfdtch, vfend </p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C**** Variable declaration *******************************************</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer status</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer file1_id, file2_id</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;integer vdata_id, vdata1_id, vdata2_id </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer vdata_ref</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C**** End of variable declaration ************************************</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Create the first HDF file.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;file1_id = hopen(FILE1_NAME, DFACC_CREATE, 0)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Initialize the VS interface associated with the first HDF file.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;status = vfstart(file1_id) </p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Create a vdata in the first HDF file.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;vdata_ref = -1</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;vdata_id = vsfatch(file1_id, vdata_ref, ‘w’)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Assign a name to the vdata.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsfsnam(vdata_id, VDATA_NAME)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Other operations on the vdata identified by vdata_id can be carried out</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;starting from this point.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Create the second HDF file.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;file2_id = hopen(FILE2_NAME, DFACC_CREATE, 0) </p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Initialize the VS interface associated with the second HDF file.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;status = vfstart(file2_id) </p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Create the first vdata in the second HDF file.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;vdata1_id = vsfatch(file2_id, vdata_ref, ‘w’)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Create the second vdata in the second HDF file.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;vdata2_id = vsfatch(file2_id, vdata_ref, ‘w’)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Assign a class name to these vdatas.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsfscls(vdata1_id, VDATA_CLASS)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsfscls(vdata2_id, VDATA_CLASS)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Other operations on the vdatas identified by vdata1_id and vdata2_id</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;can be carried out starting from this point.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Terminate access to the first vdata in the second HDF file.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsfdtch(vdata1_id)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Terminate access to the second vdata in the second HDF file.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsfdtch(vdata2_id)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Terminate access to the VS interface associated with the second HDF file.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vfend(file2_id)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Close the second HDF file.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = hclose(file2_id)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Terminate access to the vdata in the first HDF file.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsfdtch(vdata_id)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;terminate access to the VS interface associated with the first HDF file.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vfend(file1_id)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Close the first HDF file.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = hclose(file1_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;end</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExamplePage"><a name="XREF_21934_create_onefield"></a>create_onefield_vdata.c</p>
+ <p class="FM_ExampleCode">#include “hdf.h” </p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">#define &#160;FILE_NAME &#160;&#160;&#160;&#160;&#160;“General_Vdatas.hdf”</p>
+ <p class="FM_ExampleCode">#define &#160;CLASS1_NAME &#160;&#160;&#160;“5x1 Array”</p>
+ <p class="FM_ExampleCode">#define &#160;CLASS2_NAME &#160;&#160;&#160;“6x4 Array”</p>
+ <p class="FM_ExampleCode">#define &#160;VDATA1_NAME &#160;&#160;&#160;“First Vdata”</p>
+ <p class="FM_ExampleCode">#define &#160;VDATA2_NAME &#160;&#160;&#160;“Second Vdata”</p>
+ <p class="FM_ExampleCode">#define &#160;FIELD1_NAME &#160;&#160;&#160;“Single-component Field”</p>
+ <p class="FM_ExampleCode">#define &#160;FIELD2_NAME &#160;&#160;&#160;“Multi-component Field”</p>
+ <p class="FM_ExampleCode">#define &#160;N_RECORDS_1 &#160;&#160;&#160;5 &#160;&#160;&#160;/* number of records the first vdata contains &#160;*/</p>
+ <p class="FM_ExampleCode">#define &#160;N_RECORDS_2 &#160;&#160;&#160;6 &#160;&#160;&#160;/* number of records the second vdata contains */</p>
+ <p class="FM_ExampleCode">#define &#160;ORDER_2 &#160;&#160;&#160;&#160;&#160;&#160;&#160;4 &#160;&#160;&#160;/* order of the field in the second vdata &#160;&#160;&#160;&#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* Note that the order of the field in the first vdata is 1 */</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">main( )</p>
+ <p class="FM_ExampleCode">{</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/************************* Variable declaration **************************/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;intn &#160;status_n; &#160;&#160;&#160;&#160;&#160;/* returned status for functions returning an intn &#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;int32 status_32; &#160;&#160;&#160;&#160;/* returned status for functions returning an int32 */</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;int32 file_id, vdata1_ref, vdata2_ref; </p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Define an array to buffer the data of the first vdata.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;char8 vdata1_buf [N_RECORDS_1] = {‘V’, ‘D’, ‘A’, ‘T’, ‘A’};</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Define an array to buffer the data of the second vdata.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;int32 vdata2_buf [N_RECORDS_2][ORDER_2] = {{1, 2, 3, 4}, {2, 4, 6, 8},</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{3, 6, 9, 12}, {4, 8, 12, 16},</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{5, 10, 15, 20}, {6, 12, 18, 24}};</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/********************** End of variable declaration **********************/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Open the HDF file for writing.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;file_id = Hopen (FILE_NAME, DFACC_WRITE, 0);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Initialize the VS interface.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = Vstart (file_id);</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Create the first vdata and populate it with data from the vdata1_buf </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* array. Note that the buffer vdata1_buf is cast to (uint8 *) for the </p>
+ <p class="FM_ExampleCode"> &#160;&#160;* benefit of generic data type.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;vdata1_ref = VHstoredata (file_id, FIELD1_NAME, (uint8 *)vdata1_buf, </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;N_RECORDS_1, DFNT_CHAR8, VDATA1_NAME, CLASS1_NAME); </p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Create the second vdata and populate it with data from the vdata2_buf </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* array. </p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;vdata2_ref = VHstoredatam (file_id, FIELD2_NAME, (uint8 *)vdata2_buf, </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;N_RECORDS_2, DFNT_INT32, VDATA2_NAME, CLASS2_NAME, ORDER_2); </p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Terminate access to the VS interface and close the HDF file.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = Vend (file_id);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_32 = Hclose (file_id);</p>
+ <p class="FM_ExampleCode">}</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExamplePage"><a name="XREF_13884_create_onefield"></a>create_onefield_vdata.f</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;program create_onefield_vdatas</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;implicit none</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Parameter declaration</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*18 FILE_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*9 &#160;CLASS1_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*9 &#160;CLASS2_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*11 VDATA1_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*12 VDATA2_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*22 FIELD1_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*21 FIELD2_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;&#160;&#160;N_RECORDS_1, N_RECORDS_2</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;&#160;&#160;ORDER_2</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (FILE_NAME &#160;&#160;= ‘General_Vdatas.hdf’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;CLASS1_NAME = ‘5x1 Array’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;CLASS2_NAME = ‘6x4 Array’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;VDATA1_NAME = ‘First Vdata’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;VDATA2_NAME = ‘Second Vdata’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;FIELD1_NAME = ‘Single-component Field’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;FIELD2_NAME = ‘Multi-component Field’)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (N_RECORDS_1 = 5,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;N_RECORDS_2 = 6,</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ORDER_2 &#160;&#160;&#160;&#160;= 4) &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer DFACC_WRITE, DFNT_CHAR8, DFNT_INT32</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (DFACC_WRITE = 2,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;DFNT_CHAR8 &#160;= 4,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;DFNT_INT32 &#160;= 24)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Function declaration</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer hopen, hclose</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;integer vfstart, vhfscd, vhfsdm, vfend </p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C**** Variable declaration *******************************************</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;status</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;file_id</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;integer &#160;&#160;vdata1_ref, vdata2_ref </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character vdata1_buf(N_RECORDS_1)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;vdata2_buf(ORDER_2, N_RECORDS_2)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;data vdata1_buf /’V’,’D’,’A’,’T’,’A’/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;data vdata2_buf / 1, &#160;2, &#160;3, &#160;4,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;2, &#160;4, &#160;6, &#160;8,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;3, &#160;6, &#160;9, 12,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;4, &#160;8, 12, 16,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;5, 10, 15, 20,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;6, 12, 18, 24/</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C**** End of variable declaration ************************************</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Open the HDF file for writing.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;file_id = hopen(FILE_NAME, DFACC_WRITE, 0)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Initialize the VS interface.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;status = vfstart(file_id) </p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Create the first vdata and populate it with data from vdata1_buf array.</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;vdata1_ref = vhfscd(file_id, FIELD1_NAME, vdata1_buf, N_RECORDS_1,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;DFNT_CHAR8, VDATA1_NAME, CLASS1_NAME)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Create the second vdata and populate it with data from vdata2_buf array.</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;vdata2_ref = vhfsdm(file_id, FIELD2_NAME, vdata2_buf, N_RECORDS_2,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;DFNT_INT32, VDATA2_NAME, CLASS2_NAME,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ORDER_2)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Terminate access to the VS interface and close the HDF file.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vfend(file_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = hclose(file_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;end</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExamplePage"><a name="XREF_23634_write_to_vdata_c"></a>write_to_vdata.c</p>
+ <p class="FM_ExampleCode">#include “hdf.h”</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">#define &#160;FILE_NAME &#160;&#160;&#160;&#160;&#160;&#160;&#160;“General_Vdatas.hdf”</p>
+ <p class="FM_ExampleCode">#define &#160;N_RECORDS &#160;&#160;&#160;&#160;&#160;&#160;&#160;10 &#160;&#160;&#160;&#160;&#160;&#160;&#160;/* number of records the vdata contains */</p>
+ <p class="FM_ExampleCode">#define &#160;ORDER_1 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;3 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* order of first field */</p>
+ <p class="FM_ExampleCode">#define &#160;ORDER_2 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;1 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* order of second field */</p>
+ <p class="FM_ExampleCode">#define &#160;ORDER_3 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;2 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* order of third field */</p>
+ <p class="FM_ExampleCode">#define &#160;CLASS_NAME &#160;&#160;&#160;&#160;&#160;&#160;“Particle Data”</p>
+ <p class="FM_ExampleCode">#define &#160;VDATA_NAME &#160;&#160;&#160;&#160;&#160;&#160;“Solid Particle”</p>
+ <p class="FM_ExampleCode">#define &#160;FIELD1_NAME &#160;&#160;&#160;&#160;&#160;“Position” &#160;&#160;&#160;&#160;&#160;/* contains x, y, z values */</p>
+ <p class="FM_ExampleCode">#define &#160;FIELD2_NAME &#160;&#160;&#160;&#160;&#160;“Mass” &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* contains weight values */</p>
+ <p class="FM_ExampleCode">#define &#160;FIELD3_NAME &#160;&#160;&#160;&#160;&#160;“Temperature” &#160;&#160;/* contains min and max values */</p>
+ <p class="FM_ExampleCode">#define &#160;FIELDNAME_LIST &#160;&#160;“Position,Mass,Temperature” /* No spaces b/w names */</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">/* number of values per record */</p>
+ <p class="FM_ExampleCode">#define &#160;N_VALS_PER_REC &#160;&#160;(ORDER_1 + ORDER_2 + ORDER_3)</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">main( ) </p>
+ <p class="FM_ExampleCode">{</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/************************* Variable declaration **************************/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;intn &#160;&#160;status_n; &#160;&#160;&#160;&#160;/* returned status for functions returning an intn &#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;int32 &#160;status_32, &#160;&#160;&#160;/* returned status for functions returning an int32 */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;file_id, vdata_id,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;vdata_ref = -1, &#160;&#160;&#160;/* ref number of a vdata, set to -1 to create &#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;num_of_records; &#160;&#160;&#160;/* number of records actually written to vdata */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;int16 &#160;rec_num; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* current record number */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;float32 &#160;data_buf[N_RECORDS][N_VALS_PER_REC]; /* buffer for vdata values */</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/********************** End of variable declaration **********************/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Open the HDF file for writing.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;file_id = Hopen (FILE_NAME, DFACC_WRITE, 0);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Initialize the VS interface.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = Vstart (file_id);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Create a new vdata.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;vdata_id = VSattach (file_id, vdata_ref, “w”);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Set name and class name of the vdata.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_32 = VSsetname (vdata_id, VDATA_NAME);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_32 = VSsetclass (vdata_id, CLASS_NAME);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Introduce each field’s name, data type, and order. &#160;This is the first</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* part in defining a field.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = VSfdefine (vdata_id, FIELD1_NAME, DFNT_FLOAT32, ORDER_1 );</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = VSfdefine (vdata_id, FIELD2_NAME, DFNT_FLOAT32, ORDER_2 );</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = VSfdefine (vdata_id, FIELD3_NAME, DFNT_FLOAT32, ORDER_3 );</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Finalize the definition of the fields.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = VSsetfields (vdata_id, FIELDNAME_LIST);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Buffer the data by the record for fully interlaced mode. &#160;Note that the</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* first three elements contain the three values of the first field, the</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* fourth element contains the value of the second field, and the last two</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* elements contain the two values of the third field.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;for (rec_num = 0; rec_num &lt; N_RECORDS; rec_num++)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;{</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;data_buf[rec_num][0] = 1.0 * rec_num;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;data_buf[rec_num][1] = 2.0 * rec_num;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;data_buf[rec_num][2] = 3.0 * rec_num;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;data_buf[rec_num][3] = 0.1 + rec_num;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;data_buf[rec_num][4] = 0.0;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;data_buf[rec_num][5] = 65.0;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;}</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Write the data from data_buf to the vdata with full interlacing mode.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;num_of_records = VSwrite (vdata_id, (uint8 *)data_buf, N_RECORDS, </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;FULL_INTERLACE);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Terminate access to the vdata and to the VS interface, then close </p>
+ <p class="FM_ExampleCode"> &#160;&#160;* the HDF file.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_32 = VSdetach (vdata_id);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n &#160;= Vend (file_id);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_32 = Hclose (file_id);</p>
+ <p class="FM_ExampleCode">}</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExamplePage"><a name="XREF_23145_write_to_vdata_f"></a>write_to_vdata.f</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;program write_to_vdata </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;implicit none</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Parameter declaration</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*18 FILE_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*13 CLASS_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*14 VDATA_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*8 &#160;FIELD1_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*4 &#160;FIELD2_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*11 FIELD3_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*27 FIELDNAME_LIST</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;&#160;&#160;N_RECORDS</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;&#160;&#160;ORDER_1, ORDER_2, ORDER_3</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;&#160;&#160;N_VALS_PER_REC</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (FILE_NAME &#160;&#160;&#160;&#160;&#160;&#160;= ‘General_Vdatas.hdf’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;CLASS_NAME &#160;&#160;&#160;&#160;&#160;= ‘Particle Data’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;VDATA_NAME &#160;&#160;&#160;&#160;&#160;= ‘Solid Particle’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;FIELD1_NAME &#160;&#160;&#160;&#160;= ‘Position’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;FIELD2_NAME &#160;&#160;&#160;&#160;= ‘Mass’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;FIELD3_NAME &#160;&#160;&#160;&#160;= ‘Temperature’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;FIELDNAME_LIST = ‘Position,Mass,Temperature’)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (N_RECORDS = 10,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ORDER_1 &#160;&#160;= 3,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ORDER_2 &#160;&#160;= 1,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ORDER_3 &#160;&#160;= 2,</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;N_VALS_PER_REC = ORDER_1 + ORDER_2 + ORDER_3) &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer DFACC_WRITE, DFNT_FLOAT32, FULL_INTERLACE</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (DFACC_WRITE &#160;&#160;&#160;= 2,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;DFNT_FLOAT32 &#160;&#160;= 5,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;FULL_INTERLACE = 0)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Function declaration</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer hopen, hclose</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer vfstart, vsfatch, vsfsnam, vsfscls, vsffdef, vsfsfld,</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;vsfwrt, vsfdtch, vfend </p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C**** Variable declaration *******************************************</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer status</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer file_id, vdata_id</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer vdata_ref, rec_num, num_of_records</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;real &#160;&#160;&#160;data_buf(N_VALS_PER_REC, N_RECORDS)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C**** End of variable declaration ************************************</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Open the HDF file for writing.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;file_id = hopen(FILE_NAME, DFACC_WRITE, 0)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Initialize the VS interface.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;status = vfstart(file_id) </p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Create a new vdata.</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;vdata_ref = -1</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;vdata_id = vsfatch(file_id, vdata_ref, ‘w’) </p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Set name and class name of the vdata.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsfsnam(vdata_id, VDATA_NAME)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsfscls(vdata_id, CLASS_NAME)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Introduce each field’s name, data type, and order. This is the</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;first part in defining a field.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsffdef(vdata_id, FIELD1_NAME, DFNT_FLOAT32, ORDER_1)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsffdef(vdata_id, FIELD2_NAME, DFNT_FLOAT32, ORDER_2)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsffdef(vdata_id, FIELD3_NAME, DFNT_FLOAT32, ORDER_3)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Finalize the definition of the fields.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsfsfld(vdata_id, FIELDNAME_LIST)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Buffer the data by the record for fully interlaced mode. Note that the</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;first three elements contain the three values of the first field,</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;the forth element contains the value of the second field, and the last two</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;elements contain the two values of the third field.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;do 10 rec_num = 1, N_RECORDS</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;data_buf(1, rec_num) = 1.0 * rec_num</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;data_buf(2, rec_num) = 2.0 * rec_num</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;data_buf(3, rec_num) = 3.0 * rec_num</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;data_buf(4, rec_num) = 0.1 + rec_num</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;data_buf(5, rec_num) = 0.0</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;data_buf(6, rec_num) = 65.0</p>
+ <p class="FM_ExampleCode">10 &#160;&#160;&#160;continue</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Write the data from data_buf to the vdata with the full interlacing mode.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;num_of_records = vsfwrt(vdata_id, data_buf, N_RECORDS,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;FULL_INTERLACE)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Terminate access to the vdata and to the VS interface, and</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;close the HDF file.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsfdtch(vdata_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vfend(file_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = hclose(file_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;end</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExamplePage"><a name="XREF_18462_write_mixed_vdata_c"></a>write_mixed_vdata.c</p>
+ <p class="FM_ExampleCode">#include “hdf.h”</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">#define &#160;FILE_NAME &#160;&#160;&#160;&#160;&#160;&#160;&#160;“Packed_Vdata.hdf”</p>
+ <p class="FM_ExampleCode">#define &#160;VDATA_NAME &#160;&#160;&#160;&#160;&#160;&#160;“Mixed Data Vdata”</p>
+ <p class="FM_ExampleCode">#define &#160;CLASS_NAME &#160;&#160;&#160;&#160;&#160;&#160;“General Data Class”</p>
+ <p class="FM_ExampleCode">#define &#160;FIELD1_NAME &#160;&#160;&#160;&#160;&#160;“Temp” </p>
+ <p class="FM_ExampleCode">#define &#160;FIELD2_NAME &#160;&#160;&#160;&#160;&#160;“Height” </p>
+ <p class="FM_ExampleCode">#define &#160;FIELD3_NAME &#160;&#160;&#160;&#160;&#160;“Speed” </p>
+ <p class="FM_ExampleCode">#define &#160;FIELD4_NAME &#160;&#160;&#160;&#160;&#160;“Ident”</p>
+ <p class="FM_ExampleCode">#define &#160;ORDER &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;1 &#160;&#160;&#160;&#160;&#160;&#160;&#160;/* number of values in the field &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;*/</p>
+ <p class="FM_ExampleCode">#define &#160;N_RECORDS &#160;&#160;&#160;&#160;&#160;&#160;&#160;20 &#160;&#160;&#160;&#160;&#160;&#160;/* number of records the vdata contains &#160;*/</p>
+ <p class="FM_ExampleCode">#define &#160;N_FIELDS &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;4 &#160;&#160;&#160;&#160;&#160;&#160;&#160;/* number of fields in the vdata &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;*/</p>
+ <p class="FM_ExampleCode">#define &#160;FIELDNAME_LIST &#160;&#160;“Temp,Height,Speed,Ident” &#160;/* No spaces b/w names */</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">/* number of bytes of the data to be written, i.e., the size of all the</p>
+ <p class="FM_ExampleCode"> &#160;&#160;field values combined times the number of records */</p>
+ <p class="FM_ExampleCode">#define BUF_SIZE (2*sizeof(float32) + sizeof(int16) + sizeof(char)) * N_RECORDS</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">main( ) </p>
+ <p class="FM_ExampleCode">{</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/************************* Variable declaration **************************/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;intn &#160;status_n; &#160;&#160;&#160;&#160;&#160;/* returned status for functions returning an intn &#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;int32 status_32, &#160;&#160;&#160;&#160;/* returned status for functions returning an int32 */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;file_id, vdata_id,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;vdata_ref = -1, &#160;&#160;/* vdata’s reference number, set to -1 to create */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;num_of_records; /* number of records actually written to the vdata */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;float32 temp[N_RECORDS]; &#160;&#160;&#160;&#160;&#160;&#160;/* buffer to hold values of first field &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;int16 &#160;&#160;height[N_RECORDS]; &#160;&#160;&#160;&#160;/* buffer to hold values of second field &#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;float32 speed[N_RECORDS]; &#160;&#160;&#160;&#160;&#160;/* buffer to hold values of third field &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;char8 &#160;&#160;ident[N_RECORDS]; &#160;&#160;&#160;&#160;&#160;/* buffer to hold values of fourth field &#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;VOIDP &#160;&#160;fldbufptrs[N_FIELDS];/*pointers to be pointing to the field buffers*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;uint16 &#160;databuf[BUF_SIZE]; /* buffer to hold the data after being packed*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;int &#160;&#160;&#160;&#160;i;</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/********************** End of variable declaration **********************/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Create an HDF file. </p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;file_id = Hopen (FILE_NAME, DFACC_CREATE, 0);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Initialize the VS interface. </p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = Vstart (file_id);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Create a new vdata. </p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;vdata_id = VSattach (file_id, vdata_ref, “w”);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Set name and class name of the vdata. </p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_32 = VSsetname (vdata_id, VDATA_NAME);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_32 = VSsetclass (vdata_id, CLASS_NAME);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Introduce each field’s name, data type, and order. &#160;This is the first</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* part in defining a vdata field.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;status_n = VSfdefine (vdata_id, FIELD1_NAME, DFNT_FLOAT32, ORDER); </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;status_n = VSfdefine (vdata_id, FIELD2_NAME, DFNT_INT16, ORDER); </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;status_n = VSfdefine (vdata_id, FIELD3_NAME, DFNT_FLOAT32, ORDER); </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;status_n = VSfdefine (vdata_id, FIELD4_NAME, DFNT_CHAR8, ORDER); </p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Finalize the definition of the fields of the vdata.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = VSsetfields (vdata_id, FIELDNAME_LIST);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Enter data values into the field buffers by the records.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;for (i = 0; i &lt; N_RECORDS; i++)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;{</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;temp[i] = 1.11 * (i+1);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;height[i] = i;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;speed[i] = 1.11 * (i+1);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;ident[i] = ‘A’ + i;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;}</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Build an array of pointers each of which points to a field buffer that</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* holds all values of the field.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;fldbufptrs[0] = &amp;temp[0];</p>
+ <p class="FM_ExampleCode"> &#160;&#160;fldbufptrs[1] = &amp;height[0];</p>
+ <p class="FM_ExampleCode"> &#160;&#160;fldbufptrs[2] = &amp;speed[0];</p>
+ <p class="FM_ExampleCode"> &#160;&#160;fldbufptrs[3] = &amp;ident[0];</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Pack all data in the field buffers that are pointed to by the set of</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* pointers fldbufptrs, and store the packed data into the buffer </p>
+ <p class="FM_ExampleCode"> &#160;&#160;* databuf. &#160;Note that the second parameter is _HDF_VSPACK for packing.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = VSfpack (vdata_id,_HDF_VSPACK, NULL, (VOIDP)databuf,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;BUF_SIZE, N_RECORDS, NULL, (VOIDP)fldbufptrs);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Write all records of the packed data to the vdata. </p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;num_of_records = VSwrite (vdata_id, (uint8 *)databuf, N_RECORDS, </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;FULL_INTERLACE); </p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Terminate access to the vdata and the VS interface, then close </p>
+ <p class="FM_ExampleCode"> &#160;&#160;* the HDF file.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_32 = VSdetach (vdata_id);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = Vend (file_id);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_32 = Hclose (file_id);</p>
+ <p class="FM_ExampleCode">}</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExamplePage"><a name="XREF_36298_write_mixed_vdata_f"></a>write_mixed_vdata.f</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;program write_mixed_vdata </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;implicit none</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Parameter declaration</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*16 FILE_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*18 CLASS_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*16 VDATA_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*4 &#160;FIELD1_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*6 &#160;FIELD2_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*5 &#160;FIELD3_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*5 &#160;FIELD4_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*23 FIELDNAME_LIST</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;&#160;&#160;N_RECORDS, N_FIELDS, ORDER</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;&#160;&#160;BUF_SIZE </p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (FILE_NAME &#160;&#160;&#160;&#160;&#160;&#160;= ‘Packed_Vdata.hdf’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;CLASS_NAME &#160;&#160;&#160;&#160;&#160;= ‘General Data Class’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;VDATA_NAME &#160;&#160;&#160;&#160;&#160;= ‘Mixed Data Vdata’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;FIELD1_NAME &#160;&#160;&#160;&#160;= ‘Temp’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;FIELD2_NAME &#160;&#160;&#160;&#160;= ‘Height’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;FIELD3_NAME &#160;&#160;&#160;&#160;= ‘Speed’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;FIELD4_NAME &#160;&#160;&#160;&#160;= ‘Ident’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;FIELDNAME_LIST = ‘Temp,Height,Speed,Ident’)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (N_RECORDS = 20,</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;N_FIELDS &#160;= 4, </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ORDER &#160;&#160;&#160;&#160;= 1,</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;BUF_SIZE = (4 + 2 + 4 + 1)*N_RECORDS) &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer DFACC_WRITE, DFNT_FLOAT32, DFNT_INT16, DFNT_CHAR8,</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;FULL_INTERLACE, HDF_VSPACK &#160;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (DFACC_WRITE &#160;&#160;&#160;= 2,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;DFNT_FLOAT32 &#160;&#160;= 5,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;DFNT_INT16 &#160;&#160;&#160;&#160;= 22,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;DFNT_CHAR8 &#160;&#160;&#160;&#160;= 4,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;FULL_INTERLACE = 0,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;HDF_VSPACK &#160;&#160;&#160;&#160;= 0)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Function declaration</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer hopen, hclose</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer vfstart, vsfatch, vsfsnam, vsfscls, vsffdef, vsfsfld,</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;vsfnpak, vsfcpak, vsfwrit, vsfdtch, vfend </p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C**** Variable declaration *******************************************</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;status</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;file_id, vdata_id</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;vdata_ref, num_of_records</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;real &#160;&#160;&#160;&#160;&#160;temp(N_RECORDS)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer*2 height(N_RECORDS)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;real &#160;&#160;&#160;&#160;&#160;speed(N_RECORDS)</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;character ident(N_RECORDS) </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;i</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Buffer for packed data should be big enough to hold N_RECORDS.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;databuf(BUF_SIZE/4 + 1)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C**** End of variable declaration ************************************</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Open the HDF file for writing.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;file_id = hopen(FILE_NAME, DFACC_WRITE, 0)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Initialize the VS interface.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;status = vfstart(file_id) </p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Create a new vdata.</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;vdata_ref = -1</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;vdata_id = vsfatch(file_id, vdata_ref, ‘w’) </p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Set name and class name of the vdata.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsfsnam(vdata_id, VDATA_NAME)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsfscls(vdata_id, CLASS_NAME)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Introduce each field’s name, data type, and order. This is the</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;first part in defining a field.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsffdef(vdata_id, FIELD1_NAME, DFNT_FLOAT32, ORDER)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsffdef(vdata_id, FIELD2_NAME, DFNT_INT16, ORDER)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsffdef(vdata_id, FIELD3_NAME, DFNT_FLOAT32, ORDER)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsffdef(vdata_id, FIELD4_NAME, DFNT_CHAR8, ORDER)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Finalize the definition of the fields.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsfsfld(vdata_id, FIELDNAME_LIST)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Enter data values into the field databufs by the records.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;do 10 i = 1, N_RECORDS</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;temp(i) &#160;&#160;= 1.11 * i</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;height(i) = i - 1</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;speed(i) &#160;= 1.11 * i</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ident(i) &#160;= char(64+i)</p>
+ <p class="FM_ExampleCode">10 &#160;&#160;&#160;continue</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Pack N_RECORDS of data into databuf. In Fortran, each field is packed </p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;using separate calls to vsfnpak or vsfcpak.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsfnpak(vdata_id, HDF_VSPACK, ‘ ‘, databuf, BUF_SIZE,</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;N_RECORDS, FIELD1_NAME, temp) </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsfnpak(vdata_id, HDF_VSPACK, ‘ ‘, databuf, BUF_SIZE,</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;N_RECORDS, FIELD2_NAME, height) </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsfnpak(vdata_id, HDF_VSPACK, ‘ ‘, databuf, BUF_SIZE,</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;N_RECORDS, FIELD3_NAME, speed) </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsfcpak(vdata_id, HDF_VSPACK, ‘ ‘, databuf, BUF_SIZE,</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;N_RECORDS, FIELD4_NAME, ident) </p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Write all the records of the packed data to the vdata.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;num_of_records = vsfwrit(vdata_id, databuf, N_RECORDS,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;FULL_INTERLACE)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Terminate access to the vdata and to the VS interface, and</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;close the HDF file.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsfdtch(vdata_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vfend(file_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = hclose(file_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;end</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExamplePage"><a name="XREF_35626_read_from_vdata_c"></a>read_from_vdata.c</p>
+ <p class="FM_ExampleCode">#include “hdf.h”</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">#define &#160;FILE_NAME &#160;&#160;&#160;&#160;&#160;&#160;“General_Vdatas.hdf”</p>
+ <p class="FM_ExampleCode">#define &#160;VDATA_NAME &#160;&#160;&#160;&#160;&#160;“Solid Particle”</p>
+ <p class="FM_ExampleCode">#define &#160;N_RECORDS &#160;&#160;&#160;&#160;&#160;&#160;5 &#160;&#160;&#160;/* number of records the vdata contains */</p>
+ <p class="FM_ExampleCode">#define &#160;RECORD_INDEX &#160;&#160;&#160;3 &#160;&#160;&#160;/* position where reading starts - 4th record */</p>
+ <p class="FM_ExampleCode">#define &#160;ORDER_1 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;3 &#160;&#160;&#160;/* order of first field to be read */</p>
+ <p class="FM_ExampleCode">#define &#160;ORDER_2 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;2 &#160;&#160;&#160;/* order of second field to be read */</p>
+ <p class="FM_ExampleCode">#define &#160;FIELDNAME_LIST &#160;“Position,Temperature” /* only two fields are read */</p>
+ <p class="FM_ExampleCode">#define &#160;N_VALS_PER_REC &#160;(ORDER_1 + ORDER_2) &#160;&#160;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* number of values per record */</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">main( ) </p>
+ <p class="FM_ExampleCode">{</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/************************* Variable declaration **************************/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;intn &#160;status_n; &#160;&#160;&#160;&#160;&#160;/* returned status for functions returning an intn &#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;int32 status_32, &#160;&#160;&#160;&#160;/* returned status for functions returning an int32 */</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;file_id, vdata_id, </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;vdata_ref, &#160;&#160;&#160;&#160;/* vdata’s reference number */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;num_of_records, /* number of records actually written to the vdata */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;record_pos; &#160;&#160;&#160;/* position of the current record */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;int16 i, rec_num; &#160;&#160;&#160;/* current record number in the vdata */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;float32 databuf[N_RECORDS][N_VALS_PER_REC]; &#160;&#160;/* buffer for vdata values */</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/********************** End of variable declaration **********************/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Open the HDF file for reading.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;file_id = Hopen (FILE_NAME, DFACC_READ, 0);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Initialize the VS interface.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = Vstart (file_id);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Get the reference number of the vdata, whose name is specified in </p>
+ <p class="FM_ExampleCode"> &#160;&#160;* VDATA_NAME, using VSfind, which will be discussed in Section 4.7.3.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;vdata_ref = VSfind (file_id, VDATA_NAME);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Attach to the vdata for reading if it is found, otherwise </p>
+ <p class="FM_ExampleCode"> &#160;&#160;* exit the program.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;if (vdata_ref == 0) exit;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;vdata_id = VSattach (file_id, vdata_ref, “r”);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Specify the fields that will be read.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = VSsetfields (vdata_id, FIELDNAME_LIST);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Place the current point to the position specified in RECORD_INDEX.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;record_pos = VSseek (vdata_id, RECORD_INDEX);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Read the next N_RECORDS records from the vdata and store the data </p>
+ <p class="FM_ExampleCode"> &#160;&#160;* in the buffer databuf with fully interlaced mode.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;num_of_records = VSread (vdata_id, (uint8 *)databuf, N_RECORDS, </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;FULL_INTERLACE);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Display the read data as many records as the number of records </p>
+ <p class="FM_ExampleCode"> &#160;&#160;* returned by VSread.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode">   printf (“\n       Particle Position        Temperature Range\n\n”);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;for (rec_num = 0; rec_num &lt; num_of_records; rec_num++)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;{</p>
+ <p class="FM_ExampleCode">      printf (“   %6.2f, %6.2f, %6.2f        %6.2f, %6.2f\n”, </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;databuf[rec_num][0], databuf[rec_num][1], databuf[rec_num][2], </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;databuf[rec_num][3], databuf[rec_num][4]);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;}</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Terminate access to the vdata and to the VS interface, then close </p>
+ <p class="FM_ExampleCode"> &#160;&#160;* the HDF file.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_32 = VSdetach (vdata_id);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = Vend (file_id);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_32 = Hclose (file_id);</p>
+ <p class="FM_ExampleCode">}</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExamplePage"><a name="XREF_27819_read_from_vdata_f"></a>read_from_vdata.f</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;program read_from_vdata </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;implicit none</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Parameter declaration</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*18 FILE_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*14 VDATA_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*20 FIELDNAME_LIST</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;&#160;&#160;N_RECORDS, RECORD_INDEX</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;&#160;&#160;ORDER_1, ORDER_2</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;&#160;&#160;N_VALS_PER_REC</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (FILE_NAME &#160;&#160;&#160;&#160;&#160;&#160;= ‘General_Vdatas.hdf’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;VDATA_NAME &#160;&#160;&#160;&#160;&#160;= ‘Solid Particle’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;FIELDNAME_LIST = ‘Position,Temperature’)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (N_RECORDS &#160;= 5,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;RECORD_INDEX = 3,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ORDER_1 &#160;&#160;&#160;= 3,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ORDER_2 &#160;&#160;&#160;= 2,</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;N_VALS_PER_REC = ORDER_1 + ORDER_2 ) &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer DFACC_READ, FULL_INTERLACE</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (DFACC_READ &#160;&#160;&#160;&#160;= 1,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;FULL_INTERLACE = 0)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Function declaration</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer hopen, hclose</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer vfstart, vsffnd, vsfatch, vsfsfld, vsfrd, vsfseek,</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;vsfdtch, vfend </p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C**** Variable declaration *******************************************</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer status</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer file_id, vdata_id</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer vdata_ref, rec_num, num_of_records, rec_pos</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;real &#160;&#160;&#160;databuf(N_VALS_PER_REC, N_RECORDS)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer i</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C**** End of variable declaration ************************************</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Open the HDF file for reading.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;file_id = hopen(FILE_NAME, DFACC_READ, 0)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Initialize the VS interface.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;status = vfstart(file_id) </p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Get the reference number of the vdata, whose name is specified in</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;VDATA_NAME, using vsffnd, which will be discussed in Section 4.7.3. </p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;vdata_ref = vsffnd(file_id, VDATA_NAME)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Attach to the vdata for reading if it is found, </p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;otherwise exit the program.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;if (vdata_ref .eq. 0) stop</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;vdata_id = vsfatch(file_id, vdata_ref, ‘r’) </p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Specify the fields that will be read. </p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsfsfld(vdata_id, FIELDNAME_LIST)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Place the current point to the position specified in RECORD_INDEX.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;rec_pos = vsfseek(vdata_id, RECORD_INDEX) </p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Read the next N_RECORDS from the vdata and store the data in the buffer </p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;databuf with fully interlace mode. </p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;num_of_records = vsfrd(vdata_id, databuf, N_RECORDS,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;FULL_INTERLACE)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Display the read data as many records as the number of records returned</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;by vsfrd.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;write(*,*) ‘ &#160;Particle Position &#160;&#160;&#160;&#160;Temperature Range’</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;write(*,*)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;do 10 rec_num = 1, num_of_records</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;write(*,1000) (databuf(i, rec_num), i = 1, N_VALS_PER_REC)</p>
+ <p class="FM_ExampleCode">10 &#160;&#160;&#160;continue </p>
+ <p class="FM_ExampleCode">1000 &#160;format(1x,3(f6.2), 8x,2(f6.2))</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Terminate access to the vdata and to the VS interface, and</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;close the HDF file.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsfdtch(vdata_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vfend(file_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = hclose(file_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;end</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExamplePage"><a name="XREF_29663_read_mixed_vdata_c"></a>read_mixed_vdata.c</p>
+ <p class="FM_ExampleCode">#include “hdf.h”</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">#define &#160;N_RECORDS &#160;&#160;&#160;&#160;&#160;&#160;20 &#160;&#160;&#160;&#160;&#160;/* number of records to be read */</p>
+ <p class="FM_ExampleCode">#define &#160;N_FIELDS &#160;&#160;&#160;&#160;&#160;&#160;&#160;2 &#160;&#160;&#160;&#160;&#160;&#160;/* number of fields to be read */</p>
+ <p class="FM_ExampleCode">#define &#160;FILE_NAME &#160;&#160;&#160;&#160;&#160;&#160;“Packed_Vdata.hdf”</p>
+ <p class="FM_ExampleCode">#define &#160;VDATA_NAME &#160;&#160;&#160;&#160;&#160;“Mixed Data Vdata”</p>
+ <p class="FM_ExampleCode">#define &#160;FIELDNAME_LIST &#160;“Temp,Ident”</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">/* number of bytes of the data to be read */</p>
+ <p class="FM_ExampleCode">#define &#160;BUFFER_SIZE &#160;&#160;&#160;&#160;( sizeof(float32) + sizeof(char)) * N_RECORDS </p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">main ()</p>
+ <p class="FM_ExampleCode">{</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/************************* Variable declaration **************************/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;intn &#160;status_n; &#160;&#160;&#160;&#160;&#160;/* returned status for functions returning an intn &#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;int32 status_32, &#160;&#160;&#160;&#160;/* returned status for functions returning an int32 */</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;file_id, vdata_id, </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;num_of_records, &#160;&#160;&#160;&#160;&#160;&#160;&#160;/* number of records actually read */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;vdata_ref, &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* reference number of the vdata to be read */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;buffer_size; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* number of bytes the vdata can hold &#160;&#160;&#160;&#160;&#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;float32 itemp[N_RECORDS]; &#160;&#160;&#160;/* buffer to hold values of first field &#160;&#160;&#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;char &#160;idents[N_RECORDS]; &#160;&#160;&#160;&#160;/* buffer to hold values of fourth field &#160;&#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;uint8 databuf[BUFFER_SIZE]; &#160;/* buffer to hold read data, still packed &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;VOIDP fldbufptrs[N_FIELDS];/*pointers to be pointing to the field buffers*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;int &#160;&#160;i;</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/********************** End of variable declaration **********************/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Open the HDF file for reading. </p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;file_id = Hopen (FILE_NAME, DFACC_READ, 0);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Initialize the VS interface. </p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = Vstart (file_id);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Get the reference number of the vdata, whose name is specified in</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* VDATA_NAME, using VSfind, which will be discussed in Section 4.7.3.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;vdata_ref = VSfind (file_id, VDATA_NAME);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Attach to the vdata for reading. </p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;vdata_id = VSattach (file_id, vdata_ref, “r”);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Specify the fields that will be read. </p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = VSsetfields(vdata_id, FIELDNAME_LIST);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Read N_RECORDS records of the vdata and store the values into the </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* buffer databuf. </p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;num_of_records = VSread (vdata_id, (uint8 *)databuf, N_RECORDS, </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;FULL_INTERLACE);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Build an array of pointers each of which points to an array that</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* will hold all values of a field after being unpacked.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;fldbufptrs[0] = &amp;itemp[0];</p>
+ <p class="FM_ExampleCode"> &#160;&#160;fldbufptrs[1] = &amp;idents[0];</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Unpack the data from the buffer databuf and store the values into the </p>
+ <p class="FM_ExampleCode"> &#160;&#160;* appropriate field buffers pointed to by the set of pointers fldbufptrs.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Note that the second parameter is _HDF_VSUNPACK for unpacking and the</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* number of records is the one returned by VSread.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = VSfpack (vdata_id, _HDF_VSUNPACK, FIELDNAME_LIST, (VOIDP)databuf,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;BUFFER_SIZE, num_of_records, NULL, (VOIDP)fldbufptrs);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Display the read data being stored in the field buffers.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode">   printf (“\n     Temp      Ident\n”);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;for (i=0; i &lt; num_of_records; i++)</p>
+ <p class="FM_ExampleCode">       printf (“   %6.2f        %c\n”, itemp[i], idents[i]);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Terminate access to the vdata and the VS interface, then close </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* the HDF file. </p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_32 = VSdetach (vdata_id);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = Vend (file_id);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_32 = Hclose (file_id);</p>
+ <p class="FM_ExampleCode">}</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExamplePage"><a name="XREF_25145_read_mixed_vdata_f"></a>read_mixed_vdata.f</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;program read_mixed_vdata </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;implicit none</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Parameter declaration</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*16 FILE_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*16 VDATA_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*4 &#160;FIELD1_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*5 &#160;FIELD2_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*10 FIELDNAME_LIST</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;&#160;&#160;N_RECORDS, N_FIELDS</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;&#160;&#160;BUFFER_SIZE </p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (FILE_NAME &#160;&#160;&#160;&#160;&#160;&#160;= ‘Packed_Vdata.hdf’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;VDATA_NAME &#160;&#160;&#160;&#160;&#160;= ‘Mixed Data Vdata’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;FIELD1_NAME &#160;&#160;&#160;&#160;= ‘Temp’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;FIELD2_NAME &#160;&#160;&#160;&#160;= ‘Ident’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;FIELDNAME_LIST = ‘Temp,Ident’)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (N_RECORDS &#160;&#160;= 20,</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;N_FIELDS &#160;&#160;&#160;= 2, </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;BUFFER_SIZE = (4 + 1)*N_RECORDS) &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer DFACC_READ, DFNT_FLOAT32, DFNT_CHAR8,</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;FULL_INTERLACE, HDF_VSUNPACK &#160;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (DFACC_READ &#160;&#160;&#160;&#160;&#160;&#160;= 1,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;DFNT_FLOAT32 &#160;&#160;&#160;&#160;= 5,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;DFNT_CHAR8 &#160;&#160;&#160;&#160;&#160;&#160;= 4,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;FULL_INTERLACE &#160;&#160;= 0,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;HDF_VSUNPACK &#160;&#160;&#160;&#160;= 1)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Function declaration</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer hopen, hclose</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer vfstart, vsfatch, vsffnd, vsfsfld,</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;vsfnpak, vsfcpak, vsfread, vsfdtch, vfend </p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C**** Variable declaration *******************************************</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;status</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;file_id, vdata_id</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;vdata_ref, num_of_records</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;real &#160;&#160;&#160;&#160;&#160;temp(N_RECORDS)</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;character ident(N_RECORDS) </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;i</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Buffer for read packed data should be big enough to hold N_RECORDS.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;databuf(BUFFER_SIZE/4 + 1)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C**** End of variable declaration ************************************</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Open the HDF file for reading.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;file_id = hopen(FILE_NAME, DFACC_READ, 0)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Initialize the VS interface.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;status = vfstart(file_id) </p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Get the reference number of the vdata, whose name is specified in</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;VDATA_NAME, using vsffnd, which will be discussed in Section 4.7.3. </p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;vdata_ref = vsffnd(file_id, VDATA_NAME)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Attach to the vdata for reading if it is found, </p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;otherwise exit the program.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;if (vdata_ref .eq. 0) stop</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;vdata_id = vsfatch(file_id, vdata_ref, ‘r’) </p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Specify the fields that will be read. </p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsfsfld(vdata_id, FIELDNAME_LIST)</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Read N_RECORDS records of the vdata and store the values into the databuf.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;num_of_records = vsfread(vdata_id, databuf, N_RECORDS,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;FULL_INTERLACE)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Unpack N_RECORDS from databuf into temp and ident arrays.</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;In Fortran, each field is unpacked using separate calls to </p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;vsfnpak or vsfcpak.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsfnpak(vdata_id, HDF_VSUNPACK, FIELDNAME_LIST, databuf,</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;BUFFER_SIZE, num_of_records, FIELD1_NAME, temp) </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsfcpak(vdata_id, HDF_VSUNPACK, FIELDNAME_LIST, databuf,</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;BUFFER_SIZE, num_of_records, FIELD2_NAME, ident) </p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Display the read data being stored in the field databufs.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;write (*,*) ‘ &#160;&#160;&#160;Temp &#160;Ident’</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;do 10 i = 1, num_of_records</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;write(*,1000) temp(i), ident(i)</p>
+ <p class="FM_ExampleCode">10 &#160;&#160;&#160;continue </p>
+ <p class="FM_ExampleCode">1000 &#160;format (3x,F6.2, 4x, a)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Terminate access to the vdata and to the VS interface, and</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;close the HDF file.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsfdtch(vdata_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vfend(file_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = hclose(file_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;end</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExamplePage"><a name="XREF_34127_locate_vdata_c"></a>locate_vdata.c</p>
+ <p class="FM_ExampleCode">#include “hdf.h”</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">#define &#160;FILE_NAME &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;“General_Vdatas.hdf”</p>
+ <p class="FM_ExampleCode">#define &#160;SEARCHED_FIELDS &#160;&#160;“Position,Temperature”</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">main( )</p>
+ <p class="FM_ExampleCode">{</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/************************* Variable declaration **************************/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;intn &#160;status_n; &#160;&#160;&#160;&#160;&#160;/* returned status for functions returning an intn &#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;int32 status_32, &#160;&#160;&#160;&#160;/* returned status for functions returning an int32 */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;file_id, vdata_id, vdata_ref,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;index = 0; &#160;&#160;&#160;&#160;/* index of the vdata in the file - manually kept &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;int8 &#160;found_fields; &#160;/* TRUE if the specified fields exist in the vdata &#160;*/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/********************** End of variable declaration **********************/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Open the HDF file for reading.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;file_id = Hopen (FILE_NAME, DFACC_READ, 0);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Initialize the VS interface.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = Vstart (file_id);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Set the reference number to -1 to start the search from </p>
+ <p class="FM_ExampleCode"> &#160;&#160;* the beginning of file.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;vdata_ref = -1;</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Assume that the specified fields are not found in the current vdata.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;found_fields = FALSE;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Use VSgetid to obtain each vdata by its reference number then</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* attach to the vdata and search for the fields. &#160;The loop</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* terminates when the last vdata is reached or when a vdata which</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* contains the fields listed in SEARCHED_FIELDS is found. &#160;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;while ((vdata_ref = VSgetid (file_id, vdata_ref)) != FAIL)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;{</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;vdata_id = VSattach (file_id, vdata_ref, “r”);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;if ((status_n = VSfexist (vdata_id, SEARCHED_FIELDS)) != FAIL)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;{</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;found_fields = TRUE;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;break;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;}</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;* Detach from the current vdata before continuing searching.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status_32 = VSdetach (vdata_id);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;index++;<span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>/* advance the index by 1 for the next vdata */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;}</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Print the index of the vdata containing the fields or a “not found” </p>
+ <p class="FM_ExampleCode"> &#160;&#160;* message if no such vdata is found. &#160;Also detach from the vdata found.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;if (!found_fields) </p>
+ <p class="FM_ExampleCode">      printf (“Fields Position and Temperature were not found.\n”);</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;else </p>
+ <p class="FM_ExampleCode"> &#160;&#160;{</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;printf</p>
+ <p class="FM_ExampleCode">     (“Fields Position and Temperature found in the vdata at position %d\n”, </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;index);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status_32 = VSdetach (vdata_id);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;}</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Terminate access to the VS interface and close the HDF file.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = Vend (file_id);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_32 = Hclose (file_id);</p>
+ <p class="FM_ExampleCode">}</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExamplePage"><a name="XREF_32469_locate_vdata_f"></a>locate_vdata.f</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;program locate_vdata </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;implicit none</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Parameter declaration</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*18 FILE_NAME</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;character*20 SEARCHED_FIELDS </p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (FILE_NAME &#160;&#160;&#160;&#160;&#160;&#160;= ‘General_Vdatas.hdf’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;SEARCHED_FIELDS = ‘Position,Temperature’)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer DFACC_READ</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (DFACC_READ = 1)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Function declaration</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer hopen, hclose</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;integer vfstart, vsfatch, vsfgid, vsfex, vsfdtch, vfend </p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C**** Variable declaration *******************************************</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer status</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer file_id, vdata_id, vdata_ref</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;integer index </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;logical found_fields </p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C**** End of variable declaration ************************************</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Open the HDF file for reading.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;file_id = hopen(FILE_NAME, DFACC_READ, 0)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Initialize the VS interface.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;status = vfstart(file_id) </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;index = 0</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Set the reference number to -1 to start the search from the beginning</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;of the file. </p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;vdata_ref = -1</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Assume that the specified fields are not found in the current vdata.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;found_fields = .FALSE.</p>
+ <p class="FM_ExampleCode">10 &#160;&#160;&#160;continue</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Use vsfgid to obtain each vdata by its reference number then</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;attach to the vdata and search for the fields. The loop terminates</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;when the last vdata is reached or when a vdata which contains the</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;fields listed in SEARCHED_FIELDS is found.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;vdata_ref = vsfgid(file_id, vdata_ref)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;if (vdata_ref .eq. -1) goto 100</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;vdata_id = vsfatch(file_id, vdata_ref, ‘r’)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsfex(vdata_id, SEARCHED_FIELDS)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;if (status .ne. -1) then</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;found_fields = .TRUE.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;goto 100</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;endif</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsfdtch(vdata_id)</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;index = index + 1 </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;goto 10</p>
+ <p class="FM_ExampleCode">100 &#160;&#160;continue</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Print the index of the vdata containing the fields or a ‘not found’</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;message if no such vdata is found. Also detach from the vdata found.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;if(.NOT.found_fields) then</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;write(*,*) ‘Fields Positions and Temperature were not found’</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;else</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;write(*,*)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;‘Fields Positions and Temperature were found in the vdata’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;‘ at position ‘, index</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;&#160;&#160;&#160;Terminate access to the vdata</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;status = vsfdtch(vdata_id)</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;endif &#160;</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Terminate access to the VS interface and close the HDF file.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsfdtch(vdata_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vfend(file_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = hclose(file_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;end</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExamplePage"><a name="XREF_19252_set_get_vdata_attr"></a>set_get_vdata_attr.c</p>
+ <p class="FM_ExampleCode">#include “hdf.h”</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">#define &#160;FILE_NAME &#160;&#160;&#160;&#160;&#160;&#160;&#160;“General_Vdatas.hdf”</p>
+ <p class="FM_ExampleCode">#define &#160;VDATA_NAME &#160;&#160;&#160;&#160;&#160;&#160;“Solid Particle”</p>
+ <p class="FM_ExampleCode">#define &#160;FIELD_NAME &#160;&#160;&#160;&#160;&#160;&#160;“Mass”</p>
+ <p class="FM_ExampleCode">#define &#160;VATTR_NAME &#160;&#160;&#160;&#160;&#160;&#160;“Site Ident” &#160;&#160;&#160;&#160;&#160;/* name of the vdata attribute &#160;*/</p>
+ <p class="FM_ExampleCode">#define &#160;FATTR_NAME &#160;&#160;&#160;&#160;&#160;&#160;“Scales” &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* name of the field attribute &#160;*/</p>
+ <p class="FM_ExampleCode">#define &#160;VATTR_N_VALUES &#160;&#160;3 &#160;&#160;&#160;&#160;&#160;/* number of values in the vdata attribute */</p>
+ <p class="FM_ExampleCode">#define &#160;FATTR_N_VALUES &#160;&#160;4 &#160;&#160;&#160;&#160;&#160;/* number of values in the field attribute */</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">main( )</p>
+ <p class="FM_ExampleCode">{ &#160;&#160;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/************************* Variable declaration **************************/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;intn &#160;status_n; &#160;&#160;&#160;&#160;&#160;/* returned status for functions returning an intn &#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;int32 status_32, &#160;&#160;&#160;&#160;/* returned status for functions returning an int32 */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;file_id, vdata_ref, vdata_id,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;field_index, &#160;&#160;/* index of a field within the vdata */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;n_vdattrs, &#160;&#160;&#160;&#160;/* number of vdata attributes */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;n_fldattrs, &#160;&#160;&#160;/* number of field attributes */</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;vdata_type, &#160;&#160;&#160;/* to hold the type of vdata’s attribute */ </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;vdata_n_values,/* to hold the number of vdata’s attribute values &#160;&#160;*/ </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;vdata_size, &#160;&#160;&#160;/* to hold the size of vdata’s attribute values &#160;&#160;&#160;&#160;*/ </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;field_type, &#160;&#160;&#160;/* to hold the type of field’s attribute &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;*/ </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;field_n_values,/* to hold the number of field’s attribute values &#160;&#160;*/ </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;field_size; &#160;&#160;&#160;/* to hold the size of field’s attribute values &#160;&#160;&#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;char &#160;vd_attr[VATTR_N_VALUES] = {‘A’, ‘B’, ‘C’};/* vdata attribute values*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;int32 fld_attr[FATTR_N_VALUES] = {2, 4, 6, 8}; &#160;/* field attribute values*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;char &#160;vattr_buf[VATTR_N_VALUES]; &#160;&#160;&#160;&#160;/* to hold vdata attribute’s values */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;int32 fattr_buf[FATTR_N_VALUES]; &#160;&#160;&#160;&#160;/* to hold field attribute’s values */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;char &#160;vattr_name[30], &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* name of vdata attribute */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;fattr_name[30]; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* name of field attribute */</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/********************** End of variable declaration **********************/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Open the HDF file for writing.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;file_id = Hopen (FILE_NAME, DFACC_WRITE, 0);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Initialize the VS interface. </p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = Vstart (file_id);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Get the reference number of the vdata named VDATA_NAME.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;vdata_ref = VSfind (file_id, VDATA_NAME);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Attach to the vdata for writing. </p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;vdata_id = VSattach (file_id, vdata_ref, “w”);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Attach an attribute to the vdata, i.e., indicated by the second parameter.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = VSsetattr (vdata_id, _HDF_VDATA, VATTR_NAME, DFNT_CHAR,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;VATTR_N_VALUES, vd_attr);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Get the index of the field FIELD_NAME within the vdata.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = VSfindex (vdata_id, FIELD_NAME, &amp;field_index);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Attach an attribute to the field field_index.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;status_n = VSsetattr (vdata_id, field_index, FATTR_NAME, DFNT_INT32, </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;FATTR_N_VALUES, fld_attr);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Get the number of attributes attached to the vdata’s first </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* field - should be 0. </p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;n_fldattrs = VSfnattrs (vdata_id, 0);</p>
+ <p class="FM_ExampleCode">   printf ( “Number of attributes of the first field of the vdata: %d\n”, </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;n_fldattrs);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Get the number of attributes attached to the field specified by </p>
+ <p class="FM_ExampleCode"> &#160;&#160;* field_index - should be 1.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;n_fldattrs = VSfnattrs (vdata_id, field_index);</p>
+ <p class="FM_ExampleCode">   printf ( “Number of attributes of field %s: %d\n”, FIELD_NAME, n_fldattrs);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Get the total number of the field’s and vdata’s attributes - should be 2. </p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;n_vdattrs = VSnattrs (vdata_id);</p>
+ <p class="FM_ExampleCode">   printf ( “Number of attributes of the vdata and its fields: %d\n”, </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;n_vdattrs);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Get information about the vdata’s first attribute, indicated</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* by the third parameter which is the index of the attribute. </p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;status_n = VSattrinfo (vdata_id, _HDF_VDATA, 0, vattr_name, </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&amp;vdata_type, &amp;vdata_n_values, &amp;vdata_size);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Get information about the first attribute of the field specified by </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* field_index. </p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;status_n = VSattrinfo (vdata_id, field_index, 0, fattr_name, &amp;field_type, </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&amp;field_n_values, &amp;field_size);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Get the vdata’s first attribute. </p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = VSgetattr (vdata_id, _HDF_VDATA, 0, vattr_buf);</p>
+ <p class="FM_ExampleCode">   printf(“Values of the vdata attribute = %c %c %c\n”, vattr_buf[0],</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;vattr_buf[1], vattr_buf[2]);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Get the first attribute of the field specified by field_index.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = VSgetattr (vdata_id, field_index, 0, fattr_buf);</p>
+ <p class="FM_ExampleCode">   printf(“Values of the field attribute = %d %d %d %d\n”, fattr_buf[0], </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;fattr_buf[1], fattr_buf[2], fattr_buf[3]);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Terminate access to the vdata and to the VS interface, then close </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* the HDF file. </p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_32 = VSdetach (vdata_id);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n &#160;= Vend (file_id);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_32 = Hclose (file_id);</p>
+ <p class="FM_ExampleCode">}</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExamplePage"><a name="XREF_30138_set_get_vdata_attr"></a>set_get_vdata_attr.f</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;program vdata_attributes </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;implicit none</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Parameter declaration</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*18 FILE_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*14 VDATA_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*4 &#160;FIELD_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*10 VATTR_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*6 &#160;FATTR_NAME</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;&#160;&#160;VATTR_N_VALUES, FATTR_N_VALUES </p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (FILE_NAME &#160;&#160;&#160;= ‘General_Vdatas.hdf’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;VDATA_NAME &#160;&#160;= ‘Solid Particle’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;FIELD_NAME &#160;&#160;= ‘Mass’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;VATTR_NAME &#160;&#160;= ‘Site Ident’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;FATTR_NAME &#160;&#160;= ‘Scales’)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (VATTR_N_VALUES = 3,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;FATTR_N_VALUES = 4)</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer DFACC_WRITE, FULL_INTERLACE, HDF_VDATA</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer DFNT_INT32, DFNT_CHAR8</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (DFACC_WRITE &#160;&#160;&#160;= &#160;2,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;FULL_INTERLACE = &#160;0,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;HDF_VDATA &#160;&#160;&#160;&#160;&#160;= -1,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;DFNT_INT32 &#160;&#160;&#160;&#160;= 24,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;DFNT_CHAR8 &#160;&#160;&#160;&#160;= &#160;4)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Function declaration</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer hopen, hclose</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;integer vfstart, vsffnd, vsfatch, vsfscat, vsfsnat, </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;vsffnas, vsffidx, vsfnats, vsfainf, vsfgcat, vsfgnat,</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;vsfdtch, vfend </p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C**** Variable declaration *******************************************</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;status</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;file_id, vdata_id, vdata_ref</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;field_index, n_vdattrs, n_fldattrs</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;vdata_type, vdata_n_values, vdata_size</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;integer &#160;&#160;field_type, field_n_values, field_size </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character vd_attr(VATTR_N_VALUES)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;fld_attr(FATTR_N_VALUES)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character vattr_buf(VATTR_N_VALUES)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;fattr_buf(FATTR_N_VALUES)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character vattr_name_out(30), fattr_name_out(30)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;data vd_attr /’A’, ‘B’, ‘C’/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;data fld_attr /2, 4, 6, 8/</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C**** End of variable declaration ************************************</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Open the HDF file for writing.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;file_id = hopen(FILE_NAME, DFACC_WRITE, 0)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Initialize the VS interface.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;status = vfstart(file_id) </p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Get the reference number of the vdata named VDATA_NAME.</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;vdata_ref = vsffnd(file_id, VDATA_NAME)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Attach to the vdata for writing. </p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;vdata_id = vsfatch(file_id, vdata_ref, ‘w’) </p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Attach an attribute to the vdata, as it is indicated by second parameter.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsfscat(vdata_id, HDF_VDATA, VATTR_NAME, DFNT_CHAR8,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;VATTR_N_VALUES, vd_attr)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Get the index of the field FIELD_NAME within the vdata.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsffidx(vdata_id, FIELD_NAME, field_index)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Attach an attribute to the field with the index field_index.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsfsnat(vdata_id, field_index, FATTR_NAME, DFNT_INT32,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;FATTR_N_VALUES, fld_attr)</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Get the number of attributes attached to the vdata’s first</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;field - should be 0.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;n_fldattrs = vsffnas(vdata_id, 0)</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;write(*,*) ‘Number of attributes of the first field’ </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;write(*,*) ‘ of the vdata: ‘, n_fldattrs</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Get the number of the attributes attached to the field specified by</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;index field_index - should be 1.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;n_fldattrs = vsffnas(vdata_id, field_index)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;write(*,*) ‘Number of attributes of field ‘, FIELD_NAME,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;n_fldattrs</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Get the total number of the field’s and vdata’s attributes - should be 2.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;n_vdattrs = vsfnats(vdata_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;write(*,*) ‘Number of attributes of the vdata and its fields: ‘,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;n_vdattrs</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Get information about the vdata’s first attribute, indicated by </p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;the third parameter, which is the index of the attribute.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsfainf(vdata_id, HDF_VDATA, 0, vattr_name_out,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;vdata_type, vdata_n_values, vdata_size)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Get information about the first attribute of the field specified by</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;field_index.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;status = vsfainf(vdata_id, field_index, 0, fattr_name_out, </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;field_type, field_n_values, field_size)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Get the vdata’s first attribute.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsfgcat(vdata_id, HDF_VDATA, 0, vattr_buf)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;write(*,*) ‘Values of vdata attribute &#160;‘, vattr_buf</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Get the first attribute of the field specified by field_index.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsfgnat(vdata_id, field_index, 0, fattr_buf)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;write(*,*) &#160;‘Values of the field attribute = ‘, fattr_buf</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;&#160;&#160;</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Terminate access to the vdata and to the VS interface, and</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;close the HDF file.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsfdtch(vdata_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vfend(file_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = hclose(file_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;end</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExamplePage"><a name="XREF_35942_get_vdata_info_c"></a>get_vdata_info.c</p>
+ <p class="FM_ExampleCode">#include “hdf.h”</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">#define &#160;FILE_NAME &#160;&#160;&#160;&#160;&#160;“General_Vdatas.hdf”</p>
+ <p class="FM_ExampleCode">#define &#160;FIELD_SIZE &#160;&#160;&#160;&#160;80 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* maximum length of all the field names */</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">main( )</p>
+ <p class="FM_ExampleCode">{</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/************************* Variable declaration **************************/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;intn &#160;status_n; &#160;&#160;&#160;&#160;&#160;/* returned status for functions returning an intn &#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;int32 status_32, &#160;&#160;&#160;&#160;/* returned status for functions returning an int32 */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;n_records, &#160;&#160;&#160;&#160;/* to retrieve the number of records in the vdata &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;interlace_mode,/* to retrieve the interlace mode of the vdata &#160;&#160;&#160;&#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;vdata_size, &#160;&#160;&#160;/* to retrieve the size of all specified fields &#160;&#160;&#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;file_id, vdata_ref, vdata_id;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;char &#160;fieldname_list[FIELD_SIZE], /* buffer to retrieve the vdata data &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;vdata_name[VSNAMELENMAX]; &#160;&#160;/* buffer to retrieve the vdata name &#160;&#160;*/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/********************** End of variable declaration **********************/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Open the HDF file for reading. </p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;file_id = Hopen (FILE_NAME, DFACC_READ, 0);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Initialize the VS interface. </p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = Vstart (file_id);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Set vdata_ref to -1 to start the search from the beginning of file.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;vdata_ref = -1;</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Use VSgetid to obtain each vdata by its reference number then attach </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* to the vdata and get its information. &#160;The loop terminates when </p>
+ <p class="FM_ExampleCode"> &#160;&#160;* the last vdata is reached.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;while ((vdata_ref = VSgetid (file_id, vdata_ref)) != FAIL)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;{</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;* Attach to the current vdata for reading.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;vdata_id = VSattach (file_id, vdata_ref, “r”);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;* Test whether the current vdata is not a storage of an attribute, then</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;* obtain and display its information.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;if( VSisattr (vdata_id) != TRUE )</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;{</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;status_n = VSinquire (vdata_id, &amp;n_records, &amp;interlace_mode, </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;fieldname_list, &amp;vdata_size, vdata_name);</p>
+ <p class="FM_ExampleCode">         printf (“Vdata %s: - contains %d records\n\tInterlace mode: %s \</p>
+ <p class="FM_ExampleCode">                 \n\tFields: %s - %d bytes\n\t\n”, vdata_name, n_records,</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;interlace_mode == FULL_INTERLACE ? “FULL” : “NONE”, </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;fieldname_list, vdata_size );</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;}</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;* Detach from the current vdata.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status_32 = VSdetach (vdata_id);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;} /* while */</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Terminate access to the VS interface and close the HDF file. </p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = Vend (file_id);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_32 = Hclose (file_id);</p>
+ <p class="FM_ExampleCode">}</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExamplePage"><a name="XREF_41190_get_vdata_info_f"></a>get_vdata_info.f</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;program vdata_info </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;implicit none</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Parameter declaration</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*18 FILE_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;&#160;&#160;DFACC_READ, FULL_INTERLACE</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;&#160;&#160;FIELD_SIZE</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (FILE_NAME &#160;&#160;&#160;&#160;&#160;= ‘General_Vdatas.hdf’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;DFACC_READ &#160;&#160;&#160;&#160;= 1,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;FULL_INTERLACE = 0,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;FIELD_SIZE &#160;&#160;&#160;&#160;= 80)</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Function declaration</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer hopen, hclose</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer vfstart, vsfatch, vsfgid, vsfinq,</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;vsfisat, vsfdtch, vfend </p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C**** Variable declaration *******************************************</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;&#160;&#160;status</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;&#160;&#160;file_id, vdata_id, vdata_ref</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;&#160;&#160;n_records, interlace_mode, vdata_size</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*64 vdata_name</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;character*80 fieldname_list </p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C**** End of variable declaration ************************************</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Open the HDF file for reading.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;file_id = hopen(FILE_NAME, DFACC_READ, 0)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Initialize the VS interface.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;status = vfstart(file_id) </p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Set the reference number to -1 to start the search from the beginning</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;of the file. </p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;vdata_ref = -1</p>
+ <p class="FM_ExampleCode">10 &#160;&#160;&#160;continue</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Use vsfgid to obtain each vdata by its reference number then</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;attach to the vdata and get information. The loop terminates</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;when the last vdata is reached.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;vdata_ref = vsfgid(file_id, vdata_ref)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;if (vdata_ref .eq. -1) goto 100</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Attach to the current vdata for reading.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;vdata_id = vsfatch(file_id, vdata_ref, ‘r’)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Test whether the current vdata is not a storage for an attribute,</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;then obtain and display its information.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;if (vsfisat(vdata_id) .ne. 1) then</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;status = vsfinq(vdata_id, n_records, interlace_mode,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;fieldname_list, vdata_size, vdata_name)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;write(*,*) ‘Vdata: ‘, vdata_name</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;write(*,*) ‘contains ‘, n_records, ‘ records’</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if (interlace_mode .eq. 0) then</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;write(*,*) ‘Interlace mode: FULL’</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;else<span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>&#160;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;write(*,*) ‘Interlace mode: NONE’</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;endif</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;write(*,*) ‘Fields: ‘, fieldname_list(1:30)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;write(*,*) ‘Vdata record size in bytes :’, vdata_size</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;write(*,*)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;endif</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Detach from the current vdata.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsfdtch(vdata_id)</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;goto 10 </p>
+ <p class="FM_ExampleCode">100 &#160;&#160;continue</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Terminate access to the vdata and to the VS interface, and</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;close the HDF file.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsfdtch(vdata_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vfend(file_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = hclose(file_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;end</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+</div>
+				
+				<div class="content_top_link">
+					<a>&#160;</a> 
+				</div>
+				<div class="mobile_browseholder">
+					<div class="brsBack">
+						<a id="browseSeqBack1" class="wBSBackButton" href="../Example_DFAN/Example_DFAN.htm"><img alt="" src="../../template/Theme1_Standard/BSBack.png" class="wBSBackButton normal" id="xmlEditorBSBackButtonMobile" border="0" style="width:100%; max-width:48px" /><img alt="" src="../../template/Theme1_Standard/BSBack_hover.png" class="wBSBackButton hover" id="xmlEditorBSBackButtonMobileHover" border="0" style="width:100%; max-width:56px" /></a> 
+						 
+					</div>
+					<div class="brsNext">
+						<a id="browseSeqNext1" class="wBSNextButton" href="../Example_GR/Example_GR.htm"><img alt="" src="../../template/Theme1_Standard/BSNext.png" class="wBSNextButton normal" id="xmlEditorBSNextButtonMobile" border="0" style="width:100%; max-width:48px" /><img alt="" src="../../template/Theme1_Standard/BSNext_hover.png" class="wBSNextButton hover" id="xmlEditorBSNextButtonMobileHover" border="0" style="width:100%; max-width:48px" /></a> 
+						 
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="buttonbar">
+		<div class="buttonbarholder topic_page_holder">
+			<div class="bar_toc topic_page" id="xmlEditorButtonBarTOC" 
+				 title="Table of Contents">
+				<a href="../../table_of_contents.htm">&#160;</a> 
+			</div>
+			<div class="bar_index topic_page" id="xmlEditorButtonBarIDX" 
+				 title="Index">
+				<a href="../../index1.htm">&#160;</a> 
+			</div>
+			<div class="bar_glossary topic_page" id="xmlEditorButtonBarGLO" 
+				 title="Glossary">
+				<a href="../../glossary.htm">&#160;</a> 
+			</div>
+			<div class="bar_search topic_page">
+				<a href="../../searchresults.htm" title="Search">&#160;</a> 
+			</div>
+		</div>
+	</div>
+</div>
+<div id="localisation">
+	<p id="localisation_toc"><span>Table of Contents</span></p>
+	<p id="localisation_idx"><span>Index</span></p>
+	<p id="localisation_glo"><span>Glossary</span></p>
+	<p id="localisation_fts"><span>-Search-</span></p>
+	<p id="localisation_back"><span>Back</span></p>
+</div>
+<script type="text/javascript" src="../../template/Theme1_Standard/jquery.js"></script>
+<script type="text/javascript" src="../../template/Theme1_Standard/jqueryui-custom.js"></script>
+<script type="text/javascript" src="../../template/Theme1_Standard/overthrow.min.js"></script>
+<script type="text/javascript" src="../../template/Theme1_Standard/overthrow.sidescroller.min.js"></script>
+<script type="text/javascript" src="../../template/Theme1_Standard/layout.js"></script>
+<script type="text/javascript">//<![CDATA[
+$(function(){
+	addRhLoadCompleteEvent(setTopic);
+});
+//]]></script>
+</body>
+</html>

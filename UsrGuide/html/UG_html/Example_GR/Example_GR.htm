@@ -1,0 +1,2064 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="OriginalFile" content="C:\hdf\H4\releases\4.2.12\Doc\hdf4doc\UsrGuide\src\Example_GR.fm" />
+ <meta name="Originator" content="ImportMif" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=100%, initial-scale=1" />
+<meta name="generator" content="Adobe FrameMaker 12" />
+<title>HDF User’s Guide - 4.2.12</title>
+<link href="../../template/Theme1_Standard/main.css" type="text/css" rel="stylesheet" />
+<link href="../../template/Theme1_Standard/jqueryui-custom.css" type="text/css" rel="stylesheet" />
+ <link rel="stylesheet" href="Example_GR.css" type="text/css" />
+ <link rel="StyleSheet" href="../../Responsive_HTML5_stylesheet.css" type="text/css" /><script type="text/javascript" language="JavaScript">//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]></script><style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" src="../../template/scripts/constants.js"></script>
+<script type="text/javascript" src="../../template/scripts/utils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhver.js"></script>
+<script type="text/javascript" src="../../template/scripts/settings.js"></script>
+<script type="text/javascript" src="../../template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadcsh.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/showhidecontrols.js"></script>
+<script type="text/javascript" src="../../template/scripts/pageloader.js"></script>
+<script type="text/javascript" src="../../template/scripts/toctree.js"></script>
+<script type="text/javascript" src="../../template/scripts/toctreeloader.js"></script>
+<script type="text/javascript" src="../../template/scripts/indextree.js"></script>
+<script type="text/javascript" src="../../template/scripts/indextreeloader.js"></script>
+<script type="text/javascript" src="../../template/scripts/glossarylist.js"></script>
+<script type="text/javascript" src="../../template/scripts/glossarylistloader.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhtopic.js"></script>
+<script type="text/javascript" src="../../template/scripts/searchfield.js"></script>
+<script type="text/javascript" src="../../template/scripts/tabpanels.js"></script>
+<script type="text/javascript" >
+gTocPageHtml = "{%ICON%}<span  class=\"wTOCTreePageText\">{%LINK_NAME%}</span>";
+gTocBookClosedHtml = "{%ICON%}<span  class=\"wTOCTreeCloseBookText\">{%LINK_NAME%}</span>";
+gTocBookOpenHtml = "{%ICON%}<span  class=\"wTOCTreeCloseBookText\">{%LINK_NAME%}</span>";
+gTocUrlHtml = "{%ICON%}<span  class=\"wTOCTreeLinkText\">{%LINK_NAME%}</span>";
+gTocPageIconSrc = "../../template/Theme1_Standard/TOCTreePage.png";
+gTocPageIconHoverSrc = "../../template/Theme1_Standard/TOCTreePageHover.png";
+gTocPageIconSelSrc = "../../template/Theme1_Standard/TOCTreePageSelected.png";
+gTocPageIconClass = "wTOCTreePageIcon";
+gTocPageIconStyle = "";
+gTocBookClosedIconSrc = "../../template/Theme1_Standard/TOCTreeCloseBook.png";
+gTocBookClosedIconHoverSrc = "../../template/Theme1_Standard/TOCTreeCloseBookHover.png";
+gTocBookClosedIconSelSrc = "../../template/Theme1_Standard/TOCTreeCloseBookSelected.png";
+gTocBookClosedIconClass = "wTOCTreeCloseBookIcon";
+gTocBookClosedIconStyle = "";
+gTocBookOpenIconSrc = "../../template/Theme1_Standard/TOCTreeOpenBook.png";
+gTocBookOpenIconHoverSrc = "../../template/Theme1_Standard/TOCTreeOpenBookHover.png";
+gTocBookOpenIconSelSrc = "../../template/Theme1_Standard/TOCTreeOpenBookHoverSelected.png";
+gTocBookOpenIconClass = "wTOCTreeOpenBookIcon";
+gTocBookOpenIconStyle = "";
+gTocUrlIconSrc = "../../template/Theme1_Standard/TOCTreeLink.png";
+gTocUrlIconHoverSrc = "../../template/Theme1_Standard/TOCTreeLinkHover.png";
+gTocUrlIconSelSrc = "../../template/Theme1_Standard/TOCTreeLinkSelected.png";
+gTocUrlIconClass = "wTOCTreeLinkIcon";
+gTocUrlIconStyle = "";
+</script>
+<script type="text/javascript" >
+gRootRelPath = "../..";
+gCommonRootRelPath = "../..";
+</script>
+<script type="text/javascript" >
+gIdxKWHtml = "<span  class=\"wIdxKeywordText\">{%LINK_NAME%}</span>";
+	gIdxLinkHtml = "<span  class=\"wIdxLinkText\">{%LINK_NAME%}</span>";
+	gIdxCategoryHtml = "<span  class=\"wIdxAlphabetText\">{%LINK_NAME%}</span>";
+</script>
+<script type="text/javascript" >
+gTopicId = "23.0_1";
+</script>
+<script type="text/javascript" >
+gGloTermHtml = "<span  class=\"wGloTermText\">{%LINK_NAME%}</span>";
+	gGloDefHtml = "<span  class=\"wGloDefinitionText\">{%LINK_NAME%}</span>";
+	gGloCategoryHtml = "<span  class=\"wGloAlphabetText\">{%LINK_NAME%}</span>";
+</script>
+ <link rel="SHORTCUT ICON" href="../../Responsive HTML5_favicon.png" />
+</head>
+
+<body>
+<script type="text/javascript" src="../../ehlpdhtm.js"></script>
+
+<div class="floatholder">
+	<div class="phone_scrollarea overthrow">
+		<div class="header">
+			<div class="logo">
+				<a href="../UG_Intro/UG_Intro.htm" class="homelink"><img src="../../template/Theme1_Standard/logo.png" alt="Logo" id="wLogoImage" style=" border:none; width:100%; max-width:90px;" border="0" /></a> 
+				 
+			</div>
+			<div class="title">
+				<a href="../UG_Intro/UG_Intro.htm" class="homelink"><span>HDF User’s Guide - 4.2.12</span></a> 
+				 
+			</div>
+		</div>
+		<div class="sidebar">
+			<div data-showin="Always" class="wTabbedPanel" id="tabbedpanel">
+				<ul class="wTabGroup" id="tab" data-tabid="tocTabButton" style="margin: 0px;">
+					<li class="wTab" id="tocTabButton" data-contentid="tocTabPane" onmouseout="onTabHoverOut(this, 'tab')" data-class="wTab" ontouchend="onTabHoverOut(this, 'tab')" onclick="selectTab(this, 'tab')" ontouchstart="onTabHover(this, 'tab')" data-classhover="wTabHover" style="display: inline;" ontouchmove="onTabHoverOut(this, 'tab')" data-classsel="wTabSelected" onmouseover="onTabHover(this, 'tab')"><img src="../../template/Theme1_Standard/toc.png" class="normal" alt="Table of Contents" title="Table of Contents" id="xmlEditorTOCSidebarButton" style=" border:none; width:100%; max-width:42px;" border="0" /><img src="../../template/Theme1_Standard/toc_hover.png" class="hover" alt="Table of Contents" title="Table of Contents" id="xmlEditorTOCSidebarButtonHover" style=" border:none; width:100%; max-width:48px;" border="0" /></li>
+					<li class="wTab" id="idxTabButton" data-contentid="idxTabPane" onmouseout="onTabHoverOut(this, 'tab')" data-class="wTab" ontouchend="onTabHoverOut(this, 'tab')" onclick="selectTab(this, 'tab')" ontouchstart="onTabHover(this, 'tab')" data-classhover="wTabHover" style="display: inline;" ontouchmove="onTabHoverOut(this, 'tab')" data-classsel="wTabSelected" onmouseover="onTabHover(this, 'tab')"><img src="../../template/Theme1_Standard/index.png" class="normal" alt="Index" title="Index" id="xmlEditorIDXSidebarButton" style=" border:none; width:100%; max-width:48px;" border="0" /><img src="../../template/Theme1_Standard/index_hover.png" class="hover" alt="Index" title="Index" id="xmlEditorIDXSidebarButtonHover" style=" border:none; width:100%; max-width:48px;" border="0" /></li>
+					<li class="wTab" id="gloTabButton" data-contentid="gloTabPane" onmouseout="onTabHoverOut(this, 'tab')" data-class="wTab" ontouchend="onTabHoverOut(this, 'tab')" onclick="selectTab(this, 'tab')" ontouchstart="onTabHover(this, 'tab')" data-classhover="wTabHover" style="display: inline;" ontouchmove="onTabHoverOut(this, 'tab')" data-classsel="wTabSelected" onmouseover="onTabHover(this, 'tab')"><img src="../../template/Theme1_Standard/glo.png" class="normal" alt="Glossary" title="Glossary" id="xmlEditorGLOSidebarButton" style=" border:none; width:100%; max-width:48px;" border="0" /><img src="../../template/Theme1_Standard/glo_hover.png" class="hover" alt="Glossary" title="Glossary" id="xmlEditorGLOSidebarButtonHover" style=" border:none; width:100%; max-width:48px;" border="0" /></li>
+				</ul>
+				<div class="wTabContentGroup">
+					<div id="tocTabPane" class="wTabContent">
+						<div id="toc" class="wTOCTree" tabindex="580">
+							
+							
+							
+							
+						</div>
+					</div>
+					<div id="idxTabPane" class="wTabContent">
+						<div id="idx" class="wIndex">
+							<input class="wIdxFilter" id="idxFilterBox" type="text" data-placeholder="Filter Keyword" onkeyup="filterIdx()"></input>
+							
+							
+							
+						</div>
+					</div>
+					<div id="gloTabPane" class="wTabContent">
+						<div id="glo" class="wGlossary">
+							<input class="wGloFilter" id="gloFilterBox" type="text" data-placeholder="Filter Term" onkeyup="filterGlo()"></input>
+							
+							
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="closebutton buttonOpened">
+				&#160; 
+			</div>
+		</div>
+		<div class="content">
+			<div class="desktop_functionholder">
+				<div class="searchholder">
+					<div class="wSearchField">
+						<input id="searchBox" class="wSearchField" type="search" data-placeholder="-Search-" onkeydown="searchHelp(event, 'searchBox')" data-search="true" /><a class="wSearchLink" onclick="searchHelp(null, 'searchBox')" href="#"><img src="../../template/Theme1_Standard/Search.png" alt="" id="xmlEditwSearchLink" class="wSearchLink" border="0" style="width:100%; max-width:28px" /></a> 
+						 
+					</div>
+				</div>
+				<div class="brsNext">
+					<a id="browseSeqNext" class="wBSNextButton" href="../Example_Vg/Example_Vg.htm"><img alt="" src="../../template/Theme1_Standard/BSNext.png" class="wBSNextButton normal" id="xmlEditorBSNextButton" border="0" style="width:100%; max-width:48px" /><img alt="" src="../../template/Theme1_Standard/BSNext_hover.png" class="wBSNextButton hover" id="xmlEditorBSNextButtonHover" border="0" style="width:100%; max-width:48px" /></a> 
+					 
+				</div>
+				<div class="print">
+					<a href="javascript:window.print()" class="wPrintButton"><img src="../../template/Theme1_Standard/Print.png" alt="" class="wPrintButton normal" id="xmlEditorPrintButton" border="0" style="width:100%; max-width:48px" /><img src="../../template/Theme1_Standard/Print_hover.png" alt="" class="wPrintButton hover" id="xmlEditorPrintButtonHover" border="0" style="width:100%; max-width:48px" /></a> 
+				</div>
+				<div class="brsBack">
+					<a id="browseSeqBack" class="wBSBackButton" href="../Example_Vd/Example_Vd.htm"><img alt="" src="../../template/Theme1_Standard/BSBack.png" class="wBSBackButton normal" id="xmlEditorBSBackButton" border="0" style="width:100%; max-width:48px" /><img alt="" src="../../template/Theme1_Standard/BSBack_hover.png" class="wBSBackButton hover" id="xmlEditorBSBackButtonHover" border="0" style="width:100%; max-width:56px" /></a> 
+					 
+				</div>
+			</div>
+			<div class="contentholder">
+				<div class="mobile_browseholder">
+					<div class="brsBack">
+						<a id="browseSeqBack0" class="wBSBackButton" href="../Example_Vd/Example_Vd.htm"><img alt="" src="../../template/Theme1_Standard/BSBack.png" class="wBSBackButton" border="0" style="width:100%; max-width:48px" /></a> 
+					</div>
+					<div class="brsNext">
+						<a id="browseSeqNext0" class="wBSNextButton" href="../Example_Vg/Example_Vg.htm"><img alt="" src="../../template/Theme1_Standard/BSNext.png" class="wBSNextButton" border="0" style="width:100%; max-width:48px" /></a> 
+					</div>
+				</div>
+				<a name="content_top_placeholder"></a> 
+				<div class="wTopic" id="rh_default_topic_placeholder_id">
+
+ <p class="FM_ExamplePage"><a name="XREF_21445_create_and_write"></a>create_and_write_image.c</p>
+ <p class="FM_ExampleCode">#include “hdf.h”</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">#define &#160;FILE_NAME &#160;&#160;&#160;&#160;“General_RImages.hdf”</p>
+ <p class="FM_ExampleCode">#define &#160;IMAGE_NAME &#160;&#160;&#160;“Image Array 1”</p>
+ <p class="FM_ExampleCode">#define &#160;X_LENGTH &#160;&#160;&#160;&#160;&#160;10 &#160;&#160;&#160;/* number of columns in the image */</p>
+ <p class="FM_ExampleCode">#define &#160;Y_LENGTH &#160;&#160;&#160;&#160;&#160;5 &#160;&#160;&#160;&#160;/* number of rows in the image */</p>
+ <p class="FM_ExampleCode">#define &#160;N_COMPS &#160;&#160;&#160;&#160;&#160;&#160;2 &#160;&#160;&#160;&#160;/* number of components in the image */</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">main( ) </p>
+ <p class="FM_ExampleCode">{</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/************************* Variable declaration **************************/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;intn &#160;status; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* status for functions returning an intn */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;int32 file_id, &#160;&#160;&#160;&#160;&#160;&#160;&#160;/* HDF file identifier */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;gr_id, &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* GR interface identifier */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ri_id, &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* raster image identifier */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;start[2], &#160;&#160;&#160;&#160;&#160;&#160;/* start position to write for each dimension */</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;edges[2], &#160;&#160;&#160;&#160;&#160;&#160;/* number of elements to be written </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;along each dimension */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;dim_sizes[2], &#160;&#160;/* dimension sizes of the image array */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;interlace_mode, /* interlace mode of the image */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;data_type, &#160;&#160;&#160;&#160;&#160;/* data type of the image data */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;i, j;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;int16 image_buf[Y_LENGTH][X_LENGTH][N_COMPS];</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/********************** End of variable declaration **********************/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Create and open the file.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;file_id = Hopen (FILE_NAME, DFACC_CREATE, 0);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Initialize the GR interface.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;gr_id = GRstart (file_id);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Set the data type, interlace mode, and dimensions of the image.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;data_type = DFNT_INT16;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;interlace_mode = MFGR_INTERLACE_PIXEL;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;dim_sizes[0] = X_LENGTH;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;dim_sizes[1] = Y_LENGTH;</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Create the raster image array.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;ri_id = GRcreate (gr_id, IMAGE_NAME, N_COMPS, data_type, </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;interlace_mode, dim_sizes);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Fill the image data buffer with values.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;for (i = 0; i &lt; Y_LENGTH; i++)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;{</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;for (j = 0; j &lt; X_LENGTH; j++)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;{</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;image_buf[i][j][0] = (i + j) + 1; &#160;&#160;&#160;&#160;/* first component */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;image_buf[i][j][1] = (i + j) + 1; &#160;&#160;&#160;&#160;/* second component */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;}</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;}</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Define the size of the data to be written, i.e., start from the origin</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* and go as long as the length of each dimension.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;start[0] = start[1] = 0;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;edges[0] = X_LENGTH;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;edges[1] = Y_LENGTH;</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Write the data in the buffer into the image array.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status = GRwriteimage(ri_id, start, NULL, edges, (VOIDP)image_buf);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Terminate access to the raster image and to the GR interface and, </p>
+ <p class="FM_ExampleCode"> &#160;&#160;* close the HDF file.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status = GRendaccess (ri_id);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status = GRend (gr_id);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status = Hclose (file_id);</p>
+ <p class="FM_ExampleCode">}</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExamplePage"><a name="XREF_41475_create_and_write"></a>create_and_write_image.f</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;program create_raster_image</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;implicit none</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Parameter declaration</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*19 FILE_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*13 IMAGE_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;&#160;&#160;X_LENGTH</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;&#160;&#160;Y_LENGTH</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;&#160;&#160;N_COMPS</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (FILE_NAME &#160;= ‘General_RImages.hdf’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;IMAGE_NAME = ‘Image Array 1’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;X_LENGTH &#160;&#160;= 10,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Y_LENGTH &#160;&#160;= 5,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;N_COMPS &#160;&#160;&#160;= 2)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer DFACC_CREATE, DFNT_INT16, MFGR_INTERLACE_PIXEL</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (DFACC_CREATE = 4,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;DFNT_INT16 &#160;&#160;= 22,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;MFGR_INTERLACE_PIXEL = 0)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Function declaration</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer hopen, hclose</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;integer mgstart, mgcreat, mgwrimg, mgendac, mgend </p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C**** Variable declaration *******************************************</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer status</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer file_id</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer gr_id, ri_id, num_type, interlace_mode</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer start(2), stride(2), edges(2), dimsizes(2)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer i, j, k</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;integer*2 &#160;image_buf(N_COMPS, X_LENGTH, Y_LENGTH) </p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C**** End of variable declaration ************************************</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Create and open the file.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;file_id = hopen(FILE_NAME, DFACC_CREATE, 0)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Initialize the GR interface.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;gr_id = mgstart(file_id)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Set the number type, interlace mode, and dimensions of the image. &#160;</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;num_type = DFNT_INT16</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;interlace_mode = MFGR_INTERLACE_PIXEL</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;dimsizes(1) = X_LENGTH</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;dimsizes(2) = Y_lENGTH</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Create the raster image array. </p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;ri_id = mgcreat(gr_id, IMAGE_NAME, N_COMPS, num_type,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;interlace_mode, dimsizes)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Fill the image data buffer with values. </p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;do 30 i = 1, Y_LENGTH</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;do 20 j = 1, X_LENGTH</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;do 10 k = 1, N_COMPS</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;image_buf(k,j,i) = (i+j) - 1</p>
+ <p class="FM_ExampleCode">10 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;continue</p>
+ <p class="FM_ExampleCode">20 &#160;&#160;&#160;&#160;&#160;&#160;continue</p>
+ <p class="FM_ExampleCode">30 &#160;&#160;&#160;continue</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Define the size of the data to be written, i.e., start from the origin</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;and go as long as the length of each dimension.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;start(1) = 0</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;start(2) = 0</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;edges(1) = X_LENGTH</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;edges(2) = Y_LENGTH</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;stride(1) = 1</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;stride(2) = 1</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Write the data in the buffer into the image array.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = mgwrimg(ri_id, start, stride, edges, image_buf)</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Terminate access to the raster image and to the GR interface, </p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;and close the HDF file.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = mgendac(ri_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = mgend(gr_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = hclose(file_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;end</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExamplePage">modify_image.c</p>
+ <p class="FM_ExampleCode">#include “hdf.h”</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">#define &#160;FILE_NAME &#160;&#160;&#160;“General_RImages.hdf”</p>
+ <p class="FM_ExampleCode">#define &#160;X1_LENGTH &#160;&#160;&#160;5 &#160;&#160;&#160;&#160;/* number of columns in the first image </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;being modified */</p>
+ <p class="FM_ExampleCode">#define &#160;Y1_LENGTH &#160;&#160;&#160;2 &#160;&#160;&#160;&#160;/* number of rows in the first image </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;being modified */</p>
+ <p class="FM_ExampleCode">#define &#160;N1_COMPS &#160;&#160;&#160;&#160;2 &#160;&#160;&#160;&#160;/* number of components in the first image */</p>
+ <p class="FM_ExampleCode">#define &#160;IMAGE1_NAME &#160;“Image Array 1”</p>
+ <p class="FM_ExampleCode">#define &#160;IMAGE2_NAME &#160;“Image Array 2”</p>
+ <p class="FM_ExampleCode">#define &#160;X2_LENGTH &#160;&#160;&#160;6 &#160;&#160;&#160;&#160;/* number of columns in the second image */</p>
+ <p class="FM_ExampleCode">#define &#160;Y2_LENGTH &#160;&#160;&#160;4 &#160;&#160;&#160;&#160;/* number of rows in the second image */</p>
+ <p class="FM_ExampleCode">#define &#160;N2_COMPS &#160;&#160;&#160;&#160;3 &#160;&#160;&#160;&#160;/* number of components in the second image */</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">main( ) </p>
+ <p class="FM_ExampleCode">{</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/************************* Variable declaration **************************/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;intn &#160;status; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* status for functions returning an intn */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;int32 file_id, &#160;&#160;&#160;&#160;&#160;&#160;&#160;/* HDF file identifier */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;gr_id, &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* GR interface identifier */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ri1_id, &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* raster image identifier */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;start1[2], &#160;&#160;&#160;&#160;&#160;/* start position to write for each dimension */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;edges1[2], &#160;&#160;&#160;&#160;&#160;/* number of elements to be written along</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;each dimension */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ri2_id, &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* raster image identifier */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;start2[2], &#160;&#160;&#160;&#160;&#160;/* start position to write for each dimension */</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;edges2[2], &#160;&#160;&#160;&#160;&#160;/* number of elements to be written along </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;each dimension */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;dims_sizes[2], &#160;/* sizes of the two dimensions of the image array */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;data_type, &#160;&#160;&#160;&#160;&#160;/* data type of the image data */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;interlace_mode; /* interlace mode of the image */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;int16 i, j; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* indices for the dimensions */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;int16 image1_buf[Y1_LENGTH][X1_LENGTH][N1_COMPS]; /* data of first image */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;char &#160;image2_buf[Y2_LENGTH][X2_LENGTH][N2_COMPS]; /* data of second image*/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/********************** End of variable declaration **********************/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Open the HDF file for writing.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;file_id = Hopen (FILE_NAME, DFACC_WRITE, 0);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Initialize the GR interface.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;gr_id = GRstart (file_id);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Select the first raster image in the file.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;ri1_id = GRselect (gr_id, 0);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Fill the first image data buffer with values.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;for (i = 0; i &lt; Y1_LENGTH; i++)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;{</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;for (j = 0; j &lt; X1_LENGTH; j++)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;{</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;image1_buf[i][j][0] = 0; &#160;/* first component */ </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;image1_buf[i][j][1] = 0; &#160;/* second component */ </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;}</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;}</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Define the size of the data to be written, i.e., start from the origin</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* and go as long as the length of each dimension.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;start1[0] = start1[1] = 0;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;edges1[0] = X1_LENGTH;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;edges1[1] = Y1_LENGTH;</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Write the data in the buffer into the image array.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status = GRwriteimage (ri1_id, start1, NULL, edges1, (VOIDP)image1_buf);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Set the interlace mode and dimensions of the second image.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;data_type = DFNT_CHAR8;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;interlace_mode = MFGR_INTERLACE_PIXEL;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;dims_sizes[0] = X2_LENGTH;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;dims_sizes[1] = Y2_LENGTH;</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Create the second image in the file.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;ri2_id = GRcreate (gr_id, IMAGE2_NAME, N2_COMPS, data_type,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;interlace_mode, dims_sizes);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Fill the second image data buffer with values.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;for (i = 0; i &lt; Y2_LENGTH; i++)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;{</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;for (j = 0; j &lt; X2_LENGTH; j++)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;{</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;image2_buf[i][j][0] = ‘A’; &#160;&#160;&#160;&#160;/* first component */ </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;image2_buf[i][j][1] = ‘B’; &#160;&#160;&#160;&#160;/* second component */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;image2_buf[i][j][2] = ‘C’; &#160;&#160;&#160;&#160;/* third component */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;}</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;}</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Define the size of the data to be written, i.e., start from the origin</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* and go as long as the length of each dimension.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;for (i = 0; i &lt; 2; i++) {</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;start2[i] = 0;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;edges2[i] = dims_sizes[i];</p>
+ <p class="FM_ExampleCode"> &#160;&#160;}</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Write the data in the buffer into the second image array.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status = GRwriteimage (ri2_id, start2, NULL, edges2, (VOIDP)image2_buf);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Terminate access to the raster images and to the GR interface, and</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* close the HDF file.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status = GRendaccess (ri1_id);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status = GRendaccess (ri2_id);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status = GRend (gr_id);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status = Hclose (file_id);</p>
+ <p class="FM_ExampleCode">}</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExamplePage"><a name="XREF_32877_modify_image_f"></a>modify_image.f</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;program modify_image</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;implicit none</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Parameter declaration</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*19 FILE_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*13 IMAGE1_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;&#160;&#160;X1_LENGTH</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;&#160;&#160;Y1_LENGTH</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;&#160;&#160;N1_COMPS</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*13 IMAGE2_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;&#160;&#160;X2_LENGTH</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;&#160;&#160;Y2_LENGTH</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;&#160;&#160;N2_COMPS</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (FILE_NAME &#160;&#160;= ‘General_RImages.hdf’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;IMAGE1_NAME = ‘Image Array 1’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;IMAGE2_NAME = ‘Image Array 2’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;X1_LENGTH &#160;&#160;= 5,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Y1_LENGTH &#160;&#160;= 2,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;N1_COMPS &#160;&#160;&#160;= 2,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;X2_LENGTH &#160;&#160;= 6,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Y2_LENGTH &#160;&#160;= 4,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;N2_COMPS &#160;&#160;&#160;= 3)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer DFACC_WRITE, DFNT_INT16, DFNT_CHAR8,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;MFGR_INTERLACE_PIXEL</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (DFACC_WRITE &#160;= 2,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;DFNT_CHAR8 &#160;&#160;= 4,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;DFNT_INT16 &#160;&#160;= 22,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;MFGR_INTERLACE_PIXEL = 0)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Function declaration</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer hopen, hclose</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;integer mgstart, mgselct, mgcreat, mgwrimg, mgendac, mgend </p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C**** Variable declaration *******************************************</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer status</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer file_id</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer gr_id, ri1_id, ri2_id, data_type, interlace_mode</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer start1(2), stride1(2), edges1(2)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer start2(2), stride2(2), edges2(2), dim_sizes(2)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer i, j, k</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;integer*2 &#160;image1_buf(N1_COMPS, X1_LENGTH, Y1_LENGTH) </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character &#160;image2_buf(N2_COMPS, X2_LENGTH, Y2_LENGTH)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C**** End of variable declaration ************************************</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Open the HDF file for writing.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;file_id = hopen(FILE_NAME, DFACC_WRITE, 0)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Initialize the GR interface.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;gr_id = mgstart(file_id)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Select the first raster image in the file.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;ri1_id = mgselct(gr_id, 0)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Fill the buffer with values.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;do 20 i = 1, Y1_LENGTH</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;do 10 j = 1, X1_LENGTH</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;image1_buf(1,j,i) = 0 </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;image1_buf(2,j,i) = 0 </p>
+ <p class="FM_ExampleCode">10 &#160;&#160;&#160;&#160;&#160;&#160;continue</p>
+ <p class="FM_ExampleCode">20 &#160;&#160;&#160;continue</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Define the part of the data in the first image that will be overwritten</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;with the new values from image1_buf.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;start1(1) = 0</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;start1(2) = 0</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;edges1(1) = X1_LENGTH</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;edges1(2) = Y1_LENGTH</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;stride1(1) = 1</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;stride1(2) = 1</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Write the data in the buffer into the image array.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = mgwrimg(ri1_id, start1, stride1, edges1, image1_buf)</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Set the number type, interlace mode, and dimensions of the second image. &#160;</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;data_type = DFNT_CHAR8</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;interlace_mode = MFGR_INTERLACE_PIXEL</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;dim_sizes(1) = X2_LENGTH</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;dim_sizes(2) = Y2_LENGTH</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Create the second image in the file.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;ri2_id = mgcreat(gr_id, IMAGE2_NAME, N2_COMPS, data_type,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;interlace_mode, dim_sizes)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Fill the image data buffer with values. </p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;do 60 i = 1, Y2_LENGTH </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;do 50 j = 1, X2_LENGTH</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;do 40 k = 1, N2_COMPS </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;image2_buf(k,j,i) = char(65 + k - 1) </p>
+ <p class="FM_ExampleCode">40 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;continue</p>
+ <p class="FM_ExampleCode">50 &#160;&#160;&#160;&#160;&#160;&#160;continue</p>
+ <p class="FM_ExampleCode">60 &#160;&#160;&#160;continue</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Define the size of the data to be written, i.e., start from the origin</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;and go as long as the length of each dimension.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;start2(1) = 0</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;start2(2) = 0</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;edges2(1) = &#160;dim_sizes(1)</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;edges2(2) = &#160;dim_sizes(2) </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;stride2(1) = 1</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;stride2(2) = 1</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Write the data in the buffer into the image array.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = mgwrimg(ri2_id, start2, stride2, edges2, image2_buf)</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Terminate access to the raster images and to the GR interface,</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;and close the HDF file.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = mgendac(ri1_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = mgendac(ri2_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = mgend(gr_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = hclose(file_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;end</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExamplePage">read_image.c</p>
+ <p class="FM_ExampleCode">#include “hdf.h”</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">#define &#160;FILE_NAME &#160;&#160;&#160;&#160;&#160;&#160;“General_RImages.hdf”</p>
+ <p class="FM_ExampleCode">#define &#160;N_COMPS &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;2</p>
+ <p class="FM_ExampleCode">#define &#160;X_LENGTH &#160;&#160;&#160;&#160;&#160;&#160;&#160;10 &#160;&#160;/* number of columns of the entire image */</p>
+ <p class="FM_ExampleCode">#define &#160;Y_LENGTH &#160;&#160;&#160;&#160;&#160;&#160;&#160;5 &#160;&#160;&#160;/* number of rows of the entire image */</p>
+ <p class="FM_ExampleCode">#define &#160;PART_COLS &#160;&#160;&#160;&#160;&#160;&#160;2 &#160;&#160;&#160;/* number of columns read for partial image */</p>
+ <p class="FM_ExampleCode">#define &#160;PART_ROWS &#160;&#160;&#160;&#160;&#160;&#160;3 &#160;&#160;&#160;/* number of rows read for partial image */</p>
+ <p class="FM_ExampleCode">#define &#160;SKIP_COLS &#160;&#160;&#160;&#160;&#160;&#160;5 &#160;&#160;&#160;/* number of columns read for skipped image */</p>
+ <p class="FM_ExampleCode">#define &#160;SKIP_ROWS &#160;&#160;&#160;&#160;&#160;&#160;3 &#160;&#160;&#160;/* number of rows read for skipped image */</p>
+ <p class="FM_ExampleCode">#define &#160;COLS_PART_START 3 &#160;&#160;&#160;/* starting column to read partial image */</p>
+ <p class="FM_ExampleCode">#define &#160;ROWS_PART_START 1 &#160;&#160;&#160;/* starting row to read partial image */</p>
+ <p class="FM_ExampleCode">#define &#160;COLS_SKIP_START 1 &#160;&#160;&#160;/* starting column to read skipped image */</p>
+ <p class="FM_ExampleCode">#define &#160;ROWS_SKIP_START 0 &#160;&#160;&#160;/* starting row to read skipped image */</p>
+ <p class="FM_ExampleCode">#define &#160;N_STRIDES &#160;&#160;&#160;&#160;&#160;&#160;2 &#160;&#160;&#160;/* number of elements to skip on each dim. */</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">main( )</p>
+ <p class="FM_ExampleCode">{</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/************************* Variable declaration **************************/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;intn &#160;status; &#160;&#160;&#160;&#160;&#160;&#160;&#160;/* status for functions returning an intn */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;int32 index;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;int32 file_id, gr_id, ri_id,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;start[2], &#160;&#160;&#160;&#160;&#160;/* start position to write for each dimension */</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;edges[2], &#160;&#160;&#160;&#160;&#160;/* number of elements to bewritten along </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;each dimension */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;stride[2], &#160;&#160;&#160;&#160;/* number of elements to skip on each dimension */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;dim_sizes[2]; &#160;/* dimension sizes of the image array */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;int16 entire_image[Y_LENGTH][X_LENGTH][N_COMPS],</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;partial_image[PART_ROWS][PART_COLS][N_COMPS],</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;skipped_image[SKIP_ROWS][SKIP_COLS][N_COMPS];</p>
+ <p class="FM_ExampleCode"> &#160;&#160;int32 i, j;</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/********************** End of variable declaration **********************/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Open the HDF file for reading.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;file_id = Hopen (FILE_NAME, DFACC_READ, 0);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Initialize the GR interface.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;gr_id = GRstart (file_id);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Select the first raster image in the file.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;ri_id = GRselect (gr_id, 0);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Define the size of the data to be read, i.e., start from the origin </p>
+ <p class="FM_ExampleCode"> &#160;&#160;* and go as long as the length of each dimension.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;start[0] = start[1] = 0;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;edges[0] = X_LENGTH;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;edges[1] = Y_LENGTH;</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Read the data from the raster image array.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status = GRreadimage (ri_id, start, NULL, edges, (VOIDP)entire_image);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Display only the first component of the image since the two components </p>
+ <p class="FM_ExampleCode"> &#160;&#160;* have the same data in this example.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode">   printf (“First component of the entire image:\n”);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;for (i = 0; i &lt; Y_LENGTH; i++)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;{</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;for (j = 0; j &lt; X_LENGTH; j++)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;printf (“%d “, entire_image[i][j][0]);</p>
+ <p class="FM_ExampleCode">      printf (“\n”);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;}</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Define the size of the data to be read.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;start[0] = COLS_PART_START;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;start[1] = ROWS_PART_START;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;edges[0] = PART_COLS;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;edges[1] = PART_ROWS;</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Read a subset of the raster image array.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status = GRreadimage (ri_id, start, NULL, edges, (VOIDP)partial_image);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Display the first component of the read sample.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode">   printf (“\nThree rows &amp; two cols at 2nd row and 4th column”);</p>
+ <p class="FM_ExampleCode">   printf (“ of the first component:\n”);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;for (i = 0; i &lt; PART_ROWS; i++)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;{</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;for (j = 0; j &lt; PART_COLS; j++)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;printf (“%d “, partial_image[i][j][0]);</p>
+ <p class="FM_ExampleCode">      printf (“\n”);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;}</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Define the size and the pattern to read the data.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;start[0] = COLS_SKIP_START;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;start[1] = ROWS_SKIP_START;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;edges[0] = SKIP_COLS;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;edges[1] = SKIP_ROWS;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;stride[0] = stride[1] = N_STRIDES;</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Read all the odd rows and even columns of the image.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status = GRreadimage (ri_id, start, stride, edges, (VOIDP)skipped_image);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Display the first component of the read sample.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode">   printf (“\nAll odd rows and even columns of the first component:\n”);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;for (i = 0; i &lt; SKIP_ROWS; i++)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;{</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;for (j = 0; j &lt; SKIP_COLS; j++)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;printf (“%d “, skipped_image[i][j][0]);</p>
+ <p class="FM_ExampleCode">      printf (“\n”);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;}</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Terminate access to the raster image and to the GR interface, and</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* close the HDF file.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status = GRendaccess (ri_id);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status = GRend (gr_id);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status = Hclose (file_id);</p>
+ <p class="FM_ExampleCode">}</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExamplePage"><a name="XREF_10923_read_image_f"></a>read_image.f</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;program read_raster_image</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;implicit none</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Parameter declaration</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*19 FILE_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;&#160;&#160;X_LENGTH</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;&#160;&#160;Y_LENGTH</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;&#160;&#160;N_COMPS</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (FILE_NAME &#160;= ‘General_RImages.hdf’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;X_LENGTH &#160;&#160;= 10,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Y_LENGTH &#160;&#160;= 5,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;N_COMPS &#160;&#160;&#160;= 2)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer PART_COLS, PART_ROWS, SKIP_COLS, SKIP_ROWS</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer COLS_PART_START, ROWS_PART_START</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer COLS_SKIP_START, ROWS_SKIP_START</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer N_STRIDES</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (PART_COLS = 3, PART_ROWS = 2,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;SKIP_COLS = 3, SKIP_ROWS = 5,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;COLS_PART_START = 1, ROWS_PART_START = 3,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;COLS_SKIP_START = 0, ROWS_SKIP_START = 1,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;N_STRIDES = 2)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer DFACC_READ</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (DFACC_READ = 1)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Function declaration</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer hopen, hclose</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;integer mgstart, mgselct, mgrdimg, mgendac, mgend </p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C**** Variable declaration *******************************************</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer status</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer file_id</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer gr_id, ri_id</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer start(2), stride(2), edges(2)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer i, j</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;integer*2 &#160;entire_image(N_COMPS, X_LENGTH, Y_LENGTH) </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;integer*2 &#160;partial_image(N_COMPS, PART_ROWS, PART_COLS) </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;integer*2 &#160;skipped_image(N_COMPS, SKIP_ROWS, SKIP_COLS) </p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C**** End of variable declaration ************************************</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Open the HDF file for reading.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;file_id = hopen(FILE_NAME, DFACC_READ, 0)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Initialize the GR interface.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;gr_id = mgstart(file_id)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Select the first raster image in the file.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;ri_id = mgselct(gr_id, 0)</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Define the size of the data to be read, i.e., start from the origin</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;and go as long as the length of each dimension.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;start(1) = 0</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;start(2) = 0</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;edges(1) = X_LENGTH</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;edges(2) = Y_LENGTH</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;stride(1) = 1</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;stride(2) = 1</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Read the data from the raster image array. </p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = mgrdimg(ri_id, start, stride, edges, entire_image)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Display only the first component of the image since the two components</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;have the same data in this example.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;write(*,*) ‘First component of the entire image’</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;write(*,*)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;do 10 i = 1, X_LENGTH</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;write(*,1000) (entire_image(1,i,j), j = 1, Y_LENGTH)</p>
+ <p class="FM_ExampleCode">10 &#160;&#160;&#160;continue</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;write(*,*)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Define the size of the data to be read.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;start(1) = ROWS_PART_START</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;start(2) = COLS_PART_START </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;edges(1) = PART_ROWS </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;edges(2) = PART_COLS </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;stride(1) = 1</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;stride(2) = 1</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Read a subset of the raster image array. </p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = mgrdimg(ri_id, start, stride, edges, partial_image)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Display only the first component of the read sample. </p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;write(*,*)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;‘Two rows and three columns at 4th row and 2nd column’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;‘ of the first component’</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;write(*,*)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;do 20 i = 1, PART_ROWS</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;write(*,1000) (partial_image(1,i,j), j = 1, PART_COLS)</p>
+ <p class="FM_ExampleCode">20 &#160;&#160;&#160;continue</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;write(*,*)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Define the size and the pattern to read the data.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;start(1) = ROWS_SKIP_START</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;start(2) = COLS_SKIP_START </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;edges(1) = SKIP_ROWS </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;edges(2) = SKIP_COLS </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;stride(1) = N_STRIDES </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;stride(2) = N_STRIDES </p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Read all the odd rows and even columns of the image.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = mgrdimg(ri_id, start, stride, edges, skipped_image)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Display only the first component of the read sample. </p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;write(*,*) ‘All even rows and odd columns of the first component’</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;write(*,*)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;do 30 i = 1, SKIP_ROWS</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;write(*,1000) (skipped_image(1,i,j), j = 1, SKIP_COLS)</p>
+ <p class="FM_ExampleCode">30 &#160;&#160;&#160;continue</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;write(*,*)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Terminate access to the raster image and to the GR interface, </p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;and close the HDF file.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = mgendac(ri_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = mgend(gr_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = hclose(file_id)</p>
+ <p class="FM_ExampleCode">1000 &#160;format(1x, 5(I4))</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;end</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExamplePage">image_info.c</p>
+ <p class="FM_ExampleCode">#include “hdf.h”</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">#define &#160;FILE_NAME &#160;&#160;&#160;“General_RImages.hdf”</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">main( ) </p>
+ <p class="FM_ExampleCode">{</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/************************* Variable declaration **************************/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;intn &#160;status; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* status for functions returning an intn */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;int32 file_id, gr_id, ri_id,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;n_rimages, &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* number of raster images in the file */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;n_file_attrs, &#160;&#160;&#160;&#160;&#160;/* number of file attributes */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ri_index, &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* index of a image */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;dim_sizes[2], &#160;&#160;&#160;&#160;&#160;/* dimensions of an image */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;n_comps, &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* number of components an image contains */</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;interlace_mode, &#160;&#160;&#160;/* interlace mode of an image */ </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;data_type, &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* number type of an image */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;n_attrs; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* number of attributes belong to an image */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;char &#160;name[MAX_GR_NAME], /* name of an image */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;*type_string, &#160;&#160;&#160;&#160;&#160;&#160;/* mapped text of a number type */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;*interlace_string; &#160;/* mapped text of an interlace mode */</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/********************** End of variable declaration **********************/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Open the file for reading.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;file_id = Hopen (FILE_NAME, DFACC_READ, 0);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Initialize the GR interface.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;gr_id = GRstart (file_id);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Determine the contents of the file.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status = GRfileinfo (gr_id, &amp;n_rimages, &amp;n_file_attrs);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* For each image in the file, get and display the image information.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode">   printf (“RI#    Name       Components  Type         Interlace     \</p>
+ <p class="FM_ExampleCode">   Dimensions   Attributes\n\n”);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;for (ri_index = 0; ri_index &lt; n_rimages; ri_index++)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;{</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;ri_id = GRselect (gr_id, ri_index);</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;status = GRgetiminfo (ri_id, name, &amp;n_comps, &amp;data_type, </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&amp;interlace_mode, dim_sizes, &amp;n_attrs);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;/*</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;* Map the number type and interlace mode into text strings for output </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;* readability. &#160;Note that, in this example, only two possible types </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;* are considered because of the simplicity of the example. &#160;For real </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;* problems, all possible types should be checked and, if reading the</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;* data is desired, the size of the type must be determined based on the</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;* machine where the program resides.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;if (data_type == DFNT_CHAR8)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;type_string = “Char8”;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;else if (data_type == DFNT_INT16)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;type_string = “Int16”;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;else</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;type_string = “Unknown”;</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;switch (interlace_mode)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;{</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;case MFGR_INTERLACE_PIXEL:</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;interlace_string = “MFGR_INTERLACE_PIXEL”;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;break;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;case MFGR_INTERLACE_LINE:</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;interlace_string = “MFGR_INTERLACE_LINE”;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;break;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;case MFGR_INTERLACE_COMPONENT:</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;interlace_string = “MFGR_INTERLACE_COMPONENT”;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;break;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;default:</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;interlace_string = “Unknown”;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;break;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;} /* switch */</p>
+ <p class="FM_ExampleCode">&#160;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;* Display the image information for the current raster image.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;*/</p>
+ <p class="FM_ExampleCode">          printf (“%d  %s       %d      %s   %s     %2d,%2d         %d\n”, </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ri_index, name, n_comps, type_string, interlace_string,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;dim_sizes[0], dim_sizes[1], n_attrs);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;* Terminate access to the current raster image.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = GRendaccess (ri_id);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;}</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Terminate access to the GR interface and close the HDF file.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status = GRend (gr_id);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status = Hclose (file_id);</p>
+ <p class="FM_ExampleCode">}</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExamplePage"><a name="XREF_39905_image_info_f"></a>image_info.f</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;program image_info</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;implicit none</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Parameter declaration</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*19 FILE_NAME</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (FILE_NAME = ‘General_RImages.hdf’)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer DFACC_READ</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (DFACC_READ = 1)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Function declaration</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer hopen, hclose</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;integer mgstart, mgselct, mgfinfo, mggiinf, mgendac, mgend </p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C**** Variable declaration *******************************************</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer status</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer file_id, gr_id, ri_id</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer n_rimages, n_file_attrs, ri_index</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer n_comps, interlace_mode, n_attrs, data_type</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer dim_sizes(2)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*10 type_string</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*24 interlace_string</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*64 name</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C**** End of variable declaration ************************************</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Open the HDF file for reading.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;file_id = hopen(FILE_NAME, DFACC_READ, 0)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Initialize the GR interface.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;gr_id = mgstart(file_id)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Determine the contents of the file.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = mgfinfo(gr_id, n_rimages, n_file_attrs)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;For each image in the file, get and display image information.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;do 100 ri_index = 0, n_rimages-1</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ri_id = mgselct(gr_id, ri_index)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;status = mggiinf(ri_id, name, n_comps, data_type,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;interlace_mode, dim_sizes, n_attrs)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Map the number type and interlace mode into text strings for</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;output readability.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;if(data_type .eq. 4) then</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;type_string = ‘DFNT_CHAR8’</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;else if(data_type .eq. 22) then</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;type_string = ‘DFNT_INT16’</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;else</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;type_string = ‘Unknown’</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;endif</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;if (interlace_mode .eq. 0) then</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;interlace_string = ‘MFGR_INTERLACE_PIXEL’</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;else if(interlace_mode .eq. 1) then</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;interlace_string = ‘MFGR_INTERLACE_LINE’</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;else if(interlace_mode .eq. 2) then</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;interlace_string = ‘MFGR_INTERLACE_COMPONENT’</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;else</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;interlace_string = ‘Unknown’</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;endif</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Display the image information for the current image.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;write(*,*) ‘Image index: ‘, ri_index</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;write(*,*) ‘Image name: ‘, name </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;write(*,*) ‘Number of components: ‘, n_comps</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;write(*,*) ‘Number type: ‘, type_string </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;write(*,*) ‘Interlace mode: ‘, interlace_string</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;write(*,*) ‘Dimnesions: ‘, dim_sizes(1), dim_sizes(2)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;write(*,*) ‘Number of image attributes: ‘, n_attrs</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;write(*,*) </p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Terminate access to the current raster image.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = mgendac(ri_id)</p>
+ <p class="FM_ExampleCode">100 &#160;&#160;continue</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Terminate access to the GR interface and close the HDF file.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = mgend(gr_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = hclose(file_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;end</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExamplePage">set_attribute.c</p>
+ <p class="FM_ExampleCode">#include “hdf.h”</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">#define &#160;FILE_NAME &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;“General_RImages.hdf”</p>
+ <p class="FM_ExampleCode">#define &#160;IMAGE_NAME &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;“Image Array 2”</p>
+ <p class="FM_ExampleCode">#define &#160;F_ATT1_NAME &#160;&#160;&#160;&#160;&#160;&#160;&#160;“File Attribute 1”</p>
+ <p class="FM_ExampleCode">#define &#160;F_ATT2_NAME &#160;&#160;&#160;&#160;&#160;&#160;&#160;“File Attribute 2”</p>
+ <p class="FM_ExampleCode">#define &#160;RI_ATT1_NAME &#160;&#160;&#160;&#160;&#160;&#160;“Image Attribute 1”</p>
+ <p class="FM_ExampleCode">#define &#160;RI_ATT2_NAME &#160;&#160;&#160;&#160;&#160;&#160;“Image Attribute 2”</p>
+ <p class="FM_ExampleCode">#define &#160;F_ATT1_VAL &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;“Contents of First FILE Attribute”</p>
+ <p class="FM_ExampleCode">#define &#160;F_ATT2_VAL &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;“Contents of Second FILE Attribute”</p>
+ <p class="FM_ExampleCode">#define &#160;F_ATT1_N_VALUES &#160;&#160;&#160;32</p>
+ <p class="FM_ExampleCode">#define &#160;F_ATT2_N_VALUES &#160;&#160;&#160;33</p>
+ <p class="FM_ExampleCode">#define &#160;RI_ATT1_VAL &#160;&#160;&#160;&#160;&#160;&#160;&#160;“Contents of IMAGE’s First Attribute”</p>
+ <p class="FM_ExampleCode">#define &#160;RI_ATT1_N_VALUES &#160;&#160;35</p>
+ <p class="FM_ExampleCode">#define &#160;RI_ATT2_N_VALUES &#160;&#160;6</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">main( ) </p>
+ <p class="FM_ExampleCode">{</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/************************* Variable declaration **************************/</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;intn &#160;status; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* status for functions returning an intn */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;int32 gr_id, ri_id, file_id,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ri_index;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;int16 ri_attr_2[RI_ATT2_N_VALUES] = {1, 2, 3, 4, 5, 6};</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/********************** End of variable declaration **********************/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Open the HDF file.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;file_id = Hopen (FILE_NAME, DFACC_WRITE, 0);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Initialize the GR interface.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;gr_id = GRstart (file_id);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Set two file attributes to the file with names, data types, numbers of </p>
+ <p class="FM_ExampleCode"> &#160;&#160;* values, and values of the attributes specified.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;status = GRsetattr (gr_id, F_ATT1_NAME, DFNT_CHAR8, F_ATT1_N_VALUES, </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(VOIDP)F_ATT1_VAL); </p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;status = GRsetattr (gr_id, F_ATT2_NAME, DFNT_CHAR8, F_ATT2_N_VALUES, </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(VOIDP)F_ATT2_VAL);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Obtain the index of the image named IMAGE_NAME.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;ri_index = GRnametoindex (gr_id, IMAGE_NAME);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Obtain the identifier of this image.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;ri_id = GRselect (gr_id, ri_index);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Set two attributes to the image with names, data types, numbers of </p>
+ <p class="FM_ExampleCode"> &#160;&#160;* values, and values of the attributes specified.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;status = GRsetattr (ri_id, RI_ATT1_NAME, DFNT_CHAR8, RI_ATT1_N_VALUES, </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(VOIDP)RI_ATT1_VAL);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;status = GRsetattr (ri_id, RI_ATT2_NAME, DFNT_INT16, RI_ATT2_N_VALUES, </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(VOIDP)ri_attr_2);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Terminate access to the image and to the GR interface, and close the</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* HDF file.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status = GRendaccess (ri_id);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status = GRend (gr_id);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status = Hclose (file_id);</p>
+ <p class="FM_ExampleCode">}</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExamplePage"><a name="XREF_28310_set_attribute_f"></a>set_attribute.f</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;program &#160;set_attribute</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;implicit none</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Parameter declaration</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*19 FILE_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*13 IMAGE_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*16 F_ATT1_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*16 F_ATT2_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*17 RI_ATT1_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*17 RI_ATT2_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*32 F_ATT1_VAL</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*33 F_ATT2_VAL</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;&#160;&#160;F_ATT1_N_VALUES</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;&#160;&#160;F_ATT2_N_VALUES</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*35 RI_ATT1_VAL</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;&#160;&#160;RI_ATT1_N_VALUES</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;&#160;&#160;RI_ATT2_N_VALUES</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (FILE_NAME &#160;&#160;&#160;= ‘General_RImages.hdf’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;IMAGE_NAME &#160;&#160;= ‘Image Array 2’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;F_ATT1_NAME &#160;= ‘File Attribute 1’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;F_ATT2_NAME &#160;= ‘File Attribute 2’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;RI_ATT1_NAME = ‘Image Attribute 1’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;RI_ATT2_NAME = ‘Image Attribute 2’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;F_ATT1_VAL &#160;&#160;= ‘Contents of First FILE Attribute’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;F_ATT2_VAL &#160;&#160;= ‘Contents of Second FILE Attribute’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;F_ATT1_N_VALUES = 32,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;F_ATT2_N_VALUES = 33,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;RI_ATT1_VAL = ‘Contents of IMAGE’’s First Attribute’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;RI_ATT1_N_VALUES = 35,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;RI_ATT2_N_VALUES = 6)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer DFACC_WRITE, DFNT_INT16, DFNT_CHAR8</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (DFACC_WRITE &#160;= 2,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;DFNT_CHAR8 &#160;&#160;= 4,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;DFNT_INT16 &#160;&#160;= 22)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Function declaration</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer hopen, hclose</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer mgstart, mgscatt, mgsnatt , mgn2ndx,</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;mgselct, mgendac, mgend </p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C**** Variable declaration *******************************************</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;status</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;file_id, gr_id, ri_id, ri_index</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer*2 ri_attr_2(RI_ATT2_N_VALUES)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;i</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;do 10 i = 1, RI_ATT2_N_VALUES</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ri_attr_2(i) = i</p>
+ <p class="FM_ExampleCode">10 &#160;&#160;&#160;continue </p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C**** End of variable declaration ************************************</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Open the HDF file.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;file_id = hopen(FILE_NAME, DFACC_WRITE, 0)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Initialize the GR interface.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;gr_id = mgstart(file_id)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Set two file attributes to the file with names, data type, numbers of</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;values, and values of attributes specified.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;status = mgscatt(gr_id, F_ATT1_NAME, DFNT_CHAR8, </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;F_ATT1_N_VALUES, F_ATT1_VAL)</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;status = mgscatt(gr_id, F_ATT2_NAME, DFNT_CHAR8, </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;F_ATT2_N_VALUES, F_ATT2_VAL)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Obtain the index of the image named IMAGE_NAMR.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;ri_index = mgn2ndx(gr_id, IMAGE_NAME)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Obtain the identifier of this image. </p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;ri_id = mgselct(gr_id, ri_index)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Set two attributes of the image with names, data types, number of</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;values, and values of the attributes specified. </p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;status = mgscatt(ri_id, RI_ATT1_NAME, DFNT_CHAR8, </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;RI_ATT1_N_VALUES, RI_ATT1_VAL) </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;status = mgsnatt(ri_id, RI_ATT2_NAME, DFNT_INT16, </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;RI_ATT2_N_VALUES, ri_attr_2)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Terminate access to the image and to the GR interface,</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;and close the HDF file.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = mgendac(ri_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = mgend(gr_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = hclose(file_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;end</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExamplePage">get_attribute.c</p>
+ <p class="FM_ExampleCode">#include “hdf.h”</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">#define &#160;FILE_NAME &#160;&#160;&#160;&#160;&#160;&#160;“General_RImages.hdf”</p>
+ <p class="FM_ExampleCode">#define &#160;RI_ATTR_NAME &#160;&#160;&#160;“Image Attribute 2”</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">main( ) </p>
+ <p class="FM_ExampleCode">{</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/************************* Variable declaration **************************/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;intn &#160;&#160;status; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* status for functions returning an intn */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;int32 &#160;gr_id, ri_id, file_id,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;f_att_index, &#160;&#160;&#160;&#160;/* index of file attributes */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ri_att_index, &#160;&#160;&#160;/* index of raster image attributes */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;data_type, &#160;&#160;&#160;&#160;&#160;&#160;/* image data type */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;n_values, &#160;&#160;&#160;&#160;&#160;&#160;&#160;/* number of values in an attribute */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;value_index, &#160;&#160;&#160;&#160;/* index of values in an attribute */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;n_rimages, &#160;&#160;&#160;&#160;&#160;&#160;/* number of raster images in the file */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;n_file_attrs; &#160;&#160;&#160;/* number of file attributes */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;char &#160;&#160;attr_name[MAX_GR_NAME]; &#160;/* buffer to hold the attribute name &#160;&#160;&#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;VOIDP &#160;data_buf; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* buffer to hold the attribute values &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;int16 *int_ptr; &#160;&#160;&#160;&#160;&#160;/* int16 pointer to point to a void data buffer &#160;&#160;&#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;char8 *char_ptr; &#160;&#160;&#160;&#160;/* char8 pointer to point to a void data buffer &#160;&#160;&#160;&#160;*/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/********************** End of variable declaration **********************/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Open the HDF file.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;file_id = Hopen (FILE_NAME, DFACC_READ, 0);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Initialize the GR interface.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;gr_id = GRstart (file_id);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Determine the number of attributes in the file.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status = GRfileinfo (gr_id, &amp;n_rimages, &amp;n_file_attrs);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;if (status != FAIL &amp;&amp; n_file_attrs &gt; 0)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;{</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;for (f_att_index = 0; f_att_index &lt; n_file_attrs; f_att_index++)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;{</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;* Get information about the current file attribute.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;*/</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;status = GRattrinfo (gr_id, f_att_index, attr_name, &amp;data_type, </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&amp;n_values);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;* Allocate a buffer to hold the file attribute data. &#160;In this example,</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;* knowledge about the data type is assumed to be available from </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;* the previous example for simplicity. &#160;In reality, the size</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;* of the type must be determined based on the machine where the </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;* program resides.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if (data_type == DFNT_CHAR8)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;data_buf = malloc (n_values * sizeof (char8));</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if (data_buf == NULL)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</p>
+ <p class="FM_ExampleCode">               printf (“Unable to allocate space for attribute data.\n”);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;exit (1);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;else</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</p>
+ <p class="FM_ExampleCode">            printf (“Unable to determine data type to allocate data buffer.\n”);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;exit (1);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;* Read and display the attribute values.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;status = GRgetattr (gr_id, f_att_index, (VOIDP)data_buf);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;char_ptr = (char8 *) data_buf;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;printf (“Attribute %s: “, attr_name);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;for (value_index = 0; value_index &lt; n_values; value_index++)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;printf (“%c”, char_ptr[value_index]);</p>
+ <p class="FM_ExampleCode">         printf (“\n”);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;* Free the space allocated for the data buffer.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;free (data_buf);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;} /* for */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;} /* if */</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Select the second image in the file.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;ri_id = GRselect (gr_id, 1);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Find the image attribute named RI_ATTR_NAME.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;ri_att_index = GRfindattr (ri_id, RI_ATTR_NAME);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Get information about the attribute.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status = GRattrinfo (ri_id, ri_att_index, attr_name, &amp;data_type, &amp;n_values);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Allocate a buffer to hold the file attribute data. &#160;As mentioned above,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* knowledge about the data type is assumed to be available from</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* the previous example for simplicity. &#160;In reality, the size of the </p>
+ <p class="FM_ExampleCode"> &#160;&#160;* type must be determined based on the machine where the program resides.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;if (data_type == DFNT_INT16)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;data_buf = malloc (n_values * sizeof (int16));</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Read and display the attribute values.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status = GRgetattr (ri_id, ri_att_index, (VOIDP)data_buf);</p>
+ <p class="FM_ExampleCode">   printf (“\nAttribute %s: “, RI_ATTR_NAME);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;int_ptr = (int16 *)data_buf;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;for (value_index = 0; value_index &lt; n_values; value_index++)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;printf (“%d “, int_ptr[value_index]);</p>
+ <p class="FM_ExampleCode">   printf (“\n”);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Free the space allocated for the data buffer.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;free (data_buf);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Terminate access to the raster image and to the GR interface, and</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* close the file.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status = GRendaccess (ri_id);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status = GRend (gr_id);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status = Hclose (file_id);</p>
+ <p class="FM_ExampleCode">}</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExamplePage"><a name="XREF_21808_get_attribute_f"></a>get_attribute.f</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;program &#160;get_attribute</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;implicit none</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Parameter declaration</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*19 FILE_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*17 RI_ATTR_NAME</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (FILE_NAME &#160;&#160;&#160;= ‘General_RImages.hdf’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;RI_ATTR_NAME &#160;= ‘Image Attribute 2’)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer DFACC_READ, DFNT_INT16, DFNT_CHAR8</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (DFACC_READ &#160;&#160;= 1,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;DFNT_CHAR8 &#160;&#160;= 4,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;DFNT_INT16 &#160;&#160;= 22)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Function declaration</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer hopen, hclose</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer mgstart, mgfinfo, mgatinf, mggcatt, mggnatt , mgfndat,</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;mgselct, mgendac, mgend </p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C**** Variable declaration *******************************************</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;&#160;&#160;status</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;&#160;&#160;file_id, gr_id, ri_id</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;&#160;&#160;f_att_index, ri_att_index, data_type, n_values </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;&#160;&#160;n_rimages, n_file_attrs </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer*2 &#160;&#160;&#160;int_buf(10)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*17 attr_name</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*80 char_buf</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;&#160;&#160;i</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C**** End of variable declaration ************************************</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Open the HDF file.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;file_id = hopen(FILE_NAME, DFACC_READ, 0)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Initialize the GR interface.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;gr_id = mgstart(file_id)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Determine the number of attributes in the file. </p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = mgfinfo(gr_id, n_rimages, n_file_attrs)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;if ((status .NE. -1) .AND. (n_file_attrs .GT. 0)) then</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;do 10 f_att_index = 0, n_file_attrs-1</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;&#160;&#160;&#160;Get information about the current file attribute.</p>
+ <p class="FM_ExampleCode">C </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;status = mgatinf(gr_id, f_att_index, attr_name, data_type,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;n_values)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;&#160;&#160;&#160;Check whether data type is DFNT_CHAR8 in order to use allocated buffer.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if(data_type .NE. DFNT_CHAR8) then</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;write(*,*) </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;‘Unable to determine data type to use allocated buffer’</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;else</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Read and display the attribute values.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;status = mggcatt(gr_id, f_att_index, char_buf)</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;write(*,*) ‘Attribute ‘, attr_name, ‘ : ‘, </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;char_buf(1:n_values)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;endif</p>
+ <p class="FM_ExampleCode">10 &#160;&#160;&#160;&#160;&#160;&#160;continue</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;endif</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Select the second image in the file.</p>
+ <p class="FM_ExampleCode">C </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;ri_id = mgselct(gr_id, 1) </p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Find the image attribute named RI_ATTR_NAME. </p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;ri_att_index = mgfndat(ri_id, RI_ATTR_NAME)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Get information about the attribute.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = mgatinf(ri_id, ri_att_index, attr_name, data_type,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;n_values)</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;&#160;</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Read and display attribute values.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = mggnatt(ri_id, ri_att_index, int_buf)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;write(*,*) ‘Attributes :’, (int_buf(i), i = 1, n_values)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Terminate access to the image and to the GR interface,</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;and close the HDF file.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = mgendac(ri_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = mgend(gr_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = hclose(file_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;end</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExamplePage">write_palette.c</p>
+ <p class="FM_ExampleCode">#include “hdf.h”</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">#define &#160;FILE_NAME &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;“Image_with_Palette.hdf”</p>
+ <p class="FM_ExampleCode">#define &#160;NEW_IMAGE_NAME &#160;&#160;&#160;“Image with Palette”</p>
+ <p class="FM_ExampleCode">#define &#160;N_COMPS_IMG &#160;&#160;&#160;&#160;&#160;&#160;2 &#160;&#160;&#160;&#160;&#160;&#160;/* number of image components */</p>
+ <p class="FM_ExampleCode">#define &#160;X_LENGTH &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;5</p>
+ <p class="FM_ExampleCode">#define &#160;Y_LENGTH &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;5</p>
+ <p class="FM_ExampleCode">#define &#160;N_ENTRIES &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;256 &#160;&#160;&#160;&#160;/* number of entries in the palette */</p>
+ <p class="FM_ExampleCode">#define &#160;N_COMPS_PAL &#160;&#160;&#160;&#160;&#160;&#160;3 &#160;&#160;&#160;&#160;&#160;&#160;/* number of palette’s components */</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">main( )</p>
+ <p class="FM_ExampleCode">{</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/************************* Variable declaration **************************/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;intn &#160;status, &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* status for functions returning an intn */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;i, j;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;int32 file_id, gr_id, ri_id, pal_id, </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;interlace_mode, </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;start[2], &#160;&#160;&#160;&#160;/* holds where to start to write for each dimension &#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;edges[2], &#160;&#160;&#160;&#160;/* holds how long to write for each dimension */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;dim_sizes[2]; &#160;/* sizes of the two dimensions of the image array &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;uint8 image_buf[Y_LENGTH][X_LENGTH][N_COMPS_IMG]; /* data of first image */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;uint8 palette_buf[N_ENTRIES][N_COMPS_PAL];</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/********************** End of variable declaration **********************/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Open the HDF file.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;file_id = Hopen (FILE_NAME, DFACC_CREATE, 0);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Initialize the GR interface.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;gr_id = GRstart (file_id);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Define the dimensions and interlace mode of the image. </p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;dim_sizes[0] = X_LENGTH;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;dim_sizes[1] = Y_LENGTH;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;interlace_mode = MFGR_INTERLACE_PIXEL;</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Create the image named NEW_IMAGE_NAME.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;ri_id = GRcreate (gr_id, NEW_IMAGE_NAME, N_COMPS_IMG, DFNT_UINT8, </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;interlace_mode, dim_sizes);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Fill the image data buffer with values.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;for (i = 0; i &lt; Y_LENGTH; i++)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;{</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;for (j = 0; j &lt; X_LENGTH; j++)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;{</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;image_buf[i][j][0] = (i + j) + 1;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;image_buf[i][j][1] = (i + j) + 2;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;}</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;}</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Define the size of the data to be written, i.e., start from the origin</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* and go as long as the length of each dimension.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;start[0] = start[1] = 0;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;edges[0] = X_LENGTH;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;edges[1] = Y_LENGTH;</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Write the data in the buffer into the image array.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status = GRwriteimage (ri_id, start, NULL, edges, (VOIDP)image_buf);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Initialize the palette to grayscale. </p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;for (i = 0; i &lt; N_ENTRIES; i++) {</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;palette_buf[i][0] = i;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;palette_buf[i][1] = i;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;palette_buf[i][2] = i;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;}</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Define palette interlace mode.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;interlace_mode = MFGR_INTERLACE_PIXEL;</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Get the identifier of the palette attached to the image NEW_IMAGE_NAME.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;pal_id = GRgetlutid (ri_id, 0);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Write data to the palette.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status = GRwritelut (pal_id, N_COMPS_PAL, DFNT_UINT8, interlace_mode,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;N_ENTRIES, (VOIDP)palette_buf);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Terminate access to the image and to the GR interface, and </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* close the HDF file. </p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status = GRendaccess (ri_id);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status = GRend (gr_id);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status = Hclose (file_id);</p>
+ <p class="FM_ExampleCode">}</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExamplePage"><a name="XREF_17431_write_palette_f"></a>write_palette.f</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;program &#160;write_palette</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;implicit none</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Parameter declaration</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*22 FILE_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*18 NEW_IMAGE_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;&#160;&#160;X_LENGTH</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;&#160;&#160;Y_LENGTH</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;&#160;&#160;N_ENTRIES</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;&#160;&#160;N_COMPS_IMG</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;&#160;&#160;N_COMPS_PAL</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (FILE_NAME &#160;&#160;&#160;&#160;&#160;&#160;= ‘Image_with_Palette.hdf’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;NEW_IMAGE_NAME &#160;= ‘Image with Palette’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;X_LENGTH &#160;&#160;&#160;&#160;&#160;&#160;&#160;= 5,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Y_LENGTH &#160;&#160;&#160;&#160;&#160;&#160;&#160;= 5,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;N_ENTRIES &#160;&#160;&#160;&#160;&#160;&#160;= 256,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;N_COMPS_IMG &#160;&#160;&#160;&#160;= 2,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;N_COMPS_PAL &#160;&#160;&#160;&#160;= 3)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer DFACC_CREATE, DFNT_CHAR8, DFNT_UINT8, MFGR_INTERLACE_PIXEL</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (DFACC_CREATE = 4,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;DFNT_CHAR8 &#160;&#160;= 4,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;DFNT_UINT8 &#160;&#160;= 21,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;MFGR_INTERLACE_PIXEL = 0)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Function declaration</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer hopen, hclose</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;integer mgstart, mgcreat, mgwcimg, mggltid, mgwclut, </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;mgendac, mgend </p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C**** Variable declaration *******************************************</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;file_id, gr_id, ri_id, pal_id</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;interlace_mode</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;start(2), stride(2), edges(2), dim_sizes(2)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;status</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;i, j</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;character &#160;image_buf(N_COMPS_IMG, X_LENGTH, Y_LENGTH) </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character &#160;palette_buf(N_COMPS_PAL, N_ENTRIES)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C**** End of variable declaration ************************************</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Create and open the file.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;file_id = hopen(FILE_NAME, DFACC_CREATE, 0)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Initialize the GR interface.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;gr_id = mgstart(file_id)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Define interlace mode and dimensions of the image. &#160;</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;interlace_mode = MFGR_INTERLACE_PIXEL</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;dim_sizes(1) = X_LENGTH</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;dim_sizes(2) = Y_lENGTH</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Create the raster image array. </p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;ri_id = mgcreat(gr_id, NEW_IMAGE_NAME, N_COMPS_IMG, DFNT_CHAR8,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;interlace_mode, dim_sizes)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Fill the image data buffer with values. </p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;do 20 i = 1, Y_LENGTH</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;do 10 j = 1, X_LENGTH</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;image_buf(1,j,i) = char(i + j - 1 )</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;image_buf(2,j,i) = char(i + j) </p>
+ <p class="FM_ExampleCode">10 &#160;&#160;&#160;&#160;&#160;&#160;continue</p>
+ <p class="FM_ExampleCode">20 &#160;&#160;&#160;continue</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Define the size of the data to be written, i.e., start from the origin</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;and go as long as the length of each dimension.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;start(1) = 0</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;start(2) = 0</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;edges(1) = X_LENGTH</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;edges(2) = Y_LENGTH</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;stride(1) = 1</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;stride(2) = 1</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Write the data in the buffer into the image array.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = mgwcimg(ri_id, start, stride, edges, image_buf)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Initilaize the palette buffer to grayscale.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;do 40 i = 1, N_ENTRIES</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;do 30 j = 1, N_COMPS_PAL</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;palette_buf(j,i) = char(i)</p>
+ <p class="FM_ExampleCode">30 &#160;&#160;&#160;&#160;&#160;&#160;&#160;continue</p>
+ <p class="FM_ExampleCode">40 &#160;&#160;&#160;continue </p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Get the identifier of the palette attached to the image NEW_IMAGE_NAME.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;pal_id = mggltid(ri_id, 0)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Set palette interlace mode.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;interlace_mode = MFGR_INTERLACE_PIXEL</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Write data to the palette.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = mgwclut(pal_id, N_COMPS_PAL, DFNT_UINT8, interlace_mode,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;N_ENTRIES, palette_buf)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Terminate access to the raster image and to the GR interface,</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;and close the HDF file.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = mgendac(ri_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = mgend(gr_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = hclose(file_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;end</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExamplePage">read_palette.c</p>
+ <p class="FM_ExampleCode">#include “hdf.h”</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">#define &#160;FILE_NAME &#160;&#160;&#160;&#160;&#160;“Image_with_Palette.hdf”</p>
+ <p class="FM_ExampleCode">#define &#160;IMAGE_NAME &#160;&#160;&#160;&#160;“Image with Palette”</p>
+ <p class="FM_ExampleCode">#define &#160;N_ENTRIES &#160;&#160;&#160;&#160;&#160;256 &#160;&#160;&#160;&#160;/* number of elements of each color */</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">main( )</p>
+ <p class="FM_ExampleCode">{</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/************************* Variable declaration **************************/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;intn &#160;status, &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* status for functions returning an intn */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;i, j;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;int32 file_id, gr_id, ri_id, pal_id, ri_index;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;int32 data_type, n_comps, n_entries, interlace_mode; </p>
+ <p class="FM_ExampleCode"> &#160;&#160;uint8 palette_data[N_ENTRIES][3]; &#160;&#160;&#160;&#160;&#160;&#160;&#160;/* static because of fixed size */</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/************************* Variable declaration **************************/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Open the file. </p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;file_id = Hopen (FILE_NAME, DFACC_READ, 0);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Initiate the GR interface. </p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;gr_id = GRstart (file_id);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Get the index of the image IMAGR_NAME.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;ri_index = GRnametoindex (gr_id, IMAGE_NAME);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Get image identifier.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;ri_id = GRselect (gr_id, ri_index);</p>
+ <p class="FM_ExampleCode">&#160;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Get the identifier of the palette attached to the image. </p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;pal_id = GRgetlutid (ri_id, ri_index);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Obtain and display information about the palette.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;status = GRgetlutinfo (pal_id, &amp;n_comps, &amp;data_type, &amp;interlace_mode, </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&amp;n_entries);</p>
+ <p class="FM_ExampleCode">   printf (“Palette: %d components; %d entries\n”, n_comps, n_entries); </p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Read the palette data. </p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status = GRreadlut (pal_id, (VOIDP)palette_data);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Display the palette data. &#160;Recall that HDF supports only 256 colors.</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Each color is defined by its 3 components. Therefore, </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* verifying the value of n_entries and n_comps is not necessary and </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* the buffer to hold the palette data can be static. &#160;However, </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* if more values or colors are added to the model, these parameters </p>
+ <p class="FM_ExampleCode"> &#160;&#160;* must be checked to allocate sufficient space when reading a palette.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode">   printf (“  Palette Data: \n”);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;for (i=0; i&lt; n_entries; i++)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;{</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;for (j = 0; j &lt; n_comps; j++)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;printf (“%i “, palette_data[i][j]);</p>
+ <p class="FM_ExampleCode">      printf (“\n”);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;}</p>
+ <p class="FM_ExampleCode">   printf (“\n”);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;/* </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Terminate access to the image and to the GR interface, and </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* close the HDF file. </p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status = GRendaccess (ri_id);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status = GRend (gr_id);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status = Hclose (file_id);</p>
+ <p class="FM_ExampleCode">}</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExamplePage"><a name="XREF_37811_read_palette_f"></a>read_palette.f</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;program &#160;read_palette</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;implicit none</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Parameter declaration</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*22 FILE_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*18 IMAGE_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;&#160;&#160;N_ENTRIES</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;&#160;&#160;N_COMPS_PAL</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (FILE_NAME &#160;&#160;= ‘Image_with_Palette.hdf’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;IMAGE_NAME &#160;= ‘Image with Palette’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;N_COMPS_PAL = 3,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;N_ENTRIES &#160;&#160;= 256)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer DFACC_READ, DFNT_CHAR8, DFNT_UINT8, MFGR_INTERLACE_PIXEL</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (DFACC_READ &#160;= 1,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;DFNT_CHAR8 &#160;= 4,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;DFNT_UINT8 &#160;= 21,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;MFGR_INTERLACE_PIXEL = 0)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Function declaration</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer hopen, hclose</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;integer mgstart, mgn2ndx, mgselct, mggltid, mgglinf, </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;mgrclut, mgendac, mgend </p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C**** Variable declaration *******************************************</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;file_id, gr_id, ri_id, ri_index, pal_id, pal_index</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;interlace_mode</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;data_type, n_comps, n_entries_out</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;status</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer &#160;&#160;&#160;i, j</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character &#160;palette_data(N_COMPS_PAL, N_ENTRIES)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C**** End of variable declaration ************************************</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Open the file.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;file_id = hopen(FILE_NAME, DFACC_READ, 0)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Initialize the GR interface.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;gr_id = mgstart(file_id)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Get the index of the image IMAGE_NAME.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;ri_index = mgn2ndx(gr_id, IMAGE_NAME)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Get the image identifier.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;ri_id = mgselct(gr_id, 0)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Get the identifier of the palette attached to the image.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;pal_index = 0</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;pal_id = mggltid(ri_id, pal_index)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Obtain information about the palette.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = mgglinf(pal_id, n_comps, data_type, interlace_mode,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;n_entries_out)</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;write(*,*) ‘ Palette: ‘, n_comps, ‘ components; &#160;‘, </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;n_entries_out, ‘ entries’</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Read the palette.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = mgrclut(pal_id, palette_data)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Display the palette data.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;write(*,*) “Palette data”</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;do 10 i = 1, n_entries_out</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;write(*,*) (ichar(palette_data(j,i)), j = 1, n_comps)</p>
+ <p class="FM_ExampleCode">10 &#160;&#160;&#160;continue &#160;</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Terminate access to the raster image and to the GR interface,</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;and close the HDF file.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = mgendac(ri_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = mgend(gr_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = hclose(file_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;end</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExamplePage">write_chunks.c</p>
+ <p class="FM_ExampleCode">#include &quot;hdf.h&quot;</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">#define &#160;FILE_NAME &#160;&#160;&#160;&#160;&quot;Image_Chunked.hdf&quot;</p>
+ <p class="FM_ExampleCode">#define &#160;IMAGE_NAME &#160;&#160;&#160;&quot;Image with Chunks&quot;</p>
+ <p class="FM_ExampleCode">#define &#160;X_LENGTH &#160;&#160;&#160;&#160;&#160;10 &#160;&#160;&#160;/* number of rows in the image */</p>
+ <p class="FM_ExampleCode">#define &#160;Y_LENGTH &#160;&#160;&#160;&#160;&#160;6 &#160;&#160;&#160;&#160;/* number of columns in the image */</p>
+ <p class="FM_ExampleCode">#define &#160;NCOMPS &#160;&#160;&#160;&#160;&#160;&#160;&#160;3 &#160;&#160;&#160;&#160;/* number of components in the image */</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">int main( )</p>
+ <p class="FM_ExampleCode">{</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/************************* Variable declaration **************************/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;intn &#160;status; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* status for functions returning an intn */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;int32 file_id, &#160;&#160;&#160;&#160;&#160;&#160;&#160;/* HDF file identifier */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;gr_id, &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* GR interface identifier */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ri_id, &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* raster image identifier */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;dims[2], &#160;&#160;&#160;&#160;&#160;&#160;&#160;/* dimension sizes of the image array */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;origin[2], &#160;&#160;&#160;&#160;&#160;/* origin position to write each chunk */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;interlace_mode; /* interlace mode of the image */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;HDF_CHUNK_DEF chunk_def; &#160;&#160;&#160;&#160;/* Chunk defintion set */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;int32 chunk00[] = {1, 2, 3, 4, 5, 6,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;7, 8, 9, 10, 11, 12,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;13, 14, 15, 16, 17, 18 };</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;int32 chunk01[] = {210, 211, 212, 220, 221, 222,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;230, 231, 232, 240, 241, 242,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;250, 251, 252, 260, 261, 262};</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;int32 chunk14[] = {1010, 1011, 1012, 1020, 1021, 1022,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;1030, 1031, 1032, 1040, 1041, 1042,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;1050, 1051, 1052, 1060, 1061, 1062};</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/********************** End of variable declaration **********************/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Create and open the file.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;file_id = Hopen (FILE_NAME, DFACC_CREATE, 0);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Initialize the GR interface.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;gr_id = GRstart (file_id);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Set dimensions of the image.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;dims[0] = Y_LENGTH;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;dims[1] = X_LENGTH;</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Create the raster image array.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;ri_id = GRcreate (gr_id, IMAGE_NAME, NCOMPS, DFNT_INT32,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;MFGR_INTERLACE_PIXEL, dims);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Define chunked image.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;chunk_def.comp.comp_type = COMP_CODE_DEFLATE;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;chunk_def.comp.cinfo.deflate.level = 6;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;chunk_def.comp.chunk_lengths[0] = 3;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;chunk_def.comp.chunk_lengths[1] = 2;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status = GRsetchunk (ri_id, chunk_def, HDF_CHUNK | HDF_COMP);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Write first chunk(0,0).</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;origin[0] = 0;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;origin[1] = 0;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status = GRwritechunk (ri_id, origin, (VOIDP)chunk00);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Write second chunk(0,1).</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;origin[0] = 0;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;origin[1] = 1;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status = GRwritechunk (ri_id, origin, (VOIDP)chunk01);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Write third chunk(1,4).</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;origin[0] = 1;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;origin[1] = 4;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status = GRwritechunk (ri_id, origin, (VOIDP)chunk14);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Terminate access to the raster image and to the GR interface and,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* close the HDF file.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status = GRendaccess (ri_id);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status = GRend (gr_id);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status = Hclose (file_id);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;return 0;</p>
+ <p class="FM_ExampleCode">}</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+</div>
+				
+				<div class="content_top_link">
+					<a>&#160;</a> 
+				</div>
+				<div class="mobile_browseholder">
+					<div class="brsBack">
+						<a id="browseSeqBack1" class="wBSBackButton" href="../Example_Vd/Example_Vd.htm"><img alt="" src="../../template/Theme1_Standard/BSBack.png" class="wBSBackButton normal" id="xmlEditorBSBackButtonMobile" border="0" style="width:100%; max-width:48px" /><img alt="" src="../../template/Theme1_Standard/BSBack_hover.png" class="wBSBackButton hover" id="xmlEditorBSBackButtonMobileHover" border="0" style="width:100%; max-width:56px" /></a> 
+						 
+					</div>
+					<div class="brsNext">
+						<a id="browseSeqNext1" class="wBSNextButton" href="../Example_Vg/Example_Vg.htm"><img alt="" src="../../template/Theme1_Standard/BSNext.png" class="wBSNextButton normal" id="xmlEditorBSNextButtonMobile" border="0" style="width:100%; max-width:48px" /><img alt="" src="../../template/Theme1_Standard/BSNext_hover.png" class="wBSNextButton hover" id="xmlEditorBSNextButtonMobileHover" border="0" style="width:100%; max-width:48px" /></a> 
+						 
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="buttonbar">
+		<div class="buttonbarholder topic_page_holder">
+			<div class="bar_toc topic_page" id="xmlEditorButtonBarTOC" 
+				 title="Table of Contents">
+				<a href="../../table_of_contents.htm">&#160;</a> 
+			</div>
+			<div class="bar_index topic_page" id="xmlEditorButtonBarIDX" 
+				 title="Index">
+				<a href="../../index1.htm">&#160;</a> 
+			</div>
+			<div class="bar_glossary topic_page" id="xmlEditorButtonBarGLO" 
+				 title="Glossary">
+				<a href="../../glossary.htm">&#160;</a> 
+			</div>
+			<div class="bar_search topic_page">
+				<a href="../../searchresults.htm" title="Search">&#160;</a> 
+			</div>
+		</div>
+	</div>
+</div>
+<div id="localisation">
+	<p id="localisation_toc"><span>Table of Contents</span></p>
+	<p id="localisation_idx"><span>Index</span></p>
+	<p id="localisation_glo"><span>Glossary</span></p>
+	<p id="localisation_fts"><span>-Search-</span></p>
+	<p id="localisation_back"><span>Back</span></p>
+</div>
+<script type="text/javascript" src="../../template/Theme1_Standard/jquery.js"></script>
+<script type="text/javascript" src="../../template/Theme1_Standard/jqueryui-custom.js"></script>
+<script type="text/javascript" src="../../template/Theme1_Standard/overthrow.min.js"></script>
+<script type="text/javascript" src="../../template/Theme1_Standard/overthrow.sidescroller.min.js"></script>
+<script type="text/javascript" src="../../template/Theme1_Standard/layout.js"></script>
+<script type="text/javascript">//<![CDATA[
+$(function(){
+	addRhLoadCompleteEvent(setTopic);
+});
+//]]></script>
+</body>
+</html>

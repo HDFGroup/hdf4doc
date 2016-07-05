@@ -1,0 +1,1472 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="OriginalFile" content="C:\hdf\H4\releases\4.2.12\Doc\hdf4doc\UsrGuide\src\Example_Vg.fm" />
+ <meta name="Originator" content="ImportMif" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=100%, initial-scale=1" />
+<meta name="generator" content="Adobe FrameMaker 12" />
+<title>HDF User’s Guide - 4.2.12</title>
+<link href="../../template/Theme1_Standard/main.css" type="text/css" rel="stylesheet" />
+<link href="../../template/Theme1_Standard/jqueryui-custom.css" type="text/css" rel="stylesheet" />
+ <link rel="stylesheet" href="Example_Vg.css" type="text/css" />
+ <link rel="StyleSheet" href="../../Responsive_HTML5_stylesheet.css" type="text/css" /><script type="text/javascript" language="JavaScript">//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]></script><style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" src="../../template/scripts/constants.js"></script>
+<script type="text/javascript" src="../../template/scripts/utils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhver.js"></script>
+<script type="text/javascript" src="../../template/scripts/settings.js"></script>
+<script type="text/javascript" src="../../template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadcsh.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/showhidecontrols.js"></script>
+<script type="text/javascript" src="../../template/scripts/pageloader.js"></script>
+<script type="text/javascript" src="../../template/scripts/toctree.js"></script>
+<script type="text/javascript" src="../../template/scripts/toctreeloader.js"></script>
+<script type="text/javascript" src="../../template/scripts/indextree.js"></script>
+<script type="text/javascript" src="../../template/scripts/indextreeloader.js"></script>
+<script type="text/javascript" src="../../template/scripts/glossarylist.js"></script>
+<script type="text/javascript" src="../../template/scripts/glossarylistloader.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhtopic.js"></script>
+<script type="text/javascript" src="../../template/scripts/searchfield.js"></script>
+<script type="text/javascript" src="../../template/scripts/tabpanels.js"></script>
+<script type="text/javascript" >
+gTocPageHtml = "{%ICON%}<span  class=\"wTOCTreePageText\">{%LINK_NAME%}</span>";
+gTocBookClosedHtml = "{%ICON%}<span  class=\"wTOCTreeCloseBookText\">{%LINK_NAME%}</span>";
+gTocBookOpenHtml = "{%ICON%}<span  class=\"wTOCTreeCloseBookText\">{%LINK_NAME%}</span>";
+gTocUrlHtml = "{%ICON%}<span  class=\"wTOCTreeLinkText\">{%LINK_NAME%}</span>";
+gTocPageIconSrc = "../../template/Theme1_Standard/TOCTreePage.png";
+gTocPageIconHoverSrc = "../../template/Theme1_Standard/TOCTreePageHover.png";
+gTocPageIconSelSrc = "../../template/Theme1_Standard/TOCTreePageSelected.png";
+gTocPageIconClass = "wTOCTreePageIcon";
+gTocPageIconStyle = "";
+gTocBookClosedIconSrc = "../../template/Theme1_Standard/TOCTreeCloseBook.png";
+gTocBookClosedIconHoverSrc = "../../template/Theme1_Standard/TOCTreeCloseBookHover.png";
+gTocBookClosedIconSelSrc = "../../template/Theme1_Standard/TOCTreeCloseBookSelected.png";
+gTocBookClosedIconClass = "wTOCTreeCloseBookIcon";
+gTocBookClosedIconStyle = "";
+gTocBookOpenIconSrc = "../../template/Theme1_Standard/TOCTreeOpenBook.png";
+gTocBookOpenIconHoverSrc = "../../template/Theme1_Standard/TOCTreeOpenBookHover.png";
+gTocBookOpenIconSelSrc = "../../template/Theme1_Standard/TOCTreeOpenBookHoverSelected.png";
+gTocBookOpenIconClass = "wTOCTreeOpenBookIcon";
+gTocBookOpenIconStyle = "";
+gTocUrlIconSrc = "../../template/Theme1_Standard/TOCTreeLink.png";
+gTocUrlIconHoverSrc = "../../template/Theme1_Standard/TOCTreeLinkHover.png";
+gTocUrlIconSelSrc = "../../template/Theme1_Standard/TOCTreeLinkSelected.png";
+gTocUrlIconClass = "wTOCTreeLinkIcon";
+gTocUrlIconStyle = "";
+</script>
+<script type="text/javascript" >
+gRootRelPath = "../..";
+gCommonRootRelPath = "../..";
+</script>
+<script type="text/javascript" >
+gIdxKWHtml = "<span  class=\"wIdxKeywordText\">{%LINK_NAME%}</span>";
+	gIdxLinkHtml = "<span  class=\"wIdxLinkText\">{%LINK_NAME%}</span>";
+	gIdxCategoryHtml = "<span  class=\"wIdxAlphabetText\">{%LINK_NAME%}</span>";
+</script>
+<script type="text/javascript" >
+gTopicId = "24.0_1";
+</script>
+<script type="text/javascript" >
+gGloTermHtml = "<span  class=\"wGloTermText\">{%LINK_NAME%}</span>";
+	gGloDefHtml = "<span  class=\"wGloDefinitionText\">{%LINK_NAME%}</span>";
+	gGloCategoryHtml = "<span  class=\"wGloAlphabetText\">{%LINK_NAME%}</span>";
+</script>
+ <link rel="SHORTCUT ICON" href="../../Responsive HTML5_favicon.png" />
+</head>
+
+<body>
+<script type="text/javascript" src="../../ehlpdhtm.js"></script>
+
+<div class="floatholder">
+	<div class="phone_scrollarea overthrow">
+		<div class="header">
+			<div class="logo">
+				<a href="../UG_Intro/UG_Intro.htm" class="homelink"><img src="../../template/Theme1_Standard/logo.png" alt="Logo" id="wLogoImage" style=" border:none; width:100%; max-width:90px;" border="0" /></a> 
+				 
+			</div>
+			<div class="title">
+				<a href="../UG_Intro/UG_Intro.htm" class="homelink"><span>HDF User’s Guide - 4.2.12</span></a> 
+				 
+			</div>
+		</div>
+		<div class="sidebar">
+			<div data-showin="Always" class="wTabbedPanel" id="tabbedpanel">
+				<ul class="wTabGroup" id="tab" data-tabid="tocTabButton" style="margin: 0px;">
+					<li class="wTab" id="tocTabButton" data-contentid="tocTabPane" onmouseout="onTabHoverOut(this, 'tab')" data-class="wTab" ontouchend="onTabHoverOut(this, 'tab')" onclick="selectTab(this, 'tab')" ontouchstart="onTabHover(this, 'tab')" data-classhover="wTabHover" style="display: inline;" ontouchmove="onTabHoverOut(this, 'tab')" data-classsel="wTabSelected" onmouseover="onTabHover(this, 'tab')"><img src="../../template/Theme1_Standard/toc.png" class="normal" alt="Table of Contents" title="Table of Contents" id="xmlEditorTOCSidebarButton" style=" border:none; width:100%; max-width:42px;" border="0" /><img src="../../template/Theme1_Standard/toc_hover.png" class="hover" alt="Table of Contents" title="Table of Contents" id="xmlEditorTOCSidebarButtonHover" style=" border:none; width:100%; max-width:48px;" border="0" /></li>
+					<li class="wTab" id="idxTabButton" data-contentid="idxTabPane" onmouseout="onTabHoverOut(this, 'tab')" data-class="wTab" ontouchend="onTabHoverOut(this, 'tab')" onclick="selectTab(this, 'tab')" ontouchstart="onTabHover(this, 'tab')" data-classhover="wTabHover" style="display: inline;" ontouchmove="onTabHoverOut(this, 'tab')" data-classsel="wTabSelected" onmouseover="onTabHover(this, 'tab')"><img src="../../template/Theme1_Standard/index.png" class="normal" alt="Index" title="Index" id="xmlEditorIDXSidebarButton" style=" border:none; width:100%; max-width:48px;" border="0" /><img src="../../template/Theme1_Standard/index_hover.png" class="hover" alt="Index" title="Index" id="xmlEditorIDXSidebarButtonHover" style=" border:none; width:100%; max-width:48px;" border="0" /></li>
+					<li class="wTab" id="gloTabButton" data-contentid="gloTabPane" onmouseout="onTabHoverOut(this, 'tab')" data-class="wTab" ontouchend="onTabHoverOut(this, 'tab')" onclick="selectTab(this, 'tab')" ontouchstart="onTabHover(this, 'tab')" data-classhover="wTabHover" style="display: inline;" ontouchmove="onTabHoverOut(this, 'tab')" data-classsel="wTabSelected" onmouseover="onTabHover(this, 'tab')"><img src="../../template/Theme1_Standard/glo.png" class="normal" alt="Glossary" title="Glossary" id="xmlEditorGLOSidebarButton" style=" border:none; width:100%; max-width:48px;" border="0" /><img src="../../template/Theme1_Standard/glo_hover.png" class="hover" alt="Glossary" title="Glossary" id="xmlEditorGLOSidebarButtonHover" style=" border:none; width:100%; max-width:48px;" border="0" /></li>
+				</ul>
+				<div class="wTabContentGroup">
+					<div id="tocTabPane" class="wTabContent">
+						<div id="toc" class="wTOCTree" tabindex="606">
+							
+							
+							
+							
+						</div>
+					</div>
+					<div id="idxTabPane" class="wTabContent">
+						<div id="idx" class="wIndex">
+							<input class="wIdxFilter" id="idxFilterBox" type="text" data-placeholder="Filter Keyword" onkeyup="filterIdx()"></input>
+							
+							
+							
+						</div>
+					</div>
+					<div id="gloTabPane" class="wTabContent">
+						<div id="glo" class="wGlossary">
+							<input class="wGloFilter" id="gloFilterBox" type="text" data-placeholder="Filter Term" onkeyup="filterGlo()"></input>
+							
+							
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="closebutton buttonOpened">
+				&#160; 
+			</div>
+		</div>
+		<div class="content">
+			<div class="desktop_functionholder">
+				<div class="searchholder">
+					<div class="wSearchField">
+						<input id="searchBox" class="wSearchField" type="search" data-placeholder="-Search-" onkeydown="searchHelp(event, 'searchBox')" data-search="true" /><a class="wSearchLink" onclick="searchHelp(null, 'searchBox')" href="#"><img src="../../template/Theme1_Standard/Search.png" alt="" id="xmlEditwSearchLink" class="wSearchLink" border="0" style="width:100%; max-width:28px" /></a> 
+						 
+					</div>
+				</div>
+				<div class="brsNext">
+					<a id="browseSeqNext" class="wBSNextButton" href="../Examples_MAN/Examples_MAN.htm"><img alt="" src="../../template/Theme1_Standard/BSNext.png" class="wBSNextButton normal" id="xmlEditorBSNextButton" border="0" style="width:100%; max-width:48px" /><img alt="" src="../../template/Theme1_Standard/BSNext_hover.png" class="wBSNextButton hover" id="xmlEditorBSNextButtonHover" border="0" style="width:100%; max-width:48px" /></a> 
+					 
+				</div>
+				<div class="print">
+					<a href="javascript:window.print()" class="wPrintButton"><img src="../../template/Theme1_Standard/Print.png" alt="" class="wPrintButton normal" id="xmlEditorPrintButton" border="0" style="width:100%; max-width:48px" /><img src="../../template/Theme1_Standard/Print_hover.png" alt="" class="wPrintButton hover" id="xmlEditorPrintButtonHover" border="0" style="width:100%; max-width:48px" /></a> 
+				</div>
+				<div class="brsBack">
+					<a id="browseSeqBack" class="wBSBackButton" href="../Example_GR/Example_GR.htm"><img alt="" src="../../template/Theme1_Standard/BSBack.png" class="wBSBackButton normal" id="xmlEditorBSBackButton" border="0" style="width:100%; max-width:48px" /><img alt="" src="../../template/Theme1_Standard/BSBack_hover.png" class="wBSBackButton hover" id="xmlEditorBSBackButtonHover" border="0" style="width:100%; max-width:56px" /></a> 
+					 
+				</div>
+			</div>
+			<div class="contentholder">
+				<div class="mobile_browseholder">
+					<div class="brsBack">
+						<a id="browseSeqBack0" class="wBSBackButton" href="../Example_GR/Example_GR.htm"><img alt="" src="../../template/Theme1_Standard/BSBack.png" class="wBSBackButton" border="0" style="width:100%; max-width:48px" /></a> 
+					</div>
+					<div class="brsNext">
+						<a id="browseSeqNext0" class="wBSNextButton" href="../Examples_MAN/Examples_MAN.htm"><img alt="" src="../../template/Theme1_Standard/BSNext.png" class="wBSNextButton" border="0" style="width:100%; max-width:48px" /></a> 
+					</div>
+				</div>
+				<a name="content_top_placeholder"></a> 
+				<div class="wTopic" id="rh_default_topic_placeholder_id">
+
+ <p class="FM_ExamplePage"><a name="XREF_37759_create_vgroups_c"></a>create_vgroups.c</p>
+ <p class="FM_ExampleCode">#include “hdf.h”</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">#define &#160;FILE_NAME &#160;&#160;&#160;“Two_Vgroups.hdf”</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">main()</p>
+ <p class="FM_ExampleCode">{</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/************************* Variable declaration **************************/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;intn &#160;status_n; &#160;&#160;&#160;&#160;&#160;/* returned status for functions returning an intn &#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;int32 status_32, &#160;&#160;&#160;&#160;/* returned status for functions returning an int32 */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;vgroup_ref = -1,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;vgroup1_id, vgroup2_id, file_id;</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/********************** End of variable declaration **********************/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Create the HDF file.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;file_id = Hopen (FILE_NAME, DFACC_CREATE, 0);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Initialize the V interface.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = Vstart (file_id);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Create the first vgroup. &#160;Note that the vgroup reference number is set</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* to -1 for creating and the access mode is “w” for writing.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;vgroup1_id = Vattach (file_id, vgroup_ref, “w”);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Create the second vgroup. </p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;vgroup2_id = Vattach (file_id, vgroup_ref, “w”);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Any operations on the vgroups.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Terminate access to the first vgroup.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_32 = Vdetach (vgroup1_id);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Terminate access to the second vgroup.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_32 = Vdetach (vgroup2_id);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Terminate access to the V interface and close the HDF file.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = Vend (file_id);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = Hclose (file_id);</p>
+ <p class="FM_ExampleCode">}</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExamplePage"><a name="XREF_30235_create_vgroups_f"></a>create_vgroups.f</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;program &#160;create_vgroup</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;implicit none</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Parameter declaration</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*15 FILE_NAME</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (FILE_NAME = ‘Two_Vgroups.hdf’)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer DFACC_CREATE</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (DFACC_CREATE = 4)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Function declaration</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer hopen, hclose</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer vfstart, vfatch, vfdtch, vfend</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C**** Variable declaration *******************************************</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer status</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer file_id</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer vgroup1_id, vgroup2_id, vgroup_ref</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C**** End of variable declaration ************************************</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Create the HDF file.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;file_id = hopen(FILE_NAME, DFACC_CREATE, 0)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Initialize the V interface.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vfstart(file_id)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Create the first vgroup. Note that the vgroup reference number is set</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;to -1 for creating and the access mode is ‘w’ for writing.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;vgroup_ref = -1</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;vgroup1_id = vfatch(file_id, vgroup_ref, ‘w’)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Create the second vgroup.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;vgroup2_id = vfatch(file_id, vgroup_ref, ‘w’)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Any operations on the vgroups.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;..............................</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Terminate access to the first vgroup.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vfdtch(vgroup1_id)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Terminate access to the second vgroup.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vfdtch(vgroup2_id)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Terminate access to the V interface and close the HDF file.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vfend(file_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = hclose(file_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;end</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExamplePage"><a name="XREF_33782_add_sds_to_vgroup_c"></a>add_sds_to_vgroup.c</p>
+ <p class="FM_ExampleCode">#include &#160;&#160;“hdf.h” &#160;&#160;&#160;&#160;&#160;/* Note: in this example, hdf.h can be omitted...*/</p>
+ <p class="FM_ExampleCode">#include &#160;&#160;“mfhdf.h” &#160;&#160;&#160;/* ...since mfhdf.h already includes hdf.h */</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">#define &#160;FILE_NAME &#160;&#160;&#160;“General_Vgroups.hdf”</p>
+ <p class="FM_ExampleCode">#define &#160;SDS_NAME &#160;&#160;&#160;&#160;“Test SD”</p>
+ <p class="FM_ExampleCode">#define &#160;VG_NAME &#160;&#160;&#160;&#160;&#160;“SD Vgroup”</p>
+ <p class="FM_ExampleCode">#define &#160;VG_CLASS &#160;&#160;&#160;&#160;“Common Vgroups”</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">main()</p>
+ <p class="FM_ExampleCode">{</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/************************* Variable declaration **************************/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;intn &#160;&#160;status_n; &#160;&#160;&#160;&#160;/* returned status for functions returning an intn &#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;int32 &#160;status_32, &#160;&#160;&#160;/* returned status for functions returning an int32 */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;sd_id, &#160;&#160;&#160;&#160;&#160;&#160;&#160;/* SD interface identifier */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;sds_id, &#160;&#160;&#160;&#160;&#160;&#160;/* data set identifier */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;sds_ref, &#160;&#160;&#160;&#160;&#160;/* reference number of the data set */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;dim_sizes[1], /* dimension of the data set - only one */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;rank = 1, &#160;&#160;&#160;&#160;/* rank of the data set array */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;vgroup_id, &#160;&#160;&#160;/* vgroup identifier */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;file_id; &#160;&#160;&#160;&#160;&#160;/* HDF file identifier, same for V interface */</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/********************** End of variable declaration **********************/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Create the HDF file.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;file_id = Hopen (FILE_NAME, DFACC_CREATE, 0);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Initialize the V interface.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = Vstart (file_id);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Initialize the SD interface.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;sd_id = SDstart (FILE_NAME, DFACC_WRITE);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Set the size of the SDS’s dimension.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;dim_sizes[0] = 10;</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Create the SDS.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;sds_id = SDcreate (sd_id, SDS_NAME, DFNT_INT32, rank, dim_sizes);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Create a vgroup and set its name and class.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;vgroup_id = Vattach (file_id, -1, “w”);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_32 = Vsetname (vgroup_id, VG_NAME);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_32 = Vsetclass (vgroup_id, VG_CLASS);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Obtain the reference number of the SDS using its identifier.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;sds_ref = SDidtoref (sds_id);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Add the SDS to the vgroup. &#160;Note: the tag DFTAG_NDG is used</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* when adding an SDS. &#160;Refer to Appendix A for the entire list of tags.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_32 = Vaddtagref (vgroup_id, DFTAG_NDG, sds_ref);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Terminate access to the SDS and to the SD interface.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = SDendaccess (sds_id);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = SDend (sd_id);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Terminate access to the vgroup and to the V interface, and </p>
+ <p class="FM_ExampleCode"> &#160;&#160;* close the HDF file.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_32 = Vdetach (vgroup_id);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = Vend (file_id);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = Hclose (file_id);</p>
+ <p class="FM_ExampleCode">}</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExamplePage"><a name="XREF_13760_add_sds_to_vgroup_f"></a>add_sds_to_vgroup.f</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;program &#160;add_SDS_to_a_vgroup</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;implicit none</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Parameter declaration</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*19 FILE_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*7 &#160;SDS_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*9 &#160;VG_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*13 VG_CLASS</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (FILE_NAME = ‘General_Vgroups.hdf’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;SDS_NAME &#160;= ‘Test SD’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;VG_NAME &#160;&#160;= ‘SD Vgroup’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;VG_CLASS &#160;= ‘Common Vgroups’)</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;integer DFACC_CREATE, DFACC_WRITE </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (DFACC_CREATE = 4, DFACC_WRITE = 2)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer DFNT_INT32</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (DFNT_INT32 = 24)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer DFTAG_NDG</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (DFTAG_NDG = 720)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Function declaration</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer hopen, hclose</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer vfstart, vfatch, vfsnam, vfscls, vfadtr, vfdtch, vfend</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer sfstart, sfcreate, sfid2ref, sfendacc, sfend</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C**** Variable declaration *******************************************</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer status</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer file_id</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer vgroup_id</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer sd_id, sds_id, sds_ref</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer dim_sizes(1), rank</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C**** End of variable declaration ************************************</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Create the HDF file.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;file_id = hopen(FILE_NAME, DFACC_CREATE, 0)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Initialize the V interface.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vfstart(file_id)</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Initialize SD interface. </p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;sd_id = sfstart(FILE_NAME, DFACC_WRITE) </p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Set the rank and the size of SDS’s dimension.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;rank = 1</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;dim_sizes(1) = 10</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Create the SDS.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;sds_id = sfcreate(sd_id, SDS_NAME, DFNT_INT32, rank, dim_sizes)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Create a vgroup and set its name and class.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;vgroup_id = vfatch(file_id, -1 , ‘w’)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status &#160;&#160;&#160;= vfsnam(vgroup_id, VG_NAME)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status &#160;&#160;&#160;= vfscls(vgroup_id, VG_CLASS)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Obtain the reference number of the SDS using its identifier.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;sds_ref = sfid2ref(sds_id)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Add the SDS to the vgroup. Note: the tag DFTAG_NDG is used</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;when adding an SDS. &#160;Refer to HDF Reference Manual, Section III, Table 3K,</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;for the entire list of tags.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vfadtr(vgroup_id, DFTAG_NDG, sds_ref)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Terminate access to the SDS and to the SD interface.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = sfendacc(sds_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = sfend(sd_id)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Terminate access to the vgroup.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vfdtch(vgroup_id)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Terminate access to the V interface and close the HDF file.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vfend(file_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = hclose(file_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;end</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExamplePage">insert_vdatas_to_vgroup.c</p>
+ <p class="FM_ExampleCode">#include “hdf.h”</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">#define &#160;FILE_NAME &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;“General_Vgroups.hdf”</p>
+ <p class="FM_ExampleCode">#define &#160;N_RECORDS &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;30 &#160;&#160;&#160;&#160;&#160;&#160;/* number of records in the vdatas */</p>
+ <p class="FM_ExampleCode">#define &#160;ORDER &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;3 &#160;&#160;&#160;&#160;&#160;&#160;&#160;/* order of field FIELD_VD2 */</p>
+ <p class="FM_ExampleCode">#define &#160;VG_NAME &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;“Vertices”</p>
+ <p class="FM_ExampleCode">#define &#160;VG_CLASS &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;“Vertex Set”</p>
+ <p class="FM_ExampleCode">#define &#160;VD1_NAME &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;“X,Y Coordinates” &#160;&#160;/* first vdata to hold X,Y...*/</p>
+ <p class="FM_ExampleCode">#define &#160;VD1_CLASS &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;“Position” &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/*...values of the vertices */</p>
+ <p class="FM_ExampleCode">#define &#160;VD2_NAME &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;“Temperature” &#160;&#160;&#160;&#160;&#160;&#160;/* second vdata to hold the...*/</p>
+ <p class="FM_ExampleCode">#define &#160;VD2_CLASS &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;“Property List” &#160;&#160;&#160;&#160;/*...temperature field */</p>
+ <p class="FM_ExampleCode">#define &#160;VD3_NAME &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;“Node List” &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* third vdata to hold...*/</p>
+ <p class="FM_ExampleCode">#define &#160;VD3_CLASS &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;“Mesh” &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/*...the list of nodes */</p>
+ <p class="FM_ExampleCode">#define &#160;FIELD1_VD1 &#160;&#160;&#160;&#160;&#160;&#160;&#160;“PX” &#160;&#160;&#160;/* first field of first vdata - X values */</p>
+ <p class="FM_ExampleCode">#define &#160;FIELD2_VD1 &#160;&#160;&#160;&#160;&#160;&#160;&#160;“PY”/* second field of first vdata - Y values */</p>
+ <p class="FM_ExampleCode">#define &#160;FIELD_VD2 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;“TMP”/* field of third vdata */</p>
+ <p class="FM_ExampleCode">#define &#160;FIELD_VD3 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;“PLIST”/* field of second vdata */</p>
+ <p class="FM_ExampleCode">#define &#160;FIELDNAME_LIST &#160;&#160;&#160;“PX,PY” /* field name list for first vdata */</p>
+ <p class="FM_ExampleCode">/* Note that the second and third vdatas can use the field names as </p>
+ <p class="FM_ExampleCode"> &#160;&#160;the field name lists unless more fields are added to a vdata.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;Then a field name list is needed for that vdata */</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">main( )</p>
+ <p class="FM_ExampleCode">{</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/************************* Variable declaration **************************/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;intn &#160;&#160;&#160;&#160;status_n; &#160;&#160;/* returned status for functions returning an intn &#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;int32 &#160;&#160;&#160;status_32, &#160;/* returned status for functions returning an int32 */</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;file_id, vgroup_id, </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;vdata1_id, vdata2_id, vdata3_id; </p>
+ <p class="FM_ExampleCode"> &#160;&#160;int32 &#160;&#160;&#160;num_of_records, &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* number of records actually written */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;vd_index; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* position of a vdata in the vgroup &#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;int8 &#160;&#160;&#160;&#160;i, j, k = 0;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;float32 &#160;pxy[N_RECORDS][2] = &#160;&#160;&#160;&#160;&#160;&#160;/* buffer for data of the first vdata */</p>
+ <p class="FM_ExampleCode"><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>&#160;&#160;<span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>{-1.5, 2.3, -1.5, 1.98, -2.4, .67,</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;<span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>-3.4, 1.46, -.65, 3.1, -.62, 1.23,</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;<span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>-.4, 3.8, -3.55, 2.3, -1.43, 2.44,</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;<span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>.23, 1.13, -1.4, 5.43, -1.4, 5.8,</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;<span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>-3.4, 3.85, -.55, .3, -.21, 1.22,</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;<span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>-1.44, 1.9, -1.4, 2.8, .94, 1.78,</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;<span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>-.4, 2.32, -.87, 1.99, -.54, 4.11,</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;<span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>-1.5, 1.35, -1.4, 2.21, -.22, 1.8,</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;<span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>-1.1, 4.55, -.44, .54, -1.11, 3.93,</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;<span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>-.76, 1.9, -2.34, 1.7, -2.2, 1.21};</p>
+ <p class="FM_ExampleCode"> &#160;&#160;float32 &#160;tmp[N_RECORDS]; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* buffer for data of the second vdata */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;int16 &#160;&#160;&#160;plist[N_RECORDS][3]; &#160;&#160;&#160;&#160;/* buffer for data of the third vdata */</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/********************** End of variable declaration ***********************/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Open the HDF file for writing.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;file_id = Hopen (FILE_NAME, DFACC_WRITE, 0);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Initialize the V interface.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = Vstart (file_id);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Buffer the data for the second and third vdatas.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;for (i = 0; i &lt; N_RECORDS; i++)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;for (j = 0; j &lt; ORDER; j++)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;plist[i][j] = ++k;</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;for (i = 0; i &lt; N_RECORDS; i++)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;tmp[i] = i * 10.0;</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Create the vgroup then set its name and class. &#160;Note that the vgroup’s</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* reference number is set to -1 for creating and the access mode is “w” for</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* writing.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;vgroup_id = Vattach (file_id, -1, “w”);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_32 = Vsetname (vgroup_id, VG_NAME);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_32 = Vsetclass (vgroup_id, VG_CLASS);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Create the first vdata then set its name and class. Note that the vdata’s</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* reference number is set to -1 for creating and the access mode is “w” for</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* writing.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;vdata1_id = VSattach (file_id, -1, “w”);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_32 = VSsetname (vdata1_id, VD1_NAME);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_32 = VSsetclass (vdata1_id, VD1_CLASS);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Introduce and define the fields of the first vdata.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = VSfdefine (vdata1_id, FIELD1_VD1, DFNT_FLOAT32, 1);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = VSfdefine (vdata1_id, FIELD2_VD1, DFNT_FLOAT32, 1);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = VSsetfields (vdata1_id, FIELDNAME_LIST);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Write the buffered data into the first vdata with full interlace mode.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;num_of_records = VSwrite (vdata1_id, (uint8 *)pxy, N_RECORDS, </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;FULL_INTERLACE);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Insert the vdata into the vgroup using its identifier.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;vd_index = Vinsert (vgroup_id, vdata1_id);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Detach from the first vdata.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_32 = VSdetach (vdata1_id);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Create, write, and insert the second vdata to the vgroup using</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* steps similar to those used for the first vdata.</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;*/ </p>
+ <p class="FM_ExampleCode"> &#160;&#160;vdata2_id = VSattach (file_id, -1, “w”);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_32 = VSsetname (vdata2_id, VD2_NAME);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_32 = VSsetclass (vdata2_id, VD2_CLASS);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = VSfdefine (vdata2_id, FIELD_VD2, DFNT_FLOAT32, 1);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = VSsetfields (vdata2_id, FIELD_VD2);</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;num_of_records = VSwrite (vdata2_id, (uint8 *)tmp, N_RECORDS, </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;FULL_INTERLACE);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;vd_index = Vinsert (vgroup_id, vdata2_id);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_32 = VSdetach (vdata2_id);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Create, write, and insert the third vdata to the vgroup using </p>
+ <p class="FM_ExampleCode"> &#160;&#160;* steps similar to those used for the first and second vdatas.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;vdata3_id = VSattach (file_id, -1, “w”);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_32 = VSsetname (vdata3_id, VD3_NAME);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_32 = VSsetclass (vdata3_id, VD3_CLASS);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = VSfdefine (vdata3_id, FIELD_VD3, DFNT_INT16, 3);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = VSsetfields (vdata3_id, FIELD_VD3);</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;num_of_records = VSwrite (vdata3_id, (uint8 *)plist, N_RECORDS, </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;FULL_INTERLACE);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;vd_index = Vinsert (vgroup_id, vdata3_id);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_32 = VSdetach (vdata3_id);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Terminate access to the vgroup “Vertices”.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_32 = Vdetach (vgroup_id);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Terminate access to the V interface and close the HDF file.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = Vend (file_id);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = Hclose (file_id);</p>
+ <p class="FM_ExampleCode">}</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExamplePage"><a name="XREF_23601_insert_vdatas_to"></a>insert_vdatas_to_vgroup.f</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;program &#160;add_vdatas_to_a_vgroup</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;implicit none</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Parameter declaration</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*19 FILE_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*8 &#160;VG_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*10 VG_CLASS</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*15 VD1_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*8 &#160;VD1_CLASS</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*11 VD2_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*13 VD2_CLASS</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*9 &#160;VD3_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*4 &#160;VD3_CLASS</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (FILE_NAME = ‘General_Vgroups.hdf’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;VG_NAME &#160;&#160;= ‘Vertices’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;VG_CLASS &#160;= ‘Vertex Set’)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (VD1_NAME &#160;= ‘X,Y Coordinates’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;VD2_NAME &#160;= ‘Temperature’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;VD3_NAME &#160;= ‘Node List’)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (VD1_CLASS = ‘Position’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;VD2_CLASS = ‘Property List’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;VD3_CLASS = ‘Mesh’)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*2 FIELD1_VD1</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*2 FIELD2_VD1</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*3 FIELD_VD2</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*4 FIELD_VD3</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*5 FIELDNAME_LIST</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (FIELD1_VD1 = ‘PX’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;FIELD2_VD1 = ‘PY’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;FIELD_VD2 &#160;= ‘TMP’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;FIELD_VD3 &#160;= ‘PLIST’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;FIELDNAME_LIST = ‘PX,PY’)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer N_RECORDS</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (N_RECORDS = 30)</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;integer &#160;DFACC_WRITE </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (DFACC_WRITE = 2)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer DFNT_FLOAT32, DFNT_INT16</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (DFNT_FLOAT32 = 5, DFNT_INT16 = 22)</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;integer FULL_INTERLACE </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (FULL_INTERLACE = 0)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Function declaration</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer hopen, hclose</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer vfstart, vfatch, vfsnam, vfscls, vfinsrt, vfdtch, vfend</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;integer vsfatch, vsfsnam, vsfscls, vsffdef, vsfsfld, </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;vsfwrt, vsfwrtc, vsfdtch</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C**** Variable declaration *******************************************</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer status</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer file_id</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer vgroup_id</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;integer vdata1_id, vdata2_id, vdata3_id, vd_index </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer num_of_records</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer i, j, k</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;real &#160;&#160;&#160;pxy(2,N_RECORDS), tmp(N_RECORDS)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer plist(3,N_RECORDS)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;data pxy /-1.5, 2.3, -1.5, 1.98, -2.4, .67,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;-3.4, 1.46, -.65, 3.1, -.62, 1.23,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;-.4, 3.8, -3.55, 2.3, -1.43, 2.44,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;.23, 1.13, -1.4, 5.43, -1.4, 5.8,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;-3.4, 3.85, -.55, .3, -.21, 1.22,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;-1.44, 1.9, -1.4, 2.8, .94, 1.78,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;-.4, 2.32, -.87, 1.99, -.54, 4.11,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;-1.5, 1.35, -1.4, 2.21, -.22, 1.8,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;-1.1, 4.55, -.44, .54, -1.11, 3.93,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;-.76, 1.9, -2.34, 1.7, -2.2, 1.21/</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C**** End of variable declaration ************************************</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Open the HDF file for writing.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;file_id = hopen(FILE_NAME, DFACC_WRITE, 0)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Initialize the V interface.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vfstart(file_id)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Buffer the data for the third and second vdatas.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;do 20 i = 1, N_RECORDS</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;do 10 j = 1, 3 </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;plist(j,i) = k </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;k = k+1</p>
+ <p class="FM_ExampleCode">10 &#160;&#160;&#160;&#160;&#160;&#160;continue</p>
+ <p class="FM_ExampleCode">20 &#160;&#160;&#160;continue &#160;&#160;&#160;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;do 30 i = 1, N_RECORDS</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;tmp(i) = (i-1) * 10.0</p>
+ <p class="FM_ExampleCode">30 &#160;&#160;&#160;continue</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Create a vgroup and set its name and class.</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Note that the vgroup’s reference number is set to -1 for creating</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;and the access mode is ‘w’ for writing.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;vgroup_id = vfatch(file_id, -1 , ‘w’)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status &#160;&#160;&#160;= vfsnam(vgroup_id, VG_NAME)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status &#160;&#160;&#160;= vfscls(vgroup_id, VG_CLASS)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Create the first vdata then set its name and class. Note that the vdata’s</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;reference number is set to -1 for creating and the access mode is ‘w’ for</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;writing.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;vdata1_id = vsfatch(file_id, -1, ‘w’)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsfsnam(vdata1_id, VD1_NAME)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsfscls(vdata1_id, VD1_CLASS)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Introduce and define the fields of the first vdata.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsffdef(vdata1_id, FIELD1_VD1, DFNT_FLOAT32, 1)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsffdef(vdata1_id, FIELD2_VD1, DFNT_FLOAT32, 1)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsfsfld(vdata1_id, FIELDNAME_LIST)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Write the buffered data into the first vdata.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;num_of_records = vsfwrt(vdata1_id, pxy, N_RECORDS,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;FULL_INTERLACE)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Insert the vdata into the vgroup using its identifier.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;vd_index = vfinsrt(vgroup_id, vdata1_id)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Detach from the first vdata.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsfdtch(vdata1_id)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Create, write, and insert the second vdata to the vgroup using</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;steps similar to those used for the first vdata.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;vdata2_id = vsfatch(file_id, -1, ‘w’)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsfsnam(vdata2_id, VD2_NAME)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsfscls(vdata2_id, VD2_CLASS)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsffdef(vdata2_id, FIELD_VD2, DFNT_FLOAT32, 1)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsfsfld(vdata2_id, FIELD_VD2)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;num_of_records = vsfwrt(vdata2_id, tmp, N_RECORDS,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;FULL_INTERLACE)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;vd_index = vfinsrt(vgroup_id, vdata2_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsfdtch(vdata2_id)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Create, write, and insert the third vdata to the vgroup using </p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;steps similar to those used for the first and second vdatas.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;vdata3_id = vsfatch(file_id, -1, ‘w’)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsfsnam(vdata3_id, VD3_NAME)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsfscls(vdata3_id, VD3_CLASS)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsffdef(vdata3_id, FIELD_VD3, DFNT_INT16, 3)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsfsfld(vdata3_id, FIELD_VD3)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;num_of_records = vsfwrtc(vdata3_id, plist, N_RECORDS,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;FULL_INTERLACE)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;vd_index = vfinsrt(vgroup_id, vdata3_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vsfdtch(vdata3_id)</p>
+ <p class="FM_ExampleCode">&#160;</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Terminate access to the vgroup ‘Vertices’.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vfdtch(vgroup_id)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Terminate access to the V interface and close the HDF file.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vfend(file_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = hclose(file_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;end</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExamplePage">get_vgroup_info.c</p>
+ <p class="FM_ExampleCode">#include “hdf.h”</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">#define &#160;FILE_NAME &#160;&#160;“General_Vgroups.hdf”</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">main( )</p>
+ <p class="FM_ExampleCode">{</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/************************* Variable declaration **************************/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;intn &#160;&#160;status_n; &#160;&#160;&#160;&#160;/* returned status for functions returning an intn &#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;int32 &#160;status_32, &#160;&#160;&#160;/* returned status for functions returning an int32 */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;file_id, vgroup_id;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;int32 &#160;lone_vg_number, &#160;&#160;&#160;&#160;&#160;/* current lone vgroup number */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;num_of_lones = 0; &#160;&#160;&#160;/* number of lone vgroups */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;int32 *ref_array; &#160;&#160;&#160;/* buffer to hold the ref numbers of lone vgroups &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;char &#160;&#160;vgroup_name[VGNAMELENMAX], vgroup_class[VGNAMELENMAX];</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/********************** End of variable declaration **********************/</p>
+ <p class="FM_ExampleCode">&#160;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Open the HDF file for reading.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;file_id = Hopen (FILE_NAME, DFACC_READ, 0); </p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Initialize the V interface.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = Vstart (file_id);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Get and print the names and class names of all the lone vgroups.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* First, call Vlone with num_of_lones set to 0 to get the number of</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* lone vgroups in the file, but not to get their reference numbers.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;num_of_lones = Vlone (file_id, NULL, num_of_lones );</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Then, if there are any lone vgroups, </p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;if (num_of_lones &gt; 0)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;{</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;* use the num_of_lones returned to allocate sufficient space for the</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;* buffer ref_array to hold the reference numbers of all lone vgroups,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;ref_array = (int32 *) malloc(sizeof(int32) * num_of_lones);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;/*</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;* and call Vlone again to retrieve the reference numbers into </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;* the buffer ref_array.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;num_of_lones = Vlone (file_id, ref_array, num_of_lones);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;* Display the name and class of each lone vgroup.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;*/</p>
+ <p class="FM_ExampleCode">      printf (“Lone vgroups in this file are:\n”);</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;for (lone_vg_number = 0; lone_vg_number &lt; num_of_lones; </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;lone_vg_number++)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;{</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;* Attach to the current vgroup then get and display its</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;* name and class. Note: the current vgroup must be detached before</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;* moving to the next.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;vgroup_id = Vattach (file_id, ref_array[lone_vg_number], “r”);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;status_32 = Vgetname (vgroup_id, vgroup_name);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;status_32 = Vgetclass (vgroup_id, vgroup_class);</p>
+ <p class="FM_ExampleCode">         printf (“   Vgroup name %s and class %s\n”, vgroup_name,  </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;vgroup_class); </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;status_32 = Vdetach (vgroup_id);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;} /* for */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;} /* if */</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Terminate access to the V interface and close the file.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = Vend (file_id);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = Hclose (file_id);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Free the space allocated by this program.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;free (ref_array);</p>
+ <p class="FM_ExampleCode">}</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExamplePage"><a name="XREF_31879_get_vgroup_info_f"></a>get_vgroup_info.f</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;program &#160;getinfo_about_vgroup</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;implicit none</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Parameter declaration</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*19 FILE_NAME</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (FILE_NAME = ‘General_Vgroups.hdf’)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer DFACC_READ</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (DFACC_READ = 1)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer SIZE</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter(SIZE = 10)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Function declaration</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer hopen, hclose</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer vfstart, vfatch, vfgnam, vfgcls, vflone, vfdtch, vfend</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C**** Variable declaration *******************************************</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer status</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer file_id</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer vgroup_id</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer lone_vg_number, num_of_lones</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*64 vgroup_name, vgroup_class</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer ref_array(SIZE)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer i</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C**** End of variable declaration ************************************</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Initialize ref_array.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;do 10 i = 1, SIZE</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ref_array(i) = 0</p>
+ <p class="FM_ExampleCode">10 &#160;&#160;&#160;continue</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Open the HDF file for reading.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;file_id = hopen(FILE_NAME, DFACC_READ, 0)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Initialize the V interface.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vfstart(file_id)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Get and print the name and class name of all lone vgroups.</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;First, call vflone with num_of_lones set to 0 to get the number of</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;lone vgroups in the file and check whether size of ref_array is </p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;big enough to hold reference numbers of ALL lone groups.</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;If ref_array is not big enough, exit the program after displaying an</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;informative message.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;num_of_lones = 0</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;num_of_lones = vflone(file_id, ref_array, num_of_lones)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;if (num_of_lones .gt. SIZE) then</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;write(*,*) num_of_lones, ‘lone vgroups is found’</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;write(*,*) ‘increase the size of ref_array to hold reference ‘</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;write(*,*) ‘numbers of all lone vgroups in the file’</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;stop</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;endif</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;If there are any lone groups in the file,</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;if (num_of_lones .gt. 0) then</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;call vflone again to retrieve the reference numbers into ref_array.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;num_of_lones = vflone(file_id, ref_array, num_of_lones)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Display the name and class of each vgroup.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;write(*,*) ‘Lone vgroups in the file are:’</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;do 20 lone_vg_number = 1, num_of_lones</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Attach to the current vgroup, then get and display its name and class.</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Note: the current vgroup must be detached before moving to the next. &#160;</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;vgroup_name = ‘ ‘</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;vgroup_class = ‘ ‘</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;vgroup_id = vfatch(file_id, ref_array(lone_vg_number), ‘r’)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status &#160;&#160;&#160;= vfgnam(vgroup_id, vgroup_name)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status &#160;&#160;&#160;= vfgcls(vgroup_id, vgroup_class)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;write(*,*) ‘Vgroup name ‘ , &#160;vgroup_name</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;write(*,*) ‘Vgroup class ‘ , vgroup_class</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;write(*,*)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vfdtch(vgroup_id)</p>
+ <p class="FM_ExampleCode">20 &#160;&#160;&#160;continue</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;endif</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Terminate access to the V interface and close the HDF file.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vfend(file_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = hclose(file_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;end</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExamplePage">set_get_vgroup_attr.c</p>
+ <p class="FM_ExampleCode">#include “hdf.h”</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">#define &#160;FILE_NAME &#160;&#160;&#160;&#160;&#160;“General_Vgroups.hdf”</p>
+ <p class="FM_ExampleCode">#define &#160;VGROUP_NAME &#160;&#160;&#160;“SD Vgroup”</p>
+ <p class="FM_ExampleCode">#define &#160;VGATTR_NAME &#160;&#160;&#160;“First Attribute”</p>
+ <p class="FM_ExampleCode">#define &#160;N_ATT_VALUES &#160;&#160;7 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* number of values in the attribute */</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">main( )</p>
+ <p class="FM_ExampleCode">{</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/************************* Variable declaration **************************/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;intn &#160;&#160;status_n, &#160;&#160;&#160;&#160;/* returned status for functions returning an intn &#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;n_attrs; &#160;&#160;&#160;&#160;&#160;/* number of attributes of the vgroup */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;int32 &#160;status_32, &#160;&#160;&#160;/* returned status for functions returning an int32 */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;file_id, vgroup_ref, vgroup_id,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;attr_index, i, vg_version,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;data_type, n_values, size;</p>
+ <p class="FM_ExampleCode">   char   vg_attr[N_ATT_VALUES] = {‘v’,’g’,’r’,’o’,’u’,’p’,’\0’};</p>
+ <p class="FM_ExampleCode"> &#160;&#160;char &#160;&#160;vgattr_buf[N_ATT_VALUES], attr_name[30];</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/********************** End of variable declaration **********************/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Open the HDF file for writing.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;file_id = Hopen (FILE_NAME, DFACC_WRITE, 0);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Initialize the V interface.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = Vstart (file_id);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Get the reference number of the vgroup named VGROUP_NAME.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;vgroup_ref = Vfind (file_id, VGROUP_NAME);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Attach to the vgroup found.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;vgroup_id = Vattach (file_id, vgroup_ref, “w”);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Get and display the version of the attached vgroup.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;vg_version = Vgetversion (vgroup_id);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;switch (vg_version) {</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;case VSET_NEW_VERSION:</p>
+ <p class="FM_ExampleCode">              printf (“\nVgroup %s is of the newest version, version 4\n”, </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;VGROUP_NAME);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;break;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;case VSET_VERSION:</p>
+ <p class="FM_ExampleCode">              printf (“Vgroup %s is of a version between 3.2 and 4.0r2\n”, </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;VGROUP_NAME);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;break;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;case VSET_OLD_VERSION:</p>
+ <p class="FM_ExampleCode">              printf (“Vgroup %s is of version before 3.2\n”, VGROUP_NAME);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;break;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;default:</p>
+ <p class="FM_ExampleCode">           printf (“Unknown version = %d\n”, vg_version);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;} /* switch */</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Add the attribute named VGATTR_NAME to the vgroup.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;status_n = Vsetattr (vgroup_id, VGATTR_NAME, DFNT_CHAR, N_ATT_VALUES, </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;vg_attr);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Get and display the number of attributes attached to this vgroup.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;n_attrs = Vnattrs (vgroup_id);</p>
+ <p class="FM_ExampleCode">   printf (“\nThis vgroup has %d attribute(s)\n”, n_attrs);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Get and display the name and the number of values of each attribute.</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Note that the fourth and last parameters are set to NULL because the type </p>
+ <p class="FM_ExampleCode"> &#160;&#160;* and the size of the attribute are not desired.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;for (attr_index = 0; attr_index &lt; n_attrs; attr_index++)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;{</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;status_n = Vattrinfo (vgroup_id, attr_index, attr_name, NULL, </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&amp;n_values, NULL);</p>
+ <p class="FM_ExampleCode">      printf (“\nAttribute #%d is named %s and has %d values: “,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;attr_index+1, attr_name, n_values);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;* Get and display the attribute values.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status_n = Vgetattr (vgroup_id, attr_index, vgattr_buf);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;for (i = 0; i &lt; n_values; i++)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;printf (“%c “, vgattr_buf[i]);</p>
+ <p class="FM_ExampleCode">      printf (“\n”);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;}</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;* Terminate access to the vgroup and to the V interface, and close </p>
+ <p class="FM_ExampleCode"> &#160;&#160;* the HDF file.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_32 = Vdetach (vgroup_id);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = Vend (file_id);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = Hclose (file_id);</p>
+ <p class="FM_ExampleCode">}</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExamplePage"><a name="XREF_35626_set_get_vgroup"></a>set_get_vgroup_attr.f</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;program &#160;vgroup_attribute</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;implicit none</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Parameter declaration</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*19 FILE_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*9 &#160;VGROUP_NAME</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*15 VGATTR_NAME</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (FILE_NAME &#160;&#160;&#160;= ‘General_Vgroups.hdf’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;VGROUP_NAME &#160;= ‘SD Vgroup’,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;VGATTR_NAME &#160;= ‘First Attribute’)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer VSET_NEW_VERSION, VSET_VERSION, VSET_OLD_VERSION</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (VSET_NEW_VERSION = 4,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;VSET_VERSION &#160;&#160;&#160;&#160;= 3,</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;VSET_OLD_VERSION = 2) &#160;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;integer DFACC_WRITE </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (DFACC_WRITE = 2)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer DFNT_CHAR</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (DFNT_CHAR = 4)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer N_ATT_VALUES</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (N_ATT_VALUES = 6)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Function declaration</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer hopen, hclose</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer vfstart, vfatch, vfgver, vfscatt, vfnatts, vfainfo,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;vfind, vfgcatt, vfdtch, vfend</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C**** Variable declaration *******************************************</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer status, n_attrs</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer file_id</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer vgroup_id, vgroup_ref, vg_version</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer attr_index, i</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;integer data_type, n_values, size </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character vg_attr(N_ATT_VALUES)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character vgattr_buf(N_ATT_VALUES), attr_name(30)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;data vg_attr /’v’,’g’,’r’,’o’,’u’,’p’/</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C**** End of variable declaration ************************************</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Open the HDF file for reading/writing.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;file_id = hopen(FILE_NAME, DFACC_WRITE, 0)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Initialize the V interface.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vfstart(file_id)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Get the reference number of the vgroup named VGROUP_NAME.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;vgroup_ref = vfind(file_id, VGROUP_NAME)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Attach to the vgroup found.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;vgroup_id = vfatch(file_id, vgroup_ref , ‘w’)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Get and display the version of the attached vgroup.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;vg_version = vfgver(vgroup_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;if (vg_version .eq. VSET_NEW_VERSION) write(*,*)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;VGROUP_NAME, ‘ is of the newest version, version 4’</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;if (vg_version .eq. VSET_VERSION) write(*,*)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;VGROUP_NAME, ‘ is of a version between 3.2 and 4.0r2’</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;if(vg_version .eq. VSET_OLD_VERSION) write(*,*)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;VGROUP_NAME, ‘ is of version before 3.2’</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;if ((vg_version .ne. VSET_NEW_VERSION) .and.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;(vg_version .ne. VSET_VERSION) &#160;&#160;&#160;&#160;.and.</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;+ &#160;&#160;&#160;(vg_version .ne. VSET_OLD_VERSION)) write(*,*) &#160;&#160;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;‘Unknown version’</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Add the attribute named VGATTR_NAME to the vgroup.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vfscatt(vgroup_id, VGATTR_NAME, DFNT_CHAR, N_ATT_VALUES,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;vg_attr)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Get and display the number of attributes attached to this group.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;n_attrs = vfnatts(vgroup_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;write(*,*) ‘This group has’, n_attrs, ‘ attributes’</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Get and display the name and the number of values of each attribute.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;do 10 attr_index=1, n_attrs</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;status = vfainfo(vgroup_id, attr_index-1, attr_name, data_type,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;n_values, size)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;write(*,*) ‘Attribute #’, attr_index-1, ‘ is named ‘, attr_name</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;write(*,*) ‘and has’, n_values, ‘ values: ‘</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Get and display the attribute values.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vfgcatt(vgroup_id, attr_index-1, vgattr_buf)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;write(*,*) (vgattr_buf(i), i=1,n_values)</p>
+ <p class="FM_ExampleCode">10 &#160;&#160;&#160;continue</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Terminate access to the vgroup.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vfdtch(vgroup_id)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Terminate accessto the V interface and close the HDF file.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vfend(file_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = hclose(file_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;end</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExamplePage">vgroup_contents.c</p>
+ <p class="FM_ExampleCode">#include “hdf.h”</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">#define &#160;&#160;FILE_NAME &#160;&#160;&#160;&#160;&#160;&#160;&#160;“General_Vgroups.hdf”</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">main( )</p>
+ <p class="FM_ExampleCode">{</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/************************* Variable declaration **************************/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;intn &#160;&#160;status_n; &#160;&#160;&#160;&#160;/* returned status for functions returning an intn &#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;int32 &#160;status_32, &#160;&#160;&#160;/* returned status for functions returning an int32 */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;file_id, vgroup_id, vgroup_ref,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;obj_index, &#160;&#160;&#160;/* index of an object within a vgroup */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;num_of_pairs, /* number of tag/ref number pairs, i.e., objects */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;obj_tag, obj_ref, &#160;&#160;&#160;&#160;/* tag/ref number of an HDF object */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;vgroup_pos = 0; &#160;&#160;&#160;&#160;&#160;&#160;/* position of a vgroup in the file */</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/********************** End of variable declaration ***********************/</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Open the HDF file for reading.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;file_id = Hopen (FILE_NAME, DFACC_READ, 0);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Initialize the V interface.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = Vstart (file_id);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Obtain each vgroup in the file by its reference number, get the</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* number of objects in the vgroup, and display the information about</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* that vgroup.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;vgroup_ref = -1; &#160;&#160;&#160;&#160;&#160;&#160;&#160;/* set to -1 to search from the beginning of file */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;while (TRUE)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;{</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;* Get the reference number of the next vgroup in the file.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;vgroup_ref = Vgetid (file_id, vgroup_ref);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;* Attach to the vgroup for reading or exit the loop if no more vgroups</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;* are found.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;if (vgroup_ref == -1) break;</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;vgroup_id = Vattach (file_id, vgroup_ref, “r”); </p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;* Get the total number of objects in the vgroup.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;num_of_pairs = Vntagrefs (vgroup_id);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;/*</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;* If the vgroup contains any object, print the tag/ref number </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;* pair of each object in the vgroup, in the order they appear in the</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;* file, and indicate whether the object is a vdata, vgroup, or neither.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;*/</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;if (num_of_pairs &gt; 0)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;{</p>
+ <p class="FM_ExampleCode">         printf (“\nVgroup #%d contains:\n”, vgroup_pos);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;for (obj_index = 0; obj_index &lt; num_of_pairs; obj_index++)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/*</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;* Get the tag/ref number pair of the object specified </p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;* by its index, obj_index, and display them.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;status_n = Vgettagref (vgroup_id, obj_index, &amp;obj_tag, &amp;obj_ref);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;printf (“tag = %d, ref = %d”, obj_tag, obj_ref);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;* State whether the HDF object referred to by obj_ref is a vdata,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;* a vgroup, or neither.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if (Visvg (vgroup_id, obj_ref))</p>
+ <p class="FM_ExampleCode">               printf (“  &lt;-- is a vgroup\n”);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;else if (Visvs (vgroup_id, obj_ref))</p>
+ <p class="FM_ExampleCode">               printf (“  &lt;-- is a vdata\n”);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;else</p>
+ <p class="FM_ExampleCode">               printf (“  &lt;-- neither vdata nor vgroup\n”);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;} /* for */</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;} /* if */</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;else</p>
+ <p class="FM_ExampleCode">         printf (“Vgroup #%d contains no HDF objects\n”, vgroup_pos);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;* Terminate access to the current vgroup.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status_32 = Vdetach (vgroup_id);</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;* Move to the next vgroup position.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;vgroup_pos++;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;} /* while */</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"> &#160;&#160;/*</p>
+ <p class="FM_ExampleCode"> &#160;&#160;* Terminate access to the V interface and close the file.</p>
+ <p class="FM_ExampleCode"> &#160;&#160;*/</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = Vend (file_id);</p>
+ <p class="FM_ExampleCode"> &#160;&#160;status_n = Hclose (file_id);</p>
+ <p class="FM_ExampleCode">}</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExamplePage"><a name="XREF_24706_vgroup_contents_f"></a>vgroup_contents.f</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;program &#160;vgroup_contents</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;implicit none</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Parameter declaration</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;character*19 FILE_NAME</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (FILE_NAME = ‘General_Vgroups.hdf’)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer DFACC_ READ</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;parameter (DFACC_READ = 1)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Function declaration</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer hopen, hclose</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer vfstart, vfatch, vfgid, vntrc, vfgttr, vfisvg,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;vfisvs, vfdtch, vfend</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C**** Variable declaration *******************************************</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer status</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer file_id</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;integer vgroup_id, vgroup_ref, &#160;vgroup_pos</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;integer obj_index, num_of_pairs </p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;integer obj_tag, obj_ref </p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C**** End of variable declaration ************************************</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Open the HDF file for reading.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;file_id = hopen(FILE_NAME, DFACC_READ, 0)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Initialize the V interface.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vfstart(file_id)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Obtain each vgroup in the file by its reference number, get the</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;number of objects in the vgroup, and display the information</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;about that vgroup.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;vgroup_ref = -1</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;vgroup_pos = 0</p>
+ <p class="FM_ExampleCode">10 &#160;&#160;&#160;continue</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Get the reference number of the next vgroup in the file.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;vgroup_ref = vfgid(file_id, vgroup_ref)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Attach to the vgroup or go to the end if no additional vgroup is found.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;if(vgroup_ref. eq. -1) goto 100</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;vgroup_id = vfatch(file_id, vgroup_ref , ‘r’)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Get the total number of objects in the vgroup.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;num_of_pairs = vntrc(vgroup_id)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;If the vgroup contains any object, print the tag/ref number</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;pair of each object in vgroup, in the order they appear in the</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;file, and indicate whether the object is a vdata, vgroup, or neither.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;if (num_of_pairs .gt. 0) then</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;write(*,*) ‘Vgroup # ‘, vgroup_pos, ‘ contains:’</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;do 20 obj_index = 1, num_of_pairs</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Get the tag/ref number pair of the object specified by its index </p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;and display them.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;status = vfgttr(vgroup_id, obj_index-1, obj_tag, obj_ref)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;State whether the HDF object referred to by obj_ref is a vdata,</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;a vgroup, or neither.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if( vfisvg(vgroup_id, obj_ref) .eq. 1) then</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;write(*,*) ‘tag = ‘, obj_tag, ‘ ref = ‘, obj_ref,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;‘ &#160;&lt;--- is a vgroup ‘</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;else if ( vfisvs(vgroup_id, obj_ref) .eq. 1) then</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;write(*,*) ‘tag = ‘, obj_tag, ‘ ref = ‘, obj_ref,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;‘ &#160;&lt;--- is a vdata ‘</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;else</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;write(*,*) ‘tag = ‘, obj_tag, ‘ ref = ‘, obj_ref,</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;+ &#160;&#160;&#160;&#160;&#160;&#160;‘ &#160;&lt;--- neither vdata nor vgroup ‘</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;endif</p>
+ <p class="FM_ExampleCode">20 &#160;&#160;&#160;&#160;&#160;&#160;continue</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;else</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;write (*,*) ‘Vgroup #’, vgroup_pos, ‘ contains no HDF objects’</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;endif</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;write(*,*)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;vgroup_pos = vgroup_pos + 1</p>
+ <p class="FM_ExampleCode">&#160;&#160;&#160;&#160;&#160;&#160;goto 10 </p>
+ <p class="FM_ExampleCode">100 &#160;&#160;continue &#160;&#160;&#160;&#160;&#160;</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Terminate access to the vgroup.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vfdtch(vgroup_id)</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode">C &#160;&#160;&#160;&#160;Terminate access to the V interface and close the HDF file.</p>
+ <p class="FM_ExampleCode">C</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = vfend(file_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;status = hclose(file_id)</p>
+ <p class="FM_ExampleCode"> &#160;&#160;&#160;&#160;&#160;end</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+</div>
+				
+				<div class="content_top_link">
+					<a>&#160;</a> 
+				</div>
+				<div class="mobile_browseholder">
+					<div class="brsBack">
+						<a id="browseSeqBack1" class="wBSBackButton" href="../Example_GR/Example_GR.htm"><img alt="" src="../../template/Theme1_Standard/BSBack.png" class="wBSBackButton normal" id="xmlEditorBSBackButtonMobile" border="0" style="width:100%; max-width:48px" /><img alt="" src="../../template/Theme1_Standard/BSBack_hover.png" class="wBSBackButton hover" id="xmlEditorBSBackButtonMobileHover" border="0" style="width:100%; max-width:56px" /></a> 
+						 
+					</div>
+					<div class="brsNext">
+						<a id="browseSeqNext1" class="wBSNextButton" href="../Examples_MAN/Examples_MAN.htm"><img alt="" src="../../template/Theme1_Standard/BSNext.png" class="wBSNextButton normal" id="xmlEditorBSNextButtonMobile" border="0" style="width:100%; max-width:48px" /><img alt="" src="../../template/Theme1_Standard/BSNext_hover.png" class="wBSNextButton hover" id="xmlEditorBSNextButtonMobileHover" border="0" style="width:100%; max-width:48px" /></a> 
+						 
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="buttonbar">
+		<div class="buttonbarholder topic_page_holder">
+			<div class="bar_toc topic_page" id="xmlEditorButtonBarTOC" 
+				 title="Table of Contents">
+				<a href="../../table_of_contents.htm">&#160;</a> 
+			</div>
+			<div class="bar_index topic_page" id="xmlEditorButtonBarIDX" 
+				 title="Index">
+				<a href="../../index1.htm">&#160;</a> 
+			</div>
+			<div class="bar_glossary topic_page" id="xmlEditorButtonBarGLO" 
+				 title="Glossary">
+				<a href="../../glossary.htm">&#160;</a> 
+			</div>
+			<div class="bar_search topic_page">
+				<a href="../../searchresults.htm" title="Search">&#160;</a> 
+			</div>
+		</div>
+	</div>
+</div>
+<div id="localisation">
+	<p id="localisation_toc"><span>Table of Contents</span></p>
+	<p id="localisation_idx"><span>Index</span></p>
+	<p id="localisation_glo"><span>Glossary</span></p>
+	<p id="localisation_fts"><span>-Search-</span></p>
+	<p id="localisation_back"><span>Back</span></p>
+</div>
+<script type="text/javascript" src="../../template/Theme1_Standard/jquery.js"></script>
+<script type="text/javascript" src="../../template/Theme1_Standard/jqueryui-custom.js"></script>
+<script type="text/javascript" src="../../template/Theme1_Standard/overthrow.min.js"></script>
+<script type="text/javascript" src="../../template/Theme1_Standard/overthrow.sidescroller.min.js"></script>
+<script type="text/javascript" src="../../template/Theme1_Standard/layout.js"></script>
+<script type="text/javascript">//<![CDATA[
+$(function(){
+	addRhLoadCompleteEvent(setTopic);
+});
+//]]></script>
+</body>
+</html>

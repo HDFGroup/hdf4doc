@@ -1,0 +1,1649 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="OriginalFile" content="C:\hdf\H4\releases\4.2.12\Doc\hdf4doc\UsrGuide\src\UG_BookIX.fm" />
+ <meta name="Originator" content="ImportMif" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=100%, initial-scale=1" />
+<meta name="generator" content="Adobe FrameMaker 12" />
+<title>HDF User’s Guide - 4.2.12</title>
+<link href="../../template/Theme1_Standard/main.css" type="text/css" rel="stylesheet" />
+<link href="../../template/Theme1_Standard/jqueryui-custom.css" type="text/css" rel="stylesheet" />
+ <link rel="stylesheet" href="UG_BookIX.css" type="text/css" />
+ <link rel="StyleSheet" href="../../Responsive_HTML5_stylesheet.css" type="text/css" /><script type="text/javascript" language="JavaScript">//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]></script><style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" src="../../template/scripts/constants.js"></script>
+<script type="text/javascript" src="../../template/scripts/utils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhver.js"></script>
+<script type="text/javascript" src="../../template/scripts/settings.js"></script>
+<script type="text/javascript" src="../../template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadcsh.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/showhidecontrols.js"></script>
+<script type="text/javascript" src="../../template/scripts/pageloader.js"></script>
+<script type="text/javascript" src="../../template/scripts/toctree.js"></script>
+<script type="text/javascript" src="../../template/scripts/toctreeloader.js"></script>
+<script type="text/javascript" src="../../template/scripts/indextree.js"></script>
+<script type="text/javascript" src="../../template/scripts/indextreeloader.js"></script>
+<script type="text/javascript" src="../../template/scripts/glossarylist.js"></script>
+<script type="text/javascript" src="../../template/scripts/glossarylistloader.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhtopic.js"></script>
+<script type="text/javascript" src="../../template/scripts/searchfield.js"></script>
+<script type="text/javascript" src="../../template/scripts/tabpanels.js"></script>
+<script type="text/javascript" >
+gTocPageHtml = "{%ICON%}<span  class=\"wTOCTreePageText\">{%LINK_NAME%}</span>";
+gTocBookClosedHtml = "{%ICON%}<span  class=\"wTOCTreeCloseBookText\">{%LINK_NAME%}</span>";
+gTocBookOpenHtml = "{%ICON%}<span  class=\"wTOCTreeCloseBookText\">{%LINK_NAME%}</span>";
+gTocUrlHtml = "{%ICON%}<span  class=\"wTOCTreeLinkText\">{%LINK_NAME%}</span>";
+gTocPageIconSrc = "../../template/Theme1_Standard/TOCTreePage.png";
+gTocPageIconHoverSrc = "../../template/Theme1_Standard/TOCTreePageHover.png";
+gTocPageIconSelSrc = "../../template/Theme1_Standard/TOCTreePageSelected.png";
+gTocPageIconClass = "wTOCTreePageIcon";
+gTocPageIconStyle = "";
+gTocBookClosedIconSrc = "../../template/Theme1_Standard/TOCTreeCloseBook.png";
+gTocBookClosedIconHoverSrc = "../../template/Theme1_Standard/TOCTreeCloseBookHover.png";
+gTocBookClosedIconSelSrc = "../../template/Theme1_Standard/TOCTreeCloseBookSelected.png";
+gTocBookClosedIconClass = "wTOCTreeCloseBookIcon";
+gTocBookClosedIconStyle = "";
+gTocBookOpenIconSrc = "../../template/Theme1_Standard/TOCTreeOpenBook.png";
+gTocBookOpenIconHoverSrc = "../../template/Theme1_Standard/TOCTreeOpenBookHover.png";
+gTocBookOpenIconSelSrc = "../../template/Theme1_Standard/TOCTreeOpenBookHoverSelected.png";
+gTocBookOpenIconClass = "wTOCTreeOpenBookIcon";
+gTocBookOpenIconStyle = "";
+gTocUrlIconSrc = "../../template/Theme1_Standard/TOCTreeLink.png";
+gTocUrlIconHoverSrc = "../../template/Theme1_Standard/TOCTreeLinkHover.png";
+gTocUrlIconSelSrc = "../../template/Theme1_Standard/TOCTreeLinkSelected.png";
+gTocUrlIconClass = "wTOCTreeLinkIcon";
+gTocUrlIconStyle = "";
+</script>
+<script type="text/javascript" >
+gRootRelPath = "../..";
+gCommonRootRelPath = "../..";
+</script>
+<script type="text/javascript" >
+gIdxKWHtml = "<span  class=\"wIdxKeywordText\">{%LINK_NAME%}</span>";
+	gIdxLinkHtml = "<span  class=\"wIdxLinkText\">{%LINK_NAME%}</span>";
+	gIdxCategoryHtml = "<span  class=\"wIdxAlphabetText\">{%LINK_NAME%}</span>";
+</script>
+<script type="text/javascript" >
+gTopicId = "17.0_1";
+</script>
+<script type="text/javascript" >
+gGloTermHtml = "<span  class=\"wGloTermText\">{%LINK_NAME%}</span>";
+	gGloDefHtml = "<span  class=\"wGloDefinitionText\">{%LINK_NAME%}</span>";
+	gGloCategoryHtml = "<span  class=\"wGloAlphabetText\">{%LINK_NAME%}</span>";
+</script>
+ <link rel="SHORTCUT ICON" href="../../Responsive HTML5_favicon.png" />
+</head>
+
+<body>
+<script type="text/javascript" src="../../ehlpdhtm.js"></script>
+
+<div class="floatholder">
+	<div class="phone_scrollarea overthrow">
+		<div class="header">
+			<div class="logo">
+				<a href="../UG_Intro/UG_Intro.htm" class="homelink"><img src="../../template/Theme1_Standard/logo.png" alt="Logo" id="wLogoImage" style=" border:none; width:100%; max-width:90px;" border="0" /></a> 
+				 
+			</div>
+			<div class="title">
+				<a href="../UG_Intro/UG_Intro.htm" class="homelink"><span>HDF User’s Guide - 4.2.12</span></a> 
+				 
+			</div>
+		</div>
+		<div class="sidebar">
+			<div data-showin="Always" class="wTabbedPanel" id="tabbedpanel">
+				<ul class="wTabGroup" id="tab" data-tabid="tocTabButton" style="margin: 0px;">
+					<li class="wTab" id="tocTabButton" data-contentid="tocTabPane" onmouseout="onTabHoverOut(this, 'tab')" data-class="wTab" ontouchend="onTabHoverOut(this, 'tab')" onclick="selectTab(this, 'tab')" ontouchstart="onTabHover(this, 'tab')" data-classhover="wTabHover" style="display: inline;" ontouchmove="onTabHoverOut(this, 'tab')" data-classsel="wTabSelected" onmouseover="onTabHover(this, 'tab')"><img src="../../template/Theme1_Standard/toc.png" class="normal" alt="Table of Contents" title="Table of Contents" id="xmlEditorTOCSidebarButton" style=" border:none; width:100%; max-width:42px;" border="0" /><img src="../../template/Theme1_Standard/toc_hover.png" class="hover" alt="Table of Contents" title="Table of Contents" id="xmlEditorTOCSidebarButtonHover" style=" border:none; width:100%; max-width:48px;" border="0" /></li>
+					<li class="wTab" id="idxTabButton" data-contentid="idxTabPane" onmouseout="onTabHoverOut(this, 'tab')" data-class="wTab" ontouchend="onTabHoverOut(this, 'tab')" onclick="selectTab(this, 'tab')" ontouchstart="onTabHover(this, 'tab')" data-classhover="wTabHover" style="display: inline;" ontouchmove="onTabHoverOut(this, 'tab')" data-classsel="wTabSelected" onmouseover="onTabHover(this, 'tab')"><img src="../../template/Theme1_Standard/index.png" class="normal" alt="Index" title="Index" id="xmlEditorIDXSidebarButton" style=" border:none; width:100%; max-width:48px;" border="0" /><img src="../../template/Theme1_Standard/index_hover.png" class="hover" alt="Index" title="Index" id="xmlEditorIDXSidebarButtonHover" style=" border:none; width:100%; max-width:48px;" border="0" /></li>
+					<li class="wTab" id="gloTabButton" data-contentid="gloTabPane" onmouseout="onTabHoverOut(this, 'tab')" data-class="wTab" ontouchend="onTabHoverOut(this, 'tab')" onclick="selectTab(this, 'tab')" ontouchstart="onTabHover(this, 'tab')" data-classhover="wTabHover" style="display: inline;" ontouchmove="onTabHoverOut(this, 'tab')" data-classsel="wTabSelected" onmouseover="onTabHover(this, 'tab')"><img src="../../template/Theme1_Standard/glo.png" class="normal" alt="Glossary" title="Glossary" id="xmlEditorGLOSidebarButton" style=" border:none; width:100%; max-width:48px;" border="0" /><img src="../../template/Theme1_Standard/glo_hover.png" class="hover" alt="Glossary" title="Glossary" id="xmlEditorGLOSidebarButtonHover" style=" border:none; width:100%; max-width:48px;" border="0" /></li>
+				</ul>
+				<div class="wTabContentGroup">
+					<div id="tocTabPane" class="wTabContent">
+						<div id="toc" class="wTOCTree" tabindex="424">
+							
+							
+							
+							
+						</div>
+					</div>
+					<div id="idxTabPane" class="wTabContent">
+						<div id="idx" class="wIndex">
+							<input class="wIdxFilter" id="idxFilterBox" type="text" data-placeholder="Filter Keyword" onkeyup="filterIdx()"></input>
+							
+							
+							
+						</div>
+					</div>
+					<div id="gloTabPane" class="wTabContent">
+						<div id="glo" class="wGlossary">
+							<input class="wGloFilter" id="gloFilterBox" type="text" data-placeholder="Filter Term" onkeyup="filterGlo()"></input>
+							
+							
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="closebutton buttonOpened">
+				&#160; 
+			</div>
+		</div>
+		<div class="content">
+			<div class="desktop_functionholder">
+				<div class="searchholder">
+					<div class="wSearchField">
+						<input id="searchBox" class="wSearchField" type="search" data-placeholder="-Search-" onkeydown="searchHelp(event, 'searchBox')" data-search="true" /><a class="wSearchLink" onclick="searchHelp(null, 'searchBox')" href="#"><img src="../../template/Theme1_Standard/Search.png" alt="" id="xmlEditwSearchLink" class="wSearchLink" border="0" style="width:100%; max-width:28px" /></a> 
+						 
+					</div>
+				</div>
+				<div class="brsNext">
+					<a id="browseSeqNext" class="wBSNextButton" href="../Example_R24/Example_R24.htm"><img alt="" src="../../template/Theme1_Standard/BSNext.png" class="wBSNextButton normal" id="xmlEditorBSNextButton" border="0" style="width:100%; max-width:48px" /><img alt="" src="../../template/Theme1_Standard/BSNext_hover.png" class="wBSNextButton hover" id="xmlEditorBSNextButtonHover" border="0" style="width:100%; max-width:48px" /></a> 
+					 
+				</div>
+				<div class="print">
+					<a href="javascript:window.print()" class="wPrintButton"><img src="../../template/Theme1_Standard/Print.png" alt="" class="wPrintButton normal" id="xmlEditorPrintButton" border="0" style="width:100%; max-width:48px" /><img src="../../template/Theme1_Standard/Print_hover.png" alt="" class="wPrintButton hover" id="xmlEditorPrintButtonHover" border="0" style="width:100%; max-width:48px" /></a> 
+				</div>
+				<div class="brsBack">
+					<a id="browseSeqBack" class="wBSBackButton" href="../UG_RawDatainfo/UG_RawDatainfo.htm"><img alt="" src="../../template/Theme1_Standard/BSBack.png" class="wBSBackButton normal" id="xmlEditorBSBackButton" border="0" style="width:100%; max-width:48px" /><img alt="" src="../../template/Theme1_Standard/BSBack_hover.png" class="wBSBackButton hover" id="xmlEditorBSBackButtonHover" border="0" style="width:100%; max-width:56px" /></a> 
+					 
+				</div>
+			</div>
+			<div class="contentholder">
+				<div class="mobile_browseholder">
+					<div class="brsBack">
+						<a id="browseSeqBack0" class="wBSBackButton" href="../UG_RawDatainfo/UG_RawDatainfo.htm"><img alt="" src="../../template/Theme1_Standard/BSBack.png" class="wBSBackButton" border="0" style="width:100%; max-width:48px" /></a> 
+					</div>
+					<div class="brsNext">
+						<a id="browseSeqNext0" class="wBSNextButton" href="../Example_R24/Example_R24.htm"><img alt="" src="../../template/Theme1_Standard/BSNext.png" class="wBSNextButton" border="0" style="width:100%; max-width:48px" /></a> 
+					</div>
+				</div>
+				<a name="content_top_placeholder"></a> 
+				<div class="wTopic" id="rh_default_topic_placeholder_id">
+
+ <p class="FM_Title"><a name="XREF_64343_Index"></a>Index</p>
+ <p class="FM_Level1IX"><a name="HT_openObjectId"></a> Joint Photographic Expert Group compression. See JPEG compression</p>
+ <p class="FM_Level1IX"><a name="HT_openObjectId"></a> RIS8. See 8-bit raster image data set</p>
+ <p class="FM_Level1IX"><a name="HT_openObjectId"></a> Run-length encoding compression. See RLE compression</p>
+ <p class="FM_GroupTitlesIX">Numerics<a name="HT_Symbols"></a><a name="HT_Numerics"></a></p>
+ <p class="FM_Level1IX">24-bit raster image<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>277–<a name="HT_openObjectId"></a>291</span></p>
+ <p class="FM_Level2IX">compressing , data<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>284</span></p>
+ <p class="FM_Level2IX">data representation<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>277</span></p>
+ <p class="FM_Level2IX">determining the dimensions of a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>287</span></p>
+ <p class="FM_Level2IX">modifying the interlace mode of a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>287</span></p>
+ <p class="FM_Level2IX">querying the reference number of the most-recently-accessed<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>290</span></p>
+ <p class="FM_Level2IX">querying the total number of , in a file<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>290</span></p>
+ <p class="FM_Level2IX">reading<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>286–<a name="HT_openObjectId"></a>290</span></p>
+ <p class="FM_Level2IX">reading a , with a given reference number<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>289</span></p>
+ <p class="FM_Level2IX">routines for obtaining information about<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>290</span></p>
+ <p class="FM_Level2IX">setting the interlace mode for a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>283</span></p>
+ <p class="FM_Level2IX">specifying that the next , read to be the first<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>289</span></p>
+ <p class="FM_Level2IX">writing<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>281–<a name="HT_openObjectId"></a>286</span></p>
+ <p class="FM_Level1IX">24-bit Raster Image API</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>4</span></p>
+ <p class="FM_Level1IX">24-bit raster image API<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>280</span></p>
+ <p class="FM_Level2IX">routine categories<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>280</span></p>
+ <p class="FM_Level2IX">routine list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>281</span></p>
+ <p class="FM_Level1IX">24-bit raster image data set</p>
+ <p class="FM_Level2IX">compression methods<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>278</span></p>
+ <p class="FM_Level2IX">contents of a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>277</span></p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>277</span></p>
+ <p class="FM_Level2IX">interlace modes<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>279</span></p>
+ <p class="FM_Level2IX">optional objects<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>278–<a name="HT_openObjectId"></a>280</span></p>
+ <p class="FM_Level2IX">required objects<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>277–<a name="HT_openObjectId"></a>278</span></p>
+ <p class="FM_Level1IX">24-bit raster image data set dimension</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>278</span></p>
+ <p class="FM_Level1IX">8-bit raster image</p>
+ <p class="FM_Level2IX">compressing<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>266</span></p>
+ <p class="FM_Level2IX">data representation<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>259, <a name="HT_openObjectId"></a>260</span></p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>259</span></p>
+ <p class="FM_Level2IX">determining the reference number of the most-recently-accessed<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>274</span></p>
+ <p class="FM_Level2IX">determining the reference number of the palette of the most-recently-accessed<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>274</span></p>
+ <p class="FM_Level2IX">querying the dimensions of a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>271</span></p>
+ <p class="FM_Level2IX">querying the total number of , in a file<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>273</span></p>
+ <p class="FM_Level2IX">reading<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>270–<a name="HT_openObjectId"></a>273</span></p>
+ <p class="FM_Level2IX">reading a , with a given reference number<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>273</span></p>
+ <p class="FM_Level2IX">routines for obtaining information about<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>273</span></p>
+ <p class="FM_Level2IX">specifying the next , to be read<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>273</span></p>
+ <p class="FM_Level2IX">specifying the reference number for a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>270</span></p>
+ <p class="FM_Level2IX">writing<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>262–<a name="HT_openObjectId"></a>270</span></p>
+ <p class="FM_Level1IX">8-bit Raster Image API</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>4</span></p>
+ <p class="FM_Level1IX">8-bit raster image API<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>262</span></p>
+ <p class="FM_Level2IX">routine categories<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>262</span></p>
+ <p class="FM_Level2IX">routine list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>262</span></p>
+ <p class="FM_Level1IX">8-bit raster image data set<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>259–<a name="HT_openObjectId"></a>274</span></p>
+ <p class="FM_Level2IX">compression methods<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>260</span></p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>259</span></p>
+ <p class="FM_Level2IX">optional objects<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>260–<a name="HT_openObjectId"></a>261</span></p>
+ <p class="FM_Level2IX">required objects<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>259–<a name="HT_openObjectId"></a>260</span></p>
+ <p class="FM_Level1IX">8-bit raster image data set data model<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>259–<a name="HT_openObjectId"></a>261</span></p>
+ <p class="FM_Level1IX">8-bit raster image data set dimension</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>260</span></p>
+ <p class="FM_Level1IX">8-bit raster image data set palette</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>260</span></p>
+ <p class="FM_GroupTitlesIX">A<a name="HT_A"></a></p>
+ <p class="FM_Level1IX"><a name="HT_openObjectId"></a>AN API. See multifile annotation API</p>
+ <p class="FM_Level1IX">ANannlen</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>382</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>382</span></p>
+ <p class="FM_Level1IX">ANannlist</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>383</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>383</span></p>
+ <p class="FM_Level1IX">ANatype2tag</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>384</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>386</span></p>
+ <p class="FM_Level1IX">ANcreate</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>371</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>372</span></p>
+ <p class="FM_Level1IX">ANcreatef</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>371</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>372</span></p>
+ <p class="FM_Level1IX">ANend</p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>372</span></p>
+ <p class="FM_Level1IX">ANendaccess</p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>372</span></p>
+ <p class="FM_Level1IX">ANfileinfo</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>382</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>382</span></p>
+ <p class="FM_Level1IX">ANget_tagref</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>383</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>386</span></p>
+ <p class="FM_Level1IX">ANid2tagref</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>384</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>386</span></p>
+ <p class="FM_Level1IX">Annotation<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>367–<a name="HT_openObjectId"></a>383, <a name="HT_openObjectId"></a>391–<a name="HT_openObjectId"></a>407</span></p>
+ <p class="FM_Level2IX">creating and writing an , using the multifile annotation API<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>371–<a name="HT_openObjectId"></a>377</span></p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>367</span></p>
+ <p class="FM_Level2IX">getting the length of an , using the multifile annotation API<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>382</span></p>
+ <p class="FM_Level2IX">obtaining a list of , corresponding to given search criteria using the multifile annotation API<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>383</span></p>
+ <p class="FM_Level2IX">obtaining annotation information using the multifile annotation interface<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>382–<a name="HT_openObjectId"></a>388</span></p>
+ <p class="FM_Level2IX">obtaining information about every , in a file using the multifile annotation API<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>382</span></p>
+ <p class="FM_Level2IX">obtaining the number of , corresponding to given search criteria using the multifile annotation API<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>382</span></p>
+ <p class="FM_Level2IX">reading , using the single-file annotation API<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>398–<a name="HT_openObjectId"></a>403</span></p>
+ <p class="FM_Level2IX">reading an , using the multifile annotation API<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>377–<a name="HT_openObjectId"></a>378</span></p>
+ <p class="FM_Level2IX">selecting an , using the multifile annotation API<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>377</span></p>
+ <p class="FM_Level2IX">writing , using the single-file API<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>394–<a name="HT_openObjectId"></a>398</span></p>
+ <p class="FM_Level2IX">writing an , using the multifile annotation API<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>372</span></p>
+ <p class="FM_Level1IX">Annotation API</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>4</span></p>
+ <p class="FM_Level1IX">Annotation data model</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>367</span></p>
+ <p class="FM_Level1IX">ANnumann</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>382</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>383</span></p>
+ <p class="FM_Level1IX">ANreadann</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>378</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>378</span></p>
+ <p class="FM_Level1IX">ANselect</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>377</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>378</span></p>
+ <p class="FM_Level1IX">ANstart</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>371</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>372</span></p>
+ <p class="FM_Level1IX">ANtag2atype</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>385</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>386</span></p>
+ <p class="FM_Level1IX">ANtagref2id</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>384</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>386</span></p>
+ <p class="FM_Level1IX">ANwriteann</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>373</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>373</span></p>
+ <p class="FM_Level1IX">Array rank<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>20</span></p>
+ <p class="FM_Level1IX">Attribute index</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>330</span></p>
+ <p class="FM_GroupTitlesIX">B<a name="HT_B"></a></p>
+ <p class="FM_Level1IX">Block size</p>
+ <p class="FM_Level2IX">setting the , for unlimited SDS dimensions<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>42</span></p>
+ <p class="FM_Level1IX">Buffer interlacing</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>157</span></p>
+ <p class="FM_GroupTitlesIX">C<a name="HT_C"></a></p>
+ <p class="FM_Level1IX">Calibrated data</p>
+ <p class="FM_Level2IX">reading<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>111</span></p>
+ <p class="FM_Level2IX">writing<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>110</span></p>
+ <p class="FM_Level1IX">Calibration attribute<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>110–<a name="HT_openObjectId"></a>112</span></p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>103, <a name="HT_openObjectId"></a>110</span></p>
+ <p class="FM_Level1IX">Color lookup table</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>336</span></p>
+ <p class="FM_Level1IX">Command-line utilities<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>457–??</span></p>
+ <p class="FM_Level2IX">categories of<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>5</span></p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>457</span></p>
+ <p class="FM_Level2IX">list of<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>457</span></p>
+ <p class="FM_Level2IX">purpose<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>457</span></p>
+ <p class="FM_Level1IX">COMP_JPEG define</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>278</span></p>
+ <p class="FM_Level1IX">COMP_NONE define</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>278</span></p>
+ <p class="FM_Level1IX">Composite image tags</p>
+ <p class="FM_Level2IX">list of<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>509</span></p>
+ <p class="FM_Level1IX">Compressing an HDF file<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>472</span></p>
+ <p class="FM_Level1IX">Compressing RIS8 images in an HDF file<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>471</span></p>
+ <p class="FM_Level1IX">Converting 24-bit raw raster images to RIS8 images<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>468</span></p>
+ <p class="FM_Level1IX">Converting 8-bit raster images to the HDF format<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>467</span></p>
+ <p class="FM_Level1IX">Converting an HDF RIS24 image to an HDF RIS8 image<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>471</span></p>
+ <p class="FM_Level1IX">Converting floating-point data to an SDS or RIS8 object<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>463</span></p>
+ <p class="FM_Level1IX">Converting raw palette data to the HDF palette format<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>469</span></p>
+ <p class="FM_Level1IX">Converting several RIS8 images to one 3D SDS<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>470</span></p>
+ <p class="FM_Level1IX">Coordinate system attribute</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>103, <a name="HT_openObjectId"></a>423</span></p>
+ <p class="FM_GroupTitlesIX">D<a name="HT_D"></a></p>
+ <p class="FM_Level1IX">D24readref</p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>289</span></p>
+ <p class="FM_Level1IX">Data element</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>477</span></p>
+ <p class="FM_Level1IX">Data object</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>477</span></p>
+ <p class="FM_Level1IX">Description annotation</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>367</span></p>
+ <p class="FM_Level1IX">DF*lastref routine</p>
+ <p class="FM_Level2IX">list and descriptions of all<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>405</span></p>
+ <p class="FM_Level2IX">methods of determining a reference number through the use of a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>404</span></p>
+ <p class="FM_Level1IX">DF24addimage</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>281</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>282</span></p>
+ <p class="FM_Level1IX">DF24getdims</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>287</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>288</span></p>
+ <p class="FM_Level1IX">DF24getimage</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>286</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>288</span></p>
+ <p class="FM_Level1IX">DF24lastref</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>290</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>291</span></p>
+ <p class="FM_Level1IX">DF24nimages</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>290</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>290</span></p>
+ <p class="FM_Level1IX">DF24putimage</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>281</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>282</span></p>
+ <p class="FM_Level1IX">DF24readref</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>289</span></p>
+ <p class="FM_Level1IX">DF24reqil</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>287</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>288</span></p>
+ <p class="FM_Level1IX">DF24restart</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>290</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>290</span></p>
+ <p class="FM_Level1IX">DF24setcompress</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>284</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>285</span></p>
+ <p class="FM_Level1IX">DF24setil</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>283</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>285</span></p>
+ <p class="FM_Level1IX"><a name="HT_openObjectId"></a>DFAN API. See Single-file annotation API</p>
+ <p class="FM_Level1IX">DFANaddfds</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>394</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>394</span></p>
+ <p class="FM_Level1IX">DFANaddfid</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>394</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>394</span></p>
+ <p class="FM_Level1IX">DFANgetdesc</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>401</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>402</span></p>
+ <p class="FM_Level1IX">DFANgetdesclen</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>401</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>402</span></p>
+ <p class="FM_Level1IX">DFANgetfds</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>399</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>399</span></p>
+ <p class="FM_Level1IX">DFANgetfdslen</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>398</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>399</span></p>
+ <p class="FM_Level1IX">DFANgetfid</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>398</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>399</span></p>
+ <p class="FM_Level1IX">DFANgetfidlen</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>398</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>399</span></p>
+ <p class="FM_Level1IX">DFANgetlabel</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>401</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>402</span></p>
+ <p class="FM_Level1IX">DFANgetlablen</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>401</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>402</span></p>
+ <p class="FM_Level1IX">DFANlablist</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>405</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>403, <a name="HT_openObjectId"></a>406</span></p>
+ <p class="FM_Level1IX">DFANputdesc</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>396</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>396</span></p>
+ <p class="FM_Level1IX">DFANputlabel</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>395</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>396</span></p>
+ <p class="FM_Level1IX">DFPaddpal</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>361</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>361</span></p>
+ <p class="FM_Level1IX">DFPgetpal</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>363</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>363</span></p>
+ <p class="FM_Level1IX">DFPlastref</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>365</span></p>
+ <p class="FM_Level1IX">DFPnpals</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>364</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>365</span></p>
+ <p class="FM_Level1IX">DFPputpal</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>361</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>361</span></p>
+ <p class="FM_Level1IX">DFPreadref</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>364</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>364</span></p>
+ <p class="FM_Level1IX">DFPrestart</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>364</span></p>
+ <p class="FM_Level1IX">DFPwriteref</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>362</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>362</span></p>
+ <p class="FM_Level1IX">DFR8addimage</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>263</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>263</span></p>
+ <p class="FM_Level1IX">DFR8getdims</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>271</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>272</span></p>
+ <p class="FM_Level1IX">DFR8getimage</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>270</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>272</span></p>
+ <p class="FM_Level1IX">DFR8getpalref</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>274</span></p>
+ <p class="FM_Level1IX">DFR8lastref</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>274</span></p>
+ <p class="FM_Level1IX">DFR8nimages</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>273</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>274</span></p>
+ <p class="FM_Level1IX">DFR8putimage</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>263</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>263</span></p>
+ <p class="FM_Level1IX">DFR8readref</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>273</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>273</span></p>
+ <p class="FM_Level1IX">DFR8restart</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>273</span></p>
+ <p class="FM_Level1IX">DFR8setcompress</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>266</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>267</span></p>
+ <p class="FM_Level1IX">DFR8setpalette</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>264</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>265</span></p>
+ <p class="FM_Level1IX">DFR8writeref</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>270</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>270</span></p>
+ <p class="FM_Level1IX">DFSD scientific data set<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>409–??</span></p>
+ <p class="FM_Level2IX">assigning string attributes to a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>422</span></p>
+ <p class="FM_Level2IX">assigning value attributes to a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>423</span></p>
+ <p class="FM_Level2IX">contents of a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>409</span></p>
+ <p class="FM_Level2IX">creating a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>412</span></p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>409</span></p>
+ <p class="FM_Level2IX">determining the number of , in a file<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>418</span></p>
+ <p class="FM_Level2IX">obtaining reference numbers for a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>419</span></p>
+ <p class="FM_Level2IX">optional objects<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>410</span></p>
+ <p class="FM_Level2IX">preventing the reassignment of , attributes<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>415</span></p>
+ <p class="FM_Level2IX">reading<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>416–??</span></p>
+ <p class="FM_Level2IX">reading the attributes of a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>426–<a name="HT_openObjectId"></a>429</span></p>
+ <p class="FM_Level2IX">reading the dimension attributes of a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>430–??</span></p>
+ <p class="FM_Level2IX">reading the value attributes of a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>428</span></p>
+ <p class="FM_Level2IX">required objects<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>409</span></p>
+ <p class="FM_Level2IX">resetting the default interlace settings for a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>415</span></p>
+ <p class="FM_Level2IX">specifying the data type of a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>413</span></p>
+ <p class="FM_Level2IX">specifying the dimensions and data type of a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>417</span></p>
+ <p class="FM_Level2IX">writing<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>412–??</span></p>
+ <p class="FM_Level2IX">writing several<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>414</span></p>
+ <p class="FM_Level2IX">writing the dimension attributes of a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>429–<a name="HT_openObjectId"></a>430</span></p>
+ <p class="FM_Level2IX">writing the dimension scale of a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>430</span></p>
+ <p class="FM_Level1IX">DFSD scientific data set API</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>4, <a name="HT_openObjectId"></a>410</span></p>
+ <p class="FM_Level2IX">routine categories<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>410</span></p>
+ <p class="FM_Level2IX">routine list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>411</span></p>
+ <p class="FM_Level2IX">use of file identifiers in the<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>411</span></p>
+ <p class="FM_Level2IX">use of predefined attributes in the<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>422–??</span></p>
+ <p class="FM_Level2IX">use of slabs in the<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>419–<a name="HT_openObjectId"></a>422</span></p>
+ <p class="FM_Level1IX">DFSD scientific data set dimension</p>
+ <p class="FM_Level2IX">writing the string attributes of a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>429</span></p>
+ <p class="FM_Level1IX">DFSDadddata</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>412</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>412</span></p>
+ <p class="FM_Level1IX">DFSDclear</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>415</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>416</span></p>
+ <p class="FM_Level1IX">DFSDendslab</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>419</span></p>
+ <p class="FM_Level1IX">DFSDgetcal</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>428</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>429</span></p>
+ <p class="FM_Level1IX">DFSDgetdata</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>416</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>416</span></p>
+ <p class="FM_Level1IX">DFSDgetdatalen</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>426</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>427</span></p>
+ <p class="FM_Level1IX">DFSDgetdatastrs</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>426</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>427</span></p>
+ <p class="FM_Level1IX">DFSDgetdimlen</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>430</span></p>
+ <p class="FM_Level1IX">DFSDgetdims</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>417</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>417</span></p>
+ <p class="FM_Level1IX">DFSDgetdimscale</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>430</span></p>
+ <p class="FM_Level1IX">DFSDgetdimstrs</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>430</span></p>
+ <p class="FM_Level1IX">DFSDgetfillvalue</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>428</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>429</span></p>
+ <p class="FM_Level1IX">DFSDgetNT</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>417</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>417</span></p>
+ <p class="FM_Level1IX">DFSDgetrange</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>428</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>429</span></p>
+ <p class="FM_Level1IX">DFSDlastref</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>419</span></p>
+ <p class="FM_Level1IX">DFSDndatasets</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>418</span></p>
+ <p class="FM_Level1IX">DFSDputdata</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>412</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>412</span></p>
+ <p class="FM_Level1IX">DFSDreadref</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>419</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>419</span></p>
+ <p class="FM_Level1IX">DFSDreadslab</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>421</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>422</span></p>
+ <p class="FM_Level1IX">DFSDrestart</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>418</span></p>
+ <p class="FM_Level1IX">DFSDsetcal</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>424</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>424</span></p>
+ <p class="FM_Level1IX">DFSDsetdatastrs</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>422</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>423</span></p>
+ <p class="FM_Level1IX">DFSDsetdims</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>415</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>415</span></p>
+ <p class="FM_Level1IX">DFSDsetdimscale</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>430</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>430</span></p>
+ <p class="FM_Level1IX">DFSDsetdimstrs</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>429</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>430</span></p>
+ <p class="FM_Level1IX">DFSDsetfillvalue</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>424</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>424</span></p>
+ <p class="FM_Level1IX">DFSDsetlengths</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>422, <a name="HT_openObjectId"></a>429</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>423, <a name="HT_openObjectId"></a>430</span></p>
+ <p class="FM_Level1IX">DFSDsetNT</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>413</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>414</span></p>
+ <p class="FM_Level1IX">DFSDsetrange</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>424</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>424</span></p>
+ <p class="FM_Level1IX">DFSDstartslab</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>419</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>420</span></p>
+ <p class="FM_Level1IX">DFSDwriteref</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>414</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>414</span></p>
+ <p class="FM_Level1IX">DFSDwriteslab</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>420</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>421</span></p>
+ <p class="FM_Level1IX">Dimension attribute<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>92</span></p>
+ <p class="FM_Level1IX">Dimension compatbility mode</p>
+ <p class="FM_Level2IX">determining the current<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>81</span></p>
+ <p class="FM_Level1IX">Dimension compatibility mode</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>80</span></p>
+ <p class="FM_Level2IX">setting the future<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>80</span></p>
+ <p class="FM_Level1IX">Dimension format attribute</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>429</span></p>
+ <p class="FM_Level1IX">Dimension label attribute</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>429</span></p>
+ <p class="FM_Level1IX">Dimension name</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>21</span></p>
+ <p class="FM_Level1IX">Dimension record</p>
+ <p class="FM_Level2IX">creation of a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>91</span></p>
+ <p class="FM_Level1IX">Dimension scale</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>22</span></p>
+ <p class="FM_Level1IX">Dimension unit attribute</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>429</span></p>
+ <p class="FM_Level1IX">Displaying general information about the contents of an HDF file<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>458, <a name="HT_openObjectId"></a>462</span></p>
+ <p class="FM_Level1IX">Displaying vdata information<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>463</span></p>
+ <p class="FM_Level1IX">dumper<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>458</span></p>
+ <p class="FM_GroupTitlesIX">E<a name="HT_E"></a></p>
+ <p class="FM_Level1IX">Editing the contents of an HDF file<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>477</span></p>
+ <p class="FM_Level1IX">Error reporting<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>431–<a name="HT_openObjectId"></a>436</span></p>
+ <p class="FM_Level1IX">Error reporting API</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>431</span></p>
+ <p class="FM_Level2IX">returning the code of the nth-most-recent error<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>432</span></p>
+ <p class="FM_Level2IX">returning the description of an error code<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>432</span></p>
+ <p class="FM_Level2IX">routine list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>431</span></p>
+ <p class="FM_Level2IX">writing error stack information to a file<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>432</span></p>
+ <p class="FM_Level2IX">writing errors to a console window<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>433</span></p>
+ <p class="FM_Level1IX">External data file</p>
+ <p class="FM_Level2IX">creating a data set in a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>52, <a name="HT_openObjectId"></a>54</span></p>
+ <p class="FM_Level2IX">definition<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>52, <a name="HT_openObjectId"></a>158</span></p>
+ <p class="FM_Level2IX">getting information<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>55</span></p>
+ <p class="FM_Level2IX">moving data to a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>56</span></p>
+ <p class="FM_Level2IX">reading from a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>58</span></p>
+ <p class="FM_Level2IX">specifying the directory search path in a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>52</span></p>
+ <p class="FM_Level2IX">specifying the location of the next, to be created<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>53</span></p>
+ <p class="FM_Level2IX">writing to a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>52, <a name="HT_openObjectId"></a>158</span></p>
+ <p class="FM_Level1IX">External SDS array</p>
+ <p class="FM_Level2IX">definition<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>52</span></p>
+ <p class="FM_Level1IX">Extracting 8-bit raster images and palettes from HDF files<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>469</span></p>
+ <p class="FM_Level1IX">Extracting palette data from an HDF file<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>470</span></p>
+ <p class="FM_GroupTitlesIX">F<a name="HT_F"></a></p>
+ <p class="FM_Level1IX">Field data</p>
+ <p class="FM_Level2IX">packing or unpacking<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>167</span></p>
+ <p class="FM_Level1IX">File annotation</p>
+ <p class="FM_Level2IX">comparison with object annotation<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>368</span></p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>368</span></p>
+ <p class="FM_Level1IX">File attribute</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>92</span></p>
+ <p class="FM_Level1IX">File description annotation</p>
+ <p class="FM_Level2IX">assigning a , using the single-file annotation API<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>394</span></p>
+ <p class="FM_Level2IX">reading a , using the single-file annotation API<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>398</span></p>
+ <p class="FM_Level1IX">File interlacing</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>157</span></p>
+ <p class="FM_Level1IX">File label annotation</p>
+ <p class="FM_Level2IX">assigning a , using the single-file annotation API<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>394</span></p>
+ <p class="FM_Level2IX">reading a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>378</span></p>
+ <p class="FM_Level2IX">reading a , using the single-file annotation API<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>398</span></p>
+ <p class="FM_Level1IX">fill mode</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>108</span></p>
+ <p class="FM_Level1IX">fill value</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>108</span></p>
+ <p class="FM_Level1IX">Fill value attribute<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>108–<a name="HT_openObjectId"></a>110</span></p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>103</span></p>
+ <p class="FM_Level1IX">fill value attribute</p>
+ <p class="FM_Level2IX">reading a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>109</span></p>
+ <p class="FM_Level2IX">writing a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>109</span></p>
+ <p class="FM_Level1IX">FILL_ATTR define</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>326</span></p>
+ <p class="FM_Level1IX">Format attribute</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>103, <a name="HT_openObjectId"></a>423</span></p>
+ <p class="FM_Level1IX">fptohdf<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>463</span></p>
+ <p class="FM_GroupTitlesIX">G<a name="HT_G"></a></p>
+ <p class="FM_Level1IX">General raster image<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>293–<a name="HT_openObjectId"></a>351</span></p>
+ <p class="FM_Level2IX">accessing<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>298</span></p>
+ <p class="FM_Level2IX">compressing<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>310</span></p>
+ <p class="FM_Level2IX">creating a , in an external file<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>311</span></p>
+ <p class="FM_Level2IX">getting the index of a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>320</span></p>
+ <p class="FM_Level2IX">I/O access type<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>310</span></p>
+ <p class="FM_Level2IX">obtaining information about a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>320</span></p>
+ <p class="FM_Level2IX">reading<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>313</span></p>
+ <p class="FM_Level2IX">setting the interlace mode for a , or image read<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>313</span></p>
+ <p class="FM_Level2IX">terminating access to<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>299</span></p>
+ <p class="FM_Level1IX">General raster image API</p>
+ <p class="FM_Level2IX">chunking<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>347</span></p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>4</span></p>
+ <p class="FM_Level2IX">external file operations using the<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>311</span></p>
+ <p class="FM_Level2IX">obtaining a palette identifier using the<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>336</span></p>
+ <p class="FM_Level2IX">obtaining information about the contents of a file using , routines<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>319</span></p>
+ <p class="FM_Level2IX">obtaining palette information using the<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>337</span></p>
+ <p class="FM_Level2IX">reading and writing palette data using the<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>336–<a name="HT_openObjectId"></a>344</span></p>
+ <p class="FM_Level2IX">reading palette data using the<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>339</span></p>
+ <p class="FM_Level2IX">routine list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>296</span></p>
+ <p class="FM_Level2IX">writing palette data using the<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>338</span></p>
+ <p class="FM_Level1IX">General raster image array</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>294</span></p>
+ <p class="FM_Level1IX">General raster image array name</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>294</span></p>
+ <p class="FM_Level1IX">General raster image attribute<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>326–<a name="HT_openObjectId"></a>336</span></p>
+ <p class="FM_Level2IX">predefined<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>326</span></p>
+ <p class="FM_Level2IX">querying user-defined<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>330</span></p>
+ <p class="FM_Level2IX">reading user-defined<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>331</span></p>
+ <p class="FM_Level2IX">setting user-defined<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>327</span></p>
+ <p class="FM_Level1IX">General raster image attributes</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>295</span></p>
+ <p class="FM_Level1IX">General raster image data model<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>293–<a name="HT_openObjectId"></a>295</span></p>
+ <p class="FM_Level1IX">General raster image data set</p>
+ <p class="FM_Level2IX">optional objects<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>295</span></p>
+ <p class="FM_Level2IX">required objects<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>294</span></p>
+ <p class="FM_Level1IX">General raster image data set API<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>295</span></p>
+ <p class="FM_Level2IX">programming model<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>297</span></p>
+ <p class="FM_Level2IX">routine categories<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>295</span></p>
+ <p class="FM_Level1IX">General raster image index</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>294</span></p>
+ <p class="FM_Level1IX">General raster image palettes</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>295</span></p>
+ <p class="FM_Level1IX">General raster image pixel type</p>
+ <p class="FM_Level2IX">data type<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>294</span></p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>294</span></p>
+ <p class="FM_Level1IX">General raster image reference number</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>294</span></p>
+ <p class="FM_Level1IX">General raster image tags</p>
+ <p class="FM_Level2IX">list of<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>508</span></p>
+ <p class="FM_Level1IX">Global attribute</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>92</span></p>
+ <p class="FM_Level1IX">GRattrinfo</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>330</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>332</span></p>
+ <p class="FM_Level1IX">GRcreate</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>298</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>300</span></p>
+ <p class="FM_Level1IX">GRend</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>299</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>300</span></p>
+ <p class="FM_Level1IX">GRendaccess</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>299</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>300</span></p>
+ <p class="FM_Level1IX">GRfileinfo</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>319</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>320</span></p>
+ <p class="FM_Level1IX">GRfindattr</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>330</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>332</span></p>
+ <p class="FM_Level1IX">GRgetattr</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>331</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>332</span></p>
+ <p class="FM_Level1IX">GRgetchunkinfo</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>356</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>358</span></p>
+ <p class="FM_Level1IX">GRgetiminfo</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>319, <a name="HT_openObjectId"></a>320</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>320</span></p>
+ <p class="FM_Level1IX">GRgetlutid</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>336</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>340</span></p>
+ <p class="FM_Level1IX">GRgetlutinfo</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>337</span></p>
+ <p class="FM_Level1IX">GRidtoref</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>320</span></p>
+ <p class="FM_Level1IX">GRluttoref</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>337</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>337</span></p>
+ <p class="FM_Level1IX">GRnametoindex</p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>323</span></p>
+ <p class="FM_Level1IX">Group object</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>477</span></p>
+ <p class="FM_Level1IX">GRreadchunk</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>349, <a name="HT_openObjectId"></a>356</span></p>
+ <p class="FM_Level1IX">GRreadimage</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>313</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>314</span></p>
+ <p class="FM_Level1IX">GRreadlut</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>339</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>340</span></p>
+ <p class="FM_Level1IX">GRreftoindex</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>321</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>323</span></p>
+ <p class="FM_Level1IX">GRreqimageil</p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>314</span></p>
+ <p class="FM_Level1IX">GRrequtil</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>338</span></p>
+ <p class="FM_Level1IX">GRselect</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>298</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>300</span></p>
+ <p class="FM_Level1IX">GRsetaccesstype</p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>311</span></p>
+ <p class="FM_Level1IX">GRsetaccestype</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>310</span></p>
+ <p class="FM_Level1IX">GRsetattr</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>327</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>332</span></p>
+ <p class="FM_Level1IX">GRsetchunk</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>348</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>358</span></p>
+ <p class="FM_Level1IX">GRsetchunkcache</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>357</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>358</span></p>
+ <p class="FM_Level1IX">GRsetcompress</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>310</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>311</span></p>
+ <p class="FM_Level1IX">GRsetexternalfile</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>311</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>312</span></p>
+ <p class="FM_Level1IX">GRstart</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>298</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>300</span></p>
+ <p class="FM_Level1IX">GRwriteimage</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>300</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>302</span></p>
+ <p class="FM_Level1IX">GRwritelut</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>338</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>340</span></p>
+ <p class="FM_GroupTitlesIX">H<a name="HT_H"></a></p>
+ <p class="FM_Level1IX">HDF</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>1</span></p>
+ <p class="FM_Level2IX">purpose<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>1, <a name="HT_openObjectId"></a>3</span></p>
+ <p class="FM_Level1IX">HDF API</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>2, <a name="HT_openObjectId"></a>4</span></p>
+ <p class="FM_Level1IX">HDF dumper<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>458</span></p>
+ <p class="FM_Level1IX">HDF installation overview<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>511–??</span></p>
+ <p class="FM_Level1IX">HDF interface vs. netCDF interface<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>133–<a name="HT_openObjectId"></a>135</span></p>
+ <p class="FM_Level1IX">HDF_CHUNK_DEF union</p>
+ <p class="FM_Level2IX">definition of<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>115</span></p>
+ <p class="FM_Level1IX">hdf24hdf8<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>471</span></p>
+ <p class="FM_Level1IX">hdfcomp<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>471</span></p>
+ <p class="FM_Level1IX">hdfed<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>477</span></p>
+ <p class="FM_Level2IX">annotate command<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>483</span></p>
+ <p class="FM_Level2IX">close command<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>485</span></p>
+ <p class="FM_Level2IX">delete command<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>483</span></p>
+ <p class="FM_Level2IX">display command<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>484</span></p>
+ <p class="FM_Level2IX">dump command<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>482</span></p>
+ <p class="FM_Level2IX">getr8 command<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>486</span></p>
+ <p class="FM_Level2IX">help command<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>480</span></p>
+ <p class="FM_Level2IX">if conditional<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>486</span></p>
+ <p class="FM_Level2IX">info command<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>480</span></p>
+ <p class="FM_Level2IX">next command<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>482</span></p>
+ <p class="FM_Level2IX">open command<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>480</span></p>
+ <p class="FM_Level2IX">prev command<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>481</span></p>
+ <p class="FM_Level2IX">put command<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>486</span></p>
+ <p class="FM_Level2IX">putr8 command<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>485</span></p>
+ <p class="FM_Level2IX">revert command<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>486</span></p>
+ <p class="FM_Level2IX">select command<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>485, <a name="HT_openObjectId"></a>486</span></p>
+ <p class="FM_Level2IX">wait command<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>486</span></p>
+ <p class="FM_Level2IX">write command<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>484</span></p>
+ <p class="FM_Level1IX">hdfed command set<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>479</span></p>
+ <p class="FM_Level1IX">hdfls<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>475</span></p>
+ <p class="FM_Level1IX">hdfpack<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>472</span></p>
+ <p class="FM_Level1IX">hdftopal<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>470</span></p>
+ <p class="FM_Level1IX">hdftor8<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>469</span></p>
+ <p class="FM_Level1IX">hdiff<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>462</span></p>
+ <p class="FM_Level1IX">hdp<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>458</span></p>
+ <p class="FM_Level2IX">command set<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>458</span></p>
+ <p class="FM_Level2IX">dumprig command<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>461</span></p>
+ <p class="FM_Level2IX">dumpsds command<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>459</span></p>
+ <p class="FM_Level2IX">dumpvd command<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>460</span></p>
+ <p class="FM_Level2IX">dumpvg command<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>461</span></p>
+ <p class="FM_Level2IX">list command<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>459</span></p>
+ <p class="FM_Level1IX">HEclear</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>433</span></p>
+ <p class="FM_Level1IX">HEprint</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>432</span></p>
+ <p class="FM_Level1IX">HEstring</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>432</span></p>
+ <p class="FM_Level1IX">HEvalue</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>432</span></p>
+ <p class="FM_Level1IX">Hishdf/hishdff<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>13</span></p>
+ <p class="FM_Level1IX">history attribute</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>104</span></p>
+ <p class="FM_Level1IX">HXsetcreatedir</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>53</span></p>
+ <p class="FM_Level1IX">HXsetdir and HXsetcreatedir</p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>54</span></p>
+ <p class="FM_GroupTitlesIX">I<a name="HT_I"></a></p>
+ <p class="FM_Level1IX">I/O access type</p>
+ <p class="FM_Level2IX">setting the<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>43</span></p>
+ <p class="FM_Level1IX"><a name="HT_openObjectId"></a>Image compression. See IMCOMP compression</p>
+ <p class="FM_Level1IX">IMCOMP compression</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>261</span></p>
+ <p class="FM_Level1IX">interlace mode<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>157</span></p>
+ <p class="FM_GroupTitlesIX">J<a name="HT_J"></a></p>
+ <p class="FM_Level1IX">JPEG compression</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>261, <a name="HT_openObjectId"></a>279</span></p>
+ <p class="FM_Level1IX">JPEG compression quality factor</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>261</span></p>
+ <p class="FM_GroupTitlesIX">L<a name="HT_K"></a><a name="HT_L"></a></p>
+ <p class="FM_Level1IX">Label annotation</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>367</span></p>
+ <p class="FM_Level1IX">Label attribute</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>103, <a name="HT_openObjectId"></a>423</span></p>
+ <p class="FM_Level1IX">Listing basic information about an HDF file<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>475</span></p>
+ <p class="FM_Level1IX">Local attribute</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>92</span></p>
+ <p class="FM_Level1IX">Lone vdata</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>182</span></p>
+ <p class="FM_Level1IX">Lone vgroup</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>231</span></p>
+ <p class="FM_Level1IX">Low-level interface<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>2</span></p>
+ <p class="FM_Level1IX"><a name="HT_openObjectId"></a>LUT. See Color lookup table</p>
+ <p class="FM_GroupTitlesIX">M<a name="HT_M"></a></p>
+ <p class="FM_Level1IX">MFGR_INTERLACE_LINE define</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>298</span></p>
+ <p class="FM_Level1IX">MFGR_INTERLACE_PIXEL define</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>298, <a name="HT_openObjectId"></a>347</span></p>
+ <p class="FM_Level1IX">MFGR_INTERLACE_PLANE define</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>298</span></p>
+ <p class="FM_Level1IX">missing_value attribute</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>104</span></p>
+ <p class="FM_Level1IX">Multifile annotation API<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>369–<a name="HT_openObjectId"></a>383</span></p>
+ <p class="FM_Level2IX">description of the<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>369</span></p>
+ <p class="FM_Level2IX">list of tags used in<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>393</span></p>
+ <p class="FM_Level2IX">programming model for the<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>370</span></p>
+ <p class="FM_Level2IX">routine categories<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>369</span></p>
+ <p class="FM_Level2IX">routine list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>370</span></p>
+ <p class="FM_Level2IX">type definitions specific to the<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>370</span></p>
+ <p class="FM_GroupTitlesIX">N<a name="HT_N"></a></p>
+ <p class="FM_Level1IX">Native format option<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>14</span></p>
+ <p class="FM_Level1IX">netCDF<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>132–<a name="HT_openObjectId"></a>135</span></p>
+ <p class="FM_Level1IX">netCDF data model</p>
+ <p class="FM_Level2IX">HDF support of<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>132</span></p>
+ <p class="FM_Level1IX">netCDF interface vs. HDF interface<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>133–<a name="HT_openObjectId"></a>135</span></p>
+ <p class="FM_Level1IX">Not-a-Number<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>108</span></p>
+ <p class="FM_GroupTitlesIX">O<a name="HT_O"></a></p>
+ <p class="FM_Level1IX">Object annotation</p>
+ <p class="FM_Level2IX">comparison with file annotation<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>368</span></p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>368</span></p>
+ <p class="FM_Level1IX">Object description annotation</p>
+ <p class="FM_Level2IX">assigning a , using the single-file annotation API<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>396</span></p>
+ <p class="FM_Level2IX">reading a , using the single-file annotation API<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>401</span></p>
+ <p class="FM_Level1IX">Object label annotation</p>
+ <p class="FM_Level2IX">assigning a , using the single-file annotation API<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>395</span></p>
+ <p class="FM_Level2IX">reading a , using the single-file annotation API<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>400</span></p>
+ <p class="FM_Level1IX">Obsolete tags</p>
+ <p class="FM_Level2IX">list of<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>510</span></p>
+ <p class="FM_Level1IX">Old and new dimension implementation<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>80</span></p>
+ <p class="FM_GroupTitlesIX">P<a name="HT_P"></a></p>
+ <p class="FM_Level1IX">Packing or unpacking field data<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>167</span></p>
+ <p class="FM_Level1IX">Palette<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>359–<a name="HT_openObjectId"></a>365</span></p>
+ <p class="FM_Level2IX">adding to a RIS8 object<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>264</span></p>
+ <p class="FM_Level2IX">backward compatibility issues<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>365</span></p>
+ <p class="FM_Level2IX">color mapping using a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>359</span></p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>359</span></p>
+ <p class="FM_Level2IX">obtaining the reference number of the most recently accessed<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>365</span></p>
+ <p class="FM_Level2IX">querying the number of , in a file<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>364</span></p>
+ <p class="FM_Level2IX">reading<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>362–<a name="HT_openObjectId"></a>364</span></p>
+ <p class="FM_Level2IX">reading a , with a given reference number<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>364</span></p>
+ <p class="FM_Level2IX">retrieving the reference number of the specified<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>337</span></p>
+ <p class="FM_Level2IX">specifying the next palette to be accessed to be the first<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>364</span></p>
+ <p class="FM_Level2IX">specifying the reference number of a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>362</span></p>
+ <p class="FM_Level2IX">writing<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>360–<a name="HT_openObjectId"></a>362</span></p>
+ <p class="FM_Level1IX">Palette API</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>4, <a name="HT_openObjectId"></a>360</span></p>
+ <p class="FM_Level2IX">routine categories<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>360</span></p>
+ <p class="FM_Level2IX">routine list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>360</span></p>
+ <p class="FM_Level1IX">paltohdf<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>469</span></p>
+ <p class="FM_Level1IX">Performance Issues<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>437–??</span></p>
+ <p class="FM_Level1IX">Pixel interlacing</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>279</span></p>
+ <p class="FM_Level1IX">Pixels</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>259</span></p>
+ <p class="FM_Level1IX">Predefined attribute<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>103–<a name="HT_openObjectId"></a>112</span></p>
+ <p class="FM_Level2IX">accessing a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>104</span></p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>22, <a name="HT_openObjectId"></a>103, <a name="HT_openObjectId"></a>512</span></p>
+ <p class="FM_Level2IX">list of , with labels and descriptions<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>104</span></p>
+ <p class="FM_Level2IX">list of parameters<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>105</span></p>
+ <p class="FM_Level2IX">naming conventions for<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>104</span></p>
+ <p class="FM_Level1IX">Predefined dimension string attribute</p>
+ <p class="FM_Level2IX">types of<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>429</span></p>
+ <p class="FM_Level1IX">Predefined string attribute</p>
+ <p class="FM_Level2IX">types of<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>423</span></p>
+ <p class="FM_GroupTitlesIX">R<a name="HT_Q"></a><a name="HT_R"></a></p>
+ <p class="FM_Level1IX">r24hdf8<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>468</span></p>
+ <p class="FM_Level1IX">r8tohdf<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>467</span></p>
+ <p class="FM_Level1IX">Range attribute</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>103</span></p>
+ <p class="FM_Level2IX">reading a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>108</span></p>
+ <p class="FM_Level2IX">writing a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>107</span></p>
+ <p class="FM_Level1IX">Range attributes<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>107</span></p>
+ <p class="FM_Level1IX">Raster image id</p>
+ <p class="FM_Level2IX">see Raster image identifier<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>294</span></p>
+ <p class="FM_Level1IX">Raw data information</p>
+ <p class="FM_Level2IX">retrieving<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>497, <a name="HT_openObjectId"></a>498, <a name="HT_openObjectId"></a>500, <a name="HT_openObjectId"></a>501, <a name="HT_openObjectId"></a>502, <a name="HT_openObjectId"></a>503, <a name="HT_openObjectId"></a>504</span></p>
+ <p class="FM_Level1IX">Record variable</p>
+ <p class="FM_Level2IX">determining whether an SDS is a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>42</span></p>
+ <p class="FM_Level1IX">Reference number</p>
+ <p class="FM_Level2IX">checking before assigning an object annotation<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>403</span></p>
+ <p class="FM_Level2IX">determining<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>403</span></p>
+ <p class="FM_Level2IX">determining the , for the last object accessed<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>404</span></p>
+ <p class="FM_Level2IX">querying a list of , for a given tag<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>405</span></p>
+ <p class="FM_Level1IX">Reference number, overwriting data for a specified<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>414</span></p>
+ <p class="FM_Level1IX">RGB values</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>277</span></p>
+ <p class="FM_Level1IX"><a name="HT_openObjectId"></a>RIS24. See 24-bit raster image data set</p>
+ <p class="FM_Level1IX">ristosds<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>470</span></p>
+ <p class="FM_Level1IX">RLE compression</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>261</span></p>
+ <p class="FM_GroupTitlesIX">S<a name="HT_S"></a></p>
+ <p class="FM_Level1IX">Scan-line interlacing</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>279</span></p>
+ <p class="FM_Level1IX">Scan-plane interlacing</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>279</span></p>
+ <p class="FM_Level1IX">Scientific data set tags</p>
+ <p class="FM_Level2IX">list of<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>509</span></p>
+ <p class="FM_Level1IX">SD scientific data model</p>
+ <p class="FM_Level2IX">annotations and the<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>22</span></p>
+ <p class="FM_Level1IX">SD scientific data set<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>19–<a name="HT_openObjectId"></a>135</span></p>
+ <p class="FM_Level2IX">appending data to a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>41</span></p>
+ <p class="FM_Level2IX">chunked<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>115</span></p>
+ <p class="FM_Level2IX">chunked , obtaining information about a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>121</span></p>
+ <p class="FM_Level2IX">chunked , reading data from a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>120</span></p>
+ <p class="FM_Level2IX">chunked , writing to a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>118</span></p>
+ <p class="FM_Level2IX">chunks , setting the maximum number to cache<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>117</span></p>
+ <p class="FM_Level2IX">compressing data in a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>47</span></p>
+ <p class="FM_Level2IX">contents<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>132, <a name="HT_openObjectId"></a>444, <a name="HT_openObjectId"></a>445, <a name="HT_openObjectId"></a>446, <a name="HT_openObjectId"></a>447, <a name="HT_openObjectId"></a>448, <a name="HT_openObjectId"></a>449</span></p>
+ <p class="FM_Level2IX">contents of a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>19</span></p>
+ <p class="FM_Level2IX">creating , with non-standard-length data<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>77, <a name="HT_openObjectId"></a>113</span></p>
+ <p class="FM_Level2IX">data type<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>20</span></p>
+ <p class="FM_Level2IX">default data representation<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>14</span></p>
+ <p class="FM_Level2IX">dimension scales for more than one ,<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>91</span></p>
+ <p class="FM_Level2IX">establishing access to a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>26</span></p>
+ <p class="FM_Level2IX">locating a , by reference number<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>73</span></p>
+ <p class="FM_Level2IX">making a chunked , from a generic<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>115</span></p>
+ <p class="FM_Level2IX">obtaining information about a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>66, <a name="HT_openObjectId"></a>112</span></p>
+ <p class="FM_Level2IX">obtaining information about a specific<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>66, <a name="HT_openObjectId"></a>112</span></p>
+ <p class="FM_Level2IX">obtaining information about each , in a file<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>66, <a name="HT_openObjectId"></a>112</span></p>
+ <p class="FM_Level2IX">optional objects<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>21</span></p>
+ <p class="FM_Level2IX">reading from a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>58</span></p>
+ <p class="FM_Level2IX">required objects<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>20</span></p>
+ <p class="FM_Level2IX">string attributes of dimensions<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>106</span></p>
+ <p class="FM_Level2IX">terminating access to a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>28</span></p>
+ <p class="FM_Level2IX">writing to a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>31</span></p>
+ <p class="FM_Level1IX">SD scientific data set API</p>
+ <p class="FM_Level2IX">compression methods supported<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>47</span></p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>4, <a name="HT_openObjectId"></a>22</span></p>
+ <p class="FM_Level2IX">routine categories<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>22</span></p>
+ <p class="FM_Level2IX">routine list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>24</span></p>
+ <p class="FM_Level1IX">SD scientific data set array</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>20</span></p>
+ <p class="FM_Level2IX">distinguishing from a coordinate variable<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>88</span></p>
+ <p class="FM_Level1IX">SD scientific data set array name</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>20</span></p>
+ <p class="FM_Level1IX">SD scientific data set attribute<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>92</span></p>
+ <p class="FM_Level1IX">SD scientific data set dimension</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>20</span></p>
+ <p class="FM_Level2IX">naming a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>79</span></p>
+ <p class="FM_Level2IX">obtaining information about a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>82</span></p>
+ <p class="FM_Level2IX">selecting a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>78</span></p>
+ <p class="FM_Level1IX">SD scientific data set dimension index</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>21</span></p>
+ <p class="FM_Level1IX">SD scientific data set dimension scales</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>81</span></p>
+ <p class="FM_Level2IX">writing<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>81</span></p>
+ <p class="FM_Level1IX">SD scientific data set dimension string attribute</p>
+ <p class="FM_Level2IX">reading a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>107</span></p>
+ <p class="FM_Level2IX">writing a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>106</span></p>
+ <p class="FM_Level1IX">SD scientific data set string attribute</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>105</span></p>
+ <p class="FM_Level2IX">reading a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>105</span></p>
+ <p class="FM_Level2IX">writing a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>105</span></p>
+ <p class="FM_Level1IX">SD scientific data set tag<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>26, <a name="HT_openObjectId"></a>297</span></p>
+ <p class="FM_Level1IX">SD scientific data sets</p>
+ <p class="FM_Level2IX">related , definition<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>91</span></p>
+ <p class="FM_Level1IX">SDattrinfo</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>96</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>98</span></p>
+ <p class="FM_Level1IX">SDdiminfo</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>82</span></p>
+ <p class="FM_Level1IX">SDend</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>29</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>29</span></p>
+ <p class="FM_Level1IX">SDendaccess</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>28</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>29</span></p>
+ <p class="FM_Level1IX">SDexternalfile</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>54</span></p>
+ <p class="FM_Level1IX">SDfileinfo</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>66, <a name="HT_openObjectId"></a>112</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>68, <a name="HT_openObjectId"></a>74</span></p>
+ <p class="FM_Level1IX">SDfindattr</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>96</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>98</span></p>
+ <p class="FM_Level1IX">SDget_numopenfiles</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>113</span></p>
+ <p class="FM_Level1IX">SDgetcal</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>111</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>111</span></p>
+ <p class="FM_Level1IX">SDgetChunkInfo</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>121</span></p>
+ <p class="FM_Level1IX">SDgetdatastrs</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>105</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>106</span></p>
+ <p class="FM_Level1IX">SDgetdimid</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>79</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>80</span></p>
+ <p class="FM_Level1IX">SDgetdimstrs</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>107</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>107</span></p>
+ <p class="FM_Level1IX">SDgetexternalfile</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>55, <a name="HT_openObjectId"></a>203</span></p>
+ <p class="FM_Level1IX">SDgetfillvalue</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>109</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>110</span></p>
+ <p class="FM_Level1IX">SDgetinfo</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>66, <a name="HT_openObjectId"></a>112</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>68, <a name="HT_openObjectId"></a>74, <a name="HT_openObjectId"></a>113</span></p>
+ <p class="FM_Level1IX">SDgetrange</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>108</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>108</span></p>
+ <p class="FM_Level1IX">SDidtoref</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>73</span></p>
+ <p class="FM_Level1IX">SDiscoordvar</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>88</span></p>
+ <p class="FM_Level1IX">SDisrecord</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>42</span></p>
+ <p class="FM_Level1IX">SDnametoindex</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>71, <a name="HT_openObjectId"></a>72</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>73</span></p>
+ <p class="FM_Level1IX">SDreadattr</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>97</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>98</span></p>
+ <p class="FM_Level1IX">SDreadChunk</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>120</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>121</span></p>
+ <p class="FM_Level1IX">SDreaddata</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>58</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>59</span></p>
+ <p class="FM_Level1IX">SDreftoindex</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>73</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>73</span></p>
+ <p class="FM_Level1IX">SDS id</p>
+ <p class="FM_Level2IX">see SD scientific data set identifier<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>20</span></p>
+ <p class="FM_Level1IX">SDselect</p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>29</span></p>
+ <p class="FM_Level1IX">SDsetaccesstype</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>43</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>43</span></p>
+ <p class="FM_Level1IX">SDsetattr</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>93</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>98</span></p>
+ <p class="FM_Level1IX">SDsetblocksize</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>42</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>43</span></p>
+ <p class="FM_Level1IX">SDsetcal</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>110</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>111</span></p>
+ <p class="FM_Level1IX">SDsetChunk</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>115</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>117, <a name="HT_openObjectId"></a>122</span></p>
+ <p class="FM_Level1IX">SDsetChunkCache</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>117</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>118</span></p>
+ <p class="FM_Level1IX">SDsetcompress</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>47</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>49, <a name="HT_openObjectId"></a>117, <a name="HT_openObjectId"></a>118, <a name="HT_openObjectId"></a>120, <a name="HT_openObjectId"></a>121, <a name="HT_openObjectId"></a>122, <a name="HT_openObjectId"></a>497, <a name="HT_openObjectId"></a>498, <a name="HT_openObjectId"></a>500, <a name="HT_openObjectId"></a>501, <a name="HT_openObjectId"></a>502, <a name="HT_openObjectId"></a>503, <a name="HT_openObjectId"></a>504</span></p>
+ <p class="FM_Level1IX">SDsetdatastrs</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>105</span></p>
+ <p class="FM_Level1IX">SDsetdimname</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>79</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>80</span></p>
+ <p class="FM_Level1IX">SDsetdimstrs</p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>107</span></p>
+ <p class="FM_Level1IX">SDsetdimval_bwcomp</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>81</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>81</span></p>
+ <p class="FM_Level1IX">SDsetdimval_comp</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>80</span></p>
+ <p class="FM_Level1IX">SDsetexternalfile</p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>56</span></p>
+ <p class="FM_Level1IX">SDsetfillmode</p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>110</span></p>
+ <p class="FM_Level1IX">SDsetfillvalue</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>109</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>110</span></p>
+ <p class="FM_Level1IX">SDsetnbitdataset</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>77, <a name="HT_openObjectId"></a>114</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>78, <a name="HT_openObjectId"></a>115</span></p>
+ <p class="FM_Level1IX">SDsetrange</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>107</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>108</span></p>
+ <p class="FM_Level1IX">SDstart</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>27</span></p>
+ <p class="FM_Level1IX">SDwriteChunk</p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>120</span></p>
+ <p class="FM_Level1IX">SDwritechunk</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>119</span></p>
+ <p class="FM_Level1IX">SDwritedata</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>31</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>33</span></p>
+ <p class="FM_Level2IX">writing data to chunked SDSs using<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>118</span></p>
+ <p class="FM_Level1IX">Self-description</p>
+ <p class="FM_Level2IX">definition<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>1</span></p>
+ <p class="FM_Level1IX">sfgcfill</p>
+ <p class="FM_Level2IX">description of<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>109</span></p>
+ <p class="FM_Level1IX">sfgfill</p>
+ <p class="FM_Level2IX">description of<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>109</span></p>
+ <p class="FM_Level1IX">sfrcatt</p>
+ <p class="FM_Level2IX">description of<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>97</span></p>
+ <p class="FM_Level1IX">sfrnatt</p>
+ <p class="FM_Level2IX">description of<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>97</span></p>
+ <p class="FM_Level1IX">sfwcdata</p>
+ <p class="FM_Level2IX">description of<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>33</span></p>
+ <p class="FM_Level1IX">sfwdata</p>
+ <p class="FM_Level2IX">description of<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>33</span></p>
+ <p class="FM_Level1IX">Single-file Annotation API</p>
+ <p class="FM_Level2IX">routine categories<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>391</span></p>
+ <p class="FM_Level1IX">Single-file annotation API<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>391–<a name="HT_openObjectId"></a>407</span></p>
+ <p class="FM_Level2IX">list of tags used in<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>393</span></p>
+ <p class="FM_Level2IX">programming model for the<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>393</span></p>
+ <p class="FM_Level2IX">routine list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>392</span></p>
+ <p class="FM_Level1IX">Slab</p>
+ <p class="FM_Level2IX">accessing a , using the single-file scientific data set API<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>419</span></p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>32</span></p>
+ <p class="FM_Level2IX">reading a , using the single-file scientific data set API<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>421–<a name="HT_openObjectId"></a>422</span></p>
+ <p class="FM_Level2IX">writing , using the single-file scientific data set API<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>420–<a name="HT_openObjectId"></a>421</span></p>
+ <p class="FM_Level1IX">Strides</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>32</span></p>
+ <p class="FM_Level2IX">support of , in the single-file scientific data set API<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>421</span></p>
+ <p class="FM_GroupTitlesIX">T<a name="HT_T"></a></p>
+ <p class="FM_Level1IX">title attribute</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>104</span></p>
+ <p class="FM_GroupTitlesIX">U<a name="HT_U"></a></p>
+ <p class="FM_Level1IX">Unit attribute</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>103, <a name="HT_openObjectId"></a>423</span></p>
+ <p class="FM_Level1IX">Unlimited dimension<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>21</span></p>
+ <p class="FM_Level1IX">User_defined attribute</p>
+ <p class="FM_Level2IX">allowed data types for a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>92</span></p>
+ <p class="FM_Level2IX">writing a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>93</span></p>
+ <p class="FM_Level1IX">User-defined attribute<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>92–??</span></p>
+ <p class="FM_Level2IX">count<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>92, <a name="HT_openObjectId"></a>512</span></p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>21, <a name="HT_openObjectId"></a>22, <a name="HT_openObjectId"></a>92, <a name="HT_openObjectId"></a>512</span></p>
+ <p class="FM_Level2IX">index<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>92, <a name="HT_openObjectId"></a>512</span></p>
+ <p class="FM_Level2IX">naming rules<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>92</span></p>
+ <p class="FM_Level2IX">querying for a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>96</span></p>
+ <p class="FM_Level2IX">reading a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>97</span></p>
+ <p class="FM_Level1IX">Utility tags</p>
+ <p class="FM_Level2IX">list of<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>508</span></p>
+ <p class="FM_GroupTitlesIX">V<a name="HT_V"></a></p>
+ <p class="FM_Level1IX">Vaddtagref</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>218</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>219</span></p>
+ <p class="FM_Level1IX">Vattach</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>215</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>216</span></p>
+ <p class="FM_Level1IX">Vattrinfo</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>251</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>252</span></p>
+ <p class="FM_Level1IX">Vdata<span style="font-size  : 12.0pt; "> ??–<a name="HT_openObjectId"></a>207</span></p>
+ <p class="FM_Level2IX">attributes of a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>190</span></p>
+ <p class="FM_Level2IX">creating<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>155</span></p>
+ <p class="FM_Level2IX">creating and writing to multifield<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>155–<a name="HT_openObjectId"></a>173</span></p>
+ <p class="FM_Level2IX">creating and writing to single-field<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>149–<a name="HT_openObjectId"></a>155</span></p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>137</span></p>
+ <p class="FM_Level2IX">determining if the given , is an attribute<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>194</span></p>
+ <p class="FM_Level2IX">determining the reference number from a , name<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>183</span></p>
+ <p class="FM_Level2IX">multi-component field<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>138</span></p>
+ <p class="FM_Level2IX">obtaining information about a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>199–<a name="HT_openObjectId"></a>203</span></p>
+ <p class="FM_Level2IX">querying information on a given , attribute<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>193</span></p>
+ <p class="FM_Level2IX">querying the number of attributes of a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>192</span></p>
+ <p class="FM_Level2IX">querying the total number of , attributes<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>192</span></p>
+ <p class="FM_Level2IX">querying the values of a given , attribute<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>191</span></p>
+ <p class="FM_Level2IX">reading from a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>173–<a name="HT_openObjectId"></a>182</span></p>
+ <p class="FM_Level2IX">resetting the current position within a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>160</span></p>
+ <p class="FM_Level2IX">resetting the current record position within a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>161</span></p>
+ <p class="FM_Level2IX">retrieving the index of a , attribute given the attribute name<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>193</span></p>
+ <p class="FM_Level2IX">searching for<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>182–<a name="HT_openObjectId"></a>187</span></p>
+ <p class="FM_Level2IX">searching for a , by field name<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>184</span></p>
+ <p class="FM_Level2IX">searching for lone ,<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>182</span></p>
+ <p class="FM_Level2IX">searching for the reference number of a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>183</span></p>
+ <p class="FM_Level2IX">selecting the set of , to be read<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>174</span></p>
+ <p class="FM_Level2IX">setting the attribute of a ,<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>191</span></p>
+ <p class="FM_Level2IX">writing buffers into<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>162</span></p>
+ <p class="FM_Level2IX">writing to a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>161</span></p>
+ <p class="FM_Level2IX">writing to a multifield<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>159</span></p>
+ <p class="FM_Level1IX">Vdata API</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>4</span></p>
+ <p class="FM_Level2IX">routine categories<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>139</span></p>
+ <p class="FM_Level1IX">Vdata class</p>
+ <p class="FM_Level2IX">assigning to a vdata<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>156</span></p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>137</span></p>
+ <p class="FM_Level1IX">Vdata data model</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>137</span></p>
+ <p class="FM_Level1IX">Vdata field</p>
+ <p class="FM_Level2IX">defining<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>156</span></p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>138</span></p>
+ <p class="FM_Level2IX">description of a predefined<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>156</span></p>
+ <p class="FM_Level2IX">initializing for write access<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>157</span></p>
+ <p class="FM_Level2IX">locating a , within a vdata stored in a vgroup<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>242</span></p>
+ <p class="FM_Level2IX">querying the index of a , given the field name<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>190</span></p>
+ <p class="FM_Level2IX">querying the number of attributes of a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>192</span></p>
+ <p class="FM_Level2IX">removing alignment bytes when writing to a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>168</span></p>
+ <p class="FM_Level2IX">setting the attribute of a ,<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>191</span></p>
+ <p class="FM_Level1IX">Vdata field name</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>137</span></p>
+ <p class="FM_Level1IX">Vdata field order</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>138</span></p>
+ <p class="FM_Level1IX">Vdata identifier</p>
+ <p class="FM_Level2IX">determining the next<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>257</span></p>
+ <p class="FM_Level1IX">Vdata interlace mode</p>
+ <p class="FM_Level2IX">specifying the<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>157</span></p>
+ <p class="FM_Level1IX">Vdata name</p>
+ <p class="FM_Level2IX">assigning to a vdata<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>156</span></p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>137</span></p>
+ <p class="FM_Level1IX">Vdata record</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>138</span></p>
+ <p class="FM_Level1IX">Vdelete</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>247</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>248</span></p>
+ <p class="FM_Level1IX">Vdeletetagref</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>247</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>248</span></p>
+ <p class="FM_Level1IX">Vdetach</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>216</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>216</span></p>
+ <p class="FM_Level1IX">Vend</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>216</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>216</span></p>
+ <p class="FM_Level1IX">VF field information retrieval routine set<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>206</span></p>
+ <p class="FM_Level1IX">VFfieldesize</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>206</span></p>
+ <p class="FM_Level1IX">VFfieldisize</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>207</span></p>
+ <p class="FM_Level1IX">VFfieldname</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>206</span></p>
+ <p class="FM_Level1IX">VFfieldorder</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>207</span></p>
+ <p class="FM_Level1IX">VFfieldtype</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>207</span></p>
+ <p class="FM_Level1IX">Vfind</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>235</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>236</span></p>
+ <p class="FM_Level1IX">Vfindattr</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>249</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>250</span></p>
+ <p class="FM_Level1IX">Vfindclass</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>235</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>236</span></p>
+ <p class="FM_Level1IX">Vflocate</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>242</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>243</span></p>
+ <p class="FM_Level1IX">VFnfields</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>207</span></p>
+ <p class="FM_Level1IX">Vgetattr</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>252</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>253</span></p>
+ <p class="FM_Level1IX">Vgetclass</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>234</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>235</span></p>
+ <p class="FM_Level1IX">Vgetclassnamelen</p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>235</span></p>
+ <p class="FM_Level1IX">Vgetid</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>231</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>234</span></p>
+ <p class="FM_Level1IX">Vgetname</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>234</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>235</span></p>
+ <p class="FM_Level1IX">Vgetnamelen</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>234, <a name="HT_openObjectId"></a>235</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>235</span></p>
+ <p class="FM_Level1IX">Vgetnext</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>257</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>258</span></p>
+ <p class="FM_Level1IX">Vgettagref</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>240</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>241</span></p>
+ <p class="FM_Level1IX">Vgettagrefs</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>240</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>241</span></p>
+ <p class="FM_Level1IX">Vgetversion</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>248</span></p>
+ <p class="FM_Level1IX">Vgroup<span style="font-size  : 12.0pt; "> ??–<a name="HT_openObjectId"></a>258</span></p>
+ <p class="FM_Level2IX">accessing a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>215</span></p>
+ <p class="FM_Level2IX">assigning a class to a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>217</span></p>
+ <p class="FM_Level2IX">assigning a name to a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>217</span></p>
+ <p class="FM_Level2IX">attributes of a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>248</span></p>
+ <p class="FM_Level2IX">containing two RIS8 objects and a vdata<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>210</span></p>
+ <p class="FM_Level2IX">conventions on content and structure<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>211</span></p>
+ <p class="FM_Level2IX">creating and writing to a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>216–<a name="HT_openObjectId"></a>230</span></p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>209</span></p>
+ <p class="FM_Level2IX">determining the name of a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>257</span></p>
+ <p class="FM_Level2IX">inserting a HDF object into a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>218</span></p>
+ <p class="FM_Level2IX">inserting a vdata or vgroup into a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>218</span></p>
+ <p class="FM_Level2IX">locating a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>231</span></p>
+ <p class="FM_Level2IX">locating a , given the class name<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>235</span></p>
+ <p class="FM_Level2IX">locating a field within a vdata stored in a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>242</span></p>
+ <p class="FM_Level2IX">locating a lone<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>231</span></p>
+ <p class="FM_Level2IX">means of uniquely identifying a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>214</span></p>
+ <p class="FM_Level2IX">obtaining information about the contents of a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>239–<a name="HT_openObjectId"></a>247</span></p>
+ <p class="FM_Level2IX">organization of<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>210</span></p>
+ <p class="FM_Level2IX">querying the number of , members<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>257</span></p>
+ <p class="FM_Level2IX">querying the total number of , attributes<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>250</span></p>
+ <p class="FM_Level2IX">querying the values of a given , attribute<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>252, <a name="HT_openObjectId"></a>253</span></p>
+ <p class="FM_Level2IX">querying the version of a given ,<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>248</span></p>
+ <p class="FM_Level2IX">reading from a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>230–<a name="HT_openObjectId"></a>239</span></p>
+ <p class="FM_Level2IX">retrieving the index of a , attribute given the attribute name<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>249</span></p>
+ <p class="FM_Level2IX">retrieving the reference number of a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>243</span></p>
+ <p class="FM_Level2IX">retrieving the tag of a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>243</span></p>
+ <p class="FM_Level2IX">returning , member information<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>241</span></p>
+ <p class="FM_Level2IX">returning the tag/reference number pairs of , contents<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>239, <a name="HT_openObjectId"></a>240</span></p>
+ <p class="FM_Level2IX">setting the attribute of a<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>249</span></p>
+ <p class="FM_Level2IX">sharing of vgroups and vdatas between more than one<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>210</span></p>
+ <p class="FM_Level2IX">similarity to the Unix file system<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>209</span></p>
+ <p class="FM_Level2IX">terminating access to<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>216</span></p>
+ <p class="FM_Level2IX">testing whether an HDF object within a , is a vdata<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>241</span></p>
+ <p class="FM_Level2IX">testing whether an HDF object within a , is a vgroup<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>241</span></p>
+ <p class="FM_Level1IX">Vgroup API<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>211–<a name="HT_openObjectId"></a>215</span></p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>4</span></p>
+ <p class="FM_Level2IX">obsolete routines<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>257–<a name="HT_openObjectId"></a>258</span></p>
+ <p class="FM_Level2IX">routine categories<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>211</span></p>
+ <p class="FM_Level2IX">routine list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>213</span></p>
+ <p class="FM_Level1IX">Vgroup API programming model<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>214</span></p>
+ <p class="FM_Level1IX">Vgroup class</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>210</span></p>
+ <p class="FM_Level1IX">Vgroup identifier<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>214</span></p>
+ <p class="FM_Level2IX">determining the next<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>257</span></p>
+ <p class="FM_Level1IX">VHmakegroup</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>219</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>219</span></p>
+ <p class="FM_Level1IX">Vinqtagref</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>241</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>242</span></p>
+ <p class="FM_Level1IX">Vinquire</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>257</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>258</span></p>
+ <p class="FM_Level1IX">Vinsert</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>218</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>219</span></p>
+ <p class="FM_Level1IX">Visvg</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>241</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>242</span></p>
+ <p class="FM_Level1IX">Visvs</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>241</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>242</span></p>
+ <p class="FM_Level1IX">Vlone</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>231</span></p>
+ <p class="FM_Level1IX">Vnattrs</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>250</span></p>
+ <p class="FM_Level1IX">Vnrefs</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>242</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>243</span></p>
+ <p class="FM_Level1IX">Vntagrefs</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>239</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>241</span></p>
+ <p class="FM_Level1IX">VQueryref</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>243</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>243</span></p>
+ <p class="FM_Level1IX">VQuerytag</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>243</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>243</span></p>
+ <p class="FM_Level1IX">VS vdata information retrieval routine set<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>205</span></p>
+ <p class="FM_Level1IX">VSattrinfo</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>193</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>194</span></p>
+ <p class="FM_Level1IX">VSelts</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>205</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>206</span></p>
+ <p class="FM_Level1IX">Vset</p>
+ <p class="FM_Level2IX">describing a heated mesh<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>211</span></p>
+ <p class="FM_Level1IX">Vset node</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>211</span></p>
+ <p class="FM_Level1IX">Vset tags</p>
+ <p class="FM_Level2IX">list of<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>510</span></p>
+ <p class="FM_Level1IX">Vsetattr</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>249</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>250</span></p>
+ <p class="FM_Level1IX">Vsetclass</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>218</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>219</span></p>
+ <p class="FM_Level1IX">Vsetname</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>217</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>219</span></p>
+ <p class="FM_Level1IX">VSfdefine</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>156</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>159</span></p>
+ <p class="FM_Level1IX">VSfexist</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>184</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>184</span></p>
+ <p class="FM_Level1IX">VSfind</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>183</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>184</span></p>
+ <p class="FM_Level2IX">when to use , in obtaining a vdata’s reference number<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>143</span></p>
+ <p class="FM_Level1IX">VSfindattr</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>193</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>194</span></p>
+ <p class="FM_Level1IX">VSfindex</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>190</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>191</span></p>
+ <p class="FM_Level1IX">VSfnattrs</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>192</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>193</span></p>
+ <p class="FM_Level1IX">VSfpack</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>167</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>169</span></p>
+ <p class="FM_Level1IX">VSgetattr</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>191</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>192</span></p>
+ <p class="FM_Level1IX">VSgetclass</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>206</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>206</span></p>
+ <p class="FM_Level1IX">VSgetfields</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>205</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>206</span></p>
+ <p class="FM_Level1IX">VSgetid</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>183</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>184</span></p>
+ <p class="FM_Level2IX">when to use , in obtaining a vdata’s reference number<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>143</span></p>
+ <p class="FM_Level1IX">VSgetinterlace</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>205</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>206</span></p>
+ <p class="FM_Level1IX">VSgetname</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>206</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>206</span></p>
+ <p class="FM_Level1IX">vshow<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>463</span></p>
+ <p class="FM_Level1IX">VSinquire</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>199</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>200</span></p>
+ <p class="FM_Level1IX">VSisattr</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>194</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>194</span></p>
+ <p class="FM_Level1IX">VSlone</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>183</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>184</span></p>
+ <p class="FM_Level1IX">VSnattrs</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>192</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>193</span></p>
+ <p class="FM_Level1IX">VSQuery vdata information retrieval routine set<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>204</span></p>
+ <p class="FM_Level1IX">VSQuerycount</p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>205</span></p>
+ <p class="FM_Level1IX">VSQueryfields</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>204</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>205</span></p>
+ <p class="FM_Level1IX">VSQueryinterlace</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>204</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>205</span></p>
+ <p class="FM_Level1IX">VSQueryname</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>204</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>205</span></p>
+ <p class="FM_Level1IX">VSQueryref</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>204</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>205</span></p>
+ <p class="FM_Level1IX">VSQuerytag</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>204</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>205</span></p>
+ <p class="FM_Level1IX">VSQueryvsize</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>204</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>205</span></p>
+ <p class="FM_Level1IX">VSread</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>174</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>175</span></p>
+ <p class="FM_Level2IX">setting the file interlace mode using<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>157</span></p>
+ <p class="FM_Level1IX">VSseek</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>175</span></p>
+ <p class="FM_Level2IX">misused to append data<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>160</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>160, <a name="HT_openObjectId"></a>163</span></p>
+ <p class="FM_Level1IX">VSsetattr</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>191</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>192</span></p>
+ <p class="FM_Level1IX">VSsetclass</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>156</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>159</span></p>
+ <p class="FM_Level1IX">VSsetfields</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>157, <a name="HT_openObjectId"></a>174</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>159</span></p>
+ <p class="FM_Level1IX">VSsetinterlace</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>157</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>159</span></p>
+ <p class="FM_Level1IX">VSsetname</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>156</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>159</span></p>
+ <p class="FM_Level1IX">VSsizeof</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>205</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>206</span></p>
+ <p class="FM_Level1IX">Vstart</p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>216</span></p>
+ <p class="FM_Level1IX">VSwrite</p>
+ <p class="FM_Level2IX">description<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>161</span></p>
+ <p class="FM_Level2IX">parameter list<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>163</span></p>
+ <p class="FM_Level2IX">setting the file interlace mode using<span style="font-size  : 12.0pt; ">&#160;<a name="HT_openObjectId"></a>157</span></p>
+</div>
+				
+				<div class="content_top_link">
+					<a>&#160;</a> 
+				</div>
+				<div class="mobile_browseholder">
+					<div class="brsBack">
+						<a id="browseSeqBack1" class="wBSBackButton" href="../UG_RawDatainfo/UG_RawDatainfo.htm"><img alt="" src="../../template/Theme1_Standard/BSBack.png" class="wBSBackButton normal" id="xmlEditorBSBackButtonMobile" border="0" style="width:100%; max-width:48px" /><img alt="" src="../../template/Theme1_Standard/BSBack_hover.png" class="wBSBackButton hover" id="xmlEditorBSBackButtonMobileHover" border="0" style="width:100%; max-width:56px" /></a> 
+						 
+					</div>
+					<div class="brsNext">
+						<a id="browseSeqNext1" class="wBSNextButton" href="../Example_R24/Example_R24.htm"><img alt="" src="../../template/Theme1_Standard/BSNext.png" class="wBSNextButton normal" id="xmlEditorBSNextButtonMobile" border="0" style="width:100%; max-width:48px" /><img alt="" src="../../template/Theme1_Standard/BSNext_hover.png" class="wBSNextButton hover" id="xmlEditorBSNextButtonMobileHover" border="0" style="width:100%; max-width:48px" /></a> 
+						 
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="buttonbar">
+		<div class="buttonbarholder topic_page_holder">
+			<div class="bar_toc topic_page" id="xmlEditorButtonBarTOC" 
+				 title="Table of Contents">
+				<a href="../../table_of_contents.htm">&#160;</a> 
+			</div>
+			<div class="bar_index topic_page" id="xmlEditorButtonBarIDX" 
+				 title="Index">
+				<a href="../../index1.htm">&#160;</a> 
+			</div>
+			<div class="bar_glossary topic_page" id="xmlEditorButtonBarGLO" 
+				 title="Glossary">
+				<a href="../../glossary.htm">&#160;</a> 
+			</div>
+			<div class="bar_search topic_page">
+				<a href="../../searchresults.htm" title="Search">&#160;</a> 
+			</div>
+		</div>
+	</div>
+</div>
+<div id="localisation">
+	<p id="localisation_toc"><span>Table of Contents</span></p>
+	<p id="localisation_idx"><span>Index</span></p>
+	<p id="localisation_glo"><span>Glossary</span></p>
+	<p id="localisation_fts"><span>-Search-</span></p>
+	<p id="localisation_back"><span>Back</span></p>
+</div>
+<script type="text/javascript" src="../../template/Theme1_Standard/jquery.js"></script>
+<script type="text/javascript" src="../../template/Theme1_Standard/jqueryui-custom.js"></script>
+<script type="text/javascript" src="../../template/Theme1_Standard/overthrow.min.js"></script>
+<script type="text/javascript" src="../../template/Theme1_Standard/overthrow.sidescroller.min.js"></script>
+<script type="text/javascript" src="../../template/Theme1_Standard/layout.js"></script>
+<script type="text/javascript">//<![CDATA[
+$(function(){
+	addRhLoadCompleteEvent(setTopic);
+});
+//]]></script>
+</body>
+</html>

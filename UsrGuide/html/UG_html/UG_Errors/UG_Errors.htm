@@ -1,0 +1,1431 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="OriginalFile" content="C:\hdf\H4\releases\4.2.12\Doc\hdf4doc\UsrGuide\src\UG_Errors.fm" />
+ <meta name="Originator" content="ImportMif" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=100%, initial-scale=1" />
+<meta name="generator" content="Adobe FrameMaker 12" />
+<title>HDF User’s Guide - 4.2.12</title>
+<link href="../../template/Theme1_Standard/main.css" type="text/css" rel="stylesheet" />
+<link href="../../template/Theme1_Standard/jqueryui-custom.css" type="text/css" rel="stylesheet" />
+ <link rel="stylesheet" href="UG_Errors.css" type="text/css" />
+ <link rel="StyleSheet" href="../../Responsive_HTML5_stylesheet.css" type="text/css" /><script type="text/javascript" language="JavaScript">//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]></script><style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" src="../../template/scripts/constants.js"></script>
+<script type="text/javascript" src="../../template/scripts/utils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhver.js"></script>
+<script type="text/javascript" src="../../template/scripts/settings.js"></script>
+<script type="text/javascript" src="../../template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadcsh.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/showhidecontrols.js"></script>
+<script type="text/javascript" src="../../template/scripts/pageloader.js"></script>
+<script type="text/javascript" src="../../template/scripts/toctree.js"></script>
+<script type="text/javascript" src="../../template/scripts/toctreeloader.js"></script>
+<script type="text/javascript" src="../../template/scripts/indextree.js"></script>
+<script type="text/javascript" src="../../template/scripts/indextreeloader.js"></script>
+<script type="text/javascript" src="../../template/scripts/glossarylist.js"></script>
+<script type="text/javascript" src="../../template/scripts/glossarylistloader.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhtopic.js"></script>
+<script type="text/javascript" src="../../template/scripts/searchfield.js"></script>
+<script type="text/javascript" src="../../template/scripts/tabpanels.js"></script>
+<script type="text/javascript" >
+gTocPageHtml = "{%ICON%}<span  class=\"wTOCTreePageText\">{%LINK_NAME%}</span>";
+gTocBookClosedHtml = "{%ICON%}<span  class=\"wTOCTreeCloseBookText\">{%LINK_NAME%}</span>";
+gTocBookOpenHtml = "{%ICON%}<span  class=\"wTOCTreeCloseBookText\">{%LINK_NAME%}</span>";
+gTocUrlHtml = "{%ICON%}<span  class=\"wTOCTreeLinkText\">{%LINK_NAME%}</span>";
+gTocPageIconSrc = "../../template/Theme1_Standard/TOCTreePage.png";
+gTocPageIconHoverSrc = "../../template/Theme1_Standard/TOCTreePageHover.png";
+gTocPageIconSelSrc = "../../template/Theme1_Standard/TOCTreePageSelected.png";
+gTocPageIconClass = "wTOCTreePageIcon";
+gTocPageIconStyle = "";
+gTocBookClosedIconSrc = "../../template/Theme1_Standard/TOCTreeCloseBook.png";
+gTocBookClosedIconHoverSrc = "../../template/Theme1_Standard/TOCTreeCloseBookHover.png";
+gTocBookClosedIconSelSrc = "../../template/Theme1_Standard/TOCTreeCloseBookSelected.png";
+gTocBookClosedIconClass = "wTOCTreeCloseBookIcon";
+gTocBookClosedIconStyle = "";
+gTocBookOpenIconSrc = "../../template/Theme1_Standard/TOCTreeOpenBook.png";
+gTocBookOpenIconHoverSrc = "../../template/Theme1_Standard/TOCTreeOpenBookHover.png";
+gTocBookOpenIconSelSrc = "../../template/Theme1_Standard/TOCTreeOpenBookHoverSelected.png";
+gTocBookOpenIconClass = "wTOCTreeOpenBookIcon";
+gTocBookOpenIconStyle = "";
+gTocUrlIconSrc = "../../template/Theme1_Standard/TOCTreeLink.png";
+gTocUrlIconHoverSrc = "../../template/Theme1_Standard/TOCTreeLinkHover.png";
+gTocUrlIconSelSrc = "../../template/Theme1_Standard/TOCTreeLinkSelected.png";
+gTocUrlIconClass = "wTOCTreeLinkIcon";
+gTocUrlIconStyle = "";
+</script>
+<script type="text/javascript" >
+gRootRelPath = "../..";
+gCommonRootRelPath = "../..";
+</script>
+<script type="text/javascript" >
+gIdxKWHtml = "<span  class=\"wIdxKeywordText\">{%LINK_NAME%}</span>";
+	gIdxLinkHtml = "<span  class=\"wIdxLinkText\">{%LINK_NAME%}</span>";
+	gIdxCategoryHtml = "<span  class=\"wIdxAlphabetText\">{%LINK_NAME%}</span>";
+</script>
+<script type="text/javascript" >
+gTopicId = "13.0_1";
+</script>
+<script type="text/javascript" >
+gGloTermHtml = "<span  class=\"wGloTermText\">{%LINK_NAME%}</span>";
+	gGloDefHtml = "<span  class=\"wGloDefinitionText\">{%LINK_NAME%}</span>";
+	gGloCategoryHtml = "<span  class=\"wGloAlphabetText\">{%LINK_NAME%}</span>";
+</script>
+ <link rel="SHORTCUT ICON" href="../../Responsive HTML5_favicon.png" />
+</head>
+
+<body>
+<script type="text/javascript" src="../../ehlpdhtm.js"></script>
+
+<div class="floatholder">
+	<div class="phone_scrollarea overthrow">
+		<div class="header">
+			<div class="logo">
+				<a href="../UG_Intro/UG_Intro.htm" class="homelink"><img src="../../template/Theme1_Standard/logo.png" alt="Logo" id="wLogoImage" style=" border:none; width:100%; max-width:90px;" border="0" /></a> 
+				 
+			</div>
+			<div class="title">
+				<a href="../UG_Intro/UG_Intro.htm" class="homelink"><span>HDF User’s Guide - 4.2.12</span></a> 
+				 
+			</div>
+		</div>
+		<div class="sidebar">
+			<div data-showin="Always" class="wTabbedPanel" id="tabbedpanel">
+				<ul class="wTabGroup" id="tab" data-tabid="tocTabButton" style="margin: 0px;">
+					<li class="wTab" id="tocTabButton" data-contentid="tocTabPane" onmouseout="onTabHoverOut(this, 'tab')" data-class="wTab" ontouchend="onTabHoverOut(this, 'tab')" onclick="selectTab(this, 'tab')" ontouchstart="onTabHover(this, 'tab')" data-classhover="wTabHover" style="display: inline;" ontouchmove="onTabHoverOut(this, 'tab')" data-classsel="wTabSelected" onmouseover="onTabHover(this, 'tab')"><img src="../../template/Theme1_Standard/toc.png" class="normal" alt="Table of Contents" title="Table of Contents" id="xmlEditorTOCSidebarButton" style=" border:none; width:100%; max-width:42px;" border="0" /><img src="../../template/Theme1_Standard/toc_hover.png" class="hover" alt="Table of Contents" title="Table of Contents" id="xmlEditorTOCSidebarButtonHover" style=" border:none; width:100%; max-width:48px;" border="0" /></li>
+					<li class="wTab" id="idxTabButton" data-contentid="idxTabPane" onmouseout="onTabHoverOut(this, 'tab')" data-class="wTab" ontouchend="onTabHoverOut(this, 'tab')" onclick="selectTab(this, 'tab')" ontouchstart="onTabHover(this, 'tab')" data-classhover="wTabHover" style="display: inline;" ontouchmove="onTabHoverOut(this, 'tab')" data-classsel="wTabSelected" onmouseover="onTabHover(this, 'tab')"><img src="../../template/Theme1_Standard/index.png" class="normal" alt="Index" title="Index" id="xmlEditorIDXSidebarButton" style=" border:none; width:100%; max-width:48px;" border="0" /><img src="../../template/Theme1_Standard/index_hover.png" class="hover" alt="Index" title="Index" id="xmlEditorIDXSidebarButtonHover" style=" border:none; width:100%; max-width:48px;" border="0" /></li>
+					<li class="wTab" id="gloTabButton" data-contentid="gloTabPane" onmouseout="onTabHoverOut(this, 'tab')" data-class="wTab" ontouchend="onTabHoverOut(this, 'tab')" onclick="selectTab(this, 'tab')" ontouchstart="onTabHover(this, 'tab')" data-classhover="wTabHover" style="display: inline;" ontouchmove="onTabHoverOut(this, 'tab')" data-classsel="wTabSelected" onmouseover="onTabHover(this, 'tab')"><img src="../../template/Theme1_Standard/glo.png" class="normal" alt="Glossary" title="Glossary" id="xmlEditorGLOSidebarButton" style=" border:none; width:100%; max-width:48px;" border="0" /><img src="../../template/Theme1_Standard/glo_hover.png" class="hover" alt="Glossary" title="Glossary" id="xmlEditorGLOSidebarButtonHover" style=" border:none; width:100%; max-width:48px;" border="0" /></li>
+				</ul>
+				<div class="wTabContentGroup">
+					<div id="tocTabPane" class="wTabContent">
+						<div id="toc" class="wTOCTree" tabindex="320">
+							
+							
+							
+							
+						</div>
+					</div>
+					<div id="idxTabPane" class="wTabContent">
+						<div id="idx" class="wIndex">
+							<input class="wIdxFilter" id="idxFilterBox" type="text" data-placeholder="Filter Keyword" onkeyup="filterIdx()"></input>
+							
+							
+							
+						</div>
+					</div>
+					<div id="gloTabPane" class="wTabContent">
+						<div id="glo" class="wGlossary">
+							<input class="wGloFilter" id="gloFilterBox" type="text" data-placeholder="Filter Term" onkeyup="filterGlo()"></input>
+							
+							
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="closebutton buttonOpened">
+				&#160; 
+			</div>
+		</div>
+		<div class="content">
+			<div class="desktop_functionholder">
+				<div class="searchholder">
+					<div class="wSearchField">
+						<input id="searchBox" class="wSearchField" type="search" data-placeholder="-Search-" onkeydown="searchHelp(event, 'searchBox')" data-search="true" /><a class="wSearchLink" onclick="searchHelp(null, 'searchBox')" href="#"><img src="../../template/Theme1_Standard/Search.png" alt="" id="xmlEditwSearchLink" class="wSearchLink" border="0" style="width:100%; max-width:28px" /></a> 
+						 
+					</div>
+				</div>
+				<div class="brsNext">
+					<a id="browseSeqNext" class="wBSNextButton" href="../UG_Perform/UG_Perform.htm"><img alt="" src="../../template/Theme1_Standard/BSNext.png" class="wBSNextButton normal" id="xmlEditorBSNextButton" border="0" style="width:100%; max-width:48px" /><img alt="" src="../../template/Theme1_Standard/BSNext_hover.png" class="wBSNextButton hover" id="xmlEditorBSNextButtonHover" border="0" style="width:100%; max-width:48px" /></a> 
+					 
+				</div>
+				<div class="print">
+					<a href="javascript:window.print()" class="wPrintButton"><img src="../../template/Theme1_Standard/Print.png" alt="" class="wPrintButton normal" id="xmlEditorPrintButton" border="0" style="width:100%; max-width:48px" /><img src="../../template/Theme1_Standard/Print_hover.png" alt="" class="wPrintButton hover" id="xmlEditorPrintButtonHover" border="0" style="width:100%; max-width:48px" /></a> 
+				</div>
+				<div class="brsBack">
+					<a id="browseSeqBack" class="wBSBackButton" href="../UG_DFSD/UG_DFSD.htm"><img alt="" src="../../template/Theme1_Standard/BSBack.png" class="wBSBackButton normal" id="xmlEditorBSBackButton" border="0" style="width:100%; max-width:48px" /><img alt="" src="../../template/Theme1_Standard/BSBack_hover.png" class="wBSBackButton hover" id="xmlEditorBSBackButtonHover" border="0" style="width:100%; max-width:56px" /></a> 
+					 
+				</div>
+			</div>
+			<div class="contentholder">
+				<div class="mobile_browseholder">
+					<div class="brsBack">
+						<a id="browseSeqBack0" class="wBSBackButton" href="../UG_DFSD/UG_DFSD.htm"><img alt="" src="../../template/Theme1_Standard/BSBack.png" class="wBSBackButton" border="0" style="width:100%; max-width:48px" /></a> 
+					</div>
+					<div class="brsNext">
+						<a id="browseSeqNext0" class="wBSNextButton" href="../UG_Perform/UG_Perform.htm"><img alt="" src="../../template/Theme1_Standard/BSNext.png" class="wBSNextButton" border="0" style="width:100%; max-width:48px" /></a> 
+					</div>
+				</div>
+				<a name="content_top_placeholder"></a> 
+				<div class="wTopic" id="rh_default_topic_placeholder_id">
+
+ <p class="Body">&nbsp;</p>
+ <p class="ChapTitleUnNum"><a name="IX_Error_reporting"></a><span class="FM_ChapterNumber">Chapter 13<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>Er<a name="XREF_23732_Error_Reporting"></a>ror Reporting</p>
+ <p class="Body">&nbsp;</p>
+ <p class="Heading1">13.1<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;</span>Chapter Overview</p>
+ <p class="Body">This chapter describes the main error reporting routines designed for general HDF use and the types of errors handled by the error reporting API and the general structure of the API.</p>
+ <p class="Heading2">13.2<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;</span>The HDF Error Reporting API</p>
+ <p class="Body"><a name="IX_description_376"></a>The HDF error reporting API consists of routines that query error stack information, the names of which are prefaced by “HE”. They are described briefly in <a href="#XREF_21471_TABLE_13A_Error">Table 13A</a>. Some are primarily for use by HDF developers while others are available to HDF users. In this chapter, three error reporting functions are covered: <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">HEprint</span>, <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">HEvalue</span>&#160;and <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">HEstring</span>. Note that only one C error reporting routine has a FORTRAN-77 counterpart: <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">heprnt/heprntf</span> (<span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">heprntf</span> is the newer function, sup&#173;ported on all platforms; <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">heprnt</span>&#160;is the original function, supported on non-Microsoft Windows platforms).</p>
+ <p class="Figure"><a name="IX_routine_list_9"></a><span class="StepNumber">TABLE 13A<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><a name="XREF_21471_TABLE_13A_Error"></a>Error Reporting Routine List</p>
+ <table width="100%">
+  <tr>
+  <td>
+ <table style=" border-spacing:0; padding-left:6.00pt; padding-top:4.00pt; padding-right:6.00pt; padding-bottom:2.00pt; float:alignleft; margin-left:95.33pt; width:100%; max-width:393.19pt;" cellspacing="0" align="left">
+  <tr style=" height : 13.00pt;">
+  <th rowspan="2" style="width : 61.957pt; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">Category</p>
+</th>
+  <th colspan="2" style="width : 139.357pt; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">Routine Name</p>
+</th>
+  <th rowspan="2" style="width : 191.878pt; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">Description</p>
+</th>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <th style="width : 81.000pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">C </p>
+</th>
+  <th style="width : 58.357pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">FORTRAN-77</p>
+</th>
+</tr>
+  <tr style=" height : 19.00pt;">
+  <td rowspan="3" style="width : 61.957pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableCategory">Error Reporting</p>
+</td>
+  <td style="width : 81.000pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">HEprint</p>
+</td>
+  <td style="width : 58.357pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">heprnt<br />heprntf</p>
+</td>
+  <td style="width : 191.878pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Prints the errors on the error stack to a specified file.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 81.000pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">HEstring</p>
+</td>
+  <td style="width : 58.357pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">hestringf</p>
+</td>
+  <td style="width : 191.878pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Returns the error message associated with an error code.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 81.000pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">HEvalue</p>
+</td>
+  <td style="width : 58.357pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">None</p>
+</td>
+  <td style="width : 191.878pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Returns the nth most recent error reported.</p>
+</td>
+</tr>
+ </table>
+</td></tr>
+ </table>
+ <p class="Figure"></p>
+ <p class="Heading2">13.3<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;</span>Error Reporting in HDF</p>
+ <p class="Body">Most HDF error reporting routines return <span class="DefName">FAIL</span>&#160;(or <span class="DefName">-1</span>) if the operation is successful and <span class="DefName">SUCCEED</span>&#160;(or <span class="DefName">0</span>) otherwise. Each time a <span class="DefName">FAIL</span>&#160;code is returned one or more error codes are pushed onto the error code stack. The following pseudo-code will demonstrate the two methods commonly used to access and print the contents of this stack.</p>
+ <p class="FM_1syntax">if (&lt;general HDF function() &gt;= FAIL) {</p>
+ <p class="FM_syntax"><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>&lt;HDF error reporting API routines&gt;</p>
+ <p class="FM_syntax">}</p>
+ <p class="FM_1syntax" style="font-weight : bold; letter-spacing : 0.00em;"><span class="FM_syntaxLang" style="font-family : Courier New; font-style : normal; font-weight : bold; font-size  : 9.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">OR</span></p>
+ <p class="FM_1syntax">status = &lt;general HDF function( );</p>
+ <p class="FM_syntax">if (status == FAIL) {</p>
+ <p class="FM_syntax"><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>&lt;HDF error reporting API routines&gt;</p>
+ <p class="FM_syntax">}</p>
+ <p class="Body">A list of error codes is included at the end of this chapter. </p>
+ <p class="Heading3"><a name="IX_writing_error_stack"></a>13.3.1Writing Errors to a File: HEprint</p>
+ <p class="Body"><a name="IX_description_377"></a><span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">HEprint</span>&#160;writes the errors on the stack to the specified file. There are four sections of an <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">HEprint</span>&#160;error report:</p>
+ <p class="Step"><span class="StepNumber">1.<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>A description of the error.</p>
+ <p class="Step"><span class="StepNumber">2.<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>The routine in which the error was detected.</p>
+ <p class="Step"><span class="StepNumber">3.<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>The source file in which the error was detected.</p>
+ <p class="Step"><span class="StepNumber">4.<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>The line number in which the error was detected.</p>
+ <p class="Body">The syntax for <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">HEprint</span> is as follows:</p>
+ <p class="FM_1syntax"><span class="FM_syntaxLang" style="font-family : Courier New; font-style : normal; font-weight : bold; font-size  : 9.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">C:</span><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>HEprint(stream, level);</p>
+ <p class="FM_1syntax"><span class="FM_syntaxLang" style="font-family : Courier New; font-style : normal; font-weight : bold; font-size  : 9.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">FORTRAN:</span><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>status = heprnt(level)</p>
+ <p class="Body">The <span class="VarName">stream</span>&#160;parameter is a UNIX file handle indicating the output stream the error information will be written to. The <span class="VarName">level</span>&#160;parameter specifies the amount of error information to report. In FORTRAN-77, <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">heprnt</span>&#160;(supported on non-Microsoft Windows platforms) always writes to the standard error stream, or <span class="VarName">stderr</span>; therefore the only parameter is <span class="VarName">level</span>. To facilitate Microsoft Win&#173;dows support, a newer function <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">heprntf</span>&#160;(supported on all platforms) requires two parameters, <span class="VarName">filename</span>&#160;to identify the file to which the error information is to be written and <span class="VarName">level</span>.</p>
+ <p class="Body">Errors are written in sequential order starting from the bottom of the stack. Consequently, specify&#173;ing a <span class="VarName">level</span>&#160;parameter value of 1 will write the first error that occurred, or the first error pushed onto the stack. Specifying a <span class="VarName">level</span> parameter of value 0 will write all errors on the stack to the spec&#173;ified file. For example, the following C code will write all errors on the stack to the file named “errors”.</p>
+ <p class="FM_1syntax"><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>f = fopen(&quot;errors&quot;, &quot;w&quot;);</p>
+ <p class="FM_syntax"><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>HEprint(f, 0);</p>
+ <p class="Body">As an example of the output of <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">HEprint</span>, suppose an attempt is made to open an nonexistent file with <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">Hopen</span>. Calling <span class="Subscript">HEprint(stdout, 0)</span>&#160;or <span class="Subscript">heprnt(0)</span> will produce the following output:</p>
+ <p class="FM_1syntax"><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>HDF error: &lt;error opening file&gt;</p>
+ <p class="FM_syntax"><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>Detected in Hopen() [hfile.c line 305]</p>
+ <p class="Heading3"><a name="IX_returning_the_code_of"></a>13.3.2Returning the Code of the Nth Most Recent Error: HEvalue</p>
+ <p class="Body"><a name="IX_description_378"></a><span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">HEvalue</span>&#160;returns the error code for the nth most recent error and is only available as a C routine. The <span class="VarName">level</span>&#160;parameter specifies the number of errors to regress from the top of the error stack, i.e., <span class="Subscript">HEvalue(1)</span>&#160;will return the error code at the top of the stack. Refer to <a href="#XREF_Table_13B_HDF_Error_Codes">(See Table&nbsp;13B on page&nbsp;440)</a>&#160;for a complete list of HDF4 error codes.</p>
+ <p class="Body">The syntax for <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">HEvalue</span> is as follows:</p>
+ <p class="FM_1syntax"><span class="FM_syntaxLang" style="font-family : Courier New; font-style : normal; font-weight : bold; font-size  : 9.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">C:</span><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>status = HEvalue(level);</p>
+ <p class="Heading3"><a name="IX_returning_the"></a>13.3.3Returning the Description of an Error Code: HEstring/hestringf</p>
+ <p class="Body"><a name="IX_description_379"></a><span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">HEstring</span>&#160;returns the error description associated with the error code specified by the <span class="VarName">error_code</span>&#160;parameter as a character string. </p>
+ <p class="Body">The syntax for <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">HEstring</span> is as follows:</p>
+ <p class="FM_1syntax"><span class="FM_syntaxLang" style="font-family : Courier New; font-style : normal; font-weight : bold; font-size  : 9.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">C:</span><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>error_message = HEstring(error_code);</p>
+ <p class="FM_1syntax"><span class="FM_syntaxLang" style="font-family : Courier New; font-style : normal; font-weight : bold; font-size  : 9.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">FORTRAN:</span><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>status = <span style="font-size  : 8.0pt; letter-spacing : 0.00em; ">hestringf(error_code, error_message)</span></p>
+ <p class="Heading3">13.3.4Clearing the error stack: HEclear</p>
+ <p class="Body"><a name="IX_description_380"></a><span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">HEclear</span>&#160;clears all information on reported errors from the error stack and is only available as a C routine. The syntax for <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">HEclear</span> is as follows:</p>
+ <p class="FM_1syntax"><span class="FM_syntaxLang" style="font-family : Courier New; font-style : normal; font-weight : bold; font-size  : 9.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">C:</span><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>status = HEclear();</p>
+ <p class="Body">Note that every HDF4 API calls <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">HEclear</span> to clear the error stack.</p>
+ <p class="Figure"><a name="IX_writing_errors_to_a"></a><span class="StepNumber">EXAMPLE 1.<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>Writing Errors to a Console Window</p>
+ <p class="Body">The following C code fragment will copy errors from the stack to a console window.</p>
+ <p class="FM_CodeCTitle">C:<span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span></p>
+ <p class="FM_ExampleCode">#include &quot;hdf.h&quot;</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>main( )</p>
+ <p class="FM_ExampleCode">{</p>
+ <p class="FM_ExampleCode">&nbsp;</p>
+ <p class="FM_ExampleCode"><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>int32 i, e;</p>
+ <p class="FM_ExampleCode"><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>const char *str;</p>
+ <p class="FM_ExampleCode"><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>...</p>
+ <p class="FM_ExampleCode"><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>i = 0;</p>
+ <p class="FM_ExampleCode"><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>while ((e = HEvalue(i)) != DFE_NONE) {</p>
+ <p class="FM_ExampleCode"><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>str = HEstring(e);</p>
+ <p class="FM_ExampleCode"><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>&lt;device-specific code to print the string to a console&gt;</p>
+ <p class="FM_ExampleCode"><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>i++</p>
+ <p class="FM_ExampleCode"><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>...</p>
+ <p class="FM_ExampleCode">}</p>
+ <p class="Figure"><span class="StepNumber">TABLE 13B<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><a name="XREF_Table_13B_HDF_Error_Codes"></a>HDF Error Codes</p>
+ <table width="100%">
+  <tr>
+  <td>
+ <table style=" border-spacing:0; padding-left:6.00pt; padding-top:4.00pt; padding-right:6.00pt; padding-bottom:2.00pt; float:alignleft; margin-left:95.33pt; width:100%; max-width:390.67pt;" cellspacing="0" align="left">
+  <tr style=" height : 13.00pt;">
+  <th style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">Error Code</p>
+</th>
+  <th style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">Code Definition</p>
+</th>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_NONE</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">No error.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_FNF</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">File not found.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_DENIED</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Access to file denied.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_ALROPEN</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">File already open.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_TOOMANY</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Too many AID's or files open.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_BADNAME</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Bad file name on open.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_BADACC</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Bad file access mode.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_BADOPEN</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Miscellaneous open error.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_NOTOPEN</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">File can't be closed because it hasn’t been opened.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_CANTCLOSE</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription"><span class="FM_Figure7ptBold" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 7.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">fclose</span> error</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_READERROR</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Read error.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_WRITEERROR</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Write error.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_SEEKERROR</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Seek error.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_RDONLY</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">File is read only.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_BADSEEK</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Attempt to seek past end of element.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_PUTELEM</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription"><span class="FM_Figure7ptBold" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 7.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">Hputelement</span> error.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_GETELEM</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription"><span class="FM_Figure7ptBold" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 7.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">Hgetelement</span> error.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_CANTLINK</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Cannot initialize link information.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_CANTSYNC</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Cannot synchronize memory with file.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_BADGROUP</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Error from <span class="FM_Figure7ptBold" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 7.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">DFdiread</span> in opening a group.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_GROUPSETUP</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Error from <span class="FM_Figure7ptBold" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 7.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">DFdisetup</span> in opening a group.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_PUTGROUP</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Error on &#160;putting a tag/reference number pair into a group.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_GROUPWRITE</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Error when writing group contents.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_DFNULL</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Data file reference is a null pointer.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_ILLTYPE</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Data file contains an illegal type: internal error.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_BADDDLIST</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">The DD list is non-existent: internal error.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_NOTDFFILE</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">The current file is not an HDF file and it is not zero length.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_SEEDTWICE</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">The DD list already seeded: internal error.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_NOSUCHTAG</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">No such tag in the file: search failed.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_NOFREEDD</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">There are no free DDs left: internal error.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_BADTAG</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Illegal WILDCARD tag.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_BADREF</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Illegal WILDCARD reference number.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_NOMATCH</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">No DDs (or no more DDs) that match the specified tag/reference number pair.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_NOTINSET</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Warning: Set contained unknown tag. Ignored.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_BADOFFSET</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Illegal offset specified.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_CORRUPT</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">File is corrupted.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_NOREF</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">No more reference numbers are available.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_DUPDD</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">The new tag/reference number pair has been allocated.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_CANTMOD</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Old element doesn’t exist. &#160;Cannot modify.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_DIFFFILES</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Attempt to merge objects in different files.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_BADAID</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">An invalid AID was received.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_OPENAID</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Active AIDs still exist.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_CANTFLUSH</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Cannot flush DD back to file.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_CANTUPDATE</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Cannot update the DD block.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_CANTHASH</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Cannot add a DD to the hash table.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_CANTDELDD</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Cannot delete a DD in the file.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_CANTDELHASH</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Cannot delete a DD from the hash table.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_CANTACCESS</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Cannot access specified tag/reference number pair.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_CANTENDACCESS</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Cannot end access to data element.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_TABLEFULL</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Access table is full.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_NOTINTABLE</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Cannot find element in table.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_UNSUPPORTED</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Feature not currently supported.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_NOSPACE</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription"><span class="FM_Figure7ptBold" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 7.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">malloc</span> failed.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_BADCALL</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Routine calls were in the wrong order.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_BADPTR</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription"><span class="DefName">NULL</span> pointer argument was specified.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_BADLEN</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Invalid length was specified.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_NOTENOUGH</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Not enough space for the data.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_NOVALS</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Values were not available.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_ARGS</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Invalid arguments passed to the routine.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_INTERNAL</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Serious internal error.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_NORESET</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Too late to modify this value.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_GENAPP</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Generic application level error.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_UNINIT</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Interface was not initialized correctly.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_CANTINIT</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Cannot initialize the interface the operation requires.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_CANTSHUTDOWN</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Cannot shut down the interface the operation requires.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_BADDIM</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Negative number of dimensions, or zero dimensions, was specified.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_BADFP</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">File contained an illegal floating point number.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_BADDATATYPE</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Unknown or unavailable data type was specified.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_BADMCTYPE</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Unknown or unavailable machine type was specified.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_BADNUMTYPE</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Unknown or unavailable number type was specified.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_BADORDER</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Unknown or illegal array order was specified.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_RANGE</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Improper range for attempted access.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_BADCONV</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Invalid data type conversion was specified.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_BADTYPE</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Incompatible types were specified.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_BADSCHEME</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Unknown compression scheme was specified.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_BADMODEL</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Invalid compression model was specified.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_BADCODER</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Invalid compression encoder was specified.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_MODEL</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Error in the modeling layer of the compression operation.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_CODER</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Error in the encoding layer of the compression operation.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_CINIT</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Error in encoding initialization.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_CDECODE</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Error in decoding compressed data.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_CENCODE</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Error in encoding compressed data.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_CTERM</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Error in encoding termination.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_CSEEK</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Error seeking in an encoded data set.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_MINIT</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Error in modeling initialization.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_COMPINFO</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Invalid compression header.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_CANTCOMP</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Cannot compress an object.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_CANTDECOMP</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Cannot decompress an object.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_NOENCODER</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Encoder not available.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_NOSZLIB</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">SZIP library not available.</p>
+</td>
+</tr>
+  <tr style=" height : 22.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_COMPVERSION</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Version error from zlib</p>
+  <p class="CellDescription">Note: when <span class="DefName">Z_VERSION_ERROR</span> (-6) returned from zlib.</p>
+</td>
+</tr>
+  <tr style=" height : 67.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_READCOMP</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Error in reading compressed data.</p>
+  <p class="CellDescription">Note: when one of the following error codes returned from zlib:</p>
+  <p class="CellDescription"><span class="DefName">Z_ERRNO</span> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(-1)</p>
+  <p class="CellDescription"><span class="DefName">Z_STREAM_ERROR</span> &#160;(-2)</p>
+  <p class="CellDescription"><span class="DefName">Z_DATA_ERROR</span> &#160;&#160;&#160;(-3)</p>
+  <p class="CellDescription"><span class="DefName">Z_MEM_ERROR</span> &#160;&#160;&#160;&#160;(-4)</p>
+  <p class="CellDescription"><span class="DefName">Z_BUF_ERROR</span> &#160;&#160;&#160;&#160;(-5)</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_NODIM</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">A dimension record was not associated with the image.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_BADRIG</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Error processing a RIG.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_RINOTFOUND</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Cannot find raster image.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_BADATTR</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Invalid attribute.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_BADTABLE</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">The nsdg table has incorrect information.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_BADSDG</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Error in processing an SDG.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_BADNDG</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Error in processing an NDG.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_VGSIZE</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Too many elements in the vgroup.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_VTAB</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Element not in <span class="DefName">vtab[]</span><span style="font-family : Courier New; ">.</span></p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_CANTADDELEM</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Cannot add the &#160;tag/reference number pair to the vgroup.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_BADVGNAME</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Cannot set the vgroup name.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_BADVGCLASS</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Cannot set the vgroup class.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_BADFIELDS</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Invalid fields string passed to vset routine.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_NOVS</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Cannot find the vset in the file.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_SYMSIZE</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Too many symbols in the users table.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_BADATTACH</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Cannot write to a previously attached vdata.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_BADVSNAME</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Cannot set the vdata name.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_BADVSCLASS</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Cannot set the vdata class.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_VSWRITE</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Error writing to the vdata.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_VSREAD</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Error reading from the vdata.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_BADVH</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Error in the vdata header.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_VSCANTCREATE</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Cannot create the vdata.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_VGCANTCREATE</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Cannot create the vgroup.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_CANTATTACH</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Cannot attach to a vdata or vset.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_CANTDETACH</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Cannot detach a vdata or vset with write access.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_BITREAD</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">A bit read error occurred.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_BITWRITE</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">A bit write error occurred.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_BITSEEK</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">A bit seek error occurred.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_TBBTINS</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Failed to insert the element into tree.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_BVNEW</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Failed to create a bit vector.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_BVSET</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Failed when setting a bit in a bit vector.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_BVGET</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Failed when getting a bit in a bit vector.</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 93.672pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFE_BVFIND</p>
+</td>
+  <td style="width : 297.000pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Failed when finding a bit in a bit vector.</p>
+</td>
+</tr>
+ </table>
+</td></tr>
+ </table>
+ <p class="Body"><a name="IX_Error_reporting_1"></a>&nbsp;</p>
+</div>
+				
+				<div class="content_top_link">
+					<a>&#160;</a> 
+				</div>
+				<div class="mobile_browseholder">
+					<div class="brsBack">
+						<a id="browseSeqBack1" class="wBSBackButton" href="../UG_DFSD/UG_DFSD.htm"><img alt="" src="../../template/Theme1_Standard/BSBack.png" class="wBSBackButton normal" id="xmlEditorBSBackButtonMobile" border="0" style="width:100%; max-width:48px" /><img alt="" src="../../template/Theme1_Standard/BSBack_hover.png" class="wBSBackButton hover" id="xmlEditorBSBackButtonMobileHover" border="0" style="width:100%; max-width:56px" /></a> 
+						 
+					</div>
+					<div class="brsNext">
+						<a id="browseSeqNext1" class="wBSNextButton" href="../UG_Perform/UG_Perform.htm"><img alt="" src="../../template/Theme1_Standard/BSNext.png" class="wBSNextButton normal" id="xmlEditorBSNextButtonMobile" border="0" style="width:100%; max-width:48px" /><img alt="" src="../../template/Theme1_Standard/BSNext_hover.png" class="wBSNextButton hover" id="xmlEditorBSNextButtonMobileHover" border="0" style="width:100%; max-width:48px" /></a> 
+						 
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="buttonbar">
+		<div class="buttonbarholder topic_page_holder">
+			<div class="bar_toc topic_page" id="xmlEditorButtonBarTOC" 
+				 title="Table of Contents">
+				<a href="../../table_of_contents.htm">&#160;</a> 
+			</div>
+			<div class="bar_index topic_page" id="xmlEditorButtonBarIDX" 
+				 title="Index">
+				<a href="../../index1.htm">&#160;</a> 
+			</div>
+			<div class="bar_glossary topic_page" id="xmlEditorButtonBarGLO" 
+				 title="Glossary">
+				<a href="../../glossary.htm">&#160;</a> 
+			</div>
+			<div class="bar_search topic_page">
+				<a href="../../searchresults.htm" title="Search">&#160;</a> 
+			</div>
+		</div>
+	</div>
+</div>
+<div id="localisation">
+	<p id="localisation_toc"><span>Table of Contents</span></p>
+	<p id="localisation_idx"><span>Index</span></p>
+	<p id="localisation_glo"><span>Glossary</span></p>
+	<p id="localisation_fts"><span>-Search-</span></p>
+	<p id="localisation_back"><span>Back</span></p>
+</div>
+<script type="text/javascript" src="../../template/Theme1_Standard/jquery.js"></script>
+<script type="text/javascript" src="../../template/Theme1_Standard/jqueryui-custom.js"></script>
+<script type="text/javascript" src="../../template/Theme1_Standard/overthrow.min.js"></script>
+<script type="text/javascript" src="../../template/Theme1_Standard/overthrow.sidescroller.min.js"></script>
+<script type="text/javascript" src="../../template/Theme1_Standard/layout.js"></script>
+<script type="text/javascript">//<![CDATA[
+$(function(){
+	addRhLoadCompleteEvent(setTopic);
+});
+//]]></script>
+</body>
+</html>

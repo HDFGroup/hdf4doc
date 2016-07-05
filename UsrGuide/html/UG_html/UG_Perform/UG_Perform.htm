@@ -1,0 +1,667 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="OriginalFile" content="C:\hdf\H4\releases\4.2.12\Doc\hdf4doc\UsrGuide\src\UG_Perform.fm" />
+ <meta name="Originator" content="ImportMif" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=100%, initial-scale=1" />
+<meta name="generator" content="Adobe FrameMaker 12" />
+<title>HDF User’s Guide - 4.2.12</title>
+<link href="../../template/Theme1_Standard/main.css" type="text/css" rel="stylesheet" />
+<link href="../../template/Theme1_Standard/jqueryui-custom.css" type="text/css" rel="stylesheet" />
+ <link rel="stylesheet" href="UG_Perform.css" type="text/css" />
+ <link rel="StyleSheet" href="../../Responsive_HTML5_stylesheet.css" type="text/css" /><script type="text/javascript" language="JavaScript">//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]></script><style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" src="../../template/scripts/constants.js"></script>
+<script type="text/javascript" src="../../template/scripts/utils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhver.js"></script>
+<script type="text/javascript" src="../../template/scripts/settings.js"></script>
+<script type="text/javascript" src="../../template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadcsh.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/showhidecontrols.js"></script>
+<script type="text/javascript" src="../../template/scripts/pageloader.js"></script>
+<script type="text/javascript" src="../../template/scripts/toctree.js"></script>
+<script type="text/javascript" src="../../template/scripts/toctreeloader.js"></script>
+<script type="text/javascript" src="../../template/scripts/indextree.js"></script>
+<script type="text/javascript" src="../../template/scripts/indextreeloader.js"></script>
+<script type="text/javascript" src="../../template/scripts/glossarylist.js"></script>
+<script type="text/javascript" src="../../template/scripts/glossarylistloader.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhtopic.js"></script>
+<script type="text/javascript" src="../../template/scripts/searchfield.js"></script>
+<script type="text/javascript" src="../../template/scripts/tabpanels.js"></script>
+<script type="text/javascript" >
+gTocPageHtml = "{%ICON%}<span  class=\"wTOCTreePageText\">{%LINK_NAME%}</span>";
+gTocBookClosedHtml = "{%ICON%}<span  class=\"wTOCTreeCloseBookText\">{%LINK_NAME%}</span>";
+gTocBookOpenHtml = "{%ICON%}<span  class=\"wTOCTreeCloseBookText\">{%LINK_NAME%}</span>";
+gTocUrlHtml = "{%ICON%}<span  class=\"wTOCTreeLinkText\">{%LINK_NAME%}</span>";
+gTocPageIconSrc = "../../template/Theme1_Standard/TOCTreePage.png";
+gTocPageIconHoverSrc = "../../template/Theme1_Standard/TOCTreePageHover.png";
+gTocPageIconSelSrc = "../../template/Theme1_Standard/TOCTreePageSelected.png";
+gTocPageIconClass = "wTOCTreePageIcon";
+gTocPageIconStyle = "";
+gTocBookClosedIconSrc = "../../template/Theme1_Standard/TOCTreeCloseBook.png";
+gTocBookClosedIconHoverSrc = "../../template/Theme1_Standard/TOCTreeCloseBookHover.png";
+gTocBookClosedIconSelSrc = "../../template/Theme1_Standard/TOCTreeCloseBookSelected.png";
+gTocBookClosedIconClass = "wTOCTreeCloseBookIcon";
+gTocBookClosedIconStyle = "";
+gTocBookOpenIconSrc = "../../template/Theme1_Standard/TOCTreeOpenBook.png";
+gTocBookOpenIconHoverSrc = "../../template/Theme1_Standard/TOCTreeOpenBookHover.png";
+gTocBookOpenIconSelSrc = "../../template/Theme1_Standard/TOCTreeOpenBookHoverSelected.png";
+gTocBookOpenIconClass = "wTOCTreeOpenBookIcon";
+gTocBookOpenIconStyle = "";
+gTocUrlIconSrc = "../../template/Theme1_Standard/TOCTreeLink.png";
+gTocUrlIconHoverSrc = "../../template/Theme1_Standard/TOCTreeLinkHover.png";
+gTocUrlIconSelSrc = "../../template/Theme1_Standard/TOCTreeLinkSelected.png";
+gTocUrlIconClass = "wTOCTreeLinkIcon";
+gTocUrlIconStyle = "";
+</script>
+<script type="text/javascript" >
+gRootRelPath = "../..";
+gCommonRootRelPath = "../..";
+</script>
+<script type="text/javascript" >
+gIdxKWHtml = "<span  class=\"wIdxKeywordText\">{%LINK_NAME%}</span>";
+	gIdxLinkHtml = "<span  class=\"wIdxLinkText\">{%LINK_NAME%}</span>";
+	gIdxCategoryHtml = "<span  class=\"wIdxAlphabetText\">{%LINK_NAME%}</span>";
+</script>
+<script type="text/javascript" >
+gTopicId = "14.0_1";
+</script>
+<script type="text/javascript" >
+gGloTermHtml = "<span  class=\"wGloTermText\">{%LINK_NAME%}</span>";
+	gGloDefHtml = "<span  class=\"wGloDefinitionText\">{%LINK_NAME%}</span>";
+	gGloCategoryHtml = "<span  class=\"wGloAlphabetText\">{%LINK_NAME%}</span>";
+</script>
+ <link rel="SHORTCUT ICON" href="../../Responsive HTML5_favicon.png" />
+</head>
+
+<body>
+<script type="text/javascript" src="../../ehlpdhtm.js"></script>
+
+<div class="floatholder">
+	<div class="phone_scrollarea overthrow">
+		<div class="header">
+			<div class="logo">
+				<a href="../UG_Intro/UG_Intro.htm" class="homelink"><img src="../../template/Theme1_Standard/logo.png" alt="Logo" id="wLogoImage" style=" border:none; width:100%; max-width:90px;" border="0" /></a> 
+				 
+			</div>
+			<div class="title">
+				<a href="../UG_Intro/UG_Intro.htm" class="homelink"><span>HDF User’s Guide - 4.2.12</span></a> 
+				 
+			</div>
+		</div>
+		<div class="sidebar">
+			<div data-showin="Always" class="wTabbedPanel" id="tabbedpanel">
+				<ul class="wTabGroup" id="tab" data-tabid="tocTabButton" style="margin: 0px;">
+					<li class="wTab" id="tocTabButton" data-contentid="tocTabPane" onmouseout="onTabHoverOut(this, 'tab')" data-class="wTab" ontouchend="onTabHoverOut(this, 'tab')" onclick="selectTab(this, 'tab')" ontouchstart="onTabHover(this, 'tab')" data-classhover="wTabHover" style="display: inline;" ontouchmove="onTabHoverOut(this, 'tab')" data-classsel="wTabSelected" onmouseover="onTabHover(this, 'tab')"><img src="../../template/Theme1_Standard/toc.png" class="normal" alt="Table of Contents" title="Table of Contents" id="xmlEditorTOCSidebarButton" style=" border:none; width:100%; max-width:42px;" border="0" /><img src="../../template/Theme1_Standard/toc_hover.png" class="hover" alt="Table of Contents" title="Table of Contents" id="xmlEditorTOCSidebarButtonHover" style=" border:none; width:100%; max-width:48px;" border="0" /></li>
+					<li class="wTab" id="idxTabButton" data-contentid="idxTabPane" onmouseout="onTabHoverOut(this, 'tab')" data-class="wTab" ontouchend="onTabHoverOut(this, 'tab')" onclick="selectTab(this, 'tab')" ontouchstart="onTabHover(this, 'tab')" data-classhover="wTabHover" style="display: inline;" ontouchmove="onTabHoverOut(this, 'tab')" data-classsel="wTabSelected" onmouseover="onTabHover(this, 'tab')"><img src="../../template/Theme1_Standard/index.png" class="normal" alt="Index" title="Index" id="xmlEditorIDXSidebarButton" style=" border:none; width:100%; max-width:48px;" border="0" /><img src="../../template/Theme1_Standard/index_hover.png" class="hover" alt="Index" title="Index" id="xmlEditorIDXSidebarButtonHover" style=" border:none; width:100%; max-width:48px;" border="0" /></li>
+					<li class="wTab" id="gloTabButton" data-contentid="gloTabPane" onmouseout="onTabHoverOut(this, 'tab')" data-class="wTab" ontouchend="onTabHoverOut(this, 'tab')" onclick="selectTab(this, 'tab')" ontouchstart="onTabHover(this, 'tab')" data-classhover="wTabHover" style="display: inline;" ontouchmove="onTabHoverOut(this, 'tab')" data-classsel="wTabSelected" onmouseover="onTabHover(this, 'tab')"><img src="../../template/Theme1_Standard/glo.png" class="normal" alt="Glossary" title="Glossary" id="xmlEditorGLOSidebarButton" style=" border:none; width:100%; max-width:48px;" border="0" /><img src="../../template/Theme1_Standard/glo_hover.png" class="hover" alt="Glossary" title="Glossary" id="xmlEditorGLOSidebarButtonHover" style=" border:none; width:100%; max-width:48px;" border="0" /></li>
+				</ul>
+				<div class="wTabContentGroup">
+					<div id="tocTabPane" class="wTabContent">
+						<div id="toc" class="wTOCTree" tabindex="346">
+							
+							
+							
+							
+						</div>
+					</div>
+					<div id="idxTabPane" class="wTabContent">
+						<div id="idx" class="wIndex">
+							<input class="wIdxFilter" id="idxFilterBox" type="text" data-placeholder="Filter Keyword" onkeyup="filterIdx()"></input>
+							
+							
+							
+						</div>
+					</div>
+					<div id="gloTabPane" class="wTabContent">
+						<div id="glo" class="wGlossary">
+							<input class="wGloFilter" id="gloFilterBox" type="text" data-placeholder="Filter Term" onkeyup="filterGlo()"></input>
+							
+							
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="closebutton buttonOpened">
+				&#160; 
+			</div>
+		</div>
+		<div class="content">
+			<div class="desktop_functionholder">
+				<div class="searchholder">
+					<div class="wSearchField">
+						<input id="searchBox" class="wSearchField" type="search" data-placeholder="-Search-" onkeydown="searchHelp(event, 'searchBox')" data-search="true" /><a class="wSearchLink" onclick="searchHelp(null, 'searchBox')" href="#"><img src="../../template/Theme1_Standard/Search.png" alt="" id="xmlEditwSearchLink" class="wSearchLink" border="0" style="width:100%; max-width:28px" /></a> 
+						 
+					</div>
+				</div>
+				<div class="brsNext">
+					<a id="browseSeqNext" class="wBSNextButton" href="../UG_Utils/UG_Utils.htm"><img alt="" src="../../template/Theme1_Standard/BSNext.png" class="wBSNextButton normal" id="xmlEditorBSNextButton" border="0" style="width:100%; max-width:48px" /><img alt="" src="../../template/Theme1_Standard/BSNext_hover.png" class="wBSNextButton hover" id="xmlEditorBSNextButtonHover" border="0" style="width:100%; max-width:48px" /></a> 
+					 
+				</div>
+				<div class="print">
+					<a href="javascript:window.print()" class="wPrintButton"><img src="../../template/Theme1_Standard/Print.png" alt="" class="wPrintButton normal" id="xmlEditorPrintButton" border="0" style="width:100%; max-width:48px" /><img src="../../template/Theme1_Standard/Print_hover.png" alt="" class="wPrintButton hover" id="xmlEditorPrintButtonHover" border="0" style="width:100%; max-width:48px" /></a> 
+				</div>
+				<div class="brsBack">
+					<a id="browseSeqBack" class="wBSBackButton" href="../UG_Errors/UG_Errors.htm"><img alt="" src="../../template/Theme1_Standard/BSBack.png" class="wBSBackButton normal" id="xmlEditorBSBackButton" border="0" style="width:100%; max-width:48px" /><img alt="" src="../../template/Theme1_Standard/BSBack_hover.png" class="wBSBackButton hover" id="xmlEditorBSBackButtonHover" border="0" style="width:100%; max-width:56px" /></a> 
+					 
+				</div>
+			</div>
+			<div class="contentholder">
+				<div class="mobile_browseholder">
+					<div class="brsBack">
+						<a id="browseSeqBack0" class="wBSBackButton" href="../UG_Errors/UG_Errors.htm"><img alt="" src="../../template/Theme1_Standard/BSBack.png" class="wBSBackButton" border="0" style="width:100%; max-width:48px" /></a> 
+					</div>
+					<div class="brsNext">
+						<a id="browseSeqNext0" class="wBSNextButton" href="../UG_Utils/UG_Utils.htm"><img alt="" src="../../template/Theme1_Standard/BSNext.png" class="wBSNextButton" border="0" style="width:100%; max-width:48px" /></a> 
+					</div>
+				</div>
+				<a name="content_top_placeholder"></a> 
+				<div class="wTopic" id="rh_default_topic_placeholder_id">
+
+ <p class="Body">&nbsp;</p>
+ <p class="ChapTitleUnNum"><a name="IX_Performance_Issues"></a><span class="FM_ChapterNumber">Chapter 14<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><a name="XREF_34005_HDF_Performance"></a>HDF Performance Issues</p>
+ <p class="Body">&nbsp;</p>
+ <p class="Heading1">14.1<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;</span>Chapter Overview and Introduction</p>
+ <p class="Body">This chapter describes many of the concepts the HDF user should understand to gain better per&#173;formance from their applications that use the HDF library. It also covers many of the ways in which HDF can be used to cause impaired performance and methods for correcting these prob&#173;lems.</p>
+ <p class="Body">As stated earlier in this manual, HDF has been designed to be very general-purpose, and it has been used in many different applications involving scientific data. Each application has its own set of software and hardware resource constraints that will affect performance in a different way, and to a different extent, from the resource constraints in other applications. </p>
+ <p class="Body">Therefore, it is impossible to outline <span class="Title-in-text">all</span>&#160;of the performance issues that may relate to a particular application of HDF. However, this chapter should give the reader sufficient knowledge of the most common performance issues encountered by the HDF Group. This knowledge should enable the reader to explore different ways of storing data on the platforms they use for the purpose of increasing library performance.</p>
+ <p class="Heading2">14.2<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;</span>Examples of HDF Performance Enhancement</p>
+ <p class="Body">In this section, four pairs of HDF object models along with their C implementations will be pre&#173;sented. Each pair will illustrate a specific aspect of HDF library performance as it relates to scien&#173;tific data sets. They will be employed here as general pointers on how to model scientific data sets for optimized performance.</p>
+ <p class="Body">In developing and testing these examples, the Sun Solaris OS version supported by HDF version 4.1 release 1 was used. Version 2.0 of the Quantify performance profiler was used to measure the relative differences in library performance between the SDS models in each pair. It should be noted that, while the examples reliably reflect which SDS configurations result in better perfor&#173;mance, the specifics of how much performance will be improved depend on many factors such as OS configuration, compiler used and profiler used. Therefore, any specific measurements of per&#173;formance mentioned in the chapter should be interpreted only as general indicators.</p>
+ <p class="Body">The reader should keep in mind that the following examples have been designed for illustrative purposes only, and should not be considered as real-world examples. It is expected that the reader will apply the library performance concepts covered by these examples to their specific usage of the HDF library.</p>
+ <p class="Heading3">14.2.1 One Large SDS versus Several Smaller SDSs</p>
+ <p class="Body">The scientific data set is an example of what in HDF parlance is referred to as a <span class="Definition">primary object</span>. The primary objects accessed and manipulated by the HDF library include, beside scientific data sets, raster images, annotations, vdatas and vgroups. Each primary object has <span class="Definition">metadata</span>, or data describing the data, associated with it. Refer to the <span class="Title-in-text">HDF Specifications Manual</span>&#160;for a description of the components of this metadata and how to calculate its size on disk.</p>
+ <p class="Body">An opportunity for performance enhancement can exist when the size of the metadata far exceeds the size of the data described by the metadata. In this situation, more CPU time and disk space will be used to maintain the metadata than the data contained in the SDS. Consolidating the data into fewer, or even one, SDS can increase performance.</p>
+ <p class="Body">To illustrate this, consider 1,000 1 <span class="Title-in-text">x</span>&#160;1 <span class="Title-in-text">x</span> 1 element scientific data sets of 32-bit floating-point num&#173;bers. No user-defined dimension, dimension scales or fill values have been defined or created. </p>
+ <p class="Figure"><span class="StepNumber">FIGURE 14a<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>1,000 1 x 1 x 1 Element Scientific Data Sets</p>
+ <div align="center"><img alt="UG_Perform00001.png" style=" width:100%; margin-left:30pt; max-width:486.504pt;" id="image0" src="UG_Perform00001.png" />
+ </div>
+ <p class="Body">In this example, 1,000 32-bit floating-point numbers are first buffered in-core, then written as 1,000 SDSs. </p>
+ <p class="Body">In <a href="#XREF_37813_TABLE_13A_Results">Table 14A</a>, the results of this operation are reflected in two metrics: the total number of CPU cycles used by the example program, and the size of the HDF file after the write operation.</p>
+ <p class="Figure"><span class="StepNumber">TABLE 14A<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><a name="XREF_37813_TABLE_13A_Results"></a>Results of the Write Operation to 1,000 1x1x1 Element Scientific Data Sets</p>
+ <table width="100%">
+  <tr>
+  <td>
+ <table style=" border-spacing:0; padding-left:6.00pt; padding-top:4.00pt; padding-right:6.00pt; padding-bottom:2.00pt; float:alignleft; margin-left:95.33pt; width:100%; max-width:237.60pt;" cellspacing="0" align="left">
+  <tr style=" height : 13.00pt;">
+  <td style="width : 109.928pt; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">Total Number of CPU Cycles</p>
+</td>
+  <td style="width : 127.671pt; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">Size of the HDF File (in bytes)</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 109.928pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">136,680,037</p>
+</td>
+  <td style="width : 127.671pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">896,803</p>
+</td>
+</tr>
+ </table>
+</td></tr>
+ </table>
+ <p class="Body">Now the 1,000 32-bit floating point numbers that were split into 1,000 SDSs are combined into one 10 <span style="font-style : italic; ">x</span>&#160;10 <span style="font-style : italic; ">x</span> 10 element SDS. This is illustrated in the following figure.</p>
+ <p class="Figure"><span class="StepNumber">FIGURE 14b<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>One 10 x 10 x 10 Element Scientific Data Set</p>
+ <div align="center"><img alt="UG_Perform00002.png" style=" width:100%; margin-left:30pt; max-width:486.504pt;" id="image1" src="UG_Perform00002.png" />
+ </div>
+ <p class="Body">As with the last example, 1,000 32-bit floating-point numbers are first buffered in-core, then writ&#173;ten to a single SDS. The following table contains the performance metrics of this operation.</p>
+ <p class="Figure"><span class="StepNumber">TABLE 14B<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>Results of the Write Operation to One 10x10x10 Element Scientific Data Set</p>
+ <table width="100%">
+  <tr>
+  <td>
+ <table style=" border-spacing:0; padding-left:6.00pt; padding-top:4.00pt; padding-right:6.00pt; padding-bottom:2.00pt; float:alignleft; margin-left:95.33pt; width:100%; max-width:237.60pt;" cellspacing="0" align="left">
+  <tr style=" height : 13.00pt;">
+  <td style="width : 109.928pt; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">Total Number of CPU Cycles</p>
+</td>
+  <td style="width : 127.671pt; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">Size of the HDF File (in bytes)</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 109.928pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">205,201</p>
+</td>
+  <td style="width : 127.671pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">7,258</p>
+</td>
+</tr>
+ </table>
+</td></tr>
+ </table>
+ <p class="Body">It is apparent from these results that merging the data into one scientific data set results in a sub&#173;stantial increase in I/O efficiency - in this case, a 99.9% reduction in total CPU load. In addition, the size of the HDF file is dramatically reduced by a factor of more than 100, even through the amount of SDS data stored is the same.</p>
+ <p class="Body">The extent to which the data consolidation described in this section should be done is dependent on the specific I/O requirements of the HDF user application.</p>
+ <p class="Heading3">14.2.2 <a name="XREF_15434_14_2_2_Sharing"></a>Sharing Dimensions between Scientific Data Sets</p>
+ <p class="Body">When several scientific data sets have dimensions of the same length, name and data type, they can share these dimensions to reduce storage overhead and CPU cycles in writing out data.</p>
+ <p class="Body">To illustrate this, again consider the example of 1,000 1 <span style="font-style : italic; ">x</span>&#160;1 <span style="font-style : italic; ">x</span> 1 scientific data sets of 32-bit float&#173;ing point numbers. Three dimensions are attached by default to each scientific data set by the HDF library. The HDF library assigns each of these dimensions a default name prefaced by the string <span class="VarName">fakeDim</span>. See <a href="../UG_SD/UG_SD.htm#XREF_13938_Scientific_Data">Chapter 3<span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>, &quot;Scientific Data Sets (SD API)&quot;</a>, for a specific explanation of default dimension naming conventions.</p>
+ <p class="Figure"><span class="StepNumber">FIGURE 14c<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>1,000 1 x 1 x 1 Element Scientific Data Sets</p>
+ <div align="center"><img alt="UG_Perform00003.png" style=" width:100%; margin-left:30pt; max-width:487.152pt;" id="image2" src="UG_Perform00003.png" />
+ </div>
+ <p class="Body">One 32-bit floating point number is written to each scientific data set. The following table lists the performance metrics of this operation.</p>
+ <p class="Figure"><span class="StepNumber">TABLE 14C<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>Results of the Write Operation to 1,000 1x1x1 Element Scientific Data Sets</p>
+ <table width="100%">
+  <tr>
+  <td>
+ <table style=" border-spacing:0; padding-left:6.00pt; padding-top:4.00pt; padding-right:6.00pt; padding-bottom:2.00pt; float:alignleft; margin-left:95.33pt; width:100%; max-width:237.60pt;" cellspacing="0" align="left">
+  <tr style=" height : 13.00pt;">
+  <td style="width : 109.928pt; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">Total Number of CPU Cycles</p>
+</td>
+  <td style="width : 127.671pt; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">Size of the HDF File (in bytes)</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 109.928pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">136,680,037</p>
+</td>
+  <td style="width : 127.671pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">896,803</p>
+</td>
+</tr>
+ </table>
+</td></tr>
+ </table>
+ <p class="Body">Now consider the 1,000 SDSs described previously in this section. In this case, the 1,000 SDSs share the program-defined <span class="VarName">X_Axis</span>, <span class="VarName">Y_Axis</span>&#160;and <span class="VarName">Z_Axis</span>&#160;dimensions as illustrated in the following figure.</p>
+ <p class="Figure"><span class="StepNumber">FIGURE 14d<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>1,000 1 x 1 x 1 Element Scientific Data Sets Sharing Dimensions</p>
+ <div align="center"><img alt="UG_Perform00004.png" style=" width:100%; margin-left:30pt; max-width:486.504pt;" id="image3" src="UG_Perform00004.png" />
+ </div>
+ <p class="Body">The performance metrics that result from writing one 32-bit floating-point number to each dataset are in the following table.</p>
+ <p class="Figure"><span class="StepNumber">TABLE 14D<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>Results of the Write Operation to 1,000 1x1x1 SDSs with Shared Dimensions</p>
+ <table width="100%">
+  <tr>
+  <td>
+ <table style=" border-spacing:0; padding-left:6.00pt; padding-top:4.00pt; padding-right:6.00pt; padding-bottom:2.00pt; float:alignleft; margin-left:95.33pt; width:100%; max-width:237.60pt;" cellspacing="0" align="left">
+  <tr style=" height : 13.00pt;">
+  <td style="width : 109.928pt; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">Total Number of CPU Cycles</p>
+</td>
+  <td style="width : 127.671pt; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">Size of the HDF File (in bytes)</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 109.928pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">24,724,384</p>
+</td>
+  <td style="width : 127.671pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">177,172</p>
+</td>
+</tr>
+ </table>
+</td></tr>
+ </table>
+ <p class="Body">An 82% performance improvement in this example program can be seen from the information in this table, due to the fewer write operations involved in writing dimension data to shared dimen&#173;sions. Also, the HDF file is significantly smaller in this case, due to the smaller amount of dimen&#173;sion data that is written. </p>
+ <p class="Heading3">14.2.3 Setting the Fill Mode</p>
+ <p class="Body">When a scientific data set is created, the default action of the HDF library is to fill every element with the default fill value. This action can be disabled, and reenabled once it has been disabled, by a call to the <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">SDsetfillmode</span> routine.</p>
+ <p class="Body">The library’s default writing of fill values can degrade performance when, after the fill values have been written, every element in the dataset is written to again. This operation involves writing every element in the SDS twice. This section will demonstrate that disabling the initial fill value write operation by calling <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">SDsetfillmode</span> can improve library performance.</p>
+ <p class="Body">Consider 50 10 <span style="font-style : italic; ">x</span>&#160;10 <span style="font-style : italic; ">x</span> 10 scientific data sets of 32-bit floating-point numbers.</p>
+ <p class="Figure"><span class="StepNumber">FIGURE 14e<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>50 10 x 10 x 10 Element Scientific Data Sets</p>
+ <div align="right"><img alt="UG_Perform00005.png" style=" width:100%; margin-left:30pt; max-width:485.892pt;" id="image4" src="UG_Perform00005.png" />
+ </div>
+ <p class="Body">By default, the fill value is written to every element in all 50 SDSs. The contents of a two-dimen&#173;sional buffer containing 32-bit floating-point numbers is then written to these datasets. The way these two-dimensional slices are written to the three-dimensional SDSs is illustrated in the follow&#173;ing figure. Each slice (represented by each shaded area in the figure) is written along the third dimension of each SDS, or if the dimensions are related to a Cartesian grid, the z-dimension, until the entire SDS is filled.</p>
+ <p class="Figure"><span class="StepNumber">FIGURE 14f<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>Writing to the 50 10 x 10 x 10 Element Scientific Data Sets</p>
+ <div align="center"><img alt="UG_Perform00006.png" style=" width:100%; margin-left:30pt; max-width:486.504pt;" id="image5" src="UG_Perform00006.png" />
+ </div>
+ <p class="Body">It should be noted that the reason each SDS is not rewritten to in one write operation is because the HDF library will detect this and automatically disable the initial write of the fill values as a performance-saving measure. Hence, the partial writes in two-dimensional slabs.</p>
+ <p class="Body">The following table shows the number of CPU cycles needed in our tests to perform this write operation with the fill value write enabled. The &quot;Size of the HDF File&quot; metric has been left out of this table, because it will not change substantially regardless of whether the default fill value write operation is enabled.</p>
+ <p class="Figure"><span class="StepNumber">TABLE 14E<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>Results of the Write Operation to the 50 10x10x10 SDSs with the Fill Value Write Enabled</p>
+ <table width="100%">
+  <tr>
+  <td>
+ <table style=" border-spacing:0; padding-left:6.00pt; padding-top:4.00pt; padding-right:6.00pt; padding-bottom:2.00pt; float:alignleft; margin-left:95.33pt; width:100%; max-width:109.93pt;" cellspacing="0" align="left">
+  <tr style=" height : 13.00pt;">
+  <td style="width : 109.928pt; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">Total Number of CPU Cycles</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 109.928pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">584,956,078</p>
+</td>
+</tr>
+ </table>
+</td></tr>
+ </table>
+ <p class="Body">The following table shows the number of CPU cycles needed to perform the same write operation with the fill value write disabled.</p>
+ <p class="Figure"><span class="StepNumber">TABLE 14F<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>Results of the Write Operation to the 50 SDSs with the Fill Value Write Disabled</p>
+ <table width="100%">
+  <tr>
+  <td>
+ <table style=" border-spacing:0; padding-left:6.00pt; padding-top:4.00pt; padding-right:6.00pt; padding-bottom:2.00pt; float:alignleft; margin-left:95.33pt; width:100%; max-width:109.93pt;" cellspacing="0" align="left">
+  <tr style=" height : 13.00pt;">
+  <td style="width : 109.928pt; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">Total Number of CPU Cycles</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 109.928pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">390,015,933</p>
+</td>
+</tr>
+ </table>
+</td></tr>
+ </table>
+ <p class="Body">The information in these tables demonstrate that eliminating the I/O overhead of the default fill value write operation when an entire SDS is rewritten to results in a substantial reduction of the CPU cycles needed to perform the operation -- in this case, a reduction of 33%.</p>
+ <p class="Heading3">14.2.4 Disabling <span style="font-style : italic; ">Fake</span>&#160;Dimension Scale Values in Large One-dimensional Scientific Data Sets</p>
+ <p class="Body">In versions 4.0 and earlier of the HDF library, dimension scales were represented by a vgroup con&#173;taining a vdata. This vdata consisted of as many records as there are elements along the dimen&#173;sion. Each record contained one number which represented each value along the dimension scale, and these values are referred to as <span class="Definition">fake</span> dimension scale values.</p>
+ <p class="Body">In HDF version 4.0 a new representation of the dimension scale was implemented alongside the old one -- a vdata containing only one value representing the total number of values in the dimen&#173;sion scale. In version 4.1 release 2, this representation was made the default. A <span class="Definition">compatible</span>&#160;mode is also supported where both the older and newer representations of the dimension scale are writ&#173;ten to file.</p>
+ <p class="Body">In the earlier representation, a substantial amount of I/O overhead is involved in writing the fake dimension scale values into the vdata. When one of the dimensions of the SDS array is very large, performance can be improved, and the size of the HDF file can be reduced, if the old representa&#173;tion of dimension scales is disabled by a call to the <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">SDsetdimval_comp</span>&#160;routine. The examples in this section will illustrate this.</p>
+ <p class="Body">First, consider one 10,000 element array of 32-bit floating point numbers, as shown in the follow&#173;ing figure. Both the new and old dimension scale representations are enabled by the library.</p>
+ <p class="Figure"><span class="StepNumber">FIGURE 14g<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>One 10,000 Element Scientific Data Set with Old- and New-Style Dimension Scales</p>
+ <div align="center"><img alt="UG_Perform00007.png" style=" width:100%; margin-left:30pt; max-width:485.928pt;" id="image6" src="UG_Perform00007.png" />
+ </div>
+ <p class="Body">10,000 32-bit floating-point numbers are buffered in-core, then written to the scientific data set. In addition, 10,000 integers are written to the SDS as dimension scale values. The following table contains the results of this operation from our tests.</p>
+ <p class="Figure"><span class="StepNumber">TABLE 14G<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>Results of the SDS Write Operation with the New and Old Dimension Scales</p>
+ <table width="100%">
+  <tr>
+  <td>
+ <table style=" border-spacing:0; padding-left:6.00pt; padding-top:4.00pt; padding-right:6.00pt; padding-bottom:2.00pt; float:alignleft; margin-left:95.33pt; width:100%; max-width:237.60pt;" cellspacing="0" align="left">
+  <tr style=" height : 13.00pt;">
+  <td style="width : 109.928pt; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">Total Number of CPU Cycles</p>
+</td>
+  <td style="width : 127.671pt; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">Size of the HDF File (in bytes)</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 109.928pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">439,428</p>
+</td>
+  <td style="width : 127.671pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">82,784</p>
+</td>
+</tr>
+ </table>
+</td></tr>
+ </table>
+ <p class="Body">Now consider the same SDS with the fake dimension scale values disabled. The following figure illustrates this.</p>
+ <p class="Figure"><span class="StepNumber">FIGURE 14h<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>One 10,000 Element Scientific Data Set with the Old-Style Dimension Scale Disabled</p>
+ <div align="center"><img alt="UG_Perform00008.png" style=" width:100%; margin-left:30pt; max-width:485.928pt;" id="image7" src="UG_Perform00008.png" />
+ </div>
+ <p class="Body">The following table contains the performance metrics of this write operation.</p>
+ <p class="Figure"><span class="StepNumber">TABLE 14H<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>Results of the SDS Write Operation with Only the New Dimension Scale</p>
+ <table width="100%">
+  <tr>
+  <td>
+ <table style=" border-spacing:0; padding-left:6.00pt; padding-top:4.00pt; padding-right:6.00pt; padding-bottom:2.00pt; float:alignleft; margin-left:95.33pt; width:100%; max-width:237.60pt;" cellspacing="0" align="left">
+  <tr style=" height : 13.00pt;">
+  <td style="width : 109.928pt; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">Total Number of CPU Cycles</p>
+</td>
+  <td style="width : 127.671pt; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">Size of the HDF File</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 109.928pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">318,696</p>
+</td>
+  <td style="width : 127.671pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">42,720</p>
+</td>
+</tr>
+ </table>
+</td></tr>
+ </table>
+ <p class="Body">The old-style dimension scale is not written to the HDF file, which results in the size of the file being reduced by nearly 50%. There is also a marginal reduction in the total number of CPU cycles.</p>
+ <p class="Heading2">14.3<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;</span>Data Chunking</p>
+ <p class="Heading3">14.3.1 What Is Data Chunking?</p>
+ <p class="Body">Data chunking is a method of organizing data within an SDS where data is stored in <span class="Definition">chunks</span>&#160;of a predefined size, rather than contiguously by array element. Its two-dimensional instance is some&#173;times referred to as <span class="Definition">data tiling</span>. Data chunking is generally beneficial to I/O performance in very large arrays, e.g., arrays with thousands of rows and columns.</p>
+ <p class="Body">If correctly applied, data chunking may reduce the number of seeks through the SDS data array to find the data to be read or written, thereby improving I/O performance. However, it should be remembered that data chunking, if incorrectly applied, can significantly <span style="font-style : italic; ">reduce</span>&#160;the performance of reading and/or writing to an SDS. Knowledge of how chunked SDSs are created and accessed and application-specific knowledge of how data is to be read from the chunked SDSs are neces&#173;sary in avoiding situations where data chunking works against the goal of I/O performance opti&#173;mization.</p>
+ <p class="Body">The following figure illustrates the difference between a non-chunked SDS and a chunked SDS.</p>
+ <p class="Figure"><a name="IX_contents_1"></a><span class="StepNumber">FIGURE 14i<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>Comparison between Chunked and Non-chunked Scientific Data Sets</p>
+ <div align="center"><img alt="UG_Perform00009.png" style=" width:100%; margin-left:30pt; max-width:487.152pt;" id="image8" src="UG_Perform00009.png" />
+ </div>
+ <p class="Heading3">14.3.2 <a name="XREF_33238_13_3_2_Writing"></a>Writing Concerns and Reading Concerns in Chunking </p>
+ <p class="Body">There are issues in working with chunks that are related to the reading process and others that are related to the writing process. </p>
+ <p class="Body">Specifically, the issues that affect the process of reading from chunked SDSs are</p>
+ <p class="Bullet2"><span class="FM_BulletSymbol">•<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>Compression</p>
+ <p class="Bullet2"><span class="FM_BulletSymbol">•<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>Subsetting</p>
+ <p class="Bullet2"><span class="FM_BulletSymbol">•<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>Chunk sizing</p>
+ <p class="Bullet2"><span class="FM_BulletSymbol">•<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>Chunk cache sizing</p>
+ <p class="Body">The issues that affect the process of writing to chunked SDSs are</p>
+ <p class="Bullet2"><span class="FM_BulletSymbol">•<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>Compression</p>
+ <p class="Bullet2"><span class="FM_BulletSymbol">•<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>Chunk cache sizing</p>
+ <p class="Heading3">14.3.3 Chunking without Compression</p>
+ <p class="FM_BodyBold">Accessing Subsets According to Storage Order</p>
+ <p class="Body">The main consideration to keep in mind when subsetting from chunked and non-chunked SDSs is that if the subset can be accessed in the same order as it was stored, subsetting will be efficient. If not, subsetting may result in less-than-optimal performance considering the number of elements to be accessed.</p>
+ <p class="Body">To illustrate this, the instance of subsetting in non-chunked SDSs will first be described. Consider the example of a non-chunked, two-dimensional, 2,000 <span style="font-style : italic; ">x</span> 1,600 SDS array of integer data. The fol&#173;lowing figure shows how this array is filled with data in a row-wise fashion. (Each square in the array shown represents 100 <span style="font-style : italic; ">x</span> 100 integers.)</p>
+ <p class="Figure"><a name="IX_contents_2"></a><span class="StepNumber">FIGURE 14j<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>Filling a Two-dimensional Array with Data Using Row-major Ordering</p>
+ <div align="center"><img alt="UG_Perform00010.png" style=" width:100%; margin-left:30pt; max-width:486.504pt;" id="image9" src="UG_Perform00010.png" />
+ </div>
+ <p class="Body">The most efficient way an application can read a row of data, or a portion of a row, from this array, is a contiguous, row-wise read of array elements. This is because this is the way the data was orig&#173;inally written to the array. Only one seek is needed to perform this. <a href="#XREF_32929_FIGURE_13l_Number">(See Figure 14k)</a></p>
+ <p class="Figure"><a name="IX_contents_3"></a><span class="StepNumber">FIGURE 14k<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><a name="XREF_32929_FIGURE_13l_Number"></a>Number of Seeks Needed to Access a Row of Data in a Non-chunked SDS</p>
+ <div align="center"><img alt="UG_Perform00011.png" style=" width:100%; margin-left:30pt; max-width:486.504pt;" id="image10" src="UG_Perform00011.png" />
+ </div>
+ <p class="Body">If the subset of data to be read from this array is one 2,000 integer <span class="Title-in-text">column</span>, then 2,000 seeks will be required to complete the operation. This is the most inefficient method of reading this subset as nearly all of the array locations will be accessed in the process of seeking to a relatively small number of target locations.</p>
+ <p class="Figure"><a name="IX_contents_4"></a><span class="StepNumber">FIGURE 14l<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>Number of Seeks Needed to Access a Column of Data in a Non-chunked SDS</p>
+ <div align="center"><img alt="UG_Perform00012.png" style=" width:100%; margin-left:30pt; max-width:486.504pt;" id="image11" src="UG_Perform00012.png" />
+ </div>
+ <p class="Body">Now suppose this SDS is chunked, and the chunk size is 400 <span style="font-style : italic; ">x</span> 400 integers. A read of the afore&#173;mentioned row is performed. In this case, four seeks are needed to read all of the chunks that con&#173;tain the target locations. This is less efficient than the one seek needed in the non-chunked SDS.</p>
+ <p class="Figure"><a name="IX_contents_5"></a><span class="StepNumber">FIGURE 14m<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>Number of Seeks Needed to Access a Row of Data in a Chunked SDS</p>
+ <div align="center"><img alt="UG_Perform00013.png" style=" width:100%; margin-left:30pt; max-width:485.928pt;" id="image12" src="UG_Perform00013.png" />
+ </div>
+ <p class="Body">To read the aforementioned column of data, five chunks must be read into memory in order to access the 2,000 locations of the subset. Therefore, five seeks to the starting location of each of these chunks are necessary to complete the read operation, far fewer than the 2,000 needed in the non-chunked SDS.</p>
+ <p class="Figure"><a name="IX_contents_6"></a><span class="StepNumber">FIGURE 14n<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><a name="XREF_40785_FIGURE_13o_Number"></a>Number of Seeks Needed to Access a Column of Data in a Chunked SDS</p>
+ <div align="center"><img alt="UG_Perform00014.png" style=" width:100%; margin-left:30pt; max-width:485.928pt;" id="image13" src="UG_Perform00014.png" />
+ </div>
+ <p class="Body">These examples show that, in many cases, chunking can be used to reduce the I/O overhead of subsetting, but in certain cases, chunking can impair I/O performance. </p>
+ <p class="Body">The efficiency of subsetting from chunked SDSs is partly determined by the size of the chunk: the smaller the chunk size, the more seeks will be necessary. Chunking can substantially improve I/O performance when data is read along the slowest-varying dimension. It can substantially degrade performance when data is read along the fastest-varying dimension.</p>
+ <p class="Heading3">14.3.4 Chunking with Compression</p>
+ <p class="Body">Chunking can be particularly effective when used in conjunction with compression. It allows sub&#173;sets to be read (or written) without having to uncompress (or compress) the entire array.</p>
+ <p class="Body">Consider the example of a tiled, two-dimensional SDS containing one million bytes of image data. Each tile of image data has been compressed as illustrated in the following figure.</p>
+ <p class="Figure"><a name="IX_contents_7"></a><span class="StepNumber">FIGURE 14o<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>Compressing and Writing Chunks of Data to a Compressed and Tiled SDS</p>
+ <div align="center"><img alt="UG_Perform00015.png" style=" width:100%; margin-left:30pt; max-width:486.504pt;" id="image14" src="UG_Perform00015.png" />
+ </div>
+ <p class="Body">When it becomes necessary to read a subset of the image data, the application passes in the loca&#173;tion of a tile, reads the entire tile into a buffer, and extracts the data-of-interest from that buffer.</p>
+ <p class="Figure"><a name="IX_contents_8"></a><span class="StepNumber">FIGURE 14p<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><a name="XREF_27379_FIGURE_3p"></a>Extracting a Subset from a Compressed and Tiled SDS</p>
+ <div align="center"><img alt="UG_Perform00016.png" style=" width:100%; margin-left:30pt; max-width:486.504pt;" id="image15" src="UG_Perform00016.png" />
+ </div>
+ <p class="Body">In a compressed and <span class="Title-in-text">non-tiled</span>&#160;SDS, retrieving a subset of the compressed image data necessitates reading the entire contents of the SDS array into a memory buffer and uncompressing it in-core. <a href="#XREF_16405_FIGURE_14q">(See Figure 14q)</a>&#160;The subset is then extracted from this buffer. (Keep in mind that, even though the illustrations show two-dimensional data tiles for clarity, this process can be extended to data chunks of any number of dimensions.)</p>
+ <p class="Figure"><a name="IX_contents_9"></a><span class="StepNumber">FIGURE 14q<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><a name="XREF_16405_FIGURE_14q"></a>Extracting a Subset from a Compressed Non-tiled SDS</p>
+ <div align="center"><img alt="UG_Perform00017.png" style=" width:100%; margin-left:30pt; max-width:485.928pt;" id="image16" src="UG_Perform00017.png" />
+ </div>
+ <p class="Body">As compressed image files can be as large as hundreds of megabytes in size, and a gigabyte or more uncompressed, it is clear that the I/O requirements of reading to and writing from non-tiled, compressed SDSs can be immense, if not prohibitive. Add to this the additional I/O burden inher&#173;ent in situations where portions of several image files must be read at the same time for compari&#173;son, and the benefits of tiling become even more apparent.</p>
+ <p class="Body">NOTE: It is recommended that the <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">SDwritechunk</span>&#160;routine be used to write to a compressed and chunked SDS. <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">SDwritechunk</span>&#160;can perform this operation more efficiently than the combination of <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">SDsetcompress</span>&#160;and <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">SDwritedata</span>. This is because the chunk information provided by the user to the <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">SDwritechunk</span>&#160;routine must be retrieved from the file by <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">SDwritedata</span>, and therefore involves more computational overhead.</p>
+ <p class="Heading3">14.3.5 Effect of Chunk Size on Performance</p>
+ <p class="Body">The main concern in modelling data for chunking is that the chunk size be approximately equal to the average expected size of the data block needed by the application. </p>
+ <p class="Body">If the chunk size is substantially larger than this, increased I/O overhead will be involved in read&#173;ing the chunk and increased performance overhead will be involved in the decompression of the data if it is compressed. If the chunk size is substantially smaller than this, increased performance and memory/disk storage overhead will be involved in the HDF library’s operations of accessing and keeping track of more chunks, as well as the danger of exceeding the maximum number of chunks per file. (64K)</p>
+ <p class="Body">It is recommended that the chunk size be at least 8K bytes. </p>
+ <p class="Heading3">14.3.6 Insufficient Chunk Cache Space Can Impair Chunking Performance</p>
+ <p class="Body">The HDF library provides caching chunks. This can substantially improve I/O performance when a particular chunk must be accessed more than once.</p>
+ <p class="Body">There is a potential performance problem when subsets are read from chunked datasets and insuf&#173;ficient chunk cache space has been allocated. The cause of this problem is the fact that two sepa&#173;rate levels of the library are working to read the subset into memory and these two levels have a different perspective on how the data in the dataset is organized. </p>
+ <p class="Body">Specifically, higher-level routines like <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">SDreaddata</span>&#160;access the data in a strictly row-wise fashion, not according to the chunked layout. However, the lower-level code that directly performs the read operation accesses the data according to the chunked layout.</p>
+ <p class="Body">As an illustration of this, consider the 4 <span style="font-style : italic; ">x</span> 12 dataset depicted in the following figure.</p>
+ <p class="Figure"><span class="StepNumber">FIGURE 14r<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>Example 4 x 12 Element Scientific Data Set</p>
+ <div align="center"><img alt="UG_Perform00018.png" style=" width:100%; margin-left:30pt; max-width:487.152pt;" id="image17" src="UG_Perform00018.png" />
+ </div>
+ <p class="Body">Suppose this dataset is untiled, and the subset shown in the following figure must be read.</p>
+ <p class="Figure"><span class="StepNumber">FIGURE 14s<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>2 x 8 Element Subset of the 4 x 12 Scientific Data Set</p>
+ <div align="center"><img alt="UG_Perform00019.png" style=" width:100%; margin-left:30pt; max-width:486.504pt;" id="image18" src="UG_Perform00019.png" />
+ </div>
+ <p class="Body">As this dataset is untiled, the numbers are stored in linear order. <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">SDreaddata</span>&#160;finds the longest contiguous stream of numbers, and requests the lower level of the library code to read it into memory. First, the first row of numbers will be read:</p>
+ <p class="FM_1syntax">3 &#160;4 &#160;5 &#160;6 &#160;7 &#160;8 &#160;9 10</p>
+ <p class="Body">Then the second row:</p>
+ <p class="FM_1syntax">23 24 25 26 27 28 29 30</p>
+ <p class="Body">This involves two reads, two disk accesses and sixteen numbers.</p>
+ <p class="Body">Now suppose that this dataset is tiled with 2 <span style="font-style : italic; ">x</span>&#160;2 element tiles. On the disk, the data in this dataset is stored as twelve separate tiles, which for the purposes of this example will be labelled A through L.</p>
+ <p class="Figure"><span class="StepNumber">FIGURE 14t<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>4 x 12 Element Data Set with 2 x 2 Element Tiles</p>
+ <div align="center"><img alt="UG_Perform00020.png" style=" width:100%; margin-left:30pt; max-width:485.928pt;" id="image19" src="UG_Perform00020.png" />
+ </div>
+ <p class="Body">Also, the chunk cache size is set to 2.</p>
+ <p class="Body">A request is made to read the aforementioned subset of numbers into memory. As before, <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">SDreaddata</span>&#160;will determine the order the numbers will be read in. The routine has no information about the tiled layout. The higher-level code will again request the values in the first rows of tiles B through E from the lower level code on the first read operation.</p>
+ <p class="Body">In order to access those numbers the lower level code must read in four tiles: B, C, D, E. It reads in tiles B and C, retrieving the values <span class="FM_Flag" style="font-family : Courier New; font-style : normal; font-weight : normal; font-size  : 9.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : -0.10em; ">3</span>, <span class="FM_Flag" style="font-family : Courier New; font-style : normal; font-weight : normal; font-size  : 9.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : -0.10em; ">4</span>, <span class="FM_Flag" style="font-family : Courier New; font-style : normal; font-weight : normal; font-size  : 9.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : -0.10em; ">5</span>, and <span class="FM_Flag" style="font-family : Courier New; font-style : normal; font-weight : normal; font-size  : 9.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : -0.10em; ">6</span>. However, as the cache space is now com&#173;pletely filled, it must overwrite tile B in the cache to access the values <span class="FM_Flag" style="font-family : Courier New; font-style : normal; font-weight : normal; font-size  : 9.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : -0.10em; ">7 and 8</span>, which are in tile D. It then has to overwrite tile C to access the values <span class="FM_Flag" style="font-family : Courier New; font-style : normal; font-weight : normal; font-size  : 9.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : -0.10em; ">9 and 10</span>, which are in tile E. Note that, in each case, half of the values from the tiles that are read in are unused, even though those values will be needed later.</p>
+ <p class="Body">Next, the higher-level code requests the second row of the subset. The lower-level code must <span class="Title-in-text">reread</span>&#160;tile B to access the values <span class="FM_Flag" style="font-family : Courier New; font-style : normal; font-weight : normal; font-size  : 9.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : -0.10em; ">23</span>&#160;and <span class="FM_Flag" style="font-family : Courier New; font-style : normal; font-weight : normal; font-size  : 9.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : -0.10em; ">24</span>. But tile B is no longer in the chunk cache. In order to access tile B, the lower-level code must overwrite tile D, and so on. By the time the subset read operation is complete, it has had to read in each of the tiles twice. Also, it has had to perform 8 disk accesses and has read 32 values.</p>
+ <p class="Body">Now consider a more practical example with the following parameters: </p>
+ <p class="Bullet2"><span class="FM_BulletSymbol">•<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>A scientific data set has 3,000 rows and 8,400 columns.</p>
+ <p class="Bullet2"><span class="FM_BulletSymbol">•<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>The target subset is 300 rows by 1,000 columns, and contains 300,000 numbers.</p>
+ <p class="Body">If the dataset is untiled the numbers are read into memory row-by-row. This involves 300 disk accesses for 300 rows, with each disk access reading in 1,000 numbers. The total number of num&#173;bers that will be read is 300,000.</p>
+ <p class="Body">Suppose the dataset is tiled as follows:</p>
+ <p class="Bullet2"><span class="FM_BulletSymbol">•<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>The tile size is 300 rows by 200 columns, or 60,000 numbers.</p>
+ <p class="Bullet2"><span class="FM_BulletSymbol">•<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>The size of the chunk cache is 2.</p>
+ <p class="Body">Each square in the following figure represents one 100 <span style="font-style : italic; ">x</span>&#160;100 element region of the dataset. Five tiles span the 300 <span style="font-style : italic; ">x</span>&#160;1,000 target subset. For the purposes of this example, they will be labelled A, B, C, D and E. </p>
+ <p class="Figure"><span class="StepNumber">FIGURE 14u<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>5 200 x 300 Element Tiles Labelled A, B, C, D and E</p>
+ <div align="center"><img alt="UG_Perform00021.png" style=" width:100%; margin-left:30pt; max-width:486.504pt;" id="image20" src="UG_Perform00021.png" />
+ </div>
+ <p class="Body">First, the higher-level code instructs the lower-level code to read in the first row of subset num&#173;bers. The lower-level code must read all five tiles (A through E) into memory, as they all contain numbers in the first row. Tiles A and B are read into the cache without problem, then the follow&#173;ing set of cache overwrites occurs.</p>
+ <p class="FM_1Step"><span class="StepNumber">1.<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>Tile A is overwritten when tile C is read.</p>
+ <p class="Step"><span class="StepNumber">2.<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>Tile B is overwritten when tile D is read.</p>
+ <p class="Step"><span class="StepNumber">3.<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>Tile C is overwritten when tile E is read.</p>
+ <p class="Body">When the first row has been read, the cache contains tiles D and E.</p>
+ <p class="Body">The second row is then read. The higher-level code first requests tile A, however the cache is full, so it must overwrite tile D to read tile A. Then the following set of cache overwrites occur.</p>
+ <p class="FM_1Step"><span class="StepNumber">1.<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>Tile E is overwritten when tile B is read.</p>
+ <p class="Step"><span class="StepNumber">2.<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>Tile A is overwritten when tile C is read.</p>
+ <p class="Step"><span class="StepNumber">3.<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>Tile B is overwritten when tile D is read.</p>
+ <p class="Step"><span class="StepNumber">4.<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>Tile C is overwritten when tile E is read.</p>
+ <p class="Body">For each row, five tiles must be read in. No actual caching results from this overwriting. When the subset read operation is complete, 300 * 5 = 1,500 tiles have been read, or 60,000 * 1,500 = 90,000,000 numbers.</p>
+ <p class="Body">Essentially, five times more disk accesses are being performed and 900 times more data is being read than with the untiled 3,000 <span style="font-style : italic; ">x</span>&#160;8,400 dataset. The severity of the performance degradation increases in a non-linear fashion as the size of the dataset increases.</p>
+ <p class="Body">From this example it should be apparent that, to prevent this kind of chunk cache &quot;thrashing&quot; from occurring, the size of the chunk cache should be made equal to, or greater than, the number of chunks along the fastest-varying dimension of the dataset. In this case, the chunk cache size should be set to 4.</p>
+ <p class="Body">When a chunked SDS is opened for reading or writing, the default cache size is set to the number of chunks along the fastest-varying dimension of the SDS. This will prevent cache thrashing from occurring in situations where the user does not set the size of the the chunk cache. Caution should be exercised by the user when altering this default chunk cache size.</p>
+ <p class="Heading2">14.4<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;</span>Block Size Tuning Issues</p>
+ <p class="Body">A key to I/O performance in HDF is the number of disk accesses that must be made during any <br />I/O operation. &#160;If you can decrease significantly the number of disk accesses required, you may be able to improve performance correspondingly. &#160;In this section we examine two such strategies for improving HDF I/O performance.</p>
+ <p class="Heading3">14.4.1 <a name="XREF_42729_14_4_1_Tuning_Data"></a>Tuning Data Descriptor Block Size to Enhance Performance</p>
+ <p class="Body">HDF objects are identified in HDF files by 12-byte headers called data descriptors (DDs). &#160;Most composite HDF objects, such as SDSs, are made up of many small HDF objects, so it is not unusual to have a large number of DDs in an HDF file. &#160;DDs are stored in blocks called data descriptor blocks (DD blocks). </p>
+ <p class="Body">When an HDF file is created, the file’s DD block size is specified. &#160;The default size is 16 DDs per DD block. &#160;When you start putting objects into an HDF file, their DDs are inserted into the first DD block. &#160;When the DD block gets filled up, a new DD block is created, stored at some other location in the file, and linked with the previous DD block. &#160;If a large number of objects are stored in an HDF file whose DD block size is small, a large number of DD blocks will be needed, and each DD block is likely to be stored on a different disk page. </p>
+ <p class="Body">Consider, for example, an HDF file with 1,000 SDSs and a DD block size of 16. Each SDS could easily require 10 DDs to describe all the objects comprising the SDS, so the entire file might con&#173;tain 10,000 DDs. This would require 625 (10,000/16) DD blocks, each stored on a different disk page.</p>
+ <p class="Body">Whenever an HDF file is opened, all of the DDs are read into memory. &#160;Hence, in our example, 625 disk accesses might be required just to open the file.</p>
+ <p class="Body">Fortunately, there is a way we can use this kind of information to improve performance. &#160;When we create an HDF file, we can specify the DD block size. &#160;If we know that the file will have many objects stored in it, we should choose a large DD block size so that each disk access will read in a large number of DDs, and hence there will be fewer disk accesses. &#160;In our example, we might have chosen the DD block size to be 10,000, resulting in only one disk access. (Of course, this example goes deliberately to a logical extreme. For a variety of reasons, a more common approach would be to set the DD block size to something between 1,000 and 5,000 DDs.)</p>
+ <p class="Body">From this discussion we can derive the following rules of thumb for achieving good performance by altering the DD block size.</p>
+ <p class="Bullet2"><span class="FM_BulletSymbol">•<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>Increasing the size of the data descriptor block may improve performance when opening a file, especially when working with large HDF files with lots of objects. It will reduce the number of times that HDF has to go out and read another DD block. This will be particularly valuable in code that does large numbers of HDF file opens.</p>
+ <p class="Bullet2"><span class="FM_BulletSymbol">•<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>The same principle applies when closing an HDF file that has been written to. &#160;Since all DDs are flushed to an HDF file when it is written to and then closed, the DD block size can similarly impact performance. </p>
+ <p class="Bullet2"><span class="FM_BulletSymbol">•<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>Notice that these actions only affect the opening and closing of a file. &#160;Once a file is opened, DDs are accessed in memory; no further disk accesses are required. </p>
+ <p class="Bullet2"><span class="FM_BulletSymbol">•<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>Large DD blocks can negatively affect storage efficiency, particularly if very large DD blocks are used. &#160;Since the last DD block may only be partially filled up, you probably should not use large DD blocks for very small HDF files.</p>
+ <p class="Heading3">14.4.2 <a name="XREF_99984_14_4_2_Tuning"></a>Tuning Linked Block Size to Enhance Performance</p>
+ <p class="Body">Linked blocks get created whenever compression, chunking, external files, or appendable datasets are used. They provide a means of linking new data blocks to a pre-existing data element. &#160;If you have ever looked at an HDF file and seen <span class="FM_Flag" style="font-family : Courier New; font-style : normal; font-weight : normal; font-size  : 9.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : -0.10em; ">Special Scientific Data</span>&#160;or <span class="FM_Flag" style="font-family : Courier New; font-style : normal; font-weight : normal; font-size  : 9.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : -0.10em; ">Linked Block Indicator</span>&#160;tags with strange tag values, these are used in specifying linked blocks. &#160;&#160;As with DD blocks, linked block size can affect both storage efficiency and I/O performance.</p>
+ <p class="Body">You can change the linked block size for SDSs by use of the function <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">SDsetblocksize</span>. To change the linked block size for Vdatas, prior to version 4.1r5, you must edit the <span class="FM_Flag" style="font-family : Courier New; font-style : normal; font-weight : normal; font-size  : 9.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : -0.10em; ">hlimits.h</span>&#160;file, change the value of <span class="FM_Flag" style="font-family : Courier New; font-style : normal; font-weight : normal; font-size  : 9.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : -0.10em; ">HDF_APPENDABLE_BLOCK_LEN</span>, and re-build the HDF library. However, starting in ver&#173;sion 4.1r5, applications can use the public function <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">VSsetblocksize</span> for the same purpose. Chang&#173;ing the linked block size only affects the size of the linked blocks used <span class="Title-in-text">after</span>&#160;the change is made; it does not affect the size of blocks that have already been written.</p>
+ <p class="Body">There is a certain amount of overhead when creating linked blocks. &#160;For every linked block that is added there will be a specified number of block accesses, disk space used, and reference numbers added to the file. If you increase the size of the linked block, it will decrease the number of block accesses, disk space used, and reference numbers added to the file. Making the linked block size larger will decrease the number of reference numbers required; this is sometimes necessary because there are a limited number of available reference numbers.</p>
+ <p class="Body">Linked block size can also affect I/O performance, depending on how the data is accessed. &#160;If the data will typically be accessed in large chunks, then making the linked block size large could improve performance. &#160;If the data is accessed in small chunks, then making the linked block size small could improve performance. &#160;</p>
+ <p class="Body">If data will be randomly accessed in small amounts, then it is better to have small linked blocks. </p>
+ <p class="Body">Ideally one might say that making the linked block size equal to the size of the dataset that will typically be accessed, is the best solution. &#160;However, there are other things that will affect perfor&#173;mance, such as the operating system being used, the sector size on the disk being accessed, the amount of memory available, and access patterns. </p>
+ <p class="Body">Here are some rules of thumb for specifying linked block size:</p>
+ <p class="Bullet2"><span class="FM_BulletSymbol">•<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>Linked block size should be at least as large as the smallest number of bytes accessed in a single disk access. &#160;This amount varies from one system to another, but 4K bytes is probably a safe minimum.</p>
+ <p class="Bullet2"><span class="FM_BulletSymbol">•<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>Linked block size should be a power of 2.</p>
+ <p class="Bullet2"><span class="FM_BulletSymbol">•<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>Linked blocks should be approximately equal to the number of bytes accessed in a typical access. &#160;This rule should be mitigated by the amount of locality from one disk access to another, however, as the next rule indicates.</p>
+ <p class="Bullet2"><span class="FM_BulletSymbol">•<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>If memory is large, it may be possible to take advantage of caching that your operating sys&#173;tem does by using a large block size. &#160;If successive accesses are close to one another, blocks may be cached by the OS, so that actual physical disk accesses are not always required. &#160;If successive accesses are not close to one another, this strategy could backfire, however.</p>
+ <p class="Bullet2"><span class="FM_BulletSymbol">•<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>Although very large blocks can result in efficient access, they can also result in inefficient storage. &#160;For instance if the block size is 100K bytes, and 101K bytes of data are stored per SDS in an HDF file, the file will be twice as large as necessary. </p>
+ <p class="Body">Unfortunately, there are so many factors affected by block size that there is no simple formula that you can follow for deciding what the linked block size should be. &#160;A little experimentation on the target platform can help a great deal in determining the ideal block size for your situation.</p>
+ <p class="Heading3">14.4.3 <a name="XREF_97527_14_4_3_Unlimited"></a>Unlimited Dimension Data Sets (SDSs and Vdatas) and Performance</p>
+ <p class="Body">In some circumstances, repeatedly appending to unlimited dimension data sets can lead to signifi&#173;cant performance problems.</p>
+ <p class="Body">Each time data is appended to a Vdata or an unlimited dimension SDS, a new linked block may be created. Eventually, the linked block list may become so large that data seeking performance dete&#173;riorates substantially. In the worst case, one can exceed the allowable number of reference num&#173;bers, corrupting the HDF file.</p>
+ <p class="Body">In many such instances, increasing the linked block size (see <a href="#XREF_99984_14_4_2_Tuning">Section 14.4.2</a>&#160;in this <span class="Citation">User’s Guide</span>&#160;or, for SDSs only, <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; "><a href="http://www.hdfgroup.org/release4/doc/RefMan_html/RM_Section_II_SD.html#wp441569">SDsetblocksize/sfsblsz</a></span>&#160;in the <span class="Citation">HDF Reference Manual</span>&#160;or DD block size (see <a href="#XREF_42729_14_4_1_Tuning_Data">Section 14.4.1</a>) will alleviate the reference number problems and improve performance.</p>
+ <p class="Body">&nbsp;</p>
+</div>
+				
+				<div class="content_top_link">
+					<a>&#160;</a> 
+				</div>
+				<div class="mobile_browseholder">
+					<div class="brsBack">
+						<a id="browseSeqBack1" class="wBSBackButton" href="../UG_Errors/UG_Errors.htm"><img alt="" src="../../template/Theme1_Standard/BSBack.png" class="wBSBackButton normal" id="xmlEditorBSBackButtonMobile" border="0" style="width:100%; max-width:48px" /><img alt="" src="../../template/Theme1_Standard/BSBack_hover.png" class="wBSBackButton hover" id="xmlEditorBSBackButtonMobileHover" border="0" style="width:100%; max-width:56px" /></a> 
+						 
+					</div>
+					<div class="brsNext">
+						<a id="browseSeqNext1" class="wBSNextButton" href="../UG_Utils/UG_Utils.htm"><img alt="" src="../../template/Theme1_Standard/BSNext.png" class="wBSNextButton normal" id="xmlEditorBSNextButtonMobile" border="0" style="width:100%; max-width:48px" /><img alt="" src="../../template/Theme1_Standard/BSNext_hover.png" class="wBSNextButton hover" id="xmlEditorBSNextButtonMobileHover" border="0" style="width:100%; max-width:48px" /></a> 
+						 
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="buttonbar">
+		<div class="buttonbarholder topic_page_holder">
+			<div class="bar_toc topic_page" id="xmlEditorButtonBarTOC" 
+				 title="Table of Contents">
+				<a href="../../table_of_contents.htm">&#160;</a> 
+			</div>
+			<div class="bar_index topic_page" id="xmlEditorButtonBarIDX" 
+				 title="Index">
+				<a href="../../index1.htm">&#160;</a> 
+			</div>
+			<div class="bar_glossary topic_page" id="xmlEditorButtonBarGLO" 
+				 title="Glossary">
+				<a href="../../glossary.htm">&#160;</a> 
+			</div>
+			<div class="bar_search topic_page">
+				<a href="../../searchresults.htm" title="Search">&#160;</a> 
+			</div>
+		</div>
+	</div>
+</div>
+<div id="localisation">
+	<p id="localisation_toc"><span>Table of Contents</span></p>
+	<p id="localisation_idx"><span>Index</span></p>
+	<p id="localisation_glo"><span>Glossary</span></p>
+	<p id="localisation_fts"><span>-Search-</span></p>
+	<p id="localisation_back"><span>Back</span></p>
+</div>
+<script type="text/javascript" src="../../template/Theme1_Standard/jquery.js"></script>
+<script type="text/javascript" src="../../template/Theme1_Standard/jqueryui-custom.js"></script>
+<script type="text/javascript" src="../../template/Theme1_Standard/overthrow.min.js"></script>
+<script type="text/javascript" src="../../template/Theme1_Standard/overthrow.sidescroller.min.js"></script>
+<script type="text/javascript" src="../../template/Theme1_Standard/layout.js"></script>
+<script type="text/javascript">//<![CDATA[
+$(function(){
+	addRhLoadCompleteEvent(setTopic);
+});
+//]]></script>
+</body>
+</html>

@@ -1,0 +1,1552 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="OriginalFile" content="C:\hdf\H4\releases\4.2.12\Doc\hdf4doc\UsrGuide\src\UG_Fundmtls.fm" />
+ <meta name="Originator" content="ImportMif" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=100%, initial-scale=1" />
+<meta name="generator" content="Adobe FrameMaker 12" />
+<title>HDF User’s Guide - 4.2.12</title>
+<link href="../../template/Theme1_Standard/main.css" type="text/css" rel="stylesheet" />
+<link href="../../template/Theme1_Standard/jqueryui-custom.css" type="text/css" rel="stylesheet" />
+ <link rel="stylesheet" href="UG_Fundmtls.css" type="text/css" />
+ <link rel="StyleSheet" href="../../Responsive_HTML5_stylesheet.css" type="text/css" /><script type="text/javascript" language="JavaScript">//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]></script><style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" src="../../template/scripts/constants.js"></script>
+<script type="text/javascript" src="../../template/scripts/utils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhver.js"></script>
+<script type="text/javascript" src="../../template/scripts/settings.js"></script>
+<script type="text/javascript" src="../../template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadcsh.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/showhidecontrols.js"></script>
+<script type="text/javascript" src="../../template/scripts/pageloader.js"></script>
+<script type="text/javascript" src="../../template/scripts/toctree.js"></script>
+<script type="text/javascript" src="../../template/scripts/toctreeloader.js"></script>
+<script type="text/javascript" src="../../template/scripts/indextree.js"></script>
+<script type="text/javascript" src="../../template/scripts/indextreeloader.js"></script>
+<script type="text/javascript" src="../../template/scripts/glossarylist.js"></script>
+<script type="text/javascript" src="../../template/scripts/glossarylistloader.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhtopic.js"></script>
+<script type="text/javascript" src="../../template/scripts/searchfield.js"></script>
+<script type="text/javascript" src="../../template/scripts/tabpanels.js"></script>
+<script type="text/javascript" >
+gTocPageHtml = "{%ICON%}<span  class=\"wTOCTreePageText\">{%LINK_NAME%}</span>";
+gTocBookClosedHtml = "{%ICON%}<span  class=\"wTOCTreeCloseBookText\">{%LINK_NAME%}</span>";
+gTocBookOpenHtml = "{%ICON%}<span  class=\"wTOCTreeCloseBookText\">{%LINK_NAME%}</span>";
+gTocUrlHtml = "{%ICON%}<span  class=\"wTOCTreeLinkText\">{%LINK_NAME%}</span>";
+gTocPageIconSrc = "../../template/Theme1_Standard/TOCTreePage.png";
+gTocPageIconHoverSrc = "../../template/Theme1_Standard/TOCTreePageHover.png";
+gTocPageIconSelSrc = "../../template/Theme1_Standard/TOCTreePageSelected.png";
+gTocPageIconClass = "wTOCTreePageIcon";
+gTocPageIconStyle = "";
+gTocBookClosedIconSrc = "../../template/Theme1_Standard/TOCTreeCloseBook.png";
+gTocBookClosedIconHoverSrc = "../../template/Theme1_Standard/TOCTreeCloseBookHover.png";
+gTocBookClosedIconSelSrc = "../../template/Theme1_Standard/TOCTreeCloseBookSelected.png";
+gTocBookClosedIconClass = "wTOCTreeCloseBookIcon";
+gTocBookClosedIconStyle = "";
+gTocBookOpenIconSrc = "../../template/Theme1_Standard/TOCTreeOpenBook.png";
+gTocBookOpenIconHoverSrc = "../../template/Theme1_Standard/TOCTreeOpenBookHover.png";
+gTocBookOpenIconSelSrc = "../../template/Theme1_Standard/TOCTreeOpenBookHoverSelected.png";
+gTocBookOpenIconClass = "wTOCTreeOpenBookIcon";
+gTocBookOpenIconStyle = "";
+gTocUrlIconSrc = "../../template/Theme1_Standard/TOCTreeLink.png";
+gTocUrlIconHoverSrc = "../../template/Theme1_Standard/TOCTreeLinkHover.png";
+gTocUrlIconSelSrc = "../../template/Theme1_Standard/TOCTreeLinkSelected.png";
+gTocUrlIconClass = "wTOCTreeLinkIcon";
+gTocUrlIconStyle = "";
+</script>
+<script type="text/javascript" >
+gRootRelPath = "../..";
+gCommonRootRelPath = "../..";
+</script>
+<script type="text/javascript" >
+gIdxKWHtml = "<span  class=\"wIdxKeywordText\">{%LINK_NAME%}</span>";
+	gIdxLinkHtml = "<span  class=\"wIdxLinkText\">{%LINK_NAME%}</span>";
+	gIdxCategoryHtml = "<span  class=\"wIdxAlphabetText\">{%LINK_NAME%}</span>";
+</script>
+<script type="text/javascript" >
+gTopicId = "2.0_1";
+</script>
+<script type="text/javascript" >
+gGloTermHtml = "<span  class=\"wGloTermText\">{%LINK_NAME%}</span>";
+	gGloDefHtml = "<span  class=\"wGloDefinitionText\">{%LINK_NAME%}</span>";
+	gGloCategoryHtml = "<span  class=\"wGloAlphabetText\">{%LINK_NAME%}</span>";
+</script>
+ <link rel="SHORTCUT ICON" href="../../Responsive HTML5_favicon.png" />
+</head>
+
+<body>
+<script type="text/javascript" src="../../ehlpdhtm.js"></script>
+
+<div class="floatholder">
+	<div class="phone_scrollarea overthrow">
+		<div class="header">
+			<div class="logo">
+				<a href="../UG_Intro/UG_Intro.htm" class="homelink"><img src="../../template/Theme1_Standard/logo.png" alt="Logo" id="wLogoImage" style=" border:none; width:100%; max-width:90px;" border="0" /></a> 
+				 
+			</div>
+			<div class="title">
+				<a href="../UG_Intro/UG_Intro.htm" class="homelink"><span>HDF User’s Guide - 4.2.12</span></a> 
+				 
+			</div>
+		</div>
+		<div class="sidebar">
+			<div data-showin="Always" class="wTabbedPanel" id="tabbedpanel">
+				<ul class="wTabGroup" id="tab" data-tabid="tocTabButton" style="margin: 0px;">
+					<li class="wTab" id="tocTabButton" data-contentid="tocTabPane" onmouseout="onTabHoverOut(this, 'tab')" data-class="wTab" ontouchend="onTabHoverOut(this, 'tab')" onclick="selectTab(this, 'tab')" ontouchstart="onTabHover(this, 'tab')" data-classhover="wTabHover" style="display: inline;" ontouchmove="onTabHoverOut(this, 'tab')" data-classsel="wTabSelected" onmouseover="onTabHover(this, 'tab')"><img src="../../template/Theme1_Standard/toc.png" class="normal" alt="Table of Contents" title="Table of Contents" id="xmlEditorTOCSidebarButton" style=" border:none; width:100%; max-width:42px;" border="0" /><img src="../../template/Theme1_Standard/toc_hover.png" class="hover" alt="Table of Contents" title="Table of Contents" id="xmlEditorTOCSidebarButtonHover" style=" border:none; width:100%; max-width:48px;" border="0" /></li>
+					<li class="wTab" id="idxTabButton" data-contentid="idxTabPane" onmouseout="onTabHoverOut(this, 'tab')" data-class="wTab" ontouchend="onTabHoverOut(this, 'tab')" onclick="selectTab(this, 'tab')" ontouchstart="onTabHover(this, 'tab')" data-classhover="wTabHover" style="display: inline;" ontouchmove="onTabHoverOut(this, 'tab')" data-classsel="wTabSelected" onmouseover="onTabHover(this, 'tab')"><img src="../../template/Theme1_Standard/index.png" class="normal" alt="Index" title="Index" id="xmlEditorIDXSidebarButton" style=" border:none; width:100%; max-width:48px;" border="0" /><img src="../../template/Theme1_Standard/index_hover.png" class="hover" alt="Index" title="Index" id="xmlEditorIDXSidebarButtonHover" style=" border:none; width:100%; max-width:48px;" border="0" /></li>
+					<li class="wTab" id="gloTabButton" data-contentid="gloTabPane" onmouseout="onTabHoverOut(this, 'tab')" data-class="wTab" ontouchend="onTabHoverOut(this, 'tab')" onclick="selectTab(this, 'tab')" ontouchstart="onTabHover(this, 'tab')" data-classhover="wTabHover" style="display: inline;" ontouchmove="onTabHoverOut(this, 'tab')" data-classsel="wTabSelected" onmouseover="onTabHover(this, 'tab')"><img src="../../template/Theme1_Standard/glo.png" class="normal" alt="Glossary" title="Glossary" id="xmlEditorGLOSidebarButton" style=" border:none; width:100%; max-width:48px;" border="0" /><img src="../../template/Theme1_Standard/glo_hover.png" class="hover" alt="Glossary" title="Glossary" id="xmlEditorGLOSidebarButtonHover" style=" border:none; width:100%; max-width:48px;" border="0" /></li>
+				</ul>
+				<div class="wTabContentGroup">
+					<div id="tocTabPane" class="wTabContent">
+						<div id="toc" class="wTOCTree" tabindex="34">
+							
+							
+							
+							
+						</div>
+					</div>
+					<div id="idxTabPane" class="wTabContent">
+						<div id="idx" class="wIndex">
+							<input class="wIdxFilter" id="idxFilterBox" type="text" data-placeholder="Filter Keyword" onkeyup="filterIdx()"></input>
+							
+							
+							
+						</div>
+					</div>
+					<div id="gloTabPane" class="wTabContent">
+						<div id="glo" class="wGlossary">
+							<input class="wGloFilter" id="gloFilterBox" type="text" data-placeholder="Filter Term" onkeyup="filterGlo()"></input>
+							
+							
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="closebutton buttonOpened">
+				&#160; 
+			</div>
+		</div>
+		<div class="content">
+			<div class="desktop_functionholder">
+				<div class="searchholder">
+					<div class="wSearchField">
+						<input id="searchBox" class="wSearchField" type="search" data-placeholder="-Search-" onkeydown="searchHelp(event, 'searchBox')" data-search="true" /><a class="wSearchLink" onclick="searchHelp(null, 'searchBox')" href="#"><img src="../../template/Theme1_Standard/Search.png" alt="" id="xmlEditwSearchLink" class="wSearchLink" border="0" style="width:100%; max-width:28px" /></a> 
+						 
+					</div>
+				</div>
+				<div class="brsNext">
+					<a id="browseSeqNext" class="wBSNextButton" href="../UG_SD/UG_SD.htm"><img alt="" src="../../template/Theme1_Standard/BSNext.png" class="wBSNextButton normal" id="xmlEditorBSNextButton" border="0" style="width:100%; max-width:48px" /><img alt="" src="../../template/Theme1_Standard/BSNext_hover.png" class="wBSNextButton hover" id="xmlEditorBSNextButtonHover" border="0" style="width:100%; max-width:48px" /></a> 
+					 
+				</div>
+				<div class="print">
+					<a href="javascript:window.print()" class="wPrintButton"><img src="../../template/Theme1_Standard/Print.png" alt="" class="wPrintButton normal" id="xmlEditorPrintButton" border="0" style="width:100%; max-width:48px" /><img src="../../template/Theme1_Standard/Print_hover.png" alt="" class="wPrintButton hover" id="xmlEditorPrintButtonHover" border="0" style="width:100%; max-width:48px" /></a> 
+				</div>
+				<div class="brsBack">
+					<a id="browseSeqBack" class="wBSBackButton" href="../UG_Intro/UG_Intro.htm"><img alt="" src="../../template/Theme1_Standard/BSBack.png" class="wBSBackButton normal" id="xmlEditorBSBackButton" border="0" style="width:100%; max-width:48px" /><img alt="" src="../../template/Theme1_Standard/BSBack_hover.png" class="wBSBackButton hover" id="xmlEditorBSBackButtonHover" border="0" style="width:100%; max-width:56px" /></a> 
+					 
+				</div>
+			</div>
+			<div class="contentholder">
+				<div class="mobile_browseholder">
+					<div class="brsBack">
+						<a id="browseSeqBack0" class="wBSBackButton" href="../UG_Intro/UG_Intro.htm"><img alt="" src="../../template/Theme1_Standard/BSBack.png" class="wBSBackButton" border="0" style="width:100%; max-width:48px" /></a> 
+					</div>
+					<div class="brsNext">
+						<a id="browseSeqNext0" class="wBSNextButton" href="../UG_SD/UG_SD.htm"><img alt="" src="../../template/Theme1_Standard/BSNext.png" class="wBSNextButton" border="0" style="width:100%; max-width:48px" /></a> 
+					</div>
+				</div>
+				<a name="content_top_placeholder"></a> 
+				<div class="wTopic" id="rh_default_topic_placeholder_id">
+
+ <p class="Body">&nbsp;</p>
+ <p class="ChapTitleUnNum"><span class="FM_ChapterNumber">Chapter 2<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><a name="XREF_17496_Chapter_2"></a><a name="XREF_13138_HDF_Fundamentals"></a>HDF Fundamentals</p>
+ <p class="Body">&nbsp;</p>
+ <p class="Heading1">2.1<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Chapter Overview</p>
+ <p class="Body">This chapter provides necessary information for the creation and manipulation of HDF files. It includes an overview of the HDF file format, basic operations on HDF files, and programming language issues pertaining to the use of Fortran and ANSI C in HDF programming.</p>
+ <p class="Heading2">2.2<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a name="XREF_17986_2_2_HDF_File_Format"></a>HDF File Format</p>
+ <p class="Body">An HDF file contains a <span class="Definition">file header</span>, at least one <span class="Definition">data descriptor block</span>, and zero or more <span class="Definition">data ele&#173;ments</span>&#160;as depicted in <a href="#XREF_37743_FIGURE_2a_The">Figure&nbsp;2a</a>.</p>
+ <p class="Figure"><span class="StepNumber">FIGURE 2a<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><a name="XREF_37743_FIGURE_2a_The"></a>The Physical Layout of an HDF File Containing One Data Object</p>
+ <div align="center"><img alt="UG_Fundmtls00001.png" style=" width:100%; margin-left:30pt; max-width:485.208pt;" id="image0" src="UG_Fundmtls00001.png" />
+ </div>
+ <p class="Body">The <span class="Definition">file header</span>&#160;identifies the file as an HDF file. A <span class="Definition">data descriptor block</span>&#160;contains a number of <span class="Definition">data descriptors</span>. A data descriptor and a <span class="Definition">data element</span>&#160;together form a <span class="Definition">data object</span>, which is the basic conglomerate structure for encapsulating data in the HDF file. Each of these terms is described in the following sections.</p>
+ <p class="Heading3">2.2.1<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;</span>File Header</p>
+ <p class="Body">The first component of an HDF file is the file header, which takes up the first four bytes of the HDF file. Specifically, it consists of four one-byte values that are ASCII representations of control characters: the first is a control-N, the second is a control-C , the third is a control-S and the fourth is a control-A (^N^C^S^A).</p>
+ <p class="Body">Note that, on some machines, the order of bytes in the file header might be swapped when the header is written to an HDF file, causing these characters to be written in little-endian order. To maintain the portability of HDF file header data when developing software for such machines, this byte swapping must be counteracted by ensuring the characters are read and written in the desired order.</p>
+ <p class="Heading3">2.2.2<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;</span>Data Object</p>
+ <p class="Body">A data object is comprised of a data descriptor and a data element. The data descriptor consists of information about the type, location, and size of the data element. The data element contains the actual data. This organization of HDF data makes HDF files <span class="Definition">self-describing</span>. <a href="#XREF_30251_FIGURE_2b_Two_Data">Figure&nbsp;2b</a>&#160;shows two examples of data objects.</p>
+ <p class="Figure"><span class="StepNumber">FIGURE 2b<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><a name="XREF_30251_FIGURE_2b_Two_Data"></a>Two Data Objects</p>
+ <div align="center"><img alt="UG_Fundmtls00002.png" style=" width:100%; margin-left:30pt; max-width:485.208pt;" id="image1" src="UG_Fundmtls00002.png" />
+ </div>
+ <p class="Heading4">2.2.2.1<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a name="XREF_30011_2_2_2_1_Data"></a>Data Descriptor</p>
+ <p class="Body">All data descriptors are twelve bytes long and contain four fields, as depicted in <a href="#XREF_40246_FIGURE_2c_The">Figure&nbsp;2c</a>. These fields are: a 16-bit <span class="Definition">tag</span>, a 16-bit <span class="Definition">reference number</span>, a 32-bit <span class="Definition">data offset</span>&#160;and a 32-bit <span class="Definition">data length</span>.</p>
+ <p class="Figure"><span class="StepNumber">FIGURE 2c<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>T<a name="XREF_40246_FIGURE_2c_The"></a>he Contents of a Data Descriptor</p>
+ <div align="center"><img alt="UG_Fundmtls00003.png" style=" width:100%; margin-left:30pt; max-width:485.208pt;" id="image2" src="UG_Fundmtls00003.png" />
+ </div>
+ <p class="FM_BodyBold">Tag</p>
+ <p class="Body">A <span class="Definition">tag</span>&#160;is the data descriptor field that identifies the type of data stored in the corresponding data element. A tag is a 16-bit unsigned integer between 1 and 65,535, and is associated with a mne&#173;monic name to promote ease to use and the readability of user programs. </p>
+ <p class="Body">If a data descriptor has no corresponding data element, the value of its tag is <span class="DefName">DFTAG_NULL</span>&#160;(or <span class="DefName">0</span>).</p>
+ <p class="Body">Tags are assigned by The HDF Group as part of the HDF specification. The following are the ranges of tag values and their descriptions:</p>
+ <p class="FM_CBullet">1 to 32,767 - Tags reserved for HDF Group use</p>
+ <p class="FM_CBullet">32,768 to 64,999 - User-definable tags</p>
+ <p class="FM_CBullet">65,000 to 65,535 - Tags reserved for expansion of the HDF specification</p>
+ <p class="Body">A list of commonly-used tags and their descriptions is included in <a href="../UG_Appndx/UG_Appndx.htm#XREF_20074_Appendix_A_NCSA">Appendix A, <span class="Title-in-text">Reserved HDF Tags</span></a> of this document.</p>
+ <p class="FM_BodyBold">Reference Number</p>
+ <p class="Body">For each occurrence of a tag in an HDF file, a unique reference number is assigned by the library with the tag in the data descriptor. A <span class="Definition">reference number</span>&#160;is a 16-bit unsigned integer and can not be changed during the life of the data object that the reference number specifies.</p>
+ <p class="Body">The combination of a tag and a reference number uniquely identifies the corresponding data object in the file. </p>
+ <p class="Body">Reference numbers are not necessarily assigned consecutively, so it cannot be assumed that the value of a reference number has any meaning beyond providing a way of distinguishing among objects with the same tag. While application programmers may find it convenient to impart some additional meaning to reference numbers in their code, it is emphasized that the HDF library will not internally recognize any such meaning.</p>
+ <p class="FM_BodyBold">Data Offset and Length</p>
+ <p class="Body">The data offset field points to the location of the data element in the file by storing the number of bytes from the beginning of the file to the beginning of the data element. The length field contains the size of the data element in bytes. The data offset and the length are both 32-bit signed integers. &#160;This results in a file-size limit of 2 gigabytes.</p>
+ <p class="Heading4">2.2.2.2<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Data Elements</p>
+ <p class="Body">The data element is the raw data portion of a data object.</p>
+ <p class="Heading3">2.2.3<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;</span>Data Descriptor Block</p>
+ <p class="Body">Data descriptors are physically stored in a linked list of blocks called data descriptor blocks. The relationship between the data descriptor block to the other components of an HDF file is illus&#173;trated in <a href="#XREF_37743_FIGURE_2a_The">Figure&nbsp;2a on page&nbsp;7</a>. The individual components of a data descriptor block are depicted in <a href="#XREF_34850_FIGURE_2d_Data">Figure&nbsp;2d on page&nbsp;10</a>. Each data descriptor in a data descriptor block is assumed to be associ&#173;ated with a data element unless it contains the tag <span class="DefName">DFTAG_NULL</span>&#160;(or <span class="DefName">0</span>),which indicates that there is no associated data element. By default, a data descriptor block contains <span class="DefName">16</span>&#160;(defined as <span class="DefName">DEF_NDDS</span>) data descriptors. The user may reset this limit when creating the HDF file. Refer to <a href="#XREF_34810_Hopen">Section<span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>2.3.2<span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span></a> for more details.</p>
+ <p class="Body">In addition to data descriptors, each data descriptor block contains a <span class="Definition">data descriptor header</span>. The data descriptor header contains two fields: <span class="Definition">block size</span>&#160;and <span class="Definition">next block</span>. The block size field is a 16-bit unsigned integer indicating the number of data descriptors in the data descriptor block. The next block field is a 32-bit unsigned integer indicating the offset of the next data descriptor block, if one exists. The last data descriptor header in the list contains a value of <span class="DefName">0</span> in its next block field.</p>
+ <p class="Body"><a href="#XREF_34850_FIGURE_2d_Data">Figure&nbsp;2d</a> illustrates the layout of a data descriptor block.</p>
+ <p class="Figure"><span class="StepNumber">FIGURE 2d<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><a name="XREF_34850_FIGURE_2d_Data"></a>Data Descriptor Block</p>
+ <div align="center"><img alt="UG_Fundmtls00004.png" style=" width:100%; margin-left:30pt; max-width:485.208pt;" id="image3" src="UG_Fundmtls00004.png" />
+ </div>
+ <p class="Heading3">2.2.4<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;</span>Grouping Data Objects in an HDF File</p>
+ <p class="Body">Data objects containing related data in HDF files are usually grouped together by the library. These groups of data objects are called data sets. The HDF user uses the application interface to manipulate data sets in a file. As an example, an 8-bit raster image data set requires three objects: a group object identifying the members of the set, an image object containing the image data, and a dimension object indicating the size of the image. </p>
+ <p class="Body">Data objects are individually accessible even if they are included in a set, therefore data objects can belong to more than one set and sets can be included in larger groups. For example, a palette object included in one raster image set may also be a part of another raster image set if its tag and reference number are included in a data descriptor within that second set.</p>
+ <p class="Body">Additional information about data objects, including the options available for storing them, can be found in the <span class="Title-in-text">HDF Specifications and Developer’s Guide</span>&#160;from the HDF web site at <span class="FM_URL" style="font-family : Courier New; font-style : normal; font-weight : normal; font-size  : 9.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : -0.05em; ">https://www.hdfgroup.org/release4/doc.html</span>.</p>
+ <p class="Heading2">2.3<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Basic Operations on HDF Files Using the Multifile Interfaces</p>
+ <p class="Body">This section describes the basic file operations, some of which are required in working with HDF files using the multifile interfaces. Except for the SD interface, all applications using other multi&#173;file interfaces must explicitly use the routines <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">Hopen</span>&#160;and <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">Hclose</span>&#160;to control accesses to the HDF files. In an application using the HDF file format, the file is accessed via its identifier, referred to as <span class="Definition">file identifier</span>. The following subsections describe the file identifier and the basic file opera&#173;tions common to most multifile interfaces.</p>
+ <p class="Heading3">2.3.1<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;</span>File Identifiers</p>
+ <p class="Body">The HDF programming model specifies that a data file is first explicitly created or opened by an application, manipulated, then explicitly closed by the application. A file identifier is a unique number that the HDF library assigns to an HDF file when creating or opening the file. The HDF library creates the file identifier for an HDF file when given its file name, as represented in the native file system. Interface routines use only the file identifier to access and manipulate the file. When all operations on the file are complete, the file identifier must be discarded by explicitly closing the file before terminating the application.</p>
+ <p class="Body">As every file is assigned its own identifier, the order in which files are accessed is very flexible. For example, it is valid to open a file and obtain an identifier for it, then open a second file without closing the first file or disposing of the first file identifier. The only requirement made by HDF is that all file identifiers be individually discarded before the termination of the calling program.</p>
+ <p class="Body">File identifiers created by the routine of one HDF interface can be used by the routines of any other interfaces, except SD’s.</p>
+ <p class="Heading3">2.3.2<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;</span><a name="XREF_34810_Hopen"></a>Opening HDF Files: Hopen</p>
+ <p class="Body">The routine <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">Hopen</span>&#160;creates or opens an HDF data file, depending on the access mode specified, and returns the file identifier that the HDF library has assigned to the file. The <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">Hopen</span>&#160;syntax is as follows:</p>
+ <p class="FM_1syntax"><span class="FM_syntaxLang" style="font-family : Courier New; font-style : normal; font-weight : bold; font-size  : 9.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">C:</span><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span><span style="letter-spacing : -0.08em; ">file_id = Hopen(filename, access_mode, num_dds_block);</span></p>
+ <p class="FM_1syntax"><span class="FM_syntaxLang" style="font-family : Courier New; font-style : normal; font-weight : bold; font-size  : 9.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">FORTRAN:</span><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>file_id = hopen(<span style="letter-spacing : -0.08em; ">filename, access_mode, num_dds_block</span>)</p>
+ <p class="Body">The <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">Hopen</span>&#160;parameters are defined in <a href="#XREF_25929_TABLE_2A_Hopen">Table 2A</a>&#160;and the following discussion. </p>
+ <p class="Figure"><span class="StepNumber">TABLE 2A<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><a name="XREF_25929_TABLE_2A_Hopen"></a>Hopen Parameter List</p>
+ <table width="100%">
+  <tr>
+  <td>
+ <table style=" border-spacing:0; padding-left:6.00pt; padding-top:4.00pt; padding-right:6.00pt; padding-bottom:2.00pt; float:alignleft; margin-left:95.33pt; width:100%; max-width:390.67pt;" cellspacing="0" align="left">
+  <tr style=" height : 13.00pt;">
+  <td rowspan="2" style="width : 61.172pt; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">Routine Name</p>
+  <p class="FM_ReturnType">[Return Type]</p>
+  <p class="FM_TableHead">(FORTRAN-77)</p>
+</td>
+  <td rowspan="2" style="width : 68.500pt; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">Parameter</p>
+</td>
+  <td colspan="2" style="width : 97.600pt; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">Parameter Type</p>
+</td>
+  <td rowspan="2" style="width : 163.400pt; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">Description</p>
+</td>
+</tr>
+  <tr style=" height : 16.00pt;">
+  <td style="width : 41.802pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">C</p>
+</td>
+  <td style="width : 55.797pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">FORTRAN-77</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td rowspan="3" style="width : 61.172pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">Hopen</p>
+  <p class="FM_ReturnType">[int32]</p>
+  <p class="CellFunction">(hopen)</p>
+</td>
+  <td style="width : 68.500pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">filename</p>
+</td>
+  <td style="width : 41.802pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">char *</p>
+</td>
+  <td style="width : 55.797pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">character*(*)</p>
+</td>
+  <td style="width : 163.400pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">File name</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 68.500pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">access_mode</p>
+</td>
+  <td style="width : 41.802pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">intn</p>
+</td>
+  <td style="width : 55.797pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">integer</p>
+</td>
+  <td style="width : 163.400pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">File access mode</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 68.500pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">num_dds_block</p>
+</td>
+  <td style="width : 41.802pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">int16</p>
+</td>
+  <td style="width : 55.797pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">integer</p>
+</td>
+  <td style="width : 163.400pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Number of data descriptors in a data descriptor block</p>
+</td>
+</tr>
+ </table>
+</td></tr>
+ </table>
+ <p class="Body">The parameter <span class="VarName">filename</span>&#160;is a character string representing the name of the HDF file to be accessed. </p>
+ <p class="Body">The parameter <span class="VarName">access_mode</span>&#160;specifies how the file should be accessed. All the access modes are listed in <a href="#XREF_22157_TABLE_2B_File">Table 2B</a>. If the access mode is <span class="DefName">DFACC_CREATE</span>&#160;and the file already exists, the file will be replaced by the new one. If the access mode is <span class="DefName">DFACC_READ</span>&#160;and the file does not exist, <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">Hopen</span>&#160;will return <span class="DefName">FAIL</span>&#160;(or <span class="DefName">-1</span>). If the access mode is <span class="DefName">DFACC_WRITE</span>&#160;and the file does not exist, a new file will be created.</p>
+ <p class="Body">The parameter <span class="VarName">num_dds_block</span>&#160;specifies the number of data descriptors in a block when the access mode specified is create. If the access mode is not create, the value of <span class="VarName">num_dds_block</span>&#160;is ignored. The default number of data descriptors in a block is 16 (defined as <span class="DefName">DEF_NDDS</span>) data descriptors. The user may specify <span class="DefName">0</span> to keep the default or any non-negative integer to reset this limit when cre&#173;ating the HDF file.</p>
+ <p class="Body">Prior to HDF 4.2r2, the maximum number of open files was limited to 32, but it now can be up to what the system allowed, minus a few for stdout, etc.</p>
+ <p class="Body">It has been reported that opening/closing file in loops is very slow; thus, it is not recommended to perform such operations too many times, particularly, when data is being added to the file between opening/closing.</p>
+ <p class="Body">Note that, in the SD interface, <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">SDstart</span>&#160;is used to open files instead of <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">Hopen</span>. &#160;To access a file that contains both SD API objects and non-SD API objects, the application must call <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">SDstart</span>/<span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">SDend</span>&#160;and <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">Hopen</span>/<span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">Hclose</span>&#160;on the file. &#160;The non-SD API functions access the file via the identifier returned by <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">Hopen</span>&#160;and the SD API functions use the identifier returned by <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">SDstart</span>. &#160;These iden&#173;tifiers must be released by <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">Hclose</span>&#160;and <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">SDend</span>, respectively. &#160;Refer to <a href="../UG_SD/UG_SD.htm#XREF_13938_Scientific_Data">Chapter 3<span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>, &quot;Scientific Data Sets (SD API)&quot;</a>, of this document for more information on <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">SDstart</span>/<span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">SDend</span>.</p>
+ <p class="Figure"><span class="StepNumber">TABLE 2B<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><a name="XREF_22157_TABLE_2B_File"></a>File Access Code Flags</p>
+ <table width="100%">
+  <tr>
+  <td>
+ <table style=" border-spacing:0; padding-left:6.00pt; padding-top:4.00pt; padding-right:6.00pt; padding-bottom:2.00pt; float:alignleft; margin-left:95.33pt; width:100%; max-width:389.43pt;" cellspacing="0" align="left">
+  <tr style=" height : 13.00pt;">
+  <td style="width : 109.744pt; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">File Access Flag</p>
+</td>
+  <td style="width : 63.257pt; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">Flag Value</p>
+</td>
+  <td style="width : 216.428pt; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">Description</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 109.744pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFACC_READ</p>
+</td>
+  <td style="width : 63.257pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">1</p>
+</td>
+  <td style="width : 216.428pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Read access</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 109.744pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFACC_WRITE</p>
+</td>
+  <td style="width : 63.257pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">2</p>
+</td>
+  <td style="width : 216.428pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Read and write access</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 109.744pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">DFACC_CREATE</p>
+</td>
+  <td style="width : 63.257pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">4</p>
+</td>
+  <td style="width : 216.428pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Create with read and write access</p>
+</td>
+</tr>
+ </table>
+</td></tr>
+ </table>
+ <p class="Heading3">2.3.3<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;</span>Closing HDF Files: Hclose</p>
+ <p class="Body">The <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">Hclose</span>&#160;routine closes the file designated by the file identifier specified by the parameter <span class="VarName">file_id</span>. The <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">Hclose</span> syntax is as follows:</p>
+ <p class="FM_1syntax"><span class="FM_syntaxLang" style="font-family : Courier New; font-style : normal; font-weight : bold; font-size  : 9.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">C:</span><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span><span style="letter-spacing : -0.08em; ">status = Hclose(file_id);</span></p>
+ <p class="FM_1syntax"><span class="FM_syntaxLang" style="font-family : Courier New; font-style : normal; font-weight : bold; font-size  : 9.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">FORTRAN:</span><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>status = hclose(<span style="letter-spacing : -0.08em; ">file_id</span>)</p>
+ <p class="Body"><span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">Hclose </span>returns a value of <span class="DefName">SUCCEED</span>&#160;(or <span class="DefName">0</span>) if successful or <span class="DefName">FAIL</span>&#160;(or <span class="DefName">-1</span>) otherwise. The parameter name and type are listed in <a href="#XREF_28724_TABLE_2C_Hclose">Table 2C</a>. Refer also to the <span class="Title-in-text">HDF Reference Manual</span>&#160;for additional information regarding <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">Hclose</span>.</p>
+ <p class="Body">Note that <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">Hclose</span>&#160;is not used to close files in the SD interface. <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">SDend</span>&#160;is used for this purpose. (Refer to <a href="../UG_SD/UG_SD.htm#XREF_13938_Scientific_Data">Chapter 3<span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>, &quot;Scientific Data Sets (SD API)&quot;</a>&#160;of this document for more information on <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">SDend</span>.)</p>
+ <p class="Figure"><span class="StepNumber">TABLE 2C<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><a name="XREF_28724_TABLE_2C_Hclose"></a>Hclose Parameter List</p>
+ <table width="100%">
+  <tr>
+  <td>
+ <table style=" border-spacing:0; padding-left:6.00pt; padding-top:4.00pt; padding-right:6.00pt; padding-bottom:2.00pt; float:alignleft; margin-left:95.33pt; width:100%; max-width:389.89pt;" cellspacing="0" align="left">
+  <tr style=" height : 13.00pt;">
+  <td rowspan="2" style="width : 61.172pt; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">Routine Name</p>
+  <p class="FM_ReturnType">[Return Type]</p>
+  <p class="FM_TableHead">(FORTRAN-77)</p>
+</td>
+  <td rowspan="2" style="width : 50.400pt; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">Parameter</p>
+</td>
+  <td colspan="2" style="width : 97.600pt; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">Parameter Type</p>
+</td>
+  <td rowspan="2" style="width : 180.714pt; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">Description</p>
+</td>
+</tr>
+  <tr style=" height : 16.00pt;">
+  <td style="width : 41.802pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">C</p>
+</td>
+  <td style="width : 55.797pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">FORTRAN-77</p>
+</td>
+</tr>
+  <tr style=" height : 30.00pt;">
+  <td style="width : 61.172pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">Hclose</p>
+  <p class="FM_ReturnType">[intn]</p>
+  <p class="FM_TableFunction">(hclose)</p>
+</td>
+  <td style="width : 50.400pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">file_id</p>
+</td>
+  <td style="width : 41.802pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">int32</p>
+</td>
+  <td style="width : 55.797pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">integer</p>
+</td>
+  <td style="width : 180.714pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">File identifier</p>
+</td>
+</tr>
+ </table>
+</td></tr>
+ </table>
+ <p class="Heading3">2.3.4<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;</span>Getting the HDF Library and File Versions: Hgetlibversion and Hgetfileversion</p>
+ <p class="Body"><span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">Hgetlibversion</span>&#160;returns the version of the HDF library currently being used, as well as additional textual information regarding the library. The parameter names and data types are listed in <a href="#XREF_34769_TABLE_2D">Table 2D</a>. Refer also to the <span class="Title-in-text">HDF Reference Manual</span>&#160;for additional information regarding <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">Hgetlibver&#173;sion</span>.</p>
+ <p class="Body"><span style="font-weight : bold; ">Hgetfileversion</span>&#160;returns the version information of the HDF file specified by the parameter <span class="VarName">file_id</span>, as well as additional textual information regarding the nature of the file. The parameter names and data types are listed in <a href="#XREF_34769_TABLE_2D">Table 2D</a>. Refer also to the <span class="Title-in-text">HDF Reference Manual</span> for addi&#173;tional information regarding <span style="font-weight : bold; ">Hgetfileversion</span>.</p>
+ <p class="Body">The syntax of these routines is as follows:</p>
+ <p class="FM_1syntax"><span class="FM_syntaxLang" style="font-family : Courier New; font-style : normal; font-weight : bold; font-size  : 9.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">C:</span><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>status = Hgetlibversion(&amp;major_v, &amp;minor_v, &amp;release, string);</p>
+ <p class="FM_syntax"><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>status = Hgetfileversion(file_id, &amp;major_v, &amp;minor_v, &amp;release, string);</p>
+ <p class="FM_1syntax"><span class="FM_syntaxLang" style="font-family : Courier New; font-style : normal; font-weight : bold; font-size  : 9.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">FORTRAN:</span><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>status = hglibver(major_v, minor_v, release, string)</p>
+ <p class="FM_syntax"><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>status = hgfilver(file_id, major_v, minor_v, release, string)</p>
+ <p class="Body">Both routines return a value of <span class="DefName">SUCCEED</span>&#160;(or <span class="DefName">0</span>) if successful or <span class="DefName">FAIL</span>&#160;(or <span class="DefName">-1</span>) otherwise.</p>
+ <p class="Figure"><span class="StepNumber">TABLE 2D<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><a name="XREF_34769_TABLE_2D"></a>Hgetlibversion and Hgetfileversion Parameter Lists</p>
+ <table width="100%">
+  <tr>
+  <td>
+ <table style=" border-spacing:0; padding-left:6.00pt; padding-top:4.00pt; padding-right:6.00pt; padding-bottom:2.00pt; float:alignleft; margin-left:95.33pt; width:100%; max-width:390.67pt;" cellspacing="0" align="left">
+  <tr style=" height : 13.00pt;">
+  <td rowspan="2" style="width : 62.672pt; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">Routine Name</p>
+  <p class="FM_ReturnType">[Return Type]</p>
+  <p class="FM_TableHead">(FORTRAN-77)</p>
+</td>
+  <td rowspan="2" style="width : 58.000pt; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">Parameter</p>
+</td>
+  <td colspan="2" style="width : 123.201pt; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">Parameter Type</p>
+</td>
+  <td rowspan="2" style="width : 146.799pt; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">Description</p>
+</td>
+</tr>
+  <tr style=" height : 16.00pt;">
+  <td style="width : 61.600pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">C</p>
+</td>
+  <td style="width : 61.600pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">FORTRAN-77</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td rowspan="4" style="width : 62.672pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">Hgetlibversion</p>
+  <p class="FM_ReturnType">[intn]</p>
+  <p class="CellFunction">(hglibver)</p>
+</td>
+  <td style="width : 58.000pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">major_v</p>
+</td>
+  <td style="width : 61.600pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">uint32*</p>
+</td>
+  <td style="width : 61.600pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">integer</p>
+</td>
+  <td style="width : 146.799pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Major version number</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 58.000pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">minor_v</p>
+</td>
+  <td style="width : 61.600pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">uint32*</p>
+</td>
+  <td style="width : 61.600pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">integer</p>
+</td>
+  <td style="width : 146.799pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Minor version number</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 58.000pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">release</p>
+</td>
+  <td style="width : 61.600pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">uint32*</p>
+</td>
+  <td style="width : 61.600pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">integer</p>
+</td>
+  <td style="width : 146.799pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Complete library version number</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 58.000pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">string</p>
+</td>
+  <td style="width : 61.600pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">char*</p>
+</td>
+  <td style="width : 61.600pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">character*(*)</p>
+</td>
+  <td style="width : 146.799pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Additional information about the library version</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td rowspan="5" style="width : 62.672pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">Hgetfileversion</p>
+  <p class="FM_ReturnType">[intn]</p>
+  <p class="CellFunction">(hgfilver)</p>
+</td>
+  <td style="width : 58.000pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">file_id</p>
+</td>
+  <td style="width : 61.600pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">int32</p>
+</td>
+  <td style="width : 61.600pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">integer</p>
+</td>
+  <td style="width : 146.799pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">File identifier</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 58.000pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">major_v</p>
+</td>
+  <td style="width : 61.600pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">uint32*</p>
+</td>
+  <td style="width : 61.600pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">integer</p>
+</td>
+  <td style="width : 146.799pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Major version number</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 58.000pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">minor_v</p>
+</td>
+  <td style="width : 61.600pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">uint32*</p>
+</td>
+  <td style="width : 61.600pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">integer</p>
+</td>
+  <td style="width : 146.799pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Minor version number</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 58.000pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">release</p>
+</td>
+  <td style="width : 61.600pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">uint32*</p>
+</td>
+  <td style="width : 61.600pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">integer</p>
+</td>
+  <td style="width : 146.799pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Complete library version number</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 58.000pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">string</p>
+</td>
+  <td style="width : 61.600pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">char*</p>
+</td>
+  <td style="width : 61.600pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">character*(*)</p>
+</td>
+  <td style="width : 146.799pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Additional information about the library version</p>
+</td>
+</tr>
+ </table>
+</td></tr>
+ </table>
+ <p class="Figure"></p>
+ <p class="Heading2"><a name="IX_Hishdf_hishdff"></a>2.4<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Determining whether a File Is an HDF File: Hishdf/hishdff</p>
+ <p class="Body">The <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">Hishdf</span>&#160;routine is used to determine whether the file <span class="DefName">filename</span>&#160;is an HDF file. The <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">Hishdf </span>syntax is as follows:</p>
+ <p class="FM_1syntax"><span class="FM_syntaxLang" style="font-family : Courier New; font-style : normal; font-weight : bold; font-size  : 9.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">C:</span><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>status = Hishdf(filename)</p>
+ <p class="FM_1syntax"><span class="FM_syntaxLang" style="font-family : Courier New; font-style : normal; font-weight : bold; font-size  : 9.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">FORTRAN:</span><span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>status = hishdff(filename)</p>
+ <p class="Body">This routine returns a value of <span class="DefName">TRUE</span>&#160;(or <span class="DefName">1</span>) if if the file is an HDF file or <span class="DefName">FALSE</span>&#160;(or <span class="DefName">0</span>) otherwise.</p>
+ <p class="Figure"><span class="StepNumber">TABLE 2E<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>Hishdf/hishdff Parameter List</p>
+ <table width="100%">
+  <tr>
+  <td>
+ <table style=" border-spacing:0; padding-left:6.00pt; padding-top:4.00pt; padding-right:6.00pt; padding-bottom:2.00pt; float:alignleft; margin-left:95.33pt; width:100%; max-width:390.67pt;" cellspacing="0" align="left">
+  <tr style=" height : 13.00pt;">
+  <td rowspan="2" style="width : 62.672pt; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">Routine Name</p>
+  <p class="FM_ReturnType">[Return Type]</p>
+  <p class="FM_TableHead">(FORTRAN-77)</p>
+</td>
+  <td rowspan="2" style="width : 58.000pt; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">Parameter</p>
+</td>
+  <td colspan="2" style="width : 123.201pt; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">Parameter Type</p>
+</td>
+  <td rowspan="2" style="width : 146.799pt; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">Description</p>
+</td>
+</tr>
+  <tr style=" height : 16.00pt;">
+  <td style="width : 61.600pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">C</p>
+</td>
+  <td style="width : 61.600pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">FORTRAN-77</p>
+</td>
+</tr>
+  <tr style=" height : 30.00pt;">
+  <td style="width : 62.672pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellFunction">Hishdf</p>
+  <p class="FM_ReturnType">[intn]</p>
+  <p class="CellFunction">(hishdff)</p>
+</td>
+  <td style="width : 58.000pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">filename</p>
+</td>
+  <td style="width : 61.600pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">char*</p>
+</td>
+  <td style="width : 61.600pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">character*(*)</p>
+</td>
+  <td style="width : 146.799pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Filename</p>
+</td>
+</tr>
+ </table>
+</td></tr>
+ </table>
+ <p class="Figure"></p>
+ <p class="Heading2">2.5<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Programming Issues</p>
+ <p class="Body">This section introduces information relevant to the process of developing programs that use the HDF library, such as the names of necessary header files, lists of common definitions and issues concerning FORTRAN-77 and C programming.</p>
+ <p class="Heading3">2.5.1<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;</span><a name="XREF_14251_2_5_1_Header_File"></a>Header File Information</p>
+ <p class="Body">The header file <span class="DefName">hdf.h</span>&#160;must be included in every HDF application program written in C, except for programs that call routines in the SD interface. The header file <span class="DefName">mfhdf.h</span>&#160;must be included in all programs that call SD interface routines.</p>
+ <p class="Body">Fortran programmers who use compilers that allow file inclusion can include the files <span class="DefName">hdf.inc</span>&#160;and <span class="DefName">dffunc.inc</span>. If a Fortran compiler that does not support file inclusion is used, HDF library definitions must be explicitly defined in the Fortran program as they are included in the header files of the HDF library. </p>
+ <p class="Heading3">2.5.2<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;</span><a name="XREF_95358_2_5_2_HDF"></a>HDF Definitions</p>
+ <p class="Body">The HDF library provides several sets of definitions which can be used easily in the user applica&#173;tions. These sets include the definitions of the data types, the data type flags, and the limits that set various maximum values. The definitions of the data types supported by HDF are located in the <span class="DefName">hdf.h</span>&#160;header file, and the data type flags are located in the <span class="DefName">hntdefs.h</span>&#160;header file. Both are also included in <a href="#XREF_13047_TABLE_2E_Standard">(See Table&nbsp;2F on page&nbsp;14)</a>, <a href="#XREF_28972_TABLE_2F_Native">(See Table&nbsp;2G on page&nbsp;15)</a>, and <a href="#XREF_10609_TABLE_2G_Little">(See Table&nbsp;2H on page&nbsp;15)</a>. HDF data types are used for portability in the declaration of variables, and data type flags are used as parameters in various HDF interface routines.</p>
+ <p class="Heading4">2.5.2.1<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Standard HDF Data Types</p>
+ <p class="Body">The definitions of the fundamental data types are in <a href="#XREF_13047_TABLE_2E_Standard">Table 2F</a>. Although <span class="DefName">DFNT_FLOAT</span>&#160;(or <span class="DefName">5</span>), <span class="DefName">DFNT_UCHAR</span>&#160;(or <span class="DefName">3</span>), and <span class="DefName">DFNT_CHAR</span>&#160;(or <span class="DefName">4</span>) have not been added to this table, they are also supported by the HDF library for backward compatibility. </p>
+ <p class="Body">If the machine used is big-endian, using these data types will result in no byte-order conversion being performed. If the machine used is little-endian, the library will convert the byte-order of the variables to big-endian.</p>
+ <p class="Figure"><span class="StepNumber">TABLE 2F<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><a name="XREF_13047_TABLE_2E_Standard"></a>Standard HDF Data Types and Flags</p>
+ <table width="100%">
+  <tr>
+  <td>
+ <table style=" border-spacing:0; padding-left:6.00pt; padding-top:4.00pt; padding-right:6.00pt; padding-bottom:2.00pt; float:alignleft; margin-left:95.33pt; width:100%; max-width:264.67pt;" cellspacing="0" align="left">
+  <tr style=" height : 13.00pt;">
+  <td style="width : 66.672pt; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">HDF Data Type</p>
+</td>
+  <td style="width : 90.000pt; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">Data Type Flag and Value</p>
+</td>
+  <td style="width : 108.000pt; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">Description</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 66.672pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">char8</p>
+</td>
+  <td style="width : 90.000pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">DFNT_CHAR8 (4)</p>
+</td>
+  <td style="width : 108.000pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">8-bit character type</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 66.672pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">uchar8</p>
+</td>
+  <td style="width : 90.000pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">DFNT_UCHAR8 (3)</p>
+</td>
+  <td style="width : 108.000pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">8-bit unsigned character type</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 66.672pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">int8</p>
+</td>
+  <td style="width : 90.000pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">DFNT_INT8 (20)</p>
+</td>
+  <td style="width : 108.000pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">8-bit integer type</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 66.672pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">uint8</p>
+</td>
+  <td style="width : 90.000pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">DFNT_UINT8 (21)</p>
+</td>
+  <td style="width : 108.000pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">8-bit unsigned integer type</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 66.672pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">int16</p>
+</td>
+  <td style="width : 90.000pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">DFNT_INT16 (22)</p>
+</td>
+  <td style="width : 108.000pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">16-bit integer type</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 66.672pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">uint16</p>
+</td>
+  <td style="width : 90.000pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">DFNT_UINT16 (23)</p>
+</td>
+  <td style="width : 108.000pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">16-bit unsigned integer type</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 66.672pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">int32</p>
+</td>
+  <td style="width : 90.000pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">DFNT_INT32 (24)</p>
+</td>
+  <td style="width : 108.000pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">32-bit integer type</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 66.672pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">uint32</p>
+</td>
+  <td style="width : 90.000pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">DFNT_UINT32 (25)</p>
+</td>
+  <td style="width : 108.000pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">32-bit unsigned integer type</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 66.672pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">float32</p>
+</td>
+  <td style="width : 90.000pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">DFNT_FLOAT32 (5)</p>
+</td>
+  <td style="width : 108.000pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">32-bit floating-point type</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 66.672pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">float64</p>
+</td>
+  <td style="width : 90.000pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">DFNT_FLOAT64 (6)</p>
+</td>
+  <td style="width : 108.000pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">64-bit floating-point type</p>
+</td>
+</tr>
+ </table>
+</td></tr>
+ </table>
+ <p class="Body">Fortran programmers should refer to <a href="#XREF_70184_2_5_3_FORTRAN_77">Section<span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>2.5.3<span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span></a>&#160;for a discussion of the Fortran data types.</p>
+ <p class="Heading4">2.5.2.2<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Native Format Data Types</p>
+ <p class="Body"><a name="IX_Native_format_option"></a><a name="IX_default_data"></a>When a native format data type is specified, the corresponding numbers are stored in the HDF file exactly as they appear in memory, without conversion. For example, on a Cray Y-MP, 8 bytes of memory, or one Cray word, is used to store most integers. Therefore, an 8-bit signed integer, rep&#173;resented by the <span class="DefName">DFNT_INT32</span>&#160;flag, on a Cray Y-MP uses 8 bytes of memory. Consequently, when the data type <span class="DefName">DFNT_NATIVE | DFNT_INT32 </span>(<span class="DefName">DFNT_NATIVE</span>&#160;bytewise-ORed with <span class="DefName">DFNT_INT32</span>) is used on a Cray Y-MP to specify the data type of an HDF SDS or vdata, each integer stored in the HDF file is 8 bytes. </p>
+ <p class="Body">The method for constructing the data type flag for each native data type described in the previous paragraph is used for any of the native data types: the <span class="DefName">DFNT_NATIVE</span>&#160;flag is bitwise-ORed with the flag of the corresponding standard data type.</p>
+ <p class="Body">The definitions of the native format data types and the corresponding data type flags appear in <a href="#XREF_28972_TABLE_2F_Native">Table 2G</a>.</p>
+ <p class="Figure"><span class="StepNumber">TABLE 2G<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><a name="XREF_28972_TABLE_2F_Native"></a>Native Format Data Type Definitions</p>
+ <table width="100%">
+  <tr>
+  <td>
+ <table style=" border-spacing:0; padding-left:6.00pt; padding-top:4.00pt; padding-right:6.00pt; padding-bottom:2.00pt; float:alignleft; margin-left:95.33pt; width:100%; max-width:300.67pt;" cellspacing="0" align="left">
+  <tr style=" height : 13.00pt;">
+  <td style="width : 66.672pt; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">HDF Data Type</p>
+</td>
+  <td style="width : 109.744pt; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">HDF Data Type Flag and Value</p>
+</td>
+  <td style="width : 124.256pt; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">Description</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 66.672pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">int8</p>
+</td>
+  <td style="width : 109.744pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">DFNT_NINT8 (4116)</p>
+</td>
+  <td style="width : 124.256pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">8-bit native integer type </p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 66.672pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">uint8</p>
+</td>
+  <td style="width : 109.744pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">DFNT_NUINT8 (4117)</p>
+</td>
+  <td style="width : 124.256pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">8-bit native unsigned integer type </p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 66.672pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">int16</p>
+</td>
+  <td style="width : 109.744pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">DFNT_NINT16 (4118)</p>
+</td>
+  <td style="width : 124.256pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">16-bit native integer type </p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 66.672pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">uint16</p>
+</td>
+  <td style="width : 109.744pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">DFNT_NUINT16 (4119)</p>
+</td>
+  <td style="width : 124.256pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">16-bit native unsigned integer type </p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 66.672pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">int32</p>
+</td>
+  <td style="width : 109.744pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">DFNT_NINT32 (4120)</p>
+</td>
+  <td style="width : 124.256pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">32-bit native integer type </p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 66.672pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">uint32</p>
+</td>
+  <td style="width : 109.744pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">DFNT_NUINT32 (4121)</p>
+</td>
+  <td style="width : 124.256pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">32-bit native unsigned integer type </p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 66.672pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">float32</p>
+</td>
+  <td style="width : 109.744pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">DFNT_NFLOAT32 (4101)</p>
+</td>
+  <td style="width : 124.256pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">32-bit native floating-point type</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 66.672pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">float64</p>
+</td>
+  <td style="width : 109.744pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">DFNT_NFLOAT64 (4102)</p>
+</td>
+  <td style="width : 124.256pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">64-bit native floating-point type</p>
+</td>
+</tr>
+ </table>
+</td></tr>
+ </table>
+ <p class="Heading4">2.5.2.3<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Little-Endian Data Types</p>
+ <p class="Body">HDF normally writes data in big-endian format, but provides a little-endian option forcing all data written to disk to be written in little-endian format. This is primarily for users of Intel-based machines who do not want to incur the cost of reordering data when writing to an HDF file. Note that direct conversions are supported between little-endian and all other byte-order formats sup&#173;ported by HDF.</p>
+ <p class="Body">The method for constructing the data type flag for each little-endian data type is similar to the method for constructing native format data type flags: the <span class="DefName">DFNT_LITEND</span>&#160;flag is bitwise-ORed with the flag of the corresponding standard data type.</p>
+ <p class="Body">If the user is on a little-endian machine, using these data types will result in no conversion. If the user is on a big-endian machine, the HDF library will perform big-to-little-endian conversion.</p>
+ <p class="Body">The definitions of the little-endian data types and the corresponding data type flags appear in <a href="#XREF_10609_TABLE_2G_Little">Table 2H</a>.</p>
+ <p class="Figure"><span class="StepNumber">TABLE 2H<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><a name="XREF_10609_TABLE_2G_Little"></a>Little-Endian Format Data Type Definitions</p>
+ <table width="100%">
+  <tr>
+  <td>
+ <table style=" border-spacing:0; padding-left:6.00pt; padding-top:4.00pt; padding-right:6.00pt; padding-bottom:2.00pt; float:alignleft; margin-left:95.33pt; width:100%; max-width:318.67pt;" cellspacing="0" align="left">
+  <tr style=" height : 13.00pt;">
+  <td style="width : 66.672pt; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">HDF Data Type</p>
+</td>
+  <td style="width : 109.744pt; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">HDF Data Type Flag and Value</p>
+</td>
+  <td style="width : 142.256pt; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">Description</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 66.672pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">int8</p>
+</td>
+  <td style="width : 109.744pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">DFNT_LINT8 (16404)</p>
+</td>
+  <td style="width : 142.256pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">8-bit little-endian integer type </p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 66.672pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">uint8</p>
+</td>
+  <td style="width : 109.744pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">DFNT_LUINT8 (16405)</p>
+</td>
+  <td style="width : 142.256pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">8-bit little-endian unsigned integer type </p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 66.672pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">int16</p>
+</td>
+  <td style="width : 109.744pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">DFNT_LINT16 (16406)</p>
+</td>
+  <td style="width : 142.256pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">16-bit little-endian integer type </p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 66.672pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">uint16</p>
+</td>
+  <td style="width : 109.744pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">DFNT_LUINT16 (16407)</p>
+</td>
+  <td style="width : 142.256pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">16-bit little-endian unsigned integer type </p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 66.672pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">int32</p>
+</td>
+  <td style="width : 109.744pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">DFNT_LINT32 (16408)</p>
+</td>
+  <td style="width : 142.256pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">32-bit little-endian integer type </p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 66.672pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">uint32</p>
+</td>
+  <td style="width : 109.744pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">DFNT_LUINT32 (16409)</p>
+</td>
+  <td style="width : 142.256pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">32-bit little-endian unsigned integer type </p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 66.672pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">float32</p>
+</td>
+  <td style="width : 109.744pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">DFNT_LFLOAT32 (16389)</p>
+</td>
+  <td style="width : 142.256pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">32-bit little-endian floating-point type </p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 66.672pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">float64</p>
+</td>
+  <td style="width : 109.744pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">DFNT_LFLOAT64 (16390)</p>
+</td>
+  <td style="width : 142.256pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">64-bit little-endian floating-point type </p>
+</td>
+</tr>
+ </table>
+</td></tr>
+ </table>
+ <p class="Heading4">2.5.2.4<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Tag Definitions</p>
+ <p class="Body">These definitions identify the object tags defined and used by the HDF interface library. The con&#173;cept of object tags is introduced in <a href="#XREF_30011_2_2_2_1_Data">Section<span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>2.2.2.1<span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span></a>, and a list of tags can be found in Appendix A of this manual. Note that tags can also identify properties of data objects.</p>
+ <p class="Heading4">2.5.2.5<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Limit Definitions</p>
+ <p class="Body">These definitions declare the maximum size of specific data object parameters, such as the maxi&#173;mum length of a vdata field or the maximum number of objects in a vgroup. They are located in the header file <span class="DefName">hlimits.h</span>. A selection of the most-commonly-used limit definitions appears in <a href="#XREF_18330_TABLE_2H_Limit">Table 2I</a>.</p>
+ <p class="Figure"><span class="StepNumber">TABLE 2I<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><a name="XREF_18330_TABLE_2H_Limit"></a>Limit Definitions</p>
+ <table width="100%">
+  <tr>
+  <td>
+ <table style=" border-spacing:0; padding-left:6.00pt; padding-top:4.00pt; padding-right:6.00pt; padding-bottom:2.00pt; float:alignleft; margin-left:95.33pt; width:100%; max-width:389.43pt;" cellspacing="0" align="left">
+  <tr style=" height : 13.00pt;">
+  <td style="width : 109.744pt; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">Definition Name</p>
+</td>
+  <td style="width : 63.257pt; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">Definition Value</p>
+</td>
+  <td style="width : 216.428pt; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">Description</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 109.744pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">FIELDNAMELENMAX</p>
+</td>
+  <td style="width : 63.257pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">128</p>
+</td>
+  <td style="width : 216.428pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Maximum length of a vdata field in bytes - 128 characters</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 109.744pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">H4_MAX_NC_ATTRS</p>
+</td>
+  <td style="width : 63.257pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">3000</p>
+</td>
+  <td style="width : 216.428pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Maximum number of file or variable attributes</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 109.744pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">H4_MAX_NC_DIMS</p>
+</td>
+  <td style="width : 63.257pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">5000</p>
+</td>
+  <td style="width : 216.428pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Maximum number of dimensions per file</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 109.744pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">H4_MAX_NC_NAME</p>
+</td>
+  <td style="width : 63.257pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">256</p>
+</td>
+  <td style="width : 216.428pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Maximum length of a name - NC interface</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 109.744pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">H4_MAX_NC_OPEN</p>
+</td>
+  <td style="width : 63.257pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter" style="font-family : Courier New;">MAX_FILE</p>
+</td>
+  <td style="width : 216.428pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Maximum number of files can be open at the same time</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 109.744pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">H4_MAX_NC_VARS</p>
+</td>
+  <td style="width : 63.257pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">5000</p>
+</td>
+  <td style="width : 216.428pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Maximum number of variables per file</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 109.744pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">H4_MAX_VAR_DIMS</p>
+</td>
+  <td style="width : 63.257pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">32</p>
+</td>
+  <td style="width : 216.428pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Maximum number of dimensions per variable</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 109.744pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">MAXNVELT</p>
+</td>
+  <td style="width : 63.257pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">64</p>
+</td>
+  <td style="width : 216.428pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Maximum number of objects in a vgroup</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 109.744pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">MAX_FIELD_SIZE</p>
+</td>
+  <td style="width : 63.257pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">65535</p>
+</td>
+  <td style="width : 216.428pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Maximum length of a field</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 109.744pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">MAX_FILE</p>
+</td>
+  <td style="width : 63.257pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">32</p>
+</td>
+  <td style="width : 216.428pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Maximum number of open files</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 109.744pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">MAX_ORDER</p>
+</td>
+  <td style="width : 63.257pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">65535</p>
+</td>
+  <td style="width : 216.428pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Maximum order of a vdata field</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 109.744pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">MAX_PATH_LEN</p>
+</td>
+  <td style="width : 63.257pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">1024</p>
+</td>
+  <td style="width : 216.428pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Maximum length of an external file name</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 109.744pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">MAX_GROUPS</p>
+</td>
+  <td style="width : 63.257pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">8</p>
+</td>
+  <td style="width : 216.428pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Maximum number of groups</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 109.744pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">MAX_GR_NAME</p>
+</td>
+  <td style="width : 63.257pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">256</p>
+</td>
+  <td style="width : 216.428pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Maximum length of a name - GR interface</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 109.744pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">MAX_REF</p>
+</td>
+  <td style="width : 63.257pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">65535</p>
+</td>
+  <td style="width : 216.428pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">The largest number that will fit into a 16-bit word reference variable</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 109.744pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">MAX_BLOCK_SIZE</p>
+</td>
+  <td style="width : 63.257pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">65536</p>
+</td>
+  <td style="width : 216.428pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Maximum size of blocks in linked blocks</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 109.744pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">VSNAMELENMAX</p>
+</td>
+  <td style="width : 63.257pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">64</p>
+</td>
+  <td style="width : 216.428pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Maximum length of a vdata name in bytes - 64 characters</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 109.744pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">VGNAMELENMAX</p>
+</td>
+  <td style="width : 63.257pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">64</p>
+</td>
+  <td style="width : 216.428pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Maximum length of a vgroup name in bytes - 64 characters</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 109.744pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">VSFIELDMAX</p>
+</td>
+  <td style="width : 63.257pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">256</p>
+</td>
+  <td style="width : 216.428pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Maximum number of fields per vdata (64 for Macintosh)</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 109.744pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">VDEFAULTBLKSIZE</p>
+</td>
+  <td style="width : 63.257pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">4096</p>
+</td>
+  <td style="width : 216.428pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Default block size in a vdata</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 109.744pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">VDEFAULTNBLKS</p>
+</td>
+  <td style="width : 63.257pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellParameter">32</p>
+</td>
+  <td style="width : 216.428pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellDescription">Default number of blocks in a vdata</p>
+</td>
+</tr>
+ </table>
+</td></tr>
+ </table>
+ <p class="Heading3">2.5.3<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;</span><a name="XREF_70184_2_5_3_FORTRAN_77"></a>FORTRAN-77 and C Language Issues</p>
+ <p class="Body">HDF provides both FORTRAN-77 and C versions of most of its interface routines. In order to make the FORTRAN-77 and C versions of each routine as similar as possible, some compromises have been made in the process of simplifying the interface for both programming languages.</p>
+ <p class="FM_BodyBold">FORTRAN-77-to-C Translation</p>
+ <p class="Body">Nearly all of the HDF library code is written in C. A FORTRAN-77 HDF interface routine trans&#173;lates all parameter data types to C data types, then calls the C routine that performs the functional&#173;ity of the interface routine. For example, <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">d8aimg</span>&#160;is the FORTRAN-77 equivalent for <span class="FM_FunctionName" style="font-family : Times New Roman; font-style : normal; font-weight : bold; font-size  : 10.0pt; color   : #000000; text-decoration  : none  ;
+		letter-spacing : 0.00em; ">DFR8addimage</span>. Calls to either routine execute the same C code that adds an 8-bit raster image to an HDF file. See <a href="#XREF_41641_FIGURE_2e_Use_of_a">Figure&nbsp;2e</a>.</p>
+ <p class="Figure"><span class="StepNumber">FIGURE 2e<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><a name="XREF_41641_FIGURE_2e_Use_of_a"></a>Use of a Function Call Converter to Route FORTRAN-77 HDF Calls to the C Library</p>
+ <div align="center"><img alt="UG_Fundmtls00005.png" style=" width:100%; margin-left:30pt; max-width:484.848pt;" id="image4" src="UG_Fundmtls00005.png" />
+ </div>
+ <p class="FM_BodyBold">Case Sensitivity</p>
+ <p class="Body">FORTRAN-77 identifiers generally are not case sensitive, whereas C identifiers are. Although all of the FORTRAN-77 routines shown in this manual are written in lower case, FORTRAN-77 pro&#173;grams can generally call them using either upper- or lower-case letters without loss of meaning.</p>
+ <p class="FM_BodyBold">Name Length</p>
+ <p class="Body">Because some FORTRAN-77 compilers only interpret identifier names with seven or fewer char&#173;acters, the first seven characters of the FORTRAN-77 HDF routine names are unique.</p>
+ <p class="FM_BodyBold">Header Files</p>
+ <p class="Body">The inclusion of header files is not generally permitted by FORTRAN-77 compilers. However, it is sometimes available as an option. On UNIX systems, for example, the macro processors <span class="DefName">m4</span>&#160;and <span class="DefName">cpp</span>&#160;let the compiler include and preprocess header files. If this capability is not available, the user may have to copy the declarations, definitions, or values needed from the files <span class="DefName">dffunc.inc</span>&#160;and <span class="DefName">hdf.inc</span>&#160;into the user application. If the capability is available, the files can be included in the Fortran code. These two files reside in the include directory after the library is installed on the user’s system.</p>
+ <p class="FM_BodyBold">Data Type Specifications</p>
+ <p class="Body">When mixing machines, compilers, and languages, it is difficult to maintain consistent data type definitions. For instance, on some machines an integer is a 32-bit quantity and on others, a 16-bit quantity. In addition, the differences between FORTRAN-77 and C lead to difficulties in describ&#173;ing the data types found in the argument lists of HDF routines. To maintain portability, the HDF library expects assigned names for all data types used in HDF routines. See <a href="#XREF_73294_TABLE_2I">Table 2J</a>.</p>
+ <p class="Figure"><span class="StepNumber">TABLE 2J<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><a name="XREF_73294_TABLE_2I"></a>Correspondence Between Fortran and HDF C Data Types</p>
+ <table width="100%">
+  <tr>
+  <td>
+ <table style=" border-spacing:0; padding-left:6.00pt; padding-top:4.00pt; padding-right:6.00pt; padding-bottom:2.00pt; float:alignleft; margin-left:95.33pt; width:100%; max-width:266.80pt;" cellspacing="0" align="left">
+  <tr style=" height : 13.00pt;">
+  <th style="width : 141.922pt; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">Data Type</p>
+</th>
+  <th style="width : 73.000pt; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">FORTRAN</p>
+</th>
+  <th style="width : 51.875pt; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="FM_TableHead">C</p>
+</th>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 141.922pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">8-bit signed integer </p>
+</td>
+  <td style="width : 73.000pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">character*1 <span style="font-family : Times New Roman; ">**</span></p>
+</td>
+  <td style="width : 51.875pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">int8</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 141.922pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">8-bit unsigned integer</p>
+</td>
+  <td style="width : 73.000pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">character*1</p>
+</td>
+  <td style="width : 51.875pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">uint8</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 141.922pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">16-bit signed integer</p>
+</td>
+  <td style="width : 73.000pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">integer*2</p>
+</td>
+  <td style="width : 51.875pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">int16</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 141.922pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">16-bit unsigned integer</p>
+</td>
+  <td style="width : 73.000pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">Not supported</p>
+</td>
+  <td style="width : 51.875pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">uint16</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 141.922pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">32-bit signed integer</p>
+</td>
+  <td style="width : 73.000pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">integer*4 <span style="font-family : Times New Roman; ">**</span></p>
+</td>
+  <td style="width : 51.875pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">int32</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 141.922pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">32-bit unsigned integer</p>
+</td>
+  <td style="width : 73.000pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">Not supported</p>
+</td>
+  <td style="width : 51.875pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">uint32</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 141.922pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">32-bit floating point number</p>
+</td>
+  <td style="width : 73.000pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">real*4<span style="font-family : Times New Roman; "> **</span></p>
+</td>
+  <td style="width : 51.875pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">float32</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 141.922pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">64-bit floating point number</p>
+</td>
+  <td style="width : 73.000pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">real*8 <span style="font-family : Times New Roman; ">**</span></p>
+</td>
+  <td style="width : 51.875pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">float64</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 141.922pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">Native signed integer</p>
+</td>
+  <td style="width : 73.000pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">integer</p>
+</td>
+  <td style="width : 51.875pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">intn<span style="font-family:Times New Roman; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span></p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td style="width : 141.922pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">Native unsigned integer</p>
+</td>
+  <td style="width : 73.000pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">Not supported</p>
+</td>
+  <td style="width : 51.875pt; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">uintn</p>
+</td>
+</tr>
+  <tr style=" height : 13.00pt;">
+  <td colspan="3" style="width : 266.797pt; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+  <p class="CellBody">**if the compiler supports this data type</p>
+</td>
+</tr>
+ </table>
+</td></tr>
+ </table>
+ <p class="Body">When using a FORTRAN-77 data type that is not supported, the general practice is to use another data type of the same size. For example, an 8-bit signed integer can be used to store an 8-bit unsigned integer variable.</p>
+ <p class="FM_BodyBold">String and Array Specifications</p>
+ <p class="Body">The following conventions are followed in the specification of arrays in this manual:</p>
+ <p class="Bullet2"><span class="FM_BulletSymbol">•<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span class="VarName">character*(*)</span>&#160;defines a string of an indefinite number of characters. It is the responsibility of the calling program to allocate enough space to hold the data to be stored in the string.</p>
+ <p class="Bullet2"><span class="FM_BulletSymbol">•<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span class="VarName">real x(*)</span>&#160;means that <span class="VarName">x</span>&#160;refers to an array of reals of indefinite size and of indefinite rank. It is the responsibility of the calling program to allocate an actual array with the correct number of dimensions and dimension sizes.</p>
+ <p class="Bullet2"><span class="FM_BulletSymbol">•<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span class="VarName">&lt;valid numeric data type&gt; x</span>&#160;means that <span class="VarName">x</span>&#160;may have one of the numeric data types listed in the Description column of <a href="#XREF_73294_TABLE_2I">Table 2J</a> above.</p>
+ <p class="Bullet2"><span class="FM_BulletSymbol">•<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span class="VarName">&lt;valid data type&gt; x</span>&#160;means that <span class="VarName">x</span>&#160;may have any of the data types listed in the Description column of <a href="#XREF_73294_TABLE_2I">Table 2J</a> above.</p>
+ <p class="FM_BodyBold">FORTRAN-77 and ANSI C</p>
+ <p class="Body">As much as possible, we have ensured that the HDF interface routines conform to the implemen&#173;tations of Fortran and C that are in most common use today, namely FORTRAN-77 and ANSI C.</p>
+ <p class="Body">As Fortran-90 is a superset of FORTRAN-77, HDF programs should compile and run correctly when using a Fortran-90 compiler. However, an HDF library interface that makes full use of For&#173;tran-90 enhancements is being considered. </p>
+</div>
+				
+				<div class="content_top_link">
+					<a>&#160;</a> 
+				</div>
+				<div class="mobile_browseholder">
+					<div class="brsBack">
+						<a id="browseSeqBack1" class="wBSBackButton" href="../UG_Intro/UG_Intro.htm"><img alt="" src="../../template/Theme1_Standard/BSBack.png" class="wBSBackButton normal" id="xmlEditorBSBackButtonMobile" border="0" style="width:100%; max-width:48px" /><img alt="" src="../../template/Theme1_Standard/BSBack_hover.png" class="wBSBackButton hover" id="xmlEditorBSBackButtonMobileHover" border="0" style="width:100%; max-width:56px" /></a> 
+						 
+					</div>
+					<div class="brsNext">
+						<a id="browseSeqNext1" class="wBSNextButton" href="../UG_SD/UG_SD.htm"><img alt="" src="../../template/Theme1_Standard/BSNext.png" class="wBSNextButton normal" id="xmlEditorBSNextButtonMobile" border="0" style="width:100%; max-width:48px" /><img alt="" src="../../template/Theme1_Standard/BSNext_hover.png" class="wBSNextButton hover" id="xmlEditorBSNextButtonMobileHover" border="0" style="width:100%; max-width:48px" /></a> 
+						 
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="buttonbar">
+		<div class="buttonbarholder topic_page_holder">
+			<div class="bar_toc topic_page" id="xmlEditorButtonBarTOC" 
+				 title="Table of Contents">
+				<a href="../../table_of_contents.htm">&#160;</a> 
+			</div>
+			<div class="bar_index topic_page" id="xmlEditorButtonBarIDX" 
+				 title="Index">
+				<a href="../../index1.htm">&#160;</a> 
+			</div>
+			<div class="bar_glossary topic_page" id="xmlEditorButtonBarGLO" 
+				 title="Glossary">
+				<a href="../../glossary.htm">&#160;</a> 
+			</div>
+			<div class="bar_search topic_page">
+				<a href="../../searchresults.htm" title="Search">&#160;</a> 
+			</div>
+		</div>
+	</div>
+</div>
+<div id="localisation">
+	<p id="localisation_toc"><span>Table of Contents</span></p>
+	<p id="localisation_idx"><span>Index</span></p>
+	<p id="localisation_glo"><span>Glossary</span></p>
+	<p id="localisation_fts"><span>-Search-</span></p>
+	<p id="localisation_back"><span>Back</span></p>
+</div>
+<script type="text/javascript" src="../../template/Theme1_Standard/jquery.js"></script>
+<script type="text/javascript" src="../../template/Theme1_Standard/jqueryui-custom.js"></script>
+<script type="text/javascript" src="../../template/Theme1_Standard/overthrow.min.js"></script>
+<script type="text/javascript" src="../../template/Theme1_Standard/overthrow.sidescroller.min.js"></script>
+<script type="text/javascript" src="../../template/Theme1_Standard/layout.js"></script>
+<script type="text/javascript">//<![CDATA[
+$(function(){
+	addRhLoadCompleteEvent(setTopic);
+});
+//]]></script>
+</body>
+</html>
